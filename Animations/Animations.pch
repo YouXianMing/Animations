@@ -1,0 +1,27 @@
+//
+//  Animations.pch
+//  Animations
+//
+//  Created by YouXianMing on 15/11/16.
+//  Copyright © 2015年 YouXianMing. All rights reserved.
+//
+
+#ifndef Animations_pch
+#define Animations_pch
+
+/*--------------------------------------------
+ * $(SRCROOT)/$(PROJECT_NAME)/Animations.pch *
+ --------------------------------------------*/
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Availability.h>
+
+#ifdef __OBJC__
+
+#import "SystemValues.h"
+
+#endif
+
+#endif /* Animations_pch */
