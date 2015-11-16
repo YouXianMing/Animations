@@ -168,9 +168,11 @@
     NSValue *toValue = (NSValue *)[anim valueForKeyPath:@"currentValue"];
     CGSize size      = [toValue CGSizeValue];
     
+    [CATransaction setDisableActions:YES];
     CGFloat percent         = (size.height - calculateConstant(0, 1, 1, 0.7))/calculateSlope(0, 1, 1, 0.7);
     _circleShape1.strokeEnd = percent;
     _circleShape2.strokeEnd = percent;
+    [CATransaction setDisableActions:NO];
 
     double showValue = fabs(percent * 100);
     self.label.text  = [NSString stringWithFormat:@"%.f%%", showValue];
