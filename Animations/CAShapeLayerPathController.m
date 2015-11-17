@@ -96,7 +96,7 @@
         UIColor *newColor = [self randomColor];
         CABasicAnimation *colorAnimation = [CABasicAnimation animationWithKeyPath:@"fillColor"];
         colorAnimation.duration          = 0.5;
-        colorAnimation.fromValue         = (__bridge id _Nullable)(self.fillShapeLayer.fillColor);
+        colorAnimation.fromValue         = (__bridge id)(self.fillShapeLayer.fillColor);
         colorAnimation.toValue           = (__bridge id)newColor.CGColor;
         self.fillShapeLayer.fillColor    = newColor.CGColor;
         [self.fillShapeLayer addAnimation:colorAnimation forKey:@"fillShapeLayerColor"];

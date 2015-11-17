@@ -54,6 +54,7 @@
 		104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D071BFAFB4E00C46E6A /* RGBColor.m */; };
 		104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D0B1BFAFC7900C46E6A /* PathView.m */; };
 		104F0D0F1BFB006C00C46E6A /* UIView+SetRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */; };
+		104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D111BFB1BB800C46E6A /* UIView+GlowView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +168,8 @@
 		104F0D0B1BFAFC7900C46E6A /* PathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathView.m; sourceTree = "<group>"; };
 		104F0D0D1BFB006C00C46E6A /* UIView+SetRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SetRect.h"; sourceTree = "<group>"; };
 		104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SetRect.m"; sourceTree = "<group>"; };
+		104F0D101BFB1BB800C46E6A /* UIView+GlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GlowView.h"; sourceTree = "<group>"; };
+		104F0D111BFB1BB800C46E6A /* UIView+GlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GlowView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,8 @@
 				10381F681BF9B47000E5E476 /* UIColor+CustomColors.m */,
 				104F0D0D1BFB006C00C46E6A /* UIView+SetRect.h */,
 				104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */,
+				104F0D101BFB1BB800C46E6A /* UIView+GlowView.h */,
+				104F0D111BFB1BB800C46E6A /* UIView+GlowView.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				10381FD41BF9D8B300E5E476 /* FillCircleLayerConfigure.m in Sources */,
 				104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */,
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
+				104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */,
 				10381FC11BF9B55B00E5E476 /* TransformationMatrix.cpp in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */,

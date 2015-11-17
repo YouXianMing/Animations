@@ -10,10 +10,12 @@
 #import "UIColor+CustomColors.h"
 #import "ListItemCell.h"
 #import "Item.h"
+#import "GCD.h"
 
 #import "ButtonPressViewController.h"
 #import "PopStrokeController.h"
 #import "CAShapeLayerPathController.h"
+#import "UIView+GlowView.h"
 
 @interface AnimationsListViewController ()
 
@@ -52,6 +54,23 @@
     [headlinelabel sizeToFit];
     
     [self.navigationItem setTitleView:headlinelabel];
+    
+    headlinelabel.glowRadius            = @(4.f);
+    headlinelabel.glowOpacity           = @(0.8f);
+    headlinelabel.glowColor             = [[UIColor customRedColor] colorWithAlphaComponent:0.75f];
+    
+    headlinelabel.glowDuration          = @(1.f);
+    headlinelabel.hideDuration          = @(3.f);
+    headlinelabel.glowAnimationDuration = @(2.f);
+    
+    [headlinelabel createGlowLayer];
+    [headlinelabel insertGlowLayer];
+    
+    [GCDQueue executeInMainQueue:^{
+        
+            [headlinelabel startGlowLoop];
+        
+    } afterDelaySecs:2.f];
 }
 
 - (void)configureDataSource {

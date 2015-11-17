@@ -14,6 +14,9 @@ static NSString *listItemCellString = @"ListItemCell";
 
 @property (nonatomic, weak) id data;
 
+/**
+ *  Load data.
+ */
 - (void)loadContent;
 
 @end
