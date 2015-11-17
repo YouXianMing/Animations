@@ -46,6 +46,14 @@
 		10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FE41BF9DE7F00E5E476 /* UIImage+ImageEffects.m */; };
 		104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CC01BFABFE700C46E6A /* PopStrokeController.m */; };
 		104F0CC51BFAC04300C46E6A /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CC41BFAC04300C46E6A /* CustomViewController.m */; };
+		104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CF71BFAFA7000C46E6A /* CAShapeLayerPathController.m */; };
+		104F0D001BFAFB3300C46E6A /* CGContextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CFB1BFAFB3300C46E6A /* CGContextObject.m */; };
+		104F0D011BFAFB3300C46E6A /* CGContextObjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CFD1BFAFB3300C46E6A /* CGContextObjectConfig.m */; };
+		104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CFF1BFAFB3300C46E6A /* DrawGradientColorView.m */; };
+		104F0D051BFAFB4200C46E6A /* GradientColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D041BFAFB4200C46E6A /* GradientColor.m */; };
+		104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D071BFAFB4E00C46E6A /* RGBColor.m */; };
+		104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D0B1BFAFC7900C46E6A /* PathView.m */; };
+		104F0D0F1BFB006C00C46E6A /* UIView+SetRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +151,22 @@
 		104F0CC01BFABFE700C46E6A /* PopStrokeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopStrokeController.m; sourceTree = "<group>"; };
 		104F0CC31BFAC04300C46E6A /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		104F0CC41BFAC04300C46E6A /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		104F0CF61BFAFA7000C46E6A /* CAShapeLayerPathController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAShapeLayerPathController.h; sourceTree = "<group>"; };
+		104F0CF71BFAFA7000C46E6A /* CAShapeLayerPathController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAShapeLayerPathController.m; sourceTree = "<group>"; };
+		104F0CFA1BFAFB3300C46E6A /* CGContextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextObject.h; sourceTree = "<group>"; };
+		104F0CFB1BFAFB3300C46E6A /* CGContextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGContextObject.m; sourceTree = "<group>"; };
+		104F0CFC1BFAFB3300C46E6A /* CGContextObjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextObjectConfig.h; sourceTree = "<group>"; };
+		104F0CFD1BFAFB3300C46E6A /* CGContextObjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGContextObjectConfig.m; sourceTree = "<group>"; };
+		104F0CFE1BFAFB3300C46E6A /* DrawGradientColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawGradientColorView.h; sourceTree = "<group>"; };
+		104F0CFF1BFAFB3300C46E6A /* DrawGradientColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawGradientColorView.m; sourceTree = "<group>"; };
+		104F0D031BFAFB4200C46E6A /* GradientColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientColor.h; sourceTree = "<group>"; };
+		104F0D041BFAFB4200C46E6A /* GradientColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientColor.m; sourceTree = "<group>"; };
+		104F0D061BFAFB4E00C46E6A /* RGBColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGBColor.h; sourceTree = "<group>"; };
+		104F0D071BFAFB4E00C46E6A /* RGBColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGBColor.m; sourceTree = "<group>"; };
+		104F0D0A1BFAFC7900C46E6A /* PathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathView.h; sourceTree = "<group>"; };
+		104F0D0B1BFAFC7900C46E6A /* PathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathView.m; sourceTree = "<group>"; };
+		104F0D0D1BFB006C00C46E6A /* UIView+SetRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SetRect.h"; sourceTree = "<group>"; };
+		104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SetRect.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,12 +183,15 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				104F0D091BFAFB5400C46E6A /* CGContextObject */,
 				10381FD51BF9DE6E00E5E476 /* GCD */,
 				10381F7B1BF9B55B00E5E476 /* pop */,
 				10381FE31BF9DE7F00E5E476 /* UIImage+ImageEffects.h */,
 				10381FE41BF9DE7F00E5E476 /* UIImage+ImageEffects.m */,
 				10381F671BF9B47000E5E476 /* UIColor+CustomColors.h */,
 				10381F681BF9B47000E5E476 /* UIColor+CustomColors.m */,
+				104F0D0D1BFB006C00C46E6A /* UIView+SetRect.h */,
+				104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -322,6 +349,7 @@
 			children = (
 				10381FC61BF9CC0900E5E476 /* ButtonPressViewController */,
 				104F0CC21BFABFED00C46E6A /* PopStrokeController */,
+				104F0CF91BFAFA7400C46E6A /* CAShapeLayerPathController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +386,34 @@
 				104F0CC01BFABFE700C46E6A /* PopStrokeController.m */,
 			);
 			name = PopStrokeController;
+			sourceTree = "<group>";
+		};
+		104F0CF91BFAFA7400C46E6A /* CAShapeLayerPathController */ = {
+			isa = PBXGroup;
+			children = (
+				104F0CF61BFAFA7000C46E6A /* CAShapeLayerPathController.h */,
+				104F0CF71BFAFA7000C46E6A /* CAShapeLayerPathController.m */,
+				104F0D0A1BFAFC7900C46E6A /* PathView.h */,
+				104F0D0B1BFAFC7900C46E6A /* PathView.m */,
+			);
+			name = CAShapeLayerPathController;
+			sourceTree = "<group>";
+		};
+		104F0D091BFAFB5400C46E6A /* CGContextObject */ = {
+			isa = PBXGroup;
+			children = (
+				104F0D061BFAFB4E00C46E6A /* RGBColor.h */,
+				104F0D071BFAFB4E00C46E6A /* RGBColor.m */,
+				104F0D031BFAFB4200C46E6A /* GradientColor.h */,
+				104F0D041BFAFB4200C46E6A /* GradientColor.m */,
+				104F0CFA1BFAFB3300C46E6A /* CGContextObject.h */,
+				104F0CFB1BFAFB3300C46E6A /* CGContextObject.m */,
+				104F0CFC1BFAFB3300C46E6A /* CGContextObjectConfig.h */,
+				104F0CFD1BFAFB3300C46E6A /* CGContextObjectConfig.m */,
+				104F0CFE1BFAFB3300C46E6A /* DrawGradientColorView.h */,
+				104F0CFF1BFAFB3300C46E6A /* DrawGradientColorView.m */,
+			);
+			name = CGContextObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +489,7 @@
 				10381FB91BF9B55B00E5E476 /* POPCustomAnimation.mm in Sources */,
 				10381FBB1BF9B55B00E5E476 /* POPGeometry.mm in Sources */,
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
+				104F0D051BFAFB4200C46E6A /* GradientColor.m in Sources */,
 				10381FD11BF9D2C600E5E476 /* StrokeCircleLayerConfigure.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
 				10381F711BF9B47000E5E476 /* Item.m in Sources */,
@@ -441,22 +498,28 @@
 				10381FB51BF9B55B00E5E476 /* POPAnimationTracer.mm in Sources */,
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
+				104F0D011BFAFB3300C46E6A /* CGContextObjectConfig.m in Sources */,
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
 				10381FC41BF9B77000E5E476 /* CustomNavigationController.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
+				104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */,
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
 				10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
 				10381FD41BF9D8B300E5E476 /* FillCircleLayerConfigure.m in Sources */,
+				104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */,
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
 				10381FC11BF9B55B00E5E476 /* TransformationMatrix.cpp in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */,
+				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
+				104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */,
+				104F0D001BFAFB3300C46E6A /* CGContextObject.m in Sources */,
 				10381FBE1BF9B55B00E5E476 /* POPPropertyAnimation.mm in Sources */,
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
@@ -464,6 +527,7 @@
 				104F0CC51BFAC04300C46E6A /* CustomViewController.m in Sources */,
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
+				104F0D0F1BFB006C00C46E6A /* UIView+SetRect.m in Sources */,
 				10381F521BF9B44A00E5E476 /* main.m in Sources */,
 				10381FB81BF9B55B00E5E476 /* POPCGUtils.mm in Sources */,
 			);
