@@ -8,6 +8,7 @@
 
 #import "AnimationsListViewController.h"
 #import "UIColor+CustomColors.h"
+#import "UIView+GlowView.h"
 #import "ListItemCell.h"
 #import "Item.h"
 #import "GCD.h"
@@ -15,7 +16,7 @@
 #import "ButtonPressViewController.h"
 #import "PopStrokeController.h"
 #import "CAShapeLayerPathController.h"
-#import "UIView+GlowView.h"
+#import "TransformFadeViewController.h"
 
 @interface AnimationsListViewController ()
 
@@ -77,7 +78,8 @@
 
     self.items = @[[Item itemWithName:@"POP-按钮动画" object:[ButtonPressViewController class]],
                    [Item itemWithName:@"POP-Stroke动画" object:[PopStrokeController class]],
-                   [Item itemWithName:@"CAShapeLayer的path动画" object:[CAShapeLayerPathController class]]];
+                   [Item itemWithName:@"CAShapeLayer的path动画" object:[CAShapeLayerPathController class]],
+                   [Item itemWithName:@"图片碎片化mask动画" object:[TransformFadeViewController class]]];
 }
 
 #pragma mark - tableView 相关

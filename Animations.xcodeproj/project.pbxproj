@@ -55,6 +55,8 @@
 		104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D0B1BFAFC7900C46E6A /* PathView.m */; };
 		104F0D0F1BFB006C00C46E6A /* UIView+SetRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */; };
 		104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D111BFB1BB800C46E6A /* UIView+GlowView.m */; };
+		104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D141BFB275900C46E6A /* TransformFadeViewController.m */; };
+		104F0D191BFB28D700C46E6A /* TranformFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D181BFB28D700C46E6A /* TranformFadeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,6 +172,10 @@
 		104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SetRect.m"; sourceTree = "<group>"; };
 		104F0D101BFB1BB800C46E6A /* UIView+GlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GlowView.h"; sourceTree = "<group>"; };
 		104F0D111BFB1BB800C46E6A /* UIView+GlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GlowView.m"; sourceTree = "<group>"; };
+		104F0D131BFB275900C46E6A /* TransformFadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformFadeViewController.h; sourceTree = "<group>"; };
+		104F0D141BFB275900C46E6A /* TransformFadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransformFadeViewController.m; sourceTree = "<group>"; };
+		104F0D171BFB28D700C46E6A /* TranformFadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranformFadeView.h; sourceTree = "<group>"; };
+		104F0D181BFB28D700C46E6A /* TranformFadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranformFadeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +361,7 @@
 				10381FC61BF9CC0900E5E476 /* ButtonPressViewController */,
 				104F0CC21BFABFED00C46E6A /* PopStrokeController */,
 				104F0CF91BFAFA7400C46E6A /* CAShapeLayerPathController */,
+				104F0D161BFB275E00C46E6A /* TransformFadeViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -419,6 +426,17 @@
 				104F0CFF1BFAFB3300C46E6A /* DrawGradientColorView.m */,
 			);
 			name = CGContextObject;
+			sourceTree = "<group>";
+		};
+		104F0D161BFB275E00C46E6A /* TransformFadeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				104F0D131BFB275900C46E6A /* TransformFadeViewController.h */,
+				104F0D141BFB275900C46E6A /* TransformFadeViewController.m */,
+				104F0D171BFB28D700C46E6A /* TranformFadeView.h */,
+				104F0D181BFB28D700C46E6A /* TranformFadeView.m */,
+			);
+			name = TransformFadeViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +518,7 @@
 				10381F711BF9B47000E5E476 /* Item.m in Sources */,
 				10381FBA1BF9B55B00E5E476 /* POPDecayAnimation.mm in Sources */,
 				10381FB61BF9B55B00E5E476 /* POPAnimator.mm in Sources */,
+				104F0D191BFB28D700C46E6A /* TranformFadeView.m in Sources */,
 				10381FB51BF9B55B00E5E476 /* POPAnimationTracer.mm in Sources */,
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
@@ -510,6 +529,7 @@
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
 				104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */,
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
+				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
 				10381FD41BF9D8B300E5E476 /* FillCircleLayerConfigure.m in Sources */,
