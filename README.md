@@ -10,6 +10,6 @@
 ![demo3.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151117113153374-1370793997.gif)
 
 
-* 参考代码
+> 参考代码
 
 [https://github.com/schneiderandre/popping](https://github.com/schneiderandre/popping)
