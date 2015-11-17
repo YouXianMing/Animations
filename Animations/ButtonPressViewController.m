@@ -11,7 +11,6 @@
 #import "UIColor+CustomColors.h"
 #import "StrokeCircleLayerConfigure.h"
 #import "FillCircleLayerConfigure.h"
-#import "GCD.h"
 
 @interface ButtonPressViewController ()
 
@@ -70,7 +69,7 @@
         self.circleShape1 = [CAShapeLayer layer];
         self.circleShape1.strokeEnd = 0.f;
         StrokeCircleLayerConfigure *config = [StrokeCircleLayerConfigure new];
-        config.lineWith     = 0.5f;
+        config.lineWidth    = 0.5f;
         config.startAngle   = 0;
         config.endAngle     = M_PI * 2;
         config.radius       = 55.f;
@@ -84,7 +83,7 @@
         self.circleShape2 = [CAShapeLayer layer];
         self.circleShape2.strokeEnd = 0.f;
         StrokeCircleLayerConfigure *config = [StrokeCircleLayerConfigure new];
-        config.lineWith     = 0.5f;
+        config.lineWidth    = 0.5f;
         config.startAngle   = 0;
         config.endAngle     = M_PI * 2;
         config.radius       = 60.f;

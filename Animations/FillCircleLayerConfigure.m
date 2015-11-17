@@ -12,15 +12,15 @@
 
 - (void)configCAShapeLayer:(CAShapeLayer *)shapeLayer {
 
-    self.lineWith    = 0.f;
+    self.lineWidth    = 0.f;
     self.strokeColor = [UIColor clearColor];
     
     [super configCAShapeLayer:shapeLayer];
     
-    shapeLayer.bounds   = CGRectMake(0, 0, (self.lineWith + self.radius) * 2, (self.lineWith + self.radius) * 2);
+    shapeLayer.bounds   = CGRectMake(0, 0, (self.lineWidth + self.radius) * 2, (self.lineWidth + self.radius) * 2);
     shapeLayer.position = self.circleCenter;
-    UIBezierPath *path  = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.lineWith + self.radius, self.lineWith + self.radius)
-                                                         radius:self.radius + self.lineWith / 2.f
+    UIBezierPath *path  = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.lineWidth + self.radius, self.lineWidth + self.radius)
+                                                         radius:self.radius + self.lineWidth / 2.f
                                                      startAngle:self.startAngle
                                                        endAngle:self.endAngle
                                                       clockwise:self.clockWise];

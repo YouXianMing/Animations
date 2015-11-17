@@ -11,14 +11,25 @@
 
 @interface CAShapeLayerConfigure : NSObject
 
-@property (nonatomic) CGFloat           lineWith;
+/**
+ *  Stroke width
+ */
+@property (nonatomic) CGFloat           lineWidth;
+
+/**
+ *  Stroke color
+ */
 @property (nonatomic, strong) UIColor  *strokeColor;
+
+/**
+ *  Fill color
+ */
 @property (nonatomic, strong) UIColor  *fillColor;
 
 /**
- *  对CALayer进行配置
+ *  Config the CAShapeLayer
  *
- *  @param shapeLayer 被配置的CAShapeLayer
+ *  @param shapeLayer CAShapeLayer
  */
 - (void)configCAShapeLayer:(CAShapeLayer *)shapeLayer;
 

@@ -25,7 +25,7 @@
     
     [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:18.f]}];
     
-    [self.navigationBar setBackgroundImage:[self imageWithFrame:CGRectMake(0, 0, 10, 10) backgroundColor:[[UIColor yellowColor] colorWithAlphaComponent:0.45f]]
+    [self.navigationBar setBackgroundImage:[self imageWithFrame:CGRectMake(0, 0, 10, 10) backgroundColor:[[UIColor cyanColor] colorWithAlphaComponent:0.45f]]
                             forBarPosition:UIBarPositionAny
                                 barMetrics:UIBarMetricsDefault];
     
