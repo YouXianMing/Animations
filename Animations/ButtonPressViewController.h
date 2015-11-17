@@ -6,8 +6,8 @@
 //  Copyright © 2015年 ZiPeiYi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CustomViewController.h"
 
-@interface ButtonPressViewController : UIViewController
+@interface ButtonPressViewController : CustomViewController
 
 @end

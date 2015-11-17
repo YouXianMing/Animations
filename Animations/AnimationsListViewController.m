@@ -12,6 +12,7 @@
 #import "Item.h"
 
 #import "ButtonPressViewController.h"
+#import "PopStrokeController.h"
 
 @interface AnimationsListViewController ()
 
@@ -54,7 +55,8 @@
 
 - (void)configureDataSource {
 
-    self.items = @[[Item itemWithName:@"POP-按钮动画" object:[ButtonPressViewController class]]];
+    self.items = @[[Item itemWithName:@"POP-按钮动画" object:[ButtonPressViewController class]],
+                   [Item itemWithName:@"POP-Stroke动画" object:[PopStrokeController class]]];
 }
 
 #pragma mark - tableView 相关

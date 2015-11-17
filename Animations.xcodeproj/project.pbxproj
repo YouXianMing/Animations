@@ -44,6 +44,8 @@
 		10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FDC1BF9DE6E00E5E476 /* GCDSemaphore.m */; };
 		10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FDE1BF9DE6E00E5E476 /* GCDTimer.m */; };
 		10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FE41BF9DE7F00E5E476 /* UIImage+ImageEffects.m */; };
+		104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CC01BFABFE700C46E6A /* PopStrokeController.m */; };
+		104F0CC51BFAC04300C46E6A /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CC41BFAC04300C46E6A /* CustomViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +139,10 @@
 		10381FDE1BF9DE6E00E5E476 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
 		10381FE31BF9DE7F00E5E476 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		10381FE41BF9DE7F00E5E476 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		104F0CBF1BFABFE700C46E6A /* PopStrokeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopStrokeController.h; sourceTree = "<group>"; };
+		104F0CC01BFABFE700C46E6A /* PopStrokeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopStrokeController.m; sourceTree = "<group>"; };
+		104F0CC31BFAC04300C46E6A /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		104F0CC41BFAC04300C46E6A /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +296,8 @@
 			children = (
 				10381FC21BF9B77000E5E476 /* CustomNavigationController.h */,
 				10381FC31BF9B77000E5E476 /* CustomNavigationController.m */,
+				104F0CC31BFAC04300C46E6A /* CustomViewController.h */,
+				104F0CC41BFAC04300C46E6A /* CustomViewController.m */,
 			);
 			name = CustomNavigationController;
 			sourceTree = "<group>";
@@ -313,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				10381FC61BF9CC0900E5E476 /* ButtonPressViewController */,
+				104F0CC21BFABFED00C46E6A /* PopStrokeController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -340,6 +349,15 @@
 				10381FDE1BF9DE6E00E5E476 /* GCDTimer.m */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		104F0CC21BFABFED00C46E6A /* PopStrokeController */ = {
+			isa = PBXGroup;
+			children = (
+				104F0CBF1BFABFE700C46E6A /* PopStrokeController.h */,
+				104F0CC01BFABFE700C46E6A /* PopStrokeController.m */,
+			);
+			name = PopStrokeController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,12 +454,14 @@
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
+				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
 				10381FBE1BF9B55B00E5E476 /* POPPropertyAnimation.mm in Sources */,
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
 				10381F701BF9B47000E5E476 /* AnimationsListViewController.m in Sources */,
+				104F0CC51BFAC04300C46E6A /* CustomViewController.m in Sources */,
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
 				10381F521BF9B44A00E5E476 /* main.m in Sources */,

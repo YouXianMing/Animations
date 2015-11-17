@@ -27,14 +27,12 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    [self setup];
 }
 
 #pragma mark - setup
 - (void)setup {
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    [super setup];
     
     // 完整显示按住按钮后的动画效果
     _button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];

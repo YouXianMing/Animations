@@ -41,7 +41,7 @@
     
     self.subTitleLabel           = [[UILabel alloc] initWithFrame:CGRectMake(10, 35, 290, 10)];
     self.subTitleLabel.font      = Font_Avenir_Light(8);
-    self.subTitleLabel.textColor = [[UIColor grayColor] colorWithAlphaComponent:0.5f];
+    self.subTitleLabel.textColor = [UIColor blackColor];
     [self addSubview:self.subTitleLabel];
 
 }
