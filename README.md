@@ -11,6 +11,8 @@
 
 ![demo4.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151117175229233-921553766.gif)
 
-> 参考代码
+
+
+> 部分参考代码
 
 [https://github.com/schneiderandre/popping](https://github.com/schneiderandre/popping)
