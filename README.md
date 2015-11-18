@@ -11,6 +11,7 @@
 
 ![demo4.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151117175229233-921553766.gif)
 
+![demo5.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151118112108890-1975317749.gif)
 
 
 > 部分参考代码
