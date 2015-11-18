@@ -17,6 +17,7 @@
 #import "PopStrokeController.h"
 #import "CAShapeLayerPathController.h"
 #import "TransformFadeViewController.h"
+#import "PopNumberController.h"
 
 @interface AnimationsListViewController ()
 
@@ -79,7 +80,8 @@
     self.items = @[[Item itemWithName:@"POP-按钮动画" object:[ButtonPressViewController class]],
                    [Item itemWithName:@"POP-Stroke动画" object:[PopStrokeController class]],
                    [Item itemWithName:@"CAShapeLayer的path动画" object:[CAShapeLayerPathController class]],
-                   [Item itemWithName:@"图片碎片化mask动画" object:[TransformFadeViewController class]]];
+                   [Item itemWithName:@"图片碎片化mask动画" object:[TransformFadeViewController class]],
+                   [Item itemWithName:@"POP-数值动画" object:[PopNumberController class]]];
 }
 
 #pragma mark - tableView 相关

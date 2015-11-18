@@ -9,10 +9,11 @@
 #ifndef SystemValues_h
 #define SystemValues_h
 
-//static NSString *HYFontName = @"HYQiHei-BEJF";
+// Fonts
+#define Font_HYQiHei(x)                [UIFont fontWithName:@"HYQiHei-BEJF" size:(x)]
+#define Font_Avenir_Light(x)           [UIFont fontWithName:@"Avenir-Light" size:(x)]
+#define Font_Avenir(x)                 [UIFont fontWithName:@"Avenir" size:(x)]
+#define Font_AppleSDGothicNeo_Thin(x)  [UIFont fontWithName:@"AppleSDGothicNeo-Thin" size:(x)]
 
-#define Font_HYQiHei(x)      [UIFont fontWithName:@"HYQiHei-BEJF" size:(x)]
-#define Font_Avenir_Light(x) [UIFont fontWithName:@"Avenir-Light" size:(x)]
-#define Font_Avenir(x)       [UIFont fontWithName:@"Avenir" size:(x)]
 
 #endif /* SystemValues_h */

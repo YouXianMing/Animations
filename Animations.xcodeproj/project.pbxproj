@@ -57,6 +57,13 @@
 		104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D111BFB1BB800C46E6A /* UIView+GlowView.m */; };
 		104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D141BFB275900C46E6A /* TransformFadeViewController.m */; };
 		104F0D191BFB28D700C46E6A /* TranformFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D181BFB28D700C46E6A /* TranformFadeView.m */; };
+		104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D1B1BFC113A00C46E6A /* PopNumberController.m */; };
+		104F0D201BFC118900C46E6A /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D1F1BFC118900C46E6A /* POPNumberAnimation.m */; };
+		104F0D311BFC1C9C00C46E6A /* StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D241BFC1C9C00C46E6A /* StringAttribute.m */; };
+		104F0D321BFC1C9C00C46E6A /* FontAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D281BFC1C9C00C46E6A /* FontAttribute.m */; };
+		104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2A1BFC1C9C00C46E6A /* ForegroundColorAttribute.m */; };
+		104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2D1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m */; };
+		104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +183,22 @@
 		104F0D141BFB275900C46E6A /* TransformFadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransformFadeViewController.m; sourceTree = "<group>"; };
 		104F0D171BFB28D700C46E6A /* TranformFadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranformFadeView.h; sourceTree = "<group>"; };
 		104F0D181BFB28D700C46E6A /* TranformFadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranformFadeView.m; sourceTree = "<group>"; };
+		104F0D1A1BFC113A00C46E6A /* PopNumberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopNumberController.h; sourceTree = "<group>"; };
+		104F0D1B1BFC113A00C46E6A /* PopNumberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopNumberController.m; sourceTree = "<group>"; };
+		104F0D1E1BFC118900C46E6A /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
+		104F0D1F1BFC118900C46E6A /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
+		104F0D231BFC1C9C00C46E6A /* StringAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringAttribute.h; sourceTree = "<group>"; };
+		104F0D241BFC1C9C00C46E6A /* StringAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringAttribute.m; sourceTree = "<group>"; };
+		104F0D251BFC1C9C00C46E6A /* StringAttributeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringAttributeProtocol.h; sourceTree = "<group>"; };
+		104F0D271BFC1C9C00C46E6A /* FontAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAttribute.h; sourceTree = "<group>"; };
+		104F0D281BFC1C9C00C46E6A /* FontAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontAttribute.m; sourceTree = "<group>"; };
+		104F0D291BFC1C9C00C46E6A /* ForegroundColorAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForegroundColorAttribute.h; sourceTree = "<group>"; };
+		104F0D2A1BFC1C9C00C46E6A /* ForegroundColorAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForegroundColorAttribute.m; sourceTree = "<group>"; };
+		104F0D2C1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+StringAttribute.h"; sourceTree = "<group>"; };
+		104F0D2D1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+StringAttribute.m"; sourceTree = "<group>"; };
+		104F0D2E1BFC1C9C00C46E6A /* NSString+StringAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringAttribute.h"; sourceTree = "<group>"; };
+		104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringAttribute.m"; sourceTree = "<group>"; };
+		104F0D301BFC1C9C00C46E6A /* StringAttributeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringAttributeHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +215,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				104F0D211BFC1C9C00C46E6A /* StringAttribute */,
 				104F0D091BFAFB5400C46E6A /* CGContextObject */,
 				10381FD51BF9DE6E00E5E476 /* GCD */,
 				10381F7B1BF9B55B00E5E476 /* pop */,
@@ -362,6 +386,7 @@
 				104F0CC21BFABFED00C46E6A /* PopStrokeController */,
 				104F0CF91BFAFA7400C46E6A /* CAShapeLayerPathController */,
 				104F0D161BFB275E00C46E6A /* TransformFadeViewController */,
+				104F0D1D1BFC113F00C46E6A /* PopNumberController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -439,6 +464,60 @@
 			name = TransformFadeViewController;
 			sourceTree = "<group>";
 		};
+		104F0D1D1BFC113F00C46E6A /* PopNumberController */ = {
+			isa = PBXGroup;
+			children = (
+				104F0D1A1BFC113A00C46E6A /* PopNumberController.h */,
+				104F0D1B1BFC113A00C46E6A /* PopNumberController.m */,
+				104F0D1E1BFC118900C46E6A /* POPNumberAnimation.h */,
+				104F0D1F1BFC118900C46E6A /* POPNumberAnimation.m */,
+			);
+			name = PopNumberController;
+			sourceTree = "<group>";
+		};
+		104F0D211BFC1C9C00C46E6A /* StringAttribute */ = {
+			isa = PBXGroup;
+			children = (
+				104F0D221BFC1C9C00C46E6A /* AbstractAttribute */,
+				104F0D261BFC1C9C00C46E6A /* ConcreteAttribute */,
+				104F0D2B1BFC1C9C00C46E6A /* StringAttribute+Category */,
+				104F0D301BFC1C9C00C46E6A /* StringAttributeHelper.h */,
+			);
+			path = StringAttribute;
+			sourceTree = "<group>";
+		};
+		104F0D221BFC1C9C00C46E6A /* AbstractAttribute */ = {
+			isa = PBXGroup;
+			children = (
+				104F0D231BFC1C9C00C46E6A /* StringAttribute.h */,
+				104F0D241BFC1C9C00C46E6A /* StringAttribute.m */,
+				104F0D251BFC1C9C00C46E6A /* StringAttributeProtocol.h */,
+			);
+			path = AbstractAttribute;
+			sourceTree = "<group>";
+		};
+		104F0D261BFC1C9C00C46E6A /* ConcreteAttribute */ = {
+			isa = PBXGroup;
+			children = (
+				104F0D271BFC1C9C00C46E6A /* FontAttribute.h */,
+				104F0D281BFC1C9C00C46E6A /* FontAttribute.m */,
+				104F0D291BFC1C9C00C46E6A /* ForegroundColorAttribute.h */,
+				104F0D2A1BFC1C9C00C46E6A /* ForegroundColorAttribute.m */,
+			);
+			path = ConcreteAttribute;
+			sourceTree = "<group>";
+		};
+		104F0D2B1BFC1C9C00C46E6A /* StringAttribute+Category */ = {
+			isa = PBXGroup;
+			children = (
+				104F0D2C1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.h */,
+				104F0D2D1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m */,
+				104F0D2E1BFC1C9C00C46E6A /* NSString+StringAttribute.h */,
+				104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */,
+			);
+			path = "StringAttribute+Category";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -512,6 +591,7 @@
 				10381FB91BF9B55B00E5E476 /* POPCustomAnimation.mm in Sources */,
 				10381FBB1BF9B55B00E5E476 /* POPGeometry.mm in Sources */,
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
+				104F0D311BFC1C9C00C46E6A /* StringAttribute.m in Sources */,
 				104F0D051BFAFB4200C46E6A /* GradientColor.m in Sources */,
 				10381FD11BF9D2C600E5E476 /* StrokeCircleLayerConfigure.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
@@ -527,6 +607,7 @@
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
 				10381FC41BF9B77000E5E476 /* CustomNavigationController.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
+				104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */,
 				104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */,
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
@@ -537,12 +618,14 @@
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
 				104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */,
 				10381FC11BF9B55B00E5E476 /* TransformationMatrix.cpp in Sources */,
+				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */,
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
+				104F0D321BFC1C9C00C46E6A /* FontAttribute.m in Sources */,
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
 				104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */,
 				104F0D001BFAFB3300C46E6A /* CGContextObject.m in Sources */,
@@ -552,6 +635,9 @@
 				10381F701BF9B47000E5E476 /* AnimationsListViewController.m in Sources */,
 				104F0CC51BFAC04300C46E6A /* CustomViewController.m in Sources */,
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
+				104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */,
+				104F0D201BFC118900C46E6A /* POPNumberAnimation.m in Sources */,
+				104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */,
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
 				104F0D0F1BFB006C00C46E6A /* UIView+SetRect.m in Sources */,
 				10381F521BF9B44A00E5E476 /* main.m in Sources */,
