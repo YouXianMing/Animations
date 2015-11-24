@@ -1,5 +1,5 @@
 //
-//  CustomTitleViewController.h
+//  CustomVisualEffectTitleViewController.h
 //  Animations
 //
 //  Created by YouXianMing on 15/11/24.
@@ -8,7 +8,7 @@
 
 #import "CustomViewController.h"
 
-@interface CustomTitleViewController : CustomViewController
+@interface CustomVisualEffectTitleViewController : CustomViewController
 
 /**
  *  Title view.

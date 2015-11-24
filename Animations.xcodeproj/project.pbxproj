@@ -14,6 +14,7 @@
 		103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088761C04133500C8B623 /* ScrollImageViewController.m */; };
 		1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088791C0414A000C8B623 /* MoreInfoView.m */; };
 		1030887D1C0440E100C8B623 /* CustomTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1030887C1C0440E100C8B623 /* CustomTitleViewController.m */; };
+		103088801C045E9400C8B623 /* CustomVisualEffectTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1030887F1C045E9400C8B623 /* CustomVisualEffectTitleViewController.m */; };
 		10381F521BF9B44A00E5E476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F511BF9B44A00E5E476 /* main.m */; };
 		10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F541BF9B44A00E5E476 /* AppDelegate.m */; };
 		10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10381F5C1BF9B44A00E5E476 /* Assets.xcassets */; };
@@ -88,6 +89,8 @@
 		103088791C0414A000C8B623 /* MoreInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoView.m; sourceTree = "<group>"; };
 		1030887B1C0440E100C8B623 /* CustomTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTitleViewController.h; sourceTree = "<group>"; };
 		1030887C1C0440E100C8B623 /* CustomTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTitleViewController.m; sourceTree = "<group>"; };
+		1030887E1C045E9400C8B623 /* CustomVisualEffectTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVisualEffectTitleViewController.h; sourceTree = "<group>"; };
+		1030887F1C045E9400C8B623 /* CustomVisualEffectTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVisualEffectTitleViewController.m; sourceTree = "<group>"; };
 		10381F4D1BF9B44A00E5E476 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10381F511BF9B44A00E5E476 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10381F531BF9B44A00E5E476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -450,6 +453,8 @@
 				104F0CC41BFAC04300C46E6A /* CustomViewController.m */,
 				1030887B1C0440E100C8B623 /* CustomTitleViewController.h */,
 				1030887C1C0440E100C8B623 /* CustomTitleViewController.m */,
+				1030887E1C045E9400C8B623 /* CustomVisualEffectTitleViewController.h */,
+				1030887F1C045E9400C8B623 /* CustomVisualEffectTitleViewController.m */,
 			);
 			name = CustomNavigationController;
 			sourceTree = "<group>";
@@ -697,6 +702,7 @@
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
 				104F0D011BFAFB3300C46E6A /* CGContextObjectConfig.m in Sources */,
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
+				103088801C045E9400C8B623 /* CustomVisualEffectTitleViewController.m in Sources */,
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
 				10381FC41BF9B77000E5E476 /* CustomNavigationController.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,

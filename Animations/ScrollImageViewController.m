@@ -83,6 +83,8 @@ static int viewTag = 0x11;
     }
     
     [self bringTitleViewToFront];
+    
+
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

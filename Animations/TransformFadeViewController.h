@@ -6,8 +6,8 @@
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomTitleViewController.h"
+#import "CustomVisualEffectTitleViewController.h"
 
-@interface TransformFadeViewController : CustomTitleViewController
+@interface TransformFadeViewController : CustomVisualEffectTitleViewController
 
 @end
