@@ -155,7 +155,6 @@
 - (void)pop_animationDidStop:(POPAnimation *)anim finished:(BOOL)finished {
 
     NSLog(@"pop_animationDidStop %@", anim);
-    
 }
 
 - (void)pop_animationDidApply:(POPAnimation *)anim {

@@ -227,19 +227,15 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				103088721C03FC2A00C8B623 /* Color */,
 				103088651C03F19500C8B623 /* Easing */,
 				104F0D211BFC1C9C00C46E6A /* StringAttribute */,
 				104F0D091BFAFB5400C46E6A /* CGContextObject */,
 				10381FD51BF9DE6E00E5E476 /* GCD */,
-				10381F7B1BF9B55B00E5E476 /* pop */,
-				10381FE31BF9DE7F00E5E476 /* UIImage+ImageEffects.h */,
-				10381FE41BF9DE7F00E5E476 /* UIImage+ImageEffects.m */,
-				10381F671BF9B47000E5E476 /* UIColor+CustomColors.h */,
-				10381F681BF9B47000E5E476 /* UIColor+CustomColors.m */,
-				104F0D0D1BFB006C00C46E6A /* UIView+SetRect.h */,
-				104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */,
-				104F0D101BFB1BB800C46E6A /* UIView+GlowView.h */,
-				104F0D111BFB1BB800C46E6A /* UIView+GlowView.m */,
+				10381F7B1BF9B55B00E5E476 /* POP */,
+				1030886F1C03FABD00C8B623 /* UIImage+ImageEffects */,
+				103088711C03FB4D00C8B623 /* SetRect */,
+				103088701C03FACE00C8B623 /* Glow */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -264,6 +260,42 @@
 				103088691C03F1A000C8B623 /* YXEasing.m */,
 			);
 			name = Easing;
+			sourceTree = "<group>";
+		};
+		1030886F1C03FABD00C8B623 /* UIImage+ImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				10381FE31BF9DE7F00E5E476 /* UIImage+ImageEffects.h */,
+				10381FE41BF9DE7F00E5E476 /* UIImage+ImageEffects.m */,
+			);
+			name = "UIImage+ImageEffects";
+			sourceTree = "<group>";
+		};
+		103088701C03FACE00C8B623 /* Glow */ = {
+			isa = PBXGroup;
+			children = (
+				104F0D101BFB1BB800C46E6A /* UIView+GlowView.h */,
+				104F0D111BFB1BB800C46E6A /* UIView+GlowView.m */,
+			);
+			name = Glow;
+			sourceTree = "<group>";
+		};
+		103088711C03FB4D00C8B623 /* SetRect */ = {
+			isa = PBXGroup;
+			children = (
+				104F0D0D1BFB006C00C46E6A /* UIView+SetRect.h */,
+				104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */,
+			);
+			name = SetRect;
+			sourceTree = "<group>";
+		};
+		103088721C03FC2A00C8B623 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				10381F671BF9B47000E5E476 /* UIColor+CustomColors.h */,
+				10381F681BF9B47000E5E476 /* UIColor+CustomColors.m */,
+			);
+			name = Color;
 			sourceTree = "<group>";
 		};
 		10381F441BF9B44A00E5E476 = {
@@ -322,7 +354,7 @@
 			name = AnimationListViewController;
 			sourceTree = "<group>";
 		};
-		10381F7B1BF9B55B00E5E476 /* pop */ = {
+		10381F7B1BF9B55B00E5E476 /* POP */ = {
 			isa = PBXGroup;
 			children = (
 				10381F7C1BF9B55B00E5E476 /* POP.h */,
@@ -374,6 +406,7 @@
 				10381FAA1BF9B55B00E5E476 /* POPVector.mm */,
 				10381FAB1BF9B55B00E5E476 /* WebCore */,
 			);
+			name = POP;
 			path = pop;
 			sourceTree = "<group>";
 		};

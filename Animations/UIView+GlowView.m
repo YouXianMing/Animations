@@ -34,13 +34,13 @@
     self.glowLayer.shadowOffset  = CGSizeMake(0, 0);
     self.glowLayer.shadowOpacity = 1.f;
 
-    
     UIGraphicsEndImageContext();
 }
 
 - (void)insertGlowLayer {
 
     if (self.glowLayer) {
+        
         [self.layer addSublayer:self.glowLayer];
     }
 }
@@ -48,6 +48,7 @@
 - (void)removeGlowLayer {
 
     if (self.glowLayer) {
+        
         [self.glowLayer removeFromSuperlayer];
     }
 }
@@ -102,7 +103,6 @@
         });
         
         dispatch_resume(self.dispatchSource);
-
     }
 }
 
@@ -113,8 +113,11 @@
     if (self.glowOpacity) {
         
         if (self.glowOpacity.floatValue <= 0 || self.glowOpacity.floatValue > 1) {
+            
             return @(0.8);
+            
         } else {
+            
             return self.glowOpacity;
         }
         
@@ -129,8 +132,11 @@
     if (self.glowDuration) {
         
         if (self.glowDuration.floatValue <= 0) {
+            
             return @(0.5f);
+            
         } else {
+            
             return self.glowDuration;
         }
         
@@ -145,10 +151,14 @@
     if (self.hideDuration) {
         
         if (self.hideDuration.floatValue < 0) {
+            
             return @(0.5);
+            
         } else {
+            
             return self.hideDuration;
         }
+        
     } else {
         
         return @(0.5f);
@@ -160,8 +170,11 @@
     if (self.glowAnimationDuration) {
         
         if (self.glowAnimationDuration.floatValue <= 0) {
+            
             return @(1.f);
+            
         } else {
+            
             return self.glowAnimationDuration;
         }
         
@@ -174,8 +187,11 @@
 - (UIColor *)accessGlowColor {
 
     if (self.glowColor) {
+        
         return self.glowColor;
+        
     } else {
+        
         return [UIColor redColor];
     }
 }
@@ -185,11 +201,16 @@
     if (self.glowRadius) {
         
         if (self.glowRadius.floatValue <= 0) {
+            
             return @(2.f);
+            
         } else {
+            
             return self.glowRadius;
         }
+        
     } else {
+        
         return @(2.f);
     }
 }

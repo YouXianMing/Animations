@@ -1,6 +1,6 @@
 //
 //  UIView+SetRect.h
-//  TestPch
+//  SetRect
 //
 //  Created by YouXianMing on 14-9-26.
 //  Copyright (c) 2014年 YouXianMing. All rights reserved.
