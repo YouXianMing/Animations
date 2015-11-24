@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088631C03F18700C8B623 /* CircleAnimationViewController.m */; };
+		1030886A1C03F1A000C8B623 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 103088661C03F1A000C8B623 /* easing.c */; };
+		1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088691C03F1A000C8B623 /* YXEasing.m */; };
+		1030886E1C03F1B200C8B623 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1030886D1C03F1B200C8B623 /* CircleView.m */; };
 		10381F521BF9B44A00E5E476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F511BF9B44A00E5E476 /* main.m */; };
 		10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F541BF9B44A00E5E476 /* AppDelegate.m */; };
 		10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10381F5C1BF9B44A00E5E476 /* Assets.xcassets */; };
@@ -67,6 +71,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		103088621C03F18700C8B623 /* CircleAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleAnimationViewController.h; sourceTree = "<group>"; };
+		103088631C03F18700C8B623 /* CircleAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleAnimationViewController.m; sourceTree = "<group>"; };
+		103088661C03F1A000C8B623 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
+		103088671C03F1A000C8B623 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
+		103088681C03F1A000C8B623 /* YXEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXEasing.h; sourceTree = "<group>"; };
+		103088691C03F1A000C8B623 /* YXEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXEasing.m; sourceTree = "<group>"; };
+		1030886C1C03F1B200C8B623 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		1030886D1C03F1B200C8B623 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		10381F4D1BF9B44A00E5E476 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10381F511BF9B44A00E5E476 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10381F531BF9B44A00E5E476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -215,6 +227,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				103088651C03F19500C8B623 /* Easing */,
 				104F0D211BFC1C9C00C46E6A /* StringAttribute */,
 				104F0D091BFAFB5400C46E6A /* CGContextObject */,
 				10381FD51BF9DE6E00E5E476 /* GCD */,
@@ -229,6 +242,28 @@
 				104F0D111BFB1BB800C46E6A /* UIView+GlowView.m */,
 			);
 			name = Tools;
+			sourceTree = "<group>";
+		};
+		103088611C03F15600C8B623 /* CircleAnimationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				103088621C03F18700C8B623 /* CircleAnimationViewController.h */,
+				103088631C03F18700C8B623 /* CircleAnimationViewController.m */,
+				1030886C1C03F1B200C8B623 /* CircleView.h */,
+				1030886D1C03F1B200C8B623 /* CircleView.m */,
+			);
+			name = CircleAnimationViewController;
+			sourceTree = "<group>";
+		};
+		103088651C03F19500C8B623 /* Easing */ = {
+			isa = PBXGroup;
+			children = (
+				103088661C03F1A000C8B623 /* easing.c */,
+				103088671C03F1A000C8B623 /* easing.h */,
+				103088681C03F1A000C8B623 /* YXEasing.h */,
+				103088691C03F1A000C8B623 /* YXEasing.m */,
+			);
+			name = Easing;
 			sourceTree = "<group>";
 		};
 		10381F441BF9B44A00E5E476 = {
@@ -387,6 +422,7 @@
 				104F0CF91BFAFA7400C46E6A /* CAShapeLayerPathController */,
 				104F0D161BFB275E00C46E6A /* TransformFadeViewController */,
 				104F0D1D1BFC113F00C46E6A /* PopNumberController */,
+				103088611C03F15600C8B623 /* CircleAnimationViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -610,6 +646,7 @@
 				104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */,
 				104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */,
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
+				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
@@ -620,8 +657,10 @@
 				10381FC11BF9B55B00E5E476 /* TransformationMatrix.cpp in Sources */,
 				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
+				1030886A1C03F1A000C8B623 /* easing.c in Sources */,
 				10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */,
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
+				103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
@@ -639,6 +678,7 @@
 				104F0D201BFC118900C46E6A /* POPNumberAnimation.m in Sources */,
 				104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */,
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
+				1030886E1C03F1B200C8B623 /* CircleView.m in Sources */,
 				104F0D0F1BFB006C00C46E6A /* UIView+SetRect.m in Sources */,
 				10381F521BF9B44A00E5E476 /* main.m in Sources */,
 				10381FB81BF9B55B00E5E476 /* POPCGUtils.mm in Sources */,
