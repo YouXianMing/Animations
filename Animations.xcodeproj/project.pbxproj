@@ -18,7 +18,6 @@
 		10381F521BF9B44A00E5E476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F511BF9B44A00E5E476 /* main.m */; };
 		10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F541BF9B44A00E5E476 /* AppDelegate.m */; };
 		10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10381F5C1BF9B44A00E5E476 /* Assets.xcassets */; };
-		10381F601BF9B44A00E5E476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10381F5E1BF9B44A00E5E476 /* LaunchScreen.storyboard */; };
 		10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F681BF9B47000E5E476 /* UIColor+CustomColors.m */; };
 		10381F701BF9B47000E5E476 /* AnimationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F6A1BF9B47000E5E476 /* AnimationsListViewController.m */; };
 		10381F711BF9B47000E5E476 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F6C1BF9B47000E5E476 /* Item.m */; };
@@ -96,7 +95,6 @@
 		10381F531BF9B44A00E5E476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10381F541BF9B44A00E5E476 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		10381F5C1BF9B44A00E5E476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		10381F5F1BF9B44A00E5E476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10381F611BF9B44A00E5E476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10381F671BF9B47000E5E476 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
 		10381F681BF9B47000E5E476 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
@@ -346,7 +344,6 @@
 				10381FC71BF9CC2200E5E476 /* Controllers */,
 				1012C33F1BF9FB3700A1B4E4 /* Tools */,
 				10381F5C1BF9B44A00E5E476 /* Assets.xcassets */,
-				10381F5E1BF9B44A00E5E476 /* LaunchScreen.storyboard */,
 				10381F611BF9B44A00E5E476 /* Info.plist */,
 				10381F501BF9B44A00E5E476 /* Supporting Files */,
 			);
@@ -673,7 +670,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				10381F771BF9B4F800E5E476 /* HYQiHei-25JF.otf in Resources */,
-				10381F601BF9B44A00E5E476 /* LaunchScreen.storyboard in Resources */,
 				10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,17 +747,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		10381F5E1BF9B44A00E5E476 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				10381F5F1BF9B44A00E5E476 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		10381F621BF9B44A00E5E476 /* Debug */ = {

@@ -73,9 +73,9 @@
     [titleView addSubview:line];
 
     // Start glow.
-    headlinelabel.glowRadius            = @(4.f);
-    headlinelabel.glowOpacity           = @(0.8f);
-    headlinelabel.glowColor             = [[UIColor customRedColor] colorWithAlphaComponent:0.75f];
+    headlinelabel.glowRadius            = @(2.f);
+    headlinelabel.glowOpacity           = @(1.f);
+    headlinelabel.glowColor             = [[UIColor customRedColor] colorWithAlphaComponent:0.95f];
     
     headlinelabel.glowDuration          = @(1.f);
     headlinelabel.hideDuration          = @(3.f);

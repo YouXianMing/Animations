@@ -45,7 +45,7 @@
     [self.effectView.contentView addSubview:self.vibrancyEffectView];
     
     // Back button.
-    UIImage  *image      = [UIImage imageNamed:@"backIcon"];
+    UIImage  *image      = [UIImage imageNamed:@"backIconTypeTwo"];
     UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 64)];
     backButton.center    = CGPointMake(20, self.titleView.middleY);
     [backButton setImage:image forState:UIControlStateNormal];
