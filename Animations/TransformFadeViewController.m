@@ -101,6 +101,8 @@ typedef enum : NSUInteger {
         
     } timeIntervalWithSecs:6];
     [self.timer start];
+    
+    [self bringTitleViewToFront];
 }
 
 - (UIImage *)currentImage {

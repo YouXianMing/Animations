@@ -18,8 +18,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     AnimationsListViewController *animationsListViewController = [AnimationsListViewController new];
-    UINavigationController       *navigationController         = \
-        [[CustomNavigationController alloc] initWithRootViewController:animationsListViewController];
+    CustomNavigationController   *navigationController         = \
+        [[CustomNavigationController alloc] initWithRootViewController:animationsListViewController setNavigationBarHidden:YES];
     
     self.window.rootViewController = navigationController;
     self.window.backgroundColor    = [UIColor whiteColor];

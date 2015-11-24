@@ -27,7 +27,6 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
 }
 
 - (void)setup {
@@ -114,6 +113,8 @@
     } timeIntervalWithSecs:1.5f];
     
     [self.timer start];
+    
+    [self bringTitleViewToFront];
 }
 
 @end

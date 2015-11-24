@@ -11,6 +11,9 @@
 		1030886A1C03F1A000C8B623 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 103088661C03F1A000C8B623 /* easing.c */; };
 		1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088691C03F1A000C8B623 /* YXEasing.m */; };
 		1030886E1C03F1B200C8B623 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1030886D1C03F1B200C8B623 /* CircleView.m */; };
+		103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088761C04133500C8B623 /* ScrollImageViewController.m */; };
+		1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088791C0414A000C8B623 /* MoreInfoView.m */; };
+		1030887D1C0440E100C8B623 /* CustomTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1030887C1C0440E100C8B623 /* CustomTitleViewController.m */; };
 		10381F521BF9B44A00E5E476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F511BF9B44A00E5E476 /* main.m */; };
 		10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F541BF9B44A00E5E476 /* AppDelegate.m */; };
 		10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10381F5C1BF9B44A00E5E476 /* Assets.xcassets */; };
@@ -79,6 +82,12 @@
 		103088691C03F1A000C8B623 /* YXEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXEasing.m; sourceTree = "<group>"; };
 		1030886C1C03F1B200C8B623 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
 		1030886D1C03F1B200C8B623 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		103088751C04133500C8B623 /* ScrollImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImageViewController.h; sourceTree = "<group>"; };
+		103088761C04133500C8B623 /* ScrollImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollImageViewController.m; sourceTree = "<group>"; };
+		103088781C0414A000C8B623 /* MoreInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoView.h; sourceTree = "<group>"; };
+		103088791C0414A000C8B623 /* MoreInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoView.m; sourceTree = "<group>"; };
+		1030887B1C0440E100C8B623 /* CustomTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTitleViewController.h; sourceTree = "<group>"; };
+		1030887C1C0440E100C8B623 /* CustomTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTitleViewController.m; sourceTree = "<group>"; };
 		10381F4D1BF9B44A00E5E476 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10381F511BF9B44A00E5E476 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10381F531BF9B44A00E5E476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -298,6 +307,17 @@
 			name = Color;
 			sourceTree = "<group>";
 		};
+		103088741C0412CE00C8B623 /* ScrollImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				103088751C04133500C8B623 /* ScrollImageViewController.h */,
+				103088761C04133500C8B623 /* ScrollImageViewController.m */,
+				103088781C0414A000C8B623 /* MoreInfoView.h */,
+				103088791C0414A000C8B623 /* MoreInfoView.m */,
+			);
+			name = ScrollImageViewController;
+			sourceTree = "<group>";
+		};
 		10381F441BF9B44A00E5E476 = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +448,8 @@
 				10381FC31BF9B77000E5E476 /* CustomNavigationController.m */,
 				104F0CC31BFAC04300C46E6A /* CustomViewController.h */,
 				104F0CC41BFAC04300C46E6A /* CustomViewController.m */,
+				1030887B1C0440E100C8B623 /* CustomTitleViewController.h */,
+				1030887C1C0440E100C8B623 /* CustomTitleViewController.m */,
 			);
 			name = CustomNavigationController;
 			sourceTree = "<group>";
@@ -456,6 +478,7 @@
 				104F0D161BFB275E00C46E6A /* TransformFadeViewController */,
 				104F0D1D1BFC113F00C46E6A /* PopNumberController */,
 				103088611C03F15600C8B623 /* CircleAnimationViewController */,
+				103088741C0412CE00C8B623 /* ScrollImageViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -669,6 +692,7 @@
 				10381FB61BF9B55B00E5E476 /* POPAnimator.mm in Sources */,
 				104F0D191BFB28D700C46E6A /* TranformFadeView.m in Sources */,
 				10381FB51BF9B55B00E5E476 /* POPAnimationTracer.mm in Sources */,
+				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
 				104F0D011BFAFB3300C46E6A /* CGContextObjectConfig.m in Sources */,
@@ -682,11 +706,13 @@
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */,
+				1030887D1C0440E100C8B623 /* CustomTitleViewController.m in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
 				10381FD41BF9D8B300E5E476 /* FillCircleLayerConfigure.m in Sources */,
 				104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */,
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
 				104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */,
+				1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */,
 				10381FC11BF9B55B00E5E476 /* TransformationMatrix.cpp in Sources */,
 				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,

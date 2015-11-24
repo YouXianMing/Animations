@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewController.h"
 
 @interface CustomNavigationController : UINavigationController
+
+/**
+ *  Init with rootViewController.
+ *
+ *  @param rootViewController An UIViewController used as rootViewController.
+ *  @param hidden             Navigation bar hide or not.
+ *
+ *  @return CustomNavigationController object.
+ */
+- (instancetype)initWithRootViewController:(CustomViewController *)rootViewController setNavigationBarHidden:(BOOL)hidden;
 
 @end

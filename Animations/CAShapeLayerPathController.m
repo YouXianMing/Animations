@@ -112,6 +112,8 @@
         
     } timeIntervalWithSecs:1.f];
     [self.timer start];
+    
+    [self bringTitleViewToFront];
 }
 
 - (UIBezierPath *)randomPath {

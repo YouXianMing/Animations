@@ -6,8 +6,8 @@
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomViewController.h"
+#import "CustomTitleViewController.h"
 
-@interface TransformFadeViewController : CustomViewController
+@interface TransformFadeViewController : CustomTitleViewController
 
 @end

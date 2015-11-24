@@ -67,6 +67,8 @@
     } timeIntervalWithSecs:1];
     
     [_timer start];
+    
+    [self bringTitleViewToFront];
 }
 
 - (UIColor *)randomColor {

@@ -8,6 +8,7 @@
 
 #import "AnimationsListViewController.h"
 #import "UIColor+CustomColors.h"
+#import "UIView+SetRect.h"
 #import "UIView+GlowView.h"
 #import "ListItemCell.h"
 #import "Item.h"
@@ -19,10 +20,14 @@
 #import "TransformFadeViewController.h"
 #import "PopNumberController.h"
 #import "CircleAnimationViewController.h"
+#import "ScrollImageViewController.h"
 
-@interface AnimationsListViewController ()
+@interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSArray  *items;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic)         BOOL         tableViewLoadData;
+
+@property (nonatomic, strong) NSArray     *items;
 
 @end
 
@@ -32,23 +37,24 @@
     
     [super viewDidLoad];
     
-    [self configureTitleView];
-    
     [self configureDataSource];
     
     [self configureTableView];
+    
+    [self configureTitleView];
+    
+    [self useInteractivePopGestureRecognizer];
 }
 
 - (void)configureTitleView {
     
-    self.title = @"Animations";
-    
+    // Title label.
     UILabel *headlinelabel      = [UILabel new];
     headlinelabel.font          = Font_Avenir_Light(28);
     headlinelabel.textAlignment = NSTextAlignmentCenter;
     headlinelabel.textColor     = [UIColor customGrayColor];
     
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.title];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"Animations"];
     [attributedString addAttribute:NSForegroundColorAttributeName
                              value:[UIColor customBlueColor]
                              range:NSMakeRange(1, 1)];
@@ -56,8 +62,17 @@
     headlinelabel.attributedText = attributedString;
     [headlinelabel sizeToFit];
     
-    [self.navigationItem setTitleView:headlinelabel];
+    // Title view.
+    UIView *titleView     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 64)];
+    headlinelabel.center  = titleView.middlePoint;
+    [titleView addSubview:headlinelabel];
+    [self.view addSubview:titleView];
     
+    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, self.view.width, 0.5f)];
+    line.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.25f];
+    [titleView addSubview:line];
+
+    // Start glow.
     headlinelabel.glowRadius            = @(4.f);
     headlinelabel.glowOpacity           = @(0.8f);
     headlinelabel.glowColor             = [[UIColor customRedColor] colorWithAlphaComponent:0.75f];
@@ -83,20 +98,50 @@
                    [Item itemWithName:@"CAShapeLayer的path动画" object:[CAShapeLayerPathController class]],
                    [Item itemWithName:@"图片碎片化mask动画" object:[TransformFadeViewController class]],
                    [Item itemWithName:@"POP-数值动画" object:[PopNumberController class]],
-                   [Item itemWithName:@"Easing-圆环动画" object:[CircleAnimationViewController class]]];
+                   [Item itemWithName:@"Easing-圆环动画" object:[CircleAnimationViewController class]],
+                   [Item itemWithName:@"UIScrollView视差动画" object:[ScrollImageViewController class]]];
 }
 
 #pragma mark - tableView 相关
 - (void)configureTableView {
 
+    CGFloat width  = self.view.width;
+    CGFloat height = self.view.height;
+    
+    self.tableView                = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, width, height - 64) style:UITableViewStylePlain];
+    self.tableView.delegate       = self;
+    self.tableView.dataSource     = self;
     self.tableView.rowHeight      = 50.f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[ListItemCell class] forCellReuseIdentifier:listItemCellString];
+    
+    [self.view addSubview:self.tableView];
+    
+    [GCDQueue executeInMainQueue:^{
+
+        // Load data.
+        NSMutableArray *indexPaths = [NSMutableArray array];
+        for (int i = 0; i < self.items.count; i++) {
+            
+            [indexPaths addObject:[NSIndexPath indexPathForItem:i inSection:0]];
+        }
+        
+        self.tableViewLoadData = YES;
+        [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+
+    } afterDelaySecs:0.25f];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return self.items.count;
+    if (self.tableViewLoadData == NO) {
+        
+        return 0;
+        
+    } else {
+    
+        return self.items.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -115,6 +160,19 @@
     controller.title             = item.name;
     
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+#pragma mark - 
+- (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
+    self.enableInteractivePopGestureRecognizer = NO;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+
+    [super viewDidDisappear:animated];
+    self.enableInteractivePopGestureRecognizer = YES;
 }
 
 @end

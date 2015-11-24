@@ -90,6 +90,8 @@
         [config configCAShapeLayer:self.circleShape2];
         [self.view.layer addSublayer:self.circleShape2];
     }
+    
+    [self bringTitleViewToFront];
 }
 
 #pragma mark - Button events

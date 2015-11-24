@@ -1,5 +1,5 @@
 //
-//  CircleAnimationViewController.h
+//  ScrollImageViewController.h
 //  Animations
 //
 //  Created by YouXianMing on 15/11/24.
@@ -8,6 +8,6 @@
 
 #import "CustomTitleViewController.h"
 
-@interface CircleAnimationViewController : CustomTitleViewController
+@interface ScrollImageViewController : CustomTitleViewController
 
 @end

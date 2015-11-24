@@ -50,6 +50,8 @@
         
     } timeIntervalWithSecs:3.f];
     [self.timer start];
+    
+    [self bringTitleViewToFront];
 }
 
 - (void)configNumberAnimation {
