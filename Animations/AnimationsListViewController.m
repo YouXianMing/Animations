@@ -21,6 +21,7 @@
 #import "PopNumberController.h"
 #import "CircleAnimationViewController.h"
 #import "ScrollImageViewController.h"
+#import "ScrollBlurImageViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -99,7 +100,8 @@
                    [Item itemWithName:@"图片碎片化mask动画" object:[TransformFadeViewController class]],
                    [Item itemWithName:@"POP-数值动画" object:[PopNumberController class]],
                    [Item itemWithName:@"Easing-圆环动画" object:[CircleAnimationViewController class]],
-                   [Item itemWithName:@"UIScrollView视差动画" object:[ScrollImageViewController class]]];
+                   [Item itemWithName:@"UIScrollView视差效果动画" object:[ScrollImageViewController class]],
+                   [Item itemWithName:@"UIScrollView视差模糊效果" object:[ScrollBlurImageViewController class]]];
 }
 
 #pragma mark - tableView 相关

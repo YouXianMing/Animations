@@ -19,6 +19,11 @@
         self.layer.borderColor   = [UIColor blackColor].CGColor;
         self.layer.masksToBounds = YES;
         
+        /*
+         *     --------------     *
+         *-50->|-view-width-|<-50-*
+         *     --------------     *
+         */
         _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(-50, 0, rect.size.width + 50 * 2, rect.size.height)];
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
         [self addSubview:_imageView];

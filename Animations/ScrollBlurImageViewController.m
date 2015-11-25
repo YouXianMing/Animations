@@ -1,20 +1,20 @@
 //
-//  ScrollImageViewController.m
+//  ScrollBlurImageViewController.m
 //  Animations
 //
-//  Created by YouXianMing on 15/11/24.
+//  Created by YouXianMing on 15/11/25.
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "ScrollImageViewController.h"
+#import "ScrollBlurImageViewController.h"
 #import "MoreInfoView.h"
 #import "UIView+SetRect.h"
 #import "Math.h"
+#import "UIImage+ImageEffects.h"
 
-static int type    = 0;
 static int viewTag = 0x11;
 
-@interface ScrollImageViewController () <UIScrollViewDelegate>
+@interface ScrollBlurImageViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSArray       *picturesArray;
 @property (nonatomic, strong) UIScrollView  *scrollView;
@@ -22,7 +22,7 @@ static int viewTag = 0x11;
 
 @end
 
-@implementation ScrollImageViewController
+@implementation ScrollBlurImageViewController
 
 - (void)viewDidLoad {
     
@@ -33,41 +33,15 @@ static int viewTag = 0x11;
     
     [super setup];
     
-    MATHPoint pointA;
-    MATHPoint pointB;
-    
-    // Type.
-    if (type % 4 == 0) {
-        
-        pointA = MATHPointMake(0, -50);
-        pointB = MATHPointMake(self.view.width, 270 - 80);
-        
-    } else if (type % 4 == 1) {
-        
-        pointA = MATHPointMake(0, -50);
-        pointB = MATHPointMake(self.view.width, 270 - 20);
-        
-    } else if (type % 4 == 2) {
-        
-        pointA = MATHPointMake(0, -50);
-        pointB = MATHPointMake(self.view.width, 270 + 20);
-        
-    } else if (type % 4 == 3) {
-        
-        pointA = MATHPointMake(0, -50);
-        pointB = MATHPointMake(self.view.width, 270 + 80);
-    }
-    
+    MATHPoint pointA = MATHPointMake(0, -50);
+    MATHPoint pointB = MATHPointMake(self.view.width, self.view.width - 50);;
+
     self.onceLinearEquation = [Math mathOnceLinearEquationWithPointA:pointA PointB:pointB];
     
-    type++;
-    
     // Init pictures data.
-    self.picturesArray = @[[UIImage imageNamed:@"1"],
-                           [UIImage imageNamed:@"2"],
-                           [UIImage imageNamed:@"3"],
-                           [UIImage imageNamed:@"4"],
-                           [UIImage imageNamed:@"5"]];
+    self.picturesArray = @[[UIImage imageNamed:@"beauty"],
+                           [[UIImage imageNamed:@"beauty"] blurImage],
+                           [[UIImage imageNamed:@"beauty"] grayScale]];
     
     // Init scrollView.
     CGFloat height = self.view.height;
@@ -85,9 +59,11 @@ static int viewTag = 0x11;
     // Init moreInfoViews.
     for (int i = 0; i < self.picturesArray.count; i++) {
         
-        MoreInfoView *show   = [[MoreInfoView alloc] initWithFrame:CGRectMake(i * width, 0, width, height)];
-        show.imageView.image = self.picturesArray[i];
-        show.tag             = viewTag + i;
+        MoreInfoView *show     = [[MoreInfoView alloc] initWithFrame:CGRectMake(i * width, 0, width, height)];
+        show.imageView.image   = self.picturesArray[i];
+        show.layer.borderWidth = 0.25f;
+        show.layer.borderColor = [[UIColor grayColor] colorWithAlphaComponent:0.25f].CGColor;
+        show.tag               = viewTag + i;
         
         [_scrollView addSubview:show];
     }

@@ -167,7 +167,7 @@
     CGSize size      = [toValue CGSizeValue];
     
     [CATransaction setDisableActions:YES];
-    CGFloat percent         = (size.height - calculateConstant(0, 1, 1, 0.7))/calculateSlope(0, 1, 1, 0.7);
+    CGFloat percent         = (size.height - calculateOnceLinerConstant(0, 1, 1, 0.7))/calculateOnceLinerSlope(0, 1, 1, 0.7);
     _circleShape1.strokeEnd = percent;
     _circleShape2.strokeEnd = percent;
     [CATransaction setDisableActions:NO];
@@ -177,12 +177,12 @@
 }
 
 #pragma mark - Y = kX + b
-CGFloat calculateSlope(CGFloat x1, CGFloat y1, CGFloat x2, CGFloat y2) {
+CGFloat calculateOnceLinerSlope(CGFloat x1, CGFloat y1, CGFloat x2, CGFloat y2) {
     
     return (y2 - y1) / (x2 - x1);
 }
 
-CGFloat calculateConstant(CGFloat x1, CGFloat y1, CGFloat x2, CGFloat y2) {
+CGFloat calculateOnceLinerConstant(CGFloat x1, CGFloat y1, CGFloat x2, CGFloat y2) {
     
     return (y1*(x2 - x1) - x1*(y2 - y1)) / (x2 - x1);
 }
