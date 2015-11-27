@@ -20,20 +20,13 @@
 
 @implementation ListItemCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+- (void)setupCell {
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
-        self.accessoryType       = UITableViewCellAccessoryDisclosureIndicator;
-        self.selectionStyle      = UITableViewCellSelectionStyleNone;
-        
-        [self setup];
-    }
-    
-    return self;
+    self.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
-- (void)setup {
+- (void)buildSubview {
 
     self.titlelabel      = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 290, 25)];
     self.titlelabel.font = Font_HYQiHei(20);
@@ -43,7 +36,16 @@
     self.subTitleLabel.font      = Font_Avenir_Light(8);
     self.subTitleLabel.textColor = [UIColor blackColor];
     [self addSubview:self.subTitleLabel];
+}
 
+- (void)loadContent {
+    
+    if (self.data) {
+        
+        Item *item              = self.data;
+        self.titlelabel.text    = item.name;
+        self.subTitleLabel.text = [NSString stringWithFormat:@"%@", item.object];
+    }
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
@@ -64,16 +66,6 @@
         scaleAnimation.velocity            = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
         scaleAnimation.springBounciness    = 20.f;
         [self.titlelabel pop_addAnimation:scaleAnimation forKey:@"scaleAnimation"];
-    }
-}
-
-- (void)loadContent {
-
-    if (_data) {
-        
-        Item *item              = _data;
-        self.titlelabel.text    = item.name;
-        self.subTitleLabel.text = [NSString stringWithFormat:@"%@", item.object];
     }
 }
 

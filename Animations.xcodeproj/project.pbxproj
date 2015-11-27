@@ -73,6 +73,10 @@
 		104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2A1BFC1C9C00C46E6A /* ForegroundColorAttribute.m */; };
 		104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2D1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m */; };
 		104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */; };
+		105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */; };
+		105D98A41C07F17D00FD1013 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A31C07F17D00FD1013 /* CustomCell.m */; };
+		105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */; };
+		105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -227,6 +231,14 @@
 		104F0D2E1BFC1C9C00C46E6A /* NSString+StringAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringAttribute.h"; sourceTree = "<group>"; };
 		104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringAttribute.m"; sourceTree = "<group>"; };
 		104F0D301BFC1C9C00C46E6A /* StringAttributeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringAttributeHelper.h; sourceTree = "<group>"; };
+		105D989E1C07F0E500FD1013 /* TableViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewTapAnimationController.h; sourceTree = "<group>"; };
+		105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTapAnimationController.m; sourceTree = "<group>"; };
+		105D98A21C07F17D00FD1013 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		105D98A31C07F17D00FD1013 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		105D98A51C07F52D00FD1013 /* TableViewTapAnimationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewTapAnimationCell.h; sourceTree = "<group>"; };
+		105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTapAnimationCell.m; sourceTree = "<group>"; };
+		105D98A81C07FC2C00FD1013 /* TapAnimationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapAnimationModel.h; sourceTree = "<group>"; };
+		105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapAnimationModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,6 +519,7 @@
 				103088611C03F15600C8B623 /* CircleAnimationViewController */,
 				103088741C0412CE00C8B623 /* ScrollImageViewController */,
 				103088B01C05675000C8B623 /* ScrollBlurImageViewController */,
+				105D989D1C07F0B600FD1013 /* TableViewTapAnimationController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -514,6 +527,7 @@
 		10381FC81BF9CC3800E5E476 /* BaseConfig */ = {
 			isa = PBXGroup;
 			children = (
+				105D98A11C07F16700FD1013 /* CustomCell */,
 				10381FC51BF9B8A800E5E476 /* CustomNavigationController */,
 				10381F731BF9B47400E5E476 /* AnimationListViewController */,
 			);
@@ -638,6 +652,28 @@
 			path = "StringAttribute+Category";
 			sourceTree = "<group>";
 		};
+		105D989D1C07F0B600FD1013 /* TableViewTapAnimationController */ = {
+			isa = PBXGroup;
+			children = (
+				105D989E1C07F0E500FD1013 /* TableViewTapAnimationController.h */,
+				105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */,
+				105D98A51C07F52D00FD1013 /* TableViewTapAnimationCell.h */,
+				105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */,
+				105D98A81C07FC2C00FD1013 /* TapAnimationModel.h */,
+				105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */,
+			);
+			name = TableViewTapAnimationController;
+			sourceTree = "<group>";
+		};
+		105D98A11C07F16700FD1013 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				105D98A21C07F17D00FD1013 /* CustomCell.h */,
+				105D98A31C07F17D00FD1013 /* CustomCell.m */,
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -709,6 +745,7 @@
 			files = (
 				10381FB91BF9B55B00E5E476 /* POPCustomAnimation.mm in Sources */,
 				10381FBB1BF9B55B00E5E476 /* POPGeometry.mm in Sources */,
+				105D98A41C07F17D00FD1013 /* CustomCell.m in Sources */,
 				103088B31C05679A00C8B623 /* ScrollBlurImageViewController.m in Sources */,
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
 				104F0D311BFC1C9C00C46E6A /* StringAttribute.m in Sources */,
@@ -758,6 +795,8 @@
 				104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */,
 				104F0D001BFAFB3300C46E6A /* CGContextObject.m in Sources */,
 				10381FBE1BF9B55B00E5E476 /* POPPropertyAnimation.mm in Sources */,
+				105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */,
+				105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */,
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
 				10381F701BF9B47000E5E476 /* AnimationsListViewController.m in Sources */,
@@ -767,6 +806,7 @@
 				104F0D201BFC118900C46E6A /* POPNumberAnimation.m in Sources */,
 				104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */,
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
+				105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */,
 				1030886E1C03F1B200C8B623 /* CircleView.m in Sources */,
 				104F0D0F1BFB006C00C46E6A /* UIView+SetRect.m in Sources */,
 				10381F521BF9B44A00E5E476 /* main.m in Sources */,

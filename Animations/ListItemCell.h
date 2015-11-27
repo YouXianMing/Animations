@@ -6,17 +6,10 @@
 //  Copyright © 2015年 ZiPeiYi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CustomCell.h"
 
 static NSString *listItemCellString = @"ListItemCell";
 
-@interface ListItemCell : UITableViewCell
-
-@property (nonatomic, weak) id data;
-
-/**
- *  Load data.
- */
-- (void)loadContent;
+@interface ListItemCell : CustomCell
 
 @end
