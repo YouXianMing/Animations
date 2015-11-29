@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */; };
+		1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DD1C0AA639004CFBCE /* POPSpringParameterController.m */; };
 		103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088631C03F18700C8B623 /* CircleAnimationViewController.m */; };
 		1030886A1C03F1A000C8B623 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 103088661C03F1A000C8B623 /* easing.c */; };
 		1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088691C03F1A000C8B623 /* YXEasing.m */; };
@@ -80,6 +82,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1010C6D91C0A9DA0004CFBCE /* RangeValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeValueView.h; sourceTree = "<group>"; };
+		1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeValueView.m; sourceTree = "<group>"; };
+		1010C6DC1C0AA639004CFBCE /* POPSpringParameterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringParameterController.h; sourceTree = "<group>"; };
+		1010C6DD1C0AA639004CFBCE /* POPSpringParameterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPSpringParameterController.m; sourceTree = "<group>"; };
 		103088621C03F18700C8B623 /* CircleAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleAnimationViewController.h; sourceTree = "<group>"; };
 		103088631C03F18700C8B623 /* CircleAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleAnimationViewController.m; sourceTree = "<group>"; };
 		103088661C03F1A000C8B623 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
@@ -252,6 +258,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1010C6D51C0A9C86004CFBCE /* POPSpringParameterController */ = {
+			isa = PBXGroup;
+			children = (
+				1010C6D91C0A9DA0004CFBCE /* RangeValueView.h */,
+				1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */,
+				1010C6DC1C0AA639004CFBCE /* POPSpringParameterController.h */,
+				1010C6DD1C0AA639004CFBCE /* POPSpringParameterController.m */,
+			);
+			name = POPSpringParameterController;
+			sourceTree = "<group>";
+		};
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +537,7 @@
 				103088741C0412CE00C8B623 /* ScrollImageViewController */,
 				103088B01C05675000C8B623 /* ScrollBlurImageViewController */,
 				105D989D1C07F0B600FD1013 /* TableViewTapAnimationController */,
+				1010C6D51C0A9C86004CFBCE /* POPSpringParameterController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -779,9 +797,11 @@
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
 				104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */,
 				1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */,
+				1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */,
 				10381FC11BF9B55B00E5E476 /* TransformationMatrix.cpp in Sources */,
 				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
+				1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */,
 				1030886A1C03F1A000C8B623 /* easing.c in Sources */,
 				10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */,
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,

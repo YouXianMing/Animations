@@ -23,6 +23,7 @@
 #import "ScrollImageViewController.h"
 #import "ScrollBlurImageViewController.h"
 #import "TableViewTapAnimationController.h"
+#import "POPSpringParameterController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -103,7 +104,8 @@
                    [Item itemWithName:@"Easing-圆环动画" object:[CircleAnimationViewController class]],
                    [Item itemWithName:@"UIScrollView视差效果动画" object:[ScrollImageViewController class]],
                    [Item itemWithName:@"UIScrollView视差模糊效果" object:[ScrollBlurImageViewController class]],
-                   [Item itemWithName:@"UITableView状态切换效果" object:[TableViewTapAnimationController class]]];
+                   [Item itemWithName:@"UITableView状态切换效果" object:[TableViewTapAnimationController class]],
+                   [Item itemWithName:@"POP-Spring动画参数详解" object:[POPSpringParameterController class]]];
 }
 
 #pragma mark - tableView 相关
