@@ -9,6 +9,7 @@
 #import "TableViewTapAnimationCell.h"
 #import "UIView+SetRect.h"
 #import "TapAnimationModel.h"
+#import "WxHxD.h"
 
 @interface TableViewTapAnimationCell ()
 
@@ -124,7 +125,7 @@
 
 - (void)showSelectedAnimation {
     
-    UIView *tmpView         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.window.width, 80)];
+    UIView *tmpView         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, 80)];
     tmpView.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.30];
     tmpView.alpha           = 0.f;
     

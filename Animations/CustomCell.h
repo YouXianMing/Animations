@@ -43,12 +43,12 @@
 @property (nonatomic, weak) NSIndexPath             *indexPath;
 
 /**
- *  TableView from out.
+ *  TableView.
  */
 @property (nonatomic, weak) UITableView             *tableView;
 
 /**
- *  Controller from out.
+ *  Controller.
  */
 @property (nonatomic, weak) UIViewController        *controller;
 
