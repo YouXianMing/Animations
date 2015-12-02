@@ -52,6 +52,11 @@
  */
 @property (nonatomic, weak) UIViewController        *controller;
 
+/**
+ *  Cell is showed or not, you can set this property in UITableView's method 'tableView:willDisplayCell:forRowAtIndexPath:' & 'tableView:didEndDisplayingCell:forRowAtIndexPath:' at runtime.
+ */
+@property (nonatomic)       BOOL                     display;
+
 #pragma mark - Useful method.
 
 /**

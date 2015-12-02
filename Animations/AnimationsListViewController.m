@@ -25,6 +25,7 @@
 #import "TableViewTapAnimationController.h"
 #import "POPSpringParameterController.h"
 #import "HeaderViewTapAnimationController.h"
+#import "CountDownTimerController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -107,7 +108,8 @@
                    [Item itemWithName:@"UIScrollView视差模糊效果" object:[ScrollBlurImageViewController class]],
                    [Item itemWithName:@"UITableView状态切换效果" object:[TableViewTapAnimationController class]],
                    [Item itemWithName:@"POP-Spring动画参数详解" object:[POPSpringParameterController class]],
-                   [Item itemWithName:@"UITableView展开缩放动画" object:[HeaderViewTapAnimationController class]]];
+                   [Item itemWithName:@"UITableView展开缩放动画" object:[HeaderViewTapAnimationController class]],
+                   [Item itemWithName:@"UITableView显示倒计时" object:[CountDownTimerController class]]];
 }
 
 #pragma mark - tableView 相关
