@@ -24,6 +24,8 @@
 
 ![demo10.gif](http://images2015.cnblogs.com/blog/607542/201512/607542-20151201144851780-411768046.gif)
 
+![demo11.gif](http://images0.cnblogs.com/blog2015/607542/201507/092155013143234.gif)
+
 > 部分参考代码
 
 [https://github.com/schneiderandre/popping](https://github.com/schneiderandre/popping)
