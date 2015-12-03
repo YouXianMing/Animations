@@ -29,20 +29,20 @@
 
 - (void)buildSubview {
 
-    self.backView                 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, 99.5)];
+    self.backView                 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, 59.5f)];
     self.backView.backgroundColor = [UIColor whiteColor];
     [self addSubview:self.backView];
     
     {
-        self.titleLabel           = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, Width - 20, 30)];
-        self.titleLabel.textColor = [UIColor blackColor];
-        self.titleLabel.font      = Font_Avenir(20.f);
+        self.titleLabel           = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, Width - 20, 40)];
+        self.titleLabel.textColor = [UIColor grayColor];
+        self.titleLabel.font      = Font_HYQiHei(20.f);
         [self.backView addSubview:self.titleLabel];
         
-        self.countdownLabel               = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, Width - 20, 40)];
-        self.countdownLabel.textColor     = [UIColor redColor];
+        self.countdownLabel               = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, Width - 20, 40)];
+        self.countdownLabel.textColor     = [UIColor grayColor];
         self.countdownLabel.textAlignment = NSTextAlignmentRight;
-        self.countdownLabel.font          = Font_Avenir_Light(20.f);
+        self.countdownLabel.font          = Font_Avenir_Light(15.f);
         [self.backView addSubview:self.countdownLabel];
     }
 }

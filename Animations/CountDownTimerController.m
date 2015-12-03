@@ -64,6 +64,7 @@
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.rowHeight      = 60.f;
     [self.tableView registerClass:[CountDownTimeCell class] forCellReuseIdentifier:FLAG_CountDownTimeCell];
     [self.view addSubview:self.tableView];
 }
@@ -86,11 +87,6 @@
 }
 
 #pragma mark - tableView代理
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return 100;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
