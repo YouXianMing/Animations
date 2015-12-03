@@ -17,12 +17,12 @@
 @property (nonatomic) NSTimeInterval  duration;
 
 /**
- *  Start angle radian, default value is 0.
+ *  Start angle's radian, default value is 0.
  */
 @property (nonatomic) CGFloat         fromCircleRadian;
 
 /**
- *  Animated to angle radian, default value is M_PI (M_PI equal 360°).
+ *  Animated to specified angle's radian, default value is M_PI (M_PI equal 360°).
  */
 @property (nonatomic) CGFloat         toCircleRadian;
 
