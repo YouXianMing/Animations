@@ -30,12 +30,12 @@
 
     self.titlelabel      = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 290, 25)];
     self.titlelabel.font = Font_HYQiHei(20);
-    self.titlelabel.textColor = [UIColor grayColor];
+    self.titlelabel.textColor = [UIColor blackColor];
     [self addSubview:self.titlelabel];
     
     self.subTitleLabel           = [[UILabel alloc] initWithFrame:CGRectMake(10, 35, 290, 10)];
     self.subTitleLabel.font      = Font_Avenir_Light(8);
-    self.subTitleLabel.textColor = [UIColor blackColor];
+    self.subTitleLabel.textColor = [UIColor grayColor];
     [self addSubview:self.subTitleLabel];
 }
 

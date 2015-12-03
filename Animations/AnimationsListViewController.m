@@ -26,6 +26,7 @@
 #import "POPSpringParameterController.h"
 #import "HeaderViewTapAnimationController.h"
 #import "CountDownTimerController.h"
+#import "ClockViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -109,7 +110,8 @@
                    [Item itemWithName:@"UITableView状态切换效果" object:[TableViewTapAnimationController class]],
                    [Item itemWithName:@"POP-Spring动画参数详解" object:[POPSpringParameterController class]],
                    [Item itemWithName:@"UITableView展开缩放动画" object:[HeaderViewTapAnimationController class]],
-                   [Item itemWithName:@"UITableView显示倒计时" object:[CountDownTimerController class]]];
+                   [Item itemWithName:@"UITableView显示倒计时" object:[CountDownTimerController class]],
+                   [Item itemWithName:@"时钟动画效果" object:[ClockViewController class]]];
 }
 
 #pragma mark - tableView 相关

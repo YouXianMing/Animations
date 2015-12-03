@@ -79,6 +79,12 @@
 		105D98A41C07F17D00FD1013 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A31C07F17D00FD1013 /* CustomCell.m */; };
 		105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */; };
 		105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */; };
+		108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99311C0FD5A800B693F6 /* ClockViewController.m */; };
+		108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99341C0FD7A900B693F6 /* SystemTimeInfomation.m */; };
+		108A99381C0FE01100B693F6 /* RotateAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99371C0FE01100B693F6 /* RotateAnimationView.m */; };
+		108A993C1C0FE34800B693F6 /* EasingRotateAnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A993B1C0FE34800B693F6 /* EasingRotateAnimationType.m */; };
+		108A993F1C0FF3B400B693F6 /* NormalRotateAnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A993E1C0FF3B400B693F6 /* NormalRotateAnimationType.m */; };
+		108A99421C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99411C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m */; };
 		109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B4B1C0EC0700039CB04 /* CountDownTimerController.m */; };
 		109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B4E1C0EC1420039CB04 /* TimeModel.m */; };
 		109D5B521C0EC15D0039CB04 /* CountDownTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B511C0EC15D0039CB04 /* CountDownTimeCell.m */; };
@@ -256,6 +262,19 @@
 		105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTapAnimationCell.m; sourceTree = "<group>"; };
 		105D98A81C07FC2C00FD1013 /* TapAnimationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapAnimationModel.h; sourceTree = "<group>"; };
 		105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapAnimationModel.m; sourceTree = "<group>"; };
+		108A99301C0FD5A800B693F6 /* ClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockViewController.h; sourceTree = "<group>"; };
+		108A99311C0FD5A800B693F6 /* ClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockViewController.m; sourceTree = "<group>"; };
+		108A99331C0FD7A900B693F6 /* SystemTimeInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemTimeInfomation.h; sourceTree = "<group>"; };
+		108A99341C0FD7A900B693F6 /* SystemTimeInfomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemTimeInfomation.m; sourceTree = "<group>"; };
+		108A99361C0FE01100B693F6 /* RotateAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateAnimationView.h; sourceTree = "<group>"; };
+		108A99371C0FE01100B693F6 /* RotateAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateAnimationView.m; sourceTree = "<group>"; };
+		108A99391C0FE0F100B693F6 /* RotateAnimationViewTypeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateAnimationViewTypeProtocol.h; sourceTree = "<group>"; };
+		108A993A1C0FE34800B693F6 /* EasingRotateAnimationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasingRotateAnimationType.h; sourceTree = "<group>"; };
+		108A993B1C0FE34800B693F6 /* EasingRotateAnimationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasingRotateAnimationType.m; sourceTree = "<group>"; };
+		108A993D1C0FF3B400B693F6 /* NormalRotateAnimationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalRotateAnimationType.h; sourceTree = "<group>"; };
+		108A993E1C0FF3B400B693F6 /* NormalRotateAnimationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalRotateAnimationType.m; sourceTree = "<group>"; };
+		108A99401C0FF4BD00B693F6 /* POPSpringRotateAnimationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringRotateAnimationType.h; sourceTree = "<group>"; };
+		108A99411C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPSpringRotateAnimationType.m; sourceTree = "<group>"; };
 		109D5B4A1C0EC0700039CB04 /* CountDownTimerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownTimerController.h; sourceTree = "<group>"; };
 		109D5B4B1C0EC0700039CB04 /* CountDownTimerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownTimerController.m; sourceTree = "<group>"; };
 		109D5B4D1C0EC1420039CB04 /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
@@ -577,6 +596,7 @@
 				1010C6D51C0A9C86004CFBCE /* POPSpringParameterController */,
 				B5D0118B1C0BE15A0075BC2E /* HeaderViewTapAnimationController */,
 				109D5B491C0EC0440039CB04 /* CountDownTimerController */,
+				108A992F1C0FD58400B693F6 /* ClockViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -733,6 +753,26 @@
 			name = CustomCell;
 			sourceTree = "<group>";
 		};
+		108A992F1C0FD58400B693F6 /* ClockViewController */ = {
+			isa = PBXGroup;
+			children = (
+				108A99301C0FD5A800B693F6 /* ClockViewController.h */,
+				108A99311C0FD5A800B693F6 /* ClockViewController.m */,
+				108A99331C0FD7A900B693F6 /* SystemTimeInfomation.h */,
+				108A99341C0FD7A900B693F6 /* SystemTimeInfomation.m */,
+				108A99361C0FE01100B693F6 /* RotateAnimationView.h */,
+				108A99371C0FE01100B693F6 /* RotateAnimationView.m */,
+				108A99391C0FE0F100B693F6 /* RotateAnimationViewTypeProtocol.h */,
+				108A993A1C0FE34800B693F6 /* EasingRotateAnimationType.h */,
+				108A993B1C0FE34800B693F6 /* EasingRotateAnimationType.m */,
+				108A993D1C0FF3B400B693F6 /* NormalRotateAnimationType.h */,
+				108A993E1C0FF3B400B693F6 /* NormalRotateAnimationType.m */,
+				108A99401C0FF4BD00B693F6 /* POPSpringRotateAnimationType.h */,
+				108A99411C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m */,
+			);
+			name = ClockViewController;
+			sourceTree = "<group>";
+		};
 		109D5B491C0EC0440039CB04 /* CountDownTimerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -814,7 +854,7 @@
 				TargetAttributes = {
 					10381F4C1BF9B44A00E5E476 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 96SZNQ256W;
+						DevelopmentTeam = A6P8Q96GWQ;
 					};
 				};
 			};
@@ -855,8 +895,10 @@
 			files = (
 				10381FB91BF9B55B00E5E476 /* POPCustomAnimation.mm in Sources */,
 				B5D011941C0BE2410075BC2E /* RotateView.m in Sources */,
+				108A99381C0FE01100B693F6 /* RotateAnimationView.m in Sources */,
 				B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */,
 				10381FBB1BF9B55B00E5E476 /* POPGeometry.mm in Sources */,
+				108A99421C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m in Sources */,
 				105D98A41C07F17D00FD1013 /* CustomCell.m in Sources */,
 				103088B31C05679A00C8B623 /* ScrollBlurImageViewController.m in Sources */,
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
@@ -882,6 +924,7 @@
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
 				104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */,
 				104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */,
+				108A993F1C0FF3B400B693F6 /* NormalRotateAnimationType.m in Sources */,
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
@@ -896,7 +939,9 @@
 				104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */,
 				1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */,
 				1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */,
+				108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */,
 				10381FC11BF9B55B00E5E476 /* TransformationMatrix.cpp in Sources */,
+				108A993C1C0FE34800B693F6 /* EasingRotateAnimationType.m in Sources */,
 				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */,
@@ -909,6 +954,7 @@
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
 				103088B71C05880B00C8B623 /* Math.m in Sources */,
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
+				108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
 				B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */,
 				104F0D321BFC1C9C00C46E6A /* FontAttribute.m in Sources */,
