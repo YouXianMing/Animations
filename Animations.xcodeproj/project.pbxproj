@@ -85,6 +85,8 @@
 		108A993C1C0FE34800B693F6 /* EasingRotateAnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A993B1C0FE34800B693F6 /* EasingRotateAnimationType.m */; };
 		108A993F1C0FF3B400B693F6 /* NormalRotateAnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A993E1C0FF3B400B693F6 /* NormalRotateAnimationType.m */; };
 		108A99421C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99411C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m */; };
+		108A99C01C11250A00B693F6 /* TableViewCellSlideAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99BF1C11250A00B693F6 /* TableViewCellSlideAnimationController.m */; };
+		108A99C31C1125B500B693F6 /* SlideAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99C21C1125B500B693F6 /* SlideAnimationCell.m */; };
 		109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B4B1C0EC0700039CB04 /* CountDownTimerController.m */; };
 		109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B4E1C0EC1420039CB04 /* TimeModel.m */; };
 		109D5B521C0EC15D0039CB04 /* CountDownTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B511C0EC15D0039CB04 /* CountDownTimeCell.m */; };
@@ -275,6 +277,10 @@
 		108A993E1C0FF3B400B693F6 /* NormalRotateAnimationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalRotateAnimationType.m; sourceTree = "<group>"; };
 		108A99401C0FF4BD00B693F6 /* POPSpringRotateAnimationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringRotateAnimationType.h; sourceTree = "<group>"; };
 		108A99411C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPSpringRotateAnimationType.m; sourceTree = "<group>"; };
+		108A99BE1C11250A00B693F6 /* TableViewCellSlideAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellSlideAnimationController.h; sourceTree = "<group>"; };
+		108A99BF1C11250A00B693F6 /* TableViewCellSlideAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellSlideAnimationController.m; sourceTree = "<group>"; };
+		108A99C11C1125B500B693F6 /* SlideAnimationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideAnimationCell.h; sourceTree = "<group>"; };
+		108A99C21C1125B500B693F6 /* SlideAnimationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideAnimationCell.m; sourceTree = "<group>"; };
 		109D5B4A1C0EC0700039CB04 /* CountDownTimerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownTimerController.h; sourceTree = "<group>"; };
 		109D5B4B1C0EC0700039CB04 /* CountDownTimerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownTimerController.m; sourceTree = "<group>"; };
 		109D5B4D1C0EC1420039CB04 /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
@@ -597,6 +603,7 @@
 				B5D0118B1C0BE15A0075BC2E /* HeaderViewTapAnimationController */,
 				109D5B491C0EC0440039CB04 /* CountDownTimerController */,
 				108A992F1C0FD58400B693F6 /* ClockViewController */,
+				108A99BD1C1124E100B693F6 /* TableViewCellSlideAnimationController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -773,6 +780,17 @@
 			name = ClockViewController;
 			sourceTree = "<group>";
 		};
+		108A99BD1C1124E100B693F6 /* TableViewCellSlideAnimationController */ = {
+			isa = PBXGroup;
+			children = (
+				108A99BE1C11250A00B693F6 /* TableViewCellSlideAnimationController.h */,
+				108A99BF1C11250A00B693F6 /* TableViewCellSlideAnimationController.m */,
+				108A99C11C1125B500B693F6 /* SlideAnimationCell.h */,
+				108A99C21C1125B500B693F6 /* SlideAnimationCell.m */,
+			);
+			name = TableViewCellSlideAnimationController;
+			sourceTree = "<group>";
+		};
 		109D5B491C0EC0440039CB04 /* CountDownTimerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -911,6 +929,7 @@
 				10381FBA1BF9B55B00E5E476 /* POPDecayAnimation.mm in Sources */,
 				10381FB61BF9B55B00E5E476 /* POPAnimator.mm in Sources */,
 				104F0D191BFB28D700C46E6A /* TranformFadeView.m in Sources */,
+				108A99C01C11250A00B693F6 /* TableViewCellSlideAnimationController.m in Sources */,
 				10381FB51BF9B55B00E5E476 /* POPAnimationTracer.mm in Sources */,
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
@@ -961,6 +980,7 @@
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
 				104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */,
 				104F0D001BFAFB3300C46E6A /* CGContextObject.m in Sources */,
+				108A99C31C1125B500B693F6 /* SlideAnimationCell.m in Sources */,
 				10381FBE1BF9B55B00E5E476 /* POPPropertyAnimation.mm in Sources */,
 				105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */,
 				105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */,
