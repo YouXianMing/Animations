@@ -1,0 +1,56 @@
+//
+//  DrawWaveViewController.m
+//  Animations
+//
+//  Created by YouXianMing on 15/12/5.
+//  Copyright © 2015年 YouXianMing. All rights reserved.
+//
+
+#import "DrawWaveViewController.h"
+#import "WxHxD.h"
+#import "DrawView.h"
+#import "DrawLineView.h"
+#import "UIView+SetRect.h"
+
+@interface DrawWaveViewController ()
+
+@property (nonatomic, strong) DrawView       *drawView;
+@property (nonatomic, strong) DrawLineView   *drawLineView;
+@property (nonatomic, strong) CADisplayLink  *displayLink;
+
+@end
+
+@implementation DrawWaveViewController
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+}
+
+- (void)setup {
+
+    [super setup];
+    
+    self.drawView        = [[DrawView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
+    self.drawView.center = self.view.center;
+    self.drawView.y     += 100;
+    [self.view addSubview:self.drawView];
+    
+    self.drawLineView        = [[DrawLineView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
+    self.drawLineView.center = self.view.center;
+    self.drawLineView.y     -= 100;
+    [self.view addSubview:self.drawLineView];
+    
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(drawEvent)];
+    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    [self bringTitleViewToFront];
+}
+
+- (void)drawEvent {
+    
+    [self.drawView setNeedsDisplay];
+    [self.drawLineView setNeedsDisplay];
+}
+
+@end

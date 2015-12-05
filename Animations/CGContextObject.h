@@ -46,12 +46,6 @@ typedef void(^CGContextObjectDrawBlock_t)(CGContextObject *contextObject);
 - (instancetype)initWithCGContext:(CGContextRef)context config:(CGContextObjectConfig *)config;
 
 /**
- *  Use the context config.
- *
- *  @param contextConfig Context config object.
- */
-
-/**
  *  Use the context config & store as current config.
  *
  *  @param contextConfig   Context config object.

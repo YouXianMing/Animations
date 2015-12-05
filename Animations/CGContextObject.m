@@ -59,6 +59,10 @@
     CGContextSetLineCap(_context,
                         contextConfig.lineCap);
     
+    // Set Line Join
+    CGContextSetLineJoin(_context,
+                         contextConfig.lineJoin);
+    
     // Set Line Dash
     CGContextSetLineDash(_context,
                          contextConfig.phase,
@@ -202,7 +206,7 @@
         for (int i = 0; i < points.count; i++) {
             
             NSString *pointString = points[i];
-            CGPoint   point = CGPointFromString(pointString);
+            CGPoint   point       = CGPointFromString(pointString);
             
             // first point must be used by method "CGContextMoveToPoint"
             if (i == 0) {

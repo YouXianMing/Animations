@@ -19,6 +19,11 @@
 @property (nonatomic)          CGLineCap      lineCap;
 
 /**
+ *  Junction types for stroked lines.
+ */
+@property (nonatomic)          CGLineJoin     lineJoin;
+
+/**
  *  Line width
  */
 @property (nonatomic)          CGFloat        lineWidth;

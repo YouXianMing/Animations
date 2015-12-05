@@ -58,8 +58,6 @@
 		104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CC01BFABFE700C46E6A /* PopStrokeController.m */; };
 		104F0CC51BFAC04300C46E6A /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CC41BFAC04300C46E6A /* CustomViewController.m */; };
 		104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CF71BFAFA7000C46E6A /* CAShapeLayerPathController.m */; };
-		104F0D001BFAFB3300C46E6A /* CGContextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CFB1BFAFB3300C46E6A /* CGContextObject.m */; };
-		104F0D011BFAFB3300C46E6A /* CGContextObjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CFD1BFAFB3300C46E6A /* CGContextObjectConfig.m */; };
 		104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CFF1BFAFB3300C46E6A /* DrawGradientColorView.m */; };
 		104F0D051BFAFB4200C46E6A /* GradientColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D041BFAFB4200C46E6A /* GradientColor.m */; };
 		104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D071BFAFB4E00C46E6A /* RGBColor.m */; };
@@ -90,6 +88,12 @@
 		109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B4B1C0EC0700039CB04 /* CountDownTimerController.m */; };
 		109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B4E1C0EC1420039CB04 /* TimeModel.m */; };
 		109D5B521C0EC15D0039CB04 /* CountDownTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B511C0EC15D0039CB04 /* CountDownTimeCell.m */; };
+		10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C571C12D4BA00C3E505 /* CGContextObject.m */; };
+		10A67C5B1C12D4BA00C3E505 /* CGContextObjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C591C12D4BA00C3E505 /* CGContextObjectConfig.m */; };
+		10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C5E1C12D59000C3E505 /* DrawWaveViewController.m */; };
+		10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C611C12D5FD00C3E505 /* DrawValues.m */; };
+		10A67C651C12D68D00C3E505 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C641C12D68D00C3E505 /* DrawView.m */; };
+		10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C671C12D96500C3E505 /* DrawLineView.m */; };
 		B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */; };
 		B5D011941C0BE2410075BC2E /* RotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011901C0BE2410075BC2E /* RotateView.m */; };
 		B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011931C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m */; };
@@ -220,10 +224,6 @@
 		104F0CC41BFAC04300C46E6A /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		104F0CF61BFAFA7000C46E6A /* CAShapeLayerPathController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAShapeLayerPathController.h; sourceTree = "<group>"; };
 		104F0CF71BFAFA7000C46E6A /* CAShapeLayerPathController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAShapeLayerPathController.m; sourceTree = "<group>"; };
-		104F0CFA1BFAFB3300C46E6A /* CGContextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextObject.h; sourceTree = "<group>"; };
-		104F0CFB1BFAFB3300C46E6A /* CGContextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGContextObject.m; sourceTree = "<group>"; };
-		104F0CFC1BFAFB3300C46E6A /* CGContextObjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextObjectConfig.h; sourceTree = "<group>"; };
-		104F0CFD1BFAFB3300C46E6A /* CGContextObjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGContextObjectConfig.m; sourceTree = "<group>"; };
 		104F0CFE1BFAFB3300C46E6A /* DrawGradientColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawGradientColorView.h; sourceTree = "<group>"; };
 		104F0CFF1BFAFB3300C46E6A /* DrawGradientColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawGradientColorView.m; sourceTree = "<group>"; };
 		104F0D031BFAFB4200C46E6A /* GradientColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientColor.h; sourceTree = "<group>"; };
@@ -287,6 +287,18 @@
 		109D5B4E1C0EC1420039CB04 /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
 		109D5B501C0EC15D0039CB04 /* CountDownTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownTimeCell.h; sourceTree = "<group>"; };
 		109D5B511C0EC15D0039CB04 /* CountDownTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownTimeCell.m; sourceTree = "<group>"; };
+		10A67C561C12D4BA00C3E505 /* CGContextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextObject.h; sourceTree = "<group>"; };
+		10A67C571C12D4BA00C3E505 /* CGContextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGContextObject.m; sourceTree = "<group>"; };
+		10A67C581C12D4BA00C3E505 /* CGContextObjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextObjectConfig.h; sourceTree = "<group>"; };
+		10A67C591C12D4BA00C3E505 /* CGContextObjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGContextObjectConfig.m; sourceTree = "<group>"; };
+		10A67C5D1C12D59000C3E505 /* DrawWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawWaveViewController.h; sourceTree = "<group>"; };
+		10A67C5E1C12D59000C3E505 /* DrawWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawWaveViewController.m; sourceTree = "<group>"; };
+		10A67C601C12D5FD00C3E505 /* DrawValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawValues.h; sourceTree = "<group>"; };
+		10A67C611C12D5FD00C3E505 /* DrawValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawValues.m; sourceTree = "<group>"; };
+		10A67C631C12D68D00C3E505 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		10A67C641C12D68D00C3E505 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		10A67C661C12D96500C3E505 /* DrawLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLineView.h; sourceTree = "<group>"; };
+		10A67C671C12D96500C3E505 /* DrawLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLineView.m; sourceTree = "<group>"; };
 		B5D0118C1C0BE1B30075BC2E /* HeaderViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewTapAnimationController.h; sourceTree = "<group>"; };
 		B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewTapAnimationController.m; sourceTree = "<group>"; };
 		B5D0118F1C0BE2410075BC2E /* RotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateView.h; sourceTree = "<group>"; };
@@ -604,6 +616,7 @@
 				109D5B491C0EC0440039CB04 /* CountDownTimerController */,
 				108A992F1C0FD58400B693F6 /* ClockViewController */,
 				108A99BD1C1124E100B693F6 /* TableViewCellSlideAnimationController */,
+				10A67C5C1C12D57300C3E505 /* DrawWaveViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -657,14 +670,14 @@
 		104F0D091BFAFB5400C46E6A /* CGContextObject */ = {
 			isa = PBXGroup;
 			children = (
+				10A67C561C12D4BA00C3E505 /* CGContextObject.h */,
+				10A67C571C12D4BA00C3E505 /* CGContextObject.m */,
+				10A67C581C12D4BA00C3E505 /* CGContextObjectConfig.h */,
+				10A67C591C12D4BA00C3E505 /* CGContextObjectConfig.m */,
 				104F0D061BFAFB4E00C46E6A /* RGBColor.h */,
 				104F0D071BFAFB4E00C46E6A /* RGBColor.m */,
 				104F0D031BFAFB4200C46E6A /* GradientColor.h */,
 				104F0D041BFAFB4200C46E6A /* GradientColor.m */,
-				104F0CFA1BFAFB3300C46E6A /* CGContextObject.h */,
-				104F0CFB1BFAFB3300C46E6A /* CGContextObject.m */,
-				104F0CFC1BFAFB3300C46E6A /* CGContextObjectConfig.h */,
-				104F0CFD1BFAFB3300C46E6A /* CGContextObjectConfig.m */,
 				104F0CFE1BFAFB3300C46E6A /* DrawGradientColorView.h */,
 				104F0CFF1BFAFB3300C46E6A /* DrawGradientColorView.m */,
 			);
@@ -804,6 +817,21 @@
 			name = CountDownTimerController;
 			sourceTree = "<group>";
 		};
+		10A67C5C1C12D57300C3E505 /* DrawWaveViewController */ = {
+			isa = PBXGroup;
+			children = (
+				10A67C5D1C12D59000C3E505 /* DrawWaveViewController.h */,
+				10A67C5E1C12D59000C3E505 /* DrawWaveViewController.m */,
+				10A67C601C12D5FD00C3E505 /* DrawValues.h */,
+				10A67C611C12D5FD00C3E505 /* DrawValues.m */,
+				10A67C631C12D68D00C3E505 /* DrawView.h */,
+				10A67C641C12D68D00C3E505 /* DrawView.m */,
+				10A67C661C12D96500C3E505 /* DrawLineView.h */,
+				10A67C671C12D96500C3E505 /* DrawLineView.m */,
+			);
+			name = DrawWaveViewController;
+			sourceTree = "<group>";
+		};
 		B5D0118B1C0BE15A0075BC2E /* HeaderViewTapAnimationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -872,7 +900,7 @@
 				TargetAttributes = {
 					10381F4C1BF9B44A00E5E476 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = A6P8Q96GWQ;
+						DevelopmentTeam = 96SZNQ256W;
 					};
 				};
 			};
@@ -917,6 +945,7 @@
 				B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */,
 				10381FBB1BF9B55B00E5E476 /* POPGeometry.mm in Sources */,
 				108A99421C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m in Sources */,
+				10A67C651C12D68D00C3E505 /* DrawView.m in Sources */,
 				105D98A41C07F17D00FD1013 /* CustomCell.m in Sources */,
 				103088B31C05679A00C8B623 /* ScrollBlurImageViewController.m in Sources */,
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
@@ -934,7 +963,6 @@
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
-				104F0D011BFAFB3300C46E6A /* CGContextObjectConfig.m in Sources */,
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
 				B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */,
 				103088801C045E9400C8B623 /* CustomVisualEffectTitleViewController.m in Sources */,
@@ -947,6 +975,7 @@
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
+				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
 				10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */,
 				1030887D1C0440E100C8B623 /* CustomTitleViewController.m in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
@@ -964,6 +993,8 @@
 				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */,
+				10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */,
+				10A67C5B1C12D4BA00C3E505 /* CGContextObjectConfig.m in Sources */,
 				109D5B521C0EC15D0039CB04 /* CountDownTimeCell.m in Sources */,
 				B5D011991C0BE3210075BC2E /* StudentInfoCell.m in Sources */,
 				1030886A1C03F1A000C8B623 /* easing.c in Sources */,
@@ -975,11 +1006,11 @@
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
+				10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */,
 				B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */,
 				104F0D321BFC1C9C00C46E6A /* FontAttribute.m in Sources */,
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
 				104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */,
-				104F0D001BFAFB3300C46E6A /* CGContextObject.m in Sources */,
 				108A99C31C1125B500B693F6 /* SlideAnimationCell.m in Sources */,
 				10381FBE1BF9B55B00E5E476 /* POPPropertyAnimation.mm in Sources */,
 				105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */,
@@ -987,6 +1018,7 @@
 				B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */,
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
+				10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */,
 				10381F701BF9B47000E5E476 /* AnimationsListViewController.m in Sources */,
 				104F0CC51BFAC04300C46E6A /* CustomViewController.m in Sources */,
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
@@ -1103,7 +1135,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
