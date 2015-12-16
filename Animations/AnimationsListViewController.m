@@ -71,12 +71,12 @@
     [headlinelabel sizeToFit];
     
     // Title view.
-    UIView *titleView     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 64)];
+    UIView *titleView     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, 64)];
     headlinelabel.center  = titleView.middlePoint;
     [titleView addSubview:headlinelabel];
-    [self.view addSubview:titleView];
+    [self.titleView addSubview:titleView];
     
-    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, self.view.width, 0.5f)];
+    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, self.width, 0.5f)];
     line.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.25f];
     [titleView addSubview:line];
 
@@ -120,18 +120,15 @@
 
 #pragma mark - tableView 相关
 - (void)configureTableView {
-
-    CGFloat width  = self.view.width;
-    CGFloat height = self.view.height;
     
-    self.tableView                = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, width, height - 64) style:UITableViewStylePlain];
+    self.tableView                = [[UITableView alloc] initWithFrame:self.contentView.bounds style:UITableViewStylePlain];
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.rowHeight      = 50.f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[ListItemCell class] forCellReuseIdentifier:listItemCellString];
     
-    [self.view addSubview:self.tableView];
+    [self.contentView addSubview:self.tableView];
     
     [GCDQueue executeInMainQueue:^{
 

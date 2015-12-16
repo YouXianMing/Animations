@@ -11,6 +11,16 @@
 @interface CustomViewController : UIViewController
 
 /**
+ *  Screen's width.
+ */
+@property (nonatomic) CGFloat  width;
+
+/**
+ *  Screen's height.
+ */
+@property (nonatomic) CGFloat  height;
+
+/**
  *  Base config.
  */
 - (void)setup;

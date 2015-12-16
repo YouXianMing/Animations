@@ -94,6 +94,8 @@
 		10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C611C12D5FD00C3E505 /* DrawValues.m */; };
 		10A67C651C12D68D00C3E505 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C641C12D68D00C3E505 /* DrawView.m */; };
 		10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C671C12D96500C3E505 /* DrawLineView.m */; };
+		10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */; };
+		10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5531C20F5F400B0CA7D /* CustomFullContentViewController.m */; };
 		B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */; };
 		B5D011941C0BE2410075BC2E /* RotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011901C0BE2410075BC2E /* RotateView.m */; };
 		B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011931C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m */; };
@@ -299,6 +301,10 @@
 		10A67C641C12D68D00C3E505 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		10A67C661C12D96500C3E505 /* DrawLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLineView.h; sourceTree = "<group>"; };
 		10A67C671C12D96500C3E505 /* DrawLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLineView.m; sourceTree = "<group>"; };
+		10CEC54F1C20F5E400B0CA7D /* CustomNormalContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNormalContentViewController.h; sourceTree = "<group>"; };
+		10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNormalContentViewController.m; sourceTree = "<group>"; };
+		10CEC5521C20F5F400B0CA7D /* CustomFullContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFullContentViewController.h; sourceTree = "<group>"; };
+		10CEC5531C20F5F400B0CA7D /* CustomFullContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFullContentViewController.m; sourceTree = "<group>"; };
 		B5D0118C1C0BE1B30075BC2E /* HeaderViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewTapAnimationController.h; sourceTree = "<group>"; };
 		B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewTapAnimationController.m; sourceTree = "<group>"; };
 		B5D0118F1C0BE2410075BC2E /* RotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateView.h; sourceTree = "<group>"; };
@@ -576,6 +582,10 @@
 				10381FC31BF9B77000E5E476 /* CustomNavigationController.m */,
 				104F0CC31BFAC04300C46E6A /* CustomViewController.h */,
 				104F0CC41BFAC04300C46E6A /* CustomViewController.m */,
+				10CEC54F1C20F5E400B0CA7D /* CustomNormalContentViewController.h */,
+				10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */,
+				10CEC5521C20F5F400B0CA7D /* CustomFullContentViewController.h */,
+				10CEC5531C20F5F400B0CA7D /* CustomFullContentViewController.m */,
 				1030887B1C0440E100C8B623 /* CustomTitleViewController.h */,
 				1030887C1C0440E100C8B623 /* CustomTitleViewController.m */,
 				1030887E1C045E9400C8B623 /* CustomVisualEffectTitleViewController.h */,
@@ -949,6 +959,7 @@
 				105D98A41C07F17D00FD1013 /* CustomCell.m in Sources */,
 				103088B31C05679A00C8B623 /* ScrollBlurImageViewController.m in Sources */,
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
+				10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */,
 				104F0D311BFC1C9C00C46E6A /* StringAttribute.m in Sources */,
 				104F0D051BFAFB4200C46E6A /* GradientColor.m in Sources */,
 				10381FD11BF9D2C600E5E476 /* StrokeCircleLayerConfigure.m in Sources */,
@@ -1001,6 +1012,7 @@
 				10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */,
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
 				103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */,
+				10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
 				103088B71C05880B00C8B623 /* Math.m in Sources */,
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
