@@ -48,15 +48,13 @@
     [self initButton];
     
     [self initRangeViews];
-    
-    [self bringTitleViewToFront];
 }
 
 - (void)initSecondLabel {
     
     self.secondsLabel                = [[UILabel alloc] initWithFrame:CGRectMake(10, 10 + 64, 100, 20)];
     self.secondsLabel.attributedText = [self stringWithFloat:0.f];
-    [self.view addSubview:self.secondsLabel];
+    [self.contentView addSubview:self.secondsLabel];
 }
 
 - (NSAttributedString *)stringWithFloat:(CGFloat)value {
@@ -101,10 +99,10 @@
     
     CGFloat width                    = 100.f;
     self.showView                    = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, width, width)];
-    self.showView.center             = CGPointMake(self.view.middleX, 64 + gap / 2.f);
+    self.showView.center             = CGPointMake(self.contentView.middleX, 64 + gap / 2.f);
     self.showView.backgroundColor    = [UIColor cyanColor];
     self.showView.layer.cornerRadius = self.showView.width / 2.f;
-    [self.view addSubview:self.showView];
+    [self.contentView addSubview:self.showView];
     [self.showView addTarget:self
                       action:@selector(doAnimation)
             forControlEvents:UIControlEventTouchUpInside];
@@ -159,7 +157,7 @@
                                                      minValue:0.f
                                                      maxValue:20.f
                                                  defaultValue:12.f];
-    [self.view addSubview:self.rangeSpeed];
+    [self.contentView addSubview:self.rangeSpeed];
     
     
     self.rangeBounciness = [RangeValueView rangeValueViewWithFrame:CGRectMake(10, Height - 60 - 40, Width - 20, 0)
@@ -167,7 +165,7 @@
                                                           minValue:0.f
                                                           maxValue:20.f
                                                       defaultValue:4.f];
-    [self.view addSubview:self.rangeBounciness];
+    [self.contentView addSubview:self.rangeBounciness];
     
     
     self.rangeMass = [RangeValueView rangeValueViewWithFrame:CGRectMake(10, Height - 60 - 40*2, Width - 20, 0)
@@ -175,7 +173,7 @@
                                                     minValue:0.1
                                                     maxValue:10.f
                                                 defaultValue:1.f];
-    [self.view addSubview:self.rangeMass];
+    [self.contentView addSubview:self.rangeMass];
     
     
     self.rangeFriction = [RangeValueView rangeValueViewWithFrame:CGRectMake(10, Height - 60 - 40*3, Width - 20, 0)
@@ -183,7 +181,7 @@
                                                         minValue:1
                                                         maxValue:50
                                                     defaultValue:30.486980];
-    [self.view addSubview:self.rangeFriction];
+    [self.contentView addSubview:self.rangeFriction];
     
     
     self.rangeTension = [RangeValueView rangeValueViewWithFrame:CGRectMake(10, Height - 60 - 40*4, Width - 20, 0)
@@ -191,7 +189,7 @@
                                                        minValue:1
                                                        maxValue:1000
                                                    defaultValue:300];
-    [self.view addSubview:self.rangeTension];
+    [self.contentView addSubview:self.rangeTension];
 }
 
 @end

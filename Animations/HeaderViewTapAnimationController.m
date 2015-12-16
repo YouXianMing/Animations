@@ -40,8 +40,6 @@ static NSString *infoHeadFlag = @"ClassHeaderView";
     [self createDatas];
     
     [self createTableView];
-    
-    [self bringTitleViewToFront];
 
     [self firstLoadDataAnimation];
 }
@@ -106,7 +104,7 @@ static NSString *infoHeadFlag = @"ClassHeaderView";
 
 - (void)createTableView {
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, Width, Height - 64) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:self.contentView.bounds style:UITableViewStylePlain];
     self.tableView.delegate                       = self;
     self.tableView.dataSource                     = self;
     self.tableView.separatorStyle                 = UITableViewCellSeparatorStyleNone;
@@ -116,7 +114,7 @@ static NSString *infoHeadFlag = @"ClassHeaderView";
     [self.tableView registerClass:[StudentInfoCell class] forCellReuseIdentifier:infoCellFlag];
     [self.tableView registerClass:[ClassHeaderView class] forHeaderFooterViewReuseIdentifier:infoHeadFlag];
     
-    [self.view addSubview:self.tableView];
+    [self.contentView addSubview:self.tableView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

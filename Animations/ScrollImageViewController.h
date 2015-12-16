@@ -6,8 +6,8 @@
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomVisualEffectTitleViewController.h"
+#import "FullTitleVisualEffectViewController.h"
 
-@interface ScrollImageViewController : CustomVisualEffectTitleViewController
+@interface ScrollImageViewController : FullTitleVisualEffectViewController
 
 @end

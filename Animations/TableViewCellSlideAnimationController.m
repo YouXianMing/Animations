@@ -37,14 +37,12 @@
                         @"PSP Player",    @"GBA Player"];
     
     // 初始化tableView
-    self.tableView                = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, Width, Height - 64)];
+    self.tableView                = [[UITableView alloc] initWithFrame:self.contentView.bounds];
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[SlideAnimationCell class] forCellReuseIdentifier:DATA_CELL];
-    [self.view addSubview:self.tableView];
-    
-    [self bringTitleViewToFront];
+    [self.contentView addSubview:self.tableView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

@@ -6,8 +6,8 @@
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomTitleViewController.h"
+#import "FullTitleViewController.h"
 
-@interface DrawWaveViewController : CustomTitleViewController
+@interface DrawWaveViewController : FullTitleViewController
 
 @end

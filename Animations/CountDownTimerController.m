@@ -38,8 +38,6 @@
     [self createTableView];
     
     [self createTimer];
-
-    [self bringTitleViewToFront];
 }
 
 - (void)createDataSource {
@@ -59,14 +57,14 @@
 
 - (void)createTableView {
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, Width, Height - 64)
+    self.tableView = [[UITableView alloc] initWithFrame:self.contentView.bounds
                                                   style:UITableViewStylePlain];
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight      = 60.f;
     [self.tableView registerClass:[CountDownTimeCell class] forCellReuseIdentifier:FLAG_CountDownTimeCell];
-    [self.view addSubview:self.tableView];
+    [self.contentView addSubview:self.tableView];
 }
 
 - (void)createTimer {

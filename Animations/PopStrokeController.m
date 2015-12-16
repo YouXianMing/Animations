@@ -10,6 +10,7 @@
 #import "GCD.h"
 #import "POP.h"
 #import "StrokeCircleLayerConfigure.h"
+#import "UIView+SetRect.h"
 
 @interface PopStrokeController ()
 
@@ -37,10 +38,10 @@
     config.startAngle   = 0;
     config.endAngle     = M_PI * 2;
     config.radius       = 55.f;
-    config.circleCenter = self.view.center;
+    config.circleCenter = self.contentView.middlePoint;
     config.strokeColor  = [UIColor cyanColor];
     [config configCAShapeLayer:self.circleShape];
-    [self.view.layer addSublayer:self.circleShape];
+    [self.contentView.layer addSublayer:self.circleShape];
     
     _timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
 
@@ -67,8 +68,6 @@
     } timeIntervalWithSecs:1];
     
     [_timer start];
-    
-    [self bringTitleViewToFront];
 }
 
 - (UIColor *)randomColor {

@@ -38,10 +38,10 @@
     
     // background view
     self.pathView        = [[PathView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    self.pathView.center = self.view.center;
+    self.pathView.center = self.contentView.middlePoint;
     self.pathView.gap    = 10.f;
     [self.pathView setNeedsDisplay];
-    [self.view addSubview:self.pathView];
+    [self.contentView addSubview:self.pathView];
     UIBezierPath *path = [self randomPath];
     
     // point A
@@ -112,8 +112,6 @@
         
     } timeIntervalWithSecs:1.f];
     [self.timer start];
-    
-    [self bringTitleViewToFront];
 }
 
 - (UIBezierPath *)randomPath {

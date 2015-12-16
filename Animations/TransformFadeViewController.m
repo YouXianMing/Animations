@@ -48,32 +48,32 @@ typedef enum : NSUInteger {
                     [UIImage imageNamed:@"5"]];
     
     // 图片1
-    self.tranformFadeViewOne                 = [[TranformFadeView alloc] initWithFrame:self.view.bounds];
+    self.tranformFadeViewOne                 = [[TranformFadeView alloc] initWithFrame:self.contentView.bounds];
     self.tranformFadeViewOne.contentMode     = UIViewContentModeScaleAspectFill;
     self.tranformFadeViewOne.image           = [self currentImage];
     self.tranformFadeViewOne.verticalCount   = 2;
     self.tranformFadeViewOne.horizontalCount = 12;
-    self.tranformFadeViewOne.center          = self.view.center;
+    self.tranformFadeViewOne.center          = self.contentView.center;
     [self.tranformFadeViewOne buildMaskView];
     
     self.tranformFadeViewOne.fadeDuradtion        = 1.f;
     self.tranformFadeViewOne.animationGapDuration = 0.1f;
     
-    [self.view addSubview:self.tranformFadeViewOne];
+    [self.contentView addSubview:self.tranformFadeViewOne];
     
     
     // 图片2
-    self.tranformFadeViewTwo                 = [[TranformFadeView alloc] initWithFrame:self.view.bounds];
+    self.tranformFadeViewTwo                 = [[TranformFadeView alloc] initWithFrame:self.contentView.bounds];
     self.tranformFadeViewTwo.contentMode     = UIViewContentModeScaleAspectFill;
     self.tranformFadeViewTwo.verticalCount   = 2;
     self.tranformFadeViewTwo.horizontalCount = 12;
-    self.tranformFadeViewTwo.center          = self.view.center;
+    self.tranformFadeViewTwo.center          = self.contentView.center;
     [self.tranformFadeViewTwo buildMaskView];
     
     self.tranformFadeViewTwo.fadeDuradtion        = 1.f;
     self.tranformFadeViewTwo.animationGapDuration = 0.1f;
     
-    [self.view addSubview:self.tranformFadeViewTwo];
+    [self.contentView addSubview:self.tranformFadeViewTwo];
     [self.tranformFadeViewTwo fadeAnimated:YES];
 
     // timer
@@ -84,7 +84,7 @@ typedef enum : NSUInteger {
             
             self.type = TYPE_TWO;
             
-            [self.view sendSubviewToBack:self.tranformFadeViewTwo];
+            [self.contentView sendSubviewToBack:self.tranformFadeViewTwo];
             self.tranformFadeViewTwo.image = [self currentImage];
             [self.tranformFadeViewTwo showAnimated:NO];
             [self.tranformFadeViewOne fadeAnimated:YES];
@@ -93,7 +93,7 @@ typedef enum : NSUInteger {
             
             self.type = TYPE_ONE;
             
-            [self.view sendSubviewToBack:self.tranformFadeViewOne];
+            [self.contentView sendSubviewToBack:self.tranformFadeViewOne];
             self.tranformFadeViewOne.image = [self currentImage];
             [self.tranformFadeViewOne showAnimated:NO];
             [self.tranformFadeViewTwo fadeAnimated:YES];
@@ -101,8 +101,6 @@ typedef enum : NSUInteger {
         
     } timeIntervalWithSecs:6];
     [self.timer start];
-    
-    [self bringTitleViewToFront];
 }
 
 - (UIImage *)currentImage {

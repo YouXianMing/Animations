@@ -10,6 +10,7 @@
 #import "POPNumberAnimation.h"
 #import "GCD.h"
 #import "StringAttributeHelper.h"
+#import "UIView+SetRect.h"
 
 @interface PopNumberController () <POPNumberAnimationDelegate>
 
@@ -32,8 +33,8 @@
     
     _label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
     _label.textAlignment = NSTextAlignmentCenter;
-    _label.center        = self.view.center;
-    [self.view addSubview:_label];
+    _label.center        = self.contentView.middlePoint;
+    [self.contentView addSubview:_label];
     
     // Init numberAnimation.
     self.numberAnimation          = [[POPNumberAnimation alloc] init];
@@ -50,8 +51,6 @@
         
     } timeIntervalWithSecs:3.f];
     [self.timer start];
-    
-    [self bringTitleViewToFront];
 }
 
 - (void)configNumberAnimation {

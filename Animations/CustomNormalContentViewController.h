@@ -46,27 +46,27 @@
 - (void)enableWindowView:(BOOL)enable;
 
 /**
- *  Build titleView, please override by subclass.
+ *  Build titleView, please overwrite by subclass.
  */
 - (void)buildTitleView;
 
 /**
- *  Build contentView, please override by subclass.
+ *  Build contentView, please overwrite by subclass.
  */
 - (void)buildContentView;
 
 /**
- *  Build loadingView, please override by subclass.
+ *  Build loadingView, please overwrite by subclass.
  */
 - (void)buildLoadingView;
 
 /**
- *  Build windowView, please override by subclass.
+ *  Build windowView, please overwrite by subclass.
  */
 - (void)buildWindowView;
 
 /**
- *  Build windowView, please override by subclass.
+ *  Build windowView, please overwrite by subclass.
  */
 - (void)buildBackgroundView;
 

@@ -40,22 +40,22 @@ static int viewTag = 0x11;
     if (type % 4 == 0) {
         
         pointA = MATHPointMake(0, -50);
-        pointB = MATHPointMake(self.view.width, 270 - 80);
+        pointB = MATHPointMake(self.contentView.width, 270 - 80);
         
     } else if (type % 4 == 1) {
         
         pointA = MATHPointMake(0, -50);
-        pointB = MATHPointMake(self.view.width, 270 - 20);
+        pointB = MATHPointMake(self.contentView.width, 270 - 20);
         
     } else if (type % 4 == 2) {
         
         pointA = MATHPointMake(0, -50);
-        pointB = MATHPointMake(self.view.width, 270 + 20);
+        pointB = MATHPointMake(self.contentView.width, 270 + 20);
         
     } else if (type % 4 == 3) {
         
         pointA = MATHPointMake(0, -50);
-        pointB = MATHPointMake(self.view.width, 270 + 80);
+        pointB = MATHPointMake(self.contentView.width, 270 + 80);
     }
     
     self.onceLinearEquation = [Math mathOnceLinearEquationWithPointA:pointA PointB:pointB];
@@ -70,17 +70,17 @@ static int viewTag = 0x11;
                            [UIImage imageNamed:@"5"]];
     
     // Init scrollView.
-    CGFloat height = self.view.height;
-    CGFloat width  = self.view.width;
+    CGFloat height = self.height;
+    CGFloat width  = self.width;
     
-    _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    _scrollView = [[UIScrollView alloc] initWithFrame:self.contentView.bounds];
     _scrollView.delegate                       = self;
     _scrollView.pagingEnabled                  = YES;
     _scrollView.backgroundColor                = [UIColor blackColor];
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.bounces                        = NO;
     _scrollView.contentSize                    = CGSizeMake(self.picturesArray.count * width, height);
-    [self.view addSubview:_scrollView];
+    [self.contentView addSubview:_scrollView];
     
     // Init moreInfoViews.
     for (int i = 0; i < self.picturesArray.count; i++) {
@@ -91,8 +91,6 @@ static int viewTag = 0x11;
         
         [_scrollView addSubview:show];
     }
-    
-    [self bringTitleViewToFront];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -102,7 +100,7 @@ static int viewTag = 0x11;
     for (int i = 0; i < self.picturesArray.count; i++) {
         
         MoreInfoView *show = [scrollView viewWithTag:viewTag + i];
-        show.imageView.x   = _onceLinearEquation.k * (X - i * self.view.width) + _onceLinearEquation.b;
+        show.imageView.x   = _onceLinearEquation.k * (X - i * self.contentView.width) + _onceLinearEquation.b;
     }
 }
 

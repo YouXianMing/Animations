@@ -54,11 +54,11 @@
         // 小时
         _hourCount                     = ONE_HOUR * (60 * 60 * hour + min * 60 + sec);
         self.hourView                  = [[RotateAnimationView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-        self.hourView.center           = self.view.center;
+        self.hourView.center           = self.contentView.middlePoint;
         self.hourView.duration         = 0.75f;
         self.hourView.fromCircleRadian = 0.f;
         self.hourView.toCircleRadian   = self.hourView.fromCircleRadian + _hourCount;
-        [self.view addSubview:self.hourView];
+        [self.contentView addSubview:self.hourView];
         [self.hourView startRotateAnimated:NO];
         
         // 小时图片
@@ -83,11 +83,11 @@
         // 分钟
         _minuteCount                     = ONE_MIN * (min * 60 + sec);
         self.minuteView                  = [[RotateAnimationView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-        self.minuteView.center           = self.view.center;
+        self.minuteView.center           = self.contentView.middlePoint;
         self.minuteView.duration         = 0.75f;
         self.minuteView.fromCircleRadian = 0.f;
         self.minuteView.toCircleRadian   = self.minuteView.fromCircleRadian + _minuteCount;
-        [self.view addSubview:self.minuteView];
+        [self.contentView addSubview:self.minuteView];
         [self.minuteView startRotateAnimated:NO];
         
         // 分钟图片
@@ -100,13 +100,13 @@
         // 秒钟
         _secondCount                     = ONE_SEC * sec;
         self.secondView                  = [[RotateAnimationView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-        self.secondView.center           = self.view.center;
+        self.secondView.center           = self.contentView.middlePoint;
         self.secondView.duration         = 0.75f;
         self.secondView.fromCircleRadian = 0.f;
         self.secondView.toCircleRadian   = self.secondView.fromCircleRadian + _secondCount;
         self.secondView.animationType    = [EasingRotateAnimationType new];
 //        self.secondView.animationType    = [POPSpringRotateAnimationType new];
-        [self.view addSubview:self.secondView];
+        [self.contentView addSubview:self.secondView];
         [self.secondView startRotateAnimated:NO];
         
         // 秒钟图片
@@ -133,15 +133,15 @@
         circleRound.layer.cornerRadius = 250 / 2.f;
         circleRound.layer.borderColor  = [UIColor blackColor].CGColor;
         circleRound.layer.borderWidth  = 2.f;
-        circleRound.center             = self.view.center;
-        [self.view addSubview:circleRound];
+        circleRound.center             = self.contentView.middlePoint;
+        [self.contentView addSubview:circleRound];
         
         // 中心红点
         UIView *circle            = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 6, 6)];
         circle.layer.cornerRadius = 6 / 2.f;
         circle.backgroundColor    = [UIColor redColor];
-        circle.center             = self.view.center;
-        [self.view addSubview:circle];
+        circle.center             = self.contentView.middlePoint;
+        [self.contentView addSubview:circle];
     }
     
     self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
@@ -164,8 +164,6 @@
         
     } timeIntervalWithSecs:1.f];
     [self.timer start];
-    
-    [self bringTitleViewToFront];
 }
 
 @end

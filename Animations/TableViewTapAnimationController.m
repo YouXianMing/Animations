@@ -35,15 +35,13 @@
                    [TapAnimationModel modelWithName:@"Animations" selected:NO]];
     
     // Init TableView.
-    self.tableView                = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, self.view.height - 64)
+    self.tableView                = [[UITableView alloc] initWithFrame:self.contentView.bounds
                                                                  style:UITableViewStylePlain];
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[TableViewTapAnimationCell class] forCellReuseIdentifier:@"TableViewTapAnimationCell"];
-    [self.view addSubview:self.tableView];
-    
-    [self bringTitleViewToFront];
+    [self.contentView addSubview:self.tableView];
 }
 
 #pragma mark - TableView相关方法

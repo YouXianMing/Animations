@@ -1,36 +1,27 @@
 //
-//  CustomVisualEffectTitleViewController.m
+//  FullTitleVisualEffectViewController.m
 //  Animations
 //
-//  Created by YouXianMing on 15/11/24.
+//  Created by YouXianMing on 15/12/16.
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomVisualEffectTitleViewController.h"
+#import "FullTitleVisualEffectViewController.h"
 #import "UIView+SetRect.h"
 #import "UIColor+CustomColors.h"
 
-@interface CustomVisualEffectTitleViewController ()
+@interface FullTitleVisualEffectViewController ()
 
 @property (nonatomic, strong) UIVisualEffectView *effectView;
 @property (nonatomic, strong) UIVisualEffectView *vibrancyEffectView;
 
 @end
 
-@implementation CustomVisualEffectTitleViewController
+@implementation FullTitleVisualEffectViewController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-    
-    [self createTitleView];
-}
+- (void)buildTitleView {
 
-- (void)createTitleView {
-    
-    // Title view.
-    self.titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 64)];
-    [self.view addSubview:self.titleView];
+    [super buildTitleView];
     
     // 添加模糊效果
     self.effectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
@@ -52,7 +43,7 @@
     [backButton addTarget:self action:@selector(popSelf) forControlEvents:UIControlEventTouchUpInside];
     [backButton.imageView setContentMode:UIViewContentModeCenter];
     [self.titleView addSubview:backButton];
-
+    
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
     headlinelabel.font          = Font_Avenir(20.f);
@@ -68,17 +59,6 @@
 - (void)popSelf {
     
     [self popViewControllerAnimated:YES];
-}
-
-- (void)bringTitleViewToFront {
-    
-    [self.view bringSubviewToFront:self.titleView];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    
-    [super viewDidAppear:animated];
-    self.enableInteractivePopGestureRecognizer = NO;
 }
 
 @end

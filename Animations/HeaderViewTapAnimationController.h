@@ -6,8 +6,8 @@
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomTitleViewController.h"
+#import "NormalTitleViewController.h"
 
-@interface HeaderViewTapAnimationController : CustomTitleViewController
+@interface HeaderViewTapAnimationController : NormalTitleViewController
 
 @end

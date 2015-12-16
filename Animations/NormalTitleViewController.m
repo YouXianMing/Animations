@@ -1,33 +1,24 @@
 //
-//  CustomTitleViewController.m
+//  NormalTitleViewController.m
 //  Animations
 //
-//  Created by YouXianMing on 15/11/24.
+//  Created by YouXianMing on 15/12/16.
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomTitleViewController.h"
-#import "UIView+SetRect.h"
+#import "NormalTitleViewController.h"
 #import "UIColor+CustomColors.h"
+#import "UIView+SetRect.h"
 
-@interface CustomTitleViewController ()
+@interface NormalTitleViewController ()
 
 @end
 
-@implementation CustomTitleViewController
+@implementation NormalTitleViewController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-    
-    [self createTitleView];
-}
+- (void)buildTitleView {
 
-- (void)createTitleView {
-
-    // Title view.
-    self.titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 64)];
-    [self.view addSubview:self.titleView];
+    [super buildTitleView];
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
@@ -58,17 +49,6 @@
 - (void)popSelf {
     
     [self popViewControllerAnimated:YES];
-}
-
-- (void)bringTitleViewToFront {
-
-    [self.view bringSubviewToFront:self.titleView];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-
-    [super viewDidAppear:animated];
-    self.enableInteractivePopGestureRecognizer = NO;
 }
 
 @end

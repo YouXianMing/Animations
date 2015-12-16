@@ -34,7 +34,7 @@
     [super setup];
     
     CGFloat gapFromTop = 64.f + 20;
-    CGFloat width      = self.view.width;
+    CGFloat width      = self.contentView.width;
     
     CGFloat halfWidth  = width / 2.f;
     CGFloat radius     = width / 3.f + 20;
@@ -52,7 +52,7 @@
                                             startAngle:0];
     [self.circleView1 buildView];
     self.circleView1.center = point1;
-    [self.view addSubview:self.circleView1];
+    [self.contentView addSubview:self.circleView1];
     
     // 圆圈2
     self.circleView2 = [CircleView circleViewWithFrame:CGRectMake(0, 0, radius, radius)
@@ -62,7 +62,7 @@
                                             startAngle:0];
     [self.circleView2 buildView];
     self.circleView2.center = point2;
-    [self.view addSubview:self.circleView2];
+    [self.contentView addSubview:self.circleView2];
     
     // 圆圈3
     self.circleView3 = [CircleView circleViewWithFrame:CGRectMake(0, 0, radius, radius)
@@ -72,12 +72,12 @@
                                             startAngle:0];
     [self.circleView3 buildView];
     self.circleView3.center = point3;
-    [self.view addSubview:self.circleView3];
+    [self.contentView addSubview:self.circleView3];
     
     // 圆圈4
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, radius, radius)];
     imageView.image        = [UIImage imageNamed:@"colors"];
-    [self.view addSubview:imageView];
+    [self.contentView addSubview:imageView];
     self.circleView4 = [CircleView circleViewWithFrame:CGRectMake(0, 0, radius, radius)
                                              lineWidth:radius / 2.f
                                              lineColor:[UIColor blackColor]
@@ -113,8 +113,6 @@
     } timeIntervalWithSecs:1.5f];
     
     [self.timer start];
-    
-    [self bringTitleViewToFront];
 }
 
 @end

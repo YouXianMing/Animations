@@ -15,8 +15,6 @@
 		1030886E1C03F1B200C8B623 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1030886D1C03F1B200C8B623 /* CircleView.m */; };
 		103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088761C04133500C8B623 /* ScrollImageViewController.m */; };
 		1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088791C0414A000C8B623 /* MoreInfoView.m */; };
-		1030887D1C0440E100C8B623 /* CustomTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1030887C1C0440E100C8B623 /* CustomTitleViewController.m */; };
-		103088801C045E9400C8B623 /* CustomVisualEffectTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1030887F1C045E9400C8B623 /* CustomVisualEffectTitleViewController.m */; };
 		103088B31C05679A00C8B623 /* ScrollBlurImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088B21C05679A00C8B623 /* ScrollBlurImageViewController.m */; };
 		103088B71C05880B00C8B623 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088B61C05880B00C8B623 /* Math.m */; };
 		10381F521BF9B44A00E5E476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F511BF9B44A00E5E476 /* main.m */; };
@@ -96,6 +94,9 @@
 		10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C671C12D96500C3E505 /* DrawLineView.m */; };
 		10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */; };
 		10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5531C20F5F400B0CA7D /* CustomFullContentViewController.m */; };
+		10CEC5861C21321800B0CA7D /* NormalTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5851C21321800B0CA7D /* NormalTitleViewController.m */; };
+		10CEC5891C21345600B0CA7D /* FullTitleVisualEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5881C21345600B0CA7D /* FullTitleVisualEffectViewController.m */; };
+		10CEC58C1C2153EB00B0CA7D /* FullTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC58B1C2153EB00B0CA7D /* FullTitleViewController.m */; };
 		B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */; };
 		B5D011941C0BE2410075BC2E /* RotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011901C0BE2410075BC2E /* RotateView.m */; };
 		B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011931C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m */; };
@@ -123,10 +124,6 @@
 		103088761C04133500C8B623 /* ScrollImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollImageViewController.m; sourceTree = "<group>"; };
 		103088781C0414A000C8B623 /* MoreInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoView.h; sourceTree = "<group>"; };
 		103088791C0414A000C8B623 /* MoreInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoView.m; sourceTree = "<group>"; };
-		1030887B1C0440E100C8B623 /* CustomTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTitleViewController.h; sourceTree = "<group>"; };
-		1030887C1C0440E100C8B623 /* CustomTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTitleViewController.m; sourceTree = "<group>"; };
-		1030887E1C045E9400C8B623 /* CustomVisualEffectTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVisualEffectTitleViewController.h; sourceTree = "<group>"; };
-		1030887F1C045E9400C8B623 /* CustomVisualEffectTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVisualEffectTitleViewController.m; sourceTree = "<group>"; };
 		103088B11C05679A00C8B623 /* ScrollBlurImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollBlurImageViewController.h; sourceTree = "<group>"; };
 		103088B21C05679A00C8B623 /* ScrollBlurImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollBlurImageViewController.m; sourceTree = "<group>"; };
 		103088B51C05880B00C8B623 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
@@ -305,6 +302,12 @@
 		10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNormalContentViewController.m; sourceTree = "<group>"; };
 		10CEC5521C20F5F400B0CA7D /* CustomFullContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFullContentViewController.h; sourceTree = "<group>"; };
 		10CEC5531C20F5F400B0CA7D /* CustomFullContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFullContentViewController.m; sourceTree = "<group>"; };
+		10CEC5841C21321800B0CA7D /* NormalTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalTitleViewController.h; sourceTree = "<group>"; };
+		10CEC5851C21321800B0CA7D /* NormalTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalTitleViewController.m; sourceTree = "<group>"; };
+		10CEC5871C21345600B0CA7D /* FullTitleVisualEffectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTitleVisualEffectViewController.h; sourceTree = "<group>"; };
+		10CEC5881C21345600B0CA7D /* FullTitleVisualEffectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTitleVisualEffectViewController.m; sourceTree = "<group>"; };
+		10CEC58A1C2153EB00B0CA7D /* FullTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTitleViewController.h; sourceTree = "<group>"; };
+		10CEC58B1C2153EB00B0CA7D /* FullTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTitleViewController.m; sourceTree = "<group>"; };
 		B5D0118C1C0BE1B30075BC2E /* HeaderViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewTapAnimationController.h; sourceTree = "<group>"; };
 		B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewTapAnimationController.m; sourceTree = "<group>"; };
 		B5D0118F1C0BE2410075BC2E /* RotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateView.h; sourceTree = "<group>"; };
@@ -339,10 +342,10 @@
 		1010C6D51C0A9C86004CFBCE /* POPSpringParameterController */ = {
 			isa = PBXGroup;
 			children = (
-				1010C6D91C0A9DA0004CFBCE /* RangeValueView.h */,
-				1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */,
 				1010C6DC1C0AA639004CFBCE /* POPSpringParameterController.h */,
 				1010C6DD1C0AA639004CFBCE /* POPSpringParameterController.m */,
+				1010C6D91C0A9DA0004CFBCE /* RangeValueView.h */,
+				1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */,
 			);
 			name = POPSpringParameterController;
 			sourceTree = "<group>";
@@ -586,10 +589,12 @@
 				10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */,
 				10CEC5521C20F5F400B0CA7D /* CustomFullContentViewController.h */,
 				10CEC5531C20F5F400B0CA7D /* CustomFullContentViewController.m */,
-				1030887B1C0440E100C8B623 /* CustomTitleViewController.h */,
-				1030887C1C0440E100C8B623 /* CustomTitleViewController.m */,
-				1030887E1C045E9400C8B623 /* CustomVisualEffectTitleViewController.h */,
-				1030887F1C045E9400C8B623 /* CustomVisualEffectTitleViewController.m */,
+				10CEC5841C21321800B0CA7D /* NormalTitleViewController.h */,
+				10CEC5851C21321800B0CA7D /* NormalTitleViewController.m */,
+				10CEC58A1C2153EB00B0CA7D /* FullTitleViewController.h */,
+				10CEC58B1C2153EB00B0CA7D /* FullTitleViewController.m */,
+				10CEC5871C21345600B0CA7D /* FullTitleVisualEffectViewController.h */,
+				10CEC5881C21345600B0CA7D /* FullTitleVisualEffectViewController.m */,
 			);
 			name = CustomNavigationController;
 			sourceTree = "<group>";
@@ -949,6 +954,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10CEC5861C21321800B0CA7D /* NormalTitleViewController.m in Sources */,
 				10381FB91BF9B55B00E5E476 /* POPCustomAnimation.mm in Sources */,
 				B5D011941C0BE2410075BC2E /* RotateView.m in Sources */,
 				108A99381C0FE01100B693F6 /* RotateAnimationView.m in Sources */,
@@ -976,7 +982,6 @@
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
 				B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */,
-				103088801C045E9400C8B623 /* CustomVisualEffectTitleViewController.m in Sources */,
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
 				10381FC41BF9B77000E5E476 /* CustomNavigationController.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
@@ -988,7 +993,6 @@
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
 				10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */,
-				1030887D1C0440E100C8B623 /* CustomTitleViewController.m in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
 				10381FD41BF9D8B300E5E476 /* FillCircleLayerConfigure.m in Sources */,
 				104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */,
@@ -1024,11 +1028,13 @@
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
 				104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */,
 				108A99C31C1125B500B693F6 /* SlideAnimationCell.m in Sources */,
+				10CEC58C1C2153EB00B0CA7D /* FullTitleViewController.m in Sources */,
 				10381FBE1BF9B55B00E5E476 /* POPPropertyAnimation.mm in Sources */,
 				105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */,
 				105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */,
 				B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */,
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
+				10CEC5891C21345600B0CA7D /* FullTitleVisualEffectViewController.m in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
 				10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */,
 				10381F701BF9B47000E5E476 /* AnimationsListViewController.m in Sources */,

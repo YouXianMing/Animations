@@ -11,6 +11,7 @@
 #import "UIColor+CustomColors.h"
 #import "StrokeCircleLayerConfigure.h"
 #import "FillCircleLayerConfigure.h"
+#import "UIView+SetRect.h"
 
 @interface ButtonPressViewController ()
 
@@ -38,8 +39,8 @@
     _button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     _button.layer.cornerRadius = 50.f;
     _button.backgroundColor = [UIColor cyanColor];
-    _button.center = self.view.center;
-    [self.view addSubview:_button];
+    _button.center = self.contentView.middlePoint;
+    [self.contentView addSubview:_button];
     
     self.label               = [[UILabel alloc] initWithFrame:_button.bounds];
     self.label.font          = Font_HYQiHei(30);
@@ -71,9 +72,9 @@
         config.startAngle   = 0;
         config.endAngle     = M_PI * 2;
         config.radius       = 55.f;
-        config.circleCenter = self.view.center;
+        config.circleCenter = self.contentView.middlePoint;
         [config configCAShapeLayer:self.circleShape1];
-        [self.view.layer addSublayer:self.circleShape1];
+        [self.contentView.layer addSublayer:self.circleShape1];
     }
     
     // 圆环2
@@ -86,12 +87,10 @@
         config.endAngle     = M_PI * 2;
         config.radius       = 60.f;
         config.clockWise    = YES;
-        config.circleCenter = self.view.center;
+        config.circleCenter = self.contentView.middlePoint;
         [config configCAShapeLayer:self.circleShape2];
-        [self.view.layer addSublayer:self.circleShape2];
+        [self.contentView.layer addSublayer:self.circleShape2];
     }
-    
-    [self bringTitleViewToFront];
 }
 
 #pragma mark - Button events

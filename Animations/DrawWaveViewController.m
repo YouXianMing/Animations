@@ -32,19 +32,17 @@
     [super setup];
     
     self.drawView        = [[DrawView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
-    self.drawView.center = self.view.center;
+    self.drawView.center = self.contentView.center;
     self.drawView.y     += 100;
-    [self.view addSubview:self.drawView];
+    [self.contentView addSubview:self.drawView];
     
     self.drawLineView        = [[DrawLineView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
-    self.drawLineView.center = self.view.center;
+    self.drawLineView.center = self.contentView.center;
     self.drawLineView.y     -= 100;
-    [self.view addSubview:self.drawLineView];
+    [self.contentView addSubview:self.drawLineView];
     
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(drawEvent)];
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-    
-    [self bringTitleViewToFront];
 }
 
 - (void)drawEvent {
