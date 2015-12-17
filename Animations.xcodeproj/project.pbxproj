@@ -97,6 +97,8 @@
 		10CEC5861C21321800B0CA7D /* NormalTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5851C21321800B0CA7D /* NormalTitleViewController.m */; };
 		10CEC5891C21345600B0CA7D /* FullTitleVisualEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5881C21345600B0CA7D /* FullTitleVisualEffectViewController.m */; };
 		10CEC58C1C2153EB00B0CA7D /* FullTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC58B1C2153EB00B0CA7D /* FullTitleViewController.m */; };
+		10CEC5941C2238E700B0CA7D /* LabelScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5931C2238E700B0CA7D /* LabelScaleViewController.m */; };
+		10CEC5971C223A5400B0CA7D /* ScaleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5961C223A5400B0CA7D /* ScaleLabel.m */; };
 		B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */; };
 		B5D011941C0BE2410075BC2E /* RotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011901C0BE2410075BC2E /* RotateView.m */; };
 		B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011931C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m */; };
@@ -308,6 +310,10 @@
 		10CEC5881C21345600B0CA7D /* FullTitleVisualEffectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTitleVisualEffectViewController.m; sourceTree = "<group>"; };
 		10CEC58A1C2153EB00B0CA7D /* FullTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTitleViewController.h; sourceTree = "<group>"; };
 		10CEC58B1C2153EB00B0CA7D /* FullTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTitleViewController.m; sourceTree = "<group>"; };
+		10CEC5921C2238E700B0CA7D /* LabelScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelScaleViewController.h; sourceTree = "<group>"; };
+		10CEC5931C2238E700B0CA7D /* LabelScaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelScaleViewController.m; sourceTree = "<group>"; };
+		10CEC5951C223A5400B0CA7D /* ScaleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleLabel.h; sourceTree = "<group>"; };
+		10CEC5961C223A5400B0CA7D /* ScaleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleLabel.m; sourceTree = "<group>"; };
 		B5D0118C1C0BE1B30075BC2E /* HeaderViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewTapAnimationController.h; sourceTree = "<group>"; };
 		B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewTapAnimationController.m; sourceTree = "<group>"; };
 		B5D0118F1C0BE2410075BC2E /* RotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateView.h; sourceTree = "<group>"; };
@@ -632,6 +638,7 @@
 				108A992F1C0FD58400B693F6 /* ClockViewController */,
 				108A99BD1C1124E100B693F6 /* TableViewCellSlideAnimationController */,
 				10A67C5C1C12D57300C3E505 /* DrawWaveViewController */,
+				10CEC5911C2238B500B0CA7D /* LabelScaleViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -847,6 +854,17 @@
 			name = DrawWaveViewController;
 			sourceTree = "<group>";
 		};
+		10CEC5911C2238B500B0CA7D /* LabelScaleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				10CEC5921C2238E700B0CA7D /* LabelScaleViewController.h */,
+				10CEC5931C2238E700B0CA7D /* LabelScaleViewController.m */,
+				10CEC5951C223A5400B0CA7D /* ScaleLabel.h */,
+				10CEC5961C223A5400B0CA7D /* ScaleLabel.m */,
+			);
+			name = LabelScaleViewController;
+			sourceTree = "<group>";
+		};
 		B5D0118B1C0BE15A0075BC2E /* HeaderViewTapAnimationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -915,7 +933,7 @@
 				TargetAttributes = {
 					10381F4C1BF9B44A00E5E476 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 96SZNQ256W;
+						DevelopmentTeam = LQ7EZHXL53;
 					};
 				};
 			};
@@ -963,6 +981,8 @@
 				108A99421C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m in Sources */,
 				10A67C651C12D68D00C3E505 /* DrawView.m in Sources */,
 				105D98A41C07F17D00FD1013 /* CustomCell.m in Sources */,
+				10CEC5971C223A5400B0CA7D /* ScaleLabel.m in Sources */,
+				10CEC5941C2238E700B0CA7D /* LabelScaleViewController.m in Sources */,
 				103088B31C05679A00C8B623 /* ScrollBlurImageViewController.m in Sources */,
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
 				10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */,
@@ -1140,6 +1160,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
@@ -1153,7 +1174,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

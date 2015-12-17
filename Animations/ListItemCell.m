@@ -47,6 +47,15 @@
         self.titlelabel.text    = item.name;
         self.subTitleLabel.text = [NSString stringWithFormat:@"%@", item.object];
     }
+    
+    if (self.indexPath.row % 2) {
+    
+        self.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.03f];
+        
+    } else {
+    
+        self.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
