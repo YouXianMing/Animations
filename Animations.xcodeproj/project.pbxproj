@@ -78,6 +78,7 @@
 		105D98A41C07F17D00FD1013 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A31C07F17D00FD1013 /* CustomCell.m */; };
 		105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */; };
 		105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */; };
+		106249981C2785630090AD65 /* EmitterSnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106249971C2785630090AD65 /* EmitterSnowController.m */; };
 		108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99311C0FD5A800B693F6 /* ClockViewController.m */; };
 		108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99341C0FD7A900B693F6 /* SystemTimeInfomation.m */; };
 		108A99381C0FE01100B693F6 /* RotateAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99371C0FE01100B693F6 /* RotateAnimationView.m */; };
@@ -275,6 +276,8 @@
 		105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTapAnimationCell.m; sourceTree = "<group>"; };
 		105D98A81C07FC2C00FD1013 /* TapAnimationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapAnimationModel.h; sourceTree = "<group>"; };
 		105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapAnimationModel.m; sourceTree = "<group>"; };
+		106249961C2785630090AD65 /* EmitterSnowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterSnowController.h; sourceTree = "<group>"; };
+		106249971C2785630090AD65 /* EmitterSnowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSnowController.m; sourceTree = "<group>"; };
 		108A99301C0FD5A800B693F6 /* ClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockViewController.h; sourceTree = "<group>"; };
 		108A99311C0FD5A800B693F6 /* ClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockViewController.m; sourceTree = "<group>"; };
 		108A99331C0FD7A900B693F6 /* SystemTimeInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemTimeInfomation.h; sourceTree = "<group>"; };
@@ -660,6 +663,7 @@
 				10A67C5C1C12D57300C3E505 /* DrawWaveViewController */,
 				10CEC5911C2238B500B0CA7D /* LabelScaleViewController */,
 				100BFAE61C2392CC008C5523 /* ShimmerController */,
+				106249991C2785680090AD65 /* EmitterSnowController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -826,6 +830,15 @@
 				B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */,
 			);
 			name = CustomCell;
+			sourceTree = "<group>";
+		};
+		106249991C2785680090AD65 /* EmitterSnowController */ = {
+			isa = PBXGroup;
+			children = (
+				106249961C2785630090AD65 /* EmitterSnowController.h */,
+				106249971C2785630090AD65 /* EmitterSnowController.m */,
+			);
+			name = EmitterSnowController;
 			sourceTree = "<group>";
 		};
 		108A992F1C0FD58400B693F6 /* ClockViewController */ = {
@@ -1091,6 +1104,7 @@
 				10CEC5891C21345600B0CA7D /* FullTitleVisualEffectViewController.m in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
 				10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */,
+				106249981C2785630090AD65 /* EmitterSnowController.m in Sources */,
 				10381F701BF9B47000E5E476 /* AnimationsListViewController.m in Sources */,
 				104F0CC51BFAC04300C46E6A /* CustomViewController.m in Sources */,
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,

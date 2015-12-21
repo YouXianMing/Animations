@@ -31,6 +31,7 @@
 #import "DrawWaveViewController.h"
 #import "LabelScaleViewController.h"
 #import "ShimmerController.h"
+#import "EmitterSnowController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -119,7 +120,8 @@
                    [Item itemWithName:@"TableViewCell滑动动画" object:[TableViewCellSlideAnimationController class]],
                    [Item itemWithName:@"绘制波形图动画" object:[DrawWaveViewController class]],
                    [Item itemWithName:@"UILabel缩放动画" object:[LabelScaleViewController class]],
-                   [Item itemWithName:@"Facebook辉光动画" object:[ShimmerController class]]];
+                   [Item itemWithName:@"Facebook辉光动画" object:[ShimmerController class]],
+                   [Item itemWithName:@"粒子动画-雪花" object:[EmitterSnowController class]]];
 }
 
 #pragma mark - tableView 相关
