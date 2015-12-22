@@ -45,6 +45,11 @@
     NSDictionary *data    = sender;
     CGFloat       offsetY = [[data valueForKey:@"object"] floatValue] - self.indexPath.row * CELL_HEIGHT;
     
+    if (self.indexPath.row == 4) {
+        
+        NSLog(@"%f", offsetY);
+    }
+    
     if (offsetY >= 0 && offsetY <= CELL_HEIGHT) {
         
         // 根据百分比计算

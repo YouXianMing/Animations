@@ -50,7 +50,7 @@
     
     if (self.indexPath.row % 2) {
     
-        self.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.03f];
+        self.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.05f];
         
     } else {
     
