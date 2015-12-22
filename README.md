@@ -38,6 +38,8 @@
 
 ![demo18.gif](http://images2015.cnblogs.com/blog/607542/201512/607542-20151221092637624-177484917.gif)
 
+![demo19.gif](http://images2015.cnblogs.com/blog/607542/201512/607542-20151222091726327-2061557423.gif)
+
 > 部分参考代码
 
 [https://github.com/schneiderandre/popping](https://github.com/schneiderandre/popping)
