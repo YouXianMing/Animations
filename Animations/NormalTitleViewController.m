@@ -22,7 +22,7 @@
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
-    headlinelabel.font          = Font_Avenir(20.f);
+    headlinelabel.font          = Font_Heiti(20.f);
     headlinelabel.textAlignment = NSTextAlignmentCenter;
     headlinelabel.textColor     = [UIColor customGrayColor];
     headlinelabel.text          = self.title;

@@ -69,9 +69,9 @@
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
-    headlinelabel.font          = Font_Avenir(20.f);
+    headlinelabel.font          = Font_Heiti(20.f);
     headlinelabel.textAlignment = NSTextAlignmentCenter;
-    headlinelabel.textColor     = [UIColor redColor];
+    headlinelabel.textColor     = [UIColor cyanColor];
     headlinelabel.text          = self.title;
     [headlinelabel sizeToFit];
     
@@ -80,7 +80,8 @@
     FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:self.titleView.bounds];
     shimmeringView.shimmering                  = YES;
     shimmeringView.shimmeringBeginFadeDuration = 0.3;
-    shimmeringView.shimmeringOpacity           = 0.3;
+    shimmeringView.shimmeringOpacity           = 0.1f;
+    shimmeringView.shimmeringAnimationOpacity  = 1.f;
     [self.titleView addSubview:shimmeringView];
     
     shimmeringView.contentView = headlinelabel;
