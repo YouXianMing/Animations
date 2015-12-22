@@ -41,3 +41,5 @@
 > 部分参考代码
 
 [https://github.com/schneiderandre/popping](https://github.com/schneiderandre/popping)
+[https://github.com/facebook/Shimmer](https://github.com/facebook/Shimmer)
+[https://github.com/moqod/iOS-Scratch-n-See](https://github.com/moqod/iOS-Scratch-n-See)
