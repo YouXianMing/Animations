@@ -33,6 +33,7 @@
 #import "ShimmerController.h"
 #import "EmitterSnowController.h"
 #import "ScratchImageViewController.h"
+#import "LiveImageViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -123,7 +124,8 @@
                    [Item itemWithName:@"UILabel缩放动画" object:[LabelScaleViewController class]],
                    [Item itemWithName:@"Facebook辉光动画" object:[ShimmerController class]],
                    [Item itemWithName:@"粒子动画-雪花" object:[EmitterSnowController class]],
-                   [Item itemWithName:@"刮奖效果" object:[ScratchImageViewController class]]];
+                   [Item itemWithName:@"刮奖效果" object:[ScratchImageViewController class]],
+                   [Item itemWithName:@"图片切换效果" object:[LiveImageViewController class]]];
 }
 
 #pragma mark - tableView 相关
