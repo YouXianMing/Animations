@@ -85,6 +85,11 @@
     
     [super buildTitleView];
     
+    [self.titleView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        [obj removeFromSuperview];
+    }];
+    
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
     headlinelabel.font          = Font_Avenir(20.f);

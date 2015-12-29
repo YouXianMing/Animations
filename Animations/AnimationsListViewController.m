@@ -119,7 +119,7 @@
                    [Item itemWithName:@"UITableView展开缩放动画" object:[HeaderViewTapAnimationController class]],
                    [Item itemWithName:@"UITableView显示倒计时" object:[CountDownTimerController class]],
                    [Item itemWithName:@"时钟动画效果" object:[ClockViewController class]],
-                   [Item itemWithName:@"TableViewCell滑动动画" object:[TableViewCellSlideAnimationController class]],
+//                   [Item itemWithName:@"TableViewCell滑动动画" object:[TableViewCellSlideAnimationController class]],
                    [Item itemWithName:@"绘制波形图动画" object:[DrawWaveViewController class]],
                    [Item itemWithName:@"UILabel缩放动画" object:[LabelScaleViewController class]],
                    [Item itemWithName:@"Facebook辉光动画" object:[ShimmerController class]],

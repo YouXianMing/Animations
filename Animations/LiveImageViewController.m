@@ -14,6 +14,7 @@
 @interface LiveImageViewController ()
 
 @property (nonatomic, strong) GCDTimer  *timer;
+@property (nonatomic)         NSInteger  count;
 
 @end
 
@@ -42,9 +43,8 @@
         
         [UIView animateWithDuration:0.5 animations:^{
             
-            static int count       = 0;
             liveImageView.duration = 0.5;
-            liveImageView.image    = pictureArray[count++ % 4];
+            liveImageView.image    = pictureArray[self.count++ % pictureArray.count];
             CGRect tmpRect         = liveImageView.bounds;
             tmpRect.size           = liveImageView.image.size;
             liveImageView.bounds   = tmpRect;
