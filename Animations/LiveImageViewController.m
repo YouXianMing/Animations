@@ -26,7 +26,9 @@
     
     self.backgroundView.backgroundColor = [UIColor blackColor];
     
-    LiveImageView *liveImageView    = [[LiveImageView alloc] initWithFrame:self.view.bounds];
+    UIImage *image = [UIImage imageNamed:@"pic_1"];
+    LiveImageView *liveImageView    = [[LiveImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+    liveImageView.center            = self.contentView.middlePoint;
     liveImageView.layer.borderWidth = 3.f;
     liveImageView.layer.borderColor = [UIColor whiteColor].CGColor;
     [self.contentView addSubview:liveImageView];

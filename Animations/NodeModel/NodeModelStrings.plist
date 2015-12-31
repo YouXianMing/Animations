@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SwiftArrayTypeString</key>
+	<string>        // Array: [Swift-Array-Key]
+        if key == &quot;[Swift-Array-Key]&quot; {
+        
+            var modelsArray         = [[Swift-Model-Name]]();
+            let array : [AnyObject] = value as! [AnyObject]
+            
+            for value in array {
+            
+                let dictionary = value as! [String : AnyObject]
+                let model      = [Swift-Model-Name](dictionary: dictionary)
+                modelsArray.append(model!)
+            }
+            
+            super.setValue(modelsArray, forKey: key)
+            return
+        }
+</string>
+	<key>SwiftDictionaryTypeString</key>
+	<string>        // Dictionary: [Swift-Dictionary-Key]
+        if key == &quot;[Swift-Dictionary-Key]&quot; {
+
+            let dictionary = value as! [String : AnyObject]
+            let model      = [Swift-Model-Name](dictionary: dictionary)
+            
+            super.setValue(model, forKey: key)
+            return
+        }
+</string>
+	<key>SwiftTotalFile</key>
+	<string>//
+//  [Swift-Model-Name].swift
+//
+//  http://www.cnblogs.com/YouXianMing/
+//  https://github.com/YouXianMing
+//
+//  Copyright (c) YouXianMing All rights reserved.
+//
+
+import UIKit
+
+class [Swift-Model-Name]: NSObject {
+    
+    
+    // stored propety
+    
+[Swift-Stored-Propety]
+    
+    // init method
+    
+    override init() {
+        
+    }
+    
+    init?(dictionary : [String : AnyObject]?) {
+        
+        super.init()
+        
+        if let _ : [String : AnyObject] = dictionary {
+            
+            setValuesForKeysWithDictionary(dictionary!)
+            
+        } else {
+            
+            return nil
+        }
+    }
+    
+    
+    // setValueForKey &amp; setValueForUndefinedKey
+    
+    override func setValue(value: AnyObject?, forKey key: String) {
+        
+[Swift-List-Type-Propety]
+        super.setValue(value, forKey: key)
+    }
+    
+    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
+        
+        print(&quot;The file \(self.classForCoder).h has an undefined key \&quot;\(key)\&quot;, and the key&apos;s type is \(value?.classForCoder).&quot;)
+    }
+}
+</string>
+	<key>dictionaryTypeString</key>
+	<string>    // [PropertyName]
+    if ([key isEqualToString:@&quot;[PropertyName]&quot;] &amp;&amp; [value isKindOfClass:[NSDictionary class]]) {
+        
+        value = [[[PropertyClass] alloc] initWithDictionary:value];
+    }
+</string>
+	<key>arrayTypeString</key>
+	<string>    // [PropertyName]
+    if ([key isEqualToString:@&quot;[PropertyName]&quot;] &amp;&amp; [value isKindOfClass:[NSArray class]]) {
+        
+        NSArray        *array     = value;
+        NSMutableArray *dataArray = [NSMutableArray array];
+        
+        for (NSDictionary *dictionary in array) {
+            
+            [PropertyClass] *model = [[[PropertyClass] alloc] initWithDictionary:dictionary];
+            [dataArray addObject:model];
+        }
+        
+        value = dataArray;
+    }
+</string>
+	<key>modelMFileString</key>
+	<string>//
+//  [ModelName-WaitForReplaced].m
+//
+//  http://www.cnblogs.com/YouXianMing/
+//  https://github.com/YouXianMing
+//
+//  Copyright (c) YouXianMing All rights reserved.
+//
+
+
+#import &quot;[ModelName-WaitForReplaced].h&quot;
+
+@implementation [ModelName-WaitForReplaced]
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    
+    /*  [Example] change property id to productID
+     *
+     *  if([key isEqualToString:@&quot;id&quot;]) {
+     *
+     *      self.productID = value;
+     *      return;
+     *  }
+     */
+    
+    // show undefined key
+    NSLog(@&quot;%@.h have undefined key &apos;%@&apos;, the key&apos;s type is &apos;%@&apos;.&quot;, NSStringFromClass([self class]), key, [value class]);
+}
+
+- (void)setValue:(id)value forKey:(NSString *)key {
+    
+    // ignore null value
+    if ([value isKindOfClass:[NSNull class]]) {
+        
+        return;
+    }
+[ListProperties-WaitForReplaced]
+    [super setValue:value forKey:key];
+}
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    
+    if ([dictionary isKindOfClass:[NSDictionary class]]) {
+        
+        if (self = [super init]) {
+            
+            [self setValuesForKeysWithDictionary:dictionary];
+        }
+    }
+    
+    return self;
+}
+
+@end
+
+</string>
+	<key>modelHeaderFileString</key>
+	<string>//
+//  [ModelName-WaitForReplaced].h
+//
+//  http://www.cnblogs.com/YouXianMing/
+//  https://github.com/YouXianMing
+//
+//  Copyright (c) YouXianMing All rights reserved.
+//
+
+
+#import &lt;Foundation/Foundation.h&gt;
+[FileHeaders-WaitForReplaced]
+@interface [ModelName-WaitForReplaced] : NSObject
+
+[PropertiesList-WaitForReplaced]
+/**
+ *  Init the model with dictionary
+ *
+ *  @param dictionary dictionary
+ *
+ *  @return model
+ */
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+@end
+
+</string>
+</dict>
+</plist>

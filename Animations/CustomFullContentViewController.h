@@ -71,7 +71,7 @@
 - (void)buildWindowView;
 
 /**
- *  Build windowView, please overwrite by subclass.
+ *  Build backgroundView, please overwrite by subclass.
  */
 - (void)buildBackgroundView;
 
