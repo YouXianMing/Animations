@@ -30,16 +30,17 @@
     
     [super setup];
     
-    self.circleShape = [CAShapeLayer layer];
+    self.circleShape           = [CAShapeLayer layer];
     self.circleShape.strokeEnd = 0.f;
     self.circleShape.lineCap   = kCALineCapRound;
+    
     StrokeCircleLayerConfigure *config = [StrokeCircleLayerConfigure new];
-    config.lineWidth    = 4.f;
-    config.startAngle   = 0;
-    config.endAngle     = M_PI * 2;
-    config.radius       = 55.f;
-    config.circleCenter = self.contentView.middlePoint;
-    config.strokeColor  = [UIColor cyanColor];
+    config.lineWidth                   = 4.f;
+    config.startAngle                  = 0;
+    config.endAngle                    = M_PI * 2;
+    config.radius                      = 55.f;
+    config.circleCenter                = self.contentView.middlePoint;
+    config.strokeColor                 = [UIColor cyanColor];
     [config configCAShapeLayer:self.circleShape];
     [self.contentView.layer addSublayer:self.circleShape];
     

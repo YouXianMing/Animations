@@ -12,7 +12,7 @@
 
 - (void)configCAShapeLayer:(CAShapeLayer *)shapeLayer {
 
-    self.lineWidth    = 0.f;
+    self.lineWidth   = 0.f;
     self.strokeColor = [UIColor clearColor];
     
     [super configCAShapeLayer:shapeLayer];

@@ -85,6 +85,10 @@
 		10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FDC1BF9DE6E00E5E476 /* GCDSemaphore.m */; };
 		10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FDE1BF9DE6E00E5E476 /* GCDTimer.m */; };
 		10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FE41BF9DE7F00E5E476 /* UIImage+ImageEffects.m */; };
+		104228C31C3694B10011409C /* SDWebImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C21C3694B10011409C /* SDWebImageController.m */; };
+		104228C61C3695230011409C /* PictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C51C3695230011409C /* PictureModel.m */; };
+		104228C91C36956C0011409C /* PictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C81C36956C0011409C /* PictureCell.m */; };
+		104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228CC1C369E7C0011409C /* UIView+AnimationProperty.m */; };
 		1048F6EF1C28D56B0052F1DD /* MDMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EC1C28D56B0052F1DD /* MDMatrix.m */; };
 		1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EE1C28D56B0052F1DD /* MDScratchImageView.mm */; };
 		1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6F21C28D5B60052F1DD /* ScratchImageViewController.m */; };
@@ -321,6 +325,14 @@
 		10381FDE1BF9DE6E00E5E476 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
 		10381FE31BF9DE7F00E5E476 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		10381FE41BF9DE7F00E5E476 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		104228C11C3694B10011409C /* SDWebImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageController.h; sourceTree = "<group>"; };
+		104228C21C3694B10011409C /* SDWebImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageController.m; sourceTree = "<group>"; };
+		104228C41C3695230011409C /* PictureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureModel.h; sourceTree = "<group>"; };
+		104228C51C3695230011409C /* PictureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureModel.m; sourceTree = "<group>"; };
+		104228C71C36956C0011409C /* PictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCell.h; sourceTree = "<group>"; };
+		104228C81C36956C0011409C /* PictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCell.m; sourceTree = "<group>"; };
+		104228CB1C369E7C0011409C /* UIView+AnimationProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationProperty.h"; sourceTree = "<group>"; };
+		104228CC1C369E7C0011409C /* UIView+AnimationProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationProperty.m"; sourceTree = "<group>"; };
 		1048F6EB1C28D56B0052F1DD /* MDMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDMatrix.h; sourceTree = "<group>"; };
 		1048F6EC1C28D56B0052F1DD /* MDMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMatrix.m; sourceTree = "<group>"; };
 		1048F6ED1C28D56B0052F1DD /* MDScratchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDScratchImageView.h; sourceTree = "<group>"; };
@@ -487,6 +499,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				104228CE1C36A24F0011409C /* AnimationProperty */,
 				1017F13D1C35720100E245F8 /* CreateModel */,
 				1017F1301C35714800E245F8 /* JSONKit */,
 				1017F0FB1C356EE700E245F8 /* SDWebImage */,
@@ -865,6 +878,7 @@
 				106249991C2785680090AD65 /* EmitterSnowController */,
 				1048F6F41C28D5C40052F1DD /* ScratchImageViewController */,
 				107CF3961C2FFC18002DF93C /* LiveImageViewController */,
+				104228CA1C369BB80011409C /* SDWebImageController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -893,6 +907,28 @@
 				10381FDE1BF9DE6E00E5E476 /* GCDTimer.m */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		104228CA1C369BB80011409C /* SDWebImageController */ = {
+			isa = PBXGroup;
+			children = (
+				104228C11C3694B10011409C /* SDWebImageController.h */,
+				104228C21C3694B10011409C /* SDWebImageController.m */,
+				104228C71C36956C0011409C /* PictureCell.h */,
+				104228C81C36956C0011409C /* PictureCell.m */,
+				104228C41C3695230011409C /* PictureModel.h */,
+				104228C51C3695230011409C /* PictureModel.m */,
+			);
+			name = SDWebImageController;
+			sourceTree = "<group>";
+		};
+		104228CE1C36A24F0011409C /* AnimationProperty */ = {
+			isa = PBXGroup;
+			children = (
+				104228CB1C369E7C0011409C /* UIView+AnimationProperty.h */,
+				104228CC1C369E7C0011409C /* UIView+AnimationProperty.m */,
+			);
+			name = AnimationProperty;
 			sourceTree = "<group>";
 		};
 		1048F6EA1C28D56B0052F1DD /* MDScratchImageView */ = {
@@ -1265,12 +1301,14 @@
 				100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */,
 				10CEC5971C223A5400B0CA7D /* ScaleLabel.m in Sources */,
 				10CEC5941C2238E700B0CA7D /* LabelScaleViewController.m in Sources */,
+				104228C31C3694B10011409C /* SDWebImageController.m in Sources */,
 				103088B31C05679A00C8B623 /* ScrollBlurImageViewController.m in Sources */,
 				1017F12B1C356EE700E245F8 /* UIImageView+WebCache.m in Sources */,
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
 				10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */,
 				104F0D311BFC1C9C00C46E6A /* StringAttribute.m in Sources */,
 				104F0D051BFAFB4200C46E6A /* GradientColor.m in Sources */,
+				104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */,
 				10381FD11BF9D2C600E5E476 /* StrokeCircleLayerConfigure.m in Sources */,
 				1017F1271C356EE700E245F8 /* UIImage+GIF.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
@@ -1335,6 +1373,7 @@
 				109D5B521C0EC15D0039CB04 /* CountDownTimeCell.m in Sources */,
 				B5D011991C0BE3210075BC2E /* StudentInfoCell.m in Sources */,
 				1030886A1C03F1A000C8B623 /* easing.c in Sources */,
+				104228C91C36956C0011409C /* PictureCell.m in Sources */,
 				1017F1221C356EE700E245F8 /* SDWebImageDownloader.m in Sources */,
 				1017F1391C35715400E245F8 /* NSArray+JSONData.m in Sources */,
 				10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */,
@@ -1381,6 +1420,7 @@
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
 				109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */,
 				105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */,
+				104228C61C3695230011409C /* PictureModel.m in Sources */,
 				1030886E1C03F1B200C8B623 /* CircleView.m in Sources */,
 				10589D261C2393C200F20BC0 /* FBShimmeringView.m in Sources */,
 				104F0D0F1BFB006C00C46E6A /* UIView+SetRect.m in Sources */,
