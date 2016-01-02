@@ -35,6 +35,7 @@
 #import "ScratchImageViewController.h"
 #import "LiveImageViewController.h"
 #import "SDWebImageController.h"
+#import "AlertViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -127,7 +128,8 @@
                    [Item itemWithName:@"粒子动画-雪花" object:[EmitterSnowController class]],
                    [Item itemWithName:@"刮奖效果" object:[ScratchImageViewController class]],
                    [Item itemWithName:@"图片切换效果" object:[LiveImageViewController class]],
-                   [Item itemWithName:@"SDWebImage加载图片" object:[SDWebImageController class]]];
+                   [Item itemWithName:@"SDWebImage加载图片" object:[SDWebImageController class]],
+                   [Item itemWithName:@"抽象的AlertView" object:[AlertViewController class]]];
 }
 
 #pragma mark - tableView 相关

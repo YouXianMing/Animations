@@ -117,6 +117,14 @@
 		105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */; };
 		105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */; };
 		106249981C2785630090AD65 /* EmitterSnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106249971C2785630090AD65 /* EmitterSnowController.m */; };
+		106CF0861C375DAD0006419B /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0851C375DAD0006419B /* AbstractAlertView.m */; };
+		106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF08D1C3763E30006419B /* UIButton+inits.m */; };
+		106CF0921C3764090006419B /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0911C3764090006419B /* AlertViewController.m */; };
+		106CF0961C37650D0006419B /* MessageAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0951C37650D0006419B /* MessageAlertView.m */; };
+		106CF0991C3765360006419B /* UIFont+Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0981C3765360006419B /* UIFont+Fonts.m */; };
+		106CF09D1C376DAA0006419B /* ButtonsAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF09C1C376DAA0006419B /* ButtonsAlertView.m */; };
+		106CF0A31C376E190006419B /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0A01C376E190006419B /* HexColors.m */; };
+		106CF0A41C376E190006419B /* NSString+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0A21C376E190006419B /* NSString+HexColors.m */; };
 		107CF3951C2FFC01002DF93C /* LiveImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107CF3941C2FFC01002DF93C /* LiveImageViewController.m */; };
 		107CF3991C2FFD51002DF93C /* LiveImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 107CF3981C2FFD51002DF93C /* LiveImageView.m */; };
 		108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99311C0FD5A800B693F6 /* ClockViewController.m */; };
@@ -392,6 +400,22 @@
 		105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapAnimationModel.m; sourceTree = "<group>"; };
 		106249961C2785630090AD65 /* EmitterSnowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterSnowController.h; sourceTree = "<group>"; };
 		106249971C2785630090AD65 /* EmitterSnowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSnowController.m; sourceTree = "<group>"; };
+		106CF0841C375DAD0006419B /* AbstractAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
+		106CF0851C375DAD0006419B /* AbstractAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
+		106CF08C1C3763E30006419B /* UIButton+inits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+inits.h"; sourceTree = "<group>"; };
+		106CF08D1C3763E30006419B /* UIButton+inits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+inits.m"; sourceTree = "<group>"; };
+		106CF0901C3764090006419B /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
+		106CF0911C3764090006419B /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
+		106CF0941C37650D0006419B /* MessageAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAlertView.h; sourceTree = "<group>"; };
+		106CF0951C37650D0006419B /* MessageAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageAlertView.m; sourceTree = "<group>"; };
+		106CF0971C3765360006419B /* UIFont+Fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Fonts.h"; sourceTree = "<group>"; };
+		106CF0981C3765360006419B /* UIFont+Fonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Fonts.m"; sourceTree = "<group>"; };
+		106CF09B1C376DAA0006419B /* ButtonsAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsAlertView.h; sourceTree = "<group>"; };
+		106CF09C1C376DAA0006419B /* ButtonsAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsAlertView.m; sourceTree = "<group>"; };
+		106CF09F1C376E190006419B /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
+		106CF0A01C376E190006419B /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
+		106CF0A11C376E190006419B /* NSString+HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HexColors.h"; sourceTree = "<group>"; };
+		106CF0A21C376E190006419B /* NSString+HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexColors.m"; sourceTree = "<group>"; };
 		107CF3931C2FFC01002DF93C /* LiveImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveImageViewController.h; sourceTree = "<group>"; };
 		107CF3941C2FFC01002DF93C /* LiveImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveImageViewController.m; sourceTree = "<group>"; };
 		107CF3971C2FFD51002DF93C /* LiveImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveImageView.h; sourceTree = "<group>"; };
@@ -499,6 +523,10 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				106CF09E1C376E080006419B /* HexColor */,
+				106CF09A1C3765490006419B /* UIFont+Categories */,
+				106CF08F1C3763E60006419B /* UIButton+Categories */,
+				106CF0871C375F010006419B /* AbstractAlertView */,
 				104228CE1C36A24F0011409C /* AnimationProperty */,
 				1017F13D1C35720100E245F8 /* CreateModel */,
 				1017F1301C35714800E245F8 /* JSONKit */,
@@ -879,6 +907,7 @@
 				1048F6F41C28D5C40052F1DD /* ScratchImageViewController */,
 				107CF3961C2FFC18002DF93C /* LiveImageViewController */,
 				104228CA1C369BB80011409C /* SDWebImageController */,
+				106CF0931C37640D0006419B /* AlertViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1096,6 +1125,57 @@
 				106249971C2785630090AD65 /* EmitterSnowController.m */,
 			);
 			name = EmitterSnowController;
+			sourceTree = "<group>";
+		};
+		106CF0871C375F010006419B /* AbstractAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				106CF0841C375DAD0006419B /* AbstractAlertView.h */,
+				106CF0851C375DAD0006419B /* AbstractAlertView.m */,
+			);
+			name = AbstractAlertView;
+			sourceTree = "<group>";
+		};
+		106CF08F1C3763E60006419B /* UIButton+Categories */ = {
+			isa = PBXGroup;
+			children = (
+				106CF08C1C3763E30006419B /* UIButton+inits.h */,
+				106CF08D1C3763E30006419B /* UIButton+inits.m */,
+			);
+			name = "UIButton+Categories";
+			sourceTree = "<group>";
+		};
+		106CF0931C37640D0006419B /* AlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				106CF0901C3764090006419B /* AlertViewController.h */,
+				106CF0911C3764090006419B /* AlertViewController.m */,
+				106CF0941C37650D0006419B /* MessageAlertView.h */,
+				106CF0951C37650D0006419B /* MessageAlertView.m */,
+				106CF09B1C376DAA0006419B /* ButtonsAlertView.h */,
+				106CF09C1C376DAA0006419B /* ButtonsAlertView.m */,
+			);
+			name = AlertViewController;
+			sourceTree = "<group>";
+		};
+		106CF09A1C3765490006419B /* UIFont+Categories */ = {
+			isa = PBXGroup;
+			children = (
+				106CF0971C3765360006419B /* UIFont+Fonts.h */,
+				106CF0981C3765360006419B /* UIFont+Fonts.m */,
+			);
+			name = "UIFont+Categories";
+			sourceTree = "<group>";
+		};
+		106CF09E1C376E080006419B /* HexColor */ = {
+			isa = PBXGroup;
+			children = (
+				106CF09F1C376E190006419B /* HexColors.h */,
+				106CF0A01C376E190006419B /* HexColors.m */,
+				106CF0A11C376E190006419B /* NSString+HexColors.h */,
+				106CF0A21C376E190006419B /* NSString+HexColors.m */,
+			);
+			name = HexColor;
 			sourceTree = "<group>";
 		};
 		107CF3961C2FFC18002DF93C /* LiveImageViewController */ = {
@@ -1335,6 +1415,7 @@
 				10381FC41BF9B77000E5E476 /* CustomNavigationController.m in Sources */,
 				1017F1261C356EE700E245F8 /* UIButton+WebCache.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
+				106CF0A31C376E190006419B /* HexColors.m in Sources */,
 				104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */,
 				104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */,
 				108A993F1C0FF3B400B693F6 /* NormalRotateAnimationType.m in Sources */,
@@ -1342,6 +1423,7 @@
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
+				106CF0A41C376E190006419B /* NSString+HexColors.m in Sources */,
 				10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */,
 				10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
@@ -1349,11 +1431,13 @@
 				10381FD41BF9D8B300E5E476 /* FillCircleLayerConfigure.m in Sources */,
 				104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */,
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
+				106CF0861C375DAD0006419B /* AbstractAlertView.m in Sources */,
 				109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */,
 				B5D011A71C0BE3D30075BC2E /* ClassHeaderView.m in Sources */,
 				1017F15C1C35721100E245F8 /* NodeModelHelper.m in Sources */,
 				1017F1281C356EE700E245F8 /* UIImage+MultiFormat.m in Sources */,
 				107CF3951C2FFC01002DF93C /* LiveImageViewController.m in Sources */,
+				106CF0921C3764090006419B /* AlertViewController.m in Sources */,
 				104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */,
 				1017F1231C356EE700E245F8 /* SDWebImageDownloaderOperation.m in Sources */,
 				1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */,
@@ -1367,8 +1451,11 @@
 				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */,
+				106CF09D1C376DAA0006419B /* ButtonsAlertView.m in Sources */,
 				1017F13A1C35715400E245F8 /* NSDictionary+JSONData.m in Sources */,
 				10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */,
+				106CF0991C3765360006419B /* UIFont+Fonts.m in Sources */,
+				106CF0961C37650D0006419B /* MessageAlertView.m in Sources */,
 				10A67C5B1C12D4BA00C3E505 /* CGContextObjectConfig.m in Sources */,
 				109D5B521C0EC15D0039CB04 /* CountDownTimeCell.m in Sources */,
 				B5D011991C0BE3210075BC2E /* StudentInfoCell.m in Sources */,
@@ -1382,6 +1469,7 @@
 				103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */,
 				10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
+				106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */,
 				103088B71C05880B00C8B623 /* Math.m in Sources */,
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */,
