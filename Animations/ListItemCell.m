@@ -10,6 +10,7 @@
 #import "UIColor+CustomColors.h"
 #import "POP.h"
 #import "Item.h"
+#import "UIFont+Fonts.h"
 
 @interface ListItemCell ()
 
@@ -29,8 +30,8 @@
 - (void)buildSubview {
 
     self.titlelabel      = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 290, 25)];
-    self.titlelabel.font = Font_HYQiHei(20);
-    self.titlelabel.textColor = [UIColor blackColor];
+    self.titlelabel.font = [UIFont HeitiSCWithFontSize:20.f];
+    self.titlelabel.textColor = [[UIColor blackColor] colorWithAlphaComponent:0.65f];
     [self addSubview:self.titlelabel];
     
     self.subTitleLabel           = [[UILabel alloc] initWithFrame:CGRectMake(10, 35, 290, 10)];

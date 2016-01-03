@@ -49,6 +49,7 @@
 		102296BB1C38D3D6001AF5BB /* WaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296BA1C38D3D6001AF5BB /* WaterfallCell.m */; };
 		102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296BD1C38D420001AF5BB /* WaterfallHeaderView.m */; };
 		102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296C01C38D65F001AF5BB /* WaterfallFooterView.m */; };
+		102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296C41C392B1F001AF5BB /* LineBackgroundView.m */; };
 		103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088631C03F18700C8B623 /* CircleAnimationViewController.m */; };
 		1030886A1C03F1A000C8B623 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 103088661C03F1A000C8B623 /* easing.c */; };
 		1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088691C03F1A000C8B623 /* YXEasing.m */; };
@@ -253,6 +254,8 @@
 		102296BD1C38D420001AF5BB /* WaterfallHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallHeaderView.m; sourceTree = "<group>"; };
 		102296BF1C38D65F001AF5BB /* WaterfallFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallFooterView.h; sourceTree = "<group>"; };
 		102296C01C38D65F001AF5BB /* WaterfallFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallFooterView.m; sourceTree = "<group>"; };
+		102296C31C392B1F001AF5BB /* LineBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineBackgroundView.h; sourceTree = "<group>"; };
+		102296C41C392B1F001AF5BB /* LineBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBackgroundView.m; sourceTree = "<group>"; };
 		103088621C03F18700C8B623 /* CircleAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleAnimationViewController.h; sourceTree = "<group>"; };
 		103088631C03F18700C8B623 /* CircleAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleAnimationViewController.m; sourceTree = "<group>"; };
 		103088661C03F1A000C8B623 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
@@ -550,6 +553,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				102296C21C392B0F001AF5BB /* LineBackgroundView */,
 				102296B31C38D343001AF5BB /* CHTCollectionViewWaterfallLayout */,
 				1022969D1C38CF79001AF5BB /* CreateModel */,
 				106CF09E1C376E080006419B /* HexColor */,
@@ -712,6 +716,15 @@
 				102296AE1C38D122001AF5BB /* WaterfallPictureModel.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		102296C21C392B0F001AF5BB /* LineBackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				102296C31C392B1F001AF5BB /* LineBackgroundView.h */,
+				102296C41C392B1F001AF5BB /* LineBackgroundView.m */,
+			);
+			name = LineBackgroundView;
 			sourceTree = "<group>";
 		};
 		103088611C03F15600C8B623 /* CircleAnimationViewController */ = {
@@ -1466,6 +1479,7 @@
 				10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */,
 				104F0D311BFC1C9C00C46E6A /* StringAttribute.m in Sources */,
 				104F0D051BFAFB4200C46E6A /* GradientColor.m in Sources */,
+				102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */,
 				104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */,
 				10381FD11BF9D2C600E5E476 /* StrokeCircleLayerConfigure.m in Sources */,
 				109F66621C38CC7A0082BC95 /* WaterfallLayoutController.m in Sources */,

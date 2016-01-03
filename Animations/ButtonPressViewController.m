@@ -12,6 +12,7 @@
 #import "StrokeCircleLayerConfigure.h"
 #import "FillCircleLayerConfigure.h"
 #import "UIView+SetRect.h"
+#import "UIFont+Fonts.h"
 
 @interface ButtonPressViewController ()
 

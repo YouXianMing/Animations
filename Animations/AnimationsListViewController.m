@@ -11,6 +11,7 @@
 #import "UIView+SetRect.h"
 #import "UIView+GlowView.h"
 #import "ListItemCell.h"
+#import "LineBackgroundView.h"
 #import "Item.h"
 #import "GCD.h"
 
@@ -63,6 +64,12 @@
 }
 
 - (void)configureTitleView {
+    
+    LineBackgroundView *lineBackgroundView = [LineBackgroundView createViewWithFrame:CGRectMake(0, 0, self.width, 64)
+                                                                           LineWidth:4
+                                                                             lineGap:4
+                                                                           lineColor:[[UIColor blackColor] colorWithAlphaComponent:0.015]];
+    [self.titleView addSubview:lineBackgroundView];
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
