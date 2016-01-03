@@ -46,6 +46,8 @@
 
 ![demo22.gif](http://images2015.cnblogs.com/blog/607542/201601/607542-20160102110021729-1599402504.gif)
 
+![demo23.gif](http://images2015.cnblogs.com/blog/607542/201601/607542-20160103134335370-824027957.gif)
+
 > 部分参考代码
 
 [https://github.com/schneiderandre/popping](https://github.com/schneiderandre/popping)
@@ -53,3 +55,5 @@
 [https://github.com/facebook/Shimmer](https://github.com/facebook/Shimmer)
 
 [https://github.com/moqod/iOS-Scratch-n-See](https://github.com/moqod/iOS-Scratch-n-See)
+
+[https://github.com/chiahsien/CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout)
