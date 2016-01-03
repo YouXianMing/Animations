@@ -36,6 +36,7 @@
 #import "LiveImageViewController.h"
 #import "SDWebImageController.h"
 #import "AlertViewController.h"
+#import "WaterfallLayoutController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -129,7 +130,8 @@
                    [Item itemWithName:@"刮奖效果" object:[ScratchImageViewController class]],
                    [Item itemWithName:@"图片切换效果" object:[LiveImageViewController class]],
                    [Item itemWithName:@"SDWebImage加载图片" object:[SDWebImageController class]],
-                   [Item itemWithName:@"抽象的AlertView" object:[AlertViewController class]]];
+                   [Item itemWithName:@"抽象的AlertView" object:[AlertViewController class]],
+                   [Item itemWithName:@"瀑布流效果" object:[WaterfallLayoutController class]]];
 }
 
 #pragma mark - tableView 相关

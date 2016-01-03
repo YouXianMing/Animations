@@ -52,7 +52,7 @@
                                     
                                     self.iconImageView.alpha = 0.f;
                                     self.iconImageView.image = image;
-                                    self.iconImageView.scale = 2.f;
+                                    self.iconImageView.scale = 0.8f;
                                     
                                     // 执行动画
                                     [UIView animateWithDuration:0.5f animations:^{
