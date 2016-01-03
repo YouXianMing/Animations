@@ -35,8 +35,8 @@
         _showImageView.clipsToBounds    = YES;
         
         [self addSubview:_showImageView];
-//        self.layer.borderWidth = 3.f;
-//        self.layer.borderColor = [UIColor whiteColor].CGColor;
+        self.layer.borderWidth = 2.f;
+        self.layer.borderColor = [UIColor whiteColor].CGColor;
     }
     
     return self;
