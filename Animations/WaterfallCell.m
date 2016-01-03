@@ -10,6 +10,7 @@
 #import "UIImageView+WebCache.h"
 #import "WaterfallPictureModel.h"
 #import "UIView+AnimationProperty.h"
+#import "UIView+SetRect.h"
 
 @interface WaterfallCell ()
 
@@ -23,7 +24,6 @@
     
     if (self = [super initWithFrame:frame]) {
         
-        // Scale the imageview to fit inside the contentView with the image centered:
         CGRect imageViewFrame = CGRectMake(0.f, 0.f,
                                            CGRectGetMaxX(self.contentView.bounds),
                                            CGRectGetMaxY(self.contentView.bounds));
@@ -46,10 +46,7 @@
 
     WaterfallPictureModel *model = self.data;    
     
-    // 进行图片下载
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    
-    // 加载图片(动画逻辑)
     [manager downloadImageWithURL:[NSURL URLWithString:model.isrc] options:0 progress:nil
                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                             

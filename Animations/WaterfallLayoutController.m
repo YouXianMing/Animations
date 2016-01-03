@@ -106,23 +106,18 @@ static NSString *footerIdentifier = @"WaterfallFooter";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    // 数据源
     return [_dataSource count];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     
-    // 1个区
     return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    // 注册collectionViewCell
-    WaterfallCell *cell = (WaterfallCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier 
-                                                                                     forIndexPath:indexPath];
-    
-    cell.data = _dataSource[indexPath.row];
+    WaterfallCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    cell.data           = _dataSource[indexPath.row];
     [cell loadContent];
     
     return cell;
@@ -147,7 +142,8 @@ static NSString *footerIdentifier = @"WaterfallFooter";
                                                                  forIndexPath:indexPath];
     }
     
-    return reusableView;}
+    return reusableView;
+}
 
 #pragma mark - CHTCollectionViewDelegateWaterfallLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView
@@ -155,6 +151,7 @@ static NSString *footerIdentifier = @"WaterfallFooter";
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     WaterfallPictureModel *pictureModel = _dataSource[indexPath.row];
+    
     return CGSizeMake(pictureModel.iwd.floatValue, pictureModel.iht.floatValue);
 }
 
