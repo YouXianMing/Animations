@@ -50,6 +50,10 @@
 		102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296BD1C38D420001AF5BB /* WaterfallHeaderView.m */; };
 		102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296C01C38D65F001AF5BB /* WaterfallFooterView.m */; };
 		102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296C41C392B1F001AF5BB /* LineBackgroundView.m */; };
+		102B84D31C3B925B001699A9 /* MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84D21C3B925B001699A9 /* MD5.m */; };
+		102B84D91C3B9424001699A9 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84D81C3B9424001699A9 /* NSString+MD5.m */; };
+		102B84E01C3B95F0001699A9 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84DD1C3B95F0001699A9 /* File.m */; };
+		102B84E11C3B95F0001699A9 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84DF1C3B95F0001699A9 /* FileManager.m */; };
 		103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088631C03F18700C8B623 /* CircleAnimationViewController.m */; };
 		1030886A1C03F1A000C8B623 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 103088661C03F1A000C8B623 /* easing.c */; };
 		1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088691C03F1A000C8B623 /* YXEasing.m */; };
@@ -255,6 +259,14 @@
 		102296C01C38D65F001AF5BB /* WaterfallFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallFooterView.m; sourceTree = "<group>"; };
 		102296C31C392B1F001AF5BB /* LineBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineBackgroundView.h; sourceTree = "<group>"; };
 		102296C41C392B1F001AF5BB /* LineBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBackgroundView.m; sourceTree = "<group>"; };
+		102B84D11C3B925B001699A9 /* MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
+		102B84D21C3B925B001699A9 /* MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5.m; sourceTree = "<group>"; };
+		102B84D71C3B9424001699A9 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		102B84D81C3B9424001699A9 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		102B84DC1C3B95F0001699A9 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
+		102B84DD1C3B95F0001699A9 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = File.m; sourceTree = "<group>"; };
+		102B84DE1C3B95F0001699A9 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		102B84DF1C3B95F0001699A9 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		103088621C03F18700C8B623 /* CircleAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleAnimationViewController.h; sourceTree = "<group>"; };
 		103088631C03F18700C8B623 /* CircleAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleAnimationViewController.m; sourceTree = "<group>"; };
 		103088661C03F1A000C8B623 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
@@ -550,6 +562,8 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				102B84DB1C3B95E8001699A9 /* FileManager */,
+				102B84DA1C3B9521001699A9 /* MD5 */,
 				102296C21C392B0F001AF5BB /* LineBackgroundView */,
 				102296B31C38D343001AF5BB /* CHTCollectionViewWaterfallLayout */,
 				1022969D1C38CF79001AF5BB /* CreateModel */,
@@ -731,6 +745,28 @@
 				B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */,
 			);
 			name = CustomHeaderFooterView;
+			sourceTree = "<group>";
+		};
+		102B84DA1C3B9521001699A9 /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				102B84D11C3B925B001699A9 /* MD5.h */,
+				102B84D21C3B925B001699A9 /* MD5.m */,
+				102B84D71C3B9424001699A9 /* NSString+MD5.h */,
+				102B84D81C3B9424001699A9 /* NSString+MD5.m */,
+			);
+			name = MD5;
+			sourceTree = "<group>";
+		};
+		102B84DB1C3B95E8001699A9 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				102B84DC1C3B95F0001699A9 /* File.h */,
+				102B84DD1C3B95F0001699A9 /* File.m */,
+				102B84DE1C3B95F0001699A9 /* FileManager.h */,
+				102B84DF1C3B95F0001699A9 /* FileManager.m */,
+			);
+			name = FileManager;
 			sourceTree = "<group>";
 		};
 		103088611C03F15600C8B623 /* CircleAnimationViewController */ = {
@@ -1464,6 +1500,7 @@
 				10CEC5861C21321800B0CA7D /* NormalTitleViewController.m in Sources */,
 				10381FB91BF9B55B00E5E476 /* POPCustomAnimation.mm in Sources */,
 				B5D011941C0BE2410075BC2E /* RotateView.m in Sources */,
+				102B84E11C3B95F0001699A9 /* FileManager.m in Sources */,
 				108A99381C0FE01100B693F6 /* RotateAnimationView.m in Sources */,
 				B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */,
 				1017F1291C356EE700E245F8 /* UIImage+WebP.m in Sources */,
@@ -1542,6 +1579,7 @@
 				10381FC11BF9B55B00E5E476 /* TransformationMatrix.cpp in Sources */,
 				108A993C1C0FE34800B693F6 /* EasingRotateAnimationType.m in Sources */,
 				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
+				102B84D31C3B925B001699A9 /* MD5.m in Sources */,
 				102296B11C38D122001AF5BB /* ResponseData.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */,
@@ -1558,6 +1596,7 @@
 				1017F1221C356EE700E245F8 /* SDWebImageDownloader.m in Sources */,
 				1017F1391C35715400E245F8 /* NSArray+JSONData.m in Sources */,
 				102296921C38CF71001AF5BB /* NodeModel.m in Sources */,
+				102B84D91C3B9424001699A9 /* NSString+MD5.m in Sources */,
 				10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */,
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
 				1017F11E1C356EE700E245F8 /* NSData+ImageContentType.m in Sources */,
@@ -1581,6 +1620,7 @@
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
 				102296941C38CF71001AF5BB /* NodeModelRootNavigationController.m in Sources */,
 				107CF3991C2FFD51002DF93C /* LiveImageView.m in Sources */,
+				102B84E01C3B95F0001699A9 /* File.m in Sources */,
 				1017F13B1C35715400E245F8 /* NSString+JSONData.m in Sources */,
 				104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */,
 				108A99C31C1125B500B693F6 /* SlideAnimationCell.m in Sources */,

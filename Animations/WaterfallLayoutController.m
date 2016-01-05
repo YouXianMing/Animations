@@ -14,6 +14,8 @@
 #import "WaterfallCell.h"
 #import "WaterfallHeaderView.h"
 #import "WaterfallFooterView.h"
+#import "NSString+MD5.h"
+#import "FileManager.h"
 
 static NSString *picturesSouce    = @"http://www.duitang.com/album/1733789/masn/p/0/50/";
 static NSString *cellIdentifier   = @"WaterfallCell";
@@ -74,7 +76,20 @@ static NSString *footerIdentifier = @"WaterfallFooter";
     // 获取数据
     [GCDQueue executeInGlobalQueue:^{
         
-        NSData       *data    = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:picturesSouce]];
+        NSString *string       = [picturesSouce lowerMD532BitString];
+        NSString *realFilePath = [FileManager theRealFilePath:[NSString stringWithFormat:@"~/Documents/%@", string]];
+        NSData   *data         = nil;
+
+        if ([FileManager fileExistWithRealFilePath:realFilePath] == NO) {
+            
+            data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:picturesSouce]];
+            [data writeToFile:realFilePath atomically:YES];
+            
+        } else {
+        
+            data = [NSData dataWithContentsOfFile:realFilePath];
+        }
+        
         NSDictionary *dataDic = [data toListProperty];
         
         [GCDQueue executeInMainQueue:^{
