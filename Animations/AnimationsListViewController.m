@@ -41,10 +41,10 @@
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic)         BOOL         tableViewLoadData;
+@property (nonatomic, strong) UITableView     *tableView;
+@property (nonatomic)         BOOL             tableViewLoadData;
 
-@property (nonatomic, strong) NSArray     *items;
+@property (nonatomic, strong) NSMutableArray  *items;
 
 @end
 
@@ -94,7 +94,7 @@
     UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, self.width, 0.5f)];
     line.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.25f];
     [titleView addSubview:line];
-
+    
     // Start glow.
     headlinelabel.glowRadius            = @(2.f);
     headlinelabel.glowOpacity           = @(1.f);
@@ -109,36 +109,47 @@
     
     [GCDQueue executeInMainQueue:^{
         
-            [headlinelabel startGlowLoop];
+        [headlinelabel startGlowLoop];
         
     } afterDelaySecs:2.f];
 }
 
 - (void)configureDataSource {
-
-    self.items = @[[Item itemWithName:@"POP-按钮动画" object:[ButtonPressViewController class]],
-                   [Item itemWithName:@"POP-Stroke动画" object:[PopStrokeController class]],
-                   [Item itemWithName:@"CAShapeLayer的path动画" object:[CAShapeLayerPathController class]],
-                   [Item itemWithName:@"图片碎片化mask动画" object:[TransformFadeViewController class]],
-                   [Item itemWithName:@"POP-数值动画" object:[PopNumberController class]],
-                   [Item itemWithName:@"Easing-圆环动画" object:[CircleAnimationViewController class]],
-                   [Item itemWithName:@"UIScrollView视差效果动画" object:[ScrollImageViewController class]],
-                   [Item itemWithName:@"UIScrollView视差模糊效果" object:[ScrollBlurImageViewController class]],
-                   [Item itemWithName:@"UITableView状态切换效果" object:[TableViewTapAnimationController class]],
-                   [Item itemWithName:@"POP-Spring动画参数详解" object:[POPSpringParameterController class]],
-                   [Item itemWithName:@"UITableView展开缩放动画" object:[HeaderViewTapAnimationController class]],
-                   [Item itemWithName:@"UITableView显示倒计时" object:[CountDownTimerController class]],
-                   [Item itemWithName:@"时钟动画效果" object:[ClockViewController class]],
-//                   [Item itemWithName:@"TableViewCell滑动动画" object:[TableViewCellSlideAnimationController class]],
-                   [Item itemWithName:@"绘制波形图动画" object:[DrawWaveViewController class]],
-                   [Item itemWithName:@"UILabel缩放动画" object:[LabelScaleViewController class]],
-                   [Item itemWithName:@"Facebook辉光动画" object:[ShimmerController class]],
-                   [Item itemWithName:@"粒子动画-雪花" object:[EmitterSnowController class]],
-                   [Item itemWithName:@"刮奖效果" object:[ScratchImageViewController class]],
-                   [Item itemWithName:@"图片切换效果" object:[LiveImageViewController class]],
-                   [Item itemWithName:@"SDWebImage加载图片" object:[SDWebImageController class]],
-                   [Item itemWithName:@"抽象的AlertView" object:[AlertViewController class]],
-                   [Item itemWithName:@"瀑布流效果" object:[WaterfallLayoutController class]]];
+    
+    NSArray *array = @[[Item itemWithName:@"POP-按钮动画" object:[ButtonPressViewController class]],
+                       [Item itemWithName:@"POP-Stroke动画" object:[PopStrokeController class]],
+                       [Item itemWithName:@"CAShapeLayer的path动画" object:[CAShapeLayerPathController class]],
+                       [Item itemWithName:@"图片碎片化mask动画" object:[TransformFadeViewController class]],
+                       [Item itemWithName:@"POP-数值动画" object:[PopNumberController class]],
+                       [Item itemWithName:@"Easing-圆环动画" object:[CircleAnimationViewController class]],
+                       [Item itemWithName:@"UIScrollView视差效果动画" object:[ScrollImageViewController class]],
+                       [Item itemWithName:@"UIScrollView视差模糊效果" object:[ScrollBlurImageViewController class]],
+                       [Item itemWithName:@"UITableView状态切换效果" object:[TableViewTapAnimationController class]],
+                       [Item itemWithName:@"POP-Spring动画参数详解" object:[POPSpringParameterController class]],
+                       [Item itemWithName:@"UITableView展开缩放动画" object:[HeaderViewTapAnimationController class]],
+                       [Item itemWithName:@"UITableView显示倒计时" object:[CountDownTimerController class]],
+                       [Item itemWithName:@"时钟动画效果" object:[ClockViewController class]],
+                       //                   [Item itemWithName:@"TableViewCell滑动动画" object:[TableViewCellSlideAnimationController class]],
+                       [Item itemWithName:@"绘制波形图动画" object:[DrawWaveViewController class]],
+                       [Item itemWithName:@"UILabel缩放动画" object:[LabelScaleViewController class]],
+                       [Item itemWithName:@"Facebook辉光动画" object:[ShimmerController class]],
+                       [Item itemWithName:@"粒子动画-雪花" object:[EmitterSnowController class]],
+                       [Item itemWithName:@"刮奖效果" object:[ScratchImageViewController class]],
+                       [Item itemWithName:@"图片切换效果" object:[LiveImageViewController class]],
+                       [Item itemWithName:@"SDWebImage加载图片" object:[SDWebImageController class]],
+                       [Item itemWithName:@"抽象的AlertView" object:[AlertViewController class]],
+                       [Item itemWithName:@"瀑布流效果" object:[WaterfallLayoutController class]]];
+    
+    self.items = [NSMutableArray array];
+    
+    for (int i = 0; i < array.count; i++) {
+    
+        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:listItemCellString
+                                                                                          data:array[i]
+                                                                                    cellHeight:0
+                                                                                      cellType:0];
+        [self.items addObject:dataAdapter];
+    }
 }
 
 #pragma mark - tableView 相关
@@ -154,7 +165,7 @@
     [self.contentView addSubview:self.tableView];
     
     [GCDQueue executeInMainQueue:^{
-
+        
         // Load data.
         NSMutableArray *indexPaths = [NSMutableArray array];
         for (int i = 0; i < self.items.count; i++) {
@@ -164,27 +175,30 @@
         
         self.tableViewLoadData = YES;
         [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-
+        
     } afterDelaySecs:0.25f];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     if (self.tableViewLoadData == NO) {
         
         return 0;
         
     } else {
-    
+        
         return self.items.count;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    ListItemCell *cell = [tableView dequeueReusableCellWithIdentifier:listItemCellString];
+    
+    CellDataAdapter *dataAdapter = self.items[indexPath.row];
+    
+    CustomAdapterTypeCell *cell   = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
     cell.indexPath     = indexPath;
-    cell.data          = self.items[indexPath.row];
+    cell.dataAdapter   = dataAdapter;
+    
     [cell loadContent];
     
     return cell;
@@ -192,22 +206,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    Item             *item       = self.items[indexPath.row];
-    UIViewController *controller = [item.object new];
-    controller.title             = item.name;
+    CellDataAdapter  *dataAdapter = self.items[indexPath.row];
+    Item             *item        = dataAdapter.data;
+    UIViewController *controller  = [item.object new];
+    controller.title              = item.name;
     
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-#pragma mark - 
+#pragma mark -
 - (void)viewDidAppear:(BOOL)animated {
-
+    
     [super viewDidAppear:animated];
     self.enableInteractivePopGestureRecognizer = NO;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-
+    
     [super viewDidDisappear:animated];
     self.enableInteractivePopGestureRecognizer = YES;
 }

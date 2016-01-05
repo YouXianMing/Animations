@@ -49,7 +49,7 @@
 
 - (void)loadContent {
 
-    TimeModel *model         = self.data;
+    TimeModel *model         = self.dataAdapter.data;
     self.titleLabel.text     = model.title;
     self.countdownLabel.text = [model currentTimeString];
 }

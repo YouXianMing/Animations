@@ -1,15 +1,16 @@
 //
-//  CustomCell.h
+//  CustomAdapterTypeCell.h
 //  Animations
 //
-//  Created by YouXianMing on 16/1/5.
-//  Copyright © 2016年 YouXianMing. All rights reserved.
+//  Created by YouXianMing on 15/11/27.
+//  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-@class CustomCell;
+#import "CellDataAdapter.h"
+@class CustomAdapterTypeCell;
 
-@protocol CustomCellDelegate <NSObject>
+@protocol CustomAdapterTypeCellDelegate <NSObject>
 
 @optional
 
@@ -19,23 +20,23 @@
  *  @param cell  CustomAdapterTypeCell type class.
  *  @param event Event data.
  */
-- (void)customCell:(CustomCell *)cell event:(id)event;
+- (void)sustomAdapterTypeCell:(CustomAdapterTypeCell *)cell event:(id)event;
 
 @end
 
-@interface CustomCell : UITableViewCell
+@interface CustomAdapterTypeCell : UITableViewCell
 
 #pragma mark - Propeties.
 
 /**
  *  CustomCell's delegate.
  */
-@property (nonatomic, weak) id <CustomCellDelegate>  delegate;
+@property (nonatomic, weak) id <CustomAdapterTypeCellDelegate>  delegate;
 
 /**
  *  CustomCell's data.
  */
-@property (nonatomic, weak) id                       data;
+@property (nonatomic, weak) CellDataAdapter         *dataAdapter;
 
 /**
  *  CustomCell's indexPath.
@@ -73,6 +74,5 @@
  *  Load content, override by subclass.
  */
 - (void)loadContent;
-
 
 @end

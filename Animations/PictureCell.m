@@ -33,7 +33,7 @@
 - (void)loadContent {
 
     // 图片模型
-    PictureModel *model = self.data;
+    PictureModel *model = self.dataAdapter.data;
     
     // 进行图片下载
     SDWebImageManager *manager = [SDWebImageManager sharedManager];

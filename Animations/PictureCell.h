@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomCell.h"
+#import "CustomAdapterTypeCell.h"
 
-@interface PictureCell : CustomCell
+@interface PictureCell : CustomAdapterTypeCell
 
 @end

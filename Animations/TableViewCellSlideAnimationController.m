@@ -13,8 +13,8 @@
 
 @interface TableViewCellSlideAnimationController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray     *dataSource;
+@property (nonatomic, strong) UITableView     *tableView;
+@property (nonatomic, strong) NSMutableArray  *dataSource;
 
 @end
 
@@ -30,11 +30,20 @@
     [super setup];
     
     // 数据源
-    self.dataSource = @[@"YouXianMing",   @"Google",
-                        @"iOS Developer", @"YouTube",
-                        @"UI Delveloper", @"PS4 Player",
-                        @"3DS Player",    @"NDS Player",
-                        @"PSP Player",    @"GBA Player"];
+    self.dataSource = [NSMutableArray array];
+    
+    NSArray *datas = @[@"YouXianMing",   @"Google",
+                       @"iOS Developer", @"YouTube",
+                       @"UI Delveloper", @"PS4 Player",
+                       @"3DS Player",    @"NDS Player",
+                       @"PSP Player",    @"GBA Player"];
+    
+    for (int i = 0; i < datas.count; i++) {
+        
+        CellDataAdapter *adapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:DATA_CELL data:datas[i]
+                                                                                cellHeight:0 cellType:0];
+        [self.dataSource addObject:adapter];
+    }
     
     // 初始化tableView
     self.tableView                = [[UITableView alloc] initWithFrame:self.contentView.bounds];
@@ -60,9 +69,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:DATA_CELL];
+    CustomAdapterTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:DATA_CELL];
     cell.indexPath   = indexPath;
-    cell.data        = self.dataSource[indexPath.row];
+    cell.dataAdapter = self.dataSource[indexPath.row];
     [cell loadContent];
     
     return cell;

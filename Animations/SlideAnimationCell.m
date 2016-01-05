@@ -78,7 +78,7 @@
 
 - (void)loadContent {
 
-    NSString *showString = self.data;
+    NSString *showString = self.dataAdapter.data;
     self.label.text      = showString;
 }
 

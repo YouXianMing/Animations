@@ -6,11 +6,11 @@
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomCell.h"
+#import "CustomAdapterTypeCell.h"
 
 #define  DATA_CELL    @"DataCell"
 #define  CELL_HEIGHT  (56.8f * 2)
 
-@interface SlideAnimationCell : CustomCell
+@interface SlideAnimationCell : CustomAdapterTypeCell
 
 @end

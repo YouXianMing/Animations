@@ -42,7 +42,11 @@ static NSString  *pictureCellFlag = @"PictureCell";
     self.modelsArray = [NSMutableArray array];
     for (int count = 0; count < picsArray.count; count++) {
         
-        [_modelsArray addObject:[PictureModel pictureModelWithPictureUrl:[NSURL URLWithString:picsArray[count]] haveAnimated:NO]];
+        NSURL           *url         = [NSURL URLWithString:picsArray[count]];
+        PictureModel    *model       = [PictureModel pictureModelWithPictureUrl:url haveAnimated:NO];
+        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:pictureCellFlag
+                                                                                          data:model cellHeight:0 cellType:0];
+        [_modelsArray addObject:dataAdapter];
     }
     
     // 初始化tableView
@@ -64,7 +68,7 @@ static NSString  *pictureCellFlag = @"PictureCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     PictureCell *cell = [tableView dequeueReusableCellWithIdentifier:pictureCellFlag];
-    cell.data         = _modelsArray[indexPath.row];
+    cell.dataAdapter  = _modelsArray[indexPath.row];
     [cell loadContent];
     
     return cell;

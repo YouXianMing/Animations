@@ -6,10 +6,10 @@
 //  Copyright © 2015年 ZiPeiYi. All rights reserved.
 //
 
-#import "CustomCell.h"
+#import "CustomAdapterTypeCell.h"
 
 static NSString *listItemCellString = @"ListItemCell";
 
-@interface ListItemCell : CustomCell
+@interface ListItemCell : CustomAdapterTypeCell
 
 @end

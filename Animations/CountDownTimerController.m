@@ -16,9 +16,9 @@
 
 @interface CountDownTimerController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSArray      *timesArray;
-@property (nonatomic, strong) UITableView  *tableView;
-@property (nonatomic, strong) NSTimer      *timer;
+@property (nonatomic, strong) NSMutableArray  *timesArray;
+@property (nonatomic, strong) UITableView     *tableView;
+@property (nonatomic, strong) NSTimer         *timer;
 
 @end
 
@@ -42,7 +42,8 @@
 
 - (void)createDataSource {
     
-    self.timesArray = @[TIME_MODEL(@"YouXianMing", 20034),
+    self.timesArray = [NSMutableArray array];
+    NSArray *array  = @[TIME_MODEL(@"YouXianMing", 20034),
                         TIME_MODEL(@"Aaron"      , 31),
                         TIME_MODEL(@"Nicholas"   , 1003),
                         TIME_MODEL(@"Nathaniel"  , 8089),
@@ -52,7 +53,16 @@
                         TIME_MODEL(@"Shanon"     , 4649),
                         TIME_MODEL(@"Sophie"     , 3454),
                         TIME_MODEL(@"Steven"     , 54524),
-                        TIME_MODEL(@"Saadiya"    , 235),];
+                        TIME_MODEL(@"Saadiya"    , 235)];
+    
+    for (int i = 0; i < array.count; i++) {
+        
+        CellDataAdapter *adapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:FLAG_CountDownTimeCell
+                                                                                      data:array[i]
+                                                                                cellHeight:0
+                                                                                  cellType:0];
+        [self.timesArray addObject:adapter];
+    }
 }
 
 - (void)createTableView {
@@ -77,7 +87,9 @@
     
     for (int count = 0; count < _timesArray.count; count++) {
         
-        TimeModel *model = _timesArray[count];
+        CellDataAdapter *adapter = _timesArray[count];
+        TimeModel       *model   = adapter.data;
+        
         [model countDown];
     }
     
@@ -93,8 +105,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:FLAG_CountDownTimeCell];
-    cell.data        = self.timesArray[indexPath.row];
+    CellDataAdapter *adapter = self.timesArray[indexPath.row];
+    
+    CustomAdapterTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
+    cell.dataAdapter = adapter;
     cell.indexPath   = indexPath;
     [cell loadContent];
     
@@ -103,14 +117,14 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CustomCell *tmpCell = (CustomCell *)cell;
+    CustomAdapterTypeCell *tmpCell = (CustomAdapterTypeCell *)cell;
     tmpCell.display     = YES;
     [tmpCell loadContent];
 }
 
 - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath {
     
-    CustomCell *tmpCell = (CustomCell *)cell;
+    CustomAdapterTypeCell *tmpCell = (CustomAdapterTypeCell *)cell;
     tmpCell.display     = NO;
 }
 

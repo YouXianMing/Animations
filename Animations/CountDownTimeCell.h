@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomCell.h"
+#import "CustomAdapterTypeCell.h"
 
 #define   NOTI_CountDownTimeCell   @"NOTI_CountDownTimeCell"
 
-@interface CountDownTimeCell : CustomCell
+@interface CountDownTimeCell : CustomAdapterTypeCell
 
 @end

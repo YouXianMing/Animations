@@ -42,9 +42,9 @@
 
 - (void)loadContent {
     
-    if (self.data) {
+    if (self.dataAdapter.data) {
         
-        Item *item              = self.data;
+        Item *item              = self.dataAdapter.data;
         self.titlelabel.text    = item.name;
         self.subTitleLabel.text = [NSString stringWithFormat:@"%@", item.object];
     }

@@ -150,7 +150,7 @@
 
 - (void)loadContent {
 
-    TapAnimationModel *model = self.data;
+    TapAnimationModel *model = self.dataAdapter.data;
     self.name.text           = model.name;
 }
 
@@ -158,7 +158,7 @@
 
     if (animated == NO) {
         
-        TapAnimationModel *model = self.data;
+        TapAnimationModel *model = self.dataAdapter.data;
         
         if (model.selected == NO) {
             
@@ -171,7 +171,7 @@
         
     } else {
     
-        TapAnimationModel *model = self.data;
+        TapAnimationModel *model = self.dataAdapter.data;
         if (model.selected == NO) {
             
             model.selected = YES;

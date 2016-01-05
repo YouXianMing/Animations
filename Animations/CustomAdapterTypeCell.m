@@ -1,19 +1,19 @@
 //
-//  CustomCell.m
+//  CustomAdapterTypeCell.m
 //  Animations
 //
-//  Created by YouXianMing on 16/1/5.
-//  Copyright © 2016年 YouXianMing. All rights reserved.
+//  Created by YouXianMing on 15/11/27.
+//  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomCell.h"
+#import "CustomAdapterTypeCell.h"
 
-@implementation CustomCell
+@implementation CustomAdapterTypeCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    
+
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
+
         [self setupCell];
         
         [self buildSubview];
@@ -23,15 +23,15 @@
 }
 
 - (void)setupCell {
-    
+
 }
 
 - (void)buildSubview {
-    
+
 }
 
 - (void)loadContent {
-    
+
 }
 
 @end

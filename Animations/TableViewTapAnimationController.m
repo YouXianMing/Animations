@@ -13,8 +13,8 @@
 
 @interface TableViewTapAnimationController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView   *tableView;
-@property (nonatomic, strong) NSArray       *dataArray;
+@property (nonatomic, strong) UITableView     *tableView;
+@property (nonatomic, strong) NSMutableArray  *dataArray;
 
 @end
 
@@ -30,9 +30,19 @@
     [super setup];
     
     // Init dataArray.
-    _dataArray = @[[TapAnimationModel modelWithName:@"YouXianMing" selected:YES],
-                   [TapAnimationModel modelWithName:@"NoZuoNoDie" selected:NO],
-                   [TapAnimationModel modelWithName:@"Animations" selected:NO]];
+    self.dataArray = [NSMutableArray array];
+    NSArray *array = @[[TapAnimationModel modelWithName:@"YouXianMing" selected:YES],
+                       [TapAnimationModel modelWithName:@"NoZuoNoDie" selected:NO],
+                       [TapAnimationModel modelWithName:@"Animations" selected:NO]];
+    
+    for (int i = 0; i < array.count; i++) {
+        
+        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"TableViewTapAnimationCell"
+                                                                                          data:array[i]
+                                                                                    cellHeight:80
+                                                                                      cellType:0];
+        [self.dataArray addObject:dataAdapter];
+    }
     
     // Init TableView.
     self.tableView                = [[UITableView alloc] initWithFrame:self.contentView.bounds
@@ -52,8 +62,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    TableViewTapAnimationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewTapAnimationCell"];
-    cell.data                       = _dataArray[indexPath.row];
+    CellDataAdapter *dataAdapter = _dataArray[indexPath.row];
+    
+    TableViewTapAnimationCell *cell = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
+    cell.dataAdapter                = dataAdapter;
     [cell loadContent];
     [cell changeStateAnimated:NO];
     
@@ -70,7 +82,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 80.f;
+    CellDataAdapter *dataAdapter = _dataArray[indexPath.row];
+    
+    return dataAdapter.cellHeight;
 }
 
 @end
