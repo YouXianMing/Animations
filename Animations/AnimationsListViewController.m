@@ -38,6 +38,7 @@
 #import "SDWebImageController.h"
 #import "AlertViewController.h"
 #import "WaterfallLayoutController.h"
+#import "MixedColorProgressViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -138,7 +139,8 @@
                        [Item itemWithName:@"图片切换效果" object:[LiveImageViewController class]],
                        [Item itemWithName:@"SDWebImage加载图片" object:[SDWebImageController class]],
                        [Item itemWithName:@"抽象的AlertView" object:[AlertViewController class]],
-                       [Item itemWithName:@"瀑布流效果" object:[WaterfallLayoutController class]]];
+                       [Item itemWithName:@"瀑布流效果" object:[WaterfallLayoutController class]],
+                       [Item itemWithName:@"UILabel混色显示" object:[MixedColorProgressViewController class]]];
     
     self.items = [NSMutableArray array];
     

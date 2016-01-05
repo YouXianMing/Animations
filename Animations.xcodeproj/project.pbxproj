@@ -56,6 +56,7 @@
 		102B84E11C3B95F0001699A9 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84DF1C3B95F0001699A9 /* FileManager.m */; };
 		102B84EF1C3BCAD0001699A9 /* CellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84EE1C3BCAD0001699A9 /* CellDataAdapter.m */; };
 		102ED8761C3BFCCC00E9863E /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102ED8751C3BFCCC00E9863E /* CustomCell.m */; };
+		102ED87A1C3C005800E9863E /* MixedColorProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102ED8791C3C005800E9863E /* MixedColorProgressViewController.m */; };
 		103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088631C03F18700C8B623 /* CircleAnimationViewController.m */; };
 		1030886A1C03F1A000C8B623 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 103088661C03F1A000C8B623 /* easing.c */; };
 		1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088691C03F1A000C8B623 /* YXEasing.m */; };
@@ -273,6 +274,8 @@
 		102B84EE1C3BCAD0001699A9 /* CellDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellDataAdapter.m; sourceTree = "<group>"; };
 		102ED8741C3BFCCC00E9863E /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		102ED8751C3BFCCC00E9863E /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		102ED8781C3C005800E9863E /* MixedColorProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixedColorProgressViewController.h; sourceTree = "<group>"; };
+		102ED8791C3C005800E9863E /* MixedColorProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixedColorProgressViewController.m; sourceTree = "<group>"; };
 		103088621C03F18700C8B623 /* CircleAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleAnimationViewController.h; sourceTree = "<group>"; };
 		103088631C03F18700C8B623 /* CircleAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleAnimationViewController.m; sourceTree = "<group>"; };
 		103088661C03F1A000C8B623 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
@@ -784,6 +787,15 @@
 			name = CellDataAdapter;
 			sourceTree = "<group>";
 		};
+		102ED87B1C3C02A800E9863E /* MixedColorProgressViewController */ = {
+			isa = PBXGroup;
+			children = (
+				102ED8781C3C005800E9863E /* MixedColorProgressViewController.h */,
+				102ED8791C3C005800E9863E /* MixedColorProgressViewController.m */,
+			);
+			name = MixedColorProgressViewController;
+			sourceTree = "<group>";
+		};
 		103088611C03F15600C8B623 /* CircleAnimationViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1055,6 +1067,7 @@
 				104228CA1C369BB80011409C /* SDWebImageController */,
 				106CF0931C37640D0006419B /* AlertViewController */,
 				102296B71C38D382001AF5BB /* WaterfallLayoutController */,
+				102ED87B1C3C02A800E9863E /* MixedColorProgressViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1669,6 +1682,7 @@
 				104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */,
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
 				109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */,
+				102ED87A1C3C005800E9863E /* MixedColorProgressViewController.m in Sources */,
 				105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */,
 				104228C61C3695230011409C /* PictureModel.m in Sources */,
 				1030886E1C03F1B200C8B623 /* CircleView.m in Sources */,
