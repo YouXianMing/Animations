@@ -16,7 +16,7 @@
 /**
  *  CustomCell's event.
  *
- *  @param cell  CustomAdapterTypeCell type class.
+ *  @param cell  CustomCell type class.
  *  @param event Event data.
  */
 - (void)customCell:(CustomCell *)cell event:(id)event;

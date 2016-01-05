@@ -20,7 +20,7 @@
  *  @param cell  CustomAdapterTypeCell type class.
  *  @param event Event data.
  */
-- (void)sustomAdapterTypeCell:(CustomAdapterTypeCell *)cell event:(id)event;
+- (void)customAdapterTypeCell:(CustomAdapterTypeCell *)cell event:(id)event;
 
 @end
 
