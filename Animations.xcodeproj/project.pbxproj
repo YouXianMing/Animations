@@ -54,6 +54,7 @@
 		102B84D91C3B9424001699A9 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84D81C3B9424001699A9 /* NSString+MD5.m */; };
 		102B84E01C3B95F0001699A9 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84DD1C3B95F0001699A9 /* File.m */; };
 		102B84E11C3B95F0001699A9 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84DF1C3B95F0001699A9 /* FileManager.m */; };
+		102B84EF1C3BCAD0001699A9 /* CellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84EE1C3BCAD0001699A9 /* CellDataAdapter.m */; };
 		103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088631C03F18700C8B623 /* CircleAnimationViewController.m */; };
 		1030886A1C03F1A000C8B623 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 103088661C03F1A000C8B623 /* easing.c */; };
 		1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088691C03F1A000C8B623 /* YXEasing.m */; };
@@ -267,6 +268,8 @@
 		102B84DD1C3B95F0001699A9 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = File.m; sourceTree = "<group>"; };
 		102B84DE1C3B95F0001699A9 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		102B84DF1C3B95F0001699A9 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		102B84ED1C3BCAD0001699A9 /* CellDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellDataAdapter.h; sourceTree = "<group>"; };
+		102B84EE1C3BCAD0001699A9 /* CellDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellDataAdapter.m; sourceTree = "<group>"; };
 		103088621C03F18700C8B623 /* CircleAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleAnimationViewController.h; sourceTree = "<group>"; };
 		103088631C03F18700C8B623 /* CircleAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleAnimationViewController.m; sourceTree = "<group>"; };
 		103088661C03F1A000C8B623 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
@@ -769,6 +772,15 @@
 			name = FileManager;
 			sourceTree = "<group>";
 		};
+		102B84EC1C3BCAB4001699A9 /* CellDataAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				102B84ED1C3BCAD0001699A9 /* CellDataAdapter.h */,
+				102B84EE1C3BCAD0001699A9 /* CellDataAdapter.m */,
+			);
+			name = CellDataAdapter;
+			sourceTree = "<group>";
+		};
 		103088611C03F15600C8B623 /* CircleAnimationViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1047,6 +1059,7 @@
 		10381FC81BF9CC3800E5E476 /* AbstractBaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				102B84EC1C3BCAB4001699A9 /* CellDataAdapter */,
 				102296C61C393089001AF5BB /* CustomHeaderFooterView */,
 				105D98A11C07F16700FD1013 /* CustomCell */,
 				10381FC51BF9B8A800E5E476 /* CustomNavigationController */,
@@ -1631,6 +1644,7 @@
 				105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */,
 				105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */,
 				B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */,
+				102B84EF1C3BCAD0001699A9 /* CellDataAdapter.m in Sources */,
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
 				10CEC5891C21345600B0CA7D /* FullTitleVisualEffectViewController.m in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
