@@ -133,7 +133,6 @@
 		106CF0991C3765360006419B /* UIFont+Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0981C3765360006419B /* UIFont+Fonts.m */; };
 		106CF09D1C376DAA0006419B /* ButtonsAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF09C1C376DAA0006419B /* ButtonsAlertView.m */; };
 		106CF0A31C376E190006419B /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0A01C376E190006419B /* HexColors.m */; };
-		106CF0A41C376E190006419B /* NSString+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0A21C376E190006419B /* NSString+HexColors.m */; };
 		107CF3951C2FFC01002DF93C /* LiveImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107CF3941C2FFC01002DF93C /* LiveImageViewController.m */; };
 		107CF3991C2FFD51002DF93C /* LiveImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 107CF3981C2FFD51002DF93C /* LiveImageView.m */; };
 		108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99311C0FD5A800B693F6 /* ClockViewController.m */; };
@@ -442,8 +441,6 @@
 		106CF09C1C376DAA0006419B /* ButtonsAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsAlertView.m; sourceTree = "<group>"; };
 		106CF09F1C376E190006419B /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
 		106CF0A01C376E190006419B /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
-		106CF0A11C376E190006419B /* NSString+HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HexColors.h"; sourceTree = "<group>"; };
-		106CF0A21C376E190006419B /* NSString+HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexColors.m"; sourceTree = "<group>"; };
 		107CF3931C2FFC01002DF93C /* LiveImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveImageViewController.h; sourceTree = "<group>"; };
 		107CF3941C2FFC01002DF93C /* LiveImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveImageViewController.m; sourceTree = "<group>"; };
 		107CF3971C2FFD51002DF93C /* LiveImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveImageView.h; sourceTree = "<group>"; };
@@ -1270,8 +1267,6 @@
 			children = (
 				106CF09F1C376E190006419B /* HexColors.h */,
 				106CF0A01C376E190006419B /* HexColors.m */,
-				106CF0A11C376E190006419B /* NSString+HexColors.h */,
-				106CF0A21C376E190006419B /* NSString+HexColors.m */,
 			);
 			name = HexColor;
 			sourceTree = "<group>";
@@ -1522,7 +1517,6 @@
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
-				106CF0A41C376E190006419B /* NSString+HexColors.m in Sources */,
 				10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */,
 				102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */,
 				10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */,

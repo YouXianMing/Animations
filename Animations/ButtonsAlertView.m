@@ -10,7 +10,7 @@
 #import "UIFont+Fonts.h"
 #import "UIView+SetRect.h"
 #import "POP.h"
-#import "NSString+HexColors.h"
+#import "HexColors.h"
 
 @interface ButtonsAlertView ()
 
@@ -131,7 +131,7 @@
     // 如果有1个按钮
     if (buttonsInfo.count == 1) {
         
-        [self.messageView addSubview:[[self class] lineViewWithFrame:CGRectMake(0, self.messageView.height - 40, self.messageView.width, 0.5f) color:[@"#B9B9B9" hexColor]]];
+        [self.messageView addSubview:[[self class] lineViewWithFrame:CGRectMake(0, self.messageView.height - 40, self.messageView.width, 0.5f) color:[UIColor colorWithHexString:@"#B9B9B9"]]];
         
         self.firstButton.frame = CGRectMake(0, self.messageView.height - 40, self.messageView.width, 40);
         self.firstButton.userInteractionEnabled = NO;
@@ -147,8 +147,8 @@
     // 如果有2个按钮
     if (buttonsInfo.count == 2) {
         
-        [self.messageView addSubview:[[self class] lineViewWithFrame:CGRectMake(0, self.messageView.height - 40, self.messageView.width, 0.5f) color:[@"#B9B9B9" hexColor]]];
-        [self.messageView addSubview:[[self class] lineViewWithFrame:CGRectMake(self.messageView.width / 2.f, self.messageView.height - 40, 0.5f, 40.f) color:[@"#B9B9B9" hexColor]]];
+        [self.messageView addSubview:[[self class] lineViewWithFrame:CGRectMake(0, self.messageView.height - 40, self.messageView.width, 0.5f) color:[UIColor colorWithHexString:@"#B9B9B9"]]];
+        [self.messageView addSubview:[[self class] lineViewWithFrame:CGRectMake(self.messageView.width / 2.f, self.messageView.height - 40, 0.5f, 40.f) color:[UIColor colorWithHexString:@"#B9B9B9"]]];
         
         self.firstButton.frame = CGRectMake(0, self.messageView.height - 40, self.messageView.width / 2.f, 40);
         [self.firstButton setTitle:self.buttonsTitle[0] forState:UIControlStateNormal];
