@@ -31,7 +31,7 @@ typedef enum : NSUInteger {
     
     {
         UIButton *messageButton = [UIButton createButtonWithFrame:CGRectMake(0, 0, 180, 30)
-                                                       buttonType:BUTTON_RED
+                                                       buttonType:kButtonRed
                                                             title:@"MessageAlertView"
                                                               tag:kMessageAlertView
                                                            target:self
@@ -43,7 +43,7 @@ typedef enum : NSUInteger {
     
     {
         UIButton *messageButton = [UIButton createButtonWithFrame:CGRectMake(0, 0, 180, 30)
-                                                       buttonType:BUTTON_RED
+                                                       buttonType:kButtonRed
                                                             title:@"ButtonsAlertView"
                                                               tag:kButtonsAlertView
                                                            target:self

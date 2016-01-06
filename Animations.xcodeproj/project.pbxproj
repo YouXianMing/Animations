@@ -55,6 +55,8 @@
 		102B84E01C3B95F0001699A9 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84DD1C3B95F0001699A9 /* File.m */; };
 		102B84E11C3B95F0001699A9 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84DF1C3B95F0001699A9 /* FileManager.m */; };
 		102B84EF1C3BCAD0001699A9 /* CellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84EE1C3BCAD0001699A9 /* CellDataAdapter.m */; };
+		102B84FC1C3C9F8E001699A9 /* Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84FB1C3C9F8E001699A9 /* Geometry.m */; };
+		102B85001C3C9FBB001699A9 /* NumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B84FF1C3C9FBB001699A9 /* NumberFormatter.m */; };
 		102ED8761C3BFCCC00E9863E /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102ED8751C3BFCCC00E9863E /* CustomCell.m */; };
 		102ED87A1C3C005800E9863E /* MixedColorProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102ED8791C3C005800E9863E /* MixedColorProgressViewController.m */; };
 		103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103088631C03F18700C8B623 /* CircleAnimationViewController.m */; };
@@ -272,6 +274,10 @@
 		102B84DF1C3B95F0001699A9 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		102B84ED1C3BCAD0001699A9 /* CellDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellDataAdapter.h; sourceTree = "<group>"; };
 		102B84EE1C3BCAD0001699A9 /* CellDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellDataAdapter.m; sourceTree = "<group>"; };
+		102B84FA1C3C9F8E001699A9 /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
+		102B84FB1C3C9F8E001699A9 /* Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geometry.m; sourceTree = "<group>"; };
+		102B84FE1C3C9FBB001699A9 /* NumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberFormatter.h; sourceTree = "<group>"; };
+		102B84FF1C3C9FBB001699A9 /* NumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberFormatter.m; sourceTree = "<group>"; };
 		102ED8741C3BFCCC00E9863E /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		102ED8751C3BFCCC00E9863E /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		102ED8781C3C005800E9863E /* MixedColorProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixedColorProgressViewController.h; sourceTree = "<group>"; };
@@ -571,6 +577,8 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				102B85011C3C9FBF001699A9 /* NumberFormatter */,
+				102B84FD1C3C9F91001699A9 /* Geometry */,
 				102B84DB1C3B95E8001699A9 /* FileManager */,
 				102B84DA1C3B9521001699A9 /* MD5 */,
 				102296C21C392B0F001AF5BB /* LineBackgroundView */,
@@ -579,7 +587,6 @@
 				106CF09E1C376E080006419B /* HexColor */,
 				106CF09A1C3765490006419B /* UIFont+Categories */,
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
-				106CF0871C375F010006419B /* AbstractAlertView */,
 				104228CE1C36A24F0011409C /* AnimationProperty */,
 				1017F13D1C35720100E245F8 /* CreateModel */,
 				1017F1301C35714800E245F8 /* JSONKit */,
@@ -787,6 +794,24 @@
 			name = CellDataAdapter;
 			sourceTree = "<group>";
 		};
+		102B84FD1C3C9F91001699A9 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				102B84FA1C3C9F8E001699A9 /* Geometry.h */,
+				102B84FB1C3C9F8E001699A9 /* Geometry.m */,
+			);
+			name = Geometry;
+			sourceTree = "<group>";
+		};
+		102B85011C3C9FBF001699A9 /* NumberFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				102B84FE1C3C9FBB001699A9 /* NumberFormatter.h */,
+				102B84FF1C3C9FBB001699A9 /* NumberFormatter.m */,
+			);
+			name = NumberFormatter;
+			sourceTree = "<group>";
+		};
 		102ED87B1C3C02A800E9863E /* MixedColorProgressViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,6 +929,7 @@
 			children = (
 				10381F531BF9B44A00E5E476 /* AppDelegate.h */,
 				10381F541BF9B44A00E5E476 /* AppDelegate.m */,
+				10381F731BF9B47400E5E476 /* RootController */,
 				10381FC81BF9CC3800E5E476 /* AbstractBaseClass */,
 				10381FC71BF9CC2200E5E476 /* Controllers */,
 				1012C33F1BF9FB3700A1B4E4 /* Tools */,
@@ -925,7 +951,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		10381F731BF9B47400E5E476 /* AnimationListViewController */ = {
+		10381F731BF9B47400E5E476 /* RootController */ = {
 			isa = PBXGroup;
 			children = (
 				10381F691BF9B47000E5E476 /* AnimationsListViewController.h */,
@@ -935,7 +961,7 @@
 				10381F6D1BF9B47000E5E476 /* ListItemCell.h */,
 				10381F6E1BF9B47000E5E476 /* ListItemCell.m */,
 			);
-			name = AnimationListViewController;
+			name = RootController;
 			sourceTree = "<group>";
 		};
 		10381F7B1BF9B55B00E5E476 /* POP */ = {
@@ -1075,11 +1101,11 @@
 		10381FC81BF9CC3800E5E476 /* AbstractBaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				106CF0871C375F010006419B /* AbstractAlertView */,
 				102B84EC1C3BCAB4001699A9 /* CellDataAdapter */,
 				102296C61C393089001AF5BB /* CustomHeaderFooterView */,
 				105D98A11C07F16700FD1013 /* CustomCell */,
 				10381FC51BF9B8A800E5E476 /* CustomNavigationController */,
-				10381F731BF9B47400E5E476 /* AnimationListViewController */,
 			);
 			name = AbstractBaseClass;
 			sourceTree = "<group>";
@@ -1585,6 +1611,7 @@
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
+				102B85001C3C9FBB001699A9 /* NumberFormatter.m in Sources */,
 				10381FE51BF9DE7F00E5E476 /* UIImage+ImageEffects.m in Sources */,
 				102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */,
 				10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */,
@@ -1677,6 +1704,7 @@
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
 				104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */,
 				1022969B1C38CF71001AF5BB /* PropertyInfomation.m in Sources */,
+				102B84FC1C3C9F8E001699A9 /* Geometry.m in Sources */,
 				1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */,
 				104F0D201BFC118900C46E6A /* POPNumberAnimation.m in Sources */,
 				104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */,

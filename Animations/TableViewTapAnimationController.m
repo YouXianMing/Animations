@@ -20,11 +20,6 @@
 
 @implementation TableViewTapAnimationController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 - (void)setup {
     
     [super setup];

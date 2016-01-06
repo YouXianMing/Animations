@@ -43,11 +43,11 @@
     {
         // 红色背景
         _upView                     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 220, 17)];
-        _upView.center              = self.view.center;
+        _upView.center              = self.contentView.middlePoint;
         _upView.layer.cornerRadius  = 2.f;
         _upView.backgroundColor     = [UIColor redColor];
         _upView.layer.masksToBounds = YES; // 核心(不让subview显示超出范围)
-        [self.view addSubview:_upView];
+        [self.contentView addSubview:_upView];
         
         // 白色底字
         _upLabel                    = [[UILabel alloc] initWithFrame:_upView.bounds];
@@ -62,10 +62,10 @@
     {
         // 白色背景
         _downView                     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 220, 17)];
-        _downView.center              = self.view.center;
+        _downView.center              = self.contentView.middlePoint;
         _downView.layer.cornerRadius  = 2.f;
         _downView.backgroundColor     = [UIColor whiteColor];
-        [self.view addSubview:_downView];
+        [self.contentView addSubview:_downView];
         
         // 红色底字
         _downLabel                    = [[UILabel alloc] initWithFrame:_downView.bounds];
@@ -77,7 +77,7 @@
     }
     
     // 显示上面一层
-    [self.view bringSubviewToFront:_upView];
+    [self.contentView bringSubviewToFront:_upView];
     
     // 给上面一层的frame值做动画
     _timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];

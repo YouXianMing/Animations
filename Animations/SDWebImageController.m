@@ -67,8 +67,10 @@ static NSString  *pictureCellFlag = @"PictureCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    PictureCell *cell = [tableView dequeueReusableCellWithIdentifier:pictureCellFlag];
-    cell.dataAdapter  = _modelsArray[indexPath.row];
+    CellDataAdapter *dataAdapter = _modelsArray[indexPath.row];
+    
+    CustomAdapterTypeCell *cell  = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
+    cell.dataAdapter             = dataAdapter;
     [cell loadContent];
     
     return cell;

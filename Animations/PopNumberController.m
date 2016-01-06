@@ -22,11 +22,6 @@
 
 @implementation PopNumberController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 - (void)setup {
 
     [super setup];

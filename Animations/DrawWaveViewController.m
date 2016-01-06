@@ -22,11 +22,6 @@
 
 @implementation DrawWaveViewController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 - (void)setup {
 
     [super setup];

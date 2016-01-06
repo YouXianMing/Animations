@@ -24,11 +24,6 @@
 
 @implementation CircleAnimationViewController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 - (void)setup {
 
     [super setup];

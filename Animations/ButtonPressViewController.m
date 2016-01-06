@@ -26,11 +26,6 @@
 
 @implementation ButtonPressViewController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 #pragma mark - setup
 - (void)setup {
     

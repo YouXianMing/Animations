@@ -35,11 +35,6 @@
 
 @implementation ClockViewController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 - (void)setup {
 
     [super setup];

@@ -24,11 +24,6 @@
 
 @implementation CountDownTimerController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 - (void)setup {
     
     [super setup];

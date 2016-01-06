@@ -27,11 +27,6 @@
 
 @implementation CAShapeLayerPathController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 - (void)setup {
     
     [super setup];

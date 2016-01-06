@@ -12,8 +12,8 @@
 
 typedef enum : NSUInteger {
     
-    TYPE_ONE,
-    TYPE_TWO,
+    kTypeOne,
+    kTypeTwo,
     
 } EType;
 
@@ -31,11 +31,6 @@ typedef enum : NSUInteger {
 @end
 
 @implementation TransformFadeViewController
-
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
 
 - (void)setup {
 
@@ -80,9 +75,9 @@ typedef enum : NSUInteger {
     self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [self.timer event:^{
         
-        if (self.type == TYPE_ONE) {
+        if (self.type == kTypeOne) {
             
-            self.type = TYPE_TWO;
+            self.type = kTypeTwo;
             
             [self.contentView sendSubviewToBack:self.tranformFadeViewTwo];
             self.tranformFadeViewTwo.image = [self currentImage];
@@ -91,7 +86,7 @@ typedef enum : NSUInteger {
             
         } else {
             
-            self.type = TYPE_ONE;
+            self.type = kTypeOne;
             
             [self.contentView sendSubviewToBack:self.tranformFadeViewOne];
             self.tranformFadeViewOne.image = [self currentImage];

@@ -24,11 +24,6 @@ static int viewTag = 0x11;
 
 @implementation ScrollBlurImageViewController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 - (void)setup {
     
     [super setup];

@@ -38,7 +38,6 @@
                               [UIImage imageNamed:@"pic_3"],
                               [UIImage imageNamed:@"pic_4"]];
     
-    
     _timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     
     [_timer event:^{

@@ -20,11 +20,6 @@
 
 @implementation TableViewCellSlideAnimationController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 - (void)setup {
 
     [super setup];

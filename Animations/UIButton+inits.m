@@ -40,13 +40,13 @@
     button.layer.cornerRadius = 3.f;
     button.tag                = tag;
     
-    if (type == BUTTON_NORMAL) {
+    if (type == kButtonNormal) {
         
         button.layer.borderColor = [UIColor blackColor].CGColor;
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
         
-    } else if (type == BUTTON_RED) {
+    } else if (type == kButtonRed) {
     
         button.layer.borderColor = [UIColor redColor].CGColor;
         [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];

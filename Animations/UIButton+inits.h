@@ -10,8 +10,8 @@
 
 typedef enum : NSUInteger {
     
-    BUTTON_NORMAL,
-    BUTTON_RED,
+    kButtonNormal,
+    kButtonRed,
     
 } EButtonType;
 

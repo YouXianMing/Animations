@@ -16,11 +16,6 @@
 
 @implementation EmitterSnowController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 - (void)setup {
 
     [super setup];
@@ -53,7 +48,7 @@
     snowflake.lifetime  = 120.0;
     
     // 粒子速度
-    snowflake.velocity =10.0;
+    snowflake.velocity = 10.0;
     
     // 粒子的速度范围
     snowflake.velocityRange = 10;
