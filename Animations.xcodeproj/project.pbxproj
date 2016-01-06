@@ -182,6 +182,8 @@
 		109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B4B1C0EC0700039CB04 /* CountDownTimerController.m */; };
 		109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B4E1C0EC1420039CB04 /* TimeModel.m */; };
 		109D5B521C0EC15D0039CB04 /* CountDownTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B511C0EC15D0039CB04 /* CountDownTimeCell.m */; };
+		109ECD5A1C3D3B1900290307 /* PageFlipEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109ECD591C3D3B1900290307 /* PageFlipEffectController.m */; };
+		109ECD5E1C3D3F1500290307 /* CALayer+SetRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 109ECD5D1C3D3F1500290307 /* CALayer+SetRect.m */; };
 		109F66621C38CC7A0082BC95 /* WaterfallLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109F66611C38CC7A0082BC95 /* WaterfallLayoutController.m */; };
 		10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C571C12D4BA00C3E505 /* CGContextObject.m */; };
 		10A67C5B1C12D4BA00C3E505 /* CGContextObjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C591C12D4BA00C3E505 /* CGContextObjectConfig.m */; };
@@ -581,6 +583,10 @@
 		109D5B4E1C0EC1420039CB04 /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
 		109D5B501C0EC15D0039CB04 /* CountDownTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownTimeCell.h; sourceTree = "<group>"; };
 		109D5B511C0EC15D0039CB04 /* CountDownTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownTimeCell.m; sourceTree = "<group>"; };
+		109ECD581C3D3B1900290307 /* PageFlipEffectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageFlipEffectController.h; sourceTree = "<group>"; };
+		109ECD591C3D3B1900290307 /* PageFlipEffectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageFlipEffectController.m; sourceTree = "<group>"; };
+		109ECD5C1C3D3F1400290307 /* CALayer+SetRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+SetRect.h"; sourceTree = "<group>"; };
+		109ECD5D1C3D3F1500290307 /* CALayer+SetRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+SetRect.m"; sourceTree = "<group>"; };
 		109F66601C38CC7A0082BC95 /* WaterfallLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallLayoutController.h; sourceTree = "<group>"; };
 		109F66611C38CC7A0082BC95 /* WaterfallLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallLayoutController.m; sourceTree = "<group>"; };
 		10A67C561C12D4BA00C3E505 /* CGContextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextObject.h; sourceTree = "<group>"; };
@@ -1083,6 +1089,8 @@
 			children = (
 				104F0D0D1BFB006C00C46E6A /* UIView+SetRect.h */,
 				104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */,
+				109ECD5C1C3D3F1400290307 /* CALayer+SetRect.h */,
+				109ECD5D1C3D3F1500290307 /* CALayer+SetRect.m */,
 			);
 			name = SetRect;
 			sourceTree = "<group>";
@@ -1311,6 +1319,7 @@
 				106CF0931C37640D0006419B /* AlertViewController */,
 				102296B71C38D382001AF5BB /* WaterfallLayoutController */,
 				102ED87B1C3C02A800E9863E /* MixedColorProgressViewController */,
+				109ECD5B1C3D3B2100290307 /* PageFlipEffectController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1636,6 +1645,15 @@
 			name = CountDownTimerController;
 			sourceTree = "<group>";
 		};
+		109ECD5B1C3D3B2100290307 /* PageFlipEffectController */ = {
+			isa = PBXGroup;
+			children = (
+				109ECD581C3D3B1900290307 /* PageFlipEffectController.h */,
+				109ECD591C3D3B1900290307 /* PageFlipEffectController.m */,
+			);
+			name = PageFlipEffectController;
+			sourceTree = "<group>";
+		};
 		10A67C5C1C12D57300C3E505 /* DrawWaveViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1791,6 +1809,7 @@
 				10CEC5941C2238E700B0CA7D /* LabelScaleViewController.m in Sources */,
 				104228C31C3694B10011409C /* SDWebImageController.m in Sources */,
 				102296951C38CF71001AF5BB /* NodeModelStrings.m in Sources */,
+				109ECD5E1C3D3F1500290307 /* CALayer+SetRect.m in Sources */,
 				103088B31C05679A00C8B623 /* ScrollBlurImageViewController.m in Sources */,
 				1017F12B1C356EE700E245F8 /* UIImageView+WebCache.m in Sources */,
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
@@ -1802,6 +1821,7 @@
 				10381FD11BF9D2C600E5E476 /* StrokeCircleLayerConfigure.m in Sources */,
 				109F66621C38CC7A0082BC95 /* WaterfallLayoutController.m in Sources */,
 				1017F1271C356EE700E245F8 /* UIImage+GIF.m in Sources */,
+				109ECD5A1C3D3B1900290307 /* PageFlipEffectController.m in Sources */,
 				102B85801C3CF27A001699A9 /* UIImageView+AFNetworking.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
 				B5D0119E1C0BE33E0075BC2E /* ClassModel.m in Sources */,

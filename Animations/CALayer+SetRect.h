@@ -1,14 +1,14 @@
 //
-//  UIView+SetRect.h
-//  SetRect
+//  CALayer+SetRect.h
+//  Animations
 //
-//  Created by YouXianMing on 14-9-26.
-//  Copyright (c) 2014年 YouXianMing. All rights reserved.
+//  Created by YouXianMing on 16/1/6.
+//  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface UIView (SetRect)
+@interface CALayer (SetRect)
 
 // Frame
 @property (nonatomic) CGPoint viewOrigin;
