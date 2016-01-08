@@ -88,4 +88,26 @@ static inline MATHPoint MATHPointMake(CGFloat x, CGFloat y) {
  */
 - (CGFloat)yValueWhenXEqual:(CGFloat)xValue;
 
+#pragma mark - Reset size.
+
+/**
+ *  Get the new size with the fixed width.
+ *
+ *  @param size  Old size.
+ *  @param width The fixed width.
+ *
+ *  @return New size.
+ */
++ (CGSize)resetFromSize:(CGSize)size withFixedWidth:(CGFloat)width;
+
+/**
+ *  Get the new size with the fixed height.
+ *
+ *  @param size   Old size.
+ *  @param height The fixed width.
+ *
+ *  @return New size.
+ */
++ (CGSize)resetFromSize:(CGSize)size withFixedHeight:(CGFloat)height;
+
 @end
