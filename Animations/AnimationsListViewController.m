@@ -196,11 +196,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataAdapter *dataAdapter = self.items[indexPath.row];
-    
-    CustomAdapterTypeCell *cell   = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
-    cell.indexPath     = indexPath;
-    cell.dataAdapter   = dataAdapter;
+    CellDataAdapter       *dataAdapter = self.items[indexPath.row];
+    CustomAdapterTypeCell *cell        = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
+    cell.indexPath                     = indexPath;
+    cell.dataAdapter                   = dataAdapter;
     
     [cell loadContent];
     

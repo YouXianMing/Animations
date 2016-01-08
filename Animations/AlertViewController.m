@@ -59,7 +59,6 @@ typedef enum : NSUInteger {
     if (button.tag == kMessageAlertView) {
         
         AbstractAlertView *alertView     = [[MessageAlertView alloc] init];
-        alertView.contentView            = self.contentView;
         alertView.message                = @"惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。";
         alertView.contentView            = self.contentView;
         alertView.autoHiden              = YES;

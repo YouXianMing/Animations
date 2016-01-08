@@ -32,10 +32,10 @@
     [super setup];
     
     // 完整显示按住按钮后的动画效果
-    _button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    _button                    = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     _button.layer.cornerRadius = 50.f;
-    _button.backgroundColor = [UIColor cyanColor];
-    _button.center = self.contentView.middlePoint;
+    _button.backgroundColor    = [UIColor cyanColor];
+    _button.center             = self.contentView.middlePoint;
     [self.contentView addSubview:_button];
     
     self.label               = [[UILabel alloc] initWithFrame:_button.bounds];
@@ -61,7 +61,7 @@
     
     // 圆环1
     {
-        self.circleShape1 = [CAShapeLayer layer];
+        self.circleShape1           = [CAShapeLayer layer];
         self.circleShape1.strokeEnd = 0.f;
         StrokeCircleLayerConfigure *config = [StrokeCircleLayerConfigure new];
         config.lineWidth    = 0.5f;
@@ -75,7 +75,7 @@
     
     // 圆环2
     {
-        self.circleShape2 = [CAShapeLayer layer];
+        self.circleShape2           = [CAShapeLayer layer];
         self.circleShape2.strokeEnd = 0.f;
         StrokeCircleLayerConfigure *config = [StrokeCircleLayerConfigure new];
         config.lineWidth    = 0.5f;
