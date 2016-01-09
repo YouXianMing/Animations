@@ -198,6 +198,7 @@
 		10CEC58C1C2153EB00B0CA7D /* FullTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC58B1C2153EB00B0CA7D /* FullTitleViewController.m */; };
 		10CEC5941C2238E700B0CA7D /* LabelScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5931C2238E700B0CA7D /* LabelScaleViewController.m */; };
 		10CEC5971C223A5400B0CA7D /* ScaleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5961C223A5400B0CA7D /* ScaleLabel.m */; };
+		10D4F6091C41486E00D056EB /* CATransform3DM34Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F6081C41486E00D056EB /* CATransform3DM34Controller.m */; };
 		B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */; };
 		B5D011941C0BE2410075BC2E /* RotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011901C0BE2410075BC2E /* RotateView.m */; };
 		B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011931C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m */; };
@@ -615,6 +616,8 @@
 		10CEC5931C2238E700B0CA7D /* LabelScaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelScaleViewController.m; sourceTree = "<group>"; };
 		10CEC5951C223A5400B0CA7D /* ScaleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleLabel.h; sourceTree = "<group>"; };
 		10CEC5961C223A5400B0CA7D /* ScaleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleLabel.m; sourceTree = "<group>"; };
+		10D4F6071C41486E00D056EB /* CATransform3DM34Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DM34Controller.h; sourceTree = "<group>"; };
+		10D4F6081C41486E00D056EB /* CATransform3DM34Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DM34Controller.m; sourceTree = "<group>"; };
 		B5D0118C1C0BE1B30075BC2E /* HeaderViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewTapAnimationController.h; sourceTree = "<group>"; };
 		B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewTapAnimationController.m; sourceTree = "<group>"; };
 		B5D0118F1C0BE2410075BC2E /* RotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateView.h; sourceTree = "<group>"; };
@@ -1310,6 +1313,7 @@
 				102296B71C38D382001AF5BB /* WaterfallLayoutController */,
 				102ED87B1C3C02A800E9863E /* MixedColorProgressViewController */,
 				109ECD5B1C3D3B2100290307 /* PageFlipEffectController */,
+				10D4F60A1C41487300D056EB /* CATransform3DM34Controller */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1672,6 +1676,15 @@
 			name = LabelScaleViewController;
 			sourceTree = "<group>";
 		};
+		10D4F60A1C41487300D056EB /* CATransform3DM34Controller */ = {
+			isa = PBXGroup;
+			children = (
+				10D4F6071C41486E00D056EB /* CATransform3DM34Controller.h */,
+				10D4F6081C41486E00D056EB /* CATransform3DM34Controller.m */,
+			);
+			name = CATransform3DM34Controller;
+			sourceTree = "<group>";
+		};
 		B5D0118B1C0BE15A0075BC2E /* HeaderViewTapAnimationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1797,6 +1810,7 @@
 				10A67C651C12D68D00C3E505 /* DrawView.m in Sources */,
 				105D98A41C07F17D00FD1013 /* CustomAdapterTypeCell.m in Sources */,
 				100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */,
+				10D4F6091C41486E00D056EB /* CATransform3DM34Controller.m in Sources */,
 				10CEC5971C223A5400B0CA7D /* ScaleLabel.m in Sources */,
 				10CEC5941C2238E700B0CA7D /* LabelScaleViewController.m in Sources */,
 				104228C31C3694B10011409C /* SDWebImageController.m in Sources */,

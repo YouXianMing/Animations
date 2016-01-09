@@ -52,10 +52,25 @@
     dispatch_source_set_timer(self.dispatchSource, dispatch_time(DISPATCH_TIME_NOW, 0), interval, 0);
     dispatch_source_set_event_handler(self.dispatchSource, block);
 }
-- (void)event:(dispatch_block_t)block timeIntervalWithSecs:(float)secs {
 
+- (void)event:(dispatch_block_t)block timeInterval:(uint64_t)interval delay:(uint64_t)delay {
+    
+    NSParameterAssert(block);
+    dispatch_source_set_timer(self.dispatchSource, dispatch_time(DISPATCH_TIME_NOW, delay), interval, 0);
+    dispatch_source_set_event_handler(self.dispatchSource, block);
+}
+
+- (void)event:(dispatch_block_t)block timeIntervalWithSecs:(float)secs {
+    
     NSParameterAssert(block);
     dispatch_source_set_timer(self.dispatchSource, dispatch_time(DISPATCH_TIME_NOW, 0), secs * NSEC_PER_SEC, 0);
+    dispatch_source_set_event_handler(self.dispatchSource, block);
+}
+
+- (void)event:(dispatch_block_t)block timeIntervalWithSecs:(float)secs delaySecs:(float)delaySecs {
+    
+    NSParameterAssert(block);
+    dispatch_source_set_timer(self.dispatchSource, dispatch_time(DISPATCH_TIME_NOW, delaySecs * NSEC_PER_SEC), secs * NSEC_PER_SEC, 0);
     dispatch_source_set_event_handler(self.dispatchSource, block);
 }
 
