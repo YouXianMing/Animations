@@ -41,6 +41,7 @@
 #import "MixedColorProgressViewController.h"
 #import "PageFlipEffectController.h"
 #import "CATransform3DM34Controller.h"
+#import "PressAnimationButtonController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -143,7 +144,8 @@
                        [Item itemWithName:@"瀑布流效果" object:[WaterfallLayoutController class]],
                        [Item itemWithName:@"UILabel混色显示" object:[MixedColorProgressViewController class]],
                        [Item itemWithName:@"翻页效果" object:[PageFlipEffectController class]],
-                       [Item itemWithName:@"CATransform3D m34" object:[CATransform3DM34Controller class]]];
+                       [Item itemWithName:@"CATransform3D m34" object:[CATransform3DM34Controller class]],
+                       [Item itemWithName:@"按钮特效" object:[PressAnimationButtonController class]]];
     
     self.items = [NSMutableArray array];
     

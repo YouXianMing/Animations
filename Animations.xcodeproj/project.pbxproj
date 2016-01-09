@@ -199,6 +199,8 @@
 		10CEC5941C2238E700B0CA7D /* LabelScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5931C2238E700B0CA7D /* LabelScaleViewController.m */; };
 		10CEC5971C223A5400B0CA7D /* ScaleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5961C223A5400B0CA7D /* ScaleLabel.m */; };
 		10D4F6091C41486E00D056EB /* CATransform3DM34Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F6081C41486E00D056EB /* CATransform3DM34Controller.m */; };
+		10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F60C1C41532100D056EB /* PressAnimationButtonController.m */; };
+		10D4F6111C41538C00D056EB /* PressAnimationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F6101C41538C00D056EB /* PressAnimationButton.m */; };
 		B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */; };
 		B5D011941C0BE2410075BC2E /* RotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011901C0BE2410075BC2E /* RotateView.m */; };
 		B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011931C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m */; };
@@ -618,6 +620,10 @@
 		10CEC5961C223A5400B0CA7D /* ScaleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleLabel.m; sourceTree = "<group>"; };
 		10D4F6071C41486E00D056EB /* CATransform3DM34Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DM34Controller.h; sourceTree = "<group>"; };
 		10D4F6081C41486E00D056EB /* CATransform3DM34Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DM34Controller.m; sourceTree = "<group>"; };
+		10D4F60B1C41532100D056EB /* PressAnimationButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PressAnimationButtonController.h; sourceTree = "<group>"; };
+		10D4F60C1C41532100D056EB /* PressAnimationButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressAnimationButtonController.m; sourceTree = "<group>"; };
+		10D4F60F1C41538C00D056EB /* PressAnimationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PressAnimationButton.h; sourceTree = "<group>"; };
+		10D4F6101C41538C00D056EB /* PressAnimationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressAnimationButton.m; sourceTree = "<group>"; };
 		B5D0118C1C0BE1B30075BC2E /* HeaderViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewTapAnimationController.h; sourceTree = "<group>"; };
 		B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewTapAnimationController.m; sourceTree = "<group>"; };
 		B5D0118F1C0BE2410075BC2E /* RotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateView.h; sourceTree = "<group>"; };
@@ -1314,6 +1320,7 @@
 				102ED87B1C3C02A800E9863E /* MixedColorProgressViewController */,
 				109ECD5B1C3D3B2100290307 /* PageFlipEffectController */,
 				10D4F60A1C41487300D056EB /* CATransform3DM34Controller */,
+				10D4F60E1C41535D00D056EB /* PressAnimationButtonController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1685,6 +1692,17 @@
 			name = CATransform3DM34Controller;
 			sourceTree = "<group>";
 		};
+		10D4F60E1C41535D00D056EB /* PressAnimationButtonController */ = {
+			isa = PBXGroup;
+			children = (
+				10D4F60B1C41532100D056EB /* PressAnimationButtonController.h */,
+				10D4F60C1C41532100D056EB /* PressAnimationButtonController.m */,
+				10D4F60F1C41538C00D056EB /* PressAnimationButton.h */,
+				10D4F6101C41538C00D056EB /* PressAnimationButton.m */,
+			);
+			name = PressAnimationButtonController;
+			sourceTree = "<group>";
+		};
 		B5D0118B1C0BE15A0075BC2E /* HeaderViewTapAnimationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1958,6 +1976,8 @@
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
 				10CEC5891C21345600B0CA7D /* FullTitleVisualEffectViewController.m in Sources */,
 				102B857C1C3CF27A001699A9 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				10D4F6111C41538C00D056EB /* PressAnimationButton.m in Sources */,
+				10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
 				10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */,
 				106249981C2785630090AD65 /* EmitterSnowController.m in Sources */,

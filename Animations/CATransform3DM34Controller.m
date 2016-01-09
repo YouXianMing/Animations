@@ -7,6 +7,7 @@
 //
 
 #import "CATransform3DM34Controller.h"
+#import "UIView+SetRect.h"
 #import "GCD.h"
 #import "Math.h"
 
@@ -35,11 +36,11 @@
     UIImage *image         = [UIImage imageNamed:@"1"];
     self.layer             = [CALayer layer];
     self.layer.frame       = CGRectMake(0, 0, image.size.width / 2.f, image.size.height / 2.f);
-    self.layer.position    = self.view.center;
+    self.layer.position    = self.contentView.middlePoint;
     self.layer.borderWidth = 4.f;
     self.layer.borderColor = [UIColor blackColor].CGColor;
     self.layer.contents    = (__bridge id)image.CGImage;
-    [self.view.layer addSublayer:self.layer];
+    [self.contentView.layer addSublayer:self.layer];
 }
 
 - (void)timerEvent {
