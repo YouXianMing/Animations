@@ -19,9 +19,9 @@
     self.contentEdgeInsets          = contentEdgeInsets;
 }
 
-- (void)titleLabelColorWithNormalStateColor:(nullable UIColor *)normalStateColor
-                      highlightedStateColor:(nullable UIColor *)highlightedStateColor
-                         disabledStateColor:(nullable UIColor *)disabledStateColor {
+- (void)titleLabelColorWithNormalStateColor:(UIColor *)normalStateColor
+                      highlightedStateColor:(UIColor *)highlightedStateColor
+                         disabledStateColor:(UIColor *)disabledStateColor {
 
     if (normalStateColor) {
 
@@ -39,9 +39,9 @@
     }
 }
 
-- (void)buttonSolidBackgroundColorWithNormalStateColor:(nullable UIColor *)normalStateColor
-                                 highlightedStateColor:(nullable UIColor *)highlightedStateColor
-                                    disabledStateColor:(nullable UIColor *)disabledStateColor {
+- (void)buttonSolidBackgroundColorWithNormalStateColor:(UIColor *)normalStateColor
+                                 highlightedStateColor:(UIColor *)highlightedStateColor
+                                    disabledStateColor:(UIColor *)disabledStateColor {
     
     if (normalStateColor) {
         
@@ -57,6 +57,47 @@
 
         [self setBackgroundImage:[self imageWithSize:CGSizeMake(5, 5) color:disabledStateColor]    forState:UIControlStateDisabled];
     }
+}
+
++ (UIButton *)labelButtonWithFrame:(CGRect)frame
+                             title:(NSString *)title
+                              font:(UIFont *)font
+               horizontalAlignment:(UIControlContentHorizontalAlignment)horizontalAlignment
+                 verticalAlignment:(UIControlContentVerticalAlignment)verticalAlignment
+                 contentEdgeInsets:(UIEdgeInsets)contentEdgeInsets
+                            target:(id)target
+                            action:(SEL)action
+                  normalTitleColor:(UIColor *)normalStateColor
+             highlightedTitleColor:(UIColor *)highlightedStateColor
+                disabledTitleColor:(UIColor *)disabledStateColor {
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:frame];
+    
+    [button setTitle:title forState:UIControlStateNormal];
+    button.titleLabel.font = font;
+    
+    button.contentHorizontalAlignment = horizontalAlignment;
+    button.contentVerticalAlignment   = verticalAlignment;
+    button.contentEdgeInsets          = contentEdgeInsets;
+    
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    if (normalStateColor) {
+        
+        [button setTitleColor:normalStateColor forState:UIControlStateNormal];
+    }
+    
+    if (highlightedStateColor) {
+        
+        [button setTitleColor:highlightedStateColor forState:UIControlStateHighlighted];
+    }
+    
+    if (disabledStateColor) {
+        
+        [button setTitleColor:disabledStateColor forState:UIControlStateDisabled];
+    }
+    
+    return button;
 }
 
 #pragma mark - Private method.
