@@ -13,7 +13,7 @@
 - (void)configCAShapeLayer:(CAShapeLayer *)shapeLayer {
     
     shapeLayer.lineWidth   = self.lineWidth;
-    shapeLayer.strokeColor = (self.strokeColor.CGColor == nil ? [UIColor redColor].CGColor : self.strokeColor.CGColor);
+    shapeLayer.strokeColor = (self.strokeColor.CGColor == nil ? [UIColor whiteColor].CGColor : self.strokeColor.CGColor);
     shapeLayer.fillColor   = (self.fillColor.CGColor   == nil ? [UIColor blackColor].CGColor : self.fillColor.CGColor);
 }
 

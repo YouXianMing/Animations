@@ -41,7 +41,7 @@
                 format:@"Cannot use hide method from subclass."];
 }
 
-- (void)setView:(UIView *)view ForKey:(NSString *)key {
+- (void)setView:(UIView *)view withKey:(NSString *)key {
 
     [self.mapTable setObject:view forKey:key];
 }

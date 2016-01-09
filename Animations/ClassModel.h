@@ -13,8 +13,8 @@
 
 @interface ClassModel : NSObject
 
-@property (nonatomic, strong) NSString       *className;
-@property (nonatomic, strong) NSArray        *students;
+@property (nonatomic, strong) NSString                  *className;
+@property (nonatomic, strong) NSArray  <StudentModel *> *students;
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key;
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;

@@ -55,7 +55,8 @@
         for (int i = 0; i < _drawValues.values.count; i++) {
             
             NSNumber *value = _drawValues.values[i];
-            CGFloat tmp     = value.floatValue;
+            CGFloat   tmp   = value.floatValue;
+            
             if (tmp >= 100) {
                 
                 [_contextObject addRectPath:CGRectMake(i, 100, 1.f, tmp - 100)];

@@ -12,7 +12,7 @@
 
 + (instancetype)timeModelWithTitle:(NSString *)title countdownTime:(NSNumber *)countdownTime {
 
-    TimeModel *model = [[[self class] alloc] init];
+    TimeModel *model    = [[[self class] alloc] init];
     
     model.title         = title;
     model.countdownTime = countdownTime;
@@ -35,8 +35,7 @@
         
     } else {
         
-        return [NSString stringWithFormat:@"%02ld:%02ld:%02ld",
-                (long)(seconds / 3600), (long)(seconds % 3600 / 60), (long)(seconds  % 60)];
+        return [NSString stringWithFormat:@"%02ld:%02ld:%02ld", (long)(seconds / 3600), (long)(seconds % 3600 / 60), (long)(seconds  % 60)];
     }
 }
 

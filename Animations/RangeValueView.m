@@ -38,11 +38,11 @@
     
     // 标签
     self.labelName               = [[UILabel alloc] initWithFrame:CGRectMake(3, 0, 100, 20)];
-    self.labelName.font          = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:12.f];
+    self.labelName.font          = [UIFont fontWithName:@"Heiti SC" size:10.f];
     [self addSubview:self.labelName];
     
     self.labelValue               = [[UILabel alloc] initWithFrame:CGRectMake(width - 103, 0, 100, 20)];
-    self.labelValue.font          = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:12.f];
+    self.labelValue.font          = [UIFont fontWithName:@"Heiti SC" size:10.f];
     self.labelValue.textAlignment = NSTextAlignmentRight;
     [self addSubview:self.labelValue];
     

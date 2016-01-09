@@ -44,10 +44,12 @@
 }
 
 #pragma mark - 重写setter,getter方法
+
 @synthesize enableInteractivePopGestureRecognizer = _enableInteractivePopGestureRecognizer;
+
 - (void)setEnableInteractivePopGestureRecognizer:(BOOL)enableInteractivePopGestureRecognizer {
     
-    _enableInteractivePopGestureRecognizer = enableInteractivePopGestureRecognizer;
+    _enableInteractivePopGestureRecognizer                            = enableInteractivePopGestureRecognizer;
     self.navigationController.interactivePopGestureRecognizer.enabled = enableInteractivePopGestureRecognizer;
 }
 

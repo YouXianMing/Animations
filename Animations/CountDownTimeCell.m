@@ -12,9 +12,9 @@
 
 @interface CountDownTimeCell ()
 
-@property (nonatomic, strong) UIView      *backView;
-@property (nonatomic, strong) UILabel     *titleLabel;
-@property (nonatomic, strong) UILabel     *countdownLabel;
+@property (nonatomic, strong) UIView   *backView;
+@property (nonatomic, strong) UILabel  *titleLabel;
+@property (nonatomic, strong) UILabel  *countdownLabel;
 
 @end
 
@@ -64,13 +64,13 @@
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(notificationCenterEvent:)
-                                                 name:NOTI_CountDownTimeCell
+                                                 name:NSNotificationCountDownTimeCell
                                                object:nil];
 }
 
 - (void)removeNSNotificationCenter {
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NOTI_CountDownTimeCell object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSNotificationCountDownTimeCell object:nil];
 }
 
 - (void)notificationCenterEvent:(id)sender {

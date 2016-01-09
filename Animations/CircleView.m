@@ -65,9 +65,10 @@
     CGFloat  radius    = size.width / 2.f - lineWidth / 2.f; // 设置半径(刚好贴到frame上面去)
     
     // 旋转方向
-    BOOL clockWise = self.clockWise;
+    BOOL    clockWise  = self.clockWise;
     CGFloat startAngle = 0;
     CGFloat endAngle   = 0;
+    
     if (clockWise == YES) {
         
         startAngle = -RADIAN(180 - self.startAngle);

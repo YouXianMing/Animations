@@ -57,8 +57,8 @@
         [self.secondButton addTarget:self action:@selector(messageButtonsEvent:) forControlEvents:UIControlEventTouchUpInside];
         
         // Store View.
-        [self setView:self.firstButton  ForKey:@"firstButton"];
-        [self setView:self.secondButton ForKey:@"secondButton"];
+        [self setView:self.firstButton  withKey:@"firstButton"];
+        [self setView:self.secondButton withKey:@"secondButton"];
     }
     
     return self;

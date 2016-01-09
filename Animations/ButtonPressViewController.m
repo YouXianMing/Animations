@@ -13,28 +13,46 @@
 #import "FillCircleLayerConfigure.h"
 #import "UIView+SetRect.h"
 #import "UIFont+Fonts.h"
+#import "UIImage+ImageEffects.h"
+#import "Math.h"
+#import "GCD.h"
 
 @interface ButtonPressViewController ()
 
+@property (nonatomic, strong) Math              *math;
 @property (nonatomic, strong) UIButton          *button;
+@property (nonatomic, strong) UILabel           *label;
 @property (nonatomic, strong) CAShapeLayer      *circleShape1;
 @property (nonatomic, strong) CAShapeLayer      *circleShape2;
-
-@property (nonatomic, strong) UILabel           *label;
+@property (nonatomic, strong) UIImageView       *normalImageView;
+@property (nonatomic, strong) UIImageView       *blurImageView;
 
 @end
 
 @implementation ButtonPressViewController
 
-#pragma mark - setup
 - (void)setup {
     
     [super setup];
     
+    // Y = kX + b
+    self.math = [Math mathOnceLinearEquationWithPointA:MATHPointMake(0, 1) PointB:MATHPointMake(1, 0.9)];
+    
+    // 加载图片
+    self.normalImageView             = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
+    self.blurImageView               = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
+    self.normalImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.blurImageView.contentMode   = UIViewContentModeScaleAspectFill;
+    UIImage *normalImage             = [UIImage imageNamed:@"1"];
+    self.normalImageView.image       = normalImage;
+    self.blurImageView.image         = [normalImage blurImage];
+    [self.contentView addSubview:self.normalImageView];
+    [self.contentView addSubview:self.blurImageView];
+    
     // 完整显示按住按钮后的动画效果
     _button                    = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     _button.layer.cornerRadius = 50.f;
-    _button.backgroundColor    = [UIColor cyanColor];
+    _button.backgroundColor    = [UIColor whiteColor];
     _button.center             = self.contentView.middlePoint;
     [self.contentView addSubview:_button];
     
@@ -45,29 +63,23 @@
     [self.button addSubview:self.label];
     
     // 按住按钮后没有松手的动画
-    [_button addTarget:self
-                action:@selector(scaleToSmall)
-      forControlEvents:UIControlEventTouchDown | UIControlEventTouchDragEnter];
+    [_button addTarget:self action:@selector(scaleToSmall) forControlEvents:UIControlEventTouchDown | UIControlEventTouchDragEnter];
     
     // 按住按钮松手后的动画
-    [_button addTarget:self
-                action:@selector(scaleAnimations)
-      forControlEvents:UIControlEventTouchUpInside];
+    [_button addTarget:self action:@selector(scaleAnimations) forControlEvents:UIControlEventTouchUpInside];
     
     // 按住按钮后拖拽出去的动画
-    [_button addTarget:self
-                action:@selector(scaleToDefault)
-      forControlEvents:UIControlEventTouchDragExit];
+    [_button addTarget:self action:@selector(scaleToDefault) forControlEvents:UIControlEventTouchDragExit];
     
     // 圆环1
     {
-        self.circleShape1           = [CAShapeLayer layer];
-        self.circleShape1.strokeEnd = 0.f;
+        self.circleShape1                  = [CAShapeLayer layer];
+        self.circleShape1.strokeEnd        = 0.f;
         StrokeCircleLayerConfigure *config = [StrokeCircleLayerConfigure new];
         config.lineWidth    = 0.5f;
         config.startAngle   = 0;
         config.endAngle     = M_PI * 2;
-        config.radius       = 55.f;
+        config.radius       = 50.f;
         config.circleCenter = self.contentView.middlePoint;
         [config configCAShapeLayer:self.circleShape1];
         [self.contentView.layer addSublayer:self.circleShape1];
@@ -75,13 +87,13 @@
     
     // 圆环2
     {
-        self.circleShape2           = [CAShapeLayer layer];
-        self.circleShape2.strokeEnd = 0.f;
+        self.circleShape2                  = [CAShapeLayer layer];
+        self.circleShape2.strokeEnd        = 0.f;
         StrokeCircleLayerConfigure *config = [StrokeCircleLayerConfigure new];
         config.lineWidth    = 0.5f;
         config.startAngle   = 0;
         config.endAngle     = M_PI * 2;
-        config.radius       = 60.f;
+        config.radius       = 52.f;
         config.clockWise    = YES;
         config.circleCenter = self.contentView.middlePoint;
         [config configCAShapeLayer:self.circleShape2];
@@ -96,13 +108,14 @@
     
     // 变小尺寸
     POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-    scaleAnimation.toValue            = [NSValue valueWithCGSize:CGSizeMake(0.7f, 0.7f)];
+    scaleAnimation.toValue            = [NSValue valueWithCGSize:CGSizeMake(0.9, 0.9)];
     scaleAnimation.delegate           = self;
+    scaleAnimation.duration           = 0.8f;
     [_button.layer pop_addAnimation:scaleAnimation forKey:nil];
     
     // 颜色
     POPSpringAnimation *backgroundColor = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerBackgroundColor];
-    backgroundColor.toValue             = (id)[UIColor magentaColor].CGColor;
+    backgroundColor.toValue             = (id)[UIColor blackColor].CGColor;
     [_button.layer pop_addAnimation:backgroundColor forKey:@"magentaColor"];
 }
 
@@ -118,7 +131,7 @@
     
     // 颜色
     POPSpringAnimation *backgroundColor = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerBackgroundColor];
-    backgroundColor.toValue             = (id)[UIColor cyanColor].CGColor;
+    backgroundColor.toValue             = (id)[UIColor whiteColor].CGColor;
     [_button.layer pop_addAnimation:backgroundColor forKey:nil];
 }
 
@@ -134,7 +147,7 @@
     
     // 颜色
     POPSpringAnimation *backgroundColor = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerBackgroundColor];
-    backgroundColor.toValue             = (id)[UIColor cyanColor].CGColor;
+    backgroundColor.toValue             = (id)[UIColor whiteColor].CGColor;
     [_button.layer pop_addAnimation:backgroundColor forKey:nil];
 }
 
@@ -162,24 +175,17 @@
     CGSize size      = [toValue CGSizeValue];
     
     [CATransaction setDisableActions:YES];
-    CGFloat percent         = (size.height - calculateOnceLinerConstant(0, 1, 1, 0.7))/calculateOnceLinerSlope(0, 1, 1, 0.7);
+    CGFloat percent         = (size.height - _math.b) / _math.k;
     _circleShape1.strokeEnd = percent;
     _circleShape2.strokeEnd = percent;
     [CATransaction setDisableActions:NO];
-
-    double showValue = fabs(percent * 100);
-    self.label.text  = [NSString stringWithFormat:@"%.f%%", showValue];
-}
-
-#pragma mark - Y = kX + b
-CGFloat calculateOnceLinerSlope(CGFloat x1, CGFloat y1, CGFloat x2, CGFloat y2) {
     
-    return (y2 - y1) / (x2 - x1);
-}
-
-CGFloat calculateOnceLinerConstant(CGFloat x1, CGFloat y1, CGFloat x2, CGFloat y2) {
+    UIColor *color       = [UIColor colorWithRed:percent green:percent blue:percent alpha:1.f];
+    double showValue     = fabs(percent * 100);
+    self.label.text      = [NSString stringWithFormat:@"%.f%%", showValue];
+    self.label.textColor = color;
     
-    return (y1*(x2 - x1) - x1*(y2 - y1)) / (x2 - x1);
+    _blurImageView.alpha = 1 - percent;
 }
 
 @end

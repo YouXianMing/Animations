@@ -8,7 +8,7 @@
 
 #import "CustomAdapterTypeCell.h"
 
-#define   NOTI_CountDownTimeCell   @"NOTI_CountDownTimeCell"
+static NSString  *NSNotificationCountDownTimeCell = @"NSNotificationCountDownTimeCell";
 
 @interface CountDownTimeCell : CustomAdapterTypeCell
 

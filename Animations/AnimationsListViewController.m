@@ -28,7 +28,6 @@
 #import "HeaderViewTapAnimationController.h"
 #import "CountDownTimerController.h"
 #import "ClockViewController.h"
-#import "TableViewCellSlideAnimationController.h"
 #import "DrawWaveViewController.h"
 #import "LabelScaleViewController.h"
 #import "ShimmerController.h"
@@ -151,10 +150,8 @@
     
     for (int i = 0; i < array.count; i++) {
     
-        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:listItemCellString
-                                                                                          data:array[i]
-                                                                                    cellHeight:0
-                                                                                      cellType:0];
+        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:listItemCellString data:array[i]
+                                                                                    cellHeight:0 cellType:0];
         [self.items addObject:dataAdapter];
     }
 }
@@ -221,6 +218,7 @@
 }
 
 #pragma mark -
+
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
@@ -230,7 +228,9 @@
 - (void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear:animated];
-    self.enableInteractivePopGestureRecognizer = YES;
+    
+    // Disable pull back gesture.
+    self.enableInteractivePopGestureRecognizer = NO;
 }
 
 @end

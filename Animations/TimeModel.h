@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#define TIME_MODEL(title, secs)  [TimeModel timeModelWithTitle:(title) countdownTime:@(secs)]
-
 @interface TimeModel : NSObject
 
 @property (nonatomic, strong) NSString  *title;
@@ -36,3 +34,8 @@
 - (NSString *)currentTimeString;
 
 @end
+
+static inline  TimeModel * TimeModelWithTitle(NSString *title, NSNumber *countdownTime) {
+
+    return [TimeModel timeModelWithTitle:title countdownTime:countdownTime];
+}

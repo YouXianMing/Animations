@@ -72,6 +72,8 @@
     // 圆圈4
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, radius, radius)];
     imageView.image        = [UIImage imageNamed:@"colors"];
+    imageView.center       = point4;
+    
     [self.contentView addSubview:imageView];
     self.circleView4 = [CircleView circleViewWithFrame:CGRectMake(0, 0, radius, radius)
                                              lineWidth:radius / 2.f
@@ -79,7 +81,6 @@
                                              clockWise:YES
                                             startAngle:0];
     [self.circleView4 buildView];
-    imageView.center = point4;
     imageView.layer.mask = self.circleView4.layer;
 
     self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
@@ -98,6 +99,7 @@
         [self.circleView3 strokeStart:(percent < anotherPercent ? percent : anotherPercent)
                         animationType:ExponentialEaseInOut
                              animated:YES duration:1.f];
+        
         [self.circleView3 strokeEnd:(percent < anotherPercent ? anotherPercent : percent)
                       animationType:ExponentialEaseInOut
                            animated:YES duration:1.f];

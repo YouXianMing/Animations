@@ -60,7 +60,7 @@
             [self normalStateEvent];
         }
         
-    } timeIntervalWithSecs:3.f delaySecs:3.f];
+    } timeIntervalWithSecs:2.f delaySecs:1.f];
     [self.timer start];
 }
 

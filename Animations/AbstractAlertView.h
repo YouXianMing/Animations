@@ -81,7 +81,7 @@
  *  @param view View.
  *  @param key  Key.
  */
-- (void)setView:(UIView *)view ForKey:(NSString *)key;
+- (void)setView:(UIView *)view withKey:(NSString *)key;
 
 /**
  *  Get View with key.

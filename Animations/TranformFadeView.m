@@ -8,7 +8,11 @@
 
 #import "TranformFadeView.h"
 
-#define  STATR_TAG  0x19871220
+typedef enum : NSUInteger {
+    
+    kSubViewTag = 0x1000,
+    
+} ETranformFadeViewValue;
 
 @interface TranformFadeView ()
 
@@ -91,7 +95,7 @@
             
             UIView *maskView         = [[UIView alloc] initWithFrame:frame];
             maskView.frame           = frame;
-            maskView.tag             = STATR_TAG + count;
+            maskView.tag             = kSubViewTag + count;
             maskView.backgroundColor = [UIColor blackColor];
             
             [self.allMaskView addSubview:maskView];
@@ -166,6 +170,7 @@
                              animations:^{
                                  
                                  tmpView.alpha = 1.f;
+                                 
                              } completion:^(BOOL finished) {
                                  
                              }];
@@ -190,11 +195,13 @@
  */
 - (UIView *)maskViewWithTag:(NSInteger)tag {
     
-    return [self.maskView viewWithTag:tag + STATR_TAG];
+    return [self.maskView viewWithTag:tag + kSubViewTag];
 }
 
 #pragma mark - setter & getter.
+
 @synthesize contentMode = _contentMode;
+
 - (void)setContentMode:(UIViewContentMode)contentMode {
     
     _contentMode               = contentMode;
@@ -207,6 +214,7 @@
 }
 
 @synthesize image = _image;
+
 - (void)setImage:(UIImage *)image {
     
     _image               = image;

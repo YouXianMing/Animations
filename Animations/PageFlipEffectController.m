@@ -35,10 +35,10 @@
     _layer.borderColor   = [UIColor blackColor].CGColor;
     _layer.borderWidth   = 4.f;
     _layer.masksToBounds = YES;
-    _layer.transform = CATransform3DMakeRotation([Math radianFromDegree:0], 0.0, 1.0, 0.0);
+    _layer.transform     = CATransform3DMakeRotation([Math radianFromDegree:0], 0.0, 1.0, 0.0);
     [self.contentView.layer addSublayer:_layer];
     
-    // 一元一次方程求解
+    // 一元一次方程
     self.math = [Math mathOnceLinearEquationWithPointA:MATHPointMake(0, 0) PointB:MATHPointMake(Width, 180)];
     
     // 手势
