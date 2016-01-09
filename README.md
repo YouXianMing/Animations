@@ -1,6 +1,6 @@
 # Animations
 
-> Animation Collection (Long-term Updates)
+> The Animation Collection (Long-term Updates)
 
 ![demo01.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151116202907436-992788389.gif)
 
@@ -56,7 +56,7 @@
 
 ![demo27.gif](http://images.cnitblog.com/blog/607542/201501/182024215423716.gif)
 
-> Part of the reference code
+> Part of the reference project
 
 [https://github.com/schneiderandre/popping](https://github.com/schneiderandre/popping)
 
