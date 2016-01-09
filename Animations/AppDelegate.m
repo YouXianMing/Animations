@@ -15,6 +15,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    /*
+     = 作者联系方式 =
+     
+     ------------------------------------------
+     QQ   705786299
+     邮箱  you_xian_1030@163.com
+     博客  http://www.cnblogs.com/YouXianMing/
+     源码  https://github.com/YouXianMing
+     动画  https://github.com/YouXianMing/Animations
+     ------------------------------------------
+     
+     苹果下载地址： https://itunes.apple.com/us/app/yocelsius/id967721892?l=zh&ls=1&mt=8
+     本人讲解视频： http://my.jikexueyuan.com/YouXianMing/record/
+     
+     = 注意 =
+     
+     最新编译无警告版本 Xcode Version 7.2 (7C68)
+     */
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     AnimationsListViewController *animationsListViewController = [AnimationsListViewController new];
