@@ -20,7 +20,7 @@
 
 #ifdef __OBJC__
 
-#import "SystemValues.h"
+#import "SimpleNSLog.h"
 
 #endif
 

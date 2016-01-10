@@ -14,6 +14,7 @@
 #import "LineBackgroundView.h"
 #import "Item.h"
 #import "GCD.h"
+#import "UIFont+Fonts.h"
 
 #import "ButtonPressViewController.h"
 #import "PopStrokeController.h"
@@ -76,7 +77,7 @@
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
-    headlinelabel.font          = Font_Avenir_Light(28);
+    headlinelabel.font          = [UIFont AvenirLightWithFontSize:28.f];
     headlinelabel.textAlignment = NSTextAlignmentCenter;
     headlinelabel.textColor     = [UIColor customGrayColor];
     

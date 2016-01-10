@@ -9,6 +9,7 @@
 #import "CountDownTimeCell.h"
 #import "TimeModel.h"
 #import "WxHxD.h"
+#import "UIFont+Fonts.h"
 
 @interface CountDownTimeCell ()
 
@@ -36,13 +37,13 @@
     {
         self.titleLabel           = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, Width - 20, 40)];
         self.titleLabel.textColor = [UIColor grayColor];
-        self.titleLabel.font      = Font_HYQiHei(20.f);
+        self.titleLabel.font      = [UIFont HYQiHeiWithFontSize:20.f];;
         [self.backView addSubview:self.titleLabel];
         
         self.countdownLabel               = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, Width - 20, 40)];
         self.countdownLabel.textColor     = [UIColor grayColor];
         self.countdownLabel.textAlignment = NSTextAlignmentRight;
-        self.countdownLabel.font          = Font_Avenir_Light(15.f);
+        self.countdownLabel.font          = [UIFont AvenirLightWithFontSize:15.f];
         [self.backView addSubview:self.countdownLabel];
     }
 }

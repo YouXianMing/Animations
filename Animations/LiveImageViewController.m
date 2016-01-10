@@ -10,6 +10,7 @@
 #import "UIView+SetRect.h"
 #import "LiveImageView.h"
 #import "GCD.h"
+#import "UIFont+Fonts.h"
 
 @interface LiveImageViewController ()
 
@@ -63,7 +64,7 @@
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
-    headlinelabel.font          = Font_Heiti(20.f);
+    headlinelabel.font          = [UIFont HeitiSCWithFontSize:20.f];
     headlinelabel.textAlignment = NSTextAlignmentCenter;
     headlinelabel.textColor     = [UIColor whiteColor];
     headlinelabel.text          = self.title;

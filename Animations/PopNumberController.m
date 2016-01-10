@@ -11,6 +11,7 @@
 #import "GCD.h"
 #import "StringAttributeHelper.h"
 #import "UIView+SetRect.h"
+#import "UIFont+Fonts.h"
 
 @interface PopNumberController () <POPNumberAnimationDelegate>
 
@@ -71,11 +72,11 @@
     
     // Init attributes.
     FontAttribute *totalFont = [FontAttribute new];
-    totalFont.font           = Font_Avenir_Light(20.f);
+    totalFont.font           = [UIFont AvenirLightWithFontSize:20.f];
     totalFont.effectRange    = totalRange;
     
     FontAttribute *numberFont = [FontAttribute new];
-    numberFont.font           = Font_HYQiHei(60.f);
+    numberFont.font           = [UIFont HYQiHeiWithFontSize:60.f];;
     numberFont.effectRange    = numberRange;
     
     ForegroundColorAttribute *totalColor = [ForegroundColorAttribute new];

@@ -402,7 +402,6 @@
 		10381F6D1BF9B47000E5E476 /* ListItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemCell.h; sourceTree = "<group>"; };
 		10381F6E1BF9B47000E5E476 /* ListItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemCell.m; sourceTree = "<group>"; };
 		10381F741BF9B4E800E5E476 /* Animations.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animations.pch; sourceTree = "<group>"; };
-		10381F751BF9B4F800E5E476 /* SystemValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemValues.h; sourceTree = "<group>"; };
 		10381F761BF9B4F800E5E476 /* HYQiHei-25JF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HYQiHei-25JF.otf"; sourceTree = "<group>"; };
 		10381F781BF9B54E00E5E476 /* ButtonPressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonPressViewController.h; sourceTree = "<group>"; };
 		10381F791BF9B54E00E5E476 /* ButtonPressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonPressViewController.m; sourceTree = "<group>"; };
@@ -541,6 +540,7 @@
 		105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTapAnimationCell.m; sourceTree = "<group>"; };
 		105D98A81C07FC2C00FD1013 /* TapAnimationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapAnimationModel.h; sourceTree = "<group>"; };
 		105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapAnimationModel.m; sourceTree = "<group>"; };
+		105EFAF71C42878F00394044 /* SimpleNSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleNSLog.h; sourceTree = "<group>"; };
 		106249961C2785630090AD65 /* EmitterSnowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterSnowController.h; sourceTree = "<group>"; };
 		106249971C2785630090AD65 /* EmitterSnowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSnowController.m; sourceTree = "<group>"; };
 		106CF0841C375DAD0006419B /* AbstractAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
@@ -1163,7 +1163,7 @@
 				10381F611BF9B44A00E5E476 /* Info.plist */,
 				10381F511BF9B44A00E5E476 /* main.m */,
 				10381F741BF9B4E800E5E476 /* Animations.pch */,
-				10381F751BF9B4F800E5E476 /* SystemValues.h */,
+				105EFAF71C42878F00394044 /* SimpleNSLog.h */,
 				10381F761BF9B4F800E5E476 /* HYQiHei-25JF.otf */,
 			);
 			name = "Supporting Files";

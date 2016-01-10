@@ -10,6 +10,7 @@
 #import "UIColor+CustomColors.h"
 #import "UIView+SetRect.h"
 #import "ScaleLabel.h"
+#import "UIFont+Fonts.h"
 #import "GCD.h"
 
 @interface LabelScaleViewController ()
@@ -31,7 +32,7 @@
         label.endScale         = 2.f;
         label.backedLabelColor = [UIColor whiteColor];
         label.colorLabelColor  = [UIColor cyanColor];
-        label.font             = Font_Avenir_Light(20.f);
+        label.font             = [UIFont AvenirLightWithFontSize:20.f];
         label.center           = self.contentView.middlePoint;
         label.centerY         -= 150;
         [self.contentView addSubview:label];
@@ -50,7 +51,7 @@
         label.endScale         = 2.f;
         label.backedLabelColor = [UIColor cyanColor];
         label.colorLabelColor  = [UIColor yellowColor];
-        label.font             = Font_Avenir_Light(20.f);
+        label.font             = [UIFont AvenirLightWithFontSize:20.f];
         label.center           = self.contentView.middlePoint;
         [self.contentView addSubview:label];
         
@@ -68,7 +69,7 @@
         label.endScale         = 2.f;
         label.backedLabelColor = [UIColor redColor];
         label.colorLabelColor  = [UIColor whiteColor];
-        label.font             = Font_Avenir_Light(20.f);
+        label.font             = [UIFont AvenirLightWithFontSize:20.f];
         label.center           = self.contentView.middlePoint;
         label.centerY         += 150;
         [self.contentView addSubview:label];
@@ -92,7 +93,7 @@
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
-    headlinelabel.font          = Font_Avenir(20.f);
+    headlinelabel.font          = [UIFont AvenirWithFontSize:20.f];
     headlinelabel.textAlignment = NSTextAlignmentCenter;
     headlinelabel.textColor     = [[UIColor whiteColor] colorWithAlphaComponent:0.75f];
     headlinelabel.text          = self.title;

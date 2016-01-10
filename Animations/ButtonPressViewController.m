@@ -16,6 +16,7 @@
 #import "UIImage+ImageEffects.h"
 #import "Math.h"
 #import "GCD.h"
+#import "UIFont+Fonts.h"
 
 @interface ButtonPressViewController ()
 
@@ -57,7 +58,7 @@
     [self.contentView addSubview:_button];
     
     self.label               = [[UILabel alloc] initWithFrame:_button.bounds];
-    self.label.font          = Font_HYQiHei(30);
+    self.label.font          = [UIFont HYQiHeiWithFontSize:30.f];
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.text          = @"0%";
     [self.button addSubview:self.label];

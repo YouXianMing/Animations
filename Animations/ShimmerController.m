@@ -11,6 +11,7 @@
 #import "FBShimmeringLayer.h"
 #import "FBShimmeringView.h"
 #import "StrokeCircleLayerConfigure.h"
+#import "UIFont+Fonts.h"
 
 @interface ShimmerController ()
 
@@ -69,7 +70,7 @@
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
-    headlinelabel.font          = Font_Heiti(20.f);
+    headlinelabel.font          = [UIFont HeitiSCWithFontSize:20.f];
     headlinelabel.textAlignment = NSTextAlignmentCenter;
     headlinelabel.textColor     = [UIColor cyanColor];
     headlinelabel.text          = self.title;

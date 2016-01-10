@@ -13,6 +13,7 @@
 #import "FontAttribute.h"
 #import "ForegroundColorAttribute.h"
 #import "NSMutableAttributedString+StringAttribute.h"
+#import "UIFont+Fonts.h"
 
 #define  Width   [UIScreen mainScreen].bounds.size.width
 #define  Height  [UIScreen mainScreen].bounds.size.height
@@ -60,8 +61,8 @@
     NSString *totalString  = [NSString stringWithFormat:@"%@ %@", stringValue, secondString];
     
     // 字体
-    UIFont *allFont        = Font_Avenir(12);
-    UIFont *numFont        = Font_Avenir_Light(20);
+    UIFont *allFont        = [UIFont AvenirWithFontSize:12.f];
+    UIFont *numFont        = [UIFont AvenirLightWithFontSize:20.f];
     
     FontAttribute *totalFont = [FontAttribute new];
     totalFont.font           = allFont;

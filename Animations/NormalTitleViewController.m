@@ -9,6 +9,7 @@
 #import "NormalTitleViewController.h"
 #import "UIColor+CustomColors.h"
 #import "UIView+SetRect.h"
+#import "UIFont+Fonts.h"
 
 @interface NormalTitleViewController ()
 
@@ -22,7 +23,7 @@
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
-    headlinelabel.font          = Font_Heiti(20.f);
+    headlinelabel.font          = [UIFont HeitiSCWithFontSize:20.f];
     headlinelabel.textAlignment = NSTextAlignmentCenter;
     headlinelabel.textColor     = [UIColor customGrayColor];
     headlinelabel.text          = self.title;

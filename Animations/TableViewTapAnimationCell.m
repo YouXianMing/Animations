@@ -10,6 +10,7 @@
 #import "UIView+SetRect.h"
 #import "TapAnimationModel.h"
 #import "WxHxD.h"
+#import "UIFont+Fonts.h"
 
 @interface TableViewTapAnimationCell ()
 
@@ -42,7 +43,7 @@
     [self addSubview:_iconView];
     
     _name           = [[UILabel alloc] initWithFrame:CGRectMake(30, 10, 300, 60)];
-    _name.font      = Font_Avenir(20);
+    _name.font      = [UIFont AvenirWithFontSize:20.f];
     _name.textColor = [UIColor grayColor];
     [self addSubview:_name];
     
