@@ -7,6 +7,23 @@
 //
 
 #import "CustomViewController.h"
+#import <asl.h>
+
+#define _Flag_NSLog(fmt,...) {                                        \
+  do                                                                  \
+  {                                                                   \
+    NSString *str = [NSString stringWithFormat:fmt, ##__VA_ARGS__];   \
+    printf("%s\n",[str UTF8String]);                                  \
+    asl_log(NULL, NULL, ASL_LEVEL_NOTICE, "%s", [str UTF8String]);    \
+  }                                                                   \
+  while (0);                                                          \
+}
+
+#ifdef DEBUG
+#define ControllerLog(fmt, ...) _Flag_NSLog((@"" fmt), ##__VA_ARGS__)
+#else
+#define ControllerLog(...)
+#endif
 
 @interface CustomViewController () <UIGestureRecognizerDelegate>
 
@@ -43,6 +60,17 @@
     [self.navigationController popToRootViewControllerAnimated:animated];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
+    
+#ifdef DEBUG
+    
+    [self debugMessage];
+    
+#endif
+}
+
 #pragma mark - 重写setter,getter方法
 
 @synthesize enableInteractivePopGestureRecognizer = _enableInteractivePopGestureRecognizer;
@@ -56,6 +84,28 @@
 - (BOOL)enableInteractivePopGestureRecognizer {
     
     return _enableInteractivePopGestureRecognizer;
+}
+
+#pragma mark - Debug message.
+
+- (void)debugMessage {
+    
+    NSString        *classString = [NSString stringWithFormat:@" %@ ", [self class]];
+    NSMutableString *flagString  = [NSMutableString string];
+    
+    for (int i = 0; i < classString.length; i++) {
+        
+        if (i == 0 || i == classString.length - 1) {
+            
+            [flagString appendString:@"+"];
+            continue;
+        }
+        
+        [flagString appendString:@"-"];
+    }
+    
+    NSString *showSting = [NSString stringWithFormat:@"\n%@\n%@\n%@\n", flagString, classString, flagString];
+    ControllerLog(@"%@", showSting);
 }
 
 @end

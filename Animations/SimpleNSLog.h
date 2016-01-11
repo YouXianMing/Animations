@@ -26,6 +26,7 @@
 
 
 #define NSLog(fmt, ...) _NSLog((@"%@:%d %s " fmt), THIS_FILE, __LINE__, __FUNCTION__, ##__VA_ARGS__)
+#define MessageLog(fmt, ...) _NSLog((@"" fmt), ##__VA_ARGS__)
 
 
 #ifdef DEBUG
