@@ -14,10 +14,16 @@
 
     if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
         
+        [self setupHeaderFooterView];
+        
         [self buildSubview];
     }
     
     return self;
+}
+
+- (void)setupHeaderFooterView {
+    
 }
 
 - (void)buildSubview {

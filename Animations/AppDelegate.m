@@ -23,7 +23,7 @@
      邮箱  YouXianMing1987@icloud.com
      博客  http://www.cnblogs.com/YouXianMing/
      源码  https://github.com/YouXianMing
-     动画  https://github.com/YouXianMing/Animations  https://github.com/YouXianMing/YoCelsius
+     项目  https://github.com/YouXianMing/YoCelsius
      
      苹果下载地址： https://itunes.apple.com/us/app/yocelsius/id967721892?l=zh&ls=1&mt=8
      本人讲解视频： http://my.jikexueyuan.com/YouXianMing/record/

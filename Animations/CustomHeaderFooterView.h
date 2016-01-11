@@ -55,6 +55,11 @@
 #pragma mark - Useful method.
 
 /**
+ *  Setup HeaderFooterView, override by subclass.
+ */
+- (void)setupHeaderFooterView;
+
+/**
  *  Build subview, override by subclass.
  */
 - (void)buildSubview;
