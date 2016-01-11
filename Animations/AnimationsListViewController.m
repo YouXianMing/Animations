@@ -42,6 +42,7 @@
 #import "PageFlipEffectController.h"
 #import "CATransform3DM34Controller.h"
 #import "PressAnimationButtonController.h"
+#import "BezierPathViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -145,7 +146,8 @@
                        [Item itemWithName:@"UILabel混色显示" object:[MixedColorProgressViewController class]],
                        [Item itemWithName:@"翻页效果" object:[PageFlipEffectController class]],
                        [Item itemWithName:@"CATransform3D m34" object:[CATransform3DM34Controller class]],
-                       [Item itemWithName:@"按钮特效" object:[PressAnimationButtonController class]]];
+                       [Item itemWithName:@"按钮特效" object:[PressAnimationButtonController class]],
+                       [Item itemWithName:@"贝塞尔曲线动画" object:[BezierPathViewController class]]];
     
     self.items = [NSMutableArray array];
     

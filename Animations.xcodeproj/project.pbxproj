@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100148C91C43D53D006D9153 /* BezierPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100148C81C43D53D006D9153 /* BezierPathViewController.m */; };
 		100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100BFAE81C2392F5008C5523 /* ShimmerController.m */; };
 		1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */; };
 		1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DD1C0AA639004CFBCE /* POPSpringParameterController.m */; };
@@ -210,6 +211,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		100148C71C43D53D006D9153 /* BezierPathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathViewController.h; sourceTree = "<group>"; };
+		100148C81C43D53D006D9153 /* BezierPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathViewController.m; sourceTree = "<group>"; };
 		100BFAE71C2392F5008C5523 /* ShimmerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShimmerController.h; sourceTree = "<group>"; };
 		100BFAE81C2392F5008C5523 /* ShimmerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShimmerController.m; sourceTree = "<group>"; };
 		1010C6D91C0A9DA0004CFBCE /* RangeValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeValueView.h; sourceTree = "<group>"; };
@@ -649,6 +652,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100148CA1C43E1AF006D9153 /* BezierPathViewController */ = {
+			isa = PBXGroup;
+			children = (
+				100148C71C43D53D006D9153 /* BezierPathViewController.h */,
+				100148C81C43D53D006D9153 /* BezierPathViewController.m */,
+			);
+			name = BezierPathViewController;
+			sourceTree = "<group>";
+		};
 		100BFAE61C2392CC008C5523 /* ShimmerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1314,6 +1326,7 @@
 				109ECD5B1C3D3B2100290307 /* PageFlipEffectController */,
 				10D4F60A1C41487300D056EB /* CATransform3DM34Controller */,
 				10D4F60E1C41535D00D056EB /* PressAnimationButtonController */,
+				100148CA1C43E1AF006D9153 /* BezierPathViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1896,6 +1909,7 @@
 				106CF09D1C376DAA0006419B /* ButtonsAlertView.m in Sources */,
 				1017F13A1C35715400E245F8 /* NSDictionary+JSONData.m in Sources */,
 				102B857F1C3CF27A001699A9 /* UIButton+AFNetworking.m in Sources */,
+				100148C91C43D53D006D9153 /* BezierPathViewController.m in Sources */,
 				10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */,
 				106CF0991C3765360006419B /* UIFont+Fonts.m in Sources */,
 				102B856D1C3CF27A001699A9 /* AFHTTPRequestOperation.m in Sources */,
