@@ -32,6 +32,9 @@
         
         // AFNetworking 2.x 相关初始化
         self.manager = [AFHTTPRequestOperationManager manager];
+        
+        // 设置请求头
+        self.HTTPHeaderFieldsWithValues = [NSMutableDictionary dictionary];
     }
     
     return self;
@@ -124,11 +127,10 @@
                                             }
                                         }];
     }
-    
 }
 
 - (void)cancelRequest {
- 
+    
     [self.httpOperation cancel];
 }
 
@@ -140,7 +142,7 @@
     Networking *networking       = [[V_2_X_Networking alloc] init];
     networking.urlString         = urlString;
     networking.requestDictionary = requestDictionary;
-
+    
     if (requestBodyType) {
         
         networking.requestBodyType = requestBodyType;
@@ -183,7 +185,7 @@
  *  重置数据
  */
 - (void)resetData {
-
+    
     self.originalResponseData   = nil;
     self.serializerResponseData = nil;
 }
@@ -236,7 +238,7 @@
  *  处理请求头部信息
  */
 - (void)accessHeaderField {
-
+    
     if (self.HTTPHeaderFieldsWithValues) {
         
         NSArray *allKeys = self.HTTPHeaderFieldsWithValues.allKeys;
@@ -253,7 +255,7 @@
  *  设置超时时间
  */
 - (void)accessTimeoutInterval {
-
+    
     if (self.timeoutInterval && self.timeoutInterval.floatValue > 0) {
         
         [self.manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
@@ -270,22 +272,22 @@
  *  @return 处理后的参数
  */
 - (NSDictionary *)accessRequestDictionarySerializerWithRequestDictionary:(NSDictionary *)requestDictionary {
-
+    
     if (self.requestDictionarySerializer &&
         [self.requestDictionarySerializer respondsToSelector:@selector(serializeRequestDictionary:)]) {
         
         return [self.requestDictionarySerializer serializeRequestDictionary:requestDictionary];
         
     } else {
-    
+        
         return requestDictionary;
     }
 }
 
-#pragma mark - 
+#pragma mark -
 
 - (void)dealloc {
-
+    
     [self.httpOperation cancel];
 }
 
