@@ -11,6 +11,7 @@
 #import "CALayer+SetRect.h"
 #import "UIFont+Fonts.h"
 #import "UIView+AnimationProperty.h"
+#import "WxHxD.h"
 #import "GCD.h"
 
 @interface BezierPathViewController ()
@@ -26,6 +27,22 @@
     
     [super setup];
     
+    // Scale value.
+    CGFloat scale = 1;
+    
+    if (iPhone == iPhone4_4s || iPhone == iPhone5_5s) {
+
+        scale = 0.65f;
+        
+    } else if (iPhone == iPhone6) {
+    
+        scale = 0.75f;
+        
+    } else if (iPhone == iPhone6_plus) {
+        
+        scale = 0.8f;
+    }
+    
     self.backgroundView.backgroundColor = [UIColor blackColor];
     
     // Used as background.
@@ -35,12 +52,11 @@
         shapeLayer.path          = [self path].CGPath;
         
         shapeLayer.fillColor   = [UIColor clearColor].CGColor;
-        shapeLayer.strokeColor = [UIColor redColor].CGColor;
+        shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
         shapeLayer.lineWidth   = 0.5f;
         shapeLayer.opacity     = 0.5f;
         shapeLayer.position    = self.contentView.middlePoint;
-        shapeLayer.shadowColor = [UIColor redColor].CGColor;
-        [shapeLayer setTransform:CATransform3DMakeScale(0.65, 0.65, 1.f)];
+        [shapeLayer setTransform:CATransform3DMakeScale(scale, scale, 1.f)];
         
         [self.contentView.layer addSublayer:shapeLayer];
     }
@@ -59,7 +75,8 @@
         self.shapeLayer.shadowColor   = [UIColor redColor].CGColor;
         self.shapeLayer.shadowOpacity = 1.f;
         self.shapeLayer.shadowRadius  = 4.f;
-        [self.shapeLayer setTransform:CATransform3DMakeScale(0.65, 0.65, 1.f)];
+        self.shapeLayer.lineCap       = kCALineCapRound;
+        [self.shapeLayer setTransform:CATransform3DMakeScale(scale, scale, 1.f)];
         [self.contentView.layer addSublayer:self.shapeLayer];
         
         CGFloat MAX = 0.98f;

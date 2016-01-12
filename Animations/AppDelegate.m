@@ -10,6 +10,7 @@
 #import "AnimationsListViewController.h"
 #import "UIColor+CustomColors.h"
 #import "CustomNavigationController.h"
+#import "WxHxD.h"
 
 @implementation AppDelegate
 
@@ -30,6 +31,7 @@
      
      */
     
+    [WxHxD setup];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     AnimationsListViewController *animationsListViewController = [AnimationsListViewController new];

@@ -134,6 +134,7 @@
 		104228C61C3695230011409C /* PictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C51C3695230011409C /* PictureModel.m */; };
 		104228C91C36956C0011409C /* PictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C81C36956C0011409C /* PictureCell.m */; };
 		104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228CC1C369E7C0011409C /* UIView+AnimationProperty.m */; };
+		1047CFF81C44897A009ADED6 /* WxHxD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1047CFF71C44897A009ADED6 /* WxHxD.m */; };
 		1048F6EF1C28D56B0052F1DD /* MDMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EC1C28D56B0052F1DD /* MDMatrix.m */; };
 		1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EE1C28D56B0052F1DD /* MDScratchImageView.mm */; };
 		1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6F21C28D5B60052F1DD /* ScratchImageViewController.m */; };
@@ -484,6 +485,8 @@
 		104228C81C36956C0011409C /* PictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCell.m; sourceTree = "<group>"; };
 		104228CB1C369E7C0011409C /* UIView+AnimationProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationProperty.h"; sourceTree = "<group>"; };
 		104228CC1C369E7C0011409C /* UIView+AnimationProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationProperty.m"; sourceTree = "<group>"; };
+		1047CFF61C44897A009ADED6 /* WxHxD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxHxD.h; sourceTree = "<group>"; };
+		1047CFF71C44897A009ADED6 /* WxHxD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxHxD.m; sourceTree = "<group>"; };
 		1048F6EB1C28D56B0052F1DD /* MDMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDMatrix.h; sourceTree = "<group>"; };
 		1048F6EC1C28D56B0052F1DD /* MDMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMatrix.m; sourceTree = "<group>"; };
 		1048F6ED1C28D56B0052F1DD /* MDScratchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDScratchImageView.h; sourceTree = "<group>"; };
@@ -634,7 +637,6 @@
 		B5D0119B1C0BE33E0075BC2E /* ClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassModel.m; sourceTree = "<group>"; };
 		B5D0119C1C0BE33E0075BC2E /* StudentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentModel.h; sourceTree = "<group>"; };
 		B5D0119D1C0BE33E0075BC2E /* StudentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentModel.m; sourceTree = "<group>"; };
-		B5D011A01C0BE36B0075BC2E /* WxHxD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxHxD.h; sourceTree = "<group>"; };
 		B5D011A41C0BE3D30075BC2E /* ClassHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassHeaderView.h; sourceTree = "<group>"; };
 		B5D011A51C0BE3D30075BC2E /* ClassHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassHeaderView.m; sourceTree = "<group>"; };
 		B5D011A81C0BE7F00075BC2E /* CustomHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderFooterView.h; sourceTree = "<group>"; };
@@ -1730,7 +1732,8 @@
 		B5D011A11C0BE3730075BC2E /* WxHxD */ = {
 			isa = PBXGroup;
 			children = (
-				B5D011A01C0BE36B0075BC2E /* WxHxD.h */,
+				1047CFF61C44897A009ADED6 /* WxHxD.h */,
+				1047CFF71C44897A009ADED6 /* WxHxD.m */,
 			);
 			name = WxHxD;
 			sourceTree = "<group>";
@@ -1875,6 +1878,7 @@
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
+				1047CFF81C44897A009ADED6 /* WxHxD.m in Sources */,
 				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
 				102B85001C3C9FBB001699A9 /* NumberFormatter.m in Sources */,
 				102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */,
