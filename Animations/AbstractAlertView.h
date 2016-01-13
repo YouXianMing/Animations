@@ -21,6 +21,20 @@
  */
 - (void)alertView:(AbstractAlertView *)alertView data:(id)data atIndex:(NSInteger)index;
 
+/**
+ *  The AlertView will hide.
+ *
+ *  @param alertView The AlertViewProtocol object.
+ */
+- (void)alertViewWillHide:(AbstractAlertView *)alertView;
+
+/**
+ *  The AlertView did hide.
+ *
+ *  @param alertView The AlertViewProtocol object.
+ */
+- (void)alertViewDidHide:(AbstractAlertView *)alertView;
+
 @end
 
 @interface AbstractAlertView : UIView
