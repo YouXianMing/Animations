@@ -9,14 +9,31 @@
 #ifndef CustomViewControllerSubviewTagValue_h
 #define CustomViewControllerSubviewTagValue_h
 
+//  level            view             tag            Interaction
+//  ----------------------------------------------------------------------
+//
+//  highest          windowView       kWindowView      NO
+//
+//  higher           loadingView      kLoadingView     NO
+//
+//  high             titleView        kTitleView       YES
+//
+//  high             contentView      kContentView     YES
+//
+//  normal           backgroundView   kContentView     YES
+//
+//  low              view             -                YES
+
 typedef enum : NSUInteger {
     
-    kWindowView = 0x10000,
-    kLoadingView,
-    kTitleView,
-    kContentView,
-    kBackgroundView,
+    kWindowView = 1000,
+    kLoadingView      ,
+    
+    kTitleView        ,
+    kContentView      ,
+    kBackgroundView   ,
     
 } EViewControllerSubViewTag;
 
 #endif /* CustomViewControllerSubviewTagValue_h */
+
