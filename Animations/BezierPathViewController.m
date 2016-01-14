@@ -139,13 +139,6 @@
     [bezierPath addLineToPoint: CGPointMake(456, 107)];
     [bezierPath addLineToPoint: CGPointMake(463, 150)];
     [bezierPath addLineToPoint: CGPointMake(600, 150)];
-    bezierPath.lineCapStyle = kCGLineCapSquare;
-    
-    bezierPath.lineJoinStyle = kCGLineJoinBevel;
-    
-    [UIColor.blackColor setStroke];
-    bezierPath.lineWidth = 1;
-    [bezierPath stroke];
     
     return bezierPath;
 }

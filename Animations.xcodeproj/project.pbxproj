@@ -491,6 +491,7 @@
 		1047CFF71C44897A009ADED6 /* WxHxD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxHxD.m; sourceTree = "<group>"; };
 		1047D0F01C465753009ADED6 /* InfiniteRotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteRotationView.h; sourceTree = "<group>"; };
 		1047D0F11C465753009ADED6 /* InfiniteRotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteRotationView.m; sourceTree = "<group>"; };
+		1047D1051C47412F009ADED6 /* CustomViewControllerSubviewTagValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewControllerSubviewTagValue.h; sourceTree = "<group>"; };
 		1048F6EB1C28D56B0052F1DD /* MDMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDMatrix.h; sourceTree = "<group>"; };
 		1048F6EC1C28D56B0052F1DD /* MDMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMatrix.m; sourceTree = "<group>"; };
 		1048F6ED1C28D56B0052F1DD /* MDScratchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDScratchImageView.h; sourceTree = "<group>"; };
@@ -1275,6 +1276,7 @@
 			children = (
 				10381FC21BF9B77000E5E476 /* CustomNavigationController.h */,
 				10381FC31BF9B77000E5E476 /* CustomNavigationController.m */,
+				1047D1051C47412F009ADED6 /* CustomViewControllerSubviewTagValue.h */,
 				104F0CC31BFAC04300C46E6A /* CustomViewController.h */,
 				104F0CC41BFAC04300C46E6A /* CustomViewController.m */,
 				10CEC54F1C20F5E400B0CA7D /* CustomNormalContentViewController.h */,

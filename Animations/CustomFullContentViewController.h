@@ -37,20 +37,6 @@
 - (void)removeTitleView;
 
 /**
- *  Enable loading view and block contentView's event.
- *
- *  @param enable Enable or not.
- */
-- (void)enableLoadingView:(BOOL)enable;
-
-/**
- *  Enable windowView view and block contentView's event.
- *
- *  @param enable Enable or not.
- */
-- (void)enableWindowView:(BOOL)enable;
-
-/**
  *  Build titleView, please overwrite by subclass.
  */
 - (void)buildTitleView;

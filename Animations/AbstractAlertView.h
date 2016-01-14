@@ -12,6 +12,8 @@
 
 @protocol AbstractAlertViewDelegate <NSObject>
 
+@optional
+
 /**
  *  The AlertView's event.
  *
