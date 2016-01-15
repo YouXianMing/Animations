@@ -43,6 +43,7 @@
 #import "CATransform3DM34Controller.h"
 #import "PressAnimationButtonController.h"
 #import "BezierPathViewController.h"
+#import "MusicBarAnimationController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -147,7 +148,8 @@
                        [Item itemWithName:@"翻页效果" object:[PageFlipEffectController class]],
                        [Item itemWithName:@"CATransform3D m34" object:[CATransform3DM34Controller class]],
                        [Item itemWithName:@"按钮特效" object:[PressAnimationButtonController class]],
-                       [Item itemWithName:@"心电图动画效果" object:[BezierPathViewController class]]];
+                       [Item itemWithName:@"心电图动画效果" object:[BezierPathViewController class]],
+                       [Item itemWithName:@"音乐波形图动画" object:[MusicBarAnimationController class]]];
     
     self.items = [NSMutableArray array];
     

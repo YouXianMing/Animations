@@ -194,6 +194,7 @@
 		10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C611C12D5FD00C3E505 /* DrawValues.m */; };
 		10A67C651C12D68D00C3E505 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C641C12D68D00C3E505 /* DrawView.m */; };
 		10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C671C12D96500C3E505 /* DrawLineView.m */; };
+		10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */; };
 		10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */; };
 		10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5531C20F5F400B0CA7D /* CustomFullContentViewController.m */; };
 		10CEC5861C21321800B0CA7D /* NormalTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5851C21321800B0CA7D /* NormalTitleViewController.m */; };
@@ -613,6 +614,8 @@
 		10A67C641C12D68D00C3E505 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		10A67C661C12D96500C3E505 /* DrawLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLineView.h; sourceTree = "<group>"; };
 		10A67C671C12D96500C3E505 /* DrawLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLineView.m; sourceTree = "<group>"; };
+		10AB70D81C4925F7008C9C88 /* MusicBarAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicBarAnimationController.h; sourceTree = "<group>"; };
+		10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicBarAnimationController.m; sourceTree = "<group>"; };
 		10CEC54F1C20F5E400B0CA7D /* CustomNormalContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNormalContentViewController.h; sourceTree = "<group>"; };
 		10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNormalContentViewController.m; sourceTree = "<group>"; };
 		10CEC5521C20F5F400B0CA7D /* CustomFullContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFullContentViewController.h; sourceTree = "<group>"; };
@@ -1351,6 +1354,7 @@
 				10D4F60A1C41487300D056EB /* CATransform3DM34Controller */,
 				10D4F60E1C41535D00D056EB /* PressAnimationButtonController */,
 				100148CA1C43E1AF006D9153 /* BezierPathViewController */,
+				10AB70DB1C49298D008C9C88 /* MusicBarAnimationController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1700,6 +1704,15 @@
 			name = DrawWaveViewController;
 			sourceTree = "<group>";
 		};
+		10AB70DB1C49298D008C9C88 /* MusicBarAnimationController */ = {
+			isa = PBXGroup;
+			children = (
+				10AB70D81C4925F7008C9C88 /* MusicBarAnimationController.h */,
+				10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */,
+			);
+			name = MusicBarAnimationController;
+			sourceTree = "<group>";
+		};
 		10CEC5911C2238B500B0CA7D /* LabelScaleViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1892,6 +1905,7 @@
 				102296AF1C38D122001AF5BB /* CmtsModel.m in Sources */,
 				102B858C1C3CF2A9001699A9 /* V_2_X_NetworkingIndicator.m in Sources */,
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
+				10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */,
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
