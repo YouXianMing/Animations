@@ -14,7 +14,7 @@
               maximumFractionDigits:(NSUInteger)maximumFractionDigits
               minimumFractionDigits:(NSUInteger)minimumFractionDigits
                        roundingMode:(NSNumberFormatterRoundingMode)roundingMode {
-
+    
     NSNumberFormatter *numFormatter    = [[NSNumberFormatter alloc] init];
     numFormatter.numberStyle           = kCFNumberFormatterPercentStyle;
     numFormatter.maximumFractionDigits = maximumFractionDigits;
@@ -24,13 +24,13 @@
     return [numFormatter stringFromNumber:[NSNumber numberWithFloat:value]];
 }
 
-+ (NSString *)normalStyleWithValue:(CGFloat)value
-             maximumFractionDigits:(NSUInteger)maximumFractionDigits
-             minimumFractionDigits:(NSUInteger)minimumFractionDigits
-                      roundingMode:(NSNumberFormatterRoundingMode)roundingMode {
++ (NSString *)decimalStyleWithValue:(CGFloat)value
+              maximumFractionDigits:(NSUInteger)maximumFractionDigits
+              minimumFractionDigits:(NSUInteger)minimumFractionDigits
+                       roundingMode:(NSNumberFormatterRoundingMode)roundingMode {
     
     NSNumberFormatter *numFormatter    = [[NSNumberFormatter alloc] init];
-    numFormatter.numberStyle           = kCFNumberFormatterNoStyle;
+    numFormatter.numberStyle           = kCFNumberFormatterDecimalStyle;
     numFormatter.maximumFractionDigits = maximumFractionDigits;
     numFormatter.minimumFractionDigits = minimumFractionDigits;
     numFormatter.roundingMode          = roundingMode;

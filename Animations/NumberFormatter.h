@@ -27,7 +27,7 @@
                        roundingMode:(NSNumberFormatterRoundingMode)roundingMode;
 
 /**
- *  Get normal style value string.(eg: 23 -> 23.00)
+ *  Get decimal style value string.(eg: 23 -> 23.00)
  *
  *  @param value                 Input value.
  *  @param maximumFractionDigits Maximum fraction digits.
@@ -36,9 +36,9 @@
  *
  *  @return Percent style value string.
  */
-+ (NSString *)normalStyleWithValue:(CGFloat)value
-             maximumFractionDigits:(NSUInteger)maximumFractionDigits
-             minimumFractionDigits:(NSUInteger)minimumFractionDigits
-                      roundingMode:(NSNumberFormatterRoundingMode)roundingMode;
++ (NSString *)decimalStyleWithValue:(CGFloat)value
+              maximumFractionDigits:(NSUInteger)maximumFractionDigits
+              minimumFractionDigits:(NSUInteger)minimumFractionDigits
+                       roundingMode:(NSNumberFormatterRoundingMode)roundingMode;
 
 @end
