@@ -16,9 +16,6 @@
 
 @interface BezierPathViewController ()
 
-@property (nonatomic, strong) GCDTimer      *timer;
-@property (nonatomic, strong) CAShapeLayer  *shapeLayer;
-
 @end
 
 @implementation BezierPathViewController
@@ -61,57 +58,163 @@
         [self.contentView.layer addSublayer:shapeLayer];
     }
     
-    // Animation.
+    // Red line animation.
     {
-        self.shapeLayer           = [CAShapeLayer layer];
-        self.shapeLayer.frame     = CGRectMake(0, 0, 600, 300);
-        self.shapeLayer.path      = [self path].CGPath;
-        self.shapeLayer.strokeEnd = 0.f;
+        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+        shapeLayer.frame         = CGRectMake(0, 0, 600, 300);
+        shapeLayer.path          = [self path].CGPath;
+        shapeLayer.strokeEnd     = 0.f;
         
-        self.shapeLayer.fillColor     = [UIColor clearColor].CGColor;
-        self.shapeLayer.strokeColor   = [UIColor redColor].CGColor;
-        self.shapeLayer.lineWidth     = 2.f;
-        self.shapeLayer.position      = self.contentView.middlePoint;
-        self.shapeLayer.shadowColor   = [UIColor redColor].CGColor;
-        self.shapeLayer.shadowOpacity = 1.f;
-        self.shapeLayer.shadowRadius  = 4.f;
-        self.shapeLayer.lineCap       = kCALineCapRound;
-        [self.shapeLayer setTransform:CATransform3DMakeScale(scale, scale, 1.f)];
-        [self.contentView.layer addSublayer:self.shapeLayer];
+        shapeLayer.fillColor     = [UIColor clearColor].CGColor;
+        shapeLayer.strokeColor   = [UIColor redColor].CGColor;
+        shapeLayer.lineWidth     = 2.f;
+        shapeLayer.position      = self.contentView.middlePoint;
+        shapeLayer.shadowColor   = [UIColor redColor].CGColor;
+        shapeLayer.shadowOpacity = 1.f;
+        shapeLayer.shadowRadius  = 4.f;
+        shapeLayer.lineCap       = kCALineCapRound;
+        [shapeLayer setTransform:CATransform3DMakeScale(scale, scale, 1.f)];
+        [self.contentView.layer addSublayer:shapeLayer];
         
         CGFloat MAX = 0.98f;
         CGFloat GAP = 0.02;
         
-        self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
-        [self.timer event:^{
-            
-            CABasicAnimation *aniStart = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
-            aniStart.fromValue         = [NSNumber numberWithFloat:0.f];
-            aniStart.toValue           = [NSNumber numberWithFloat:MAX];
-            aniStart.duration          = 4.9f;
-            
-            CABasicAnimation *aniEnd   = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-            aniEnd.fromValue           = [NSNumber numberWithFloat:0.f + GAP];
-            aniEnd.toValue             = [NSNumber numberWithFloat:MAX + GAP];
-            aniEnd.duration            = 4.9f;
-            
-            CAAnimationGroup *group = [CAAnimationGroup animation];
-            group.duration          = 4.9f;
-            group.animations        = @[aniEnd, aniStart];
-            
-            self.shapeLayer.strokeStart   = MAX;
-            self.shapeLayer.strokeEnd     = MAX + GAP;
-            [self.shapeLayer addAnimation:group forKey:nil];
-            
-        } timeIntervalWithSecs:5.f delaySecs:1.f];
-        [self.timer start];
+        CABasicAnimation *aniStart = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
+        aniStart.fromValue         = [NSNumber numberWithFloat:0.f];
+        aniStart.toValue           = [NSNumber numberWithFloat:MAX];
+        
+        CABasicAnimation *aniEnd   = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        aniEnd.fromValue           = [NSNumber numberWithFloat:0.f + GAP];
+        aniEnd.toValue             = [NSNumber numberWithFloat:MAX + GAP];
+        
+        CAAnimationGroup *group = [CAAnimationGroup animation];
+        group.duration          = 4.f;
+        group.repeatCount       = CGFLOAT_MAX;
+        group.autoreverses      = YES;
+        group.animations        = @[aniEnd, aniStart];
+        
+        [shapeLayer addAnimation:group forKey:nil];
+    }
+    
+    // Green line animation.
+    {
+        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+        shapeLayer.frame         = CGRectMake(0, 0, 600, 300);
+        shapeLayer.path          = [self path].CGPath;
+        shapeLayer.strokeEnd     = 0.f;
+        
+        shapeLayer.fillColor     = [UIColor clearColor].CGColor;
+        shapeLayer.strokeColor   = [UIColor greenColor].CGColor;
+        shapeLayer.lineWidth     = 2.f;
+        shapeLayer.position      = self.contentView.middlePoint;
+        shapeLayer.shadowColor   = [UIColor greenColor].CGColor;
+        shapeLayer.shadowOpacity = 1.f;
+        shapeLayer.shadowRadius  = 4.f;
+        shapeLayer.lineCap       = kCALineCapRound;
+        [shapeLayer setTransform:CATransform3DMakeScale(scale, scale, 1.f)];
+        [self.contentView.layer addSublayer:shapeLayer];
+        
+        CGFloat MAX = 0.98f;
+        CGFloat GAP = 0.02;
+        
+        CABasicAnimation *aniStart = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
+        aniStart.fromValue         = [NSNumber numberWithFloat:0.f];
+        aniStart.toValue           = [NSNumber numberWithFloat:MAX];
+        
+        CABasicAnimation *aniEnd   = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        aniEnd.fromValue           = [NSNumber numberWithFloat:0.f + GAP];
+        aniEnd.toValue             = [NSNumber numberWithFloat:MAX + GAP];
+        
+        CAAnimationGroup *group = [CAAnimationGroup animation];
+        group.duration          = 8.f;
+        group.repeatCount       = CGFLOAT_MAX;
+        group.autoreverses      = YES;
+        group.animations        = @[aniEnd, aniStart];
+        
+        [shapeLayer addAnimation:group forKey:nil];
+    }
+    
+    // Cyan line animation.
+    {
+        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+        shapeLayer.frame         = CGRectMake(0, 0, 600, 300);
+        shapeLayer.path          = [self path].CGPath;
+        shapeLayer.strokeEnd     = 0.f;
+        
+        shapeLayer.fillColor     = [UIColor clearColor].CGColor;
+        shapeLayer.strokeColor   = [UIColor cyanColor].CGColor;
+        shapeLayer.lineWidth     = 2.f;
+        shapeLayer.position      = self.contentView.middlePoint;
+        shapeLayer.shadowColor   = [UIColor cyanColor].CGColor;
+        shapeLayer.shadowOpacity = 1.f;
+        shapeLayer.shadowRadius  = 4.f;
+        shapeLayer.lineCap       = kCALineCapRound;
+        [shapeLayer setTransform:CATransform3DMakeScale(scale, scale, 1.f)];
+        [self.contentView.layer addSublayer:shapeLayer];
+        
+        CGFloat MAX = 0.98f;
+        CGFloat GAP = 0.02;
+        
+        CABasicAnimation *aniStart = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
+        aniStart.fromValue         = [NSNumber numberWithFloat:MAX];
+        aniStart.toValue           = [NSNumber numberWithFloat:0];
+        
+        CABasicAnimation *aniEnd   = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        aniEnd.fromValue           = [NSNumber numberWithFloat:1.f];
+        aniEnd.toValue             = [NSNumber numberWithFloat:GAP];
+        
+        CAAnimationGroup *group = [CAAnimationGroup animation];
+        group.duration          = 4.f;
+        group.repeatCount       = CGFLOAT_MAX;
+        group.autoreverses      = YES;
+        group.animations        = @[aniEnd, aniStart];
+        
+        [shapeLayer addAnimation:group forKey:nil];
+    }
+    
+    // Yellow line animation.
+    {
+        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+        shapeLayer.frame         = CGRectMake(0, 0, 600, 300);
+        shapeLayer.path          = [self path].CGPath;
+        shapeLayer.strokeEnd     = 0.f;
+        
+        shapeLayer.fillColor     = [UIColor clearColor].CGColor;
+        shapeLayer.strokeColor   = [UIColor yellowColor].CGColor;
+        shapeLayer.lineWidth     = 2.f;
+        shapeLayer.position      = self.contentView.middlePoint;
+        shapeLayer.shadowColor   = [UIColor yellowColor].CGColor;
+        shapeLayer.shadowOpacity = 1.f;
+        shapeLayer.shadowRadius  = 4.f;
+        shapeLayer.lineCap       = kCALineCapRound;
+        [shapeLayer setTransform:CATransform3DMakeScale(scale, scale, 1.f)];
+        [self.contentView.layer addSublayer:shapeLayer];
+        
+        CGFloat MAX = 0.98f;
+        CGFloat GAP = 0.02;
+        
+        CABasicAnimation *aniStart = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
+        aniStart.fromValue         = [NSNumber numberWithFloat:MAX];
+        aniStart.toValue           = [NSNumber numberWithFloat:0];
+        
+        CABasicAnimation *aniEnd   = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        aniEnd.fromValue           = [NSNumber numberWithFloat:1.f];
+        aniEnd.toValue             = [NSNumber numberWithFloat:GAP];
+        
+        CAAnimationGroup *group = [CAAnimationGroup animation];
+        group.duration          = 8.f;
+        group.repeatCount       = CGFLOAT_MAX;
+        group.autoreverses      = YES;
+        group.animations        = @[aniEnd, aniStart];
+        
+        [shapeLayer addAnimation:group forKey:nil];
     }
 }
 
 - (UIBezierPath *)path {
     
     UIBezierPath* bezierPath = [UIBezierPath bezierPath];
-    [bezierPath moveToPoint: CGPointMake(0, 150)];
+    [bezierPath moveToPoint   : CGPointMake(0, 150)];
     [bezierPath addLineToPoint: CGPointMake(68, 150)];
     [bezierPath addLineToPoint: CGPointMake(83, 107)];
     [bezierPath addLineToPoint: CGPointMake(96, 206)];
