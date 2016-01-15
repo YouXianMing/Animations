@@ -33,7 +33,6 @@
     
     replicatorLayer.frame              = CGRectMake(0, 0, width, height);
     replicatorLayer.position           = self.view.center;
-    replicatorLayer.borderWidth        = 0.5f;
     replicatorLayer.instanceCount      = width / 8;
     replicatorLayer.masksToBounds      = YES;
     replicatorLayer.instanceTransform  = CATransform3DMakeTranslation(-8.0, 0.0, 0.0);
@@ -69,6 +68,9 @@
     [self.timer start];
 }
 
+/**
+ *  Overwrite buildTitleView method.
+ */
 - (void)buildTitleView {
     
     [super buildTitleView];
