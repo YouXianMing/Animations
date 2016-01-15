@@ -34,7 +34,7 @@ typedef enum : NSUInteger {
 @interface WxHxD : NSObject
 
 /**
- *  Base setup, you should run this method at 
+ *  Base setup, you should run this method first.
  */
 + (void)setup;
 

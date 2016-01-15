@@ -31,6 +31,7 @@
 		1017F13A1C35715400E245F8 /* NSDictionary+JSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017F1341C35715400E245F8 /* NSDictionary+JSONData.m */; };
 		1017F13B1C35715400E245F8 /* NSString+JSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017F1361C35715400E245F8 /* NSString+JSONData.m */; };
 		1017F13C1C35715400E245F8 /* NSData+JSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017F1381C35715400E245F8 /* NSData+JSONData.m */; };
+		101EA3EE1C489C2E00D5D487 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 101EA3ED1C489C2E00D5D487 /* DateFormatter.m */; };
 		102296921C38CF71001AF5BB /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296801C38CF71001AF5BB /* NodeModel.m */; };
 		102296931C38CF71001AF5BB /* NodeModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296821C38CF71001AF5BB /* NodeModelCell.m */; };
 		102296941C38CF71001AF5BB /* NodeModelRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296841C38CF71001AF5BB /* NodeModelRootNavigationController.m */; };
@@ -263,6 +264,8 @@
 		1017F1361C35715400E245F8 /* NSString+JSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSONData.m"; sourceTree = "<group>"; };
 		1017F1371C35715400E245F8 /* NSData+JSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JSONData.h"; sourceTree = "<group>"; };
 		1017F1381C35715400E245F8 /* NSData+JSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JSONData.m"; sourceTree = "<group>"; };
+		101EA3EC1C489C2E00D5D487 /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatter.h; sourceTree = "<group>"; };
+		101EA3ED1C489C2E00D5D487 /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
 		1022967F1C38CF71001AF5BB /* NodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModel.h; sourceTree = "<group>"; };
 		102296801C38CF71001AF5BB /* NodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
 		102296811C38CF71001AF5BB /* NodeModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelCell.h; sourceTree = "<group>"; };
@@ -692,8 +695,9 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				101EA3EB1C489C1400D5D487 /* DateFormatter */,
 				1047D0F31C465758009ADED6 /* InfiniteRotationView */,
-				102B85841C3CF28A001699A9 /* Network */,
+				102B85841C3CF28A001699A9 /* Networking */,
 				102B852C1C3CF18C001699A9 /* UIImage+Category */,
 				102B85011C3C9FBF001699A9 /* NumberFormatter */,
 				102B84DB1C3B95E8001699A9 /* FileManager */,
@@ -785,6 +789,15 @@
 			children = (
 			);
 			name = CreateModel;
+			sourceTree = "<group>";
+		};
+		101EA3EB1C489C1400D5D487 /* DateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				101EA3EC1C489C2E00D5D487 /* DateFormatter.h */,
+				101EA3ED1C489C2E00D5D487 /* DateFormatter.m */,
+			);
+			name = DateFormatter;
 			sourceTree = "<group>";
 		};
 		1022967E1C38CF71001AF5BB /* NodeModel */ = {
@@ -1034,7 +1047,7 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
-		102B85841C3CF28A001699A9 /* Network */ = {
+		102B85841C3CF28A001699A9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				102B858E1C3CF2B6001699A9 /* 2.x-Networking */,
@@ -1042,7 +1055,7 @@
 				102B85471C3CF27A001699A9 /* Networking */,
 				102B855A1C3CF27A001699A9 /* UIKit+AFNetworking */,
 			);
-			name = Network;
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		102B858E1C3CF2B6001699A9 /* 2.x-Networking */ = {
@@ -1999,6 +2012,7 @@
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
 				10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */,
 				106249981C2785630090AD65 /* EmitterSnowController.m in Sources */,
+				101EA3EE1C489C2E00D5D487 /* DateFormatter.m in Sources */,
 				10381F701BF9B47000E5E476 /* AnimationsListViewController.m in Sources */,
 				102B85751C3CF27A001699A9 /* AFURLSessionManager.m in Sources */,
 				104F0CC51BFAC04300C46E6A /* CustomViewController.m in Sources */,
