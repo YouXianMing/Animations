@@ -59,7 +59,7 @@
         CAAnimationGroup *group = [CAAnimationGroup animation];
         group.duration          = 1.f;
         group.autoreverses      = true;
-        group.repeatCount       = CGFLOAT_MAX;
+        group.repeatCount       = 20;
         group.timingFunction    = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
         group.animations        = @[colorAnimation, positionAnimation];
         [layer addAnimation:group forKey:nil];

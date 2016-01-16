@@ -13,6 +13,7 @@
 #import "UIView+SetRect.h"
 #import "POP.h"
 
+
 @interface PageFlipEffectController ()
 
 @property (nonatomic, strong) CALayer *layer;
@@ -26,10 +27,13 @@
     
     [super setup];
     
+    UIImage *image = [UIImage imageNamed:@"pic_1"];
+    CGSize   size  = [Math resetFromSize:image.size withFixedWidth:Width / 2.f];
+    
     // layer
     _layer               = [CALayer layer];
     _layer.anchorPoint   = CGPointMake(1.f, 0.5f);
-    _layer.frame         = CGRectMake(0, 0, Width / 2.f, 300);
+    _layer.frame         = CGRectMake(0, 0, Width / 2.f, size.height);
     _layer.x             = 0;
     _layer.position      = CGPointMake(Width / 2.f, self.contentView.middleY);
     _layer.contents      = (__bridge id)([UIImage imageNamed:@"pic_1"].CGImage);
