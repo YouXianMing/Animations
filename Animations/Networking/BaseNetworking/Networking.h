@@ -113,15 +113,6 @@
  */
 @property (nonatomic, strong) id  serializerResponseData;
 
-#pragma mark - 开启网络指示器
-
-/**
- *  开启网络状态指示器
- *
- *  @param show 是否开启
- */
-+ (void)showNetworkActivityIndicator:(BOOL)show;
-
 #pragma mark - 请求方法
 
 /**

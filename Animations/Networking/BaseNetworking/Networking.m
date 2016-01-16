@@ -46,10 +46,4 @@
     return nil;
 }
 
-+ (void)showNetworkActivityIndicator:(BOOL)show {
-
-    [NSException raise:@"Networking showNetworkActivityIndicator::"
-                format:@"You must override this method."];
-}
-
 @end
