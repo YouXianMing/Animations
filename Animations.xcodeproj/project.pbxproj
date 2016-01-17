@@ -135,6 +135,10 @@
 		104228C61C3695230011409C /* PictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C51C3695230011409C /* PictureModel.m */; };
 		104228C91C36956C0011409C /* PictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C81C36956C0011409C /* PictureCell.m */; };
 		104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228CC1C369E7C0011409C /* UIView+AnimationProperty.m */; };
+		1043265D1C4B15A00033CEC0 /* ColorProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1043265C1C4B15A00033CEC0 /* ColorProgressViewController.m */; };
+		104326611C4B16310033CEC0 /* ColorProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104326601C4B16310033CEC0 /* ColorProgressView.m */; };
+		104326641C4B172F0033CEC0 /* ProgressColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 104326631C4B172F0033CEC0 /* ProgressColor.m */; };
+		104326671C4B505E0033CEC0 /* ProgressColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 104326661C4B505E0033CEC0 /* ProgressColor+Colors.m */; };
 		1047CFF81C44897A009ADED6 /* WxHxD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1047CFF71C44897A009ADED6 /* WxHxD.m */; };
 		1047D0F21C465753009ADED6 /* InfiniteRotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1047D0F11C465753009ADED6 /* InfiniteRotationView.m */; };
 		1048F6EF1C28D56B0052F1DD /* MDMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EC1C28D56B0052F1DD /* MDMatrix.m */; };
@@ -491,6 +495,14 @@
 		104228C81C36956C0011409C /* PictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCell.m; sourceTree = "<group>"; };
 		104228CB1C369E7C0011409C /* UIView+AnimationProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationProperty.h"; sourceTree = "<group>"; };
 		104228CC1C369E7C0011409C /* UIView+AnimationProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationProperty.m"; sourceTree = "<group>"; };
+		1043265B1C4B15A00033CEC0 /* ColorProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorProgressViewController.h; sourceTree = "<group>"; };
+		1043265C1C4B15A00033CEC0 /* ColorProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorProgressViewController.m; sourceTree = "<group>"; };
+		1043265F1C4B16310033CEC0 /* ColorProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorProgressView.h; sourceTree = "<group>"; };
+		104326601C4B16310033CEC0 /* ColorProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorProgressView.m; sourceTree = "<group>"; };
+		104326621C4B172F0033CEC0 /* ProgressColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressColor.h; sourceTree = "<group>"; };
+		104326631C4B172F0033CEC0 /* ProgressColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressColor.m; sourceTree = "<group>"; };
+		104326651C4B505E0033CEC0 /* ProgressColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProgressColor+Colors.h"; sourceTree = "<group>"; };
+		104326661C4B505E0033CEC0 /* ProgressColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ProgressColor+Colors.m"; sourceTree = "<group>"; };
 		1047CFF61C44897A009ADED6 /* WxHxD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxHxD.h; sourceTree = "<group>"; };
 		1047CFF71C44897A009ADED6 /* WxHxD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxHxD.m; sourceTree = "<group>"; };
 		1047D0F01C465753009ADED6 /* InfiniteRotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteRotationView.h; sourceTree = "<group>"; };
@@ -1355,6 +1367,7 @@
 				10D4F60E1C41535D00D056EB /* PressAnimationButtonController */,
 				100148CA1C43E1AF006D9153 /* BezierPathViewController */,
 				10AB70DB1C49298D008C9C88 /* MusicBarAnimationController */,
+				1043265E1C4B15A70033CEC0 /* ColorProgressViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1407,6 +1420,21 @@
 				104228CC1C369E7C0011409C /* UIView+AnimationProperty.m */,
 			);
 			name = AnimationProperty;
+			sourceTree = "<group>";
+		};
+		1043265E1C4B15A70033CEC0 /* ColorProgressViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1043265B1C4B15A00033CEC0 /* ColorProgressViewController.h */,
+				1043265C1C4B15A00033CEC0 /* ColorProgressViewController.m */,
+				1043265F1C4B16310033CEC0 /* ColorProgressView.h */,
+				104326601C4B16310033CEC0 /* ColorProgressView.m */,
+				104326621C4B172F0033CEC0 /* ProgressColor.h */,
+				104326631C4B172F0033CEC0 /* ProgressColor.m */,
+				104326651C4B505E0033CEC0 /* ProgressColor+Colors.h */,
+				104326661C4B505E0033CEC0 /* ProgressColor+Colors.m */,
+			);
+			name = ColorProgressViewController;
 			sourceTree = "<group>";
 		};
 		1047D0F31C465758009ADED6 /* InfiniteRotationView */ = {
@@ -1905,6 +1933,7 @@
 				102296AF1C38D122001AF5BB /* CmtsModel.m in Sources */,
 				102B858C1C3CF2A9001699A9 /* V_2_X_NetworkingIndicator.m in Sources */,
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
+				104326671C4B505E0033CEC0 /* ProgressColor+Colors.m in Sources */,
 				10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */,
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
@@ -1934,8 +1963,10 @@
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
 				10381FD41BF9D8B300E5E476 /* FillCircleLayerConfigure.m in Sources */,
 				104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */,
+				104326611C4B16310033CEC0 /* ColorProgressView.m in Sources */,
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
 				106CF0861C375DAD0006419B /* AbstractAlertView.m in Sources */,
+				104326641C4B172F0033CEC0 /* ProgressColor.m in Sources */,
 				109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */,
 				102296971C38CF71001AF5BB /* NodeModelViewController.m in Sources */,
 				B5D011A71C0BE3D30075BC2E /* ClassHeaderView.m in Sources */,
@@ -2050,6 +2081,7 @@
 				105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */,
 				104228C61C3695230011409C /* PictureModel.m in Sources */,
 				1030886E1C03F1B200C8B623 /* CircleView.m in Sources */,
+				1043265D1C4B15A00033CEC0 /* ColorProgressViewController.m in Sources */,
 				10589D261C2393C200F20BC0 /* FBShimmeringView.m in Sources */,
 				104F0D0F1BFB006C00C46E6A /* UIView+SetRect.m in Sources */,
 				1017F12A1C356EE700E245F8 /* UIImageView+HighlightedWebCache.m in Sources */,
