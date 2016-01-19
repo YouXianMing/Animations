@@ -68,6 +68,8 @@
 
 ![demo31.gif](http://images2015.cnblogs.com/blog/607542/201601/607542-20160117182146569-1627889864.gif)
 
+![demo32.gif](http://images2015.cnblogs.com/blog/607542/201601/607542-20160119212705890-1298778872.gif)
+
 > Part of the reference project
 
 [https://github.com/schneiderandre/popping](https://github.com/schneiderandre/popping)
