@@ -70,6 +70,8 @@
 
 ![demo32.gif](http://images2015.cnblogs.com/blog/607542/201601/607542-20160119212705890-1298778872.gif)
 
+![demo33.gif](http://images2015.cnblogs.com/blog/607542/201601/607542-20160121215642984-239939157.gif)
+
 > Part of the reference project
 
 [https://github.com/schneiderandre/popping](https://github.com/schneiderandre/popping)
@@ -79,3 +81,5 @@
 [https://github.com/moqod/iOS-Scratch-n-See](https://github.com/moqod/iOS-Scratch-n-See)
 
 [https://github.com/chiahsien/CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout)
+
+[http://ronnqvi.st/multiple-animations/](http://ronnqvi.st/multiple-animations/)
