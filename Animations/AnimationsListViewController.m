@@ -47,6 +47,7 @@
 #import "ColorProgressViewController.h"
 #import "SpringEffectController.h"
 #import "CASpringAnimationController.h"
+#import "AdditiveAnimationController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -155,7 +156,8 @@
                        [Item itemWithName:@"音乐波形图动画" object:[MusicBarAnimationController class]],
                        [Item itemWithName:@"彩色进度条" object:[ColorProgressViewController class]],
                        [Item itemWithName:@"果冻效果" object:[SpringEffectController class]],
-                       [Item itemWithName:@"CASpringAnimation" object:[CASpringAnimationController class]]];
+                       [Item itemWithName:@"CASpringAnimation" object:[CASpringAnimationController class]],
+                       [Item itemWithName:@"Additive属性动画" object:[AdditiveAnimationController class]]];
     
     self.items = [NSMutableArray array];
     

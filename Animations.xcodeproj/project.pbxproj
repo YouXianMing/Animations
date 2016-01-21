@@ -187,6 +187,7 @@
 		108A993C1C0FE34800B693F6 /* EasingRotateAnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A993B1C0FE34800B693F6 /* EasingRotateAnimationType.m */; };
 		108A993F1C0FF3B400B693F6 /* NormalRotateAnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A993E1C0FF3B400B693F6 /* NormalRotateAnimationType.m */; };
 		108A99421C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99411C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m */; };
+		10931AE71C51147A004D120D /* AdditiveAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10931AE61C51147A004D120D /* AdditiveAnimationController.m */; };
 		109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109BF1221C4E639F000F21BF /* CASpringAnimationController.m */; };
 		109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B4B1C0EC0700039CB04 /* CountDownTimerController.m */; };
 		109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109D5B4E1C0EC1420039CB04 /* TimeModel.m */; };
@@ -606,6 +607,8 @@
 		108A993E1C0FF3B400B693F6 /* NormalRotateAnimationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalRotateAnimationType.m; sourceTree = "<group>"; };
 		108A99401C0FF4BD00B693F6 /* POPSpringRotateAnimationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringRotateAnimationType.h; sourceTree = "<group>"; };
 		108A99411C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPSpringRotateAnimationType.m; sourceTree = "<group>"; };
+		10931AE51C51147A004D120D /* AdditiveAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdditiveAnimationController.h; sourceTree = "<group>"; };
+		10931AE61C51147A004D120D /* AdditiveAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdditiveAnimationController.m; sourceTree = "<group>"; };
 		109BF1211C4E639F000F21BF /* CASpringAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASpringAnimationController.h; sourceTree = "<group>"; };
 		109BF1221C4E639F000F21BF /* CASpringAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASpringAnimationController.m; sourceTree = "<group>"; };
 		109D5B4A1C0EC0700039CB04 /* CountDownTimerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownTimerController.h; sourceTree = "<group>"; };
@@ -1376,6 +1379,7 @@
 				1043265E1C4B15A70033CEC0 /* ColorProgressViewController */,
 				104326951C4BA1590033CEC0 /* SpringEffectController */,
 				109BF1241C4E70AD000F21BF /* CASpringAnimationController */,
+				10931AE81C51147E004D120D /* AdditiveAnimationController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1712,6 +1716,15 @@
 			name = ClockViewController;
 			sourceTree = "<group>";
 		};
+		10931AE81C51147E004D120D /* AdditiveAnimationController */ = {
+			isa = PBXGroup;
+			children = (
+				10931AE51C51147A004D120D /* AdditiveAnimationController.h */,
+				10931AE61C51147A004D120D /* AdditiveAnimationController.m */,
+			);
+			name = AdditiveAnimationController;
+			sourceTree = "<group>";
+		};
 		109BF1241C4E70AD000F21BF /* CASpringAnimationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1914,6 +1927,7 @@
 				B5D011941C0BE2410075BC2E /* RotateView.m in Sources */,
 				102B84E11C3B95F0001699A9 /* FileManager.m in Sources */,
 				102B85321C3CF226001699A9 /* UIImage+ImageEffects.m in Sources */,
+				10931AE71C51147A004D120D /* AdditiveAnimationController.m in Sources */,
 				108A99381C0FE01100B693F6 /* RotateAnimationView.m in Sources */,
 				102B857A1C3CF27A001699A9 /* RequestMethodType.m in Sources */,
 				B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */,
