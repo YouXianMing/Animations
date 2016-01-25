@@ -195,6 +195,9 @@
 		109ECD5A1C3D3B1900290307 /* PageFlipEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109ECD591C3D3B1900290307 /* PageFlipEffectController.m */; };
 		109ECD5E1C3D3F1500290307 /* CALayer+SetRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 109ECD5D1C3D3F1500290307 /* CALayer+SetRect.m */; };
 		109F66621C38CC7A0082BC95 /* WaterfallLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109F66611C38CC7A0082BC95 /* WaterfallLayoutController.m */; };
+		10A34F661C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A34F651C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m */; };
+		10A34F691C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A34F681C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.m */; };
+		10A34F6D1C55AE9500E1A0E0 /* SignMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A34F6C1C55AE9500E1A0E0 /* SignMaker.m */; };
 		10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C571C12D4BA00C3E505 /* CGContextObject.m */; };
 		10A67C5B1C12D4BA00C3E505 /* CGContextObjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C591C12D4BA00C3E505 /* CGContextObjectConfig.m */; };
 		10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C5E1C12D59000C3E505 /* DrawWaveViewController.m */; };
@@ -623,6 +626,12 @@
 		109ECD5D1C3D3F1500290307 /* CALayer+SetRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+SetRect.m"; sourceTree = "<group>"; };
 		109F66601C38CC7A0082BC95 /* WaterfallLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallLayoutController.h; sourceTree = "<group>"; };
 		109F66611C38CC7A0082BC95 /* WaterfallLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallLayoutController.m; sourceTree = "<group>"; };
+		10A34F641C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LabelWidthAndHeight.h"; sourceTree = "<group>"; };
+		10A34F651C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LabelWidthAndHeight.m"; sourceTree = "<group>"; };
+		10A34F671C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+LabelWidthAndHeight.h"; sourceTree = "<group>"; };
+		10A34F681C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+LabelWidthAndHeight.m"; sourceTree = "<group>"; };
+		10A34F6B1C55AE9500E1A0E0 /* SignMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignMaker.h; sourceTree = "<group>"; };
+		10A34F6C1C55AE9500E1A0E0 /* SignMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignMaker.m; sourceTree = "<group>"; };
 		10A67C561C12D4BA00C3E505 /* CGContextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextObject.h; sourceTree = "<group>"; };
 		10A67C571C12D4BA00C3E505 /* CGContextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGContextObject.m; sourceTree = "<group>"; };
 		10A67C581C12D4BA00C3E505 /* CGContextObjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextObjectConfig.h; sourceTree = "<group>"; };
@@ -719,6 +728,8 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
+				10A34F631C55AC9200E1A0E0 /* LabelWidthAndHeight */,
 				101EA3EB1C489C1400D5D487 /* DateFormatter */,
 				1047D0F31C465758009ADED6 /* InfiniteRotationView */,
 				102B85841C3CF28A001699A9 /* Networking */,
@@ -1756,6 +1767,26 @@
 			name = PageFlipEffectController;
 			sourceTree = "<group>";
 		};
+		10A34F631C55AC9200E1A0E0 /* LabelWidthAndHeight */ = {
+			isa = PBXGroup;
+			children = (
+				10A34F641C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.h */,
+				10A34F651C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m */,
+				10A34F671C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.h */,
+				10A34F681C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.m */,
+			);
+			name = LabelWidthAndHeight;
+			sourceTree = "<group>";
+		};
+		10A34F6A1C55AE8F00E1A0E0 /* SignMaker */ = {
+			isa = PBXGroup;
+			children = (
+				10A34F6B1C55AE9500E1A0E0 /* SignMaker.h */,
+				10A34F6C1C55AE9500E1A0E0 /* SignMaker.m */,
+			);
+			name = SignMaker;
+			sourceTree = "<group>";
+		};
 		10A67C5C1C12D57300C3E505 /* DrawWaveViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1990,10 +2021,12 @@
 				104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */,
 				102B85791C3CF27A001699A9 /* RequestBodyType.m in Sources */,
 				104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */,
+				10A34F691C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.m in Sources */,
 				108A993F1C0FF3B400B693F6 /* NormalRotateAnimationType.m in Sources */,
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
+				10A34F661C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m in Sources */,
 				1047CFF81C44897A009ADED6 /* WxHxD.m in Sources */,
 				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
 				102B85001C3C9FBB001699A9 /* NumberFormatter.m in Sources */,
@@ -2053,6 +2086,7 @@
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
 				1017F11E1C356EE700E245F8 /* NSData+ImageContentType.m in Sources */,
 				103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */,
+				10A34F6D1C55AE9500E1A0E0 /* SignMaker.m in Sources */,
 				10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
 				106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */,
