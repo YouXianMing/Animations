@@ -13,12 +13,12 @@
 //
 //                                     == 动画时间解析 ==
 //
-//  0.0 ----------- 0.0 ------------> glowOpacity [---------------] glowOpacity ------------> 0.0
-//           T                T                           T                           T
-//           |                |                           |                           |
-//           |                |                           |                           |
-//           .                .                           .                           .
-//     hideDuration   animationDuration              glowDuration              animationDuration
+//  0.0 ------------- 0.0 ------------> glowOpacity [-------------] glowOpacity ------------> 0.0
+//           T                 T                           T                          T
+//           |                 |                           |                          |
+//           |                 |                           |                          |
+//           .                 .                           .                          .
+//     hideDuration  glowAnimationDuration           glowDuration            glowAnimationDuration
 //
 
 #pragma mark - 设置辉光效果
@@ -55,8 +55,8 @@
  */
 @property (nonatomic, strong) NSNumber *hideDuration;
 
-
 #pragma mark - 辉光相关操作
+
 /**
  *  创建出辉光layer
  */

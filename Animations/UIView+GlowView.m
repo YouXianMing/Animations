@@ -16,11 +16,10 @@
 
 @end
 
-
 @implementation UIView (GlowView)
 
 - (void)createGlowLayer {
-
+    
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIBezierPath* path = [UIBezierPath bezierPathWithRect:self.bounds];
@@ -33,12 +32,12 @@
     self.glowLayer.opacity       = 0.f;
     self.glowLayer.shadowOffset  = CGSizeMake(0, 0);
     self.glowLayer.shadowOpacity = 1.f;
-
+    
     UIGraphicsEndImageContext();
 }
 
 - (void)insertGlowLayer {
-
+    
     if (self.glowLayer) {
         
         [self.layer addSublayer:self.glowLayer];
@@ -46,7 +45,7 @@
 }
 
 - (void)removeGlowLayer {
-
+    
     if (self.glowLayer) {
         
         [self.glowLayer removeFromSuperlayer];
@@ -57,13 +56,12 @@
     
     self.glowLayer.shadowColor   = [self accessGlowColor].CGColor;
     self.glowLayer.shadowRadius  = [self accessGlowRadius].floatValue;
-
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     
-    animation.fromValue     = @(0.f);
-    animation.toValue       = [self accessGlowOpacity];
-    self.glowLayer.opacity  = [self accessGlowOpacity].floatValue;
-    animation.duration      = [self accessAnimationDuration].floatValue;
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    animation.fromValue         = @(0.f);
+    animation.toValue           = [self accessGlowOpacity];
+    self.glowLayer.opacity      = [self accessGlowOpacity].floatValue;
+    animation.duration          = [self accessAnimationDuration].floatValue;
     
     [self.glowLayer addAnimation:animation forKey:nil];
 }
@@ -74,19 +72,18 @@
     self.glowLayer.shadowRadius  = [self accessGlowRadius].floatValue;
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    
-    animation.fromValue     = [self accessGlowOpacity];
-    animation.toValue       = @(0.f);
-    self.glowLayer.opacity  = 0.f;
-    animation.duration      = [self accessAnimationDuration].floatValue;
+    animation.fromValue         = [self accessGlowOpacity];
+    animation.toValue           = @(0.f);
+    self.glowLayer.opacity      = 0.f;
+    animation.duration          = [self accessAnimationDuration].floatValue;
     
     [self.glowLayer addAnimation:animation forKey:nil];
 }
 
 - (void)startGlowLoop {
-
+    
     if (self.dispatchSource == nil) {
-
+        
         CGFloat seconds      = [self accessAnimationDuration].floatValue * 2 + [self accessGlowDuration].floatValue + [self accessHideDuration].floatValue;
         CGFloat delaySeconds = [self accessAnimationDuration].floatValue + [self accessGlowDuration].floatValue;
         
@@ -109,7 +106,7 @@
 #pragma mark - 处理数据越界问题
 
 - (NSNumber *)accessGlowOpacity {
-
+    
     if (self.glowOpacity) {
         
         if (self.glowOpacity.floatValue <= 0 || self.glowOpacity.floatValue > 1) {
@@ -122,13 +119,13 @@
         }
         
     } else {
-    
+        
         return @(0.8);
     }
 }
 
 - (NSNumber *)accessGlowDuration {
-
+    
     if (self.glowDuration) {
         
         if (self.glowDuration.floatValue <= 0) {
@@ -147,7 +144,7 @@
 }
 
 - (NSNumber *)accessHideDuration {
-
+    
     if (self.hideDuration) {
         
         if (self.hideDuration.floatValue < 0) {
@@ -185,7 +182,7 @@
 }
 
 - (UIColor *)accessGlowColor {
-
+    
     if (self.glowColor) {
         
         return self.glowColor;
@@ -197,7 +194,7 @@
 }
 
 - (NSNumber *)accessGlowRadius {
-
+    
     if (self.glowRadius) {
         
         if (self.glowRadius.floatValue <= 0) {
@@ -215,21 +212,22 @@
     }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////
-
 #pragma mark - runtime属性
 
 NSString * const _recognizerDispatchSource = @"_recognizerDispatchSource";
+
 - (void)setDispatchSource:(dispatch_source_t)dispatchSource {
     
     objc_setAssociatedObject(self, (__bridge const void *)(_recognizerDispatchSource), dispatchSource, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
 - (dispatch_source_t)dispatchSource {
     
     return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerDispatchSource));
 }
 
 NSString * const _recognizerGlowColor = @"_recognizerGlowColor";
+
 - (void)setGlowColor:(UIColor *)glowColor {
     
     objc_setAssociatedObject(self, (__bridge const void *)(_recognizerGlowColor), glowColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -241,30 +239,33 @@ NSString * const _recognizerGlowColor = @"_recognizerGlowColor";
 }
 
 NSString * const _recognizerGlowOpacity = @"_recognizerGlowOpacity";
-- (void)setGlowOpacity:(NSNumber *)glowOpacity {
 
+- (void)setGlowOpacity:(NSNumber *)glowOpacity {
+    
     objc_setAssociatedObject(self, (__bridge const void *)(_recognizerGlowOpacity), glowOpacity, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)glowOpacity {
-
+    
     return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerGlowOpacity));
 }
 
 NSString * const _recognizerGlowRadius = @"_recognizerGlowRadius";
-- (void)setGlowRadius:(NSNumber *)glowRadius {
 
+- (void)setGlowRadius:(NSNumber *)glowRadius {
+    
     objc_setAssociatedObject(self, (__bridge const void *)(_recognizerGlowRadius), glowRadius, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)glowRadius {
-
+    
     return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerGlowRadius));
 }
 
 NSString * const _recognizerGlowAnimationDuration = @"_recognizerGlowAnimationDuration";
-- (void)setGlowAnimationDuration:(NSNumber *)glowAnimationDuration {
 
+- (void)setGlowAnimationDuration:(NSNumber *)glowAnimationDuration {
+    
     objc_setAssociatedObject(self, (__bridge const void *)(glowAnimationDuration), _recognizerGlowAnimationDuration, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -274,30 +275,33 @@ NSString * const _recognizerGlowAnimationDuration = @"_recognizerGlowAnimationDu
 }
 
 NSString * const _recognizerGlowDuration = @"_recognizerGlowDuration";
-- (void)setGlowDuration:(NSNumber *)glowDuration {
 
+- (void)setGlowDuration:(NSNumber *)glowDuration {
+    
     objc_setAssociatedObject(self, (__bridge const void *)(_recognizerGlowDuration), glowDuration, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)glowDuration {
-
+    
     return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerGlowDuration));
 }
 
 NSString * const _recognizerHideDuration = @"_recognizerHideDuration";
-- (void)setHideDuration:(NSNumber *)hideDuration {
 
+- (void)setHideDuration:(NSNumber *)hideDuration {
+    
     objc_setAssociatedObject(self, (__bridge const void *)(_recognizerHideDuration), hideDuration, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)hideDuration {
-
+    
     return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerHideDuration));
 }
 
 NSString * const _recognizerGlowLayer = @"_recognizerGlowLayer";
-- (void)setGlowLayer:(CALayer *)glowLayer {
 
+- (void)setGlowLayer:(CALayer *)glowLayer {
+    
     objc_setAssociatedObject(self, (__bridge const void *)(_recognizerGlowLayer), glowLayer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

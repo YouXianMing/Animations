@@ -99,6 +99,7 @@ static GCDQueue *backgroundPriorityGlobalQueue;
 - (instancetype)initSerialWithLabel:(NSString *)label {
 
     self = [super init];
+    
     if (self)
     {
         self.dispatchQueue = dispatch_queue_create([label UTF8String], DISPATCH_QUEUE_SERIAL);
@@ -120,11 +121,14 @@ static GCDQueue *backgroundPriorityGlobalQueue;
 }
 
 - (instancetype)initConcurrentWithLabel:(NSString *)label {
+    
     self = [super init];
-    if (self)
-    {
+    
+    if (self) {
+        
         self.dispatchQueue = dispatch_queue_create([label UTF8String], DISPATCH_QUEUE_CONCURRENT);
     }
+    
     return self;
 }
 
@@ -219,7 +223,6 @@ static GCDQueue *backgroundPriorityGlobalQueue;
     NSParameterAssert(block);
     dispatch_group_notify(group.dispatchGroup, self.dispatchQueue, block);
 }
-
 
 #pragma mark - 便利的构造方法
 + (void)executeInMainQueue:(dispatch_block_t)block afterDelaySecs:(NSTimeInterval)sec {
