@@ -10,7 +10,7 @@
 #import "WxHxD.h"
 #import "UIView+SetRect.h"
 
-@interface SpringEffectController (){
+@interface SpringEffectController () {
     
     CGPoint  _centerPoint;
 }
@@ -35,8 +35,8 @@
     self.shapeLayer.path      = [self calculatePathWithPoint:CGPointMake(Width / 2.f, Height / 2.f)].CGPath;
     [self.contentView.layer addSublayer:self.shapeLayer];
     
-    self.pointView                   = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 4, 4)];
-    self.pointView.center            = self.contentView.center;
+    self.pointView        = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 4, 4)];
+    self.pointView.center = self.contentView.center;
     [self.contentView addSubview:self.pointView];
     
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkEvent)];
