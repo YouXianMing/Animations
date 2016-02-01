@@ -140,7 +140,6 @@
 		104326641C4B172F0033CEC0 /* ProgressColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 104326631C4B172F0033CEC0 /* ProgressColor.m */; };
 		104326671C4B505E0033CEC0 /* ProgressColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 104326661C4B505E0033CEC0 /* ProgressColor+Colors.m */; };
 		104326941C4B9D570033CEC0 /* SpringEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104326931C4B9D570033CEC0 /* SpringEffectController.m */; };
-		1047CFF81C44897A009ADED6 /* WxHxD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1047CFF71C44897A009ADED6 /* WxHxD.m */; };
 		1047D0F21C465753009ADED6 /* InfiniteRotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1047D0F11C465753009ADED6 /* InfiniteRotationView.m */; };
 		1048F6EF1C28D56B0052F1DD /* MDMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EC1C28D56B0052F1DD /* MDMatrix.m */; };
 		1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EE1C28D56B0052F1DD /* MDScratchImageView.mm */; };
@@ -512,8 +511,6 @@
 		104326661C4B505E0033CEC0 /* ProgressColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ProgressColor+Colors.m"; sourceTree = "<group>"; };
 		104326921C4B9D570033CEC0 /* SpringEffectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringEffectController.h; sourceTree = "<group>"; };
 		104326931C4B9D570033CEC0 /* SpringEffectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringEffectController.m; sourceTree = "<group>"; };
-		1047CFF61C44897A009ADED6 /* WxHxD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxHxD.h; sourceTree = "<group>"; };
-		1047CFF71C44897A009ADED6 /* WxHxD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxHxD.m; sourceTree = "<group>"; };
 		1047D0F01C465753009ADED6 /* InfiniteRotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteRotationView.h; sourceTree = "<group>"; };
 		1047D0F11C465753009ADED6 /* InfiniteRotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteRotationView.m; sourceTree = "<group>"; };
 		1047D1051C47412F009ADED6 /* CustomViewControllerSubviewTagValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewControllerSubviewTagValue.h; sourceTree = "<group>"; };
@@ -752,7 +749,6 @@
 				1017F0FB1C356EE700E245F8 /* SDWebImage */,
 				1048F6EA1C28D56B0052F1DD /* MDScratchImageView */,
 				10589D1E1C2393C200F20BC0 /* FBShimmering */,
-				B5D011A11C0BE3730075BC2E /* WxHxD */,
 				B5D011961C0BE2440075BC2E /* RotateView */,
 				103088B41C05880000C8B623 /* Math */,
 				103088721C03FC2A00C8B623 /* Color */,
@@ -1884,15 +1880,6 @@
 			name = RotateView;
 			sourceTree = "<group>";
 		};
-		B5D011A11C0BE3730075BC2E /* WxHxD */ = {
-			isa = PBXGroup;
-			children = (
-				1047CFF61C44897A009ADED6 /* WxHxD.h */,
-				1047CFF71C44897A009ADED6 /* WxHxD.m */,
-			);
-			name = WxHxD;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2040,7 +2027,6 @@
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				10A34F661C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m in Sources */,
-				1047CFF81C44897A009ADED6 /* WxHxD.m in Sources */,
 				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
 				102B85001C3C9FBB001699A9 /* NumberFormatter.m in Sources */,
 				102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */,

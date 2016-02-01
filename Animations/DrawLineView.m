@@ -9,7 +9,7 @@
 #import "DrawLineView.h"
 #import "CGContextObject.h"
 #import "DrawValues.h"
-#import "WxHxD.h"
+#import "UIView+SetRect.h"
 
 @interface DrawLineView ()
 

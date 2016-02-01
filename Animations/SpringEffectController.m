@@ -7,7 +7,6 @@
 //
 
 #import "SpringEffectController.h"
-#import "WxHxD.h"
 #import "UIView+SetRect.h"
 
 @interface SpringEffectController () {

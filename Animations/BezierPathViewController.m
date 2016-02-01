@@ -11,7 +11,6 @@
 #import "CALayer+SetRect.h"
 #import "UIFont+Fonts.h"
 #import "UIView+AnimationProperty.h"
-#import "WxHxD.h"
 #import "GCD.h"
 
 @interface BezierPathViewController ()
@@ -27,15 +26,15 @@
     // Scale value.
     CGFloat scale = 1;
     
-    if (iPhone == iPhone4_4s || iPhone == iPhone5_5s) {
+    if (iPhone4_4s || iPhone5_5s) {
 
         scale = 0.65f;
         
-    } else if (iPhone == iPhone6) {
+    } else if (iPhone6_6s) {
     
         scale = 0.75f;
         
-    } else if (iPhone == iPhone6_plus) {
+    } else if (iPhone6_6sPlus) {
         
         scale = 0.8f;
     }

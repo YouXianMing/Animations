@@ -10,7 +10,6 @@
 #import "ClassModel.h"
 #import "StudentInfoCell.h"
 #import "ClassHeaderView.h"
-#import "WxHxD.h"
 #import "GCD.h"
 
 static NSString *infoCellFlag = @"BaseTableViewCell";

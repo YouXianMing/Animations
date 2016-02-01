@@ -8,7 +8,7 @@
 
 #import "CountDownTimeCell.h"
 #import "TimeModel.h"
-#import "WxHxD.h"
+#import "UIView+SetRect.h"
 #import "UIFont+Fonts.h"
 
 @interface CountDownTimeCell ()

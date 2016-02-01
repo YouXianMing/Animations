@@ -8,7 +8,6 @@
 
 #import "CASpringAnimationController.h"
 #import "RangeValueView.h"
-#import "WxHxD.h"
 #import "UIView+SetRect.h"
 
 @interface CASpringAnimationController ()

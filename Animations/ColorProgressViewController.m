@@ -10,9 +10,8 @@
 #import "UIView+SetRect.h"
 #import "UIFont+Fonts.h"
 #import "ColorProgressView.h"
-#import "GCD.h"
-#import "WxHxD.h"
 #import "ProgressColor+Colors.h"
+#import "GCD.h"
 
 @interface ColorProgressViewController ()
 

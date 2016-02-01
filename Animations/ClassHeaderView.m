@@ -8,7 +8,6 @@
 
 #import "ClassHeaderView.h"
 #import "ClassModel.h"
-#import "WxHxD.h"
 #import "UIView+SetRect.h"
 
 @interface ClassHeaderView ()

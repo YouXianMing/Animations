@@ -8,7 +8,6 @@
 
 #import "PageFlipEffectController.h"
 #import "Math.h"
-#import "WxHxD.h"
 #import "CALayer+SetRect.h"
 #import "UIView+SetRect.h"
 #import "POP.h"

@@ -7,7 +7,6 @@
 //
 
 #import "DrawWaveViewController.h"
-#import "WxHxD.h"
 #import "DrawView.h"
 #import "DrawLineView.h"
 #import "UIView+SetRect.h"

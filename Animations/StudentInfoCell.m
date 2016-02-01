@@ -8,7 +8,7 @@
 
 #import "StudentInfoCell.h"
 #import "StudentModel.h"
-#import "WxHxD.h"
+#import "UIView+SetRect.h"
 
 @interface StudentInfoCell ()
 

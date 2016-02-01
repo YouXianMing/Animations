@@ -9,7 +9,6 @@
 #import "TableViewTapAnimationCell.h"
 #import "UIView+SetRect.h"
 #import "TapAnimationModel.h"
-#import "WxHxD.h"
 #import "UIFont+Fonts.h"
 
 @interface TableViewTapAnimationCell ()

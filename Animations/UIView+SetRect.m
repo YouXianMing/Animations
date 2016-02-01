@@ -1,26 +1,24 @@
 //
 //  UIView+SetRect.m
-//  SetRect
+//  UIView
 //
-//  Created by YouXianMing on 14-9-26.
-//  Copyright (c) 2014年 YouXianMing. All rights reserved.
+//  Created by YouXianMing on 16/1/29.
+//  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
 #import "UIView+SetRect.h"
 
 @implementation UIView (SetRect)
 
-#pragma mark Frame
-
 - (CGPoint)viewOrigin {
     
     return self.frame.origin;
 }
 
-- (void)setViewOrigin:(CGPoint)newOrigin {
+- (void)setViewOrigin:(CGPoint)viewOrigin {
     
     CGRect newFrame = self.frame;
-    newFrame.origin = newOrigin;
+    newFrame.origin = viewOrigin;
     self.frame      = newFrame;
 }
 
@@ -29,23 +27,22 @@
     return self.frame.size;
 }
 
-- (void)setViewSize:(CGSize)newSize {
+- (void)setViewSize:(CGSize)viewSize {
+    
     CGRect newFrame = self.frame;
-    newFrame.size   = newSize;
+    newFrame.size   = viewSize;
     self.frame      = newFrame;
 }
-
-#pragma mark Frame Origin
 
 - (CGFloat)x {
     
     return self.frame.origin.x;
 }
 
-- (void)setX:(CGFloat)newX {
+- (void)setX:(CGFloat)x {
     
     CGRect newFrame   = self.frame;
-    newFrame.origin.x = newX;
+    newFrame.origin.x = x;
     self.frame        = newFrame;
 }
 
@@ -54,69 +51,47 @@
     return self.frame.origin.y;
 }
 
-- (void)setY:(CGFloat)newY {
+- (void)setY:(CGFloat)y {
     
     CGRect newFrame   = self.frame;
-    newFrame.origin.y = newY;
+    newFrame.origin.y = y;
     self.frame        = newFrame;
-}
-
-#pragma mark Frame Size
-
-- (CGFloat)height {
-    
-    return self.frame.size.height;
-}
-
-- (void)setHeight:(CGFloat)newHeight {
-    
-    CGRect newFrame      = self.frame;
-    newFrame.size.height = newHeight;
-    self.frame           = newFrame;
 }
 
 - (CGFloat)width {
     
-    return self.frame.size.width;
+    return CGRectGetWidth(self.bounds);
 }
 
-- (void)setWidth:(CGFloat)newWidth {
+- (void)setWidth:(CGFloat)width {
     
     CGRect newFrame     = self.frame;
-    newFrame.size.width = newWidth;
+    newFrame.size.width = width;
     self.frame          = newFrame;
 }
 
-#pragma mark Frame Borders
-
-- (CGFloat)left {
+- (CGFloat)height {
     
-    return self.x;
+    return CGRectGetHeight(self.bounds);
 }
 
-- (void)setLeft:(CGFloat)left {
+- (void)setHeight:(CGFloat)height {
     
-    self.x = left;
-}
-
-- (CGFloat)right {
-    
-    return self.frame.origin.x + self.frame.size.width;
-}
-
-- (void)setRight:(CGFloat)right {
-    
-    self.x = right - self.width;
+    CGRect newFrame      = self.frame;
+    newFrame.size.height = height;
+    self.frame           = newFrame;
 }
 
 - (CGFloat)top {
     
-    return self.y;
+    return self.frame.origin.y;
 }
 
 - (void)setTop:(CGFloat)top {
     
-    self.y = top;
+    CGRect newFrame   = self.frame;
+    newFrame.origin.y = top;
+    self.frame        = newFrame;
 }
 
 - (CGFloat)bottom {
@@ -126,32 +101,45 @@
 
 - (void)setBottom:(CGFloat)bottom {
     
-    self.y = bottom - self.height;
+    CGRect newFrame   = self.frame;
+    newFrame.origin.y = bottom - self.frame.size.height;
+    self.frame        = newFrame;
 }
 
-#pragma mark Center Point
-
-#if !IS_IOS_DEVICE
-- (CGPoint)center {
+- (CGFloat)left {
     
-    return CGPointMake(self.left + self.middleX, self.top + self.middleY);
+    return self.frame.origin.x;
 }
 
-- (void)setCenter:(CGPoint)newCenter {
+- (void)setLeft:(CGFloat)left {
     
-    self.left = newCenter.x - self.middleX;
-    self.top  = newCenter.y - self.middleY;
+    CGRect newFrame   = self.frame;
+    newFrame.origin.x = left;
+    self.frame        = newFrame;
 }
-#endif
+
+- (CGFloat)right {
+    
+    return self.frame.origin.x + self.frame.size.width;
+}
+
+- (void)setRight:(CGFloat)right {
+    
+    CGRect newFrame   = self.frame;
+    newFrame.origin.x = right - self.frame.size.width;
+    self.frame        = newFrame;
+}
 
 - (CGFloat)centerX {
     
     return self.center.x;
 }
 
-- (void)setCenterX:(CGFloat)newCenterX {
+- (void)setCenterX:(CGFloat)centerX {
     
-    self.center = CGPointMake(newCenterX, self.center.y);
+    CGPoint newCenter = self.center;
+    newCenter.x       = centerX;
+    self.center       = newCenter;
 }
 
 - (CGFloat)centerY {
@@ -159,26 +147,26 @@
     return self.center.y;
 }
 
-- (void)setCenterY:(CGFloat)newCenterY {
+- (void)setCenterY:(CGFloat)centerY {
     
-    self.center = CGPointMake(self.center.x, newCenterY);
-}
-
-#pragma mark Middle Point
-
-- (CGPoint)middlePoint {
-    
-    return CGPointMake(self.middleX, self.middleY);
+    CGPoint newCenter = self.center;
+    newCenter.y       = centerY;
+    self.center       = newCenter;
 }
 
 - (CGFloat)middleX {
     
-    return self.width / 2;
+    return CGRectGetWidth(self.bounds) / 2.f;
 }
 
 - (CGFloat)middleY {
     
-    return self.height / 2;
+    return CGRectGetHeight(self.bounds) / 2.f;
+}
+
+- (CGPoint)middlePoint {
+    
+    return CGPointMake(CGRectGetWidth(self.bounds) / 2.f, CGRectGetHeight(self.bounds) / 2.f);
 }
 
 @end

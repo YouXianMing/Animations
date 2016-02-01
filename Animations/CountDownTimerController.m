@@ -10,7 +10,6 @@
 #import "CountDownTimeCell.h"
 #import "TimeModel.h"
 #import "UIView+SetRect.h"
-#import "WxHxD.h"
 
 @interface CountDownTimerController () <UITableViewDelegate, UITableViewDataSource>
 
