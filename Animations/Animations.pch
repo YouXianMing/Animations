@@ -21,6 +21,7 @@
 #ifdef __OBJC__
 
 #import "SimpleNSLog.h"
+#import "NodeModelHelper.h"
 
 #endif
 
