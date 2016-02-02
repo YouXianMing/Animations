@@ -8,17 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+/////////////////////////////////////////////////////////
+//                                                     //
+//                    AbstractAdapter <== inputData    //
+//                           |                         //
+//                           |                         //
+//    outputData <== startDataTransform                //
+//                                                     //
+/////////////////////////////////////////////////////////
+
 @interface AbstractAdapter : NSObject
 
 /**
  *  Input data.
  */
-@property (nonatomic, weak) id inputData;
-
-/**
- *  Output data.
- */
-@property (nonatomic, weak, readonly) id outputData;
+@property (nonatomic, strong) id inputData;
 
 /**
  *  Start data transform.
@@ -26,12 +30,8 @@
 - (void)startDataTransform;
 
 /**
- *  Get the output data by inputData.
- *
- *  @param inputData Input data.
- *
- *  @return Output data.
+ *  Output data.
  */
-+ (id)abstractAdapterWithInputData:(id)inputData;
+@property (nonatomic, strong) id outputData;
 
 @end

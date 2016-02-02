@@ -8,27 +8,11 @@
 
 #import "AbstractAdapter.h"
 
-@interface AbstractAdapter ()
-
-@property (nonatomic, weak) id  outputData;
-
-@end
-
 @implementation AbstractAdapter
 
 - (void)startDataTransform {
 
     self.outputData = self.inputData;
-}
-
-+ (id)abstractAdapterWithInputData:(id)inputData {
-
-    AbstractAdapter *adapter = [AbstractAdapter new];
-    
-    adapter.inputData = inputData;
-    [adapter startDataTransform];
-    
-    return adapter.outputData;
 }
 
 @end
