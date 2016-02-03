@@ -56,7 +56,8 @@
                                                            requestDictionary:nil
                                                              requestBodyType:[HttpBodyType type]
                                                             responseDataType:[JsonDataType type]];
-    self.dataNetworking.delegate = self;
+    self.dataNetworking.delegate        = self;
+    self.dataNetworking.timeoutInterval = @(15);
     [self.dataNetworking startRequest];
 }
 
