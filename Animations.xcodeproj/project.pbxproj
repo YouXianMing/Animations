@@ -220,6 +220,7 @@
 		10A67C651C12D68D00C3E505 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C641C12D68D00C3E505 /* DrawView.m */; };
 		10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C671C12D96500C3E505 /* DrawLineView.m */; };
 		10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */; };
+		10C1830E1C622D1E000C10EB /* LoadUrlDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C1830D1C622D1E000C10EB /* LoadUrlDataCell.m */; };
 		10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */; };
 		10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5531C20F5F400B0CA7D /* CustomFullContentViewController.m */; };
 		10CEC5861C21321800B0CA7D /* NormalTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5851C21321800B0CA7D /* NormalTitleViewController.m */; };
@@ -693,6 +694,8 @@
 		10A67C671C12D96500C3E505 /* DrawLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLineView.m; sourceTree = "<group>"; };
 		10AB70D81C4925F7008C9C88 /* MusicBarAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicBarAnimationController.h; sourceTree = "<group>"; };
 		10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicBarAnimationController.m; sourceTree = "<group>"; };
+		10C1830C1C622D1E000C10EB /* LoadUrlDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadUrlDataCell.h; sourceTree = "<group>"; };
+		10C1830D1C622D1E000C10EB /* LoadUrlDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadUrlDataCell.m; sourceTree = "<group>"; };
 		10CEC54F1C20F5E400B0CA7D /* CustomNormalContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNormalContentViewController.h; sourceTree = "<group>"; };
 		10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNormalContentViewController.m; sourceTree = "<group>"; };
 		10CEC5521C20F5F400B0CA7D /* CustomFullContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFullContentViewController.h; sourceTree = "<group>"; };
@@ -980,6 +983,7 @@
 			children = (
 				102B1F021C60E26B00A8FD40 /* TableViewLoadDataController.h */,
 				102B1F031C60E26B00A8FD40 /* TableViewLoadDataController.m */,
+				10C1830F1C622D4C000C10EB /* Cell */,
 				102B1F0E1C60E66400A8FD40 /* Models */,
 				102B1F0D1C60E3DA00A8FD40 /* Refresh */,
 			);
@@ -1917,6 +1921,15 @@
 			name = MusicBarAnimationController;
 			sourceTree = "<group>";
 		};
+		10C1830F1C622D4C000C10EB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				10C1830C1C622D1E000C10EB /* LoadUrlDataCell.h */,
+				10C1830D1C622D1E000C10EB /* LoadUrlDataCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		10CEC5911C2238B500B0CA7D /* LabelScaleViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2059,6 +2072,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C1830E1C622D1E000C10EB /* LoadUrlDataCell.m in Sources */,
 				10CEC5861C21321800B0CA7D /* NormalTitleViewController.m in Sources */,
 				10381FB91BF9B55B00E5E476 /* POPCustomAnimation.mm in Sources */,
 				B5D011941C0BE2410075BC2E /* RotateView.m in Sources */,

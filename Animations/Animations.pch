@@ -22,6 +22,8 @@
 
 #import "SimpleNSLog.h"
 #import "NodeModelHelper.h"
+#import "NSDictionary+JSONData.h"
+#import "NSArray+JSONData.h"
 
 #endif
 

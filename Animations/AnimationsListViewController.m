@@ -159,7 +159,7 @@
                        [Item itemWithName:@"果冻效果" object:[SpringEffectController class]],
                        [Item itemWithName:@"CASpringAnimation" object:[CASpringAnimationController class]],
                        [Item itemWithName:@"Additive属性动画" object:[AdditiveAnimationController class]],
-//                       [Item itemWithName:@"加载网络数据" object:[TableViewLoadDataController class]],
+                       [Item itemWithName:@"加载网络数据" object:[TableViewLoadDataController class]],
                        ];
     
     self.items = [NSMutableArray array];
