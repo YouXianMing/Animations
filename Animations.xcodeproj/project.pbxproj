@@ -221,6 +221,7 @@
 		10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C671C12D96500C3E505 /* DrawLineView.m */; };
 		10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */; };
 		10C1830E1C622D1E000C10EB /* LoadUrlDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C1830D1C622D1E000C10EB /* LoadUrlDataCell.m */; };
+		10C275C91C63A686000B42A6 /* UIImageView+SDWebImageAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C275C81C63A686000B42A6 /* UIImageView+SDWebImageAnimation.m */; };
 		10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */; };
 		10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5531C20F5F400B0CA7D /* CustomFullContentViewController.m */; };
 		10CEC5861C21321800B0CA7D /* NormalTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5851C21321800B0CA7D /* NormalTitleViewController.m */; };
@@ -696,6 +697,8 @@
 		10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicBarAnimationController.m; sourceTree = "<group>"; };
 		10C1830C1C622D1E000C10EB /* LoadUrlDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadUrlDataCell.h; sourceTree = "<group>"; };
 		10C1830D1C622D1E000C10EB /* LoadUrlDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadUrlDataCell.m; sourceTree = "<group>"; };
+		10C275C71C63A686000B42A6 /* UIImageView+SDWebImageAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDWebImageAnimation.h"; sourceTree = "<group>"; };
+		10C275C81C63A686000B42A6 /* UIImageView+SDWebImageAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDWebImageAnimation.m"; sourceTree = "<group>"; };
 		10CEC54F1C20F5E400B0CA7D /* CustomNormalContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNormalContentViewController.h; sourceTree = "<group>"; };
 		10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNormalContentViewController.m; sourceTree = "<group>"; };
 		10CEC5521C20F5F400B0CA7D /* CustomFullContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFullContentViewController.h; sourceTree = "<group>"; };
@@ -799,6 +802,7 @@
 				1017F13D1C35720100E245F8 /* CreateModel */,
 				1017F1301C35714800E245F8 /* JSONKit */,
 				1017F0FB1C356EE700E245F8 /* SDWebImage */,
+				10C275C61C63A66D000B42A6 /* SDWebImage+ImageAnimation */,
 				1048F6EA1C28D56B0052F1DD /* MDScratchImageView */,
 				10589D1E1C2393C200F20BC0 /* FBShimmering */,
 				B5D011961C0BE2440075BC2E /* RotateView */,
@@ -1930,6 +1934,15 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		10C275C61C63A66D000B42A6 /* SDWebImage+ImageAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				10C275C71C63A686000B42A6 /* UIImageView+SDWebImageAnimation.h */,
+				10C275C81C63A686000B42A6 /* UIImageView+SDWebImageAnimation.m */,
+			);
+			name = "SDWebImage+ImageAnimation";
+			sourceTree = "<group>";
+		};
 		10CEC5911C2238B500B0CA7D /* LabelScaleViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2125,6 +2138,7 @@
 				102B852F1C3CF19F001699A9 /* UIImage+SolidColor.m in Sources */,
 				10381FB51BF9B55B00E5E476 /* POPAnimationTracer.mm in Sources */,
 				102296AF1C38D122001AF5BB /* CmtsModel.m in Sources */,
+				10C275C91C63A686000B42A6 /* UIImageView+SDWebImageAnimation.m in Sources */,
 				102B858C1C3CF2A9001699A9 /* V_2_X_NetworkingIndicator.m in Sources */,
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
 				104326671C4B505E0033CEC0 /* ProgressColor+Colors.m in Sources */,
