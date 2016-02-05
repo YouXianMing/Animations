@@ -13,8 +13,6 @@
 #import "DataModel.h"
 #import "UIView+SetRect.h"
 #import "UIFont+Fonts.h"
-#import "UIImageView+SDWebImageAnimation.h"
-#import "ScaleAnimationStrategy.h"
 
 @interface LoadUrlDataCell ()
 
@@ -63,13 +61,27 @@
     
     self.lineView.y    = self.dataAdapter.cellHeight - 0.5f;
     self.button.height = self.dataAdapter.cellHeight;
-
-    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.user.avatar_image.url]
-                                   options:0
-                                  progress:nil
-                                 completed:nil
-                         animationStrategy:nil
-                                  animated:YES];
+    
+    __weak LoadUrlDataCell *wself = self;
+    [self.iconImageView sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:model.user.avatar_image.url]
+                                                 placeholderImage:nil
+                                                          options:0
+                                                         progress:nil
+                                                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                                            
+                                                            if (cacheType == SDImageCacheTypeNone) {
+                                                             
+                                                                wself.iconImageView.image = image;
+                                                                wself.iconImageView.alpha = 0;
+                                                                wself.iconImageView.scale = 1.25f;
+                                                                
+                                                                [UIView animateWithDuration:0.35 animations:^{
+                                                                    
+                                                                    wself.iconImageView.alpha = 1.f;
+                                                                    wself.iconImageView.scale = 1.f;
+                                                                }];
+                                                            }
+                                                        }];
 }
 
 - (void)showSelectedAnimation {

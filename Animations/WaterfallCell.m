@@ -44,26 +44,27 @@
 
 - (void)loadContent {
 
-    WaterfallPictureModel *model = self.data;    
-    
-    SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    [manager downloadImageWithURL:[NSURL URLWithString:model.isrc] options:0 progress:nil
-                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                            
-                            if (image) {
+    WaterfallPictureModel *model = self.data;
+    __weak WaterfallCell  *wself = self;
+    [self.showImageView sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:model.isrc]
+                                                 placeholderImage:nil
+                                                          options:0
+                                                         progress:nil
+                                                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                                            
+                                                            if (cacheType == SDImageCacheTypeNone) {
                                                                 
-                                self.showImageView.alpha = 0.f;
-                                self.showImageView.image = image;
-                                self.showImageView.scale = 1.1f;
-                                
-                                // 执行动画
-                                [UIView animateWithDuration:0.5f animations:^{
-                                    
-                                    self.showImageView.alpha = 1.f;
-                                    self.showImageView.scale = 1.f;
-                                }];
-                            }
-                        }];
+                                                                wself.showImageView.image = image;
+                                                                wself.showImageView.alpha = 0;
+                                                                wself.showImageView.scale = 1.1f;
+                                                                
+                                                                [UIView animateWithDuration:0.35 animations:^{
+                                                                    
+                                                                    wself.showImageView.alpha = 1.f;
+                                                                    wself.showImageView.scale = 1.f;
+                                                                }];
+                                                            }
+                                                        }];
 }
 
 @end

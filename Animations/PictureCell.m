@@ -10,7 +10,6 @@
 #import "UIImageView+WebCache.h"
 #import "PictureModel.h"
 #import "UIView+AnimationProperty.h"
-#import "UIImageView+SDWebImageAnimation.h"
 
 @interface PictureCell ()
 
@@ -33,13 +32,27 @@
 
 - (void)loadContent {
 
-    PictureModel *model = self.dataAdapter.data;
-    [self.iconImageView sd_setImageWithURL:model.pictureUrl
-                          placeholderImage:[UIImage imageNamed:@"plane"]
-                                   options:0
-                                  progress:nil
-                                 completed:nil
-                             fadeAnimation:YES];
+    PictureModel       *model = self.dataAdapter.data;
+    __weak PictureCell *wself = self;
+    [self.iconImageView sd_setImageWithPreviousCachedImageWithURL:model.pictureUrl
+                                                 placeholderImage:nil
+                                                          options:0
+                                                         progress:nil
+                                                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                                            
+                                                            if (cacheType == SDImageCacheTypeNone) {
+                                                                
+                                                                wself.iconImageView.image = image;
+                                                                wself.iconImageView.alpha = 0;
+                                                                wself.iconImageView.scale = 1.25f;
+                                                                
+                                                                [UIView animateWithDuration:0.35 animations:^{
+                                                                    
+                                                                    wself.iconImageView.alpha = 1.f;
+                                                                    wself.iconImageView.scale = 1.f;
+                                                                }];
+                                                            }
+                                                        }];
 }
 
 @end
