@@ -26,12 +26,12 @@
 @implementation LoadUrlDataCell
 
 - (void)setupCell {
-
+    
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)buildSubview {
-
+    
     self.iconImageView             = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
     self.iconImageView.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:self.iconImageView];
@@ -63,29 +63,41 @@
     self.button.height = self.dataAdapter.cellHeight;
     
     __weak LoadUrlDataCell *wself = self;
-    [self.iconImageView sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:model.user.avatar_image.url]
-                                                 placeholderImage:nil
-                                                          options:0
-                                                         progress:nil
-                                                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                                                            
-                                                            if (cacheType == SDImageCacheTypeNone) {
+    [wself.iconImageView sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:model.user.avatar_image.url]
+                                                  placeholderImage:nil
+                                                           options:0
+                                                          progress:nil
+                                                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                                              
-                                                                wself.iconImageView.image = image;
-                                                                wself.iconImageView.alpha = 0;
-                                                                wself.iconImageView.scale = 1.25f;
-                                                                
-                                                                [UIView animateWithDuration:0.35 animations:^{
-                                                                    
-                                                                    wself.iconImageView.alpha = 1.f;
-                                                                    wself.iconImageView.scale = 1.f;
-                                                                }];
-                                                            }
-                                                        }];
+                                                             if (cacheType == SDImageCacheTypeNone) {
+                                                                 
+                                                                 wself.iconImageView.image = image;
+                                                                 wself.iconImageView.alpha = 0;
+                                                                 wself.iconImageView.scale = 1.25f;
+                                                                 
+                                                                 [UIView animateWithDuration:0.5f animations:^{
+                                                                     
+                                                                     wself.iconImageView.alpha = 1.f;
+                                                                     wself.iconImageView.scale = 1.f;
+                                                                 }];
+                                                                 
+                                                             } else if (cacheType == SDImageCacheTypeMemory) {
+                                                                 
+                                                                 wself.iconImageView.image = image;
+                                                                 wself.iconImageView.alpha = 0;
+                                                                 wself.iconImageView.scale = 1.25f;
+                                                                 
+                                                                 [UIView animateWithDuration:0.5f animations:^{
+                                                                     
+                                                                     wself.iconImageView.alpha = 1.f;
+                                                                     wself.iconImageView.scale = 1.f;
+                                                                 }];
+                                                             }
+                                                         }];
 }
 
 - (void)showSelectedAnimation {
-        
+    
     UIView *tmpView         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, self.dataAdapter.cellHeight - 0.5f)];
     tmpView.alpha           = 0.f;
     tmpView.backgroundColor = [[UIColor colorWithRed:arc4random() % 256 / 255.f

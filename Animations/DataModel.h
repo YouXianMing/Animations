@@ -39,9 +39,5 @@
  */
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
-#pragma mark - Computed property.
-
-@property (nonatomic, strong) NSNumber  *haveAnimated;
-
 @end
 

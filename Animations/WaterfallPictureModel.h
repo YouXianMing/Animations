@@ -36,9 +36,6 @@
 @property (nonatomic, strong) NSString *msg;
 @property (nonatomic, strong) NSMutableArray <CmtsModel *> *cmts;
 
-#pragma mark - Computational properties.
-@property (nonatomic, strong) NSNumber  *haveAnimated;
-
 /**
  *  Init the model with dictionary
  *

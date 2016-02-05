@@ -44,8 +44,8 @@ static NSString  *pictureCellFlag = @"PictureCell";
         
         NSURL           *url         = [NSURL URLWithString:picsArray[count]];
         PictureModel    *model       = [PictureModel pictureModelWithPictureUrl:url haveAnimated:NO];
-        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:pictureCellFlag
-                                                                                          data:model cellHeight:0 cellType:0];
+        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:pictureCellFlag data:model
+                                                                                    cellHeight:0 cellType:0];
         [_modelsArray addObject:dataAdapter];
     }
     

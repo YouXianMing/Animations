@@ -16,11 +16,6 @@
 @property (nonatomic, strong) NSURL     *pictureUrl;
 
 /**
- *  是否执行了动画
- */
-@property (nonatomic, strong) NSNumber  *haveAnimated;
-
-/**
  *  便利构造器
  *
  *  @param url          图片地址

@@ -58,7 +58,19 @@
                                                                 wself.showImageView.alpha = 0;
                                                                 wself.showImageView.scale = 1.1f;
                                                                 
-                                                                [UIView animateWithDuration:0.35 animations:^{
+                                                                [UIView animateWithDuration:0.5f animations:^{
+                                                                    
+                                                                    wself.showImageView.alpha = 1.f;
+                                                                    wself.showImageView.scale = 1.f;
+                                                                }];
+                                                                
+                                                            } else if (cacheType == SDImageCacheTypeMemory) {
+                                                                
+                                                                wself.showImageView.image = image;
+                                                                wself.showImageView.alpha = 0;
+                                                                wself.showImageView.scale = 1.1f;
+                                                                
+                                                                [UIView animateWithDuration:0.5f animations:^{
                                                                     
                                                                     wself.showImageView.alpha = 1.f;
                                                                     wself.showImageView.scale = 1.f;

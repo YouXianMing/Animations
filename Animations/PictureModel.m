@@ -14,7 +14,6 @@
     
     PictureModel *model = [PictureModel new];
     model.pictureUrl    = url;
-    model.haveAnimated  = @(haveAnimated);
     
     return model;
 }
