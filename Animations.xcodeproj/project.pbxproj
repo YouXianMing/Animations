@@ -52,6 +52,8 @@
 		102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296BD1C38D420001AF5BB /* WaterfallHeaderView.m */; };
 		102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296C01C38D65F001AF5BB /* WaterfallFooterView.m */; };
 		102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296C41C392B1F001AF5BB /* LineBackgroundView.m */; };
+		1026BDB91C642FCB004FB93B /* SDWebImageAnimationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1026BDB81C642FCB004FB93B /* SDWebImageAnimationStrategy.m */; };
+		1026BDBC1C6433E4004FB93B /* ScaleAnimationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1026BDBB1C6433E4004FB93B /* ScaleAnimationStrategy.m */; };
 		102B1F041C60E26B00A8FD40 /* TableViewLoadDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B1F031C60E26B00A8FD40 /* TableViewLoadDataController.m */; };
 		102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B1F081C60E3D700A8FD40 /* UIScrollView+RefreshObject.m */; };
 		102B1F0C1C60E3D700A8FD40 /* RefreshObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B1F0A1C60E3D700A8FD40 /* RefreshObject.m */; };
@@ -332,6 +334,10 @@
 		102296C01C38D65F001AF5BB /* WaterfallFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallFooterView.m; sourceTree = "<group>"; };
 		102296C31C392B1F001AF5BB /* LineBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineBackgroundView.h; sourceTree = "<group>"; };
 		102296C41C392B1F001AF5BB /* LineBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBackgroundView.m; sourceTree = "<group>"; };
+		1026BDB71C642FCB004FB93B /* SDWebImageAnimationStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageAnimationStrategy.h; sourceTree = "<group>"; };
+		1026BDB81C642FCB004FB93B /* SDWebImageAnimationStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageAnimationStrategy.m; sourceTree = "<group>"; };
+		1026BDBA1C6433E4004FB93B /* ScaleAnimationStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleAnimationStrategy.h; sourceTree = "<group>"; };
+		1026BDBB1C6433E4004FB93B /* ScaleAnimationStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleAnimationStrategy.m; sourceTree = "<group>"; };
 		102B1F021C60E26B00A8FD40 /* TableViewLoadDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewLoadDataController.h; sourceTree = "<group>"; };
 		102B1F031C60E26B00A8FD40 /* TableViewLoadDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewLoadDataController.m; sourceTree = "<group>"; };
 		102B1F061C60E3D700A8FD40 /* RefreshObjectAnimationProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshObjectAnimationProtocal.h; sourceTree = "<group>"; };
@@ -1939,6 +1945,10 @@
 			children = (
 				10C275C71C63A686000B42A6 /* UIImageView+SDWebImageAnimation.h */,
 				10C275C81C63A686000B42A6 /* UIImageView+SDWebImageAnimation.m */,
+				1026BDB71C642FCB004FB93B /* SDWebImageAnimationStrategy.h */,
+				1026BDB81C642FCB004FB93B /* SDWebImageAnimationStrategy.m */,
+				1026BDBA1C6433E4004FB93B /* ScaleAnimationStrategy.h */,
+				1026BDBB1C6433E4004FB93B /* ScaleAnimationStrategy.m */,
 			);
 			name = "SDWebImage+ImageAnimation";
 			sourceTree = "<group>";
@@ -2105,6 +2115,7 @@
 				105D98A41C07F17D00FD1013 /* CustomAdapterTypeCell.m in Sources */,
 				100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */,
 				10D4F6091C41486E00D056EB /* CATransform3DM34Controller.m in Sources */,
+				1026BDBC1C6433E4004FB93B /* ScaleAnimationStrategy.m in Sources */,
 				10CEC5971C223A5400B0CA7D /* ScaleLabel.m in Sources */,
 				10CEC5941C2238E700B0CA7D /* LabelScaleViewController.m in Sources */,
 				104228C31C3694B10011409C /* SDWebImageController.m in Sources */,
@@ -2236,6 +2247,7 @@
 				103088B71C05880B00C8B623 /* Math.m in Sources */,
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */,
+				1026BDB91C642FCB004FB93B /* SDWebImageAnimationStrategy.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
 				102296B21C38D122001AF5BB /* WaterfallPictureModel.m in Sources */,
 				102296931C38CF71001AF5BB /* NodeModelCell.m in Sources */,

@@ -14,6 +14,7 @@
 #import "UIView+SetRect.h"
 #import "UIFont+Fonts.h"
 #import "UIImageView+SDWebImageAnimation.h"
+#import "ScaleAnimationStrategy.h"
 
 @interface LoadUrlDataCell ()
 
@@ -64,11 +65,11 @@
     self.button.height = self.dataAdapter.cellHeight;
 
     [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.user.avatar_image.url]
-                          placeholderImage:[UIImage imageNamed:@"plane"]
                                    options:0
                                   progress:nil
                                  completed:nil
-                             fadeAnimation:YES];
+                         animationStrategy:nil
+                                  animated:YES];
 }
 
 - (void)showSelectedAnimation {
