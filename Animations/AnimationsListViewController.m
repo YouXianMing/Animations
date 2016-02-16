@@ -20,6 +20,7 @@
 #import "PopStrokeController.h"
 #import "CAShapeLayerPathController.h"
 #import "TransformFadeViewController.h"
+#import "CAGradientViewController.h"
 #import "PopNumberController.h"
 #import "CircleAnimationViewController.h"
 #import "ScrollImageViewController.h"
@@ -131,6 +132,7 @@
                        [Item itemWithName:@"POP-Stroke动画" object:[PopStrokeController class]],
                        [Item itemWithName:@"CAShapeLayer的path动画" object:[CAShapeLayerPathController class]],
                        [Item itemWithName:@"图片碎片化mask动画" object:[TransformFadeViewController class]],
+                       [Item itemWithName:@"CAGradientLayer动画" object:[CAGradientViewController class]],
                        [Item itemWithName:@"POP-数值动画" object:[PopNumberController class]],
                        [Item itemWithName:@"Easing-圆环动画" object:[CircleAnimationViewController class]],
                        [Item itemWithName:@"UIScrollView视差效果动画" object:[ScrollImageViewController class]],

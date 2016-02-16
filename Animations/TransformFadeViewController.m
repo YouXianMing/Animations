@@ -64,8 +64,7 @@ typedef enum : NSUInteger {
     self.tranformFadeViewTwo.animationGapDuration = 0.1f;
     [self.tranformFadeViewTwo buildMaskView];
     [self.contentView addSubview:self.tranformFadeViewTwo];
-    
-    [self.tranformFadeViewTwo fadeAnimated:YES];
+    [self.tranformFadeViewTwo fadeAnimated:NO];
 
     // timer
     self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];

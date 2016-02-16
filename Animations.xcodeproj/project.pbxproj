@@ -32,6 +32,9 @@
 		1017F13B1C35715400E245F8 /* NSString+JSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017F1361C35715400E245F8 /* NSString+JSONData.m */; };
 		1017F13C1C35715400E245F8 /* NSData+JSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017F1381C35715400E245F8 /* NSData+JSONData.m */; };
 		101EA3EE1C489C2E00D5D487 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 101EA3ED1C489C2E00D5D487 /* DateFormatter.m */; };
+		1020E2D31C73197B00FF233E /* CAGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2D21C73197B00FF233E /* CAGradientView.m */; };
+		1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2D61C7319D000FF233E /* CAGradientViewController.m */; };
+		1020E2DA1C731AA500FF233E /* CAGradientMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2D91C731AA500FF233E /* CAGradientMaskView.m */; };
 		102296921C38CF71001AF5BB /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296801C38CF71001AF5BB /* NodeModel.m */; };
 		102296931C38CF71001AF5BB /* NodeModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296821C38CF71001AF5BB /* NodeModelCell.m */; };
 		102296941C38CF71001AF5BB /* NodeModelRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296841C38CF71001AF5BB /* NodeModelRootNavigationController.m */; };
@@ -294,6 +297,12 @@
 		1017F1381C35715400E245F8 /* NSData+JSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JSONData.m"; sourceTree = "<group>"; };
 		101EA3EC1C489C2E00D5D487 /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatter.h; sourceTree = "<group>"; };
 		101EA3ED1C489C2E00D5D487 /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
+		1020E2D11C73197B00FF233E /* CAGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAGradientView.h; sourceTree = "<group>"; };
+		1020E2D21C73197B00FF233E /* CAGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAGradientView.m; sourceTree = "<group>"; };
+		1020E2D51C7319D000FF233E /* CAGradientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAGradientViewController.h; sourceTree = "<group>"; };
+		1020E2D61C7319D000FF233E /* CAGradientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAGradientViewController.m; sourceTree = "<group>"; };
+		1020E2D81C731AA500FF233E /* CAGradientMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAGradientMaskView.h; sourceTree = "<group>"; };
+		1020E2D91C731AA500FF233E /* CAGradientMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAGradientMaskView.m; sourceTree = "<group>"; };
 		1022967F1C38CF71001AF5BB /* NodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModel.h; sourceTree = "<group>"; };
 		102296801C38CF71001AF5BB /* NodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
 		102296811C38CF71001AF5BB /* NodeModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelCell.h; sourceTree = "<group>"; };
@@ -780,13 +789,14 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1020E2D01C73196D00FF233E /* CAGradientView */,
 				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
 				10A34F631C55AC9200E1A0E0 /* LabelWidthAndHeight */,
+				102B85011C3C9FBF001699A9 /* NumberFormatter */,
 				101EA3EB1C489C1400D5D487 /* DateFormatter */,
 				1047D0F31C465758009ADED6 /* InfiniteRotationView */,
 				102B85841C3CF28A001699A9 /* Networking */,
 				102B852C1C3CF18C001699A9 /* UIImage+Category */,
-				102B85011C3C9FBF001699A9 /* NumberFormatter */,
 				102B84DB1C3B95E8001699A9 /* FileManager */,
 				102B84DA1C3B9521001699A9 /* MD5 */,
 				102296C21C392B0F001AF5BB /* LineBackgroundView */,
@@ -884,6 +894,26 @@
 				101EA3ED1C489C2E00D5D487 /* DateFormatter.m */,
 			);
 			name = DateFormatter;
+			sourceTree = "<group>";
+		};
+		1020E2D01C73196D00FF233E /* CAGradientView */ = {
+			isa = PBXGroup;
+			children = (
+				1020E2D11C73197B00FF233E /* CAGradientView.h */,
+				1020E2D21C73197B00FF233E /* CAGradientView.m */,
+			);
+			name = CAGradientView;
+			sourceTree = "<group>";
+		};
+		1020E2D41C73199A00FF233E /* CAGradientViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1020E2D51C7319D000FF233E /* CAGradientViewController.h */,
+				1020E2D61C7319D000FF233E /* CAGradientViewController.m */,
+				1020E2D81C731AA500FF233E /* CAGradientMaskView.h */,
+				1020E2D91C731AA500FF233E /* CAGradientMaskView.m */,
+			);
+			name = CAGradientViewController;
 			sourceTree = "<group>";
 		};
 		1022967E1C38CF71001AF5BB /* NodeModel */ = {
@@ -1471,6 +1501,7 @@
 				104F0CC21BFABFED00C46E6A /* PopStrokeController */,
 				104F0CF91BFAFA7400C46E6A /* CAShapeLayerPathController */,
 				104F0D161BFB275E00C46E6A /* TransformFadeViewController */,
+				1020E2D41C73199A00FF233E /* CAGradientViewController */,
 				104F0D1D1BFC113F00C46E6A /* PopNumberController */,
 				103088611C03F15600C8B623 /* CircleAnimationViewController */,
 				103088741C0412CE00C8B623 /* ScrollImageViewController */,
@@ -2172,6 +2203,7 @@
 				106CF0921C3764090006419B /* AlertViewController.m in Sources */,
 				104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */,
 				1017F1231C356EE700E245F8 /* SDWebImageDownloaderOperation.m in Sources */,
+				1020E2D31C73197B00FF233E /* CAGradientView.m in Sources */,
 				1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */,
 				1017F11F1C356EE700E245F8 /* SDImageCache.m in Sources */,
 				1017F1241C356EE700E245F8 /* SDWebImageManager.m in Sources */,
@@ -2203,6 +2235,7 @@
 				1030886A1C03F1A000C8B623 /* easing.c in Sources */,
 				104228C91C36956C0011409C /* PictureCell.m in Sources */,
 				1017F1221C356EE700E245F8 /* SDWebImageDownloader.m in Sources */,
+				1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */,
 				102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */,
 				1017F1391C35715400E245F8 /* NSArray+JSONData.m in Sources */,
 				102296921C38CF71001AF5BB /* NodeModel.m in Sources */,
@@ -2280,6 +2313,7 @@
 				102B1F331C60E66F00A8FD40 /* SourceModel.m in Sources */,
 				1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */,
 				102B858D1C3CF2A9001699A9 /* V_2_X_NetworkingReachability.m in Sources */,
+				1020E2DA1C731AA500FF233E /* CAGradientMaskView.m in Sources */,
 				10D254111C5773B2003B6734 /* AbstractAdapter.m in Sources */,
 				104F0D201BFC118900C46E6A /* POPNumberAnimation.m in Sources */,
 				102B1F2B1C60E66F00A8FD40 /* CoverImageModel.m in Sources */,
