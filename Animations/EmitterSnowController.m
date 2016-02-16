@@ -29,16 +29,16 @@
     snowEmitter.emitterPosition = CGPointMake(120,0);
     
     // 发射源的尺寸大小
-    snowEmitter.emitterSize  = self.contentView.bounds.size;
+    snowEmitter.emitterSize     = self.contentView.bounds.size;
     
     // 发射模式
-    snowEmitter.emitterMode  = kCAEmitterLayerSurface;
+    snowEmitter.emitterMode     = kCAEmitterLayerSurface;
     
     // 发射源的形状
-    snowEmitter.emitterShape = kCAEmitterLayerLine;
+    snowEmitter.emitterShape    = kCAEmitterLayerLine;
     
     // 创建雪花类型的粒子
-    CAEmitterCell *snowflake = [CAEmitterCell emitterCell];
+    CAEmitterCell *snowflake    = [CAEmitterCell emitterCell];
     
     // 粒子的名字
     snowflake.name = @"snow";
@@ -48,7 +48,7 @@
     snowflake.lifetime  = 120.0;
     
     // 粒子速度
-    snowflake.velocity = 10.0;
+    snowflake.velocity  = 10.0;
     
     // 粒子的速度范围
     snowflake.velocityRange = 10;

@@ -58,18 +58,18 @@
                                                  self.pathView.width - 2 * self.pathView.gap,
                                                  self.pathView.width - 2 * self.pathView.gap);
     [self.pathView.layer addSublayer:self.fillShapeLayer];
-
+    
     // line
-    self.lineShapeLayer             = [CAShapeLayer layer];
-    self.lineShapeLayer.path        = path.CGPath;
-    self.lineShapeLayer.strokeColor = [UIColor redColor].CGColor;
-    self.lineShapeLayer.fillColor   = [UIColor clearColor].CGColor;
-    self.lineShapeLayer.lineWidth   = 0.5f;
+    self.lineShapeLayer                 = [CAShapeLayer layer];
+    self.lineShapeLayer.path            = path.CGPath;
+    self.lineShapeLayer.strokeColor     = [UIColor redColor].CGColor;
+    self.lineShapeLayer.fillColor       = [UIColor clearColor].CGColor;
+    self.lineShapeLayer.lineWidth       = 0.5f;
     self.lineShapeLayer.lineDashPattern = @[@(3), @(3)];
-    self.lineShapeLayer.frame       = CGRectMake(self.pathView.gap,
-                                                 self.pathView.gap,
-                                                 self.pathView.width - 2 * self.pathView.gap,
-                                                 self.pathView.width - 2 * self.pathView.gap);
+    self.lineShapeLayer.frame           = CGRectMake(self.pathView.gap,
+                                                     self.pathView.gap,
+                                                     self.pathView.width - 2 * self.pathView.gap,
+                                                     self.pathView.width - 2 * self.pathView.gap);
     [self.pathView.layer addSublayer:self.lineShapeLayer];
     
     // timer
@@ -88,7 +88,7 @@
         [self.fillShapeLayer addAnimation:basicAnimation forKey:@"fillShapeLayerPath"];
         
         // fillColor animation.
-        UIColor *newColor = [self randomColor];
+        UIColor *newColor                = [self randomColor];
         CABasicAnimation *colorAnimation = [CABasicAnimation animationWithKeyPath:@"fillColor"];
         colorAnimation.duration          = 0.5;
         colorAnimation.fromValue         = (__bridge id)(self.fillShapeLayer.fillColor);
@@ -97,7 +97,7 @@
         [self.fillShapeLayer addAnimation:colorAnimation forKey:@"fillShapeLayerColor"];
         
         // path animation.
-        CGPoint newPoint = CGPointMake(self.A.x + 10, self.A.y + 10);
+        CGPoint newPoint                    = CGPointMake(self.A.x + 10, self.A.y + 10);
         CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
         positionAnimation.duration          = 0.5f;
         positionAnimation.fromValue         = [NSValue valueWithCGPoint:self.pointA.position];

@@ -26,7 +26,7 @@
     self.backgroundView.backgroundColor = [UIColor blackColor];
     
     {
-        FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:self.contentView.bounds];
+        FBShimmeringView *shimmeringView           = [[FBShimmeringView alloc] initWithFrame:self.contentView.bounds];
         shimmeringView.shimmering                  = YES;
         shimmeringView.shimmeringBeginFadeDuration = 0.3;
         shimmeringView.shimmeringOpacity           = 0.3;
@@ -78,7 +78,7 @@
     
     headlinelabel.center = self.titleView.middlePoint;
     
-    FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:self.titleView.bounds];
+    FBShimmeringView *shimmeringView           = [[FBShimmeringView alloc] initWithFrame:self.titleView.bounds];
     shimmeringView.shimmering                  = YES;
     shimmeringView.shimmeringBeginFadeDuration = 0.3;
     shimmeringView.shimmeringOpacity           = 0.1f;
