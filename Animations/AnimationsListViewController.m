@@ -168,7 +168,7 @@
     
     for (int i = 0; i < array.count; i++) {
     
-        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:listItemCellString data:array[i]
+        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"ListItemCell" data:array[i]
                                                                                     cellHeight:0 cellType:0];
         [self.items addObject:dataAdapter];
     }
@@ -182,7 +182,7 @@
     self.tableView.dataSource     = self;
     self.tableView.rowHeight      = 50.f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerClass:[ListItemCell class] forCellReuseIdentifier:listItemCellString];
+    [self.tableView registerClass:[ListItemCell class] forCellReuseIdentifier:@"ListItemCell"];
     
     [self.contentView addSubview:self.tableView];
     

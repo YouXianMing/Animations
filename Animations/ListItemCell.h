@@ -8,8 +8,6 @@
 
 #import "CustomAdapterTypeCell.h"
 
-static NSString *listItemCellString = @"ListItemCell";
-
 @interface ListItemCell : CustomAdapterTypeCell
 
 @end
