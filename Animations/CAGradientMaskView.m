@@ -8,7 +8,6 @@
 
 #import "CAGradientMaskView.h"
 #import "CAGradientView.h"
-#import "UIView+SetRect.h"
 
 @interface CAGradientMaskView ()
 

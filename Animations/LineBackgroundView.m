@@ -10,10 +10,8 @@
 
 #import "LineBackgroundView.h"
 
-
 // 将度数转换为弧度
 #define   RADIAN(degrees)  ((M_PI * (degrees))/ 180.f)
-
 
 @interface LineBackgroundView ()
 

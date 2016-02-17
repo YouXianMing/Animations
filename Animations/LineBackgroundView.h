@@ -10,7 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface LineBackgroundView : UIView
 
 @property (nonatomic) CGFloat            lineWidth;

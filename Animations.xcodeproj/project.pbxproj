@@ -806,7 +806,6 @@
 				106CF09A1C3765490006419B /* UIFont+Categories */,
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
 				104228CE1C36A24F0011409C /* AnimationProperty */,
-				1017F13D1C35720100E245F8 /* CreateModel */,
 				1017F1301C35714800E245F8 /* JSONKit */,
 				1017F0FB1C356EE700E245F8 /* SDWebImage */,
 				1048F6EA1C28D56B0052F1DD /* MDScratchImageView */,
@@ -878,13 +877,6 @@
 				1017F1381C35715400E245F8 /* NSData+JSONData.m */,
 			);
 			name = JSONKit;
-			sourceTree = "<group>";
-		};
-		1017F13D1C35720100E245F8 /* CreateModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CreateModel;
 			sourceTree = "<group>";
 		};
 		101EA3EB1C489C1400D5D487 /* DateFormatter */ = {
