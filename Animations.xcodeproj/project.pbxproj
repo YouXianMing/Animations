@@ -35,6 +35,7 @@
 		1020E2D31C73197B00FF233E /* CAGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2D21C73197B00FF233E /* CAGradientView.m */; };
 		1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2D61C7319D000FF233E /* CAGradientViewController.m */; };
 		1020E2DA1C731AA500FF233E /* CAGradientMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2D91C731AA500FF233E /* CAGradientMaskView.m */; };
+		1020E2E41C7422B600FF233E /* UIView+AnimationPracticalMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */; };
 		102296921C38CF71001AF5BB /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296801C38CF71001AF5BB /* NodeModel.m */; };
 		102296931C38CF71001AF5BB /* NodeModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296821C38CF71001AF5BB /* NodeModelCell.m */; };
 		102296941C38CF71001AF5BB /* NodeModelRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296841C38CF71001AF5BB /* NodeModelRootNavigationController.m */; };
@@ -303,6 +304,8 @@
 		1020E2D61C7319D000FF233E /* CAGradientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAGradientViewController.m; sourceTree = "<group>"; };
 		1020E2D81C731AA500FF233E /* CAGradientMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAGradientMaskView.h; sourceTree = "<group>"; };
 		1020E2D91C731AA500FF233E /* CAGradientMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAGradientMaskView.m; sourceTree = "<group>"; };
+		1020E2E21C7422B600FF233E /* UIView+AnimationPracticalMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationPracticalMethod.h"; sourceTree = "<group>"; };
+		1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationPracticalMethod.m"; sourceTree = "<group>"; };
 		1022967F1C38CF71001AF5BB /* NodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModel.h; sourceTree = "<group>"; };
 		102296801C38CF71001AF5BB /* NodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
 		102296811C38CF71001AF5BB /* NodeModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelCell.h; sourceTree = "<group>"; };
@@ -789,6 +792,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1020E2E51C7422CF00FF233E /* UIView+AnimationPracticalMethod */,
 				1020E2D01C73196D00FF233E /* CAGradientView */,
 				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
 				10A34F631C55AC9200E1A0E0 /* LabelWidthAndHeight */,
@@ -906,6 +910,15 @@
 				1020E2D91C731AA500FF233E /* CAGradientMaskView.m */,
 			);
 			name = CAGradientViewController;
+			sourceTree = "<group>";
+		};
+		1020E2E51C7422CF00FF233E /* UIView+AnimationPracticalMethod */ = {
+			isa = PBXGroup;
+			children = (
+				1020E2E21C7422B600FF233E /* UIView+AnimationPracticalMethod.h */,
+				1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */,
+			);
+			name = "UIView+AnimationPracticalMethod";
 			sourceTree = "<group>";
 		};
 		1022967E1C38CF71001AF5BB /* NodeModel */ = {
@@ -2247,6 +2260,7 @@
 				103088B71C05880B00C8B623 /* Math.m in Sources */,
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */,
+				1020E2E41C7422B600FF233E /* UIView+AnimationPracticalMethod.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
 				102296B21C38D122001AF5BB /* WaterfallPictureModel.m in Sources */,
 				102296931C38CF71001AF5BB /* NodeModelCell.m in Sources */,
