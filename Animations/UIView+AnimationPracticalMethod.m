@@ -16,9 +16,9 @@
     
     if (animated) {
         
-        [UIView animateWithDuration:effectiveAlpha animations:^{
+        [UIView animateWithDuration:duration animations:^{
             
-            self.alpha = alpha;
+            self.alpha = effectiveAlpha;
         }];
         
     } else {
