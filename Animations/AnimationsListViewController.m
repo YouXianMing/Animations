@@ -50,6 +50,7 @@
 #import "CASpringAnimationController.h"
 #import "AdditiveAnimationController.h"
 #import "TableViewLoadDataController.h"
+#import "MotionEffectViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -162,6 +163,7 @@
                        [Item itemWithName:@"CASpringAnimation" object:[CASpringAnimationController class]],
                        [Item itemWithName:@"Additive属性动画" object:[AdditiveAnimationController class]],
                        [Item itemWithName:@"加载网络数据" object:[TableViewLoadDataController class]],
+                       [Item itemWithName:@"MotionEffect效果" object:[MotionEffectViewController class]],
                        ];
     
     self.items = [NSMutableArray array];

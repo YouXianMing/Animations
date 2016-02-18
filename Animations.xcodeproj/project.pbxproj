@@ -36,6 +36,8 @@
 		1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2D61C7319D000FF233E /* CAGradientViewController.m */; };
 		1020E2DA1C731AA500FF233E /* CAGradientMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2D91C731AA500FF233E /* CAGradientMaskView.m */; };
 		1020E2E41C7422B600FF233E /* UIView+AnimationPracticalMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */; };
+		1020E3381C759B3400FF233E /* MotionEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E3371C759B3400FF233E /* MotionEffectViewController.m */; };
+		1020E33B1C759C2F00FF233E /* UIView+MotionEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E33A1C759C2F00FF233E /* UIView+MotionEffect.m */; };
 		102296921C38CF71001AF5BB /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296801C38CF71001AF5BB /* NodeModel.m */; };
 		102296931C38CF71001AF5BB /* NodeModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296821C38CF71001AF5BB /* NodeModelCell.m */; };
 		102296941C38CF71001AF5BB /* NodeModelRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296841C38CF71001AF5BB /* NodeModelRootNavigationController.m */; };
@@ -306,6 +308,10 @@
 		1020E2D91C731AA500FF233E /* CAGradientMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAGradientMaskView.m; sourceTree = "<group>"; };
 		1020E2E21C7422B600FF233E /* UIView+AnimationPracticalMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationPracticalMethod.h"; sourceTree = "<group>"; };
 		1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationPracticalMethod.m"; sourceTree = "<group>"; };
+		1020E3361C759B3400FF233E /* MotionEffectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionEffectViewController.h; sourceTree = "<group>"; };
+		1020E3371C759B3400FF233E /* MotionEffectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionEffectViewController.m; sourceTree = "<group>"; };
+		1020E3391C759C2F00FF233E /* UIView+MotionEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MotionEffect.h"; sourceTree = "<group>"; };
+		1020E33A1C759C2F00FF233E /* UIView+MotionEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MotionEffect.m"; sourceTree = "<group>"; };
 		1022967F1C38CF71001AF5BB /* NodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModel.h; sourceTree = "<group>"; };
 		102296801C38CF71001AF5BB /* NodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
 		102296811C38CF71001AF5BB /* NodeModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelCell.h; sourceTree = "<group>"; };
@@ -919,6 +925,17 @@
 				1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */,
 			);
 			name = "UIView+AnimationPracticalMethod";
+			sourceTree = "<group>";
+		};
+		1020E3351C75975700FF233E /* MotionEffectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1020E3361C759B3400FF233E /* MotionEffectViewController.h */,
+				1020E3371C759B3400FF233E /* MotionEffectViewController.m */,
+				1020E3391C759C2F00FF233E /* UIView+MotionEffect.h */,
+				1020E33A1C759C2F00FF233E /* UIView+MotionEffect.m */,
+			);
+			name = MotionEffectViewController;
 			sourceTree = "<group>";
 		};
 		1022967E1C38CF71001AF5BB /* NodeModel */ = {
@@ -1536,6 +1553,7 @@
 				109BF1241C4E70AD000F21BF /* CASpringAnimationController */,
 				10931AE81C51147E004D120D /* AdditiveAnimationController */,
 				102B1F051C60E28200A8FD40 /* TableViewLoadDataController */,
+				1020E3351C75975700FF233E /* MotionEffectViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2142,6 +2160,7 @@
 				102B1F0C1C60E3D700A8FD40 /* RefreshObject.m in Sources */,
 				102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */,
 				104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */,
+				1020E33B1C759C2F00FF233E /* UIView+MotionEffect.m in Sources */,
 				10381FD11BF9D2C600E5E476 /* StrokeCircleLayerConfigure.m in Sources */,
 				109F66621C38CC7A0082BC95 /* WaterfallLayoutController.m in Sources */,
 				1017F1271C356EE700E245F8 /* UIImage+GIF.m in Sources */,
@@ -2173,6 +2192,7 @@
 				1047D0F21C465753009ADED6 /* InfiniteRotationView.m in Sources */,
 				102B85711C3CF27A001699A9 /* AFSecurityPolicy.m in Sources */,
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
+				1020E3381C759B3400FF233E /* MotionEffectViewController.m in Sources */,
 				10381FC41BF9B77000E5E476 /* CustomNavigationController.m in Sources */,
 				1017F1261C356EE700E245F8 /* UIButton+WebCache.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
