@@ -51,6 +51,7 @@
 #import "AdditiveAnimationController.h"
 #import "TableViewLoadDataController.h"
 #import "MotionEffectViewController.h"
+#import "GifPictureController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -164,7 +165,7 @@
                        [Item itemWithName:@"Additive属性动画" object:[AdditiveAnimationController class]],
                        [Item itemWithName:@"加载网络数据" object:[TableViewLoadDataController class]],
                        [Item itemWithName:@"MotionEffect效果" object:[MotionEffectViewController class]],
-                       ];
+                       [Item itemWithName:@"加载GIF图片" object:[GifPictureController class]]];
     
     self.items = [NSMutableArray array];
     

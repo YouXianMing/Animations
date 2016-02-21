@@ -225,6 +225,9 @@
 		10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C611C12D5FD00C3E505 /* DrawValues.m */; };
 		10A67C651C12D68D00C3E505 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C641C12D68D00C3E505 /* DrawView.m */; };
 		10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A67C671C12D96500C3E505 /* DrawLineView.m */; };
+		10A848251C795DE400F9ED67 /* GifPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A848241C795DE400F9ED67 /* GifPictureController.m */; };
+		10A8482A1C795E0D00F9ED67 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A848271C795E0D00F9ED67 /* FLAnimatedImage.m */; };
+		10A8482B1C795E0D00F9ED67 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A848291C795E0D00F9ED67 /* FLAnimatedImageView.m */; };
 		10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */; };
 		10C1830E1C622D1E000C10EB /* LoadUrlDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C1830D1C622D1E000C10EB /* LoadUrlDataCell.m */; };
 		10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */; };
@@ -710,6 +713,12 @@
 		10A67C641C12D68D00C3E505 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		10A67C661C12D96500C3E505 /* DrawLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLineView.h; sourceTree = "<group>"; };
 		10A67C671C12D96500C3E505 /* DrawLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLineView.m; sourceTree = "<group>"; };
+		10A848231C795DE400F9ED67 /* GifPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifPictureController.h; sourceTree = "<group>"; };
+		10A848241C795DE400F9ED67 /* GifPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifPictureController.m; sourceTree = "<group>"; };
+		10A848261C795E0D00F9ED67 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		10A848271C795E0D00F9ED67 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		10A848281C795E0D00F9ED67 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		10A848291C795E0D00F9ED67 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
 		10AB70D81C4925F7008C9C88 /* MusicBarAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicBarAnimationController.h; sourceTree = "<group>"; };
 		10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicBarAnimationController.m; sourceTree = "<group>"; };
 		10C1830C1C622D1E000C10EB /* LoadUrlDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadUrlDataCell.h; sourceTree = "<group>"; };
@@ -1554,6 +1563,7 @@
 				10931AE81C51147E004D120D /* AdditiveAnimationController */,
 				102B1F051C60E28200A8FD40 /* TableViewLoadDataController */,
 				1020E3351C75975700FF233E /* MotionEffectViewController */,
+				10A848321C796ECE00F9ED67 /* GifPictureController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1966,6 +1976,19 @@
 			name = DrawWaveViewController;
 			sourceTree = "<group>";
 		};
+		10A848321C796ECE00F9ED67 /* GifPictureController */ = {
+			isa = PBXGroup;
+			children = (
+				10A848231C795DE400F9ED67 /* GifPictureController.h */,
+				10A848241C795DE400F9ED67 /* GifPictureController.m */,
+				10A848261C795E0D00F9ED67 /* FLAnimatedImage.h */,
+				10A848271C795E0D00F9ED67 /* FLAnimatedImage.m */,
+				10A848281C795E0D00F9ED67 /* FLAnimatedImageView.h */,
+				10A848291C795E0D00F9ED67 /* FLAnimatedImageView.m */,
+			);
+			name = GifPictureController;
+			sourceTree = "<group>";
+		};
 		10AB70DB1C49298D008C9C88 /* MusicBarAnimationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2127,6 +2150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C1830E1C622D1E000C10EB /* LoadUrlDataCell.m in Sources */,
+				10A848251C795DE400F9ED67 /* GifPictureController.m in Sources */,
 				10CEC5861C21321800B0CA7D /* NormalTitleViewController.m in Sources */,
 				10381FB91BF9B55B00E5E476 /* POPCustomAnimation.mm in Sources */,
 				B5D011941C0BE2410075BC2E /* RotateView.m in Sources */,
@@ -2147,6 +2171,7 @@
 				100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */,
 				10D4F6091C41486E00D056EB /* CATransform3DM34Controller.m in Sources */,
 				10CEC5971C223A5400B0CA7D /* ScaleLabel.m in Sources */,
+				10A8482A1C795E0D00F9ED67 /* FLAnimatedImage.m in Sources */,
 				10CEC5941C2238E700B0CA7D /* LabelScaleViewController.m in Sources */,
 				104228C31C3694B10011409C /* SDWebImageController.m in Sources */,
 				102296951C38CF71001AF5BB /* NodeModelStrings.m in Sources */,
@@ -2319,6 +2344,7 @@
 				102B1F311C60E66F00A8FD40 /* MentionsModel.m in Sources */,
 				10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
+				10A8482B1C795E0D00F9ED67 /* FLAnimatedImageView.m in Sources */,
 				10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */,
 				106249981C2785630090AD65 /* EmitterSnowController.m in Sources */,
 				101EA3EE1C489C2E00D5D487 /* DateFormatter.m in Sources */,
