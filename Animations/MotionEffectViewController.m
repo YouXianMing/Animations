@@ -20,6 +20,8 @@
     
     [super setup];
     
+    // https://github.com/jvenegas/TLMotionEffect
+    
     {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, Width - 15, Width - 15)];
         imageView.image        = [UIImage imageNamed:@"最外层"];
