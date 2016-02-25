@@ -80,6 +80,8 @@
 
 ![demo37.gif](http://images2015.cnblogs.com/blog/607542/201602/607542-20160222205306770-977447831.gif)
 
+![demo38.gif](http://images2015.cnblogs.com/blog/607542/201602/607542-20160225210212411-1015496612.gif)
+
 > Part of the reference project
 
 [https://github.com/schneiderandre/popping](https://github.com/schneiderandre/popping)
@@ -93,3 +95,7 @@
 [http://ronnqvi.st/multiple-animations/](http://ronnqvi.st/multiple-animations/)
 
 [https://github.com/jvenegas/TLMotionEffect](https://github.com/jvenegas/TLMotionEffect)
+
+[https://github.com/Flipboard/FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)
+
+[https://github.com/rFlex/SCViewShaker](https://github.com/rFlex/SCViewShaker)
