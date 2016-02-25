@@ -193,6 +193,8 @@
 		105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */; };
 		105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */; };
 		106249981C2785630090AD65 /* EmitterSnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106249971C2785630090AD65 /* EmitterSnowController.m */; };
+		10667E181C7F2CCA00B9AC08 /* SCViewShakerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E171C7F2CCA00B9AC08 /* SCViewShakerController.m */; };
+		10667E1D1C7F2CFB00B9AC08 /* UIView+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */; };
 		106CF0861C375DAD0006419B /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0851C375DAD0006419B /* AbstractAlertView.m */; };
 		106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF08D1C3763E30006419B /* UIButton+inits.m */; };
 		106CF0921C3764090006419B /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0911C3764090006419B /* AlertViewController.m */; };
@@ -648,6 +650,10 @@
 		105EFAF71C42878F00394044 /* SimpleNSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleNSLog.h; sourceTree = "<group>"; };
 		106249961C2785630090AD65 /* EmitterSnowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterSnowController.h; sourceTree = "<group>"; };
 		106249971C2785630090AD65 /* EmitterSnowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSnowController.m; sourceTree = "<group>"; };
+		10667E161C7F2CCA00B9AC08 /* SCViewShakerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewShakerController.h; sourceTree = "<group>"; };
+		10667E171C7F2CCA00B9AC08 /* SCViewShakerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCViewShakerController.m; sourceTree = "<group>"; };
+		10667E1B1C7F2CFB00B9AC08 /* UIView+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shake.h"; sourceTree = "<group>"; };
+		10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shake.m"; sourceTree = "<group>"; };
 		106CF0841C375DAD0006419B /* AbstractAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
 		106CF0851C375DAD0006419B /* AbstractAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
 		106CF08C1C3763E30006419B /* UIButton+inits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+inits.h"; sourceTree = "<group>"; };
@@ -807,6 +813,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				10667E1A1C7F2CE300B9AC08 /* UIView+Shake */,
 				1020E2E51C7422CF00FF233E /* UIView+AnimationPracticalMethod */,
 				1020E2D01C73196D00FF233E /* CAGradientView */,
 				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
@@ -1564,6 +1571,7 @@
 				102B1F051C60E28200A8FD40 /* TableViewLoadDataController */,
 				1020E3351C75975700FF233E /* MotionEffectViewController */,
 				10A848321C796ECE00F9ED67 /* GifPictureController */,
+				10667E191C7F2CCE00B9AC08 /* SCViewShakerController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1817,6 +1825,24 @@
 				106249971C2785630090AD65 /* EmitterSnowController.m */,
 			);
 			name = EmitterSnowController;
+			sourceTree = "<group>";
+		};
+		10667E191C7F2CCE00B9AC08 /* SCViewShakerController */ = {
+			isa = PBXGroup;
+			children = (
+				10667E161C7F2CCA00B9AC08 /* SCViewShakerController.h */,
+				10667E171C7F2CCA00B9AC08 /* SCViewShakerController.m */,
+			);
+			name = SCViewShakerController;
+			sourceTree = "<group>";
+		};
+		10667E1A1C7F2CE300B9AC08 /* UIView+Shake */ = {
+			isa = PBXGroup;
+			children = (
+				10667E1B1C7F2CFB00B9AC08 /* UIView+Shake.h */,
+				10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */,
+			);
+			name = "UIView+Shake";
 			sourceTree = "<group>";
 		};
 		106CF0871C375F010006419B /* AbstractAlertView */ = {
@@ -2276,6 +2302,7 @@
 				10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */,
 				106CF0991C3765360006419B /* UIFont+Fonts.m in Sources */,
 				102B856D1C3CF27A001699A9 /* AFHTTPRequestOperation.m in Sources */,
+				10667E1D1C7F2CFB00B9AC08 /* UIView+Shake.m in Sources */,
 				106CF0961C37650D0006419B /* MessageAlertView.m in Sources */,
 				102B85721C3CF27A001699A9 /* AFURLConnectionOperation.m in Sources */,
 				10A67C5B1C12D4BA00C3E505 /* CGContextObjectConfig.m in Sources */,
@@ -2369,6 +2396,7 @@
 				10D254111C5773B2003B6734 /* AbstractAdapter.m in Sources */,
 				104F0D201BFC118900C46E6A /* POPNumberAnimation.m in Sources */,
 				102B1F2B1C60E66F00A8FD40 /* CoverImageModel.m in Sources */,
+				10667E181C7F2CCA00B9AC08 /* SCViewShakerController.m in Sources */,
 				102B856F1C3CF27A001699A9 /* AFHTTPSessionManager.m in Sources */,
 				104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */,
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
