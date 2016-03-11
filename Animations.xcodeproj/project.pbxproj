@@ -58,6 +58,9 @@
 		102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296BD1C38D420001AF5BB /* WaterfallHeaderView.m */; };
 		102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296C01C38D65F001AF5BB /* WaterfallFooterView.m */; };
 		102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296C41C392B1F001AF5BB /* LineBackgroundView.m */; };
+		102A0FFA1C92727200BF3F1B /* NSData+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 102A0FF61C92727200BF3F1B /* NSData+Godzippa.m */; };
+		102A0FFB1C92727200BF3F1B /* NSFileManager+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 102A0FF81C92727200BF3F1B /* NSFileManager+Godzippa.m */; };
+		102A10011C9272C100BF3F1B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 102A10001C9272C100BF3F1B /* libz.tbd */; };
 		102B1F041C60E26B00A8FD40 /* TableViewLoadDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B1F031C60E26B00A8FD40 /* TableViewLoadDataController.m */; };
 		102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B1F081C60E3D700A8FD40 /* UIScrollView+RefreshObject.m */; };
 		102B1F0C1C60E3D700A8FD40 /* RefreshObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B1F0A1C60E3D700A8FD40 /* RefreshObject.m */; };
@@ -354,6 +357,12 @@
 		102296C01C38D65F001AF5BB /* WaterfallFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallFooterView.m; sourceTree = "<group>"; };
 		102296C31C392B1F001AF5BB /* LineBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineBackgroundView.h; sourceTree = "<group>"; };
 		102296C41C392B1F001AF5BB /* LineBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBackgroundView.m; sourceTree = "<group>"; };
+		102A0FF51C92727200BF3F1B /* NSData+Godzippa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Godzippa.h"; sourceTree = "<group>"; };
+		102A0FF61C92727200BF3F1B /* NSData+Godzippa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Godzippa.m"; sourceTree = "<group>"; };
+		102A0FF71C92727200BF3F1B /* NSFileManager+Godzippa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Godzippa.h"; sourceTree = "<group>"; };
+		102A0FF81C92727200BF3F1B /* NSFileManager+Godzippa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Godzippa.m"; sourceTree = "<group>"; };
+		102A0FF91C92727200BF3F1B /* Godzippa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Godzippa.h; sourceTree = "<group>"; };
+		102A10001C9272C100BF3F1B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		102B1F021C60E26B00A8FD40 /* TableViewLoadDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewLoadDataController.h; sourceTree = "<group>"; };
 		102B1F031C60E26B00A8FD40 /* TableViewLoadDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewLoadDataController.m; sourceTree = "<group>"; };
 		102B1F061C60E3D700A8FD40 /* RefreshObjectAnimationProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshObjectAnimationProtocal.h; sourceTree = "<group>"; };
@@ -775,6 +784,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102A10011C9272C100BF3F1B /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +823,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				102A0FF41C92725400BF3F1B /* NSData+GZip */,
 				10667E1A1C7F2CE300B9AC08 /* UIView+Shake */,
 				1020E2E51C7422CF00FF233E /* UIView+AnimationPracticalMethod */,
 				1020E2D01C73196D00FF233E /* CAGradientView */,
@@ -1044,6 +1055,26 @@
 				B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */,
 			);
 			name = CustomHeaderFooterView;
+			sourceTree = "<group>";
+		};
+		102A0FF41C92725400BF3F1B /* NSData+GZip */ = {
+			isa = PBXGroup;
+			children = (
+				102A0FF51C92727200BF3F1B /* NSData+Godzippa.h */,
+				102A0FF61C92727200BF3F1B /* NSData+Godzippa.m */,
+				102A0FF71C92727200BF3F1B /* NSFileManager+Godzippa.h */,
+				102A0FF81C92727200BF3F1B /* NSFileManager+Godzippa.m */,
+				102A0FF91C92727200BF3F1B /* Godzippa.h */,
+			);
+			name = "NSData+GZip";
+			sourceTree = "<group>";
+		};
+		102A10021C9272ED00BF3F1B /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				102A10001C9272C100BF3F1B /* libz.tbd */,
+			);
+			name = Libs;
 			sourceTree = "<group>";
 		};
 		102B1F051C60E28200A8FD40 /* TableViewLoadDataController */ = {
@@ -1404,11 +1435,12 @@
 		10381F501BF9B44A00E5E476 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				102A10021C9272ED00BF3F1B /* Libs */,
 				10381F5C1BF9B44A00E5E476 /* Assets.xcassets */,
 				10381F611BF9B44A00E5E476 /* Info.plist */,
 				10381F511BF9B44A00E5E476 /* main.m */,
-				10381F741BF9B4E800E5E476 /* Animations.pch */,
 				10567E481C45411700625C6B /* api.md */,
+				10381F741BF9B4E800E5E476 /* Animations.pch */,
 				105EFAF71C42878F00394044 /* SimpleNSLog.h */,
 				10381F761BF9B4F800E5E476 /* HYQiHei-25JF.otf */,
 			);
@@ -2316,6 +2348,7 @@
 				102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */,
 				1017F1391C35715400E245F8 /* NSArray+JSONData.m in Sources */,
 				102296921C38CF71001AF5BB /* NodeModel.m in Sources */,
+				102A0FFA1C92727200BF3F1B /* NSData+Godzippa.m in Sources */,
 				102B85741C3CF27A001699A9 /* AFURLResponseSerialization.m in Sources */,
 				102B84D91C3B9424001699A9 /* NSString+MD5.m in Sources */,
 				102B1F301C60E66F00A8FD40 /* LinksModel.m in Sources */,
@@ -2358,6 +2391,7 @@
 				1017F1211C356EE700E245F8 /* SDWebImageDecoder.m in Sources */,
 				10381FBE1BF9B55B00E5E476 /* POPPropertyAnimation.mm in Sources */,
 				1022969A1C38CF71001AF5BB /* NodePressAnimationView.m in Sources */,
+				102A0FFB1C92727200BF3F1B /* NSFileManager+Godzippa.m in Sources */,
 				105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */,
 				105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */,
 				B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */,
