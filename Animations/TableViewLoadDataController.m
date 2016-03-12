@@ -7,7 +7,7 @@
 //
 
 #import "TableViewLoadDataController.h"
-#import "V_2_X_Networking.h"
+#import "Networking.h"
 #import "TableViewLoadDataRootModel.h"
 #import "LoadUrlDataCell.h"
 #import "CellDataAdapter.h"
@@ -17,10 +17,10 @@
 #import "MessageAlertView.h"
 #import "GCD.h"
 
-@interface TableViewLoadDataController () <UITableViewDelegate, UITableViewDataSource, NetworkingDelegate>
+@interface TableViewLoadDataController () <UITableViewDelegate, UITableViewDataSource, AbsNetworkingDelegate>
 
 @property (nonatomic, strong) UITableView                         *tableView;
-@property (nonatomic, strong) V_2_X_Networking                    *dataNetworking;
+@property (nonatomic, strong) Networking                          *dataNetworking;
 @property (nonatomic, strong) NSMutableArray <CellDataAdapter *>  *datasArray;
 
 @property (nonatomic, strong) MessageAlertView                    *showLoadingView;
@@ -52,10 +52,10 @@
     self.showLoadingView.contentView = self.contentView;
     [self.showLoadingView show];
     
-    self.dataNetworking = [V_2_X_Networking getMethodNetworkingWithUrlString:@"https://api.app.net/stream/0/posts/stream/global"
-                                                           requestDictionary:nil
-                                                             requestBodyType:[HttpBodyType type]
-                                                            responseDataType:[JsonDataType type]];
+    self.dataNetworking = [Networking getMethodNetworkingWithUrlString:@"https://api.app.net/stream/0/posts/stream/global"
+                                                     requestDictionary:nil
+                                                       requestBodyType:[HttpBodyType type]
+                                                      responseDataType:[JsonDataType type]];
     self.dataNetworking.delegate        = self;
     self.dataNetworking.timeoutInterval = @(15);
     [self.dataNetworking startRequest];
@@ -104,7 +104,7 @@
     if (rootModel.meta.code.integerValue == 200) {
         
         [GCDQueue executeInGlobalQueue:^{
-        
+            
             for (int i = 0; i < rootModel.data.count; i++) {
                 
                 DataModel *dataModel = rootModel.data[i];
@@ -135,7 +135,7 @@
         }];
         
     } else {
-    
+        
         AbstractAlertView *alertView     = [[MessageAlertView alloc] init];
         alertView.message                = @"No data now.";
         alertView.contentView            = self.contentView;

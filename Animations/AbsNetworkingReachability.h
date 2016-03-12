@@ -1,9 +1,9 @@
 //
-//  NetworkingReachability.h
-//  Networking
+//  AbsNetworkingReachability.h
+//  AFNetworking-3.x
 //
-//  Created by YouXianMing on 15/11/6.
-//  Copyright © 2015年 ZiPeiYi. All rights reserved.
+//  Created by YouXianMing on 16/3/12.
+//  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -15,7 +15,7 @@ extern NSString *const NetworkingReachableViaWWANNotification;
 extern NSString *const NetworkingReachableViaWIFINotification;
 extern NSString *const NetworkingNotReachableNotification;
 
-@interface NetworkingReachability : NSObject
+@interface AbsNetworkingReachability : NSObject
 
 /**
  *  开始监听网络状态

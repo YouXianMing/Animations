@@ -1,23 +1,21 @@
 //
-//  Networking.h
-//  Networking
+//  AbsNetworking.h
+//  AFNetworking-3.x
 //
-//  Created by YouXianMing on 15/11/6.
-//
-//  http://www.cnblogs.com/YouXianMing/
-//  https://github.com/YouXianMing
+//  Created by YouXianMing on 16/3/12.
+//  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "RequestDictionarySerializer.h"
-#import "ResponseDataSerializer.h"
-#import "RequestBodyType.h"
 #import "RequestMethodType.h"
+#import "RequestBodyType.h"
 #import "ResponseDataType.h"
+#import "AbsRequestDictionarySerializer.h"
+#import "AbsResponseDataSerializer.h"
 
-@class Networking;
+@class AbsNetworking;
 
-@protocol NetworkingDelegate <NSObject>
+@protocol AbsNetworkingDelegate <NSObject>
 
 /**
  *  请求成功
@@ -25,7 +23,7 @@
  *  @param networking networking对象
  *  @param data       数据
  */
-- (void)requestSucess:(Networking *)networking data:(id)data;
+- (void)requestSucess:(AbsNetworking *)networking data:(id)data;
 
 /**
  *  请求失败
@@ -33,11 +31,11 @@
  *  @param networking networking对象
  *  @param error      错误信息
  */
-- (void)requestFailed:(Networking *)networking error:(NSError *)error;
+- (void)requestFailed:(AbsNetworking *)networking error:(NSError *)error;
 
 @end
 
-@interface Networking : NSObject
+@interface AbsNetworking : NSObject
 
 #pragma mark - 设置参数
 
@@ -52,24 +50,24 @@
 @property (nonatomic, strong)   RequestMethodType *method;
 
 /**
- *  请求类型
- */
-@property (nonatomic, strong)   RequestBodyType   *requestBodyType;
-
-/**
  *  设置请求头部信息
  */
 @property (nonatomic, strong)   NSDictionary      *HTTPHeaderFieldsWithValues;
 
 /**
- *  回复类型
+ *  请求方式类型（如HTTP请求的方式、JSON序列化请求方式、PropertyList请求方式等）
+ */
+@property (nonatomic, strong)   RequestBodyType   *requestBodyType;
+
+/**
+ *  回复数据的类型（如返回的数据为二进制data、序列化的JSON数据等）
  */
 @property (nonatomic, strong)   ResponseDataType  *responseDataType;
 
 /**
  *  代理
  */
-@property (nonatomic, weak)     id <NetworkingDelegate> delegate;
+@property (nonatomic, weak)     id <AbsNetworkingDelegate> delegate;
 
 /**
  *  请求用字典
@@ -82,19 +80,19 @@
 @property (nonatomic)           NSInteger tag;
 
 /**
- *  处理请求字典参数
- */
-@property (nonatomic, strong)   id <RequestDictionarySerializer> requestDictionarySerializer;
-
-/**
  *  请求超时时间间隔（不设置的话默认值为5s）
  */
 @property (nonatomic, strong)   NSNumber *timeoutInterval;
 
 /**
+ *  处理请求字典参数（不设置的话默认不处理）
+ */
+@property (nonatomic, strong)   AbsRequestDictionarySerializer  *requestDictionarySerializer;
+
+/**
  *  处理返回的数据
  */
-@property (nonatomic, strong)   id <ResponseDataSerializer> responseDataSerializer;
+@property (nonatomic, strong)   AbsResponseDataSerializer       *responseDataSerializer;
 
 #pragma mark - 运行时候的参数
 
@@ -112,6 +110,18 @@
  *  处理过的原始数据
  */
 @property (nonatomic, strong) id  serializerResponseData;
+
+/**
+ *  请求的一些信息
+ */
+@property (nonatomic, strong) NSMutableDictionary  *networkingInfomation;
+
+#pragma mark - 初始化设置
+
+/**
+ *  初始化设置
+ */
+- (void)setup;
 
 #pragma mark - 请求方法
 

@@ -1,16 +1,14 @@
 //
-//  RequestDictionarySerializer.h
-//  Networking
+//  AbsRequestDictionarySerializer.h
+//  AFNetworking-3.x
 //
-//  Created by YouXianMing on 15/11/6.
-//
-//  http://www.cnblogs.com/YouXianMing/
-//  https://github.com/YouXianMing
+//  Created by YouXianMing on 16/3/12.
+//  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@protocol RequestDictionarySerializer <NSObject>
+@interface AbsRequestDictionarySerializer : NSObject
 
 /**
  *  处理请求的字典
