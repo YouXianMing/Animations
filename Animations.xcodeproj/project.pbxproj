@@ -234,6 +234,9 @@
 		10A8482A1C795E0D00F9ED67 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A848271C795E0D00F9ED67 /* FLAnimatedImage.m */; };
 		10A8482B1C795E0D00F9ED67 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A848291C795E0D00F9ED67 /* FLAnimatedImageView.m */; };
 		10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */; };
+		10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3CE1C953E5B007E8254 /* ScrollViewAnimationController.m */; };
+		10B6F3D31C953FEA007E8254 /* ScrollComputingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3D21C953FEA007E8254 /* ScrollComputingValue.m */; };
+		10B6F3D61C954749007E8254 /* ScrollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3D51C954749007E8254 /* ScrollTitleView.m */; };
 		10C1830E1C622D1E000C10EB /* LoadUrlDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C1830D1C622D1E000C10EB /* LoadUrlDataCell.m */; };
 		10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */; };
 		10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC5531C20F5F400B0CA7D /* CustomFullContentViewController.m */; };
@@ -734,6 +737,12 @@
 		10A848291C795E0D00F9ED67 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
 		10AB70D81C4925F7008C9C88 /* MusicBarAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicBarAnimationController.h; sourceTree = "<group>"; };
 		10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicBarAnimationController.m; sourceTree = "<group>"; };
+		10B6F3CD1C953E5B007E8254 /* ScrollViewAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewAnimationController.h; sourceTree = "<group>"; };
+		10B6F3CE1C953E5B007E8254 /* ScrollViewAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewAnimationController.m; sourceTree = "<group>"; };
+		10B6F3D11C953FEA007E8254 /* ScrollComputingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollComputingValue.h; sourceTree = "<group>"; };
+		10B6F3D21C953FEA007E8254 /* ScrollComputingValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollComputingValue.m; sourceTree = "<group>"; };
+		10B6F3D41C954749007E8254 /* ScrollTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTitleView.h; sourceTree = "<group>"; };
+		10B6F3D51C954749007E8254 /* ScrollTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTitleView.m; sourceTree = "<group>"; };
 		10C1830C1C622D1E000C10EB /* LoadUrlDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadUrlDataCell.h; sourceTree = "<group>"; };
 		10C1830D1C622D1E000C10EB /* LoadUrlDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadUrlDataCell.m; sourceTree = "<group>"; };
 		10CEC54F1C20F5E400B0CA7D /* CustomNormalContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNormalContentViewController.h; sourceTree = "<group>"; };
@@ -1484,6 +1493,7 @@
 				1020E3351C75975700FF233E /* MotionEffectViewController */,
 				10A848321C796ECE00F9ED67 /* GifPictureController */,
 				10667E191C7F2CCE00B9AC08 /* SCViewShakerController */,
+				10B6F3D01C953E61007E8254 /* ScrollViewAnimationController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2028,6 +2038,19 @@
 			name = MusicBarAnimationController;
 			sourceTree = "<group>";
 		};
+		10B6F3D01C953E61007E8254 /* ScrollViewAnimationController */ = {
+			isa = PBXGroup;
+			children = (
+				10B6F3CD1C953E5B007E8254 /* ScrollViewAnimationController.h */,
+				10B6F3CE1C953E5B007E8254 /* ScrollViewAnimationController.m */,
+				10B6F3D41C954749007E8254 /* ScrollTitleView.h */,
+				10B6F3D51C954749007E8254 /* ScrollTitleView.m */,
+				10B6F3D11C953FEA007E8254 /* ScrollComputingValue.h */,
+				10B6F3D21C953FEA007E8254 /* ScrollComputingValue.m */,
+			);
+			name = ScrollViewAnimationController;
+			sourceTree = "<group>";
+		};
 		10C1830F1C622D4C000C10EB /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2275,6 +2298,7 @@
 				106CF0861C375DAD0006419B /* AbstractAlertView.m in Sources */,
 				104326641C4B172F0033CEC0 /* ProgressColor.m in Sources */,
 				109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */,
+				10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */,
 				102296971C38CF71001AF5BB /* NodeModelViewController.m in Sources */,
 				B5D011A71C0BE3D30075BC2E /* ClassHeaderView.m in Sources */,
 				1017F1281C356EE700E245F8 /* UIImage+MultiFormat.m in Sources */,
@@ -2343,12 +2367,14 @@
 				108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */,
 				1020E2E41C7422B600FF233E /* UIView+AnimationPracticalMethod.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
+				10B6F3D31C953FEA007E8254 /* ScrollComputingValue.m in Sources */,
 				102296B21C38D122001AF5BB /* WaterfallPictureModel.m in Sources */,
 				102296931C38CF71001AF5BB /* NodeModelCell.m in Sources */,
 				1017F12C1C356EE700E245F8 /* UIView+WebCacheOperation.m in Sources */,
 				109606501C93B4A300CCB3AD /* AFSecurityPolicy.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
 				10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */,
+				10B6F3D61C954749007E8254 /* ScrollTitleView.m in Sources */,
 				102B1F2D1C60E66F00A8FD40 /* DescriptionModel.m in Sources */,
 				1017F1251C356EE700E245F8 /* SDWebImagePrefetcher.m in Sources */,
 				B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */,
@@ -2513,7 +2539,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YouXianMing.Animations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2528,7 +2554,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YouXianMing.Animations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
