@@ -29,13 +29,19 @@
 @property (nonatomic)           CGFloat  midValue;
 @property (nonatomic)           CGFloat  endValue;
 
-@property (nonatomic)           CGFloat  offsetValue;
+/**
+ *  The input value.
+ */
+@property (nonatomic)           CGFloat  inputValue;
 
 /**
  *  The output value is in range [0, 1].
  */
 @property (nonatomic, readonly) CGFloat  outputValue;
 
+/**
+ *  Make the setup effective.
+ */
 - (void)makeTheSetupEffective;
 
 @end

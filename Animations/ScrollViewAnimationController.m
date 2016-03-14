@@ -109,7 +109,7 @@ typedef enum : NSUInteger {
         UIImageView          *imageView = [self.contentView viewWithTag:kPictureTag + i];
         ScrollComputingValue *value     = _computingValuesArray[i];
         
-        value.offsetValue    = offsetX;
+        value.inputValue     = offsetX;
         titleView.inputValue = value.outputValue;
         imageView.alpha      = value.outputValue;
     }

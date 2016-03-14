@@ -20,6 +20,9 @@
  */
 @property (nonatomic) CGFloat  inputValue;
 
+/**
+ *  Build sub view.
+ */
 - (void)buildSubViews;
 
 @end

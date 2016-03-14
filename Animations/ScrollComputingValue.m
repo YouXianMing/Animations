@@ -25,26 +25,26 @@
     self.backLine  = [Math mathOnceLinearEquationWithPointA:MATHPointMake(self.midValue, 1) PointB:MATHPointMake(self.endValue, 0)];
 }
 
-@synthesize offsetValue = _offsetValue;
+@synthesize inputValue = _inputValue;
 
-- (void)setOffsetValue:(CGFloat)offsetValue {
+- (void)setInputValue:(CGFloat)inputValue {
 
-    _offsetValue = offsetValue;
+    _inputValue = inputValue;
     
-    if (offsetValue <= _startValue) {
+    if (inputValue <= _startValue) {
         
         _outputValue = 0;
         
-    } else if (offsetValue <= _midValue) {
-    
-        _outputValue = _frontLine.k * offsetValue + _frontLine.b;
+    } else if (inputValue <= _midValue) {
         
-    } else if (offsetValue <= _endValue) {
-    
-        _outputValue = _backLine.k * offsetValue + _backLine.b;
+        _outputValue = _frontLine.k * inputValue + _frontLine.b;
+        
+    } else if (inputValue <= _endValue) {
+        
+        _outputValue = _backLine.k * inputValue + _backLine.b;
         
     } else {
-    
+        
         _outputValue = 0;
     }
 }
