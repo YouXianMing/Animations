@@ -53,7 +53,7 @@
     [self.showLoadingView show];
     
     self.dataNetworking = [Networking getMethodNetworkingWithUrlString:@"https://api.app.net/stream/0/posts/stream/global"
-                                                     requestDictionary:nil
+                                                      requestParameter:nil
                                                        requestBodyType:[HttpBodyType type]
                                                       responseDataType:[JsonDataType type]];
     self.dataNetworking.delegate        = self;

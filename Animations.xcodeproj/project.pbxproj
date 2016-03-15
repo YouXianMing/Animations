@@ -61,6 +61,7 @@
 		102A0FFA1C92727200BF3F1B /* NSData+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 102A0FF61C92727200BF3F1B /* NSData+Godzippa.m */; };
 		102A0FFB1C92727200BF3F1B /* NSFileManager+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 102A0FF81C92727200BF3F1B /* NSFileManager+Godzippa.m */; };
 		102A10011C9272C100BF3F1B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 102A10001C9272C100BF3F1B /* libz.tbd */; };
+		102A10451C9808FF00BF3F1B /* AbsRequestParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 102A10441C9808FF00BF3F1B /* AbsRequestParameterSerializer.m */; };
 		102B1F041C60E26B00A8FD40 /* TableViewLoadDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B1F031C60E26B00A8FD40 /* TableViewLoadDataController.m */; };
 		102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B1F081C60E3D700A8FD40 /* UIScrollView+RefreshObject.m */; };
 		102B1F0C1C60E3D700A8FD40 /* RefreshObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B1F0A1C60E3D700A8FD40 /* RefreshObject.m */; };
@@ -192,7 +193,6 @@
 		1096061A1C93B46800CCB3AD /* RequestMethodType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1096060C1C93B46800CCB3AD /* RequestMethodType.m */; };
 		1096061B1C93B46800CCB3AD /* RequestBodyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1096060E1C93B46800CCB3AD /* RequestBodyType.m */; };
 		1096061C1C93B46800CCB3AD /* ResponseDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606101C93B46800CCB3AD /* ResponseDataType.m */; };
-		1096061D1C93B46800CCB3AD /* AbsRequestDictionarySerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606121C93B46800CCB3AD /* AbsRequestDictionarySerializer.m */; };
 		1096061E1C93B46800CCB3AD /* AbsResponseDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606141C93B46800CCB3AD /* AbsResponseDataSerializer.m */; };
 		1096061F1C93B46800CCB3AD /* AbsNetworkingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606161C93B46800CCB3AD /* AbsNetworkingIndicator.m */; };
 		109606201C93B46800CCB3AD /* AbsNetworkingReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606181C93B46800CCB3AD /* AbsNetworkingReachability.m */; };
@@ -366,6 +366,8 @@
 		102A0FF81C92727200BF3F1B /* NSFileManager+Godzippa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Godzippa.m"; sourceTree = "<group>"; };
 		102A0FF91C92727200BF3F1B /* Godzippa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Godzippa.h; sourceTree = "<group>"; };
 		102A10001C9272C100BF3F1B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		102A10431C9808FF00BF3F1B /* AbsRequestParameterSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsRequestParameterSerializer.h; sourceTree = "<group>"; };
+		102A10441C9808FF00BF3F1B /* AbsRequestParameterSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsRequestParameterSerializer.m; sourceTree = "<group>"; };
 		102B1F021C60E26B00A8FD40 /* TableViewLoadDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewLoadDataController.h; sourceTree = "<group>"; };
 		102B1F031C60E26B00A8FD40 /* TableViewLoadDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewLoadDataController.m; sourceTree = "<group>"; };
 		102B1F061C60E3D700A8FD40 /* RefreshObjectAnimationProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshObjectAnimationProtocal.h; sourceTree = "<group>"; };
@@ -650,8 +652,6 @@
 		1096060E1C93B46800CCB3AD /* RequestBodyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestBodyType.m; sourceTree = "<group>"; };
 		1096060F1C93B46800CCB3AD /* ResponseDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseDataType.h; sourceTree = "<group>"; };
 		109606101C93B46800CCB3AD /* ResponseDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseDataType.m; sourceTree = "<group>"; };
-		109606111C93B46800CCB3AD /* AbsRequestDictionarySerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsRequestDictionarySerializer.h; sourceTree = "<group>"; };
-		109606121C93B46800CCB3AD /* AbsRequestDictionarySerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsRequestDictionarySerializer.m; sourceTree = "<group>"; };
 		109606131C93B46800CCB3AD /* AbsResponseDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsResponseDataSerializer.h; sourceTree = "<group>"; };
 		109606141C93B46800CCB3AD /* AbsResponseDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsResponseDataSerializer.m; sourceTree = "<group>"; };
 		109606151C93B46800CCB3AD /* AbsNetworkingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsNetworkingIndicator.h; sourceTree = "<group>"; };
@@ -1869,8 +1869,8 @@
 				1096060E1C93B46800CCB3AD /* RequestBodyType.m */,
 				1096060F1C93B46800CCB3AD /* ResponseDataType.h */,
 				109606101C93B46800CCB3AD /* ResponseDataType.m */,
-				109606111C93B46800CCB3AD /* AbsRequestDictionarySerializer.h */,
-				109606121C93B46800CCB3AD /* AbsRequestDictionarySerializer.m */,
+				102A10431C9808FF00BF3F1B /* AbsRequestParameterSerializer.h */,
+				102A10441C9808FF00BF3F1B /* AbsRequestParameterSerializer.m */,
 				109606131C93B46800CCB3AD /* AbsResponseDataSerializer.h */,
 				109606141C93B46800CCB3AD /* AbsResponseDataSerializer.m */,
 				109606151C93B46800CCB3AD /* AbsNetworkingIndicator.h */,
@@ -2239,13 +2239,13 @@
 				102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */,
 				104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */,
 				1020E33B1C759C2F00FF233E /* UIView+MotionEffect.m in Sources */,
-				1096061D1C93B46800CCB3AD /* AbsRequestDictionarySerializer.m in Sources */,
 				10381FD11BF9D2C600E5E476 /* StrokeCircleLayerConfigure.m in Sources */,
 				109F66621C38CC7A0082BC95 /* WaterfallLayoutController.m in Sources */,
 				1017F1271C356EE700E245F8 /* UIImage+GIF.m in Sources */,
 				109ECD5A1C3D3B1900290307 /* PageFlipEffectController.m in Sources */,
 				1096065A1C93B4A300CCB3AD /* UIProgressView+AFNetworking.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
+				102A10451C9808FF00BF3F1B /* AbsRequestParameterSerializer.m in Sources */,
 				102B1F341C60E66F00A8FD40 /* TableViewLoadDataRootModel.m in Sources */,
 				B5D0119E1C0BE33E0075BC2E /* ClassModel.m in Sources */,
 				10381F711BF9B47000E5E476 /* Item.m in Sources */,

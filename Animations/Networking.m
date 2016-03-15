@@ -29,7 +29,7 @@
 - (void)startRequest {
     
     NSParameterAssert(self.urlString);
-    NSParameterAssert(self.requestDictionarySerializer);
+    NSParameterAssert(self.requestParameterSerializer);
     NSParameterAssert(self.responseDataSerializer);
     
     [self resetData];
@@ -54,11 +54,11 @@
     [self safetySetKey:@"timeoutInterval"        object:@(self.dataTask.currentRequest.timeoutInterval)];
     [self safetySetKey:@"allHTTPHeaderFields"    object:self.dataTask.currentRequest.allHTTPHeaderFields];
     [self safetySetKey:@"acceptableContentTypes" object:self.session.responseSerializer.acceptableContentTypes];
-    [self safetySetKey:@"parameter"              object:self.requestDictionary];
+    [self safetySetKey:@"parameter"              object:self.requestParameter];
 }
 
 - (void)safetySetKey:(NSString *)key object:(id)object {
-
+    
     if (object) {
         
         [self.networkingInfomation setObject:object forKey:key];
@@ -76,7 +76,7 @@
     __weak Networking *weakSelf = self;
     
     self.dataTask = [self.session GET:self.urlString
-                           parameters:[self.requestDictionarySerializer serializeRequestDictionary:self.requestDictionary]
+                           parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
                              progress:nil
                               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                   
@@ -106,7 +106,7 @@
     __weak Networking *weakSelf = self;
     
     self.dataTask = [self.session POST:self.urlString
-                            parameters:[self.requestDictionarySerializer serializeRequestDictionary:self.requestDictionary]
+                            parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
                               progress:nil
                                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                    
@@ -215,13 +215,13 @@
 }
 
 + (id)getMethodNetworkingWithUrlString:(NSString *)urlString
-                     requestDictionary:(NSDictionary *)requestDictionary
+                      requestParameter:(id)requestParameter
                        requestBodyType:(RequestBodyType *)requestBodyType
                       responseDataType:(ResponseDataType *)responseDataType {
     
-    Networking *networking       = [[Networking alloc] init];
-    networking.urlString         = urlString;
-    networking.requestDictionary = requestDictionary;
+    Networking *networking      = [[Networking alloc] init];
+    networking.urlString        = urlString;
+    networking.requestParameter = requestParameter;
     
     if (requestBodyType) {
         
@@ -237,13 +237,13 @@
 }
 
 + (id)postMethodNetworkingWithUrlString:(NSString *)urlString
-                      requestDictionary:(NSDictionary *)requestDictionary
+                       requestParameter:(id)requestParameter
                         requestBodyType:(RequestBodyType *)requestBodyType
                        responseDataType:(ResponseDataType *)responseDataType {
     
-    Networking *networking       = [[Networking alloc] init];
-    networking.urlString         = urlString;
-    networking.requestDictionary = requestDictionary;
+    Networking *networking      = [[Networking alloc] init];
+    networking.urlString        = urlString;
+    networking.requestParameter = requestParameter;
     networking.method            = [PostMethod type];
     
     if (requestBodyType) {

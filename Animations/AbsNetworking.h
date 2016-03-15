@@ -10,7 +10,7 @@
 #import "RequestMethodType.h"
 #import "RequestBodyType.h"
 #import "ResponseDataType.h"
-#import "AbsRequestDictionarySerializer.h"
+#import "AbsRequestParameterSerializer.h"
 #import "AbsResponseDataSerializer.h"
 
 @class AbsNetworking;
@@ -70,9 +70,9 @@
 @property (nonatomic, weak)     id <AbsNetworkingDelegate> delegate;
 
 /**
- *  请求用字典
+ *  请求用参数（字典或者数组）
  */
-@property (nonatomic, strong)   NSDictionary *requestDictionary;
+@property (nonatomic, strong)   id requestParameter;
 
 /**
  *  请求标记
@@ -87,7 +87,7 @@
 /**
  *  处理请求字典参数（不设置的话默认不处理）
  */
-@property (nonatomic, strong)   AbsRequestDictionarySerializer  *requestDictionarySerializer;
+@property (nonatomic, strong)   AbsRequestParameterSerializer   *requestParameterSerializer;
 
 /**
  *  处理返回的数据
@@ -141,14 +141,14 @@
  *  GET请求
  *
  *  @param urlString         网址
- *  @param requestDictionary 请求字典
+ *  @param requestParameter  请求参数（字典或者数组）
  *  @param requestBodyType   请求包体类型
  *  @param responseDataType  回复数据类型
  *
  *  @return Networking对象
  */
 + (id)getMethodNetworkingWithUrlString:(NSString *)urlString
-                     requestDictionary:(NSDictionary *)requestDictionary
+                      requestParameter:(id)requestParameter
                        requestBodyType:(RequestBodyType *)requestBodyType
                       responseDataType:(ResponseDataType *)responseDataType;
 
@@ -156,14 +156,14 @@
  *  POST请求
  *
  *  @param urlString         网址
- *  @param requestDictionary 请求字典
+ *  @param requestParameter  请求参数（字典或者数组）
  *  @param requestBodyType   请求包体类型
  *  @param responseDataType  回复数据类型
  *
  *  @return Networking对象
  */
 + (id)postMethodNetworkingWithUrlString:(NSString *)urlString
-                      requestDictionary:(NSDictionary *)requestDictionary
+                       requestParameter:(id)requestParameter
                         requestBodyType:(RequestBodyType *)requestBodyType
                        responseDataType:(ResponseDataType *)responseDataType;
 
