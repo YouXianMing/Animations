@@ -8,7 +8,6 @@
 
 #import "ButtonPressViewController.h"
 #import "POP.h"
-#import "UIColor+CustomColors.h"
 #import "StrokeCircleLayerConfigure.h"
 #import "FillCircleLayerConfigure.h"
 #import "UIView+SetRect.h"

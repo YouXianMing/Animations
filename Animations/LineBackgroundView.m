@@ -77,7 +77,7 @@
 }
 
 + (instancetype)createViewWithFrame:(CGRect)frame
-                          LineWidth:(CGFloat)width
+                          lineWidth:(CGFloat)width
                             lineGap:(CGFloat)lineGap
                           lineColor:(UIColor *)color {
     

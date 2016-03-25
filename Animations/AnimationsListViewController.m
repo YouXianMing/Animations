@@ -7,7 +7,7 @@
 //
 
 #import "AnimationsListViewController.h"
-#import "UIColor+CustomColors.h"
+#import "UIView+AnimationsListViewController.h"
 #import "UIView+SetRect.h"
 #import "UIView+GlowView.h"
 #import "ListItemCell.h"
@@ -81,30 +81,20 @@
 
 - (void)configureTitleView {
     
-    LineBackgroundView *lineBackgroundView = [LineBackgroundView createViewWithFrame:CGRectMake(0, 0, self.width, 64)
-                                                                           LineWidth:4
-                                                                             lineGap:4
+    LineBackgroundView *lineBackgroundView = [LineBackgroundView createViewWithFrame:CGRectMake(0, 0, self.width, 64) lineWidth:4 lineGap:4
                                                                            lineColor:[[UIColor blackColor] colorWithAlphaComponent:0.015]];
     [self.titleView addSubview:lineBackgroundView];
     
     // Title label.
-    UILabel *headlinelabel      = [UILabel new];
-    headlinelabel.font          = [UIFont AvenirLightWithFontSize:28.f];
-    headlinelabel.textAlignment = NSTextAlignmentCenter;
-    headlinelabel.textColor     = [UIColor customGrayColor];
-    
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"Animations"];
-    [attributedString addAttribute:NSForegroundColorAttributeName
-                             value:[UIColor customBlueColor]
-                             range:NSMakeRange(1, 1)];
-    
-    headlinelabel.attributedText = attributedString;
-    [headlinelabel sizeToFit];
+    UILabel *headlinelabel          = [UIView animationsListViewControllerNormalHeadLabel];
+    UILabel *animationHeadLineLabel = [UIView animationsListViewControllerHeadLabel];
     
     // Title view.
-    UIView *titleView     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, 64)];
-    headlinelabel.center  = titleView.middlePoint;
+    UIView *titleView             = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, 64)];
+    headlinelabel.center          = titleView.middlePoint;
+    animationHeadLineLabel.center = titleView.middlePoint;
     [titleView addSubview:headlinelabel];
+    [titleView addSubview:animationHeadLineLabel];
     [self.titleView addSubview:titleView];
     
     UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, self.width, 0.5f)];
@@ -112,20 +102,20 @@
     [titleView addSubview:line];
     
     // Start glow.
-    headlinelabel.glowRadius            = @(2.f);
-    headlinelabel.glowOpacity           = @(1.f);
-    headlinelabel.glowColor             = [[UIColor customRedColor] colorWithAlphaComponent:0.95f];
+    animationHeadLineLabel.glowRadius            = @(2.f);
+    animationHeadLineLabel.glowOpacity           = @(1.f);
+    animationHeadLineLabel.glowColor             = [[UIColor colorWithRed:0.203  green:0.598  blue:0.859 alpha:1] colorWithAlphaComponent:0.95f];
     
-    headlinelabel.glowDuration          = @(1.f);
-    headlinelabel.hideDuration          = @(3.f);
-    headlinelabel.glowAnimationDuration = @(2.f);
+    animationHeadLineLabel.glowDuration          = @(1.f);
+    animationHeadLineLabel.hideDuration          = @(3.f);
+    animationHeadLineLabel.glowAnimationDuration = @(2.f);
     
-    [headlinelabel createGlowLayer];
-    [headlinelabel insertGlowLayer];
+    [animationHeadLineLabel createGlowLayer];
+    [animationHeadLineLabel insertGlowLayer];
     
     [GCDQueue executeInMainQueue:^{
         
-        [headlinelabel startGlowLoop];
+        [animationHeadLineLabel startGlowLoop];
         
     } afterDelaySecs:2.f];
 }

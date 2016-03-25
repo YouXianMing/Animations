@@ -8,7 +8,6 @@
 
 #import "FullTitleVisualEffectViewController.h"
 #import "UIView+SetRect.h"
-#import "UIColor+CustomColors.h"
 #import "UIFont+Fonts.h"
 
 @interface FullTitleVisualEffectViewController ()
@@ -49,7 +48,7 @@
     UILabel *headlinelabel      = [UILabel new];
     headlinelabel.font          = [UIFont HeitiSCWithFontSize:20.f];
     headlinelabel.textAlignment = NSTextAlignmentCenter;
-    headlinelabel.textColor     = [UIColor customGrayColor];
+    headlinelabel.textColor     = [UIColor colorWithRed:0.329  green:0.329  blue:0.329 alpha:1];
     headlinelabel.text          = self.title;
     [headlinelabel sizeToFit];
     headlinelabel.center        = self.titleView.middlePoint;

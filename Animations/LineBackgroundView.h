@@ -17,9 +17,6 @@
 @property (nonatomic, strong) UIColor   *lineColor;
 
 - (void)buildView;
-+ (instancetype)createViewWithFrame:(CGRect)frame
-                          LineWidth:(CGFloat)width
-                            lineGap:(CGFloat)lineGap
-                          lineColor:(UIColor *)color;
++ (instancetype)createViewWithFrame:(CGRect)frame lineWidth:(CGFloat)width lineGap:(CGFloat)lineGap lineColor:(UIColor *)color;
 
 @end

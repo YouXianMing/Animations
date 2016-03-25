@@ -99,7 +99,6 @@
 		10381F521BF9B44A00E5E476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F511BF9B44A00E5E476 /* main.m */; };
 		10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F541BF9B44A00E5E476 /* AppDelegate.m */; };
 		10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10381F5C1BF9B44A00E5E476 /* Assets.xcassets */; };
-		10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F681BF9B47000E5E476 /* UIColor+CustomColors.m */; };
 		10381F701BF9B47000E5E476 /* AnimationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F6A1BF9B47000E5E476 /* AnimationsListViewController.m */; };
 		10381F711BF9B47000E5E476 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F6C1BF9B47000E5E476 /* Item.m */; };
 		10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381F6E1BF9B47000E5E476 /* ListItemCell.m */; };
@@ -249,6 +248,7 @@
 		10D4F6091C41486E00D056EB /* CATransform3DM34Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F6081C41486E00D056EB /* CATransform3DM34Controller.m */; };
 		10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F60C1C41532100D056EB /* PressAnimationButtonController.m */; };
 		10D4F6111C41538C00D056EB /* PressAnimationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F6101C41538C00D056EB /* PressAnimationButton.m */; };
+		10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */; };
 		B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */; };
 		B5D011941C0BE2410075BC2E /* RotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011901C0BE2410075BC2E /* RotateView.m */; };
 		B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011931C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m */; };
@@ -443,8 +443,6 @@
 		10381F541BF9B44A00E5E476 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		10381F5C1BF9B44A00E5E476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10381F611BF9B44A00E5E476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10381F671BF9B47000E5E476 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
-		10381F681BF9B47000E5E476 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		10381F691BF9B47000E5E476 /* AnimationsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationsListViewController.h; sourceTree = "<group>"; };
 		10381F6A1BF9B47000E5E476 /* AnimationsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationsListViewController.m; sourceTree = "<group>"; };
 		10381F6B1BF9B47000E5E476 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
@@ -767,6 +765,8 @@
 		10D4F60C1C41532100D056EB /* PressAnimationButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressAnimationButtonController.m; sourceTree = "<group>"; };
 		10D4F60F1C41538C00D056EB /* PressAnimationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PressAnimationButton.h; sourceTree = "<group>"; };
 		10D4F6101C41538C00D056EB /* PressAnimationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressAnimationButton.m; sourceTree = "<group>"; };
+		10FDF9CA1CA50AED00871B45 /* UIView+AnimationsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationsListViewController.h"; sourceTree = "<group>"; };
+		10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationsListViewController.m"; sourceTree = "<group>"; };
 		B5D0118C1C0BE1B30075BC2E /* HeaderViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewTapAnimationController.h; sourceTree = "<group>"; };
 		B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewTapAnimationController.m; sourceTree = "<group>"; };
 		B5D0118F1C0BE2410075BC2E /* RotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateView.h; sourceTree = "<group>"; };
@@ -856,7 +856,6 @@
 				10589D1E1C2393C200F20BC0 /* FBShimmering */,
 				B5D011961C0BE2440075BC2E /* RotateView */,
 				103088B41C05880000C8B623 /* Math */,
-				103088721C03FC2A00C8B623 /* Color */,
 				103088651C03F19500C8B623 /* Easing */,
 				104F0D211BFC1C9C00C46E6A /* StringAttribute */,
 				104F0D091BFAFB5400C46E6A /* CGContextObject */,
@@ -1253,15 +1252,6 @@
 			name = SetRect;
 			sourceTree = "<group>";
 		};
-		103088721C03FC2A00C8B623 /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				10381F671BF9B47000E5E476 /* UIColor+CustomColors.h */,
-				10381F681BF9B47000E5E476 /* UIColor+CustomColors.m */,
-			);
-			name = Color;
-			sourceTree = "<group>";
-		};
 		103088741C0412CE00C8B623 /* ScrollImageViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1316,6 +1306,7 @@
 				10381FC81BF9CC3800E5E476 /* AbstractBaseClass */,
 				10381FC71BF9CC2200E5E476 /* Controllers */,
 				1012C33F1BF9FB3700A1B4E4 /* Tools */,
+				10FDF9C91CA50AA500871B45 /* DisposableTools */,
 				10381F501BF9B44A00E5E476 /* Supporting Files */,
 			);
 			path = Animations;
@@ -2100,6 +2091,15 @@
 			name = PressAnimationButtonController;
 			sourceTree = "<group>";
 		};
+		10FDF9C91CA50AA500871B45 /* DisposableTools */ = {
+			isa = PBXGroup;
+			children = (
+				10FDF9CA1CA50AED00871B45 /* UIView+AnimationsListViewController.h */,
+				10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */,
+			);
+			name = DisposableTools;
+			sourceTree = "<group>";
+		};
 		B5D0118B1C0BE15A0075BC2E /* HeaderViewTapAnimationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2349,7 +2349,6 @@
 				1096061A1C93B46800CCB3AD /* RequestMethodType.m in Sources */,
 				102B84D91C3B9424001699A9 /* NSString+MD5.m in Sources */,
 				102B1F301C60E66F00A8FD40 /* LinksModel.m in Sources */,
-				10381F6F1BF9B47000E5E476 /* UIColor+CustomColors.m in Sources */,
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
 				1017F11E1C356EE700E245F8 /* NSData+ImageContentType.m in Sources */,
 				103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */,
@@ -2368,6 +2367,7 @@
 				1020E2E41C7422B600FF233E /* UIView+AnimationPracticalMethod.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
 				10B6F3D31C953FEA007E8254 /* ScrollComputingValue.m in Sources */,
+				10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */,
 				102296B21C38D122001AF5BB /* WaterfallPictureModel.m in Sources */,
 				102296931C38CF71001AF5BB /* NodeModelCell.m in Sources */,
 				1017F12C1C356EE700E245F8 /* UIView+WebCacheOperation.m in Sources */,

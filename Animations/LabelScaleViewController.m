@@ -7,7 +7,6 @@
 //
 
 #import "LabelScaleViewController.h"
-#import "UIColor+CustomColors.h"
 #import "UIView+SetRect.h"
 #import "ScaleLabel.h"
 #import "UIFont+Fonts.h"
