@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomAdapterTypeCell.h"
+#import "CustomCell.h"
 
 static NSString  *NSNotificationCountDownTimeCell = @"NSNotificationCountDownTimeCell";
 
-@interface CountDownTimeCell : CustomAdapterTypeCell
+@interface CountDownTimeCell : CustomCell
 
 @end

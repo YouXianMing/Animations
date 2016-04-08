@@ -6,9 +6,9 @@
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "CustomAdapterTypeCell.h"
+#import "CustomCell.h"
 
-@interface TableViewTapAnimationCell : CustomAdapterTypeCell
+@interface TableViewTapAnimationCell : CustomCell
 
 /**
  *  Show selected animation.

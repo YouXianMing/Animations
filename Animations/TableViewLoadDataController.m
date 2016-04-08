@@ -80,8 +80,8 @@
     
     CellDataAdapter *adapter = self.datasArray[indexPath.row];
     
-    CustomAdapterTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
-    cell.dataAdapter            = adapter;
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
+    cell.dataAdapter = adapter;
     [cell loadContent];
     
     return cell;

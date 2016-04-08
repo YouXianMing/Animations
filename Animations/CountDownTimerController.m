@@ -99,9 +99,9 @@
     
     CellDataAdapter       *adapter = self.timesArray[indexPath.row];
     
-    CustomAdapterTypeCell *cell    = [tableView dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
-    cell.dataAdapter               = adapter;
-    cell.indexPath                 = indexPath;
+    CustomCell *cell    = [tableView dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
+    cell.dataAdapter    = adapter;
+    cell.indexPath      = indexPath;
     
     [cell loadContent];
     
@@ -110,15 +110,15 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CustomAdapterTypeCell *tmpCell = (CustomAdapterTypeCell *)cell;
-    tmpCell.display                = YES;
+    CustomCell *tmpCell = (CustomCell *)cell;
+    tmpCell.display     = YES;
     [tmpCell loadContent];
 }
 
 - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath {
     
-    CustomAdapterTypeCell *tmpCell = (CustomAdapterTypeCell *)cell;
-    tmpCell.display                = NO;
+    CustomCell *tmpCell = (CustomCell *)cell;
+    tmpCell.display     = NO;
 }
 
 @end

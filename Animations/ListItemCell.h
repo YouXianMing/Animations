@@ -6,8 +6,8 @@
 //  Copyright © 2015年 ZiPeiYi. All rights reserved.
 //
 
-#import "CustomAdapterTypeCell.h"
+#import "CustomCell.h"
 
-@interface ListItemCell : CustomAdapterTypeCell
+@interface ListItemCell : CustomCell
 
 @end

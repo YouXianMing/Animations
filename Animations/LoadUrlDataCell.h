@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "CustomAdapterTypeCell.h"
+#import "CustomCell.h"
 
-@interface LoadUrlDataCell : CustomAdapterTypeCell
+@interface LoadUrlDataCell : CustomCell
 
 @end

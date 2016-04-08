@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CellDataAdapter.h"
 @class CustomCell;
 
 @protocol CustomCellDelegate <NSObject>
@@ -31,6 +32,11 @@
  *  CustomCell's delegate.
  */
 @property (nonatomic, weak) id <CustomCellDelegate>  delegate;
+
+/**
+ *  CustomCell's data.
+ */
+@property (nonatomic, weak) CellDataAdapter         *dataAdapter;
 
 /**
  *  CustomCell's data.

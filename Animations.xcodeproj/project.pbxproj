@@ -166,7 +166,6 @@
 		10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10589D221C2393C200F20BC0 /* FBShimmeringLayer.m */; };
 		10589D261C2393C200F20BC0 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10589D241C2393C200F20BC0 /* FBShimmeringView.m */; };
 		105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */; };
-		105D98A41C07F17D00FD1013 /* CustomAdapterTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A31C07F17D00FD1013 /* CustomAdapterTypeCell.m */; };
 		105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */; };
 		105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */; };
 		106249981C2785630090AD65 /* EmitterSnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106249971C2785630090AD65 /* EmitterSnowController.m */; };
@@ -596,8 +595,6 @@
 		10589D241C2393C200F20BC0 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
 		105D989E1C07F0E500FD1013 /* TableViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewTapAnimationController.h; sourceTree = "<group>"; };
 		105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTapAnimationController.m; sourceTree = "<group>"; };
-		105D98A21C07F17D00FD1013 /* CustomAdapterTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAdapterTypeCell.h; sourceTree = "<group>"; };
-		105D98A31C07F17D00FD1013 /* CustomAdapterTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAdapterTypeCell.m; sourceTree = "<group>"; };
 		105D98A51C07F52D00FD1013 /* TableViewTapAnimationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewTapAnimationCell.h; sourceTree = "<group>"; };
 		105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTapAnimationCell.m; sourceTree = "<group>"; };
 		105D98A81C07FC2C00FD1013 /* TapAnimationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapAnimationModel.h; sourceTree = "<group>"; };
@@ -1723,8 +1720,6 @@
 		105D98A11C07F16700FD1013 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				105D98A21C07F17D00FD1013 /* CustomAdapterTypeCell.h */,
-				105D98A31C07F17D00FD1013 /* CustomAdapterTypeCell.m */,
 				102ED8741C3BFCCC00E9863E /* CustomCell.h */,
 				102ED8751C3BFCCC00E9863E /* CustomCell.m */,
 			);
@@ -2218,7 +2213,6 @@
 				10381FBB1BF9B55B00E5E476 /* POPGeometry.mm in Sources */,
 				108A99421C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m in Sources */,
 				10A67C651C12D68D00C3E505 /* DrawView.m in Sources */,
-				105D98A41C07F17D00FD1013 /* CustomAdapterTypeCell.m in Sources */,
 				100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */,
 				10D4F6091C41486E00D056EB /* CATransform3DM34Controller.m in Sources */,
 				10CEC5971C223A5400B0CA7D /* ScaleLabel.m in Sources */,

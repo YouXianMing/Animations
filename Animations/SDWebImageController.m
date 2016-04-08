@@ -69,8 +69,8 @@ static NSString  *pictureCellFlag = @"PictureCell";
     
     CellDataAdapter *dataAdapter = _modelsArray[indexPath.row];
     
-    CustomAdapterTypeCell *cell  = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
-    cell.dataAdapter             = dataAdapter;
+    CustomCell *cell  = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
+    cell.dataAdapter  = dataAdapter;
     [cell loadContent];
     
     return cell;
