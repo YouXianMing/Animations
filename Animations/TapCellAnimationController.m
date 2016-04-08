@@ -37,7 +37,6 @@
     
     self.datasArray = [NSMutableArray array];
     
-    
     NSArray *strings = @[
                          @"AFNetworking is a delightful networking library for iOS and Mac OS X. It's built on top of the Foundation URL Loading System, extending the powerful high-level networking abstractions built into Cocoa. It has a modular architecture with well-designed, feature-rich APIs that are a joy to use. Perhaps the most important feature of all, however, is the amazing community of developers who use and contribute to AFNetworking every day. AFNetworking powers some of the most popular and critically-acclaimed apps on the iPhone, iPad, and Mac. Choose AFNetworking for your next project, or migrate over your existing projects—you'll be happy you did!",
                          
@@ -55,15 +54,12 @@
         ShowTextModel *model = [[ShowTextModel alloc] init];
         model.inputString    = strings[i];
         
-        [model calculateTheNormalStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]}
-                                                      fixedWidth:Width - 20];
-        [model calculateTheExpendStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]}
-                                                      fixedWidth:Width - 20];
+        [model calculateTheNormalStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]} fixedWidth:Width - 20];
+        [model calculateTheExpendStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]} fixedWidth:Width - 20];
         
         CellDataAdapter *adapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"ShowTextCell" data:model
                                                                                 cellHeight:model.normalStringHeight
                                                                                   cellType:kShowTextCellNormalType];
-        
         [self.datasArray addObject:adapter];
     }
 }
