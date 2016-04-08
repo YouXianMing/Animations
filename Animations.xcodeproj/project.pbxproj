@@ -168,6 +168,9 @@
 		105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */; };
 		105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */; };
 		105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */; };
+		105F3FE71CB7B3F1007B02C7 /* TapCellAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F3FE61CB7B3F1007B02C7 /* TapCellAnimationController.m */; };
+		105F3FEA1CB7B5DD007B02C7 /* ShowTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F3FE91CB7B5DD007B02C7 /* ShowTextCell.m */; };
+		105F3FED1CB7B6B1007B02C7 /* ShowTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F3FEC1CB7B6B1007B02C7 /* ShowTextModel.m */; };
 		106249981C2785630090AD65 /* EmitterSnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106249971C2785630090AD65 /* EmitterSnowController.m */; };
 		10667E181C7F2CCA00B9AC08 /* SCViewShakerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E171C7F2CCA00B9AC08 /* SCViewShakerController.m */; };
 		10667E1D1C7F2CFB00B9AC08 /* UIView+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */; };
@@ -600,6 +603,12 @@
 		105D98A81C07FC2C00FD1013 /* TapAnimationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapAnimationModel.h; sourceTree = "<group>"; };
 		105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapAnimationModel.m; sourceTree = "<group>"; };
 		105EFAF71C42878F00394044 /* SimpleNSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleNSLog.h; sourceTree = "<group>"; };
+		105F3FE51CB7B3F1007B02C7 /* TapCellAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapCellAnimationController.h; sourceTree = "<group>"; };
+		105F3FE61CB7B3F1007B02C7 /* TapCellAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapCellAnimationController.m; sourceTree = "<group>"; };
+		105F3FE81CB7B5DD007B02C7 /* ShowTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTextCell.h; sourceTree = "<group>"; };
+		105F3FE91CB7B5DD007B02C7 /* ShowTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTextCell.m; sourceTree = "<group>"; };
+		105F3FEB1CB7B6B1007B02C7 /* ShowTextModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTextModel.h; sourceTree = "<group>"; };
+		105F3FEC1CB7B6B1007B02C7 /* ShowTextModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTextModel.m; sourceTree = "<group>"; };
 		106249961C2785630090AD65 /* EmitterSnowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterSnowController.h; sourceTree = "<group>"; };
 		106249971C2785630090AD65 /* EmitterSnowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSnowController.m; sourceTree = "<group>"; };
 		10667E161C7F2CCA00B9AC08 /* SCViewShakerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewShakerController.h; sourceTree = "<group>"; };
@@ -1482,6 +1491,7 @@
 				10A848321C796ECE00F9ED67 /* GifPictureController */,
 				10667E191C7F2CCE00B9AC08 /* SCViewShakerController */,
 				10B6F3D01C953E61007E8254 /* ScrollViewAnimationController */,
+				105F3FE41CB7B3AF007B02C7 /* TapCellAnimationController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1724,6 +1734,19 @@
 				102ED8751C3BFCCC00E9863E /* CustomCell.m */,
 			);
 			name = CustomCell;
+			sourceTree = "<group>";
+		};
+		105F3FE41CB7B3AF007B02C7 /* TapCellAnimationController */ = {
+			isa = PBXGroup;
+			children = (
+				105F3FE51CB7B3F1007B02C7 /* TapCellAnimationController.h */,
+				105F3FE61CB7B3F1007B02C7 /* TapCellAnimationController.m */,
+				105F3FE81CB7B5DD007B02C7 /* ShowTextCell.h */,
+				105F3FE91CB7B5DD007B02C7 /* ShowTextCell.m */,
+				105F3FEB1CB7B6B1007B02C7 /* ShowTextModel.h */,
+				105F3FEC1CB7B6B1007B02C7 /* ShowTextModel.m */,
+			);
+			name = TapCellAnimationController;
 			sourceTree = "<group>";
 		};
 		106249991C2785680090AD65 /* EmitterSnowController */ = {
@@ -2356,6 +2379,7 @@
 				102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */,
 				1096061F1C93B46800CCB3AD /* AbsNetworkingIndicator.m in Sources */,
 				103088B71C05880B00C8B623 /* Math.m in Sources */,
+				105F3FED1CB7B6B1007B02C7 /* ShowTextModel.m in Sources */,
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */,
 				1020E2E41C7422B600FF233E /* UIView+AnimationPracticalMethod.m in Sources */,
@@ -2380,6 +2404,7 @@
 				102B84E01C3B95F0001699A9 /* File.m in Sources */,
 				1017F13B1C35715400E245F8 /* NSString+JSONData.m in Sources */,
 				10585B2C1C3F468E0052990F /* UIButton+Style.m in Sources */,
+				105F3FEA1CB7B5DD007B02C7 /* ShowTextCell.m in Sources */,
 				104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */,
 				10CEC58C1C2153EB00B0CA7D /* FullTitleViewController.m in Sources */,
 				1017F1211C356EE700E245F8 /* SDWebImageDecoder.m in Sources */,
@@ -2398,6 +2423,7 @@
 				102B1F311C60E66F00A8FD40 /* MentionsModel.m in Sources */,
 				10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
+				105F3FE71CB7B3F1007B02C7 /* TapCellAnimationController.m in Sources */,
 				10A8482B1C795E0D00F9ED67 /* FLAnimatedImageView.m in Sources */,
 				10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */,
 				106249981C2785630090AD65 /* EmitterSnowController.m in Sources */,

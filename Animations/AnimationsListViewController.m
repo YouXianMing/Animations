@@ -54,6 +54,7 @@
 #import "GifPictureController.h"
 #import "SCViewShakerController.h"
 #import "ScrollViewAnimationController.h"
+#import "TapCellAnimationController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -159,7 +160,8 @@
                        [Item itemWithName:@"MotionEffect效果" object:[MotionEffectViewController class]],
                        [Item itemWithName:@"加载GIF图片" object:[GifPictureController class]],
                        [Item itemWithName:@"震动效果" object:[SCViewShakerController class]],
-                       [Item itemWithName:@"ScrollView动画" object:[ScrollViewAnimationController class]]];
+                       [Item itemWithName:@"ScrollView动画" object:[ScrollViewAnimationController class]],
+                       [Item itemWithName:@"Cell点击动画" object:[TapCellAnimationController class]]];
     
     self.items = [NSMutableArray array];
     
