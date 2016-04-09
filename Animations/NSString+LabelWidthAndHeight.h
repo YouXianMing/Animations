@@ -30,4 +30,13 @@
  */
 - (CGFloat)widthWithStringAttribute:(NSDictionary <NSString *, id> *)attribute;
 
+/**
+ *  Get a line of text height.
+ *
+ *  @param attribute String's attribute, eg. attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:18.f]}
+ *
+ *  @return String's width.
+ */
++ (CGFloat)aLineOfTextHeightWithStringAttribute:(NSDictionary <NSString *, id> *)attribute;
+
 @end

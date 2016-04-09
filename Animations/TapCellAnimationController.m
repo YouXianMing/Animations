@@ -12,6 +12,7 @@
 #import "CellDataAdapter.h"
 #import "UIFont+Fonts.h"
 #import "UIView+SetRect.h"
+#import "GCD.h"
 
 @interface TapCellAnimationController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -26,9 +27,9 @@
     
     [super setup];
     
-    [self createDataSource];
-    
     [self buildTableView];
+    
+    [self createDataSource];
 }
 
 #pragma mark - DataSource
@@ -49,19 +50,36 @@
                          @"Star \"https://github.com/YouXianMing\" :)"
                          ];
     
-    for (int i = 0; i < strings.count; i++) {
+    // Execute in MainQueue after delay 0.5 secs.
+    [GCDQueue executeInMainQueue:^{
         
-        ShowTextModel *model = [[ShowTextModel alloc] init];
-        model.inputString    = strings[i];
+        NSMutableArray *indexPaths = [NSMutableArray array];
         
-        [model calculateTheNormalStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]} fixedWidth:Width - 20];
-        [model calculateTheExpendStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]} fixedWidth:Width - 20];
+        for (int i = 0; i < strings.count; i++) {
+            
+            ShowTextModel *model = [[ShowTextModel alloc] init];
+            model.inputString    = strings[i];
+            
+            [model calculateTheNormalStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]} fixedWidth:Width - 20];
+            [model calculateTheExpendStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]} fixedWidth:Width - 20];
+            
+            CellDataAdapter *adapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"ShowTextCell" data:model
+                                                                                    cellHeight:model.normalStringHeight
+                                                                                      cellType:kShowTextCellNormalType];
+            [self.datasArray addObject:adapter];
+            [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+        }
         
-        CellDataAdapter *adapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"ShowTextCell" data:model
-                                                                                cellHeight:model.normalStringHeight
-                                                                                  cellType:kShowTextCellNormalType];
-        [self.datasArray addObject:adapter];
-    }
+        [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+        
+    } afterDelaySecs:0.5f];
+    
+    // Execute in MainQueue after delay 1 secs.
+    [GCDQueue executeInMainQueue:^{
+        
+        [self tableView:self.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        
+    } afterDelaySecs:1.f];
 }
 
 #pragma mark - UITableView

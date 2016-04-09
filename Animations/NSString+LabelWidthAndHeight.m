@@ -31,7 +31,7 @@
 }
 
 - (CGFloat)widthWithStringAttribute:(NSDictionary <NSString *, id> *)attribute {
-
+    
     NSParameterAssert(attribute);
     
     CGFloat width = 0;
@@ -48,6 +48,19 @@
     }
     
     return width;
+}
+
++ (CGFloat)aLineOfTextHeightWithStringAttribute:(NSDictionary <NSString *, id> *)attribute {
+    
+    CGFloat height = 0;
+    CGRect rect    = [@"One" boundingRectWithSize:CGSizeMake(200, MAXFLOAT)
+                                          options:NSStringDrawingTruncatesLastVisibleLine |NSStringDrawingUsesLineFragmentOrigin |
+                      NSStringDrawingUsesFontLeading
+                                       attributes:attribute
+                                          context:nil];
+    
+    height = rect.size.height;
+    return height;
 }
 
 @end
