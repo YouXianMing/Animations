@@ -11,7 +11,7 @@
 
 @implementation AttributedStringInitConfig (Constructor)
 
-+ (NSDictionary *)qingKeBengYue {
++ (NSDictionary *)heitiSC {
     
     AttributedStringInitConfig *config = [AttributedStringInitConfig new];
     config.textColor                   = [UIColor colorWithRed:0.600 green:0.490 blue:0.376 alpha:1];

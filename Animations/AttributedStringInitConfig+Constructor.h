@@ -10,6 +10,6 @@
 
 @interface AttributedStringInitConfig (Constructor)
 
-+ (NSDictionary *)qingKeBengYue;
++ (NSDictionary *)heitiSC;
 
 @end
