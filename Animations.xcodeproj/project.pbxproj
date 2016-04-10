@@ -235,6 +235,11 @@
 		10A8482A1C795E0D00F9ED67 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A848271C795E0D00F9ED67 /* FLAnimatedImage.m */; };
 		10A8482B1C795E0D00F9ED67 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A848291C795E0D00F9ED67 /* FLAnimatedImageView.m */; };
 		10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */; };
+		10B0DDF11CBA82370089DF1E /* TextKitLoadImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0DDF01CBA82370089DF1E /* TextKitLoadImageController.m */; };
+		10B0DDF61CBA83050089DF1E /* JSAnimatedImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0DDF51CBA83050089DF1E /* JSAnimatedImagesView.m */; };
+		10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0DDF81CBA831C0089DF1E /* MSWeakTimer.m */; };
+		10B0DDFC1CBA84400089DF1E /* AttributedStringInitConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0DDFB1CBA84400089DF1E /* AttributedStringInitConfig.m */; };
+		10B0DDFF1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0DDFE1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m */; };
 		10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3CE1C953E5B007E8254 /* ScrollViewAnimationController.m */; };
 		10B6F3D31C953FEA007E8254 /* ScrollComputingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3D21C953FEA007E8254 /* ScrollComputingValue.m */; };
 		10B6F3D61C954749007E8254 /* ScrollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3D51C954749007E8254 /* ScrollTitleView.m */; };
@@ -741,6 +746,16 @@
 		10A848291C795E0D00F9ED67 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
 		10AB70D81C4925F7008C9C88 /* MusicBarAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicBarAnimationController.h; sourceTree = "<group>"; };
 		10AB70D91C4925F7008C9C88 /* MusicBarAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicBarAnimationController.m; sourceTree = "<group>"; };
+		10B0DDEF1CBA82370089DF1E /* TextKitLoadImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextKitLoadImageController.h; sourceTree = "<group>"; };
+		10B0DDF01CBA82370089DF1E /* TextKitLoadImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextKitLoadImageController.m; sourceTree = "<group>"; };
+		10B0DDF41CBA83050089DF1E /* JSAnimatedImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAnimatedImagesView.h; sourceTree = "<group>"; };
+		10B0DDF51CBA83050089DF1E /* JSAnimatedImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAnimatedImagesView.m; sourceTree = "<group>"; };
+		10B0DDF71CBA831C0089DF1E /* MSWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSWeakTimer.h; sourceTree = "<group>"; };
+		10B0DDF81CBA831C0089DF1E /* MSWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSWeakTimer.m; sourceTree = "<group>"; };
+		10B0DDFA1CBA84400089DF1E /* AttributedStringInitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedStringInitConfig.h; sourceTree = "<group>"; };
+		10B0DDFB1CBA84400089DF1E /* AttributedStringInitConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedStringInitConfig.m; sourceTree = "<group>"; };
+		10B0DDFD1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AttributedStringInitConfig+Constructor.h"; sourceTree = "<group>"; };
+		10B0DDFE1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AttributedStringInitConfig+Constructor.m"; sourceTree = "<group>"; };
 		10B6F3CD1C953E5B007E8254 /* ScrollViewAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewAnimationController.h; sourceTree = "<group>"; };
 		10B6F3CE1C953E5B007E8254 /* ScrollViewAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewAnimationController.m; sourceTree = "<group>"; };
 		10B6F3D11C953FEA007E8254 /* ScrollComputingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollComputingValue.h; sourceTree = "<group>"; };
@@ -836,6 +851,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				10B0DDF31CBA82F90089DF1E /* JSAnimatedImagesView */,
 				102A0FF41C92725400BF3F1B /* NSData+GZip */,
 				10667E1A1C7F2CE300B9AC08 /* UIView+Shake */,
 				1020E2E51C7422CF00FF233E /* UIView+AnimationPracticalMethod */,
@@ -1492,6 +1508,7 @@
 				10667E191C7F2CCE00B9AC08 /* SCViewShakerController */,
 				10B6F3D01C953E61007E8254 /* ScrollViewAnimationController */,
 				105F3FE41CB7B3AF007B02C7 /* TapCellAnimationController */,
+				10B0DDF21CBA823F0089DF1E /* TextKitLoadImageController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2047,6 +2064,30 @@
 			name = MusicBarAnimationController;
 			sourceTree = "<group>";
 		};
+		10B0DDF21CBA823F0089DF1E /* TextKitLoadImageController */ = {
+			isa = PBXGroup;
+			children = (
+				10B0DDEF1CBA82370089DF1E /* TextKitLoadImageController.h */,
+				10B0DDF01CBA82370089DF1E /* TextKitLoadImageController.m */,
+				10B0DDFA1CBA84400089DF1E /* AttributedStringInitConfig.h */,
+				10B0DDFB1CBA84400089DF1E /* AttributedStringInitConfig.m */,
+				10B0DDFD1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.h */,
+				10B0DDFE1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m */,
+			);
+			name = TextKitLoadImageController;
+			sourceTree = "<group>";
+		};
+		10B0DDF31CBA82F90089DF1E /* JSAnimatedImagesView */ = {
+			isa = PBXGroup;
+			children = (
+				10B0DDF41CBA83050089DF1E /* JSAnimatedImagesView.h */,
+				10B0DDF51CBA83050089DF1E /* JSAnimatedImagesView.m */,
+				10B0DDF71CBA831C0089DF1E /* MSWeakTimer.h */,
+				10B0DDF81CBA831C0089DF1E /* MSWeakTimer.m */,
+			);
+			name = JSAnimatedImagesView;
+			sourceTree = "<group>";
+		};
 		10B6F3D01C953E61007E8254 /* ScrollViewAnimationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2301,7 +2342,9 @@
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				1096061E1C93B46800CCB3AD /* AbsResponseDataSerializer.m in Sources */,
+				10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */,
 				10A34F661C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m in Sources */,
+				10B0DDFF1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m in Sources */,
 				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
 				102B85001C3C9FBB001699A9 /* NumberFormatter.m in Sources */,
 				102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */,
@@ -2373,6 +2416,7 @@
 				1096062A1C93B47800CCB3AD /* NetworkingReachability.m in Sources */,
 				10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
+				10B0DDF61CBA83050089DF1E /* JSAnimatedImagesView.m in Sources */,
 				106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */,
 				109606551C93B4A300CCB3AD /* AFImageDownloader.m in Sources */,
 				109606561C93B4A300CCB3AD /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -2383,6 +2427,7 @@
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */,
 				1020E2E41C7422B600FF233E /* UIView+AnimationPracticalMethod.m in Sources */,
+				10B0DDF11CBA82370089DF1E /* TextKitLoadImageController.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
 				10B6F3D31C953FEA007E8254 /* ScrollComputingValue.m in Sources */,
 				10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */,
@@ -2392,6 +2437,7 @@
 				109606501C93B4A300CCB3AD /* AFSecurityPolicy.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
 				10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */,
+				10B0DDFC1CBA84400089DF1E /* AttributedStringInitConfig.m in Sources */,
 				10B6F3D61C954749007E8254 /* ScrollTitleView.m in Sources */,
 				102B1F2D1C60E66F00A8FD40 /* DescriptionModel.m in Sources */,
 				1017F1251C356EE700E245F8 /* SDWebImagePrefetcher.m in Sources */,
