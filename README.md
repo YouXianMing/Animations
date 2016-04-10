@@ -86,6 +86,8 @@
 
 ![demo40.gif](http://images2015.cnblogs.com/blog/607542/201604/607542-20160408224506453-183426590.gif)
 
+![demo41.gif](http://images2015.cnblogs.com/blog/607542/201604/607542-20160410214147750-2010371183.gif)
+
 > Part of the reference project
 
 [https://github.com/schneiderandre/popping](https://github.com/schneiderandre/popping)
@@ -103,3 +105,5 @@
 [https://github.com/Flipboard/FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)
 
 [https://github.com/rFlex/SCViewShaker](https://github.com/rFlex/SCViewShaker)
+
+[https://github.com/JaviSoto/JSAnimatedImagesView](https://github.com/JaviSoto/JSAnimatedImagesView)
