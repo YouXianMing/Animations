@@ -56,6 +56,7 @@
 #import "ScrollViewAnimationController.h"
 #import "TapCellAnimationController.h"
 #import "TextKitLoadImageController.h"
+#import "ReplicatorLineViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -163,7 +164,8 @@
                        [Item itemWithName:@"震动效果" object:[SCViewShakerController class]],
                        [Item itemWithName:@"ScrollView动画" object:[ScrollViewAnimationController class]],
                        [Item itemWithName:@"Cell点击动画" object:[TapCellAnimationController class]],
-                       [Item itemWithName:@"TextKit简单示例" object:[TextKitLoadImageController class]]];
+                       [Item itemWithName:@"TextKit简单示例" object:[TextKitLoadImageController class]],
+                       [Item itemWithName:@"线性重复动画" object:[ReplicatorLineViewController class]]];
     
     self.items = [NSMutableArray array];
     
@@ -249,7 +251,7 @@
     [super viewDidDisappear:animated];
     
     // Disable pull back gesture.
-    self.enableInteractivePopGestureRecognizer = NO;
+    self.enableInteractivePopGestureRecognizer = YES;
 }
 
 @end

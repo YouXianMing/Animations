@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		100148C91C43D53D006D9153 /* BezierPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100148C81C43D53D006D9153 /* BezierPathViewController.m */; };
+		100252C51CBC778B00722169 /* ReplicatorLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100252C41CBC778B00722169 /* ReplicatorLineViewController.m */; };
+		100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 100252C81CBC780100722169 /* ReplicatorLineAnimationView.m */; };
 		100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100BFAE81C2392F5008C5523 /* ShimmerController.m */; };
 		1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */; };
 		1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DD1C0AA639004CFBCE /* POPSpringParameterController.m */; };
@@ -269,6 +271,10 @@
 /* Begin PBXFileReference section */
 		100148C71C43D53D006D9153 /* BezierPathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathViewController.h; sourceTree = "<group>"; };
 		100148C81C43D53D006D9153 /* BezierPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathViewController.m; sourceTree = "<group>"; };
+		100252C31CBC778B00722169 /* ReplicatorLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplicatorLineViewController.h; sourceTree = "<group>"; };
+		100252C41CBC778B00722169 /* ReplicatorLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLineViewController.m; sourceTree = "<group>"; };
+		100252C71CBC780100722169 /* ReplicatorLineAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplicatorLineAnimationView.h; sourceTree = "<group>"; };
+		100252C81CBC780100722169 /* ReplicatorLineAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLineAnimationView.m; sourceTree = "<group>"; };
 		100BFAE71C2392F5008C5523 /* ShimmerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShimmerController.h; sourceTree = "<group>"; };
 		100BFAE81C2392F5008C5523 /* ShimmerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShimmerController.m; sourceTree = "<group>"; };
 		1010C6D91C0A9DA0004CFBCE /* RangeValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeValueView.h; sourceTree = "<group>"; };
@@ -826,6 +832,17 @@
 				100148C81C43D53D006D9153 /* BezierPathViewController.m */,
 			);
 			name = BezierPathViewController;
+			sourceTree = "<group>";
+		};
+		100252C61CBC779100722169 /* ReplicatorLineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				100252C31CBC778B00722169 /* ReplicatorLineViewController.h */,
+				100252C41CBC778B00722169 /* ReplicatorLineViewController.m */,
+				100252C71CBC780100722169 /* ReplicatorLineAnimationView.h */,
+				100252C81CBC780100722169 /* ReplicatorLineAnimationView.m */,
+			);
+			name = ReplicatorLineViewController;
 			sourceTree = "<group>";
 		};
 		100BFAE61C2392CC008C5523 /* ShimmerController */ = {
@@ -1509,6 +1526,7 @@
 				10B6F3D01C953E61007E8254 /* ScrollViewAnimationController */,
 				105F3FE41CB7B3AF007B02C7 /* TapCellAnimationController */,
 				10B0DDF21CBA823F0089DF1E /* TextKitLoadImageController */,
+				100252C61CBC779100722169 /* ReplicatorLineViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2433,6 +2451,7 @@
 				10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */,
 				102296B21C38D122001AF5BB /* WaterfallPictureModel.m in Sources */,
 				102296931C38CF71001AF5BB /* NodeModelCell.m in Sources */,
+				100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */,
 				1017F12C1C356EE700E245F8 /* UIView+WebCacheOperation.m in Sources */,
 				109606501C93B4A300CCB3AD /* AFSecurityPolicy.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
@@ -2490,6 +2509,7 @@
 				102B1F331C60E66F00A8FD40 /* SourceModel.m in Sources */,
 				1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */,
 				1020E2DA1C731AA500FF233E /* CAGradientMaskView.m in Sources */,
+				100252C51CBC778B00722169 /* ReplicatorLineViewController.m in Sources */,
 				10D254111C5773B2003B6734 /* AbstractAdapter.m in Sources */,
 				109606531C93B4A300CCB3AD /* AFURLSessionManager.m in Sources */,
 				104F0D201BFC118900C46E6A /* POPNumberAnimation.m in Sources */,
