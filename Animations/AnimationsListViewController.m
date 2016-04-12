@@ -251,7 +251,7 @@
     [super viewDidDisappear:animated];
     
     // Disable pull back gesture.
-    self.enableInteractivePopGestureRecognizer = YES;
+    self.enableInteractivePopGestureRecognizer = NO;
 }
 
 @end
