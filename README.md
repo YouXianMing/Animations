@@ -6,9 +6,8 @@
 
 > The Animation Collection (Long-term Updates)
 
-<img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151116202907436-992788389.gif" width="300"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151117153339436-1227969788.gif" width="300">
+<img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151116202907436-992788389.gif" width="280"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151117153339436-1227969788.gif" width="280"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151117113153374-1370793997.gif" width="280">
 
-![demo03.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151117113153374-1370793997.gif)
 
 ![demo04.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151126163829593-1094083749.gif)
 
