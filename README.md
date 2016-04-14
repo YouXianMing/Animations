@@ -6,12 +6,9 @@
 
 > The Animation Collection (Long-term Updates)
 
-<img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151116202907436-992788389.gif" width="290"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151117153339436-1227969788.gif" width="290"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151117113153374-1370793997.gif" width="290"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151126163829593-1094083749.gif" width="290"><img src="http://images2015.cnblogs.com/blog/607542/201602/607542-20160216205422048-2021539811.gif" width="290">
+<img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151116202907436-992788389.gif" width="290"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151117153339436-1227969788.gif" width="290"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151117113153374-1370793997.gif" width="290"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151126163829593-1094083749.gif" width="290"><img src="http://images2015.cnblogs.com/blog/607542/201602/607542-20160216205422048-2021539811.gif" width="290"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151118112108890-1975317749.gif" width="290"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151124105608093-967010463.gif" width="290"><img src="http://images2015.cnblogs.com/blog/607542/201511/607542-20151125162318999-1831082807.gif" width="290">
 
 
-![demo06.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151118112108890-1975317749.gif)
-
-![demo07.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151124105608093-967010463.gif)
 
 ![demo08.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151125162318999-1831082807.gif)
 
