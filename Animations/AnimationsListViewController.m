@@ -57,6 +57,7 @@
 #import "TapCellAnimationController.h"
 #import "TextKitLoadImageController.h"
 #import "ReplicatorLineViewController.h"
+#import "DrawMarqueeViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -165,7 +166,8 @@
                        [Item itemWithName:@"ScrollView动画" object:[ScrollViewAnimationController class]],
                        [Item itemWithName:@"Cell点击动画" object:[TapCellAnimationController class]],
                        [Item itemWithName:@"TextKit简单示例" object:[TextKitLoadImageController class]],
-                       [Item itemWithName:@"线性重复动画" object:[ReplicatorLineViewController class]]];
+                       [Item itemWithName:@"线性重复动画" object:[ReplicatorLineViewController class]],
+                       [Item itemWithName:@"跑马灯效果" object:[DrawMarqueeViewController class]]];
     
     self.items = [NSMutableArray array];
     

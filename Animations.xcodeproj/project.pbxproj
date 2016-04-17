@@ -173,6 +173,8 @@
 		105F3FE71CB7B3F1007B02C7 /* TapCellAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F3FE61CB7B3F1007B02C7 /* TapCellAnimationController.m */; };
 		105F3FEA1CB7B5DD007B02C7 /* ShowTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F3FE91CB7B5DD007B02C7 /* ShowTextCell.m */; };
 		105F3FED1CB7B6B1007B02C7 /* ShowTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F3FEC1CB7B6B1007B02C7 /* ShowTextModel.m */; };
+		105FFEAA1CBE8740006213B1 /* DrawMarqueeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105FFEA91CBE8740006213B1 /* DrawMarqueeViewController.m */; };
+		105FFEAE1CBE88B7006213B1 /* DrawMarqueeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 105FFEAD1CBE88B7006213B1 /* DrawMarqueeView.m */; };
 		106249981C2785630090AD65 /* EmitterSnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106249971C2785630090AD65 /* EmitterSnowController.m */; };
 		10667E181C7F2CCA00B9AC08 /* SCViewShakerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E171C7F2CCA00B9AC08 /* SCViewShakerController.m */; };
 		10667E1D1C7F2CFB00B9AC08 /* UIView+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */; };
@@ -620,6 +622,10 @@
 		105F3FE91CB7B5DD007B02C7 /* ShowTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTextCell.m; sourceTree = "<group>"; };
 		105F3FEB1CB7B6B1007B02C7 /* ShowTextModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTextModel.h; sourceTree = "<group>"; };
 		105F3FEC1CB7B6B1007B02C7 /* ShowTextModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTextModel.m; sourceTree = "<group>"; };
+		105FFEA81CBE8740006213B1 /* DrawMarqueeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawMarqueeViewController.h; sourceTree = "<group>"; };
+		105FFEA91CBE8740006213B1 /* DrawMarqueeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawMarqueeViewController.m; sourceTree = "<group>"; };
+		105FFEAC1CBE88B7006213B1 /* DrawMarqueeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawMarqueeView.h; sourceTree = "<group>"; };
+		105FFEAD1CBE88B7006213B1 /* DrawMarqueeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawMarqueeView.m; sourceTree = "<group>"; };
 		106249961C2785630090AD65 /* EmitterSnowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterSnowController.h; sourceTree = "<group>"; };
 		106249971C2785630090AD65 /* EmitterSnowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSnowController.m; sourceTree = "<group>"; };
 		10667E161C7F2CCA00B9AC08 /* SCViewShakerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewShakerController.h; sourceTree = "<group>"; };
@@ -1527,6 +1533,7 @@
 				105F3FE41CB7B3AF007B02C7 /* TapCellAnimationController */,
 				10B0DDF21CBA823F0089DF1E /* TextKitLoadImageController */,
 				100252C61CBC779100722169 /* ReplicatorLineViewController */,
+				105FFEAB1CBE8749006213B1 /* DrawMarqueeViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1782,6 +1789,17 @@
 				105F3FEC1CB7B6B1007B02C7 /* ShowTextModel.m */,
 			);
 			name = TapCellAnimationController;
+			sourceTree = "<group>";
+		};
+		105FFEAB1CBE8749006213B1 /* DrawMarqueeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				105FFEA81CBE8740006213B1 /* DrawMarqueeViewController.h */,
+				105FFEA91CBE8740006213B1 /* DrawMarqueeViewController.m */,
+				105FFEAC1CBE88B7006213B1 /* DrawMarqueeView.h */,
+				105FFEAD1CBE88B7006213B1 /* DrawMarqueeView.m */,
+			);
+			name = DrawMarqueeViewController;
 			sourceTree = "<group>";
 		};
 		106249991C2785680090AD65 /* EmitterSnowController */ = {
@@ -2361,6 +2379,7 @@
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				1096061E1C93B46800CCB3AD /* AbsResponseDataSerializer.m in Sources */,
 				10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */,
+				105FFEAA1CBE8740006213B1 /* DrawMarqueeViewController.m in Sources */,
 				10A34F661C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m in Sources */,
 				10B0DDFF1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m in Sources */,
 				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
@@ -2437,6 +2456,7 @@
 				10B0DDF61CBA83050089DF1E /* JSAnimatedImagesView.m in Sources */,
 				106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */,
 				109606551C93B4A300CCB3AD /* AFImageDownloader.m in Sources */,
+				105FFEAE1CBE88B7006213B1 /* DrawMarqueeView.m in Sources */,
 				109606561C93B4A300CCB3AD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */,
 				1096061F1C93B46800CCB3AD /* AbsNetworkingIndicator.m in Sources */,
