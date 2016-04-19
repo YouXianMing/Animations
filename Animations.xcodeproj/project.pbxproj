@@ -142,6 +142,10 @@
 		104326671C4B505E0033CEC0 /* ProgressColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 104326661C4B505E0033CEC0 /* ProgressColor+Colors.m */; };
 		104326941C4B9D570033CEC0 /* SpringEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104326931C4B9D570033CEC0 /* SpringEffectController.m */; };
 		1047D0F21C465753009ADED6 /* InfiniteRotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1047D0F11C465753009ADED6 /* InfiniteRotationView.m */; };
+		1047E2341CC5AF5400E13D1C /* LazyFadeInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1047E2331CC5AF5400E13D1C /* LazyFadeInViewController.m */; };
+		1047E23D1CC5AF8400E13D1C /* LazyFadeInLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1047E2381CC5AF8400E13D1C /* LazyFadeInLayer.m */; };
+		1047E23E1CC5AF8400E13D1C /* LazyFadeInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1047E23A1CC5AF8400E13D1C /* LazyFadeInView.m */; };
+		1047E23F1CC5AF8400E13D1C /* NSString+LFEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 1047E23C1CC5AF8400E13D1C /* NSString+LFEmoji.m */; };
 		1048F6EF1C28D56B0052F1DD /* MDMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EC1C28D56B0052F1DD /* MDMatrix.m */; };
 		1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EE1C28D56B0052F1DD /* MDScratchImageView.mm */; };
 		1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6F21C28D5B60052F1DD /* ScratchImageViewController.m */; };
@@ -557,6 +561,15 @@
 		1047D0F01C465753009ADED6 /* InfiniteRotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteRotationView.h; sourceTree = "<group>"; };
 		1047D0F11C465753009ADED6 /* InfiniteRotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteRotationView.m; sourceTree = "<group>"; };
 		1047D1051C47412F009ADED6 /* CustomViewControllerSubviewTagValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewControllerSubviewTagValue.h; sourceTree = "<group>"; };
+		1047E2321CC5AF5400E13D1C /* LazyFadeInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyFadeInViewController.h; sourceTree = "<group>"; };
+		1047E2331CC5AF5400E13D1C /* LazyFadeInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyFadeInViewController.m; sourceTree = "<group>"; };
+		1047E2361CC5AF8400E13D1C /* LazyFadeIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyFadeIn.h; sourceTree = "<group>"; };
+		1047E2371CC5AF8400E13D1C /* LazyFadeInLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyFadeInLayer.h; sourceTree = "<group>"; };
+		1047E2381CC5AF8400E13D1C /* LazyFadeInLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyFadeInLayer.m; sourceTree = "<group>"; };
+		1047E2391CC5AF8400E13D1C /* LazyFadeInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyFadeInView.h; sourceTree = "<group>"; };
+		1047E23A1CC5AF8400E13D1C /* LazyFadeInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyFadeInView.m; sourceTree = "<group>"; };
+		1047E23B1CC5AF8400E13D1C /* NSString+LFEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LFEmoji.h"; sourceTree = "<group>"; };
+		1047E23C1CC5AF8400E13D1C /* NSString+LFEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LFEmoji.m"; sourceTree = "<group>"; };
 		1048F6EB1C28D56B0052F1DD /* MDMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDMatrix.h; sourceTree = "<group>"; };
 		1048F6EC1C28D56B0052F1DD /* MDMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMatrix.m; sourceTree = "<group>"; };
 		1048F6ED1C28D56B0052F1DD /* MDScratchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDScratchImageView.h; sourceTree = "<group>"; };
@@ -874,6 +887,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1047E2351CC5AF8400E13D1C /* LazyFadeInView */,
 				10B0DDF31CBA82F90089DF1E /* JSAnimatedImagesView */,
 				102A0FF41C92725400BF3F1B /* NSData+GZip */,
 				10667E1A1C7F2CE300B9AC08 /* UIView+Shake */,
@@ -1534,6 +1548,7 @@
 				10B0DDF21CBA823F0089DF1E /* TextKitLoadImageController */,
 				100252C61CBC779100722169 /* ReplicatorLineViewController */,
 				105FFEAB1CBE8749006213B1 /* DrawMarqueeViewController */,
+				1047E2401CC5B52D00E13D1C /* LazyFadeInViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1620,6 +1635,29 @@
 				1047D0F11C465753009ADED6 /* InfiniteRotationView.m */,
 			);
 			name = InfiniteRotationView;
+			sourceTree = "<group>";
+		};
+		1047E2351CC5AF8400E13D1C /* LazyFadeInView */ = {
+			isa = PBXGroup;
+			children = (
+				1047E2361CC5AF8400E13D1C /* LazyFadeIn.h */,
+				1047E2371CC5AF8400E13D1C /* LazyFadeInLayer.h */,
+				1047E2381CC5AF8400E13D1C /* LazyFadeInLayer.m */,
+				1047E2391CC5AF8400E13D1C /* LazyFadeInView.h */,
+				1047E23A1CC5AF8400E13D1C /* LazyFadeInView.m */,
+				1047E23B1CC5AF8400E13D1C /* NSString+LFEmoji.h */,
+				1047E23C1CC5AF8400E13D1C /* NSString+LFEmoji.m */,
+			);
+			path = LazyFadeInView;
+			sourceTree = "<group>";
+		};
+		1047E2401CC5B52D00E13D1C /* LazyFadeInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1047E2321CC5AF5400E13D1C /* LazyFadeInViewController.h */,
+				1047E2331CC5AF5400E13D1C /* LazyFadeInViewController.m */,
+			);
+			name = LazyFadeInViewController;
 			sourceTree = "<group>";
 		};
 		1048F6EA1C28D56B0052F1DD /* MDScratchImageView */ = {
@@ -2378,6 +2416,7 @@
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				1096061E1C93B46800CCB3AD /* AbsResponseDataSerializer.m in Sources */,
+				1047E23E1CC5AF8400E13D1C /* LazyFadeInView.m in Sources */,
 				10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */,
 				105FFEAA1CBE8740006213B1 /* DrawMarqueeViewController.m in Sources */,
 				10A34F661C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m in Sources */,
@@ -2409,6 +2448,7 @@
 				1017F11F1C356EE700E245F8 /* SDImageCache.m in Sources */,
 				1017F1241C356EE700E245F8 /* SDWebImageManager.m in Sources */,
 				1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */,
+				1047E23D1CC5AF8400E13D1C /* LazyFadeInLayer.m in Sources */,
 				108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */,
 				102B1F2E1C60E66F00A8FD40 /* EntitiesModel.m in Sources */,
 				102B1F2C1C60E66F00A8FD40 /* DataModel.m in Sources */,
@@ -2425,6 +2465,7 @@
 				1017F13A1C35715400E245F8 /* NSDictionary+JSONData.m in Sources */,
 				100148C91C43D53D006D9153 /* BezierPathViewController.m in Sources */,
 				10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */,
+				1047E23F1CC5AF8400E13D1C /* NSString+LFEmoji.m in Sources */,
 				106CF0991C3765360006419B /* UIFont+Fonts.m in Sources */,
 				10667E1D1C7F2CFB00B9AC08 /* UIView+Shake.m in Sources */,
 				106CF0961C37650D0006419B /* MessageAlertView.m in Sources */,
@@ -2481,6 +2522,7 @@
 				102B1F2D1C60E66F00A8FD40 /* DescriptionModel.m in Sources */,
 				1017F1251C356EE700E245F8 /* SDWebImagePrefetcher.m in Sources */,
 				B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */,
+				1047E2341CC5AF5400E13D1C /* LazyFadeInViewController.m in Sources */,
 				104F0D321BFC1C9C00C46E6A /* FontAttribute.m in Sources */,
 				1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */,
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,

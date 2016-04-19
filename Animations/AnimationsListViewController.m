@@ -58,6 +58,7 @@
 #import "TextKitLoadImageController.h"
 #import "ReplicatorLineViewController.h"
 #import "DrawMarqueeViewController.h"
+#import "LazyFadeInViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -167,7 +168,8 @@
                        [Item itemWithName:@"Cell点击动画" object:[TapCellAnimationController class]],
                        [Item itemWithName:@"TextKit简单示例" object:[TextKitLoadImageController class]],
                        [Item itemWithName:@"线性重复动画" object:[ReplicatorLineViewController class]],
-                       [Item itemWithName:@"跑马灯效果" object:[DrawMarqueeViewController class]]];
+                       [Item itemWithName:@"跑马灯效果" object:[DrawMarqueeViewController class]],
+                       [Item itemWithName:@"文本渐变动画效果" object:[LazyFadeInViewController class]]];
     
     self.items = [NSMutableArray array];
     
