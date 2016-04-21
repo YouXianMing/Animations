@@ -214,100 +214,86 @@
 
 #pragma mark - runtime属性
 
-NSString * const _recognizerDispatchSource = @"_recognizerDispatchSource";
-
 - (void)setDispatchSource:(dispatch_source_t)dispatchSource {
     
-    objc_setAssociatedObject(self, (__bridge const void *)(_recognizerDispatchSource), dispatchSource, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(dispatchSource), dispatchSource, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (dispatch_source_t)dispatchSource {
     
-    return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerDispatchSource));
+    return objc_getAssociatedObject(self, _cmd);
 }
-
-NSString * const _recognizerGlowColor = @"_recognizerGlowColor";
 
 - (void)setGlowColor:(UIColor *)glowColor {
     
-    objc_setAssociatedObject(self, (__bridge const void *)(_recognizerGlowColor), glowColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(glowColor), glowColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)glowColor {
     
-    return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerGlowColor));
+    return objc_getAssociatedObject(self, _cmd);
 }
-
-NSString * const _recognizerGlowOpacity = @"_recognizerGlowOpacity";
 
 - (void)setGlowOpacity:(NSNumber *)glowOpacity {
     
-    objc_setAssociatedObject(self, (__bridge const void *)(_recognizerGlowOpacity), glowOpacity, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(glowOpacity), glowOpacity, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)glowOpacity {
     
-    return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerGlowOpacity));
+    return objc_getAssociatedObject(self, _cmd);
 }
-
-NSString * const _recognizerGlowRadius = @"_recognizerGlowRadius";
 
 - (void)setGlowRadius:(NSNumber *)glowRadius {
     
-    objc_setAssociatedObject(self, (__bridge const void *)(_recognizerGlowRadius), glowRadius, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(glowRadius), glowRadius, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)glowRadius {
     
-    return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerGlowRadius));
+    return objc_getAssociatedObject(self, _cmd);
 }
-
-NSString * const _recognizerGlowAnimationDuration = @"_recognizerGlowAnimationDuration";
 
 - (void)setGlowAnimationDuration:(NSNumber *)glowAnimationDuration {
     
-    objc_setAssociatedObject(self, (__bridge const void *)(glowAnimationDuration), _recognizerGlowAnimationDuration, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(glowAnimationDuration), glowAnimationDuration, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)glowAnimationDuration {
     
-    return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerGlowAnimationDuration));
+    return objc_getAssociatedObject(self, _cmd);
 }
-
-NSString * const _recognizerGlowDuration = @"_recognizerGlowDuration";
 
 - (void)setGlowDuration:(NSNumber *)glowDuration {
     
-    objc_setAssociatedObject(self, (__bridge const void *)(_recognizerGlowDuration), glowDuration, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(glowDuration), glowDuration, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)glowDuration {
     
-    return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerGlowDuration));
+    return objc_getAssociatedObject(self, _cmd);
 }
-
-NSString * const _recognizerHideDuration = @"_recognizerHideDuration";
 
 - (void)setHideDuration:(NSNumber *)hideDuration {
     
-    objc_setAssociatedObject(self, (__bridge const void *)(_recognizerHideDuration), hideDuration, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(hideDuration), hideDuration, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)hideDuration {
     
-    return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerHideDuration));
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 NSString * const _recognizerGlowLayer = @"_recognizerGlowLayer";
 
 - (void)setGlowLayer:(CALayer *)glowLayer {
     
-    objc_setAssociatedObject(self, (__bridge const void *)(_recognizerGlowLayer), glowLayer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(glowLayer), glowLayer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CALayer *)glowLayer {
     
-    return objc_getAssociatedObject(self, (__bridge const void *)(_recognizerGlowLayer));
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 @end
