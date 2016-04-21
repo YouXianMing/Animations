@@ -96,6 +96,11 @@
                                                          }];
 }
 
+- (void)cancelAnimation {
+
+    [self.iconImageView.layer removeAllAnimations];
+}
+
 - (void)showSelectedAnimation {
     
     UIView *tmpView         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, self.dataAdapter.cellHeight - 0.5f)];

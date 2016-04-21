@@ -10,4 +10,6 @@
 
 @interface LoadUrlDataCell : CustomCell
 
+- (void)cancelAnimation;
+
 @end

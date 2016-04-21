@@ -94,6 +94,12 @@
     return adapter.cellHeight;
 }
 
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath {
+
+    LoadUrlDataCell *dataCell = (LoadUrlDataCell *)[tableView cellForRowAtIndexPath:indexPath];
+    [dataCell cancelAnimation];
+}
+
 #pragma mark - NetworkingDelegate
 
 - (void)requestSucess:(Networking *)networking data:(id)data {
