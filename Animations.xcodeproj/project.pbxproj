@@ -13,6 +13,7 @@
 		100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100BFAE81C2392F5008C5523 /* ShimmerController.m */; };
 		1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */; };
 		1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DD1C0AA639004CFBCE /* POPSpringParameterController.m */; };
+		1011BA551CD40C2900F29FB9 /* UIView+UserInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1011BA541CD40C2900F29FB9 /* UIView+UserInteraction.m */; };
 		1017F11D1C356EE700E245F8 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017F0FD1C356EE700E245F8 /* MKAnnotationView+WebCache.m */; };
 		1017F11E1C356EE700E245F8 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017F0FF1C356EE700E245F8 /* NSData+ImageContentType.m */; };
 		1017F11F1C356EE700E245F8 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017F1011C356EE700E245F8 /* SDImageCache.m */; };
@@ -287,6 +288,8 @@
 		1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeValueView.m; sourceTree = "<group>"; };
 		1010C6DC1C0AA639004CFBCE /* POPSpringParameterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringParameterController.h; sourceTree = "<group>"; };
 		1010C6DD1C0AA639004CFBCE /* POPSpringParameterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPSpringParameterController.m; sourceTree = "<group>"; };
+		1011BA531CD40C2900F29FB9 /* UIView+UserInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UserInteraction.h"; sourceTree = "<group>"; };
+		1011BA541CD40C2900F29FB9 /* UIView+UserInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UserInteraction.m"; sourceTree = "<group>"; };
 		1017F0FC1C356EE700E245F8 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		1017F0FD1C356EE700E245F8 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		1017F0FE1C356EE700E245F8 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -884,9 +887,19 @@
 			name = POPSpringParameterController;
 			sourceTree = "<group>";
 		};
+		1011BA561CD40C2C00F29FB9 /* UIView+UserInteraction */ = {
+			isa = PBXGroup;
+			children = (
+				1011BA531CD40C2900F29FB9 /* UIView+UserInteraction.h */,
+				1011BA541CD40C2900F29FB9 /* UIView+UserInteraction.m */,
+			);
+			name = "UIView+UserInteraction";
+			sourceTree = "<group>";
+		};
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1011BA561CD40C2C00F29FB9 /* UIView+UserInteraction */,
 				1047E2351CC5AF8400E13D1C /* LazyFadeInView */,
 				10B0DDF31CBA82F90089DF1E /* JSAnimatedImagesView */,
 				102A0FF41C92725400BF3F1B /* NSData+GZip */,
@@ -2401,6 +2414,7 @@
 				1047D0F21C465753009ADED6 /* InfiniteRotationView.m in Sources */,
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
 				1020E3381C759B3400FF233E /* MotionEffectViewController.m in Sources */,
+				1011BA551CD40C2900F29FB9 /* UIView+UserInteraction.m in Sources */,
 				10381FC41BF9B77000E5E476 /* CustomNavigationController.m in Sources */,
 				1017F1261C356EE700E245F8 /* UIButton+WebCache.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
