@@ -63,41 +63,40 @@
     self.button.height = self.dataAdapter.cellHeight;
     
     __weak LoadUrlDataCell *wself = self;
-    [wself.iconImageView sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:model.user.avatar_image.url]
-                                                  placeholderImage:nil
-                                                           options:0
-                                                          progress:nil
-                                                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                                                             
-                                                             if (cacheType == SDImageCacheTypeNone) {
-                                                                 
-                                                                 wself.iconImageView.image = image;
-                                                                 wself.iconImageView.alpha = 0;
-                                                                 wself.iconImageView.scale = 1.25f;
-                                                                 
-                                                                 [UIView animateWithDuration:0.5f animations:^{
-                                                                     
-                                                                     wself.iconImageView.alpha = 1.f;
-                                                                     wself.iconImageView.scale = 1.f;
-                                                                 }];
-                                                                 
-                                                             } else if (cacheType == SDImageCacheTypeMemory) {
-                                                                 
-                                                                 wself.iconImageView.image = image;
-                                                                 wself.iconImageView.alpha = 0;
-                                                                 wself.iconImageView.scale = 1.25f;
-                                                                 
-                                                                 [UIView animateWithDuration:0.5f animations:^{
-                                                                     
-                                                                     wself.iconImageView.alpha = 1.f;
-                                                                     wself.iconImageView.scale = 1.f;
-                                                                 }];
-                                                             }
-                                                         }];
+    [wself.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.user.avatar_image.url]
+                                  completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                      
+                                      if (cacheType == SDImageCacheTypeNone) {
+                                          
+                                          NSLog(@"[%ld][%ld] SDImageCacheTypeNone", wself.indexPath.section, wself.indexPath.row);
+                                          
+                                      } else if (cacheType == SDImageCacheTypeDisk) {
+                                          
+                                          NSLog(@"[%ld][%ld] SDImageCacheTypeDisk", wself.indexPath.section, wself.indexPath.row);
+                                          
+                                      } else if (cacheType == SDImageCacheTypeMemory) {
+                                          
+                                          NSLog(@"[%ld][%ld] SDImageCacheTypeMemory", wself.indexPath.section, wself.indexPath.row);
+                                          
+                                      } else {
+                                          
+                                          NSLog(@"[%ld][%ld] Unknow", wself.indexPath.section, wself.indexPath.row);
+                                      }
+                                      
+                                      wself.iconImageView.image = image;
+                                      wself.iconImageView.alpha = 0;
+                                      wself.iconImageView.scale = 1.25f;
+                                      
+                                      [UIView animateWithDuration:0.5f animations:^{
+                                          
+                                          wself.iconImageView.alpha = 1.f;
+                                          wself.iconImageView.scale = 1.f;
+                                      }];
+                                  }];
 }
 
 - (void)cancelAnimation {
-
+    
     [self.iconImageView.layer removeAllAnimations];
 }
 

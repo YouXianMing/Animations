@@ -23,4 +23,15 @@
                       inputDateStringFormatter:(NSString *)inputDateStringFormatter
                      outputDateStringFormatter:(NSString *)outputDateStringFormatter;
 
+/**
+ *  Use DateFormatter to transform date to specified date string.
+ *
+ *  @param date                      NSDate object.
+ *  @param outputDateStringFormatter Output date string formatter. (eg. yy/MM/dd)
+ *
+ *  @return Specified date string.
+ */
++ (NSString *)dateStringFromDate:(NSDate *)date
+       outputDateStringFormatter:(NSString *)outputDateStringFormatter;
+
 @end

@@ -46,37 +46,20 @@
 
     WaterfallPictureModel *model = self.data;
     __weak WaterfallCell  *wself = self;
-    [self.showImageView sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:model.isrc]
-                                                 placeholderImage:nil
-                                                          options:0
-                                                         progress:nil
-                                                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                                                            
-                                                            if (cacheType == SDImageCacheTypeNone) {
-                                                                
-                                                                wself.showImageView.image = image;
-                                                                wself.showImageView.alpha = 0;
-                                                                wself.showImageView.scale = 1.1f;
-                                                                
-                                                                [UIView animateWithDuration:0.5f animations:^{
-                                                                    
-                                                                    wself.showImageView.alpha = 1.f;
-                                                                    wself.showImageView.scale = 1.f;
-                                                                }];
-                                                                
-                                                            } else if (cacheType == SDImageCacheTypeMemory) {
-                                                                
-                                                                wself.showImageView.image = image;
-                                                                wself.showImageView.alpha = 0;
-                                                                wself.showImageView.scale = 1.1f;
-                                                                
-                                                                [UIView animateWithDuration:0.5f animations:^{
-                                                                    
-                                                                    wself.showImageView.alpha = 1.f;
-                                                                    wself.showImageView.scale = 1.f;
-                                                                }];
-                                                            }
-                                                        }];
+
+    [self.showImageView sd_setImageWithURL:[NSURL URLWithString:model.isrc]
+                                 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                     
+                                     wself.showImageView.image = image;
+                                     wself.showImageView.alpha = 0;
+                                     wself.showImageView.scale = 1.1f;
+                                     
+                                     [UIView animateWithDuration:0.5f animations:^{
+                                         
+                                         wself.showImageView.alpha = 1.f;
+                                         wself.showImageView.scale = 1.f;
+                                     }];
+                                 }];
 }
 
 @end

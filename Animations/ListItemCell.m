@@ -44,7 +44,7 @@
     if (self.dataAdapter.data) {
         
         Item *item              = self.dataAdapter.data;
-        self.titlelabel.text    = item.name;
+        self.titlelabel.text    = [NSString stringWithFormat:@"%02ld.%@", self.indexPath.row + 1, item.name];
         self.subTitleLabel.text = [NSString stringWithFormat:@"%@", item.object];
     }
     

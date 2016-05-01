@@ -52,32 +52,48 @@
     }
 }
 
-- (void)glowToshow {
+- (void)glowToshowAnimated:(BOOL)animated {
     
     self.glowLayer.shadowColor   = [self accessGlowColor].CGColor;
     self.glowLayer.shadowRadius  = [self accessGlowRadius].floatValue;
     
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    animation.fromValue         = @(0.f);
-    animation.toValue           = [self accessGlowOpacity];
-    self.glowLayer.opacity      = [self accessGlowOpacity].floatValue;
-    animation.duration          = [self accessAnimationDuration].floatValue;
+    if (animated) {
+        
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+        animation.fromValue         = @(0.f);
+        animation.toValue           = [self accessGlowOpacity];
+        self.glowLayer.opacity      = [self accessGlowOpacity].floatValue;
+        animation.duration          = [self accessAnimationDuration].floatValue;
+        
+        [self.glowLayer addAnimation:animation forKey:@"glowLayerOpacity"];
+        
+    } else {
     
-    [self.glowLayer addAnimation:animation forKey:nil];
+        [self.glowLayer removeAnimationForKey:@"glowLayerOpacity"];
+        self.glowLayer.opacity = [self accessGlowOpacity].floatValue;
+    }
 }
 
-- (void)glowToHide {
+- (void)glowToHideAnimated:(BOOL)animated {
     
     self.glowLayer.shadowColor   = [self accessGlowColor].CGColor;
     self.glowLayer.shadowRadius  = [self accessGlowRadius].floatValue;
     
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    animation.fromValue         = [self accessGlowOpacity];
-    animation.toValue           = @(0.f);
-    self.glowLayer.opacity      = 0.f;
-    animation.duration          = [self accessAnimationDuration].floatValue;
+    if (animated) {
+        
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+        animation.fromValue         = [self accessGlowOpacity];
+        animation.toValue           = @(0.f);
+        self.glowLayer.opacity      = 0.f;
+        animation.duration          = [self accessAnimationDuration].floatValue;
+        
+        [self.glowLayer addAnimation:animation forKey:@"glowLayerOpacity"];
+        
+    } else {
     
-    [self.glowLayer addAnimation:animation forKey:nil];
+        [self.glowLayer removeAnimationForKey:@"glowLayerOpacity"];
+        self.glowLayer.opacity = 0.f;
+    }
 }
 
 - (void)startGlowLoop {
@@ -88,14 +104,16 @@
         CGFloat delaySeconds = [self accessAnimationDuration].floatValue + [self accessGlowDuration].floatValue;
         
         self.dispatchSource = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+        
+        __weak UIView *weakSelf = self;
         dispatch_source_set_timer(self.dispatchSource, dispatch_time(DISPATCH_TIME_NOW, 0), NSEC_PER_SEC * seconds, 0);
         dispatch_source_set_event_handler(self.dispatchSource, ^{
             
-            [self glowToshow];
+            [weakSelf glowToshowAnimated:YES];
             
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * delaySeconds), dispatch_get_main_queue(), ^{
                 
-                [self glowToHide];
+                [weakSelf glowToHideAnimated:YES];
             });
         });
         

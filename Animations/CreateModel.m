@@ -6,14 +6,14 @@
 //  Copyright © 2015年 mc. All rights reserved.
 //
 
-#import "NodeModelHelper.h"
+#import "CreateModel.h"
 #import "NodeModel.h"
 #import "NodeModelViewController.h"
 #import "NodeModelRootNavigationController.h"
 
-@implementation NodeModelHelper
+@implementation CreateModel
 
-+ (void)jsonData:(NSDictionary *)jsonData rootModelName:(NSString *)rootModelName {
++ (void)createModelWithJsonData:(NSDictionary *)jsonData rootModelName:(NSString *)rootModelName {
     
     NSParameterAssert(jsonData);
     NSParameterAssert(rootModelName);
@@ -40,7 +40,7 @@
     }
 }
 
-+ (void)ceateJsonData:(NSDictionary *)jsonData {
++ (void)ceateJsonFile:(NSDictionary *)jsonData {
 
     if ([jsonData isKindOfClass:[NSDictionary class]]) {
         

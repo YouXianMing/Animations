@@ -35,4 +35,16 @@
     return outputString;
 }
 
++ (NSString *)dateStringFromDate:(NSDate *)date
+       outputDateStringFormatter:(NSString *)outputDateStringFormatter {
+
+    NSParameterAssert(date);
+    NSParameterAssert(outputDateStringFormatter);
+    
+    NSDateFormatter *outputFormatter  = [[NSDateFormatter alloc] init] ;
+    outputFormatter.dateFormat        = outputDateStringFormatter;
+    
+    return [outputFormatter stringFromDate:date];
+}
+
 @end

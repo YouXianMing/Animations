@@ -82,6 +82,7 @@
     
     CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
     cell.dataAdapter = adapter;
+    cell.indexPath   = indexPath;
     [cell loadContent];
     
     return cell;

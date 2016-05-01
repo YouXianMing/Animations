@@ -75,12 +75,12 @@
 /**
  *  显示辉光
  */
-- (void)glowToshow;
+- (void)glowToshowAnimated:(BOOL)animated;
 
 /**
  *  隐藏辉光
  */
-- (void)glowToHide;
+- (void)glowToHideAnimated:(BOOL)animated;
 
 /**
  *  开始循环辉光

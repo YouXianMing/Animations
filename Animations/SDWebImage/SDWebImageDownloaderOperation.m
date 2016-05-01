@@ -92,8 +92,13 @@ NSString *const SDWebImageDownloadFinishNotification = @"SDWebImageDownloadFinis
         }
 #endif
 
+        
         self.executing = YES;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         self.connection = [[NSURLConnection alloc] initWithRequest:self.request delegate:self startImmediately:NO];
+#pragma clang diagnostic pop
+
         self.thread = [NSThread currentThread];
     }
 
