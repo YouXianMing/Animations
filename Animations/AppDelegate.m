@@ -16,7 +16,7 @@
     
     /*
      
-     最新编译无警告版本 Xcode Version 7.3 (7D175)
+     最新编译无警告版本(64位测试机) Xcode Version 7.3 (7D175)
      
      QQ   705786299
      邮箱  YouXianMing1987@iCloud.com

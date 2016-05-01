@@ -288,6 +288,8 @@
 		10E2D5081CD5DC4500666EEB /* FontListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D5071CD5DC4500666EEB /* FontListCell.m */; };
 		10E2D50B1CD5DC6D00666EEB /* FontListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D50A1CD5DC6D00666EEB /* FontListHeaderView.m */; };
 		10E2D50E1CD5DE0400666EEB /* FontInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D50D1CD5DE0400666EEB /* FontInfoModel.m */; };
+		10E2D5121CD63EDF00666EEB /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D5111CD63EDF00666EEB /* iCarousel.m */; };
+		10E2D5151CD63F0900666EEB /* iCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D5141CD63F0900666EEB /* iCarouselViewController.m */; };
 		10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */; };
 		B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */; };
 		B5D011941C0BE2410075BC2E /* RotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011901C0BE2410075BC2E /* RotateView.m */; };
@@ -886,6 +888,10 @@
 		10E2D50A1CD5DC6D00666EEB /* FontListHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontListHeaderView.m; sourceTree = "<group>"; };
 		10E2D50C1CD5DE0400666EEB /* FontInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontInfoModel.h; sourceTree = "<group>"; };
 		10E2D50D1CD5DE0400666EEB /* FontInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontInfoModel.m; sourceTree = "<group>"; };
+		10E2D5101CD63EDF00666EEB /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		10E2D5111CD63EDF00666EEB /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		10E2D5131CD63F0900666EEB /* iCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarouselViewController.h; sourceTree = "<group>"; };
+		10E2D5141CD63F0900666EEB /* iCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarouselViewController.m; sourceTree = "<group>"; };
 		10FDF9CA1CA50AED00871B45 /* UIView+AnimationsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationsListViewController.h"; sourceTree = "<group>"; };
 		10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationsListViewController.m"; sourceTree = "<group>"; };
 		B5D0118C1C0BE1B30075BC2E /* HeaderViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewTapAnimationController.h; sourceTree = "<group>"; };
@@ -1087,6 +1093,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				10E2D50F1CD63EDF00666EEB /* iCarousel */,
 				1011BAE81CD4957400F29FB9 /* ValueStorageManager */,
 				1011BA561CD40C2C00F29FB9 /* UIView+UserInteraction */,
 				1047E2351CC5AF8400E13D1C /* LazyFadeInView */,
@@ -1729,6 +1736,7 @@
 				1047E2401CC5B52D00E13D1C /* LazyFadeInViewController */,
 				1011BA901CD4850300F29FB9 /* OffsetCellViewController */,
 				10E2D5021CD5D9AE00666EEB /* SystemFontInfoController */,
+				10E2D5161CD6474900666EEB /* iCarouselViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2421,6 +2429,24 @@
 			name = SystemFontInfoController;
 			sourceTree = "<group>";
 		};
+		10E2D50F1CD63EDF00666EEB /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				10E2D5101CD63EDF00666EEB /* iCarousel.h */,
+				10E2D5111CD63EDF00666EEB /* iCarousel.m */,
+			);
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		10E2D5161CD6474900666EEB /* iCarouselViewController */ = {
+			isa = PBXGroup;
+			children = (
+				10E2D5131CD63F0900666EEB /* iCarouselViewController.h */,
+				10E2D5141CD63F0900666EEB /* iCarouselViewController.m */,
+			);
+			name = iCarouselViewController;
+			sourceTree = "<group>";
+		};
 		10FDF9C91CA50AA500871B45 /* DisposableTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -2601,6 +2627,7 @@
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
+				10E2D5151CD63F0900666EEB /* iCarouselViewController.m in Sources */,
 				1011BADE1CD48C8D00F29FB9 /* NodeModelStrings.m in Sources */,
 				B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */,
 				1047D0F21C465753009ADED6 /* InfiniteRotationView.m in Sources */,
@@ -2625,6 +2652,7 @@
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				1096061E1C93B46800CCB3AD /* AbsResponseDataSerializer.m in Sources */,
 				1047E23E1CC5AF8400E13D1C /* LazyFadeInView.m in Sources */,
+				10E2D5121CD63EDF00666EEB /* iCarousel.m in Sources */,
 				10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */,
 				105FFEAA1CBE8740006213B1 /* DrawMarqueeViewController.m in Sources */,
 				10A34F661C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m in Sources */,

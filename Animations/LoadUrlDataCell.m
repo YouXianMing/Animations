@@ -68,19 +68,19 @@
                                       
                                       if (cacheType == SDImageCacheTypeNone) {
                                           
-                                          NSLog(@"[%ld][%ld] SDImageCacheTypeNone", (long)wself.indexPath.section, wself.indexPath.row);
+                                          NSLog(@"[%ld][%ld] SDImageCacheTypeNone", (long)wself.indexPath.section, (long)wself.indexPath.row);
                                           
                                       } else if (cacheType == SDImageCacheTypeDisk) {
                                           
-                                          NSLog(@"[%ld][%ld] SDImageCacheTypeDisk", (long)wself.indexPath.section, wself.indexPath.row);
+                                          NSLog(@"[%ld][%ld] SDImageCacheTypeDisk", (long)wself.indexPath.section, (long)wself.indexPath.row);
                                           
                                       } else if (cacheType == SDImageCacheTypeMemory) {
                                           
-                                          NSLog(@"[%ld][%ld] SDImageCacheTypeMemory", (long)wself.indexPath.section, wself.indexPath.row);
+                                          NSLog(@"[%ld][%ld] SDImageCacheTypeMemory", (long)wself.indexPath.section, (long)wself.indexPath.row);
                                           
                                       } else {
                                           
-                                          NSLog(@"[%ld][%ld] Unknow", (long)wself.indexPath.section, wself.indexPath.row);
+                                          NSLog(@"[%ld][%ld] Unknow", (long)wself.indexPath.section, (long)wself.indexPath.row);
                                       }
                                       
                                       wself.iconImageView.image = image;

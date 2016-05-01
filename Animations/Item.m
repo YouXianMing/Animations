@@ -29,7 +29,7 @@
 
 - (void)createAttributedString {
 
-    NSString *fullStirng = [NSString stringWithFormat:@"%02ld. %@", self.index, self.name];
+    NSString *fullStirng = [NSString stringWithFormat:@"%02ld. %@", (long)self.index, self.name];
     
     NSMutableAttributedString *richString = [[NSMutableAttributedString alloc] initWithString:fullStirng];
     
