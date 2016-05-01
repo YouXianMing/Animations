@@ -15,4 +15,9 @@
 
 + (instancetype)itemWithName:(NSString *)name object:(id)object;
 
+@property (nonatomic)                   NSInteger index;
+@property (nonatomic, strong, readonly) NSMutableAttributedString *nameString;
+
+- (void)createAttributedString;
+
 @end

@@ -29,8 +29,6 @@
 - (void)buildSubview {
 
     self.titlelabel      = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 290, 25)];
-    self.titlelabel.font = [UIFont HeitiSCWithFontSize:20.f];
-    self.titlelabel.textColor = [[UIColor blackColor] colorWithAlphaComponent:0.65f];
     [self addSubview:self.titlelabel];
     
     self.subTitleLabel           = [[UILabel alloc] initWithFrame:CGRectMake(10, 35, 290, 10)];
@@ -43,9 +41,9 @@
     
     if (self.dataAdapter.data) {
         
-        Item *item              = self.dataAdapter.data;
-        self.titlelabel.text    = [NSString stringWithFormat:@"%02ld.%@", self.indexPath.row + 1, item.name];
-        self.subTitleLabel.text = [NSString stringWithFormat:@"%@", item.object];
+        Item *item                     = self.dataAdapter.data;
+        self.titlelabel.attributedText = item.nameString;
+        self.subTitleLabel.text        = [NSString stringWithFormat:@"%@", [item.object class]];
     }
     
     if (self.indexPath.row % 2) {

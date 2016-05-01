@@ -60,6 +60,7 @@
 #import "DrawMarqueeViewController.h"
 #import "LazyFadeInViewController.h"
 #import "OffsetCellViewController.h"
+#import "SystemFontInfoController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -171,13 +172,18 @@
                        [Item itemWithName:@"线性重复动画" object:[ReplicatorLineViewController class]],
                        [Item itemWithName:@"跑马灯效果" object:[DrawMarqueeViewController class]],
                        [Item itemWithName:@"文本渐变动画效果" object:[LazyFadeInViewController class]],
-                       [Item itemWithName:@"Cell图片视差动画" object:[OffsetCellViewController class]]];
+                       [Item itemWithName:@"Cell图片视差动画" object:[OffsetCellViewController class]],
+                       [Item itemWithName:@"系统字体列表" object:[SystemFontInfoController class]]];
     
     self.items = [NSMutableArray array];
     
     for (int i = 0; i < array.count; i++) {
     
-        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"ListItemCell" data:array[i]
+        Item *item = array[i];
+        item.index = i + 1;
+        [item createAttributedString];
+        
+        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"ListItemCell" data:item
                                                                                     cellHeight:0 cellType:0];
         [self.items addObject:dataAdapter];
     }
