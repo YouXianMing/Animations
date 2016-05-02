@@ -31,6 +31,8 @@
 
     [super setup];
     
+    // https://github.com/nicklockwood/iCarousel
+    
     self.contentView.layer.masksToBounds = YES;
     self.backgroundView.backgroundColor  = [UIColor blackColor];
     
@@ -69,6 +71,8 @@
         }];
     }];
 }
+
+#pragma mark - iCarousel's delegate.
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
     
