@@ -46,12 +46,12 @@ static NSString *footerIdentifier = @"WaterfallFooter";
     CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
     
     // 设置布局
-    layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
+    layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
     layout.headerHeight = 64;            // headerView高度
     layout.footerHeight = 0;             // footerView高度
     layout.columnCount  = 3;             // 几列显示
-    layout.minimumColumnSpacing    = 5;  // cell之间的水平间距
-    layout.minimumInteritemSpacing = 5;  // cell之间的垂直间距
+    layout.minimumColumnSpacing    = 0;  // cell之间的水平间距
+    layout.minimumInteritemSpacing = 0;  // cell之间的垂直间距
     
     // 初始化collectionView
     _collectionView = [[UICollectionView alloc] initWithFrame:self.contentView.bounds
