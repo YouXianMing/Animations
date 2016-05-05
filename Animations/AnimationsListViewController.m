@@ -62,6 +62,7 @@
 #import "OffsetCellViewController.h"
 #import "SystemFontInfoController.h"
 #import "iCarouselViewController.h"
+#import "GridFlowLayoutViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -175,7 +176,8 @@
                        [Item itemWithName:@"文本渐变动画效果" object:[LazyFadeInViewController class]],
                        [Item itemWithName:@"Cell图片视差动画" object:[OffsetCellViewController class]],
                        [Item itemWithName:@"系统字体列表" object:[SystemFontInfoController class]],
-                       [Item itemWithName:@"旋转木马效果" object:[iCarouselViewController class]]];
+                       [Item itemWithName:@"旋转木马效果" object:[iCarouselViewController class]],
+                       [Item itemWithName:@"水平方向瀑布流" object:[GridFlowLayoutViewController class]]];
     
     self.items = [NSMutableArray array];
     

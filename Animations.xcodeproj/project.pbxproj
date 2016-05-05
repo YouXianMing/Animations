@@ -152,6 +152,11 @@
 		1048F6EF1C28D56B0052F1DD /* MDMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EC1C28D56B0052F1DD /* MDMatrix.m */; };
 		1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EE1C28D56B0052F1DD /* MDScratchImageView.mm */; };
 		1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6F21C28D5B60052F1DD /* ScratchImageViewController.m */; };
+		104CD2FC1CDAD41A00C836E6 /* GridFlowLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104CD2FB1CDAD41A00C836E6 /* GridFlowLayoutViewController.m */; };
+		104CD3001CDAD4A300C836E6 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 104CD2FF1CDAD4A300C836E6 /* CustomCollectionViewCell.m */; };
+		104CD3031CDAD4AE00C836E6 /* FlowStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 104CD3021CDAD4AE00C836E6 /* FlowStyleCell.m */; };
+		104CD3081CDAD4B700C836E6 /* GridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 104CD3051CDAD4B700C836E6 /* GridLayout.m */; };
+		104CD3091CDAD4B700C836E6 /* GridManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 104CD3071CDAD4B700C836E6 /* GridManager.m */; };
 		104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CC01BFABFE700C46E6A /* PopStrokeController.m */; };
 		104F0CC51BFAC04300C46E6A /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CC41BFAC04300C46E6A /* CustomViewController.m */; };
 		104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0CF71BFAFA7000C46E6A /* CAShapeLayerPathController.m */; };
@@ -608,6 +613,16 @@
 		1048F6EE1C28D56B0052F1DD /* MDScratchImageView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MDScratchImageView.mm; sourceTree = "<group>"; };
 		1048F6F11C28D5B60052F1DD /* ScratchImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScratchImageViewController.h; sourceTree = "<group>"; };
 		1048F6F21C28D5B60052F1DD /* ScratchImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScratchImageViewController.m; sourceTree = "<group>"; };
+		104CD2FA1CDAD41A00C836E6 /* GridFlowLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridFlowLayoutViewController.h; sourceTree = "<group>"; };
+		104CD2FB1CDAD41A00C836E6 /* GridFlowLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridFlowLayoutViewController.m; sourceTree = "<group>"; };
+		104CD2FE1CDAD4A300C836E6 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		104CD2FF1CDAD4A300C836E6 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		104CD3011CDAD4AE00C836E6 /* FlowStyleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowStyleCell.h; sourceTree = "<group>"; };
+		104CD3021CDAD4AE00C836E6 /* FlowStyleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowStyleCell.m; sourceTree = "<group>"; };
+		104CD3041CDAD4B700C836E6 /* GridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridLayout.h; sourceTree = "<group>"; };
+		104CD3051CDAD4B700C836E6 /* GridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridLayout.m; sourceTree = "<group>"; };
+		104CD3061CDAD4B700C836E6 /* GridManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridManager.h; sourceTree = "<group>"; };
+		104CD3071CDAD4B700C836E6 /* GridManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridManager.m; sourceTree = "<group>"; };
 		104F0CBF1BFABFE700C46E6A /* PopStrokeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopStrokeController.h; sourceTree = "<group>"; };
 		104F0CC01BFABFE700C46E6A /* PopStrokeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopStrokeController.m; sourceTree = "<group>"; };
 		104F0CC31BFAC04300C46E6A /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
@@ -1737,6 +1752,7 @@
 				1011BA901CD4850300F29FB9 /* OffsetCellViewController */,
 				10E2D5021CD5D9AE00666EEB /* SystemFontInfoController */,
 				10E2D5161CD6474900666EEB /* iCarouselViewController */,
+				104CD2FD1CDAD46500C836E6 /* GridFlowLayoutViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1866,6 +1882,21 @@
 				1048F6F21C28D5B60052F1DD /* ScratchImageViewController.m */,
 			);
 			name = ScratchImageViewController;
+			sourceTree = "<group>";
+		};
+		104CD2FD1CDAD46500C836E6 /* GridFlowLayoutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				104CD2FA1CDAD41A00C836E6 /* GridFlowLayoutViewController.h */,
+				104CD2FB1CDAD41A00C836E6 /* GridFlowLayoutViewController.m */,
+				104CD3011CDAD4AE00C836E6 /* FlowStyleCell.h */,
+				104CD3021CDAD4AE00C836E6 /* FlowStyleCell.m */,
+				104CD3041CDAD4B700C836E6 /* GridLayout.h */,
+				104CD3051CDAD4B700C836E6 /* GridLayout.m */,
+				104CD3061CDAD4B700C836E6 /* GridManager.h */,
+				104CD3071CDAD4B700C836E6 /* GridManager.m */,
+			);
+			name = GridFlowLayoutViewController;
 			sourceTree = "<group>";
 		};
 		104F0CC21BFABFED00C46E6A /* PopStrokeController */ = {
@@ -2000,6 +2031,8 @@
 			children = (
 				102ED8741C3BFCCC00E9863E /* CustomCell.h */,
 				102ED8751C3BFCCC00E9863E /* CustomCell.m */,
+				104CD2FE1CDAD4A300C836E6 /* CustomCollectionViewCell.h */,
+				104CD2FF1CDAD4A300C836E6 /* CustomCollectionViewCell.m */,
 			);
 			name = CustomCell;
 			sourceTree = "<group>";
@@ -2663,6 +2696,7 @@
 				1011BAF11CD4959300F29FB9 /* NSData+CommonCrypto.m in Sources */,
 				109606291C93B47800CCB3AD /* NetworkingIndicator.m in Sources */,
 				10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */,
+				104CD3091CDAD4B700C836E6 /* GridManager.m in Sources */,
 				10E2D50E1CD5DE0400666EEB /* FontInfoModel.m in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
 				10381FD41BF9D8B300E5E476 /* FillCircleLayerConfigure.m in Sources */,
@@ -2695,6 +2729,7 @@
 				10381FC11BF9B55B00E5E476 /* TransformationMatrix.cpp in Sources */,
 				108A993C1C0FE34800B693F6 /* EasingRotateAnimationType.m in Sources */,
 				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
+				104CD3001CDAD4A300C836E6 /* CustomCollectionViewCell.m in Sources */,
 				109606521C93B4A300CCB3AD /* AFURLResponseSerialization.m in Sources */,
 				102B84D31C3B925B001699A9 /* MD5.m in Sources */,
 				102296B11C38D122001AF5BB /* ResponseData.m in Sources */,
@@ -2728,6 +2763,7 @@
 				102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */,
 				1011BB001CD495F200F29FB9 /* AES256EncryptMode.m in Sources */,
 				1011BAA11CD4898D00F29FB9 /* ProviderModel.m in Sources */,
+				104CD3081CDAD4B700C836E6 /* GridLayout.m in Sources */,
 				1017F1391C35715400E245F8 /* NSArray+JSONData.m in Sources */,
 				102A0FFA1C92727200BF3F1B /* NSData+Godzippa.m in Sources */,
 				1096061A1C93B46800CCB3AD /* RequestMethodType.m in Sources */,
@@ -2780,6 +2816,7 @@
 				105F3FEA1CB7B5DD007B02C7 /* ShowTextCell.m in Sources */,
 				104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */,
 				10CEC58C1C2153EB00B0CA7D /* FullTitleViewController.m in Sources */,
+				104CD2FC1CDAD41A00C836E6 /* GridFlowLayoutViewController.m in Sources */,
 				10381FBE1BF9B55B00E5E476 /* POPPropertyAnimation.mm in Sources */,
 				1011BB011CD495F200F29FB9 /* DESEncryptMode.m in Sources */,
 				102A0FFB1C92727200BF3F1B /* NSFileManager+Godzippa.m in Sources */,
@@ -2799,6 +2836,7 @@
 				105F3FE71CB7B3F1007B02C7 /* TapCellAnimationController.m in Sources */,
 				10A8482B1C795E0D00F9ED67 /* FLAnimatedImageView.m in Sources */,
 				10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */,
+				104CD3031CDAD4AE00C836E6 /* FlowStyleCell.m in Sources */,
 				106249981C2785630090AD65 /* EmitterSnowController.m in Sources */,
 				101EA3EE1C489C2E00D5D487 /* DateFormatter.m in Sources */,
 				102B1F2F1C60E66F00A8FD40 /* HashtagsModel.m in Sources */,
