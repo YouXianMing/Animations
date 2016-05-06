@@ -42,8 +42,8 @@
         
         InfiniteLoopViewBuilder *loopView = [[InfiniteLoopViewBuilder alloc] initWithFrame:CGRectMake(0, 0, Width, self.contentView.height / 2.f)];
         loopView.customCellClass    = [LoopViewCell class];
-        loopView.delegate           = self;
         loopView.nodeViewTemplate   = [CircleNodeStateView new];
+        loopView.delegate           = self;
         loopView.sampleNodeViewSize = CGSizeMake(8, 6);
         loopView.position           = kNodeViewBottomRight;
         loopView.edgeInsets         = UIEdgeInsetsMake(0, 0, 7, 5);
@@ -62,10 +62,12 @@
                              @"http://img.wdjimg.com/image/video/d160e33391a555127be999d1d6273a17_0_0.jpeg",
                              @"http://img.wdjimg.com/image/video/b8ff75ba333183e0fa92efc4a52ffda0_0_0.jpeg",
                              @"http://img.wdjimg.com/image/video/735e73eb85a47b5f2a661aa02ad1fed2_0_0.jpeg"];
+        
         NSArray *titles  = @[@"We call a custom helper",
                              @"The animation collection",
                              @"iOS design pattern",
                              @"A weather app"];
+        
         NSMutableArray *models = [NSMutableArray array];
         for (int i = 0; i < strings.count; i++) {
             
@@ -75,10 +77,10 @@
         InfiniteLoopViewBuilder *loopView = [[InfiniteLoopViewBuilder alloc] initWithFrame:CGRectMake(0, self.contentView.height / 2.f,
                                                                                                       Width, self.contentView.height / 2.f)];
         loopView.customCellClass    = [LoopTypeTwoCell class];
+        loopView.nodeViewTemplate   = [NodeStateView new];
         loopView.delegate           = self;
         loopView.scrollTimeInterval = 5.f;
         loopView.scrollDirection    = UICollectionViewScrollDirectionVertical;
-        loopView.nodeViewTemplate   = [NodeStateView new];
         loopView.sampleNodeViewSize = CGSizeMake(8, 20);
         loopView.position           = kNodeViewRightBottom;
         loopView.edgeInsets         = UIEdgeInsetsMake(0, 0, 2, 2);
