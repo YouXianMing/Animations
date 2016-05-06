@@ -63,6 +63,7 @@
 #import "SystemFontInfoController.h"
 #import "iCarouselViewController.h"
 #import "GridFlowLayoutViewController.h"
+#import "InfiniteLoopViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -177,7 +178,8 @@
                        [Item itemWithName:@"Cell图片视差动画" object:[OffsetCellViewController class]],
                        [Item itemWithName:@"系统字体列表" object:[SystemFontInfoController class]],
                        [Item itemWithName:@"旋转木马效果" object:[iCarouselViewController class]],
-                       [Item itemWithName:@"水平方向瀑布流" object:[GridFlowLayoutViewController class]]];
+                       [Item itemWithName:@"水平方向瀑布流" object:[GridFlowLayoutViewController class]],
+                       [Item itemWithName:@"无限轮播图" object:[InfiniteLoopViewController class]]];
     
     self.items = [NSMutableArray array];
     
