@@ -19,7 +19,7 @@
      最新编译无警告版本 Xcode Version 7.3 (7D175)
      
      QQ   705786299
-     邮箱  YouXianMing1987@iCloud.com
+     邮箱  YouXianMing1987@126.com
      博客  http://www.cnblogs.com/YouXianMing/
      源码  https://github.com/YouXianMing
      项目  https://github.com/YouXianMing/YoCelsius
