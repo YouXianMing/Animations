@@ -32,6 +32,7 @@
     liveImageView.center            = self.contentView.middlePoint;
     liveImageView.layer.borderWidth = 3.f;
     liveImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    liveImageView.duration = 0.5;
     [self.contentView addSubview:liveImageView];
     
     NSArray *pictureArray = @[[UIImage imageNamed:@"pic_1"],
@@ -43,10 +44,9 @@
     
     [_timer event:^{
         
+        liveImageView.image    = pictureArray[self.count++ % pictureArray.count];
         [UIView animateWithDuration:0.5 animations:^{
             
-            liveImageView.duration = 0.5;
-            liveImageView.image    = pictureArray[self.count++ % pictureArray.count];
             CGRect tmpRect         = liveImageView.bounds;
             tmpRect.size           = liveImageView.image.size;
             liveImageView.bounds   = tmpRect;
