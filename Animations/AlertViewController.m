@@ -19,7 +19,7 @@ typedef enum : NSUInteger {
     
 } EAlertViewControllerValue;
 
-@interface AlertViewController () <AbstractAlertViewDelegate>
+@interface AlertViewController () <AlertMessageViewDelegate>
 
 @end
 
@@ -58,7 +58,7 @@ typedef enum : NSUInteger {
     
     if (button.tag == kMessageAlertView) {
         
-        AbstractAlertView *alertView     = [[MessageAlertView alloc] init];
+        AbsAlertMessageView *alertView   = [[MessageAlertView alloc] init];
         alertView.message                = @"惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。";
         alertView.contentView            = self.contentView;
         alertView.autoHiden              = YES;
@@ -67,19 +67,19 @@ typedef enum : NSUInteger {
         
     } else if (button.tag == kButtonsAlertView) {
         
-        AbstractAlertView *showView = [ButtonsAlertView new];
-        showView.delegate         = self;
-        showView.contentView      = self.contentView;
-        showView.buttonsTitle     = @[@"继续", @"放弃"];
-        showView.message          = @"您的可用余额不足";
-        UIButton *button          = (UIButton *)[showView viewWithKey:@"secondButton"];
+        AbsAlertMessageView *showView = [ButtonsAlertView new];
+        showView.delegate             = self;
+        showView.contentView          = self.contentView;
+        showView.buttonsTitle         = @[@"继续", @"放弃"];
+        showView.message              = @"您的可用余额不足";
+        UIButton *button              = (UIButton *)[showView viewWithKey:@"secondButton"];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [showView show];
     }
 }
 
-- (void)alertView:(AbstractAlertView *)alertView data:(id)data atIndex:(NSInteger)index {
-    
+- (void)alertView:(AbsAlertMessageView *)alertView clickAtIndex:(NSInteger)index data:(id)data {
+
     [alertView hide];
 }
 

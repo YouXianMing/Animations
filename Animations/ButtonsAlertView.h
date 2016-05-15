@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "AbstractAlertView.h"
+#import "AbsAlertMessageView.h"
 
-@interface ButtonsAlertView : AbstractAlertView
+@interface ButtonsAlertView : AbsAlertMessageView
 
 @end

@@ -1,50 +1,64 @@
 //
-//  AbstractAlertView.h
-//  Animations
+//  AbsAlertMessageView.h
+//  TechCode
 //
-//  Created by YouXianMing on 16/1/2.
+//  Created by YouXianMing on 16/5/15.
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@class AbstractAlertView;
+#import <Foundation/Foundation.h>
+@class AbsAlertMessageView;
 
-@protocol AbstractAlertViewDelegate <NSObject>
+@protocol AlertMessageViewDelegate <NSObject>
 
 @optional
 
 /**
  *  The AlertView's event.
  *
- *  @param alertView The AlertViewProtocol object.
- *  @param event     Event data.
- *  @param index     Event index.
+ *  @param alertView The AbsAlertMessageView object.
+ *  @param index     Event data.
+ *  @param data      Event index.
  */
-- (void)alertView:(AbstractAlertView *)alertView data:(id)data atIndex:(NSInteger)index;
+- (void)alertView:(AbsAlertMessageView *)alertView clickAtIndex:(NSInteger)index data:(id)data;
+
+/**
+ *  The AlertView will show.
+ *
+ *  @param alertView The AbsAlertMessageView object.
+ */
+- (void)alertViewWillShow:(AbsAlertMessageView *)show;
+
+/**
+ *  The AlertView did show.
+ *
+ *  @param alertView The AbsAlertMessageView object.
+ */
+- (void)alertViewDidShow:(AbsAlertMessageView *)alertView;
 
 /**
  *  The AlertView will hide.
  *
- *  @param alertView The AlertViewProtocol object.
+ *  @param alertView The AbsAlertMessageView object.
  */
-- (void)alertViewWillHide:(AbstractAlertView *)alertView;
+- (void)alertViewWillHide:(AbsAlertMessageView *)alertView;
 
 /**
  *  The AlertView did hide.
  *
- *  @param alertView The AlertViewProtocol object.
+ *  @param alertView The AbsAlertMessageView object.
  */
-- (void)alertViewDidHide:(AbstractAlertView *)alertView;
+- (void)alertViewDidHide:(AbsAlertMessageView *)alertView;
 
 @end
 
-@interface AbstractAlertView : UIView
+@interface AbsAlertMessageView : UIView
 
 /**
  *  The AlertView event delegate.
  */
-@property (nonatomic, weak)   id <AbstractAlertViewDelegate> delegate;
+@property (nonatomic, weak)   id <AlertMessageViewDelegate> delegate;
 
 /**
  *  The title, default is nil.
@@ -62,9 +76,19 @@
 @property (nonatomic, strong) NSString  *message;
 
 /**
+ *  Customed Message, default is nil.
+ */
+@property (nonatomic, strong) id         customedMessage;
+
+/**
  *  Button's title array, default is nil.
  */
 @property (nonatomic, strong) NSArray   <NSString *>  *buttonsTitle;
+
+/**
+ *  Button's config array, default is nil.
+ */
+@property (nonatomic, strong) NSArray   *buttonsConfig;
 
 /**
  *  The contentView.

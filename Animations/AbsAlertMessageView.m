@@ -1,25 +1,24 @@
 //
-//  AbstractAlertView.m
-//  Animations
+//  AbsAlertMessageView.m
+//  TechCode
 //
-//  Created by YouXianMing on 16/1/2.
+//  Created by YouXianMing on 16/5/15.
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "AbstractAlertView.h"
+#import "AbsAlertMessageView.h"
 
-
-@interface AbstractAlertView ()
+@interface AbsAlertMessageView ()
 
 @property (nonatomic, strong) NSMapTable  *mapTable;
 
 @end
 
-@implementation AbstractAlertView
+@implementation AbsAlertMessageView
 
-- (instancetype)init {
+- (instancetype)initWithFrame:(CGRect)frame {
     
-    if (self = [super init]) {
+    if (self = [super initWithFrame:frame]) {
         
         self.delayAutoHidenDuration = 2.f;
         self.autoHiden              = NO;
@@ -42,13 +41,14 @@
 }
 
 - (void)setView:(UIView *)view withKey:(NSString *)key {
-
+    
     [self.mapTable setObject:view forKey:key];
 }
 
 - (UIView *)viewWithKey:(NSString *)key {
-
+    
     return [self.mapTable objectForKey:key];
 }
+
 
 @end

@@ -190,6 +190,7 @@
 		106249981C2785630090AD65 /* EmitterSnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106249971C2785630090AD65 /* EmitterSnowController.m */; };
 		10667E181C7F2CCA00B9AC08 /* SCViewShakerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E171C7F2CCA00B9AC08 /* SCViewShakerController.m */; };
 		10667E1D1C7F2CFB00B9AC08 /* UIView+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */; };
+		1067A8F81CE81BF5003FBF17 /* AbsAlertMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1067A8F71CE81BF5003FBF17 /* AbsAlertMessageView.m */; };
 		106BCFC01CDC672A007C3EEE /* InfiniteLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFBF1CDC672A007C3EEE /* InfiniteLoopViewController.m */; };
 		106BCFC81CDC6780007C3EEE /* InfiniteLoopViewBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFC71CDC6780007C3EEE /* InfiniteLoopViewBuilder.m */; };
 		106BCFCB1CDC6787007C3EEE /* CustomNodeStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFCA1CDC6787007C3EEE /* CustomNodeStateView.m */; };
@@ -201,7 +202,6 @@
 		106BCFDE1CDC77A6007C3EEE /* CircleNodeStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFDD1CDC77A6007C3EEE /* CircleNodeStateView.m */; };
 		106BCFE31CDC7EA3007C3EEE /* InfiniteLoopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFE21CDC7EA3007C3EEE /* InfiniteLoopModel.m */; };
 		106BCFE61CDC80CD007C3EEE /* LoopTypeTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFE51CDC80CD007C3EEE /* LoopTypeTwoCell.m */; };
-		106CF0861C375DAD0006419B /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0851C375DAD0006419B /* AbstractAlertView.m */; };
 		106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF08D1C3763E30006419B /* UIButton+inits.m */; };
 		106CF0921C3764090006419B /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0911C3764090006419B /* AlertViewController.m */; };
 		106CF0961C37650D0006419B /* MessageAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0951C37650D0006419B /* MessageAlertView.m */; };
@@ -703,6 +703,8 @@
 		10667E171C7F2CCA00B9AC08 /* SCViewShakerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCViewShakerController.m; sourceTree = "<group>"; };
 		10667E1B1C7F2CFB00B9AC08 /* UIView+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shake.h"; sourceTree = "<group>"; };
 		10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shake.m"; sourceTree = "<group>"; };
+		1067A8F61CE81BF5003FBF17 /* AbsAlertMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsAlertMessageView.h; sourceTree = "<group>"; };
+		1067A8F71CE81BF5003FBF17 /* AbsAlertMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsAlertMessageView.m; sourceTree = "<group>"; };
 		106BCFBE1CDC672A007C3EEE /* InfiniteLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteLoopViewController.h; sourceTree = "<group>"; };
 		106BCFBF1CDC672A007C3EEE /* InfiniteLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteLoopViewController.m; sourceTree = "<group>"; };
 		106BCFC61CDC6780007C3EEE /* InfiniteLoopViewBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteLoopViewBuilder.h; sourceTree = "<group>"; };
@@ -726,8 +728,6 @@
 		106BCFE21CDC7EA3007C3EEE /* InfiniteLoopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteLoopModel.m; sourceTree = "<group>"; };
 		106BCFE41CDC80CD007C3EEE /* LoopTypeTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopTypeTwoCell.h; sourceTree = "<group>"; };
 		106BCFE51CDC80CD007C3EEE /* LoopTypeTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopTypeTwoCell.m; sourceTree = "<group>"; };
-		106CF0841C375DAD0006419B /* AbstractAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
-		106CF0851C375DAD0006419B /* AbstractAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
 		106CF08C1C3763E30006419B /* UIButton+inits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+inits.h"; sourceTree = "<group>"; };
 		106CF08D1C3763E30006419B /* UIButton+inits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+inits.m"; sourceTree = "<group>"; };
 		106CF0901C3764090006419B /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
@@ -2204,8 +2204,8 @@
 		106CF0871C375F010006419B /* AbstractAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				106CF0841C375DAD0006419B /* AbstractAlertView.h */,
-				106CF0851C375DAD0006419B /* AbstractAlertView.m */,
+				1067A8F61CE81BF5003FBF17 /* AbsAlertMessageView.h */,
+				1067A8F71CE81BF5003FBF17 /* AbsAlertMessageView.m */,
 			);
 			name = AbstractAlertView;
 			sourceTree = "<group>";
@@ -2706,6 +2706,7 @@
 			files = (
 				10C1830E1C622D1E000C10EB /* LoadUrlDataCell.m in Sources */,
 				1011BAF51CD495A800F29FB9 /* FastCoder.m in Sources */,
+				1067A8F81CE81BF5003FBF17 /* AbsAlertMessageView.m in Sources */,
 				10A848251C795DE400F9ED67 /* GifPictureController.m in Sources */,
 				1096061C1C93B46800CCB3AD /* ResponseDataType.m in Sources */,
 				10CEC5861C21321800B0CA7D /* NormalTitleViewController.m in Sources */,
@@ -2822,7 +2823,6 @@
 				104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */,
 				104326611C4B16310033CEC0 /* ColorProgressView.m in Sources */,
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
-				106CF0861C375DAD0006419B /* AbstractAlertView.m in Sources */,
 				104326641C4B172F0033CEC0 /* ProgressColor.m in Sources */,
 				109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */,
 				10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */,

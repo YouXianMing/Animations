@@ -193,9 +193,9 @@
 
 - (void)messageButtonsEvent:(UIButton *)button {
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(alertView:data:atIndex:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(alertView:clickAtIndex:data:)]) {
         
-        [self.delegate alertView:self data:nil atIndex:button.tag];
+        [self.delegate alertView:self clickAtIndex:button.tag data:nil];
     }
 }
 

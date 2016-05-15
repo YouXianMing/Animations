@@ -143,7 +143,7 @@
         
     } else {
         
-        AbstractAlertView *alertView     = [[MessageAlertView alloc] init];
+        AbsAlertMessageView *alertView   = [[MessageAlertView alloc] init];
         alertView.message                = @"No data now.";
         alertView.contentView            = self.contentView;
         alertView.autoHiden              = YES;
@@ -155,7 +155,7 @@
 - (void)requestFailed:(Networking *)networking error:(NSError *)error {
     
     [self.showLoadingView hide];
-    AbstractAlertView *alertView     = [[MessageAlertView alloc] init];
+    AbsAlertMessageView *alertView   = [[MessageAlertView alloc] init];
     alertView.message                = @"Network error.";
     alertView.contentView            = self.contentView;
     alertView.autoHiden              = YES;

@@ -147,7 +147,7 @@
 - (void)requestFailed:(AbsNetworking *)networking error:(NSError *)error {
     
     [self.showLoadingView hide];
-    AbstractAlertView *alertView     = [[MessageAlertView alloc] init];
+    AbsAlertMessageView *alertView   = [[MessageAlertView alloc] init];
     alertView.message                = @"Network error.";
     alertView.contentView            = self.loadingView;
     alertView.autoHiden              = YES;
