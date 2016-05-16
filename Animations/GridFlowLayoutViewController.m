@@ -39,7 +39,7 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
     
     // 初始化布局文件
     CGFloat gap               = 1;
-    NSInteger rowCount        = arc4random() % 3 + 2;
+    NSInteger rowCount        = arc4random() % 5 + 1;
     _rowHeight                = (self.contentView.height - (rowCount + 1) * gap) / (CGFloat)rowCount;
     GridLayout *layout        = [GridLayout new];
     layout.manager.edgeInsets = UIEdgeInsetsMake(gap, gap, gap, gap);
