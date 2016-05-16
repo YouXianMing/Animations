@@ -66,6 +66,34 @@
     return button;
 }
 
+- (void)setHighlightedImage:(UIImage *)image {
+    
+    [self setImage:image forState:UIControlStateHighlighted];
+}
 
+- (UIImage *)highlightedImage {
+    
+    return [self imageForState:UIControlStateHighlighted];
+}
+
+- (void)setSelectedImage:(UIImage *)image {
+    
+    [self setImage:image forState:UIControlStateSelected];
+}
+
+- (UIImage *)selectedImage {
+    
+    return [self imageForState:UIControlStateSelected];
+}
+
+- (void)setNormalImage:(UIImage *)image {
+    
+    [self setImage:image forState:UIControlStateNormal];
+}
+
+- (UIImage *)normalImage {
+    
+    return [self imageForState:UIControlStateNormal];
+}
 
 @end

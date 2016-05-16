@@ -40,9 +40,10 @@
 
 - (void)setup {
 
-    self.width                = [UIScreen mainScreen].bounds.size.width;
-    self.height               = [UIScreen mainScreen].bounds.size.height;
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.width                                = [UIScreen mainScreen].bounds.size.width;
+    self.height                               = [UIScreen mainScreen].bounds.size.height;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.view.backgroundColor                 = [UIColor whiteColor];
 }
 
 - (void)useInteractivePopGestureRecognizer {
