@@ -27,3 +27,7 @@
 @implementation PostMethod
 
 @end
+
+@implementation UploadMethod
+
+@end

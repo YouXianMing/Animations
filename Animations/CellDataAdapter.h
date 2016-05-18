@@ -22,7 +22,7 @@
 @property (nonatomic, strong) id            data;
 
 /**
- *  Cell's height.
+ *  Cell's height, only used for UITableView's cell.
  */
 @property (nonatomic)         CGFloat       cellHeight;
 
@@ -32,7 +32,7 @@
 @property (nonatomic)         NSInteger     cellType;
 
 /**
- *  CellDataAdapter's convenient method.
+ *  CellDataAdapter's convenient method, used for UITableView.
  *
  *  @param cellReuseIdentifiers Cell's reused identifier.
  *  @param data                 Data, can be nil.
@@ -46,16 +46,34 @@
                                                  cellHeight:(CGFloat)cellHeight
                                                    cellType:(NSInteger)cellType;
 
+/**
+ *  CellDataAdapter's convenient method, used for UICollectionView.
+ *
+ *  @param cellReuseIdentifiers Cell's reused identifier.
+ *  @param data                 Data, can be nil.
+ *  @param cellType             Cell's type (The same cell, but maybe have different types).
+ *
+ *  @return CellDataAdapter's object.
+ */
++ (CellDataAdapter *)collectionCellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers
+                                                                 data:(id)data
+                                                             cellType:(NSInteger)cellType;
+
 #pragma mark - Optional properties.
 
 /**
  *  The tableView.
  */
-@property (nonatomic, weak)   UITableView  *tableView;
+@property (nonatomic, weak)   UITableView       *tableView;
+
+/**
+ *  The collectionView.
+ */
+@property (nonatomic, weak)   UICollectionView  *collectionView;
 
 /**
  *  TableView's indexPath.
  */
-@property (nonatomic, weak)   NSIndexPath  *indexPath;
+@property (nonatomic, weak)   NSIndexPath       *indexPath;
 
 @end

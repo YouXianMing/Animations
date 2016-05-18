@@ -15,6 +15,9 @@
 
 @class AbsNetworking;
 
+typedef void (^ConstructingBodyBlock)(id formData);
+typedef void (^UploadProgressBlock)(NSProgress *uploadProgress);
+
 @protocol AbsNetworkingDelegate <NSObject>
 
 /**
@@ -94,6 +97,16 @@
  */
 @property (nonatomic, strong)   AbsResponseDataSerializer       *responseDataSerializer;
 
+/**
+ *  构造上传数据的block
+ */
+@property (nonatomic, copy)     ConstructingBodyBlock  constructingBodyBlock;
+
+/**
+ *  检测下载进度的block
+ */
+@property (nonatomic, copy)     UploadProgressBlock    uploadProgressBlock;
+
 #pragma mark - 运行时候的参数
 
 /**
@@ -166,5 +179,24 @@
                        requestParameter:(id)requestParameter
                         requestBodyType:(RequestBodyType *)requestBodyType
                        responseDataType:(ResponseDataType *)responseDataType;
+
+/**
+ *  上传文件的请求
+ *
+ *  @param URLString        网址
+ *  @param parameters       请求参数（字典或者数组）
+ *  @param requestBodyType  请求包体类型
+ *  @param responseDataType 回复数据类型
+ *  @param block            组合上传数据的block
+ *  @param uploadProgress   上传进度
+ *
+ *  @return Networking对象
+ */
++ (id)uploadMethodNetworkingWithUrlString:(NSString *)urlString
+                         requestParameter:(id)parameters
+                          requestBodyType:(RequestBodyType *)requestBodyType
+                         responseDataType:(ResponseDataType *)responseDataType
+                constructingBodyWithBlock:(ConstructingBodyBlock)constructingBodyBlock
+                                 progress:(UploadProgressBlock)uploadProgressBlock;
 
 @end

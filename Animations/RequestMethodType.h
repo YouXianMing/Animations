@@ -23,3 +23,7 @@
 @interface PostMethod : RequestMethodType
 
 @end
+
+@interface UploadMethod : RequestMethodType
+
+@end

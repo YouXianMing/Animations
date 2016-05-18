@@ -66,4 +66,17 @@
     return nil;
 }
 
++ (id)uploadMethodNetworkingWithUrlString:(NSString *)urlString
+                         requestParameter:(id)parameters
+                          requestBodyType:(RequestBodyType *)requestBodyType
+                         responseDataType:(ResponseDataType *)responseDataType
+                constructingBodyWithBlock:(ConstructingBodyBlock)constructingBodyBlock
+                                 progress:(UploadProgressBlock)uploadProgressBlock {
+    
+    [NSException raise:@"Networking uploadMethodNetworkingWithUrlString:requestParameter:requestBodyType:responseDataType:constructingBodyWithBlock:progress:"
+                format:@"You must override this method."];
+    
+    return nil;
+}
+
 @end

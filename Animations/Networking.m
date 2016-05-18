@@ -45,6 +45,10 @@
     } else if ([self.method isKindOfClass:[PostMethod class]]) {
         
         [self accessPostRequest];
+        
+    } else if ([self.method isKindOfClass:[UploadMethod class]]) {
+        
+        [self accessUploadRequest];
     }
     
     [self safetySetKey:@"absoluteString"         object:self.dataTask.currentRequest.URL.absoluteString];
@@ -108,6 +112,37 @@
     self.dataTask = [self.session POST:self.urlString
                             parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
                               progress:nil
+                               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                   
+                                   weakSelf.isRunning              = NO;
+                                   weakSelf.originalResponseData   = responseObject;
+                                   weakSelf.serializerResponseData = [weakSelf.responseDataSerializer serializeResponseData:responseObject];
+                                   
+                                   if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(requestSucess:data:)]) {
+                                       
+                                       [weakSelf.delegate requestSucess:weakSelf data:weakSelf.serializerResponseData];
+                                   }
+                                   
+                               } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                   
+                                   weakSelf.isRunning = NO;
+                                   
+                                   if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(requestFailed:error:)]) {
+                                       
+                                       [weakSelf.delegate requestFailed:weakSelf error:error];
+                                   }
+                               }];
+}
+
+- (void)accessUploadRequest {
+    
+    self.isRunning              = YES;
+    __weak Networking *weakSelf = self;
+    
+    self.dataTask = [self.session POST:self.urlString
+                            parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
+             constructingBodyWithBlock:weakSelf.constructingBodyBlock
+                              progress:weakSelf.uploadProgressBlock
                                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                    
                                    weakSelf.isRunning              = NO;
@@ -214,6 +249,8 @@
     }
 }
 
+#pragma mark - 便利构造器
+
 + (id)getMethodNetworkingWithUrlString:(NSString *)urlString
                       requestParameter:(id)requestParameter
                        requestBodyType:(RequestBodyType *)requestBodyType
@@ -245,6 +282,33 @@
     networking.urlString        = urlString;
     networking.requestParameter = requestParameter;
     networking.method            = [PostMethod type];
+    
+    if (requestBodyType) {
+        
+        networking.requestBodyType = requestBodyType;
+    }
+    
+    if (responseDataType) {
+        
+        networking.responseDataType = responseDataType;
+    }
+    
+    return networking;
+}
+
++ (id)uploadMethodNetworkingWithUrlString:(NSString *)urlString
+                         requestParameter:(id)requestParameter
+                          requestBodyType:(RequestBodyType *)requestBodyType
+                         responseDataType:(ResponseDataType *)responseDataType
+                constructingBodyWithBlock:(AFNetworkingConstructingBodyBlock)constructingBodyBlock
+                                 progress:(UploadProgressBlock)uploadProgressBlock {
+    
+    Networking *networking           = [[Networking alloc] init];
+    networking.urlString             = urlString;
+    networking.requestParameter      = requestParameter;
+    networking.method                = [UploadMethod type];
+    networking.constructingBodyBlock = constructingBodyBlock;
+    networking.uploadProgressBlock   = uploadProgressBlock;
     
     if (requestBodyType) {
         

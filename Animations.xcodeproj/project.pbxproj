@@ -135,6 +135,8 @@
 		10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FDA1BF9DE6E00E5E476 /* GCDQueue.m */; };
 		10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FDC1BF9DE6E00E5E476 /* GCDSemaphore.m */; };
 		10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FDE1BF9DE6E00E5E476 /* GCDTimer.m */; };
+		1041AE6A1CEC44DB005697B8 /* UIView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1041AE691CEC44DB005697B8 /* UIView+ConvenientMethod.m */; };
+		1041AE6D1CEC4507005697B8 /* CustomCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1041AE6C1CEC4507005697B8 /* CustomCollectionCell.m */; };
 		104228C31C3694B10011409C /* SDWebImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C21C3694B10011409C /* SDWebImageController.m */; };
 		104228C61C3695230011409C /* PictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C51C3695230011409C /* PictureModel.m */; };
 		104228C91C36956C0011409C /* PictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C81C36956C0011409C /* PictureCell.m */; };
@@ -588,6 +590,10 @@
 		10381FDC1BF9DE6E00E5E476 /* GCDSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDSemaphore.m; sourceTree = "<group>"; };
 		10381FDD1BF9DE6E00E5E476 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
 		10381FDE1BF9DE6E00E5E476 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
+		1041AE681CEC44DB005697B8 /* UIView+ConvenientMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ConvenientMethod.h"; sourceTree = "<group>"; };
+		1041AE691CEC44DB005697B8 /* UIView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ConvenientMethod.m"; sourceTree = "<group>"; };
+		1041AE6B1CEC4507005697B8 /* CustomCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionCell.h; sourceTree = "<group>"; };
+		1041AE6C1CEC4507005697B8 /* CustomCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionCell.m; sourceTree = "<group>"; };
 		104228C11C3694B10011409C /* SDWebImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageController.h; sourceTree = "<group>"; };
 		104228C21C3694B10011409C /* SDWebImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageController.m; sourceTree = "<group>"; };
 		104228C41C3695230011409C /* PictureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureModel.h; sourceTree = "<group>"; };
@@ -1795,6 +1801,8 @@
 				10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */,
 				1020E2E21C7422B600FF233E /* UIView+AnimationPracticalMethod.h */,
 				1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */,
+				1041AE681CEC44DB005697B8 /* UIView+ConvenientMethod.h */,
+				1041AE691CEC44DB005697B8 /* UIView+ConvenientMethod.m */,
 			);
 			name = "UIView+Category";
 			sourceTree = "<group>";
@@ -2055,6 +2063,8 @@
 			children = (
 				102ED8741C3BFCCC00E9863E /* CustomCell.h */,
 				102ED8751C3BFCCC00E9863E /* CustomCell.m */,
+				1041AE6B1CEC4507005697B8 /* CustomCollectionCell.h */,
+				1041AE6C1CEC4507005697B8 /* CustomCollectionCell.m */,
 				104CD2FE1CDAD4A300C836E6 /* CustomCollectionViewCell.h */,
 				104CD2FF1CDAD4A300C836E6 /* CustomCollectionViewCell.m */,
 			);
@@ -2770,6 +2780,7 @@
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				1096061E1C93B46800CCB3AD /* AbsResponseDataSerializer.m in Sources */,
+				1041AE6A1CEC44DB005697B8 /* UIView+ConvenientMethod.m in Sources */,
 				1047E23E1CC5AF8400E13D1C /* LazyFadeInView.m in Sources */,
 				10E2D5121CD63EDF00666EEB /* iCarousel.m in Sources */,
 				10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */,
@@ -2820,6 +2831,7 @@
 				109606521C93B4A300CCB3AD /* AFURLResponseSerialization.m in Sources */,
 				102B84D31C3B925B001699A9 /* MD5.m in Sources */,
 				106BCFE61CDC80CD007C3EEE /* LoopTypeTwoCell.m in Sources */,
+				1041AE6D1CEC4507005697B8 /* CustomCollectionCell.m in Sources */,
 				102296B11C38D122001AF5BB /* ResponseData.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */,
