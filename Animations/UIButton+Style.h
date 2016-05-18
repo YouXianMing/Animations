@@ -72,4 +72,30 @@
              highlightedTitleColor:(UIColor *)highlightedStateColor
                 disabledTitleColor:(UIColor *)disabledStateColor;
 
+/**
+ *  Create icon button.
+ *
+ *  @param frame               Frame.
+ *  @param horizontalAlignment HorizontalAlignment.
+ *  @param verticalAlignment   VerticalAlignment.
+ *  @param contentEdgeInsets   ContentEdgeInsets
+ *  @param target              Target.
+ *  @param action              Action.
+ *  @param normalImage         NormalImage.
+ *  @param highlightImage      HighlightImage.
+ *  @param disabledImage       DisabledImage.
+ *
+ *  @return button.
+ */
++ (UIButton *)iconButtonWithFrame:(CGRect)frame
+              horizontalAlignment:(UIControlContentHorizontalAlignment)horizontalAlignment
+                verticalAlignment:(UIControlContentVerticalAlignment)verticalAlignment
+                contentEdgeInsets:(UIEdgeInsets)contentEdgeInsets
+                           target:(id)target
+                           action:(SEL)action
+                      normalImage:(UIImage *)normalImage
+                   highlightImage:(UIImage *)highlightImage
+                    disabledImage:(UIImage *)disabledImage;
+;
+
 @end

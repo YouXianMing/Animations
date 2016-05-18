@@ -100,6 +100,43 @@
     return button;
 }
 
++ (UIButton *)iconButtonWithFrame:(CGRect)frame
+              horizontalAlignment:(UIControlContentHorizontalAlignment)horizontalAlignment
+                verticalAlignment:(UIControlContentVerticalAlignment)verticalAlignment
+                contentEdgeInsets:(UIEdgeInsets)contentEdgeInsets
+                           target:(id)target
+                           action:(SEL)action
+                      normalImage:(UIImage *)normalImage
+                   highlightImage:(UIImage *)highlightImage
+                    disabledImage:(UIImage *)disabledImage {
+
+    UIButton *button = [[UIButton alloc] initWithFrame:frame];
+    
+    button.contentHorizontalAlignment = horizontalAlignment;
+    button.contentVerticalAlignment   = verticalAlignment;
+    button.contentEdgeInsets          = contentEdgeInsets;
+    
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    if (normalImage) {
+        
+        [button setImage:normalImage forState:UIControlStateNormal];
+    }
+    
+    if (highlightImage) {
+        
+        [button setImage:highlightImage forState:UIControlStateHighlighted];
+    }
+    
+    if (disabledImage) {
+        
+        [button setImage:highlightImage forState:UIControlStateDisabled];
+    }
+    
+    return button;
+}
+
+
 #pragma mark - Private method.
 
 - (UIImage *)imageWithSize:(CGSize)size color:(UIColor *)color {

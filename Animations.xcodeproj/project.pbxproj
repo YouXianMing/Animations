@@ -1014,15 +1014,6 @@
 			name = POPSpringParameterController;
 			sourceTree = "<group>";
 		};
-		1011BA561CD40C2C00F29FB9 /* UIView+UserInteraction */ = {
-			isa = PBXGroup;
-			children = (
-				1011BA531CD40C2900F29FB9 /* UIView+UserInteraction.h */,
-				1011BA541CD40C2900F29FB9 /* UIView+UserInteraction.m */,
-			);
-			name = "UIView+UserInteraction";
-			sourceTree = "<group>";
-		};
 		1011BA901CD4850300F29FB9 /* OffsetCellViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1142,32 +1133,30 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1041AE4C1CEBFE24005697B8 /* NSString+Category */,
+				1041AE4B1CEBFDD7005697B8 /* CALayer+Category */,
+				102B852C1C3CF18C001699A9 /* UIImage+Category */,
+				1041AE4A1CEBFD9D005697B8 /* UIView+Category */,
+				106CF09A1C3765490006419B /* UIFont+Categories */,
+				106CF08F1C3763E60006419B /* UIButton+Categories */,
 				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
 				106BCFC21CDC6740007C3EEE /* InfiniteLoopView */,
 				10E2D50F1CD63EDF00666EEB /* iCarousel */,
 				1011BAE81CD4957400F29FB9 /* ValueStorageManager */,
-				1011BA561CD40C2C00F29FB9 /* UIView+UserInteraction */,
 				1047E2351CC5AF8400E13D1C /* LazyFadeInView */,
 				10B0DDF31CBA82F90089DF1E /* JSAnimatedImagesView */,
 				102A0FF41C92725400BF3F1B /* NSData+GZip */,
-				10667E1A1C7F2CE300B9AC08 /* UIView+Shake */,
-				1020E2E51C7422CF00FF233E /* UIView+AnimationPracticalMethod */,
 				1020E2D01C73196D00FF233E /* CAGradientView */,
-				10A34F631C55AC9200E1A0E0 /* LabelWidthAndHeight */,
 				102B85011C3C9FBF001699A9 /* NumberFormatter */,
 				101EA3EB1C489C1400D5D487 /* DateFormatter */,
 				1047D0F31C465758009ADED6 /* InfiniteRotationView */,
 				102B85841C3CF28A001699A9 /* Networking */,
-				102B852C1C3CF18C001699A9 /* UIImage+Category */,
 				102B84DB1C3B95E8001699A9 /* FileManager */,
 				102B84DA1C3B9521001699A9 /* MD5 */,
 				102296C21C392B0F001AF5BB /* LineBackgroundView */,
 				102296B31C38D343001AF5BB /* CHTCollectionViewWaterfallLayout */,
 				1022969D1C38CF79001AF5BB /* CreateModel */,
 				106CF09E1C376E080006419B /* HexColor */,
-				106CF09A1C3765490006419B /* UIFont+Categories */,
-				106CF08F1C3763E60006419B /* UIButton+Categories */,
-				104228CE1C36A24F0011409C /* AnimationProperty */,
 				1017F1301C35714800E245F8 /* JSONKit */,
 				1017F0FB1C356EE700E245F8 /* SDWebImage */,
 				1048F6EA1C28D56B0052F1DD /* MDScratchImageView */,
@@ -1179,8 +1168,6 @@
 				104F0D091BFAFB5400C46E6A /* CGContextObject */,
 				10381FD51BF9DE6E00E5E476 /* GCD */,
 				10381F7B1BF9B55B00E5E476 /* POP */,
-				103088711C03FB4D00C8B623 /* SetRect */,
-				103088701C03FACE00C8B623 /* Glow */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -1267,15 +1254,6 @@
 				1020E2D91C731AA500FF233E /* CAGradientMaskView.m */,
 			);
 			name = CAGradientViewController;
-			sourceTree = "<group>";
-		};
-		1020E2E51C7422CF00FF233E /* UIView+AnimationPracticalMethod */ = {
-			isa = PBXGroup;
-			children = (
-				1020E2E21C7422B600FF233E /* UIView+AnimationPracticalMethod.h */,
-				1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */,
-			);
-			name = "UIView+AnimationPracticalMethod";
 			sourceTree = "<group>";
 		};
 		1020E3351C75975700FF233E /* MotionEffectViewController */ = {
@@ -1524,26 +1502,6 @@
 				103088691C03F1A000C8B623 /* YXEasing.m */,
 			);
 			name = Easing;
-			sourceTree = "<group>";
-		};
-		103088701C03FACE00C8B623 /* Glow */ = {
-			isa = PBXGroup;
-			children = (
-				104F0D101BFB1BB800C46E6A /* UIView+GlowView.h */,
-				104F0D111BFB1BB800C46E6A /* UIView+GlowView.m */,
-			);
-			name = Glow;
-			sourceTree = "<group>";
-		};
-		103088711C03FB4D00C8B623 /* SetRect */ = {
-			isa = PBXGroup;
-			children = (
-				104F0D0D1BFB006C00C46E6A /* UIView+SetRect.h */,
-				104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */,
-				109ECD5C1C3D3F1400290307 /* CALayer+SetRect.h */,
-				109ECD5D1C3D3F1500290307 /* CALayer+SetRect.m */,
-			);
-			name = SetRect;
 			sourceTree = "<group>";
 		};
 		103088741C0412CE00C8B623 /* ScrollImageViewController */ = {
@@ -1822,6 +1780,45 @@
 			path = GCD;
 			sourceTree = "<group>";
 		};
+		1041AE4A1CEBFD9D005697B8 /* UIView+Category */ = {
+			isa = PBXGroup;
+			children = (
+				1011BA531CD40C2900F29FB9 /* UIView+UserInteraction.h */,
+				1011BA541CD40C2900F29FB9 /* UIView+UserInteraction.m */,
+				104228CB1C369E7C0011409C /* UIView+AnimationProperty.h */,
+				104228CC1C369E7C0011409C /* UIView+AnimationProperty.m */,
+				104F0D101BFB1BB800C46E6A /* UIView+GlowView.h */,
+				104F0D111BFB1BB800C46E6A /* UIView+GlowView.m */,
+				104F0D0D1BFB006C00C46E6A /* UIView+SetRect.h */,
+				104F0D0E1BFB006C00C46E6A /* UIView+SetRect.m */,
+				10667E1B1C7F2CFB00B9AC08 /* UIView+Shake.h */,
+				10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */,
+				1020E2E21C7422B600FF233E /* UIView+AnimationPracticalMethod.h */,
+				1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */,
+			);
+			name = "UIView+Category";
+			sourceTree = "<group>";
+		};
+		1041AE4B1CEBFDD7005697B8 /* CALayer+Category */ = {
+			isa = PBXGroup;
+			children = (
+				109ECD5C1C3D3F1400290307 /* CALayer+SetRect.h */,
+				109ECD5D1C3D3F1500290307 /* CALayer+SetRect.m */,
+			);
+			name = "CALayer+Category";
+			sourceTree = "<group>";
+		};
+		1041AE4C1CEBFE24005697B8 /* NSString+Category */ = {
+			isa = PBXGroup;
+			children = (
+				10A34F641C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.h */,
+				10A34F651C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m */,
+				10A34F671C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.h */,
+				10A34F681C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.m */,
+			);
+			name = "NSString+Category";
+			sourceTree = "<group>";
+		};
 		104228CA1C369BB80011409C /* SDWebImageController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1833,15 +1830,6 @@
 				104228C51C3695230011409C /* PictureModel.m */,
 			);
 			name = SDWebImageController;
-			sourceTree = "<group>";
-		};
-		104228CE1C36A24F0011409C /* AnimationProperty */ = {
-			isa = PBXGroup;
-			children = (
-				104228CB1C369E7C0011409C /* UIView+AnimationProperty.h */,
-				104228CC1C369E7C0011409C /* UIView+AnimationProperty.m */,
-			);
-			name = AnimationProperty;
 			sourceTree = "<group>";
 		};
 		1043265E1C4B15A70033CEC0 /* ColorProgressViewController */ = {
@@ -2113,15 +2101,6 @@
 				10667E171C7F2CCA00B9AC08 /* SCViewShakerController.m */,
 			);
 			name = SCViewShakerController;
-			sourceTree = "<group>";
-		};
-		10667E1A1C7F2CE300B9AC08 /* UIView+Shake */ = {
-			isa = PBXGroup;
-			children = (
-				10667E1B1C7F2CFB00B9AC08 /* UIView+Shake.h */,
-				10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */,
-			);
-			name = "UIView+Shake";
 			sourceTree = "<group>";
 		};
 		106BCFC11CDC672F007C3EEE /* InfiniteLoopViewController */ = {
@@ -2413,17 +2392,6 @@
 				109ECD591C3D3B1900290307 /* PageFlipEffectController.m */,
 			);
 			name = PageFlipEffectController;
-			sourceTree = "<group>";
-		};
-		10A34F631C55AC9200E1A0E0 /* LabelWidthAndHeight */ = {
-			isa = PBXGroup;
-			children = (
-				10A34F641C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.h */,
-				10A34F651C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m */,
-				10A34F671C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.h */,
-				10A34F681C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.m */,
-			);
-			name = LabelWidthAndHeight;
 			sourceTree = "<group>";
 		};
 		10A34F6A1C55AE8F00E1A0E0 /* SignMaker */ = {
