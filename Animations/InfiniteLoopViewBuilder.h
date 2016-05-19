@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NodeStateView.h"
+#import "CustomNodeStateView.h"
 #import "UIView+SetRect.h"
 #import "InfiniteLoopViewProtocol.h"
 @class InfiniteLoopViewBuilder;
