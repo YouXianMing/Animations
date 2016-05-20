@@ -270,6 +270,7 @@
 		10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0DDF81CBA831C0089DF1E /* MSWeakTimer.m */; };
 		10B0DDFC1CBA84400089DF1E /* AttributedStringInitConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0DDFB1CBA84400089DF1E /* AttributedStringInitConfig.m */; };
 		10B0DDFF1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0DDFE1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m */; };
+		10B345151CEE9BAD00BFC15B /* PhoneCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B345141CEE9BAD00BFC15B /* PhoneCall.m */; };
 		10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3CE1C953E5B007E8254 /* ScrollViewAnimationController.m */; };
 		10B6F3D31C953FEA007E8254 /* ScrollComputingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3D21C953FEA007E8254 /* ScrollComputingValue.m */; };
 		10B6F3D61C954749007E8254 /* ScrollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3D51C954749007E8254 /* ScrollTitleView.m */; };
@@ -871,6 +872,8 @@
 		10B0DDFB1CBA84400089DF1E /* AttributedStringInitConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedStringInitConfig.m; sourceTree = "<group>"; };
 		10B0DDFD1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AttributedStringInitConfig+Constructor.h"; sourceTree = "<group>"; };
 		10B0DDFE1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AttributedStringInitConfig+Constructor.m"; sourceTree = "<group>"; };
+		10B345131CEE9BAD00BFC15B /* PhoneCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneCall.h; sourceTree = "<group>"; };
+		10B345141CEE9BAD00BFC15B /* PhoneCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneCall.m; sourceTree = "<group>"; };
 		10B6F3CD1C953E5B007E8254 /* ScrollViewAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewAnimationController.h; sourceTree = "<group>"; };
 		10B6F3CE1C953E5B007E8254 /* ScrollViewAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewAnimationController.m; sourceTree = "<group>"; };
 		10B6F3D11C953FEA007E8254 /* ScrollComputingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollComputingValue.h; sourceTree = "<group>"; };
@@ -1149,6 +1152,7 @@
 				106CF09A1C3765490006419B /* UIFont+Categories */,
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
 				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
+				10B345161CEE9BB700BFC15B /* PhoneCall */,
 				106BCFC21CDC6740007C3EEE /* InfiniteLoopView */,
 				10E2D50F1CD63EDF00666EEB /* iCarousel */,
 				1011BAE81CD4957400F29FB9 /* ValueStorageManager */,
@@ -2487,6 +2491,15 @@
 			name = JSAnimatedImagesView;
 			sourceTree = "<group>";
 		};
+		10B345161CEE9BB700BFC15B /* PhoneCall */ = {
+			isa = PBXGroup;
+			children = (
+				10B345131CEE9BAD00BFC15B /* PhoneCall.h */,
+				10B345141CEE9BAD00BFC15B /* PhoneCall.m */,
+			);
+			name = PhoneCall;
+			sourceTree = "<group>";
+		};
 		10B6F3D01C953E61007E8254 /* ScrollViewAnimationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2911,6 +2924,7 @@
 				10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */,
 				102296B21C38D122001AF5BB /* WaterfallPictureModel.m in Sources */,
 				106BCFC01CDC672A007C3EEE /* InfiniteLoopViewController.m in Sources */,
+				10B345151CEE9BAD00BFC15B /* PhoneCall.m in Sources */,
 				100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */,
 				109606501C93B4A300CCB3AD /* AFSecurityPolicy.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
