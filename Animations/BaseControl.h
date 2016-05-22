@@ -29,6 +29,11 @@
  */
 @property (nonatomic, weak) id <BaseControlDelegate>  delegate;
 
+/**
+ *  按钮
+ */
+@property (nonatomic, strong, readonly) UIButton *button;
+
 #pragma mark - 以下方法需要子类重载
 
 /**

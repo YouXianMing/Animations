@@ -69,7 +69,7 @@
     [_button addTarget:self action:@selector(scaleAnimations) forControlEvents:UIControlEventTouchUpInside];
     
     // 按住按钮后拖拽出去的动画
-    [_button addTarget:self action:@selector(scaleToDefault) forControlEvents:UIControlEventTouchDragExit];
+    [_button addTarget:self action:@selector(scaleToDefault) forControlEvents:UIControlEventTouchDragExit | UIControlEventTouchCancel];
     
     // 圆环1
     {
