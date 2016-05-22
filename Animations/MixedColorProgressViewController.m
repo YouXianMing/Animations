@@ -80,12 +80,13 @@
     [self.contentView bringSubviewToFront:_upView];
     
     // 给上面一层的frame值做动画
-    _timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
+    __weak typeof(self) weakSelf = self;
+    _timer                       = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [_timer event:^{
         
         [UIView animateWithDuration:0.5f delay:0.f usingSpringWithDamping:3.f initialSpringVelocity:0 options:0 animations:^{
             
-            _upView.width = arc4random() % 220;
+            weakSelf.upView.width = arc4random() % 220;
             
         } completion:nil];
         

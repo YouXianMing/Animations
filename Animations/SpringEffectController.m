@@ -90,4 +90,10 @@
     self.shapeLayer.path = [self calculatePathWithPoint:layer.position].CGPath;
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+
+    [self.displayLink invalidate];
+    [super viewDidDisappear:animated];
+}
+
 @end

@@ -73,40 +73,46 @@
     [self.pathView.layer addSublayer:self.lineShapeLayer];
     
     // timer
+    __weak typeof(self) weakSelf = self;
     self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [self.timer event:^{
         
-        // path animation.
-        UIBezierPath *newPath            = [self randomPath];
-        CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
-        basicAnimation.duration          = 0.5;
-        basicAnimation.fromValue         = (__bridge id)(self.lineShapeLayer.path);
-        basicAnimation.toValue           = (__bridge id)newPath.CGPath;
-        self.lineShapeLayer.path         = newPath.CGPath;
-        self.fillShapeLayer.path         = newPath.CGPath;
-        [self.lineShapeLayer addAnimation:basicAnimation forKey:@"lineShapeLayerPath"];
-        [self.fillShapeLayer addAnimation:basicAnimation forKey:@"fillShapeLayerPath"];
-        
-        // fillColor animation.
-        UIColor *newColor                = [self randomColor];
-        CABasicAnimation *colorAnimation = [CABasicAnimation animationWithKeyPath:@"fillColor"];
-        colorAnimation.duration          = 0.5;
-        colorAnimation.fromValue         = (__bridge id)(self.fillShapeLayer.fillColor);
-        colorAnimation.toValue           = (__bridge id)newColor.CGColor;
-        self.fillShapeLayer.fillColor    = newColor.CGColor;
-        [self.fillShapeLayer addAnimation:colorAnimation forKey:@"fillShapeLayerColor"];
-        
-        // path animation.
-        CGPoint newPoint                    = CGPointMake(self.A.x + 10, self.A.y + 10);
-        CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-        positionAnimation.duration          = 0.5f;
-        positionAnimation.fromValue         = [NSValue valueWithCGPoint:self.pointA.position];
-        positionAnimation.toValue           = [NSValue valueWithCGPoint:newPoint];
-        self.pointA.position                = newPoint;
-        [self.pointA addAnimation:positionAnimation forKey:@"positionAnimation"];
+        [weakSelf timerEvent];
         
     } timeIntervalWithSecs:1.f];
     [self.timer start];
+}
+
+- (void)timerEvent {
+
+    // path animation.
+    UIBezierPath *newPath            = [self randomPath];
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
+    basicAnimation.duration          = 0.5;
+    basicAnimation.fromValue         = (__bridge id)(self.lineShapeLayer.path);
+    basicAnimation.toValue           = (__bridge id)newPath.CGPath;
+    self.lineShapeLayer.path         = newPath.CGPath;
+    self.fillShapeLayer.path         = newPath.CGPath;
+    [self.lineShapeLayer addAnimation:basicAnimation forKey:@"lineShapeLayerPath"];
+    [self.fillShapeLayer addAnimation:basicAnimation forKey:@"fillShapeLayerPath"];
+    
+    // fillColor animation.
+    UIColor *newColor                = [self randomColor];
+    CABasicAnimation *colorAnimation = [CABasicAnimation animationWithKeyPath:@"fillColor"];
+    colorAnimation.duration          = 0.5;
+    colorAnimation.fromValue         = (__bridge id)(self.fillShapeLayer.fillColor);
+    colorAnimation.toValue           = (__bridge id)newColor.CGColor;
+    self.fillShapeLayer.fillColor    = newColor.CGColor;
+    [self.fillShapeLayer addAnimation:colorAnimation forKey:@"fillShapeLayerColor"];
+    
+    // path animation.
+    CGPoint newPoint                    = CGPointMake(self.A.x + 10, self.A.y + 10);
+    CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    positionAnimation.duration          = 0.5f;
+    positionAnimation.fromValue         = [NSValue valueWithCGPoint:self.pointA.position];
+    positionAnimation.toValue           = [NSValue valueWithCGPoint:newPoint];
+    self.pointA.position                = newPoint;
+    [self.pointA addAnimation:positionAnimation forKey:@"positionAnimation"];
 }
 
 - (UIBezierPath *)randomPath {

@@ -11,6 +11,23 @@
 @interface CustomViewController : UIViewController
 
 /**
+ *  Set the view whose tag matches the specified value.
+ *
+ *  @param view      View.
+ *  @param tagString String.
+ */
+- (void)setView:(UIView *)view withTagString:(NSString *)tagString;
+
+/**
+ *  Get the view from the tagString.
+ *
+ *  @param tagString String.
+ *
+ *  @return view.
+ */
+- (id)viewWithTagSting:(NSString *)tagString;
+
+/**
  *  Screen's width.
  */
 @property (nonatomic) CGFloat  width;

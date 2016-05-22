@@ -55,30 +55,36 @@ typedef enum : NSUInteger {
     [self.tranformFadeViewTwo fadeAnimated:NO];
     
     // timer
+    __weak typeof(self) weakSelf = self;
     self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [self.timer event:^{
         
-        if (self.type == kTypeOne) {
-            
-            self.type = kTypeTwo;
-            
-            [self.contentView sendSubviewToBack:self.tranformFadeViewTwo];
-            self.tranformFadeViewTwo.image = [self currentImage];
-            [self.tranformFadeViewTwo showAnimated:NO];
-            [self.tranformFadeViewOne fadeAnimated:YES];
-            
-        } else {
-            
-            self.type = kTypeOne;
-            
-            [self.contentView sendSubviewToBack:self.tranformFadeViewOne];
-            self.tranformFadeViewOne.image = [self currentImage];
-            [self.tranformFadeViewOne showAnimated:NO];
-            [self.tranformFadeViewTwo fadeAnimated:YES];
-        }
+        [weakSelf timerEvent];
         
     } timeIntervalWithSecs:6 delaySecs:1.f];
     [self.timer start];
+}
+
+- (void)timerEvent {
+
+    if (self.type == kTypeOne) {
+        
+        self.type = kTypeTwo;
+        
+        [self.contentView sendSubviewToBack:self.tranformFadeViewTwo];
+        self.tranformFadeViewTwo.image = [self currentImage];
+        [self.tranformFadeViewTwo showAnimated:NO];
+        [self.tranformFadeViewOne fadeAnimated:YES];
+        
+    } else {
+        
+        self.type = kTypeOne;
+        
+        [self.contentView sendSubviewToBack:self.tranformFadeViewOne];
+        self.tranformFadeViewOne.image = [self currentImage];
+        [self.tranformFadeViewOne showAnimated:NO];
+        [self.tranformFadeViewTwo fadeAnimated:YES];
+    }
 }
 
 - (UIImage *)currentImage {

@@ -46,18 +46,19 @@
 - (void)timerEvent {
 
     // Timer event.
-    self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
+    __weak typeof(self) weakSelf = self;
+    self.timer                   = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [self.timer event:^{
         
-        if (self.transformState == NO) {
+        if (weakSelf.transformState == NO) {
             
-            self.transformState = YES;
-            [self transformStateEvent];
+            weakSelf.transformState = YES;
+            [weakSelf transformStateEvent];
             
         } else {
             
-            self.transformState = NO;
-            [self normalStateEvent];
+            weakSelf.transformState = NO;
+            [weakSelf normalStateEvent];
         }
         
     } timeIntervalWithSecs:2.f delaySecs:1.f];

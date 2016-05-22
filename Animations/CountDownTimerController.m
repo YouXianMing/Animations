@@ -121,4 +121,10 @@
     tmpCell.display     = NO;
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+
+    [self.timer invalidate];
+    [super viewDidDisappear:animated];
+}
+
 @end

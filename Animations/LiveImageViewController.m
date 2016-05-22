@@ -40,17 +40,17 @@
                               [UIImage imageNamed:@"pic_3"],
                               [UIImage imageNamed:@"pic_4"]];
     
-    _timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
-    
+    __weak typeof(self) weakSelf = self;
+    _timer                       = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [_timer event:^{
         
-        liveImageView.image    = pictureArray[self.count++ % pictureArray.count];
+        liveImageView.image    = pictureArray[weakSelf.count++ % pictureArray.count];
         [UIView animateWithDuration:0.5 animations:^{
             
             CGRect tmpRect         = liveImageView.bounds;
             tmpRect.size           = liveImageView.image.size;
             liveImageView.bounds   = tmpRect;
-            liveImageView.center   = self.view.center;
+            liveImageView.center   = weakSelf.view.center;
         }];
         
     } timeInterval:NSEC_PER_SEC * 1];

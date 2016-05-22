@@ -45,4 +45,10 @@
     [self.drawLineView setNeedsDisplay];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+
+    [self.displayLink invalidate];
+    [super viewDidDisappear:animated];
+}
+
 @end

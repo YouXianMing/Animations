@@ -46,13 +46,14 @@
         [self.contentView addSubview:self.redColorProgressView];
     }
     
-    self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
+    __weak typeof(self) weakSelf = self;
+    self.timer                   = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [self.timer event:^{
         
         [UIView animateWithDuration:0.5f delay:0 usingSpringWithDamping:2 initialSpringVelocity:0 options:0 animations:^{
             
-            self.normalColorProgressView.progress = arc4random() % 101 / 100.f;
-            self.redColorProgressView.progress    = arc4random() % 101 / 100.f;
+            weakSelf.normalColorProgressView.progress = arc4random() % 101 / 100.f;
+            weakSelf.redColorProgressView.progress    = arc4random() % 101 / 100.f;
             
         } completion:nil];
         

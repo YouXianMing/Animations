@@ -41,6 +41,7 @@
     
     _timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
 
+    __weak typeof(self) weakSelf = self;
     [_timer event:^{
         
         CGFloat value1 = arc4random() % 101 / 100.f;
@@ -55,11 +56,11 @@
         strokeAnimationStart.springBounciness    = 12.f;
         
         POPBasicAnimation *strokeAnimationColor  = [POPBasicAnimation animationWithPropertyNamed:kPOPShapeLayerStrokeColor];
-        strokeAnimationColor.toValue             = (__bridge id)([self randomColor].CGColor);
+        strokeAnimationColor.toValue             = (__bridge id)([weakSelf randomColor].CGColor);
         
-        [self.circleShape pop_addAnimation:strokeAnimationEnd forKey:@"layerStrokeAnimation"];
-        [self.circleShape pop_addAnimation:strokeAnimationStart forKey:@"layerStrokeAnimation1"];
-        [self.circleShape pop_addAnimation:strokeAnimationColor forKey:@"layerStrokeAnimation2"];
+        [weakSelf.circleShape pop_addAnimation:strokeAnimationEnd forKey:@"layerStrokeAnimation"];
+        [weakSelf.circleShape pop_addAnimation:strokeAnimationStart forKey:@"layerStrokeAnimation1"];
+        [weakSelf.circleShape pop_addAnimation:strokeAnimationColor forKey:@"layerStrokeAnimation2"];
         
     } timeIntervalWithSecs:1];
     

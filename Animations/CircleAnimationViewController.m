@@ -83,6 +83,7 @@
     [self.circleView4 buildView];
     imageView.layer.mask = self.circleView4.layer;
 
+    __weak typeof(self) weakSelf = self;
     self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [self.timer event:^{
         
@@ -90,22 +91,22 @@
         CGFloat anotherPercent = arc4random() % 100 / 100.f;
         
         // 圆圈1动画
-        [self.circleView1 strokeEnd:percent animationType:ElasticEaseInOut animated:YES duration:1.f];
+        [weakSelf.circleView1 strokeEnd:percent animationType:ElasticEaseInOut animated:YES duration:1.f];
         
         // 圆圈2动画
-        [self.circleView2 strokeEnd:percent animationType:ExponentialEaseInOut animated:YES duration:1.f];
+        [weakSelf.circleView2 strokeEnd:percent animationType:ExponentialEaseInOut animated:YES duration:1.f];
         
         // 圆圈3动画
-        [self.circleView3 strokeStart:(percent < anotherPercent ? percent : anotherPercent)
+        [weakSelf.circleView3 strokeStart:(percent < anotherPercent ? percent : anotherPercent)
                         animationType:ExponentialEaseInOut
                              animated:YES duration:1.f];
         
-        [self.circleView3 strokeEnd:(percent < anotherPercent ? anotherPercent : percent)
+        [weakSelf.circleView3 strokeEnd:(percent < anotherPercent ? anotherPercent : percent)
                       animationType:ExponentialEaseInOut
                            animated:YES duration:1.f];
         
         // 圆圈4动画
-        [self.circleView4 strokeEnd:percent animationType:ExponentialEaseOut animated:YES duration:1.f];
+        [weakSelf.circleView4 strokeEnd:percent animationType:ExponentialEaseOut animated:YES duration:1.f];
         
     } timeIntervalWithSecs:1.5f];
     
