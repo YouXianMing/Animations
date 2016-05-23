@@ -17,6 +17,11 @@
 @property (nonatomic, strong) NSString *content;
 
 /**
+ *  The full content range.
+ */
+@property (nonatomic, readonly) NSRange contentRange;
+
+/**
  *  Part of the content.
  */
 @property (nonatomic, strong, readonly) NSMutableDictionary <NSString *, NSString *>  *parts;

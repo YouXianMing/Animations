@@ -11,6 +11,7 @@
 @interface StringRangeManager ()
 
 @property (nonatomic, strong) NSMutableDictionary <NSString *, NSString *>  *parts;
+@property (nonatomic)         NSRange contentRange;
 
 @end
 
@@ -19,7 +20,7 @@
 - (instancetype)init {
     
     if (self = [super init]) {
-    
+        
         self.parts = [NSMutableDictionary dictionary];
     }
     
@@ -27,7 +28,7 @@
 }
 
 - (NSArray *)rangesFromPartName:(NSString *)partName options:(NSStringCompareOptions)mask {
-
+    
     NSParameterAssert(partName);
     
     NSArray  *array = nil;
@@ -42,12 +43,17 @@
 }
 
 + (instancetype)stringRangeManagerWithContent:(NSString *)content parts:(NSDictionary *)parts {
-
+    
     StringRangeManager *manager = [[[self class] alloc] init];
     manager.content             = content;
     manager.parts               = [NSMutableDictionary dictionaryWithDictionary:parts];
     
     return manager;
+}
+
+- (NSRange)contentRange {
+    
+    return NSMakeRange(0, _content.length);
 }
 
 @end
