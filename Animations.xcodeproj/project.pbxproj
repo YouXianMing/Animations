@@ -183,6 +183,8 @@
 		10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10589D221C2393C200F20BC0 /* FBShimmeringLayer.m */; };
 		10589D261C2393C200F20BC0 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10589D241C2393C200F20BC0 /* FBShimmeringView.m */; };
 		1059EB351CF0504D00B7A4B0 /* UITextField+UsefulMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059EB341CF0504D00B7A4B0 /* UITextField+UsefulMethod.m */; };
+		1059F3A31CF4015200F63810 /* GridCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059F3A01CF4015200F63810 /* GridCollectionView.m */; };
+		1059F3A41CF4015200F63810 /* GridCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059F3A21CF4015200F63810 /* GridCollectionViewCell.m */; };
 		105AFB4B1CF18CEF003DD84A /* NSString+Range.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AFB4A1CF18CEF003DD84A /* NSString+Range.m */; };
 		105AFB4F1CF18D04003DD84A /* StringRangeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AFB4E1CF18D04003DD84A /* StringRangeManager.m */; };
 		105AFBBF1CF1F1F5003DD84A /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AFBBE1CF1F1F5003DD84A /* CustomButton.m */; };
@@ -697,6 +699,10 @@
 		10589D241C2393C200F20BC0 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
 		1059EB331CF0504D00B7A4B0 /* UITextField+UsefulMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+UsefulMethod.h"; sourceTree = "<group>"; };
 		1059EB341CF0504D00B7A4B0 /* UITextField+UsefulMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+UsefulMethod.m"; sourceTree = "<group>"; };
+		1059F39F1CF4015200F63810 /* GridCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCollectionView.h; sourceTree = "<group>"; };
+		1059F3A01CF4015200F63810 /* GridCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCollectionView.m; sourceTree = "<group>"; };
+		1059F3A11CF4015200F63810 /* GridCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCollectionViewCell.h; sourceTree = "<group>"; };
+		1059F3A21CF4015200F63810 /* GridCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCollectionViewCell.m; sourceTree = "<group>"; };
 		105AFB491CF18CEF003DD84A /* NSString+Range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Range.h"; sourceTree = "<group>"; };
 		105AFB4A1CF18CEF003DD84A /* NSString+Range.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Range.m"; sourceTree = "<group>"; };
 		105AFB4D1CF18D04003DD84A /* StringRangeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringRangeManager.h; sourceTree = "<group>"; };
@@ -1168,6 +1174,7 @@
 				106CF09A1C3765490006419B /* UIFont+Categories */,
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
 				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
+				1059F39E1CF4014700F63810 /* GridCollectionView */,
 				10B345161CEE9BB700BFC15B /* PhoneCall */,
 				106BCFC21CDC6740007C3EEE /* InfiniteLoopView */,
 				10E2D50F1CD63EDF00666EEB /* iCarousel */,
@@ -2094,6 +2101,17 @@
 			name = "UITextField+Category";
 			sourceTree = "<group>";
 		};
+		1059F39E1CF4014700F63810 /* GridCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1059F39F1CF4015200F63810 /* GridCollectionView.h */,
+				1059F3A01CF4015200F63810 /* GridCollectionView.m */,
+				1059F3A11CF4015200F63810 /* GridCollectionViewCell.h */,
+				1059F3A21CF4015200F63810 /* GridCollectionViewCell.m */,
+			);
+			name = GridCollectionView;
+			sourceTree = "<group>";
+		};
 		105AFB4C1CF18CF5003DD84A /* StringRangeManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -2949,6 +2967,7 @@
 				1096062A1C93B47800CCB3AD /* NetworkingReachability.m in Sources */,
 				10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
+				1059F3A41CF4015200F63810 /* GridCollectionViewCell.m in Sources */,
 				10B0DDF61CBA83050089DF1E /* JSAnimatedImagesView.m in Sources */,
 				106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */,
 				109606551C93B4A300CCB3AD /* AFImageDownloader.m in Sources */,
@@ -2976,6 +2995,7 @@
 				10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */,
 				10B0DDFC1CBA84400089DF1E /* AttributedStringInitConfig.m in Sources */,
 				10B6F3D61C954749007E8254 /* ScrollTitleView.m in Sources */,
+				1059F3A31CF4015200F63810 /* GridCollectionView.m in Sources */,
 				102B1F2D1C60E66F00A8FD40 /* DescriptionModel.m in Sources */,
 				B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */,
 				1047E2341CC5AF5400E13D1C /* LazyFadeInViewController.m in Sources */,
