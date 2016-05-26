@@ -26,11 +26,13 @@
     
     [super layoutSubviews];
     
-    self.button.frame           = self.bounds;
-    self.normalLabel.frame      = self.bounds;
-    self.highlightedLabel.frame = self.bounds;
-    self.backgroundView.frame   = self.bounds;
-    self.backgroundView.frame   = self.bounds;
+    CGRect rect = CGRectMake(0, 0, self.frame.size.width, self.frame.size.width);
+    
+    self.button.frame           = rect;
+    self.normalLabel.frame      = rect;
+    self.highlightedLabel.frame = rect;
+    self.backgroundView.frame   = rect;
+    self.backgroundView.frame   = rect;
     
     [self setVerticalOffset:_verticalOffset];
     [self setHorizontalOffset:_horizontalOffset];

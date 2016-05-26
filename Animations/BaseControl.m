@@ -35,7 +35,7 @@
 
 - (void)baseControlSetup {
     
-    _button = [[UIButton alloc] initWithFrame:self.bounds];
+    _button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [self addSubview:_button];
     
     // 开始点击
@@ -67,6 +67,14 @@
     [NSException raise:NSInternalInconsistencyException
                 format:@"对不起,您不能直接调用 '%@ %d' 中的方法 '%@',您需要通过继承其子类,在子类中重载该方法",
      [NSString stringWithUTF8String:__FILE__].lastPathComponent, __LINE__, NSStringFromSelector(_cmd)];
+}
+
+#pragma mark - setter & getter.
+
+- (void)setEnabled:(BOOL)enabled {
+    
+    _enabled        = enabled;
+    _button.enabled = enabled;
 }
 
 @end

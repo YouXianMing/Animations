@@ -34,6 +34,11 @@
  */
 @property (nonatomic, strong, readonly) UIButton *button;
 
+/**
+ *  是否有效
+ */
+@property (nonatomic) BOOL     enabled;
+
 #pragma mark - 以下方法需要子类重载
 
 /**
