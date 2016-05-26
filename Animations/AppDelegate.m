@@ -31,13 +31,11 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    AnimationsListViewController *animationsListViewController = [AnimationsListViewController new];
-    CustomNavigationController   *navigationController         = \
-        [[CustomNavigationController alloc] initWithRootViewController:animationsListViewController setNavigationBarHidden:YES];
-    
+    AnimationsListViewController *viewController       = [AnimationsListViewController new];
+    CustomNavigationController   *navigationController = [[CustomNavigationController alloc] initWithRootViewController:viewController
+                                                                                                 setNavigationBarHidden:YES];
     self.window.rootViewController = navigationController;
     self.window.backgroundColor    = [UIColor whiteColor];
-    self.window.tintColor          = [UIColor colorWithRed:0.203  green:0.598  blue:0.859 alpha:1];
     [self.window makeKeyAndVisible];
         
     return YES;

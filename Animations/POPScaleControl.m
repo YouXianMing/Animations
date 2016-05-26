@@ -103,7 +103,6 @@
 
 - (void)currentScalePercent:(CGFloat)percent {
     
-    NSLog(@"%f", percent);
 }
 
 - (void)controllEventActived {

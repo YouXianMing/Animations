@@ -73,7 +73,6 @@
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         [self.target performSelector:self.selector withObject:self];
 #pragma clang diagnostic pop
-        
     }
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(POPBaseControlEvent:)]) {
