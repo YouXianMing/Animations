@@ -10,6 +10,7 @@
 		100148C91C43D53D006D9153 /* BezierPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100148C81C43D53D006D9153 /* BezierPathViewController.m */; };
 		100252C51CBC778B00722169 /* ReplicatorLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100252C41CBC778B00722169 /* ReplicatorLineViewController.m */; };
 		100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 100252C81CBC780100722169 /* ReplicatorLineAnimationView.m */; };
+		10059F521CF5BB88005B08E1 /* PressControll.m in Sources */ = {isa = PBXBuildFile; fileRef = 10059F511CF5BB88005B08E1 /* PressControll.m */; };
 		100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100BFAE81C2392F5008C5523 /* ShimmerController.m */; };
 		1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */; };
 		1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DD1C0AA639004CFBCE /* POPSpringParameterController.m */; };
@@ -335,6 +336,8 @@
 		100252C41CBC778B00722169 /* ReplicatorLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLineViewController.m; sourceTree = "<group>"; };
 		100252C71CBC780100722169 /* ReplicatorLineAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplicatorLineAnimationView.h; sourceTree = "<group>"; };
 		100252C81CBC780100722169 /* ReplicatorLineAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLineAnimationView.m; sourceTree = "<group>"; };
+		10059F501CF5BB88005B08E1 /* PressControll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PressControll.h; sourceTree = "<group>"; };
+		10059F511CF5BB88005B08E1 /* PressControll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressControll.m; sourceTree = "<group>"; };
 		100BFAE71C2392F5008C5523 /* ShimmerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShimmerController.h; sourceTree = "<group>"; };
 		100BFAE81C2392F5008C5523 /* ShimmerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShimmerController.m; sourceTree = "<group>"; };
 		1010C6D91C0A9DA0004CFBCE /* RangeValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeValueView.h; sourceTree = "<group>"; };
@@ -1870,6 +1873,8 @@
 				105AFBBE1CF1F1F5003DD84A /* CustomButton.m */,
 				105AFBC01CF1F222003DD84A /* POPControll.h */,
 				105AFBC11CF1F222003DD84A /* POPControll.m */,
+				10059F501CF5BB88005B08E1 /* PressControll.h */,
+				10059F511CF5BB88005B08E1 /* PressControll.m */,
 			);
 			name = BaseControl;
 			sourceTree = "<group>";
@@ -2959,6 +2964,7 @@
 				1096061A1C93B46800CCB3AD /* RequestMethodType.m in Sources */,
 				102B84D91C3B9424001699A9 /* NSString+MD5.m in Sources */,
 				102B1F301C60E66F00A8FD40 /* LinksModel.m in Sources */,
+				10059F521CF5BB88005B08E1 /* PressControll.m in Sources */,
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
 				106BCFD91CDC67CC007C3EEE /* LoopViewCell.m in Sources */,
 				1011BADD1CD48C8D00F29FB9 /* NodeModelRootNavigationController.m in Sources */,

@@ -10,7 +10,7 @@
 
 @implementation NSString (Range)
 
-- (NSArray *)rangesOfString:(NSString *)searchString options:(NSStringCompareOptions)mask serachRange:(NSRange)range {
+- (NSArray <NSValue *> *)rangesOfString:(NSString *)searchString options:(NSStringCompareOptions)mask serachRange:(NSRange)range {
 
     NSMutableArray *array = [NSMutableArray array];
     [self rangeOfString:searchString range:NSMakeRange(0, self.length) array:array options:mask];
@@ -27,7 +27,7 @@
     
     if (range.location != NSNotFound) {
         
-        [array addObject:NSStringFromRange(range)];
+        [array addObject:[NSValue valueWithRange:range]];
         [self rangeOfString:searchString
                       range:NSMakeRange(range.location + range.length, self.length - (range.location + range.length))
                       array:array

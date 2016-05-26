@@ -16,16 +16,19 @@
 #import "Math.h"
 #import "GCD.h"
 #import "UIFont+Fonts.h"
+#import "StringRangeManager.h"
+#import "StringAttributeHelper.h"
 
 @interface ButtonPressViewController ()
 
-@property (nonatomic, strong) Math              *math;
-@property (nonatomic, strong) UIButton          *button;
-@property (nonatomic, strong) UILabel           *label;
-@property (nonatomic, strong) CAShapeLayer      *circleShape1;
-@property (nonatomic, strong) CAShapeLayer      *circleShape2;
-@property (nonatomic, strong) UIImageView       *normalImageView;
-@property (nonatomic, strong) UIImageView       *blurImageView;
+@property (nonatomic, strong) Math               *math;
+@property (nonatomic, strong) UIButton           *button;
+@property (nonatomic, strong) UILabel            *label;
+@property (nonatomic, strong) CAShapeLayer       *circleShape1;
+@property (nonatomic, strong) CAShapeLayer       *circleShape2;
+@property (nonatomic, strong) UIImageView        *normalImageView;
+@property (nonatomic, strong) UIImageView        *blurImageView;
+@property (nonatomic, strong) StringRangeManager *rangeManager;
 
 @end
 
@@ -55,11 +58,46 @@
     _button.backgroundColor    = [UIColor whiteColor];
     _button.center             = self.contentView.middlePoint;
     [self.contentView addSubview:_button];
+
+    // 创建富文本
+    self.rangeManager                   = [StringRangeManager new];
+    self.rangeManager.content           = @"0%";
+    self.rangeManager.parts[@"percent"] = @"%";
+    NSMutableAttributedString *richString = [[NSMutableAttributedString alloc] initWithString:self.rangeManager.content];
     
-    self.label               = [[UILabel alloc] initWithFrame:_button.bounds];
-    self.label.font          = [UIFont HYQiHeiWithFontSize:30.f];
-    self.label.textAlignment = NSTextAlignmentCenter;
-    self.label.text          = @"0%";
+    {
+        ForegroundColorAttribute *attribute = [ForegroundColorAttribute new];
+        attribute.color                     = [UIColor blackColor];
+        attribute.effectRange               = self.rangeManager.contentRange;
+        [richString addStringAttribute:attribute];
+    }
+    
+    {
+        ForegroundColorAttribute *attribute = [ForegroundColorAttribute new];
+        attribute.color                     = [[UIColor redColor] colorWithAlphaComponent:0.5f];
+        attribute.effectRange               = [[self.rangeManager rangesFromPartName:@"percent" options:0].firstObject rangeValue];
+        [richString addStringAttribute:attribute];
+    }
+    
+    {
+        FontAttribute *attribute = [FontAttribute new];
+        attribute.font           = [UIFont HYQiHeiWithFontSize:30.f];
+        attribute.effectRange    = self.rangeManager.contentRange;
+        [richString addStringAttribute:attribute];
+    }
+    
+    {
+        FontAttribute *attribute = [FontAttribute new];
+        attribute.font           = [UIFont fontWithName:@"GillSans-LightItalic" size:14.f];
+        attribute.effectRange    = [[self.rangeManager rangesFromPartName:@"percent" options:0].firstObject rangeValue];
+        [richString addStringAttribute:attribute];
+    }
+
+    // 创建百分比标签
+    self.label                = [[UILabel alloc] initWithFrame:_button.bounds];
+    self.label.font           = [UIFont HYQiHeiWithFontSize:30.f];
+    self.label.textAlignment  = NSTextAlignmentCenter;
+    self.label.attributedText = richString;
     [self.button addSubview:self.label];
     
     // 按住按钮后没有松手的动画
@@ -68,7 +106,7 @@
     // 按住按钮松手后的动画
     [_button addTarget:self action:@selector(scaleAnimations) forControlEvents:UIControlEventTouchUpInside];
     
-    // 按住按钮后拖拽出去的动画
+    // 按住按钮后拖拽出去的动画或者取消的动画
     [_button addTarget:self action:@selector(scaleToDefault) forControlEvents:UIControlEventTouchDragExit | UIControlEventTouchCancel];
     
     // 圆环1
@@ -135,7 +173,7 @@
     [_button.layer pop_addAnimation:backgroundColor forKey:nil];
 }
 
-- (void)scaleToDefault{
+- (void)scaleToDefault {
     
     [_button.layer pop_removeAllAnimations];
     
@@ -180,10 +218,39 @@
     _circleShape2.strokeEnd = percent;
     [CATransaction setDisableActions:NO];
     
-    UIColor *color       = [UIColor colorWithRed:percent green:percent blue:percent alpha:1.f];
-    double showValue     = fabs(percent * 100);
-    self.label.text      = [NSString stringWithFormat:@"%.f%%", showValue];
-    self.label.textColor = color;
+    self.rangeManager.content           = [NSString stringWithFormat:@"%.f%%", fabs(percent * 100)];
+    self.rangeManager.parts[@"percent"] = @"%";
+    NSMutableAttributedString *richString = [[NSMutableAttributedString alloc] initWithString:self.rangeManager.content];
+    
+    {
+        ForegroundColorAttribute *attribute = [ForegroundColorAttribute new];
+        attribute.color                     = [UIColor colorWithRed:percent green:percent blue:percent alpha:1.f];
+        attribute.effectRange               = self.rangeManager.contentRange;
+        [richString addStringAttribute:attribute];
+    }
+    
+    {
+        ForegroundColorAttribute *attribute = [ForegroundColorAttribute new];
+        attribute.color                     = [[UIColor redColor] colorWithAlphaComponent:0.5f];
+        attribute.effectRange               = [[self.rangeManager rangesFromPartName:@"percent" options:0].firstObject rangeValue];
+        [richString addStringAttribute:attribute];
+    }
+    
+    {
+        FontAttribute *attribute = [FontAttribute new];
+        attribute.font           = [UIFont HYQiHeiWithFontSize:30.f];
+        attribute.effectRange    = self.rangeManager.contentRange;
+        [richString addStringAttribute:attribute];
+    }
+    
+    {
+        FontAttribute *attribute = [FontAttribute new];
+        attribute.font           = [UIFont fontWithName:@"GillSans-LightItalic" size:14.f];
+        attribute.effectRange    = [[self.rangeManager rangesFromPartName:@"percent" options:0].firstObject rangeValue];
+        [richString addStringAttribute:attribute];
+    }
+    
+    self.label.attributedText = richString;
     
     _blurImageView.alpha = 1 - percent;
 }

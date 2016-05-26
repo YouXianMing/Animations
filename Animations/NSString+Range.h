@@ -19,6 +19,6 @@
  *
  *  @return Ranges.
  */
-- (NSArray *)rangesOfString:(NSString *)searchString options:(NSStringCompareOptions)mask serachRange:(NSRange)range;
+- (NSArray <NSValue *> *)rangesOfString:(NSString *)searchString options:(NSStringCompareOptions)mask serachRange:(NSRange)range;
 
 @end
