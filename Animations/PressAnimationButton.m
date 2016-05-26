@@ -63,7 +63,7 @@
         
         // 按住按钮后拖拽出去的动画
         [self.button addTarget:self action:@selector(buttonTouchDragExit)
-              forControlEvents:UIControlEventTouchDragExit];
+              forControlEvents:UIControlEventTouchDragExit | UIControlEventTouchCancel];
     }
 }
 
