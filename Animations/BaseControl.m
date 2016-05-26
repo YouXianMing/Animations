@@ -10,6 +10,7 @@
 
 @interface BaseControl ()
 
+@property (nonatomic, strong) UIView   *contentView;
 @property (nonatomic, strong) UIButton *button;
 
 @end
@@ -20,7 +21,8 @@
 
     [super layoutSubviews];
     
-    _button.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    _button.frame      = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    _contentView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -35,46 +37,71 @@
 
 - (void)baseControlSetup {
     
+    _contentView                        = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    _contentView.userInteractionEnabled = YES;
+    [self addSubview:_contentView];
+    
     _button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [self addSubview:_button];
     
     // 开始点击
-    [_button addTarget:self action:@selector(touchBegin) forControlEvents:UIControlEventTouchDown | UIControlEventTouchDragEnter];
+    [_button addTarget:self action:@selector(touchBeginOrTouchDragEnter) forControlEvents:UIControlEventTouchDown | UIControlEventTouchDragEnter];
     
     // 拖拽到rect外面
-    [_button addTarget:self action:@selector(touchDragExit) forControlEvents:UIControlEventTouchDragExit | UIControlEventTouchCancel];
+    [_button addTarget:self action:@selector(touchDragExitOrTouchCancel) forControlEvents:UIControlEventTouchDragExit | UIControlEventTouchCancel];
     
     // 触发事件
-    [_button addTarget:self action:@selector(touchEvent) forControlEvents:UIControlEventTouchUpInside];
+    [_button addTarget:self action:@selector(touchUpInside) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)touchEvent {
+- (void)touchUpInside {
     
-    [NSException raise:NSInternalInconsistencyException
-                format:@"对不起,您不能直接调用 '%@ %d' 中的方法 '%@',您需要通过继承其子类,在子类中重载该方法",
-     [NSString stringWithUTF8String:__FILE__].lastPathComponent, __LINE__, NSStringFromSelector(_cmd)];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(baseControlTouchEvent:)]) {
+        
+        [self.delegate baseControlTouchEvent:self];
+    }
+    
+    if (self.target && self.selector) {
+        
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [self.target performSelector:self.selector withObject:self];
+#pragma clang diagnostic pop
+    }
 }
 
-- (void)touchDragExit {
+- (void)touchDragExitOrTouchCancel {
     
-    [NSException raise:NSInternalInconsistencyException
-                format:@"对不起,您不能直接调用 '%@ %d' 中的方法 '%@',您需要通过继承其子类,在子类中重载该方法",
-     [NSString stringWithUTF8String:__FILE__].lastPathComponent, __LINE__, NSStringFromSelector(_cmd)];
 }
 
-- (void)touchBegin {
+- (void)touchBeginOrTouchDragEnter {
     
-    [NSException raise:NSInternalInconsistencyException
-                format:@"对不起,您不能直接调用 '%@ %d' 中的方法 '%@',您需要通过继承其子类,在子类中重载该方法",
-     [NSString stringWithUTF8String:__FILE__].lastPathComponent, __LINE__, NSStringFromSelector(_cmd)];
 }
 
 #pragma mark - setter & getter.
 
+@synthesize enabled = _enabled;
+
 - (void)setEnabled:(BOOL)enabled {
     
-    _enabled        = enabled;
     _button.enabled = enabled;
+}
+
+- (BOOL)enabled {
+
+    return _button.enabled;
+}
+
+@synthesize selected = _selected;
+
+- (void)setSelected:(BOOL)selected {
+
+    _button.selected = selected;
+}
+
+- (BOOL)selected {
+
+    return _button.selected;
 }
 
 @end

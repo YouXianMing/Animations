@@ -64,6 +64,7 @@
 #import "iCarouselViewController.h"
 #import "GridFlowLayoutViewController.h"
 #import "InfiniteLoopViewController.h"
+#import "BaseControlViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -179,7 +180,8 @@
                        [Item itemWithName:@"系统字体列表" object:[SystemFontInfoController class]],
                        [Item itemWithName:@"旋转木马效果" object:[iCarouselViewController class]],
                        [Item itemWithName:@"水平方向瀑布流" object:[GridFlowLayoutViewController class]],
-                       [Item itemWithName:@"无限轮播图" object:[InfiniteLoopViewController class]]];
+                       [Item itemWithName:@"无限轮播图" object:[InfiniteLoopViewController class]],
+                       [Item itemWithName:@"BaseControl按钮合集" object:[BaseControlViewController class]],];
     
     self.items = [NSMutableArray array];
     

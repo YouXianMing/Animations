@@ -1,15 +1,15 @@
 //
-//  PressControll.m
-//  POPButtonVer2
+//  POPBaseControl.m
+//  Animations
 //
-//  Created by YouXianMing on 16/5/25.
+//  Created by YouXianMing on 16/5/26.
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "PressControll.h"
+#import "POPBaseControl.h"
 #import "POP.h"
 
-@interface PressControll ()
+@interface POPBaseControl ()
 
 @property (nonatomic, strong) UIView   *absView;
 @property (nonatomic, strong) UIButton *button;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation PressControll
+@implementation POPBaseControl
 
 - (void)layoutSubviews {
     
@@ -32,9 +32,8 @@
     
     if (self = [super initWithFrame:frame]) {
         
-        // 动画时间 + 敏感时间
+        // 动画时间
         _animationDuration = 0.4f;
-        _sensitiveDuration = 0.4f;
         
         // 隐身的view
         _absView                        = [[UIView alloc] init];
@@ -52,9 +51,9 @@
         [self addSubview:_button];
         
         // 按钮事件
-        [_button addTarget:self action:@selector(scaleToAnimation) forControlEvents:UIControlEventTouchDown | UIControlEventTouchDragEnter];
-        [_button addTarget:self action:@selector(scaleToDefault)   forControlEvents:UIControlEventTouchUpInside];
-        [_button addTarget:self action:@selector(scaleToDefault)   forControlEvents:UIControlEventTouchDragExit | UIControlEventTouchCancel];
+        [_button addTarget:self action:@selector(touchBeginOrTouchDragEnter) forControlEvents:UIControlEventTouchDown | UIControlEventTouchDragEnter];
+        [_button addTarget:self action:@selector(touchUpInside)   forControlEvents:UIControlEventTouchUpInside];
+        [_button addTarget:self action:@selector(touchDragExitOrTouchCancel)   forControlEvents:UIControlEventTouchDragExit | UIControlEventTouchCancel];
     }
     
     return self;
@@ -62,7 +61,28 @@
 
 #pragma mark - Animations.
 
-- (void)scaleToDefault {
+- (void)touchUpInside {
+    
+    [self touchDragExitOrTouchCancel];
+    
+    [self controllEventActived];
+    
+    if (self.target && self.selector) {
+        
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [self.target performSelector:self.selector withObject:self];
+#pragma clang diagnostic pop
+        
+    }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(POPBaseControlEvent:)]) {
+        
+        [self.delegate POPBaseControlEvent:self];
+    }
+}
+
+- (void)touchDragExitOrTouchCancel {
     
     [_absView.layer pop_removeAllAnimations];
     
@@ -71,12 +91,9 @@
     scaleAnimation.delegate           = self;
     scaleAnimation.duration           = _animationDuration;
     [_absView.layer pop_addAnimation:scaleAnimation forKey:nil];
-    
-    // Cancel performSelectorEvent.
-    [NSObject cancelPreviousPerformRequestsWithTarget:self];
 }
 
-- (void)scaleToAnimation {
+- (void)touchBeginOrTouchDragEnter {
     
     [_absView.layer pop_removeAllAnimations];
     
@@ -85,9 +102,6 @@
     scaleAnimation.delegate           = self;
     scaleAnimation.duration           = _animationDuration;
     [_absView.layer pop_addAnimation:scaleAnimation forKey:nil];
-    
-    // Perform SelectorEvent after delay sensitiveDuration.
-    [self performSelector:@selector(performSelectorEvent) withObject:nil afterDelay:_sensitiveDuration];
 }
 
 #pragma mark - POPAnimation's delegate.
@@ -95,11 +109,9 @@
 - (void)pop_animationDidApply:(POPAnimation *)anim {
     
     NSNumber *toValue = (NSNumber *)[anim valueForKeyPath:@"currentValue"];
-    _percent          = (toValue.floatValue - [PressControll calculateConstantWithX1:0 y1:1 x2:1 y2:0]) / [PressControll calculateSlopeWithX1:0 y1:1 x2:1 y2:0];
+    _percent          = (toValue.floatValue - [POPBaseControl calculateConstantWithX1:0 y1:1 x2:1 y2:0]) / [POPBaseControl calculateSlopeWithX1:0 y1:1 x2:1 y2:0];
     
     [self currentPercent:_percent];
-    
-    NSLog(@"%f", _percent);
 }
 
 #pragma mark - Overwrite by subClass.
@@ -110,26 +122,6 @@
 
 - (void)controllEventActived {
     
-}
-
-#pragma mark - Event.
-
-- (void)performSelectorEvent {
-    
-    if (_target && _selector) {
-        
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [_target performSelector:_selector withObject:self];
-#pragma clang diagnostic pop
-    }
-    
-    [self controllEventActived];
-    
-    if (_delegate && [_delegate respondsToSelector:@selector(pressControllEvent:)]) {
-        
-        [_delegate pressControllEvent:self];
-    }
 }
 
 #pragma mark - Math.
@@ -146,10 +138,28 @@
 
 #pragma mark - setter & getter.
 
+@synthesize enabled = _enabled;
+
 - (void)setEnabled:(BOOL)enabled {
     
-    _enabled        = enabled;
     _button.enabled = enabled;
+}
+
+- (BOOL)enabled {
+    
+    return _button.enabled;
+}
+
+@synthesize selected = _selected;
+
+- (void)setSelected:(BOOL)selected {
+    
+    _button.selected = selected;
+}
+
+- (BOOL)selected {
+    
+    return _button.selected;
 }
 
 @end

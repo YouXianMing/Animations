@@ -61,6 +61,7 @@
         [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:7 initialSpringVelocity:4
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
+                             
                              _iconView.alpha     = 1.f;
                              _iconView.transform = CGAffineTransformMake(1, 0, 0, 1, 0, 0);
                              _lineView.alpha     = 1.f;

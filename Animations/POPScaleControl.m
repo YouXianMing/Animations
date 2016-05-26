@@ -1,15 +1,15 @@
 //
-//  POPControll.m
-//  POPButton
+//  POPScaleControl.m
+//  Animations
 //
-//  Created by YouXianMing on 16/5/22.
+//  Created by YouXianMing on 16/5/26.
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "POPControll.h"
+#import "POPScaleControl.h"
 #import "POP.h"
 
-@interface POPControll () <POPAnimationDelegate>
+@interface POPScaleControl () <POPAnimationDelegate>
 
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UIView   *contentView;
@@ -18,19 +18,21 @@
 
 @end
 
-@implementation POPControll
+@implementation POPScaleControl
 
 - (void)layoutSubviews {
-
+    
     [super layoutSubviews];
-    _button.bounds      = self.bounds;
-    _contentView.bounds = self.bounds;
+    
+    CGRect rect         = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    _button.bounds      = rect;
+    _contentView.bounds = rect;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {
-    
+        
         self.scale             = 0.95;
         self.sensitiveDuration = 0.4f;
         self.scaleDuration     = 0.4f;
@@ -53,7 +55,7 @@
 #pragma mark - Animations.
 
 - (void)scaleToDefault {
-
+    
     [self.layer pop_removeAllAnimations];
     
     POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
@@ -69,7 +71,7 @@
 - (void)scaleToSmall {
     
     [self.layer pop_removeAllAnimations];
-
+    
     POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
     scaleAnimation.toValue            = [NSValue valueWithCGSize:CGSizeMake(_scale, _scale)];
     scaleAnimation.delegate           = self;
@@ -87,7 +89,7 @@
     NSValue *toValue = (NSValue *)[anim valueForKeyPath:@"currentValue"];
     
     CGSize size = [toValue CGSizeValue];
-    _percent    = (size.height - [POPControll calculateConstantWithX1:0 y1:1 x2:1 y2:_scale]) / [POPControll calculateSlopeWithX1:0 y1:1 x2:1 y2:_scale];
+    _percent    = (size.height - [POPScaleControl calculateConstantWithX1:0 y1:1 x2:1 y2:_scale]) / [POPScaleControl calculateSlopeWithX1:0 y1:1 x2:1 y2:_scale];
     
     [self currentScalePercent:_percent];
     
@@ -100,12 +102,12 @@
 #pragma mark - Overwrite by subClass.
 
 - (void)currentScalePercent:(CGFloat)percent {
-
+    
     NSLog(@"%f", percent);
 }
 
 - (void)controllEventActived {
-
+    
 }
 
 #pragma mark - Event.
@@ -131,7 +133,7 @@
 #pragma mark - Math.
 
 + (CGFloat)calculateSlopeWithX1:(CGFloat)x1 y1:(CGFloat)y1 x2:(CGFloat)x2 y2:(CGFloat)y2 {
-
+    
     return (y2 - y1) / (x2 - x1);
 }
 
@@ -143,9 +145,25 @@
 #pragma mark - setter & getter.
 
 - (void)setEnabled:(BOOL)enabled {
-
-    _enabled        = enabled;
+    
     _button.enabled = enabled;
+}
+
+- (BOOL)enabled {
+    
+    return _button.enabled;
+}
+
+@synthesize selected = _selected;
+
+- (void)setSelected:(BOOL)selected {
+    
+    _button.selected = selected;
+}
+
+- (BOOL)selected {
+    
+    return _button.selected;
 }
 
 @end

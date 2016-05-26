@@ -1,15 +1,15 @@
 //
-//  POPControll.h
-//  POPButton
+//  POPScaleControl.h
+//  Animations
 //
-//  Created by YouXianMing on 16/5/22.
+//  Created by YouXianMing on 16/5/26.
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-@class POPControll;
+@class POPScaleControl;
 
-@protocol POPControllDelegate <NSObject>
+@protocol POPScaleControlDelegate <NSObject>
 
 @optional
 
@@ -19,23 +19,23 @@
  *  @param controll POPControll对象
  *  @param percent  百分比
  */
-- (void)POPControll:(POPControll *)controll currentScalePercent:(CGFloat)percent;
+- (void)POPControll:(POPScaleControl *)control currentScalePercent:(CGFloat)percent;
 
 /**
  *  事件触发
  *
  *  @param controll POPControll对象
  */
-- (void)POPControllEvent:(POPControll *)controll;
+- (void)POPControllEvent:(POPScaleControl *)control;
 
 @end
 
-@interface POPControll : UIView
+@interface POPScaleControl : UIView
 
 /**
  *  代理
  */
-@property (nonatomic, weak) id <POPControllDelegate>  delegate;
+@property (nonatomic, weak) id <POPScaleControlDelegate>  delegate;
 
 /**
  *  缩放比例,默认值为0.95
@@ -66,6 +66,11 @@
  *  是否有效
  */
 @property (nonatomic) BOOL     enabled;
+
+/**
+ *  是否选中
+ */
+@property (nonatomic) BOOL     selected;
 
 #pragma mark - Read only properties.
 

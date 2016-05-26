@@ -25,35 +25,50 @@
 @interface BaseControl : UIView
 
 /**
+ *  目标
+ */
+@property (nonatomic, weak) id target;
+
+/**
+ *  控制事件
+ */
+@property (nonatomic) SEL   selector;
+
+/**
  *  代理方法
  */
 @property (nonatomic, weak) id <BaseControlDelegate>  delegate;
 
 /**
- *  按钮
+ *  容器view
  */
-@property (nonatomic, strong, readonly) UIButton *button;
+@property (nonatomic, strong, readonly) UIView   *contentView;
 
 /**
  *  是否有效
  */
 @property (nonatomic) BOOL     enabled;
 
+/**
+ *  是否选中
+ */
+@property (nonatomic) BOOL     selected;
+
 #pragma mark - 以下方法需要子类重载
 
 /**
  *  触发了点击事件
  */
-- (void)touchEvent;
+- (void)touchUpInside;
 
 /**
- *  拖拽到rect外面触发的事件
+ *  拖拽到rect外面或者取消了
  */
-- (void)touchDragExit;
+- (void)touchDragExitOrTouchCancel;
 
 /**
- *  点击事件开始
+ *  点击事件开始或者从外部拖拽进来
  */
-- (void)touchBegin;
+- (void)touchBeginOrTouchDragEnter;
 
 @end

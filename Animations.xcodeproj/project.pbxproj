@@ -10,7 +10,6 @@
 		100148C91C43D53D006D9153 /* BezierPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100148C81C43D53D006D9153 /* BezierPathViewController.m */; };
 		100252C51CBC778B00722169 /* ReplicatorLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100252C41CBC778B00722169 /* ReplicatorLineViewController.m */; };
 		100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 100252C81CBC780100722169 /* ReplicatorLineAnimationView.m */; };
-		10059F521CF5BB88005B08E1 /* PressControll.m in Sources */ = {isa = PBXBuildFile; fileRef = 10059F511CF5BB88005B08E1 /* PressControll.m */; };
 		100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100BFAE81C2392F5008C5523 /* ShimmerController.m */; };
 		1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */; };
 		1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DD1C0AA639004CFBCE /* POPSpringParameterController.m */; };
@@ -180,6 +179,11 @@
 		104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2D1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m */; };
 		104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */; };
 		10567E491C45411700625C6B /* api.md in Resources */ = {isa = PBXBuildFile; fileRef = 10567E481C45411700625C6B /* api.md */; };
+		105702121CF6CE16003B10C6 /* POPScaleControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 105702111CF6CE16003B10C6 /* POPScaleControl.m */; };
+		105702151CF6CF05003B10C6 /* POPBaseControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 105702141CF6CF05003B10C6 /* POPBaseControl.m */; };
+		1057021B1CF6D9D9003B10C6 /* BaseControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1057021A1CF6D9D9003B10C6 /* BaseControlViewController.m */; };
+		1057021F1CF6DB2B003B10C6 /* SelectedIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1057021E1CF6DB2B003B10C6 /* SelectedIconButton.m */; };
+		105702221CF6F008003B10C6 /* POPPressButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 105702211CF6F008003B10C6 /* POPPressButton.m */; };
 		10585B2C1C3F468E0052990F /* UIButton+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 10585B2B1C3F468E0052990F /* UIButton+Style.m */; };
 		10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10589D221C2393C200F20BC0 /* FBShimmeringLayer.m */; };
 		10589D261C2393C200F20BC0 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10589D241C2393C200F20BC0 /* FBShimmeringView.m */; };
@@ -188,8 +192,6 @@
 		1059F3A41CF4015200F63810 /* GridCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059F3A21CF4015200F63810 /* GridCollectionViewCell.m */; };
 		105AFB4B1CF18CEF003DD84A /* NSString+Range.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AFB4A1CF18CEF003DD84A /* NSString+Range.m */; };
 		105AFB4F1CF18D04003DD84A /* StringRangeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AFB4E1CF18D04003DD84A /* StringRangeManager.m */; };
-		105AFBBF1CF1F1F5003DD84A /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AFBBE1CF1F1F5003DD84A /* CustomButton.m */; };
-		105AFBC21CF1F222003DD84A /* POPControll.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AFBC11CF1F222003DD84A /* POPControll.m */; };
 		105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */; };
 		105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */; };
 		105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */; };
@@ -336,8 +338,6 @@
 		100252C41CBC778B00722169 /* ReplicatorLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLineViewController.m; sourceTree = "<group>"; };
 		100252C71CBC780100722169 /* ReplicatorLineAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplicatorLineAnimationView.h; sourceTree = "<group>"; };
 		100252C81CBC780100722169 /* ReplicatorLineAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLineAnimationView.m; sourceTree = "<group>"; };
-		10059F501CF5BB88005B08E1 /* PressControll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PressControll.h; sourceTree = "<group>"; };
-		10059F511CF5BB88005B08E1 /* PressControll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressControll.m; sourceTree = "<group>"; };
 		100BFAE71C2392F5008C5523 /* ShimmerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShimmerController.h; sourceTree = "<group>"; };
 		100BFAE81C2392F5008C5523 /* ShimmerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShimmerController.m; sourceTree = "<group>"; };
 		1010C6D91C0A9DA0004CFBCE /* RangeValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeValueView.h; sourceTree = "<group>"; };
@@ -693,6 +693,16 @@
 		104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringAttribute.m"; sourceTree = "<group>"; };
 		104F0D301BFC1C9C00C46E6A /* StringAttributeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringAttributeHelper.h; sourceTree = "<group>"; };
 		10567E481C45411700625C6B /* api.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = api.md; sourceTree = "<group>"; };
+		105702101CF6CE16003B10C6 /* POPScaleControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPScaleControl.h; sourceTree = "<group>"; };
+		105702111CF6CE16003B10C6 /* POPScaleControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPScaleControl.m; sourceTree = "<group>"; };
+		105702131CF6CF05003B10C6 /* POPBaseControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPBaseControl.h; sourceTree = "<group>"; };
+		105702141CF6CF05003B10C6 /* POPBaseControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPBaseControl.m; sourceTree = "<group>"; };
+		105702191CF6D9D8003B10C6 /* BaseControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseControlViewController.h; sourceTree = "<group>"; };
+		1057021A1CF6D9D9003B10C6 /* BaseControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseControlViewController.m; sourceTree = "<group>"; };
+		1057021D1CF6DB2B003B10C6 /* SelectedIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedIconButton.h; sourceTree = "<group>"; };
+		1057021E1CF6DB2B003B10C6 /* SelectedIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedIconButton.m; sourceTree = "<group>"; };
+		105702201CF6F008003B10C6 /* POPPressButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPPressButton.h; sourceTree = "<group>"; };
+		105702211CF6F008003B10C6 /* POPPressButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPPressButton.m; sourceTree = "<group>"; };
 		10585B2A1C3F468E0052990F /* UIButton+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Style.h"; sourceTree = "<group>"; };
 		10585B2B1C3F468E0052990F /* UIButton+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Style.m"; sourceTree = "<group>"; };
 		10589D201C2393C200F20BC0 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
@@ -710,10 +720,6 @@
 		105AFB4A1CF18CEF003DD84A /* NSString+Range.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Range.m"; sourceTree = "<group>"; };
 		105AFB4D1CF18D04003DD84A /* StringRangeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringRangeManager.h; sourceTree = "<group>"; };
 		105AFB4E1CF18D04003DD84A /* StringRangeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringRangeManager.m; sourceTree = "<group>"; };
-		105AFBBD1CF1F1F5003DD84A /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
-		105AFBBE1CF1F1F5003DD84A /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
-		105AFBC01CF1F222003DD84A /* POPControll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPControll.h; sourceTree = "<group>"; };
-		105AFBC11CF1F222003DD84A /* POPControll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPControll.m; sourceTree = "<group>"; };
 		105D989E1C07F0E500FD1013 /* TableViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewTapAnimationController.h; sourceTree = "<group>"; };
 		105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTapAnimationController.m; sourceTree = "<group>"; };
 		105D98A51C07F52D00FD1013 /* TableViewTapAnimationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewTapAnimationCell.h; sourceTree = "<group>"; };
@@ -1788,6 +1794,7 @@
 				10E2D5161CD6474900666EEB /* iCarouselViewController */,
 				104CD2FD1CDAD46500C836E6 /* GridFlowLayoutViewController */,
 				106BCFC11CDC672F007C3EEE /* InfiniteLoopViewController */,
+				1057021C1CF6DABA003B10C6 /* BaseControlViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1867,14 +1874,12 @@
 		1041AE9A1CEC5AF8005697B8 /* BaseControl */ = {
 			isa = PBXGroup;
 			children = (
+				105702131CF6CF05003B10C6 /* POPBaseControl.h */,
+				105702141CF6CF05003B10C6 /* POPBaseControl.m */,
 				1041AE971CEC5AE4005697B8 /* BaseControl.h */,
 				1041AE981CEC5AE4005697B8 /* BaseControl.m */,
-				105AFBBD1CF1F1F5003DD84A /* CustomButton.h */,
-				105AFBBE1CF1F1F5003DD84A /* CustomButton.m */,
-				105AFBC01CF1F222003DD84A /* POPControll.h */,
-				105AFBC11CF1F222003DD84A /* POPControll.m */,
-				10059F501CF5BB88005B08E1 /* PressControll.h */,
-				10059F511CF5BB88005B08E1 /* PressControll.m */,
+				105702101CF6CE16003B10C6 /* POPScaleControl.h */,
+				105702111CF6CE16003B10C6 /* POPScaleControl.m */,
 			);
 			name = BaseControl;
 			sourceTree = "<group>";
@@ -2083,6 +2088,19 @@
 				104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */,
 			);
 			path = "StringAttribute+Category";
+			sourceTree = "<group>";
+		};
+		1057021C1CF6DABA003B10C6 /* BaseControlViewController */ = {
+			isa = PBXGroup;
+			children = (
+				105702191CF6D9D8003B10C6 /* BaseControlViewController.h */,
+				1057021A1CF6D9D9003B10C6 /* BaseControlViewController.m */,
+				1057021D1CF6DB2B003B10C6 /* SelectedIconButton.h */,
+				1057021E1CF6DB2B003B10C6 /* SelectedIconButton.m */,
+				105702201CF6F008003B10C6 /* POPPressButton.h */,
+				105702211CF6F008003B10C6 /* POPPressButton.m */,
+			);
+			name = BaseControlViewController;
 			sourceTree = "<group>";
 		};
 		10589D1E1C2393C200F20BC0 /* FBShimmering */ = {
@@ -2802,7 +2820,6 @@
 				1096064E1C93B4A300CCB3AD /* AFHTTPSessionManager.m in Sources */,
 				10CEC5941C2238E700B0CA7D /* LabelScaleViewController.m in Sources */,
 				104228C31C3694B10011409C /* SDWebImageController.m in Sources */,
-				105AFBBF1CF1F1F5003DD84A /* CustomButton.m in Sources */,
 				109ECD5E1C3D3F1500290307 /* CALayer+SetRect.m in Sources */,
 				106BCFD11CDC678F007C3EEE /* InfiniteLoopView.m in Sources */,
 				103088B31C05679A00C8B623 /* ScrollBlurImageViewController.m in Sources */,
@@ -2837,6 +2854,7 @@
 				1048F6EF1C28D56B0052F1DD /* MDMatrix.m in Sources */,
 				10381FB61BF9B55B00E5E476 /* POPAnimator.mm in Sources */,
 				104F0D191BFB28D700C46E6A /* TranformFadeView.m in Sources */,
+				105702221CF6F008003B10C6 /* POPPressButton.m in Sources */,
 				102B852F1C3CF19F001699A9 /* UIImage+SolidColor.m in Sources */,
 				10381FB51BF9B55B00E5E476 /* POPAnimationTracer.mm in Sources */,
 				10E2D4EE1CD5962000666EEB /* SDWebImageDownloaderOperation.m in Sources */,
@@ -2850,6 +2868,7 @@
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
 				10E2D5151CD63F0900666EEB /* iCarouselViewController.m in Sources */,
 				1011BADE1CD48C8D00F29FB9 /* NodeModelStrings.m in Sources */,
+				1057021F1CF6DB2B003B10C6 /* SelectedIconButton.m in Sources */,
 				B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */,
 				1047D0F21C465753009ADED6 /* InfiniteRotationView.m in Sources */,
 				10E2D4F11CD5962000666EEB /* UIButton+WebCache.m in Sources */,
@@ -2901,6 +2920,7 @@
 				107CF3951C2FFC01002DF93C /* LiveImageViewController.m in Sources */,
 				106CF0921C3764090006419B /* AlertViewController.m in Sources */,
 				104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */,
+				105702151CF6CF05003B10C6 /* POPBaseControl.m in Sources */,
 				1011BA9E1CD4898D00F29FB9 /* ConsumptionModel.m in Sources */,
 				1020E2D31C73197B00FF233E /* CAGradientView.m in Sources */,
 				106BCFCB1CDC6787007C3EEE /* CustomNodeStateView.m in Sources */,
@@ -2915,12 +2935,12 @@
 				106BCFD21CDC678F007C3EEE /* CustomInfiniteLoopViewCell.m in Sources */,
 				102B1F2C1C60E66F00A8FD40 /* DataModel.m in Sources */,
 				10E2D4F71CD5962000666EEB /* UIView+WebCacheOperation.m in Sources */,
+				105702121CF6CE16003B10C6 /* POPScaleControl.m in Sources */,
 				1017F13C1C35715400E245F8 /* NSData+JSONData.m in Sources */,
 				10381FC11BF9B55B00E5E476 /* TransformationMatrix.cpp in Sources */,
 				108A993C1C0FE34800B693F6 /* EasingRotateAnimationType.m in Sources */,
 				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
 				104CD3001CDAD4A300C836E6 /* CustomCollectionViewCell.m in Sources */,
-				105AFBC21CF1F222003DD84A /* POPControll.m in Sources */,
 				109606521C93B4A300CCB3AD /* AFURLResponseSerialization.m in Sources */,
 				102B84D31C3B925B001699A9 /* MD5.m in Sources */,
 				106BCFE61CDC80CD007C3EEE /* LoopTypeTwoCell.m in Sources */,
@@ -2964,7 +2984,6 @@
 				1096061A1C93B46800CCB3AD /* RequestMethodType.m in Sources */,
 				102B84D91C3B9424001699A9 /* NSString+MD5.m in Sources */,
 				102B1F301C60E66F00A8FD40 /* LinksModel.m in Sources */,
-				10059F521CF5BB88005B08E1 /* PressControll.m in Sources */,
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
 				106BCFD91CDC67CC007C3EEE /* LoopViewCell.m in Sources */,
 				1011BADD1CD48C8D00F29FB9 /* NodeModelRootNavigationController.m in Sources */,
@@ -2980,6 +2999,7 @@
 				105FFEAE1CBE88B7006213B1 /* DrawMarqueeView.m in Sources */,
 				109606561C93B4A300CCB3AD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */,
+				1057021B1CF6D9D9003B10C6 /* BaseControlViewController.m in Sources */,
 				1011BADA1CD48C8D00F29FB9 /* CreateModel.m in Sources */,
 				1096061F1C93B46800CCB3AD /* AbsNetworkingIndicator.m in Sources */,
 				103088B71C05880B00C8B623 /* Math.m in Sources */,
