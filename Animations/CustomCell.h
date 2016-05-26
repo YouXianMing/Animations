@@ -80,4 +80,9 @@
  */
 - (void)loadContent;
 
+/**
+ *  Selected event, override by subclass.
+ */
+- (void)selectedEvent;
+
 @end

@@ -16,6 +16,13 @@
 
 @implementation BaseControl
 
+- (void)layoutSubviews {
+
+    [super layoutSubviews];
+    
+    _button.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {
