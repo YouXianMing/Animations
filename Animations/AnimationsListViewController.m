@@ -14,6 +14,8 @@
 #import "LineBackgroundView.h"
 #import "Item.h"
 #import "GCD.h"
+#import "PushAnimator.h"
+#import "PopAnimator.h"
 #import "UIFont+Fonts.h"
 
 #import "ButtonPressViewController.h"
@@ -66,10 +68,10 @@
 #import "InfiniteLoopViewController.h"
 #import "BaseControlViewController.h"
 
-@interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
-@property (nonatomic, strong) UITableView     *tableView;
-@property (nonatomic)         BOOL             tableViewLoadData;
+@property (nonatomic, strong) UITableView   *tableView;
+@property (nonatomic)         BOOL           tableViewLoadData;
 
 @property (nonatomic, strong) NSMutableArray  *items;
 
@@ -80,6 +82,16 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    // Add UIBlurEffect
+    self.effectView                        = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
+    self.effectView.userInteractionEnabled = NO;
+    self.effectView.frame                  = self.windowView.bounds;
+    self.effectView.alpha                  = 0.f;
+    [self.windowView addSubview:self.effectView];
+    
+    // [IMPORTANT] Enable the Push transitioning.
+    self.navigationController.delegate = self;
     
     [self configureDataSource];
     
@@ -258,6 +270,27 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+#pragma mark - Push or Pop event.
+
+- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC {
+    
+    if (operation == UINavigationControllerOperationPush) {
+        
+        return [PushAnimator new];
+        
+    } else if (operation == UINavigationControllerOperationPop) {
+        
+        return [PopAnimator new];
+        
+    } else {
+        
+        return nil;
+    }
+}
+
 #pragma mark -
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -269,9 +302,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear:animated];
-    
-    // Disable pull back gesture.
-    self.enableInteractivePopGestureRecognizer = NO;
+    self.enableInteractivePopGestureRecognizer = YES;
 }
 
 @end

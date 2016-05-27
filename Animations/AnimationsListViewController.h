@@ -10,4 +10,6 @@
 
 @interface AnimationsListViewController : CustomNormalContentViewController
 
+@property (nonatomic, strong) UIVisualEffectView  *effectView;
+
 @end
