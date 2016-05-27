@@ -49,7 +49,8 @@
     [self.contentView addSubview:self.tableView];
 }
 
-#pragma mark - TableView相关方法
+#pragma mark - UITableView's delegate.
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return _dataArray.count;

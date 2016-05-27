@@ -204,6 +204,7 @@
 		10667E181C7F2CCA00B9AC08 /* SCViewShakerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E171C7F2CCA00B9AC08 /* SCViewShakerController.m */; };
 		10667E1D1C7F2CFB00B9AC08 /* UIView+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */; };
 		1067A8F81CE81BF5003FBF17 /* AbsAlertMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1067A8F71CE81BF5003FBF17 /* AbsAlertMessageView.m */; };
+		1068FCCD1CF7D87A00BE431C /* PressScaleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1068FCCC1CF7D87A00BE431C /* PressScaleButton.m */; };
 		106BCFC01CDC672A007C3EEE /* InfiniteLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFBF1CDC672A007C3EEE /* InfiniteLoopViewController.m */; };
 		106BCFC81CDC6780007C3EEE /* InfiniteLoopViewBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFC71CDC6780007C3EEE /* InfiniteLoopViewBuilder.m */; };
 		106BCFCB1CDC6787007C3EEE /* CustomNodeStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFCA1CDC6787007C3EEE /* CustomNodeStateView.m */; };
@@ -745,6 +746,8 @@
 		10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shake.m"; sourceTree = "<group>"; };
 		1067A8F61CE81BF5003FBF17 /* AbsAlertMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsAlertMessageView.h; sourceTree = "<group>"; };
 		1067A8F71CE81BF5003FBF17 /* AbsAlertMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsAlertMessageView.m; sourceTree = "<group>"; };
+		1068FCCB1CF7D87A00BE431C /* PressScaleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PressScaleButton.h; sourceTree = "<group>"; };
+		1068FCCC1CF7D87A00BE431C /* PressScaleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressScaleButton.m; sourceTree = "<group>"; };
 		106BCFBE1CDC672A007C3EEE /* InfiniteLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteLoopViewController.h; sourceTree = "<group>"; };
 		106BCFBF1CDC672A007C3EEE /* InfiniteLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteLoopViewController.m; sourceTree = "<group>"; };
 		106BCFC61CDC6780007C3EEE /* InfiniteLoopViewBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteLoopViewBuilder.h; sourceTree = "<group>"; };
@@ -1175,39 +1178,20 @@
 		1012C33F1BF9FB3700A1B4E4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				1059EB361CF0505500B7A4B0 /* UITextField+Category */,
-				1041AE4C1CEBFE24005697B8 /* NSString+Category */,
-				1041AE4B1CEBFDD7005697B8 /* CALayer+Category */,
-				102B852C1C3CF18C001699A9 /* UIImage+Category */,
-				1041AE4A1CEBFD9D005697B8 /* UIView+Category */,
-				106CF09A1C3765490006419B /* UIFont+Categories */,
-				106CF08F1C3763E60006419B /* UIButton+Categories */,
 				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
-				1059F39E1CF4014700F63810 /* GridCollectionView */,
 				10B345161CEE9BB700BFC15B /* PhoneCall */,
-				106BCFC21CDC6740007C3EEE /* InfiniteLoopView */,
-				10E2D50F1CD63EDF00666EEB /* iCarousel */,
 				1011BAE81CD4957400F29FB9 /* ValueStorageManager */,
-				1047E2351CC5AF8400E13D1C /* LazyFadeInView */,
-				10B0DDF31CBA82F90089DF1E /* JSAnimatedImagesView */,
-				1041AE9A1CEC5AF8005697B8 /* BaseControl */,
 				102A0FF41C92725400BF3F1B /* NSData+GZip */,
 				1020E2D01C73196D00FF233E /* CAGradientView */,
 				102B85011C3C9FBF001699A9 /* NumberFormatter */,
 				101EA3EB1C489C1400D5D487 /* DateFormatter */,
-				1047D0F31C465758009ADED6 /* InfiniteRotationView */,
 				102B85841C3CF28A001699A9 /* Networking */,
 				102B84DB1C3B95E8001699A9 /* FileManager */,
 				102B84DA1C3B9521001699A9 /* MD5 */,
-				102296C21C392B0F001AF5BB /* LineBackgroundView */,
-				102296B31C38D343001AF5BB /* CHTCollectionViewWaterfallLayout */,
 				1022969D1C38CF79001AF5BB /* CreateModel */,
 				106CF09E1C376E080006419B /* HexColor */,
 				1017F1301C35714800E245F8 /* JSONKit */,
 				1017F0FB1C356EE700E245F8 /* SDWebImage */,
-				1048F6EA1C28D56B0052F1DD /* MDScratchImageView */,
-				10589D1E1C2393C200F20BC0 /* FBShimmering */,
-				B5D011961C0BE2440075BC2E /* RotateView */,
 				103088B41C05880000C8B623 /* Math */,
 				103088651C03F19500C8B623 /* Easing */,
 				104F0D211BFC1C9C00C46E6A /* StringAttribute */,
@@ -1604,8 +1588,9 @@
 				10381F731BF9B47400E5E476 /* RootController */,
 				10381FC81BF9CC3800E5E476 /* AbstractBaseClass */,
 				10381FC71BF9CC2200E5E476 /* Controllers */,
+				1068FCCA1CF7D76E00BE431C /* UI-Component */,
 				1012C33F1BF9FB3700A1B4E4 /* Tools */,
-				10FDF9C91CA50AA500871B45 /* DisposableTools */,
+				10FDF9C91CA50AA500871B45 /* Disposable-Tools */,
 				10381F501BF9B44A00E5E476 /* Supporting Files */,
 			);
 			path = Animations;
@@ -1733,6 +1718,8 @@
 			children = (
 				10381F781BF9B54E00E5E476 /* ButtonPressViewController.h */,
 				10381F791BF9B54E00E5E476 /* ButtonPressViewController.m */,
+				1068FCCB1CF7D87A00BE431C /* PressScaleButton.h */,
+				1068FCCC1CF7D87A00BE431C /* PressScaleButton.m */,
 				10381FCC1BF9D16D00E5E476 /* CAShapeLayerConfigure.h */,
 				10381FCD1BF9D16D00E5E476 /* CAShapeLayerConfigure.m */,
 				10381FCF1BF9D2C600E5E476 /* StrokeCircleLayerConfigure.h */,
@@ -2212,6 +2199,32 @@
 			name = SCViewShakerController;
 			sourceTree = "<group>";
 		};
+		1068FCCA1CF7D76E00BE431C /* UI-Component */ = {
+			isa = PBXGroup;
+			children = (
+				1059EB361CF0505500B7A4B0 /* UITextField+Category */,
+				1041AE4C1CEBFE24005697B8 /* NSString+Category */,
+				1041AE4B1CEBFDD7005697B8 /* CALayer+Category */,
+				102B852C1C3CF18C001699A9 /* UIImage+Category */,
+				1041AE4A1CEBFD9D005697B8 /* UIView+Category */,
+				106CF09A1C3765490006419B /* UIFont+Categories */,
+				106CF08F1C3763E60006419B /* UIButton+Categories */,
+				1059F39E1CF4014700F63810 /* GridCollectionView */,
+				106BCFC21CDC6740007C3EEE /* InfiniteLoopView */,
+				10E2D50F1CD63EDF00666EEB /* iCarousel */,
+				1047E2351CC5AF8400E13D1C /* LazyFadeInView */,
+				10B0DDF31CBA82F90089DF1E /* JSAnimatedImagesView */,
+				1041AE9A1CEC5AF8005697B8 /* BaseControl */,
+				1047D0F31C465758009ADED6 /* InfiniteRotationView */,
+				102296C21C392B0F001AF5BB /* LineBackgroundView */,
+				102296B31C38D343001AF5BB /* CHTCollectionViewWaterfallLayout */,
+				1048F6EA1C28D56B0052F1DD /* MDScratchImageView */,
+				10589D1E1C2393C200F20BC0 /* FBShimmering */,
+				B5D011961C0BE2440075BC2E /* RotateView */,
+			);
+			name = "UI-Component";
+			sourceTree = "<group>";
+		};
 		106BCFC11CDC672F007C3EEE /* InfiniteLoopViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2679,13 +2692,13 @@
 			name = iCarouselViewController;
 			sourceTree = "<group>";
 		};
-		10FDF9C91CA50AA500871B45 /* DisposableTools */ = {
+		10FDF9C91CA50AA500871B45 /* Disposable-Tools */ = {
 			isa = PBXGroup;
 			children = (
 				10FDF9CA1CA50AED00871B45 /* UIView+AnimationsListViewController.h */,
 				10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */,
 			);
-			name = DisposableTools;
+			name = "Disposable-Tools";
 			sourceTree = "<group>";
 		};
 		B5D0118B1C0BE15A0075BC2E /* HeaderViewTapAnimationController */ = {
@@ -3048,6 +3061,7 @@
 				102ED8761C3BFCCC00E9863E /* CustomCell.m in Sources */,
 				102B84EF1C3BCAD0001699A9 /* CellDataAdapter.m in Sources */,
 				109606281C93B47800CCB3AD /* Networking.m in Sources */,
+				1068FCCD1CF7D87A00BE431C /* PressScaleButton.m in Sources */,
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
 				10CEC5891C21345600B0CA7D /* FullTitleVisualEffectViewController.m in Sources */,
 				10D4F6111C41538C00D056EB /* PressAnimationButton.m in Sources */,
@@ -3196,6 +3210,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
@@ -3211,6 +3226,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;

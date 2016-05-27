@@ -99,9 +99,7 @@
     self.showView.backgroundColor    = [UIColor cyanColor];
     self.showView.layer.cornerRadius = self.showView.width / 2.f;
     [self.contentView addSubview:self.showView];
-    [self.showView addTarget:self
-                      action:@selector(doAnimation)
-            forControlEvents:UIControlEventTouchUpInside];
+    [self.showView addTarget:self action:@selector(doAnimation) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)doAnimation {

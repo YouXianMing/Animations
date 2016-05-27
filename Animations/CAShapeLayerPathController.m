@@ -53,8 +53,7 @@
     self.fillShapeLayer.strokeColor = [UIColor clearColor].CGColor;
     self.fillShapeLayer.fillColor   = [UIColor cyanColor].CGColor;
     self.fillShapeLayer.lineWidth   = 0.f;
-    self.fillShapeLayer.frame       = CGRectMake(self.pathView.gap,
-                                                 self.pathView.gap,
+    self.fillShapeLayer.frame       = CGRectMake(self.pathView.gap, self.pathView.gap,
                                                  self.pathView.width - 2 * self.pathView.gap,
                                                  self.pathView.width - 2 * self.pathView.gap);
     [self.pathView.layer addSublayer:self.fillShapeLayer];
@@ -66,8 +65,7 @@
     self.lineShapeLayer.fillColor       = [UIColor clearColor].CGColor;
     self.lineShapeLayer.lineWidth       = 0.5f;
     self.lineShapeLayer.lineDashPattern = @[@(3), @(3)];
-    self.lineShapeLayer.frame           = CGRectMake(self.pathView.gap,
-                                                     self.pathView.gap,
+    self.lineShapeLayer.frame           = CGRectMake(self.pathView.gap, self.pathView.gap,
                                                      self.pathView.width - 2 * self.pathView.gap,
                                                      self.pathView.width - 2 * self.pathView.gap);
     [self.pathView.layer addSublayer:self.lineShapeLayer];
@@ -156,10 +154,7 @@
 
 - (UIColor *)randomColor {
     
-    return [UIColor colorWithRed:arc4random() % 101 / 100.f
-                           green:arc4random() % 101 / 100.f
-                            blue:arc4random() % 101 / 100.f
-                           alpha:0.5f];
+    return [UIColor colorWithRed:arc4random() % 101 / 100.f green:arc4random() % 101 / 100.f blue:arc4random() % 101 / 100.f alpha:0.5f];
 }
 
 @end

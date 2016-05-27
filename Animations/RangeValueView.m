@@ -8,8 +8,6 @@
 
 #import "RangeValueView.h"
 
-#define    SLIDER_WIDTH    [UIScreen mainScreen].bounds.size.width
-
 @interface RangeValueView ()
 
 @property (nonatomic)          CGFloat    currentValue;

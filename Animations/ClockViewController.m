@@ -41,8 +41,8 @@
     
     NSDictionary *currentTime = [[SystemTimeInfomation sharedInstance] currentTimeInfomation];
     
-    CGFloat min = [currentTime[@"mm"] floatValue];
-    CGFloat sec = [currentTime[@"ss"] floatValue];
+    CGFloat min  = [currentTime[@"mm"] floatValue];
+    CGFloat sec  = [currentTime[@"ss"] floatValue];
     CGFloat hour = [currentTime[@"HH"] floatValue];
     
     {

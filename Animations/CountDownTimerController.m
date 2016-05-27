@@ -49,10 +49,8 @@
     
     for (int i = 0; i < array.count; i++) {
         
-        CellDataAdapter *adapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"CountDownTimeCell"
-                                                                                      data:array[i]
-                                                                                cellHeight:0
-                                                                                  cellType:0];
+        CellDataAdapter *adapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"CountDownTimeCell" data:array[i]
+                                                                                cellHeight:0 cellType:0];
         [self.timesArray addObject:adapter];
     }
 }
@@ -97,12 +95,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataAdapter       *adapter = self.timesArray[indexPath.row];
-    
-    CustomCell *cell    = [tableView dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
-    cell.dataAdapter    = adapter;
-    cell.indexPath      = indexPath;
-    
+    CellDataAdapter *adapter = self.timesArray[indexPath.row];
+    CustomCell      *cell    = [tableView dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
+    cell.dataAdapter         = adapter;
+    cell.indexPath           = indexPath;
     [cell loadContent];
     
     return cell;

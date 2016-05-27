@@ -69,10 +69,7 @@
 
 - (UIColor *)randomColor {
 
-    return [UIColor colorWithRed:arc4random() % 101 / 100.f
-                           green:arc4random() % 101 / 100.f
-                            blue:arc4random() % 101 / 100.f
-                           alpha:1];
+    return [UIColor colorWithRed:arc4random() % 101 / 100.f green:arc4random() % 101 / 100.f blue:arc4random() % 101 / 100.f alpha:1];
 }
 
 @end
