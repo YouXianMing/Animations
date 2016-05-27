@@ -139,4 +139,9 @@
     }
 }
 
+- (void)selectedEvent {
+
+    [self changeState];
+}
+
 @end

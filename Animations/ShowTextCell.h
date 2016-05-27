@@ -17,9 +17,4 @@ typedef enum : NSUInteger {
 
 @interface ShowTextCell : CustomCell
 
-/**
- *  Change the cell's state.
- */
-- (void)changeState;
-
 @end

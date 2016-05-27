@@ -123,9 +123,7 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
 - (CGFloat)itemWidthWithIndexPath:(NSIndexPath *)indexPath {
     
     WaterfallPictureModel *pictureModel = _dataSource[indexPath.row];
-    
-    return  [Math resetFromSize:CGSizeMake(pictureModel.iwd.floatValue, pictureModel.iht.floatValue)
-                withFixedHeight:_rowHeight].width;
+    return  [Math resetFromSize:CGSizeMake(pictureModel.iwd.floatValue, pictureModel.iht.floatValue) withFixedHeight:_rowHeight].width;
 }
 
 @end

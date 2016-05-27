@@ -117,7 +117,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ShowTextCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [cell changeState];
+    [cell selectedEvent];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
