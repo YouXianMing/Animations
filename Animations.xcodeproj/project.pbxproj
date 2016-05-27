@@ -156,7 +156,6 @@
 		1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6EE1C28D56B0052F1DD /* MDScratchImageView.mm */; };
 		1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048F6F21C28D5B60052F1DD /* ScratchImageViewController.m */; };
 		104CD2FC1CDAD41A00C836E6 /* GridFlowLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104CD2FB1CDAD41A00C836E6 /* GridFlowLayoutViewController.m */; };
-		104CD3001CDAD4A300C836E6 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 104CD2FF1CDAD4A300C836E6 /* CustomCollectionViewCell.m */; };
 		104CD3031CDAD4AE00C836E6 /* FlowStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 104CD3021CDAD4AE00C836E6 /* FlowStyleCell.m */; };
 		104CD3081CDAD4B700C836E6 /* GridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 104CD3051CDAD4B700C836E6 /* GridLayout.m */; };
 		104CD3091CDAD4B700C836E6 /* GridManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 104CD3071CDAD4B700C836E6 /* GridManager.m */; };
@@ -647,8 +646,6 @@
 		1048F6F21C28D5B60052F1DD /* ScratchImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScratchImageViewController.m; sourceTree = "<group>"; };
 		104CD2FA1CDAD41A00C836E6 /* GridFlowLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridFlowLayoutViewController.h; sourceTree = "<group>"; };
 		104CD2FB1CDAD41A00C836E6 /* GridFlowLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridFlowLayoutViewController.m; sourceTree = "<group>"; };
-		104CD2FE1CDAD4A300C836E6 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
-		104CD2FF1CDAD4A300C836E6 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		104CD3011CDAD4AE00C836E6 /* FlowStyleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowStyleCell.h; sourceTree = "<group>"; };
 		104CD3021CDAD4AE00C836E6 /* FlowStyleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowStyleCell.m; sourceTree = "<group>"; };
 		104CD3041CDAD4B700C836E6 /* GridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridLayout.h; sourceTree = "<group>"; };
@@ -2151,8 +2148,6 @@
 				102ED8751C3BFCCC00E9863E /* CustomCell.m */,
 				1041AE6B1CEC4507005697B8 /* CustomCollectionCell.h */,
 				1041AE6C1CEC4507005697B8 /* CustomCollectionCell.m */,
-				104CD2FE1CDAD4A300C836E6 /* CustomCollectionViewCell.h */,
-				104CD2FF1CDAD4A300C836E6 /* CustomCollectionViewCell.m */,
 			);
 			name = CustomCell;
 			sourceTree = "<group>";
@@ -2953,7 +2948,6 @@
 				10381FC11BF9B55B00E5E476 /* TransformationMatrix.cpp in Sources */,
 				108A993C1C0FE34800B693F6 /* EasingRotateAnimationType.m in Sources */,
 				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
-				104CD3001CDAD4A300C836E6 /* CustomCollectionViewCell.m in Sources */,
 				109606521C93B4A300CCB3AD /* AFURLResponseSerialization.m in Sources */,
 				102B84D31C3B925B001699A9 /* MD5.m in Sources */,
 				106BCFE61CDC80CD007C3EEE /* LoopTypeTwoCell.m in Sources */,
