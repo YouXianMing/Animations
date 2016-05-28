@@ -83,15 +83,7 @@
     
     [super viewDidLoad];
     
-    // Add UIBlurEffect
-    self.effectView                        = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-    self.effectView.userInteractionEnabled = NO;
-    self.effectView.frame                  = self.windowView.bounds;
-    self.effectView.alpha                  = 0.f;
-    [self.windowView addSubview:self.effectView];
-    
-    // [IMPORTANT] Enable the Push transitioning.
-    self.navigationController.delegate = self;
+    [self setup];
     
     [self configureDataSource];
     
@@ -100,6 +92,14 @@
     [self configureTitleView];
     
     [self useInteractivePopGestureRecognizer];
+}
+
+- (void)setup {
+    
+    [super setup];
+
+    // [IMPORTANT] Enable the Push transitioning.
+    self.navigationController.delegate = self;
 }
 
 - (void)configureTitleView {

@@ -22,7 +22,7 @@
     
     [UIView animateWithDuration:self.transitionDuration - 0.1 delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
         
-        controller.effectView.alpha    = 0.f;
+        controller.view.alpha          = 1.f;
         self.fromViewController.view.x = Width;
         
     } completion:^(BOOL finished) {
