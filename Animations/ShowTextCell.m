@@ -58,19 +58,13 @@
     if (adapter.cellType == kShowTextCellNormalType) {
         
         adapter.cellType = kShowTextCellExpendType;
-        
-        adapter.cellHeight = model.expendStringHeight;
-        [self.tableView beginUpdates];
-        [self.tableView endUpdates];
+        [self updateWithNewCellHeight:model.expendStringHeight animated:YES];
         [self expendState];
         
     } else {
     
         adapter.cellType = kShowTextCellNormalType;
-        
-        adapter.cellHeight = model.normalStringHeight;
-        [self.tableView beginUpdates];
-        [self.tableView endUpdates];
+        [self updateWithNewCellHeight:model.normalStringHeight animated:YES];
         [self normalState];
     }
 }

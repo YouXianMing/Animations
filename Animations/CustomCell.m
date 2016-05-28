@@ -38,4 +38,33 @@
 
 }
 
+- (void)setWeakReferenceWithCellDataAdapter:(CellDataAdapter *)dataAdapter
+                                       data:(id)data
+                                  indexPath:(NSIndexPath *)indexPath
+                                  tableView:(UITableView *)tableView {
+
+    _dataAdapter = dataAdapter;
+    _data        = data;
+    _indexPath   = indexPath;
+    _tableView   = tableView;
+}
+
+- (void)updateWithNewCellHeight:(CGFloat)height animated:(BOOL)animated {
+    
+    if (self.tableView && self.dataAdapter) {
+        
+        if (animated) {
+            
+            self.dataAdapter.cellHeight = height;
+            [self.tableView beginUpdates];
+            [self.tableView endUpdates];
+            
+        } else {
+        
+            self.dataAdapter.cellHeight = height;
+            [self.tableView reloadData];
+        }
+    }
+}
+
 @end

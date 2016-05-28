@@ -60,8 +60,10 @@
             ShowTextModel *model = [[ShowTextModel alloc] init];
             model.inputString    = strings[i];
             
-            [model calculateTheNormalStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]} fixedWidth:Width - 20];
-            [model calculateTheExpendStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]} fixedWidth:Width - 20];
+            [model calculateTheNormalStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]}
+                                                          fixedWidth:Width - 20];
+            [model calculateTheExpendStringHeightWithStringAttribute:@{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]}
+                                                          fixedWidth:Width - 20];
             
             CellDataAdapter *adapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"ShowTextCell" data:model
                                                                                     cellHeight:model.normalStringHeight
@@ -103,12 +105,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     CellDataAdapter *dataAdapter = self.datasArray[indexPath.row];
+    CustomCell      *cell        = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
     
-    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
-    cell.data        = dataAdapter.data;
-    cell.dataAdapter = dataAdapter;
-    cell.tableView   = tableView;
-    cell.indexPath   = indexPath;
+    [cell setWeakReferenceWithCellDataAdapter:dataAdapter data:dataAdapter.data indexPath:indexPath tableView:tableView];
     [cell loadContent];
     
     return cell;

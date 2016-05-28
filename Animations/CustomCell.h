@@ -34,7 +34,7 @@
 @property (nonatomic, weak) id <CustomCellDelegate>  delegate;
 
 /**
- *  CustomCell's data.
+ *  CustomCell's dataAdapter.
  */
 @property (nonatomic, weak) CellDataAdapter         *dataAdapter;
 
@@ -63,7 +63,7 @@
  */
 @property (nonatomic)       BOOL                     display;
 
-#pragma mark - Useful method.
+#pragma mark - Method you should overwrite.
 
 /**
  *  Setup cell, override by subclass.
@@ -80,9 +80,32 @@
  */
 - (void)loadContent;
 
+#pragma mark - Useful method.
+
 /**
- *  Selected event, override by subclass.
+ *  Convenient method to set some weak reference.
+ *
+ *  @param dataAdapter CellDataAdapter's object.
+ *  @param data        Data.
+ *  @param indexPath   IndexPath.
+ *  @param tableView   TableView.
+ */
+- (void)setWeakReferenceWithCellDataAdapter:(CellDataAdapter *)dataAdapter
+                                       data:(id)data
+                                  indexPath:(NSIndexPath *)indexPath
+                                  tableView:(UITableView *)tableView;
+
+/**
+ *  Selected event, you should use this method in 'tableView:didSelectRowAtIndexPath:' to make it effective.
  */
 - (void)selectedEvent;
+
+/**
+ *  Update the cell's height with animated or not, before you use this method, you should have the weak reference 'tableView' and 'dataAdapter', and this method will update the weak reference dataAdapter's property cellHeight.
+ *
+ *  @param height   The new cell height.
+ *  @param animated Animated or not.
+ */
+- (void)updateWithNewCellHeight:(CGFloat)height animated:(BOOL)animated;
 
 @end
