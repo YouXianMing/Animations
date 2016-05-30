@@ -79,28 +79,52 @@
 
 @implementation AnimationsListViewController
 
-- (void)viewDidLoad {
+- (void)setup {
+
+    [super setup];
     
-    [super viewDidLoad];
-    
-    [self setup];
+    [self rootViewControllerSetup];
     
     [self configureDataSource];
     
     [self configureTableView];
     
     [self configureTitleView];
+}
+
+#pragma mark - RootViewController setup.
+
+- (void)rootViewControllerSetup {
     
+    // [IMPORTANT] Enable the Push transitioning.
+    self.navigationController.delegate = self;
+    
+    // [IMPORTANT] Set the RootViewController's push delegate.
     [self useInteractivePopGestureRecognizer];
 }
 
-- (void)setup {
-    
-    [super setup];
+#pragma mark - Push or Pop event.
 
-    // [IMPORTANT] Enable the Push transitioning.
-    self.navigationController.delegate = self;
+- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC {
+    
+    if (operation == UINavigationControllerOperationPush) {
+        
+        return [PushAnimator new];
+        
+    } else if (operation == UINavigationControllerOperationPop) {
+        
+        return [PopAnimator new];
+        
+    } else {
+        
+        return nil;
+    }
 }
+
+#pragma mark - Config TitleView.
 
 - (void)configureTitleView {
     
@@ -142,6 +166,8 @@
         
     } afterDelaySecs:2.f];
 }
+
+#pragma mark - Config DataSource.
 
 - (void)configureDataSource {
     
@@ -209,7 +235,8 @@
     }
 }
 
-#pragma mark - tableView 相关
+#pragma mark - TableView Related.
+
 - (void)configureTableView {
     
     self.tableView                = [[UITableView alloc] initWithFrame:self.contentView.bounds style:UITableViewStylePlain];
@@ -270,28 +297,7 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-#pragma mark - Push or Pop event.
-
-- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                   animationControllerForOperation:(UINavigationControllerOperation)operation
-                                                fromViewController:(UIViewController *)fromVC
-                                                  toViewController:(UIViewController *)toVC {
-    
-    if (operation == UINavigationControllerOperationPush) {
-        
-        return [PushAnimator new];
-        
-    } else if (operation == UINavigationControllerOperationPop) {
-        
-        return [PopAnimator new];
-        
-    } else {
-        
-        return nil;
-    }
-}
-
-#pragma mark -
+#pragma mark - Overwrite system methods.
 
 - (void)viewDidAppear:(BOOL)animated {
     
