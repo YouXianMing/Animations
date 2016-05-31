@@ -36,8 +36,33 @@
  *
  *  @param theRealFilePath The real file path.
  *
- *  @return Exist or 
+ *  @return Exist or not.
  */
 + (BOOL)fileExistWithRealFilePath:(NSString *)theRealFilePath;
 
 @end
+
+/**
+ *  Transform related file path to real file path.
+ *
+ *  @param relatedFilePath Related file path, "~" means sandbox root, "-" means bundle file root.
+ *
+ *  @return The real file path.
+ */
+NS_INLINE NSString *filePath(NSString * relatedFilePath) {
+    
+    return [FileManager theRealFilePath:relatedFilePath];
+}
+
+/**
+ *  To check the file at the given file path exist or not.
+ *
+ *  @param theRealFilePath The real file path.
+ *
+ *  @return Exist or not.
+ */
+NS_INLINE BOOL fileExistWithRealFilePath(NSString * theRealFilePath) {
+    
+    return [FileManager fileExistWithRealFilePath:theRealFilePath];
+}
+
