@@ -82,8 +82,9 @@
     // 缩放变换
     perspectiveTransform = CATransform3DScale(perspectiveTransform, 0.75, 0.75, 0.75);
     
-    self.layer.transform = perspectiveTransform;
-    self.layer.speed     = 0.5;
+    self.layer.transform              = perspectiveTransform;
+    self.layer.allowsEdgeAntialiasing = YES; // 抗锯齿
+    self.layer.speed                  = 0.5;
 }
 
 - (void)normalStateEvent {

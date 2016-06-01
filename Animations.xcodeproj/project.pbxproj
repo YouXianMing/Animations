@@ -228,6 +228,7 @@
 		106CF0A31C376E190006419B /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0A01C376E190006419B /* HexColors.m */; };
 		107CF3951C2FFC01002DF93C /* LiveImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107CF3941C2FFC01002DF93C /* LiveImageViewController.m */; };
 		107CF3991C2FFD51002DF93C /* LiveImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 107CF3981C2FFD51002DF93C /* LiveImageView.m */; };
+		107D6BB91CFE756C00A1CC0A /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 107D6BB81CFE756C00A1CC0A /* LoadingView.m */; };
 		108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99311C0FD5A800B693F6 /* ClockViewController.m */; };
 		108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99341C0FD7A900B693F6 /* SystemTimeInfomation.m */; };
 		108A99381C0FE01100B693F6 /* RotateAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108A99371C0FE01100B693F6 /* RotateAnimationView.m */; };
@@ -799,6 +800,8 @@
 		107CF3941C2FFC01002DF93C /* LiveImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveImageViewController.m; sourceTree = "<group>"; };
 		107CF3971C2FFD51002DF93C /* LiveImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveImageView.h; sourceTree = "<group>"; };
 		107CF3981C2FFD51002DF93C /* LiveImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveImageView.m; sourceTree = "<group>"; };
+		107D6BB71CFE756C00A1CC0A /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		107D6BB81CFE756C00A1CC0A /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		108A99301C0FD5A800B693F6 /* ClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockViewController.h; sourceTree = "<group>"; };
 		108A99311C0FD5A800B693F6 /* ClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockViewController.m; sourceTree = "<group>"; };
 		108A99331C0FD7A900B693F6 /* SystemTimeInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemTimeInfomation.h; sourceTree = "<group>"; };
@@ -2373,6 +2376,8 @@
 				106CF0911C3764090006419B /* AlertViewController.m */,
 				106CF0941C37650D0006419B /* MessageAlertView.h */,
 				106CF0951C37650D0006419B /* MessageAlertView.m */,
+				107D6BB71CFE756C00A1CC0A /* LoadingView.h */,
+				107D6BB81CFE756C00A1CC0A /* LoadingView.m */,
 				106CF09B1C376DAA0006419B /* ButtonsAlertView.h */,
 				106CF09C1C376DAA0006419B /* ButtonsAlertView.m */,
 			);
@@ -3136,6 +3141,7 @@
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
 				104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */,
 				102B1F331C60E66F00A8FD40 /* SourceModel.m in Sources */,
+				107D6BB91CFE756C00A1CC0A /* LoadingView.m in Sources */,
 				1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */,
 				1020E2DA1C731AA500FF233E /* CAGradientMaskView.m in Sources */,
 				10E2D4C61CD592B900666EEB /* OffsetHeaderView.m in Sources */,

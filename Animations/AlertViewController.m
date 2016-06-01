@@ -37,7 +37,8 @@ typedef enum : NSUInteger {
                                                            target:self
                                                            action:@selector(buttonsEvent:)];
         [messageButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-        messageButton.center = CGPointMake(self.contentView.centerX, self.contentView.height / 3.f);
+        messageButton.exclusiveTouch = YES;
+        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 3.f);
         [self.contentView addSubview:messageButton];
     }
     
@@ -49,7 +50,8 @@ typedef enum : NSUInteger {
                                                            target:self
                                                            action:@selector(buttonsEvent:)];
         [messageButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-        messageButton.center = CGPointMake(self.contentView.centerX, self.contentView.height / 3.f * 2);
+        messageButton.exclusiveTouch = YES;
+        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 3.f * 2);
         [self.contentView addSubview:messageButton];
     }
 }
@@ -60,7 +62,7 @@ typedef enum : NSUInteger {
         
         AbsAlertMessageView *alertView   = [[MessageAlertView alloc] init];
         alertView.message                = @"惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。";
-        alertView.contentView            = self.contentView;
+        alertView.contentView            = self.loadingView;
         alertView.autoHiden              = YES;
         alertView.delayAutoHidenDuration = 2.f;
         [alertView show];
@@ -69,7 +71,7 @@ typedef enum : NSUInteger {
         
         AbsAlertMessageView *showView = [ButtonsAlertView new];
         showView.delegate             = self;
-        showView.contentView          = self.contentView;
+        showView.contentView          = self.loadingView;
         showView.buttonsTitle         = @[@"继续", @"放弃"];
         showView.message              = @"您的可用余额不足";
         UIButton *button              = (UIButton *)[showView viewWithKey:@"secondButton"];

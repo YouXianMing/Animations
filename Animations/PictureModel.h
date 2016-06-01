@@ -11,6 +11,11 @@
 @interface PictureModel : NSObject
 
 /**
+ *  图片地址字符串
+ */
+@property (nonatomic, strong) NSString *pictureUrlString;
+
+/**
  *  图片地址
  */
 @property (nonatomic, strong) NSURL     *pictureUrl;

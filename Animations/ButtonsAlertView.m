@@ -9,6 +9,7 @@
 #import "ButtonsAlertView.h"
 #import "UIFont+Fonts.h"
 #import "UIView+SetRect.h"
+#import "UIView+UserInteraction.h"
 #import "POP.h"
 #import "HexColors.h"
 
@@ -76,6 +77,7 @@
         
         [self.contentView addSubview:self];
         
+        [self.contentView enabledUserInteraction];
         [self createBlackView];
         [self createMessageView];
     }
@@ -133,10 +135,11 @@
         
         [self.messageView addSubview:[[self class] lineViewWithFrame:CGRectMake(0, self.messageView.height - 40, self.messageView.width, 0.5f) color:[UIColor colorWithHexString:@"#B9B9B9"]]];
         
-        self.firstButton.frame = CGRectMake(0, self.messageView.height - 40, self.messageView.width, 40);
+        self.firstButton.frame                  = CGRectMake(0, self.messageView.height - 40, self.messageView.width, 40);
         self.firstButton.userInteractionEnabled = NO;
         self.firstButton.tag                    = 0;
         self.firstButton.titleLabel.font        = [UIFont HeitiSCWithFontSize:16.f];
+        self.firstButton.exclusiveTouch         = YES;
         [self.firstButton setTitle:self.buttonsTitle[0] forState:UIControlStateNormal];
         [self.firstButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self.firstButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
@@ -147,14 +150,18 @@
     // 如果有2个按钮
     if (buttonsInfo.count == 2) {
         
-        [self.messageView addSubview:[[self class] lineViewWithFrame:CGRectMake(0, self.messageView.height - 40, self.messageView.width, 0.5f) color:[UIColor colorWithHexString:@"#B9B9B9"]]];
-        [self.messageView addSubview:[[self class] lineViewWithFrame:CGRectMake(self.messageView.width / 2.f, self.messageView.height - 40, 0.5f, 40.f) color:[UIColor colorWithHexString:@"#B9B9B9"]]];
+        [self.messageView addSubview:[[self class] lineViewWithFrame:CGRectMake(0, self.messageView.height - 40, self.messageView.width, 0.5f)
+                                                               color:[UIColor colorWithHexString:@"#B9B9B9"]]];
+        [self.messageView addSubview:[[self class] lineViewWithFrame:CGRectMake(self.messageView.width / 2.f, self.messageView.height - 40, 0.5f, 40.f)
+                                                               color:[UIColor colorWithHexString:@"#B9B9B9"]]];
         
-        self.firstButton.frame = CGRectMake(0, self.messageView.height - 40, self.messageView.width / 2.f, 40);
+        self.firstButton.frame          = CGRectMake(0, self.messageView.height - 40, self.messageView.width / 2.f, 40);
+        self.firstButton.exclusiveTouch = YES;
         [self.firstButton setTitle:self.buttonsTitle[0] forState:UIControlStateNormal];
         [self.messageView addSubview:self.firstButton];
         
-        self.secondButton.frame = CGRectMake(self.messageView.width / 2.f, self.messageView.height - 40, self.messageView.width / 2.f, 40);
+        self.secondButton.frame          = CGRectMake(self.messageView.width / 2.f, self.messageView.height - 40, self.messageView.width / 2.f, 40);
+        self.secondButton.exclusiveTouch = YES;
         [self.secondButton setTitle:self.buttonsTitle[1] forState:UIControlStateNormal];
         [self.messageView addSubview:self.secondButton];
     }
@@ -187,6 +194,7 @@
         
     } completion:^(BOOL finished) {
         
+        [self.contentView disableUserInteraction];
         [self removeFromSuperview];
     }];
 }

@@ -14,6 +14,7 @@
 #import "OffsetImageCell.h"
 #import "MessageAlertView.h"
 #import "OffsetHeaderView.h"
+#import "LoadingView.h"
 #import "GCD.h"
 
 @interface OffsetCellViewController () <AbsNetworkingDelegate, UITableViewDelegate, UITableViewDataSource>
@@ -21,7 +22,7 @@
 @property (nonatomic, strong) Networking        *networking;
 @property (nonatomic, strong) UITableView       *tableView;
 @property (nonatomic, strong) WanDouJiaModel    *rootModel;
-@property (nonatomic, strong) MessageAlertView  *showLoadingView;
+@property (nonatomic, strong) LoadingView       *showLoadingView;
 
 @end
 
@@ -58,8 +59,7 @@
     [self.tableView registerClass:[OffsetHeaderView class] forHeaderFooterViewReuseIdentifier:@"OffsetHeaderView"];
     [self.contentView addSubview:self.tableView];
     
-    self.showLoadingView             = [[MessageAlertView alloc] init];
-    self.showLoadingView.message     = @"loading...";
+    self.showLoadingView             = [[LoadingView alloc] init];
     self.showLoadingView.contentView = self.loadingView;
     [self.showLoadingView show];
 }

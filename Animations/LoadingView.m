@@ -1,25 +1,27 @@
 //
-//  MessageAlertView.m
+//  LoadingView.m
 //  Animations
 //
-//  Created by YouXianMing on 16/1/2.
+//  Created by YouXianMing on 16/6/1.
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "MessageAlertView.h"
+#import "LoadingView.h"
 #import "UIFont+Fonts.h"
 #import "UIView+SetRect.h"
 #import "UIView+UserInteraction.h"
+#import "InfiniteRotationView.h"
+#import "UIImage+ImageEffects.h"
 #import "POP.h"
 
-@interface MessageAlertView ()
+@interface LoadingView ()
 
 @property (nonatomic, strong)  UIView  *blackView;
 @property (nonatomic, strong)  UIView  *messageView;
 
 @end
 
-@implementation MessageAlertView
+@implementation LoadingView
 
 - (void)setContentView:(UIView *)contentView {
     
@@ -67,26 +69,36 @@
 
 - (void)createMessageView {
     
-    // 创建信息label
-    NSString *text          = self.message;
-    UILabel *textLabel      = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 170, 0)];
-    textLabel.text          = text;
-    textLabel.font          = [UIFont HeitiSCWithFontSize:15.f];
-    textLabel.textColor     = [UIColor whiteColor];
-    textLabel.textAlignment = NSTextAlignmentCenter;
-    textLabel.numberOfLines = 0;
-    [textLabel sizeToFit];
-    
     // 创建信息窗体view
-    self.messageView                   = [[UIView alloc] initWithFrame:CGRectMake(0, 0, textLabel.width + 20, textLabel.height + 20)];
-    self.messageView.backgroundColor   = [[UIColor blackColor] colorWithAlphaComponent:0.75f];
-    self.messageView.layer.borderWidth = 0.5f;
-    self.messageView.layer.borderColor = [UIColor blackColor].CGColor;
-    self.messageView.center            = self.contentView.middlePoint;
-    textLabel.center                   = self.messageView.middlePoint;
-    self.messageView.alpha             = 0.f;
-    [self.messageView addSubview:textLabel];
+    self.messageView                    = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    self.messageView.backgroundColor    = [[UIColor blackColor] colorWithAlphaComponent:0.45f];
+    self.messageView.layer.cornerRadius = 3.f;
+    self.messageView.center             = self.contentView.middlePoint;
+    self.messageView.alpha              = 0.f;
     [self addSubview:self.messageView];
+    
+    {
+        InfiniteRotationView *rotateView = [[InfiniteRotationView alloc] initWithFrame:self.messageView.bounds];
+        rotateView.speed                 = 1.f;
+        [rotateView startRotateAnimation];
+        [self.messageView addSubview:rotateView];
+        
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rotateCircle"]];
+        imageView.center       = rotateView.middlePoint;
+        [rotateView addSubview:imageView];
+    }
+    
+    {
+        InfiniteRotationView *rotateView = [[InfiniteRotationView alloc] initWithFrame:self.messageView.bounds];
+        rotateView.speed                 = 0.5f;
+        rotateView.clockWise             = NO;
+        [rotateView startRotateAnimation];
+        [self.messageView addSubview:rotateView];
+        
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"rotateCircle"] scaleWithFixedWidth:25.f]];
+        imageView.center       = rotateView.middlePoint;
+        [rotateView addSubview:imageView];
+    }
     
     // 执行动画
     POPBasicAnimation  *alpha = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];

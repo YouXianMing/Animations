@@ -15,6 +15,7 @@
 #import "UIFont+Fonts.h"
 #import "UIView+SetRect.h"
 #import "MessageAlertView.h"
+#import "LoadingView.h"
 #import "GCD.h"
 
 @interface TableViewLoadDataController () <UITableViewDelegate, UITableViewDataSource, AbsNetworkingDelegate>
@@ -22,8 +23,7 @@
 @property (nonatomic, strong) UITableView                         *tableView;
 @property (nonatomic, strong) Networking                          *dataNetworking;
 @property (nonatomic, strong) NSMutableArray <CellDataAdapter *>  *datasArray;
-
-@property (nonatomic, strong) MessageAlertView                    *showLoadingView;
+@property (nonatomic, strong) LoadingView                         *showLoadingView;
 
 @end
 
@@ -47,9 +47,8 @@
 
 - (void)startNetworking {
     
-    self.showLoadingView             = [[MessageAlertView alloc] init];
-    self.showLoadingView.message     = @"loading...";
-    self.showLoadingView.contentView = self.contentView;
+    self.showLoadingView             = [[LoadingView alloc] init];
+    self.showLoadingView.contentView = self.loadingView;
     [self.showLoadingView show];
     
     self.dataNetworking = [Networking getMethodNetworkingWithUrlString:@"https://api.app.net/stream/0/posts/stream/global"
@@ -99,6 +98,12 @@
 
     LoadUrlDataCell *dataCell = (LoadUrlDataCell *)[tableView cellForRowAtIndexPath:indexPath];
     [dataCell cancelAnimation];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    CustomCell *customCell = [tableView cellForRowAtIndexPath:indexPath];
+    [customCell selectedEvent];
 }
 
 #pragma mark - NetworkingDelegate
