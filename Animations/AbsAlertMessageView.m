@@ -50,5 +50,4 @@
     return [self.mapTable objectForKey:key];
 }
 
-
 @end

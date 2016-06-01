@@ -7,7 +7,6 @@
 //
 
 #import "CustomNormalContentViewController.h"
-#import "CustomViewControllerSubviewTagValue.h"
 
 @interface CustomNormalContentViewController ()
 
@@ -31,36 +30,31 @@
 
 - (void)buildBackgroundView {
     
-    self.backgroundView     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height)];
-    self.backgroundView.tag = kBackgroundView;
+    self.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height)];
     [self.view addSubview:self.backgroundView];
 }
 
 - (void)buildTitleView {
     
-    self.titleView     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, 64)];
-    self.titleView.tag = kTitleView;
+    self.titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, 64)];
     [self.view addSubview:self.titleView];
 }
 
 - (void)buildContentView {
     
-    self.contentView     = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.width, self.height - 64)];
-    self.contentView.tag = kContentView;
+    self.contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.width, self.height - 64)];
     [self.view addSubview:self.contentView];
 }
 
 - (void)buildLoadingView {
     
-    self.loadingView     = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.width, self.height - 64)];
-    self.loadingView.tag = kLoadingView;
+    self.loadingView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.width, self.height - 64)];
     [self.view addSubview:self.loadingView];
 }
 
 - (void)buildWindowView {
     
-    self.windowView     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height)];
-    self.windowView.tag = kWindowView;
+    self.windowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height)];
     [self.view addSubview:self.windowView];
 }
 
