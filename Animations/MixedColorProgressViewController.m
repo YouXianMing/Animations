@@ -74,6 +74,9 @@
         _downLabel.text               = @"YouXianMing - iOS Programmer";
         _downLabel.textAlignment = NSTextAlignmentCenter;
         [_downView addSubview:_downLabel];
+        
+        _downView.layer.borderWidth = 0.5f;
+        _downView.layer.borderColor = [UIColor redColor].CGColor;
     }
     
     // 显示上面一层
