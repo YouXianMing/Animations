@@ -22,9 +22,8 @@
 - (instancetype)initWithRootViewController:(CustomViewController *)rootViewController setNavigationBarHidden:(BOOL)hidden {
 
     CustomNavigationController *ncController = [[[self class] alloc] initWithRootViewController:rootViewController];
-    [rootViewController useInteractivePopGestureRecognizer];
-    
     [ncController setNavigationBarHidden:hidden animated:NO];
+    [rootViewController useInteractivePopGestureRecognizer];
     
     return ncController;
 }

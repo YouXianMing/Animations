@@ -326,6 +326,8 @@
 		10E2D50E1CD5DE0400666EEB /* FontInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D50D1CD5DE0400666EEB /* FontInfoModel.m */; };
 		10E2D5121CD63EDF00666EEB /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D5111CD63EDF00666EEB /* iCarousel.m */; };
 		10E2D5151CD63F0900666EEB /* iCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D5141CD63F0900666EEB /* iCarouselViewController.m */; };
+		10EFE2021D015F6C00159779 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EFE2011D015F6C00159779 /* CustomTabBarViewController.m */; };
+		10EFE2051D015FA500159779 /* DefaultNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EFE2041D015FA500159779 /* DefaultNotificationCenter.m */; };
 		10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */; };
 		B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */; };
 		B5D011941C0BE2410075BC2E /* RotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011901C0BE2410075BC2E /* RotateView.m */; };
@@ -1000,6 +1002,10 @@
 		10E2D5111CD63EDF00666EEB /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		10E2D5131CD63F0900666EEB /* iCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarouselViewController.h; sourceTree = "<group>"; };
 		10E2D5141CD63F0900666EEB /* iCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarouselViewController.m; sourceTree = "<group>"; };
+		10EFE2001D015F6C00159779 /* CustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
+		10EFE2011D015F6C00159779 /* CustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
+		10EFE2031D015FA500159779 /* DefaultNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultNotificationCenter.h; sourceTree = "<group>"; };
+		10EFE2041D015FA500159779 /* DefaultNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultNotificationCenter.m; sourceTree = "<group>"; };
 		10FDF9CA1CA50AED00871B45 /* UIView+AnimationsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationsListViewController.h"; sourceTree = "<group>"; };
 		10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationsListViewController.m"; sourceTree = "<group>"; };
 		B5D0118C1C0BE1B30075BC2E /* HeaderViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewTapAnimationController.h; sourceTree = "<group>"; };
@@ -1192,6 +1198,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				10EFE2061D015FB900159779 /* DefaultNotificationCenter */,
 				1068FD4A1CF8479500BE431C /* TransitionAnimator */,
 				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
 				10B345161CEE9BB700BFC15B /* PhoneCall */,
@@ -1709,10 +1716,12 @@
 		10381FC51BF9B8A800E5E476 /* CustomNavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				10381FC21BF9B77000E5E476 /* CustomNavigationController.h */,
-				10381FC31BF9B77000E5E476 /* CustomNavigationController.m */,
 				104F0CC31BFAC04300C46E6A /* CustomViewController.h */,
 				104F0CC41BFAC04300C46E6A /* CustomViewController.m */,
+				10EFE2001D015F6C00159779 /* CustomTabBarViewController.h */,
+				10EFE2011D015F6C00159779 /* CustomTabBarViewController.m */,
+				10381FC21BF9B77000E5E476 /* CustomNavigationController.h */,
+				10381FC31BF9B77000E5E476 /* CustomNavigationController.m */,
 				10CEC54F1C20F5E400B0CA7D /* CustomNormalContentViewController.h */,
 				10CEC5501C20F5E400B0CA7D /* CustomNormalContentViewController.m */,
 				10CEC5521C20F5F400B0CA7D /* CustomFullContentViewController.h */,
@@ -2739,6 +2748,15 @@
 			name = iCarouselViewController;
 			sourceTree = "<group>";
 		};
+		10EFE2061D015FB900159779 /* DefaultNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				10EFE2031D015FA500159779 /* DefaultNotificationCenter.h */,
+				10EFE2041D015FA500159779 /* DefaultNotificationCenter.m */,
+			);
+			name = DefaultNotificationCenter;
+			sourceTree = "<group>";
+		};
 		10FDF9C91CA50AA500871B45 /* Disposable-Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -2939,6 +2957,7 @@
 				1011BA551CD40C2900F29FB9 /* UIView+UserInteraction.m in Sources */,
 				10381FC41BF9B77000E5E476 /* CustomNavigationController.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
+				10EFE2021D015F6C00159779 /* CustomTabBarViewController.m in Sources */,
 				106CF0A31C376E190006419B /* HexColors.m in Sources */,
 				102296B61C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				10E2D5081CD5DC4500666EEB /* FontListCell.m in Sources */,
@@ -3049,6 +3068,7 @@
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
 				106BCFD91CDC67CC007C3EEE /* LoopViewCell.m in Sources */,
 				1011BADD1CD48C8D00F29FB9 /* NodeModelRootNavigationController.m in Sources */,
+				10EFE2051D015FA500159779 /* DefaultNotificationCenter.m in Sources */,
 				103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */,
 				10A34F6D1C55AE9500E1A0E0 /* SignMaker.m in Sources */,
 				1096062A1C93B47800CCB3AD /* NetworkingReachability.m in Sources */,
