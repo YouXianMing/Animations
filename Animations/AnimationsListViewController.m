@@ -67,6 +67,7 @@
 #import "GridFlowLayoutViewController.h"
 #import "InfiniteLoopViewController.h"
 #import "BaseControlViewController.h"
+#import "SpringScaleViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
@@ -219,7 +220,8 @@
                        [Item itemWithName:@"旋转木马效果" object:[iCarouselViewController class]],
                        [Item itemWithName:@"水平方向瀑布流" object:[GridFlowLayoutViewController class]],
                        [Item itemWithName:@"无限轮播图" object:[InfiniteLoopViewController class]],
-                       [Item itemWithName:@"BaseControl按钮合集" object:[BaseControlViewController class]],];
+                       [Item itemWithName:@"BaseControl按钮合集" object:[BaseControlViewController class]],
+                       [Item itemWithName:@"POP-缩放" object:[SpringScaleViewController class]]];
     
     self.items = [NSMutableArray array];
     

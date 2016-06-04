@@ -328,6 +328,7 @@
 		10E2D5151CD63F0900666EEB /* iCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D5141CD63F0900666EEB /* iCarouselViewController.m */; };
 		10EFE2021D015F6C00159779 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EFE2011D015F6C00159779 /* CustomTabBarViewController.m */; };
 		10EFE2051D015FA500159779 /* DefaultNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EFE2041D015FA500159779 /* DefaultNotificationCenter.m */; };
+		10EFE2121D01874900159779 /* SpringScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EFE2111D01874900159779 /* SpringScaleViewController.m */; };
 		10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */; };
 		B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0118D1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m */; };
 		B5D011941C0BE2410075BC2E /* RotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011901C0BE2410075BC2E /* RotateView.m */; };
@@ -1006,6 +1007,8 @@
 		10EFE2011D015F6C00159779 /* CustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
 		10EFE2031D015FA500159779 /* DefaultNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultNotificationCenter.h; sourceTree = "<group>"; };
 		10EFE2041D015FA500159779 /* DefaultNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultNotificationCenter.m; sourceTree = "<group>"; };
+		10EFE2101D01874900159779 /* SpringScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringScaleViewController.h; sourceTree = "<group>"; };
+		10EFE2111D01874900159779 /* SpringScaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringScaleViewController.m; sourceTree = "<group>"; };
 		10FDF9CA1CA50AED00871B45 /* UIView+AnimationsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationsListViewController.h"; sourceTree = "<group>"; };
 		10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationsListViewController.m"; sourceTree = "<group>"; };
 		B5D0118C1C0BE1B30075BC2E /* HeaderViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewTapAnimationController.h; sourceTree = "<group>"; };
@@ -1805,6 +1808,7 @@
 				104CD2FD1CDAD46500C836E6 /* GridFlowLayoutViewController */,
 				106BCFC11CDC672F007C3EEE /* InfiniteLoopViewController */,
 				1057021C1CF6DABA003B10C6 /* BaseControlViewController */,
+				10EFE2131D01874E00159779 /* SpringScaleViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2757,6 +2761,15 @@
 			name = DefaultNotificationCenter;
 			sourceTree = "<group>";
 		};
+		10EFE2131D01874E00159779 /* SpringScaleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				10EFE2101D01874900159779 /* SpringScaleViewController.h */,
+				10EFE2111D01874900159779 /* SpringScaleViewController.m */,
+			);
+			name = SpringScaleViewController;
+			sourceTree = "<group>";
+		};
 		10FDF9C91CA50AA500871B45 /* Disposable-Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -3024,6 +3037,7 @@
 				109606521C93B4A300CCB3AD /* AFURLResponseSerialization.m in Sources */,
 				102B84D31C3B925B001699A9 /* MD5.m in Sources */,
 				106BCFE61CDC80CD007C3EEE /* LoopTypeTwoCell.m in Sources */,
+				10EFE2121D01874900159779 /* SpringScaleViewController.m in Sources */,
 				1041AE6D1CEC4507005697B8 /* CustomCollectionCell.m in Sources */,
 				102296B11C38D122001AF5BB /* ResponseData.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
