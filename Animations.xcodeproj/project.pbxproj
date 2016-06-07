@@ -1716,7 +1716,7 @@
 			path = WebCore;
 			sourceTree = "<group>";
 		};
-		10381FC51BF9B8A800E5E476 /* CustomNavigationController */ = {
+		10381FC51BF9B8A800E5E476 /* CustomControllers */ = {
 			isa = PBXGroup;
 			children = (
 				104F0CC31BFAC04300C46E6A /* CustomViewController.h */,
@@ -1736,7 +1736,7 @@
 				10CEC5871C21345600B0CA7D /* FullTitleVisualEffectViewController.h */,
 				10CEC5881C21345600B0CA7D /* FullTitleVisualEffectViewController.m */,
 			);
-			name = CustomNavigationController;
+			name = CustomControllers;
 			sourceTree = "<group>";
 		};
 		10381FC61BF9CC0900E5E476 /* ButtonPressViewController */ = {
@@ -1820,7 +1820,7 @@
 				102B84EC1C3BCAB4001699A9 /* CellDataAdapter */,
 				102296C61C393089001AF5BB /* CustomHeaderFooterView */,
 				105D98A11C07F16700FD1013 /* CustomCell */,
-				10381FC51BF9B8A800E5E476 /* CustomNavigationController */,
+				10381FC51BF9B8A800E5E476 /* CustomControllers */,
 				10D254121C577597003B6734 /* AbstractAdapter */,
 			);
 			name = AbstractBaseClass;
