@@ -199,14 +199,14 @@
     CGContextAddLineToPoint(_context, point.x, point.y);
 }
 
-- (void)addLinePoints:(NSArray <NSString *> *)points {
+- (void)addLinePoints:(NSArray <NSValue *> *)points {
     
     if (points.count > 1) {
         
         for (int i = 0; i < points.count; i++) {
             
-            NSString *pointString = points[i];
-            CGPoint   point       = CGPointFromString(pointString);
+            NSValue  *pointValue = points[i];
+            CGPoint   point      = pointValue.CGPointValue;
             
             // first point must be used by method "CGContextMoveToPoint"
             if (i == 0) {

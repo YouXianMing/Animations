@@ -157,9 +157,9 @@ typedef void(^CGContextObjectDrawBlock_t)(CGContextObject *contextObject);
 /**
  *  Start point and points, it's a combine by moveToStartPoint: & addLineToPoint:
  *
- *  @param points array with point's string
+ *  @param points array with point's value.
  */
-- (void)addLinePoints:(NSArray <NSString *> *)points;
+- (void)addLinePoints:(NSArray <NSValue *> *)points;
 
 /**
  *  Appends a cubic Bézier curve from the current point, using the provided control points and end point .
