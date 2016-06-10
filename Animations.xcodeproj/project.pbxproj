@@ -48,6 +48,7 @@
 		1017F13B1C35715400E245F8 /* NSString+JSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017F1361C35715400E245F8 /* NSString+JSONData.m */; };
 		1017F13C1C35715400E245F8 /* NSData+JSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017F1381C35715400E245F8 /* NSData+JSONData.m */; };
 		101EA3EE1C489C2E00D5D487 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 101EA3ED1C489C2E00D5D487 /* DateFormatter.m */; };
+		1020A3731D08F9BB00056B0E /* BadgeValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020A3721D08F9BB00056B0E /* BadgeValueView.m */; };
 		1020E2D31C73197B00FF233E /* CAGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2D21C73197B00FF233E /* CAGradientView.m */; };
 		1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2D61C7319D000FF233E /* CAGradientViewController.m */; };
 		1020E2DA1C731AA500FF233E /* CAGradientMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2D91C731AA500FF233E /* CAGradientMaskView.m */; };
@@ -177,6 +178,7 @@
 		104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2A1BFC1C9C00C46E6A /* ForegroundColorAttribute.m */; };
 		104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2D1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m */; };
 		104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */; };
+		1051890C1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1051890B1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m */; };
 		10567E491C45411700625C6B /* api.md in Resources */ = {isa = PBXBuildFile; fileRef = 10567E481C45411700625C6B /* api.md */; };
 		105702121CF6CE16003B10C6 /* POPScaleControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 105702111CF6CE16003B10C6 /* POPScaleControl.m */; };
 		105702151CF6CF05003B10C6 /* POPBaseControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 105702141CF6CF05003B10C6 /* POPBaseControl.m */; };
@@ -420,6 +422,8 @@
 		1017F1381C35715400E245F8 /* NSData+JSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JSONData.m"; sourceTree = "<group>"; };
 		101EA3EC1C489C2E00D5D487 /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatter.h; sourceTree = "<group>"; };
 		101EA3ED1C489C2E00D5D487 /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
+		1020A3711D08F9BB00056B0E /* BadgeValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeValueView.h; sourceTree = "<group>"; };
+		1020A3721D08F9BB00056B0E /* BadgeValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeValueView.m; sourceTree = "<group>"; };
 		1020E2D11C73197B00FF233E /* CAGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAGradientView.h; sourceTree = "<group>"; };
 		1020E2D21C73197B00FF233E /* CAGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAGradientView.m; sourceTree = "<group>"; };
 		1020E2D51C7319D000FF233E /* CAGradientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAGradientViewController.h; sourceTree = "<group>"; };
@@ -698,6 +702,8 @@
 		104F0D2E1BFC1C9C00C46E6A /* NSString+StringAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringAttribute.h"; sourceTree = "<group>"; };
 		104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringAttribute.m"; sourceTree = "<group>"; };
 		104F0D301BFC1C9C00C46E6A /* StringAttributeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringAttributeHelper.h; sourceTree = "<group>"; };
+		1051890A1D0A65DE00F606FB /* NSObject+PropertiesInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertiesInfomation.h"; sourceTree = "<group>"; };
+		1051890B1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertiesInfomation.m"; sourceTree = "<group>"; };
 		10567E481C45411700625C6B /* api.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = api.md; sourceTree = "<group>"; };
 		105702101CF6CE16003B10C6 /* POPScaleControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPScaleControl.h; sourceTree = "<group>"; };
 		105702111CF6CE16003B10C6 /* POPScaleControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPScaleControl.m; sourceTree = "<group>"; };
@@ -1201,6 +1207,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				105189091D0A65D500F606FB /* NSObject+Category */,
 				10EFE2061D015FB900159779 /* DefaultNotificationCenter */,
 				1068FD4A1CF8479500BE431C /* TransitionAnimator */,
 				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
@@ -1290,6 +1297,15 @@
 				101EA3ED1C489C2E00D5D487 /* DateFormatter.m */,
 			);
 			name = DateFormatter;
+			sourceTree = "<group>";
+		};
+		1020A3741D08F9C000056B0E /* BadgeValueView */ = {
+			isa = PBXGroup;
+			children = (
+				1020A3711D08F9BB00056B0E /* BadgeValueView.h */,
+				1020A3721D08F9BB00056B0E /* BadgeValueView.m */,
+			);
+			name = BadgeValueView;
 			sourceTree = "<group>";
 		};
 		1020E2D01C73196D00FF233E /* CAGradientView */ = {
@@ -2104,6 +2120,15 @@
 			path = "StringAttribute+Category";
 			sourceTree = "<group>";
 		};
+		105189091D0A65D500F606FB /* NSObject+Category */ = {
+			isa = PBXGroup;
+			children = (
+				1051890A1D0A65DE00F606FB /* NSObject+PropertiesInfomation.h */,
+				1051890B1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m */,
+			);
+			name = "NSObject+Category";
+			sourceTree = "<group>";
+		};
 		1057021C1CF6DABA003B10C6 /* BaseControlViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2234,6 +2259,7 @@
 				1041AE4A1CEBFD9D005697B8 /* UIView+Category */,
 				106CF09A1C3765490006419B /* UIFont+Categories */,
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
+				1020A3741D08F9C000056B0E /* BadgeValueView */,
 				1059F39E1CF4014700F63810 /* GridCollectionView */,
 				106BCFC21CDC6740007C3EEE /* InfiniteLoopView */,
 				10E2D50F1CD63EDF00666EEB /* iCarousel */,
@@ -2965,6 +2991,7 @@
 				B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */,
 				1047D0F21C465753009ADED6 /* InfiniteRotationView.m in Sources */,
 				10E2D4F11CD5962000666EEB /* UIButton+WebCache.m in Sources */,
+				1020A3731D08F9BB00056B0E /* BadgeValueView.m in Sources */,
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
 				1020E3381C759B3400FF233E /* MotionEffectViewController.m in Sources */,
 				1011BA551CD40C2900F29FB9 /* UIView+UserInteraction.m in Sources */,
@@ -3122,6 +3149,7 @@
 				102B1F2D1C60E66F00A8FD40 /* DescriptionModel.m in Sources */,
 				B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */,
 				1047E2341CC5AF5400E13D1C /* LazyFadeInViewController.m in Sources */,
+				1051890C1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m in Sources */,
 				104F0D321BFC1C9C00C46E6A /* FontAttribute.m in Sources */,
 				1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */,
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
