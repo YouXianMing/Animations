@@ -35,18 +35,27 @@
 }
 
 - (void)selectedEvent {
-
+    
 }
 
 - (void)setWeakReferenceWithCellDataAdapter:(CellDataAdapter *)dataAdapter
                                        data:(id)data
                                   indexPath:(NSIndexPath *)indexPath
                                   tableView:(UITableView *)tableView {
-
+    
     _dataAdapter = dataAdapter;
     _data        = data;
     _indexPath   = indexPath;
     _tableView   = tableView;
+}
+
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
+                                                   data:(id)data
+                                             cellHeight:(CGFloat)height
+                                                   type:(NSInteger)type {
+    
+    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:NSStringFromClass([self class])
+                                                              data:data cellHeight:height cellType:type];
 }
 
 - (void)updateWithNewCellHeight:(CGFloat)height animated:(BOOL)animated {
@@ -60,7 +69,7 @@
             [self.tableView endUpdates];
             
         } else {
-        
+            
             self.dataAdapter.cellHeight = height;
             [self.tableView reloadData];
         }

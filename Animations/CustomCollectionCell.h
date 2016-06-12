@@ -61,7 +61,7 @@
  */
 @property (nonatomic)       BOOL                     display;
 
-#pragma mark - Useful method.
+#pragma mark - Method you should overwrite.
 
 /**
  *  Setup cell, override by subclass.
@@ -78,9 +78,26 @@
  */
 - (void)loadContent;
 
+#pragma mark - Useful method.
+
 /**
  *  Selected event, override by subclass.
  */
 - (void)selectedEvent;
+
+/**
+ *  Create the cell's dataAdapter.
+ *
+ *  @param reuseIdentifier Cell reuseIdentifier, can be nil.
+ *  @param data            Cell's data, can be nil.
+ *  @param height          Cell's height.
+ *  @param type            Cell's type.
+ *
+ *  @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
+                                                   data:(id)data
+                                             cellHeight:(CGFloat)height
+                                                   type:(NSInteger)type;
 
 @end

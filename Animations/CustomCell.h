@@ -83,6 +83,21 @@
 #pragma mark - Useful method.
 
 /**
+ *  Create the cell's dataAdapter.
+ *
+ *  @param reuseIdentifier Cell reuseIdentifier, can be nil.
+ *  @param data            Cell's data, can be nil.
+ *  @param height          Cell's height.
+ *  @param type            Cell's type.
+ *
+ *  @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
+                                                   data:(id)data
+                                             cellHeight:(CGFloat)height
+                                                   type:(NSInteger)type;
+
+/**
  *  Convenient method to set some weak reference.
  *
  *  @param dataAdapter CellDataAdapter's object.

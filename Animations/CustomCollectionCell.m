@@ -38,4 +38,13 @@
     
 }
 
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
+                                                   data:(id)data
+                                             cellHeight:(CGFloat)height
+                                                   type:(NSInteger)type {
+    
+    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:NSStringFromClass([self class])
+                                                              data:data cellHeight:height cellType:type];
+}
+
 @end
