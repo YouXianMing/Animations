@@ -13,19 +13,19 @@
 /**
  *  Set the view whose tag matches the specified value.
  *
- *  @param view      View.
- *  @param tagString String.
+ *  @param view View.
+ *  @param tag  tag.
  */
-- (void)setView:(UIView *)view withTagString:(NSString *)tagString;
+- (void)setView:(UIView *)view withTag:(NSInteger)tag;
 
 /**
- *  Get the view from the tagString.
+ *  Get the view from the tag.
  *
- *  @param tagString String.
+ *  @param tag.
  *
- *  @return view.
+ *  @return view's object.
  */
-- (id)viewWithTagSting:(NSString *)tagString;
+- (id)viewWithTag:(NSInteger)tag;
 
 /**
  *  Screen's width.

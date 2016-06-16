@@ -305,6 +305,7 @@
 		10D4F6091C41486E00D056EB /* CATransform3DM34Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F6081C41486E00D056EB /* CATransform3DM34Controller.m */; };
 		10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F60C1C41532100D056EB /* PressAnimationButtonController.m */; };
 		10D4F6111C41538C00D056EB /* PressAnimationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F6101C41538C00D056EB /* PressAnimationButton.m */; };
+		10E091071D1238F000FE5F74 /* UIView+CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E091061D1238F000FE5F74 /* UIView+CustomViewController.m */; };
 		10E2D4C61CD592B900666EEB /* OffsetHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D4C51CD592B900666EEB /* OffsetHeaderView.m */; };
 		10E2D4E81CD5962000666EEB /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D4C81CD5962000666EEB /* MKAnnotationView+WebCache.m */; };
 		10E2D4E91CD5962000666EEB /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D4CA1CD5962000666EEB /* NSData+ImageContentType.m */; };
@@ -963,6 +964,8 @@
 		10D4F60C1C41532100D056EB /* PressAnimationButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressAnimationButtonController.m; sourceTree = "<group>"; };
 		10D4F60F1C41538C00D056EB /* PressAnimationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PressAnimationButton.h; sourceTree = "<group>"; };
 		10D4F6101C41538C00D056EB /* PressAnimationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressAnimationButton.m; sourceTree = "<group>"; };
+		10E091051D1238F000FE5F74 /* UIView+CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CustomViewController.h"; sourceTree = "<group>"; };
+		10E091061D1238F000FE5F74 /* UIView+CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CustomViewController.m"; sourceTree = "<group>"; };
 		10E2D4C41CD592B900666EEB /* OffsetHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffsetHeaderView.h; sourceTree = "<group>"; };
 		10E2D4C51CD592B900666EEB /* OffsetHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffsetHeaderView.m; sourceTree = "<group>"; };
 		10E2D4C71CD5962000666EEB /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -1738,6 +1741,8 @@
 		10381FC51BF9B8A800E5E476 /* CustomControllers */ = {
 			isa = PBXGroup;
 			children = (
+				10E091051D1238F000FE5F74 /* UIView+CustomViewController.h */,
+				10E091061D1238F000FE5F74 /* UIView+CustomViewController.m */,
 				104F0CC31BFAC04300C46E6A /* CustomViewController.h */,
 				104F0CC41BFAC04300C46E6A /* CustomViewController.m */,
 				10EFE2001D015F6C00159779 /* CustomTabBarViewController.h */,
@@ -2982,6 +2987,7 @@
 				B5D0119E1C0BE33E0075BC2E /* ClassModel.m in Sources */,
 				10381F711BF9B47000E5E476 /* Item.m in Sources */,
 				102296BB1C38D3D6001AF5BB /* WaterfallCell.m in Sources */,
+				10E091071D1238F000FE5F74 /* UIView+CustomViewController.m in Sources */,
 				10381FBA1BF9B55B00E5E476 /* POPDecayAnimation.mm in Sources */,
 				1048F6EF1C28D56B0052F1DD /* MDMatrix.m in Sources */,
 				10381FB61BF9B55B00E5E476 /* POPAnimator.mm in Sources */,

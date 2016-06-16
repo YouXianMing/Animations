@@ -57,14 +57,14 @@ while (0);                                                          \
     self.view.backgroundColor                 = [UIColor whiteColor];
 }
 
-- (void)setView:(UIView *)view withTagString:(NSString *)tagString {
-    
-    [_viewsWeakMap setObject:view forKey:tagString];
+- (void)setView:(UIView *)view withTag:(NSInteger)tag {
+
+    [_viewsWeakMap setObject:view forKey:@(tag).stringValue];
 }
 
-- (id)viewWithTagSting:(NSString *)tagString {
-    
-    return [_viewsWeakMap objectForKey:tagString];
+- (id)viewWithTag:(NSInteger)tag {
+
+    return [_viewsWeakMap objectForKey:@(tag).stringValue];
 }
 
 - (void)useInteractivePopGestureRecognizer {
