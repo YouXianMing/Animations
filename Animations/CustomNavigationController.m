@@ -10,13 +10,20 @@
 
 @interface CustomNavigationController ()
 
+@property (nonatomic, strong) NSMapTable <NSString *, UIView *> *viewsWeakMap;
+
 @end
 
 @implementation CustomNavigationController
 
-- (void)viewDidLoad {
+- (instancetype)init {
     
-    [super viewDidLoad];
+    if (self = [super init]) {
+    
+        self.viewsWeakMap = [NSMapTable strongToWeakObjectsMapTable];
+    }
+    
+    return self;
 }
 
 - (instancetype)initWithRootViewController:(CustomViewController *)rootViewController setNavigationBarHidden:(BOOL)hidden {
@@ -26,6 +33,18 @@
     [rootViewController useInteractivePopGestureRecognizer];
     
     return ncController;
+}
+
+#pragma mark - AccessViewTagProtocol
+
+- (void)setView:(UIView *)view withTag:(NSInteger)tag {
+    
+    [_viewsWeakMap setObject:view forKey:@(tag).stringValue];
+}
+
+- (id)viewWithTag:(NSInteger)tag {
+    
+    return [_viewsWeakMap objectForKey:@(tag).stringValue];
 }
 
 @end

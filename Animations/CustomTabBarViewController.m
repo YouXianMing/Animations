@@ -10,6 +10,8 @@
 
 @interface CustomTabBarViewController ()
 
+@property (nonatomic, strong) NSMapTable <NSString *, UIView *> *viewsWeakMap;
+
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UIView *tabBarView;
 
@@ -23,8 +25,9 @@
     
     if (self = [super init]) {
         
-        _tabBarHeight   = 49.f;
-        _firstLoadIndex = 0;
+        _tabBarHeight     = 49.f;
+        _firstLoadIndex   = 0;
+        self.viewsWeakMap = [NSMapTable strongToWeakObjectsMapTable];
     }
     
     return self;
@@ -140,9 +143,16 @@
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+#pragma mark - AccessViewTagProtocol
 
-    [super viewDidAppear:animated];
+- (void)setView:(UIView *)view withTag:(NSInteger)tag {
+    
+    [_viewsWeakMap setObject:view forKey:@(tag).stringValue];
+}
+
+- (id)viewWithTag:(NSInteger)tag {
+    
+    return [_viewsWeakMap objectForKey:@(tag).stringValue];
 }
 
 @end

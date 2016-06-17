@@ -35,7 +35,7 @@ while (0);                                                          \
 
 @interface CustomViewController () <UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) NSMapTable          <NSString *, UIView *> *viewsWeakMap;
+@property (nonatomic, strong) NSMapTable <NSString *, UIView *> *viewsWeakMap;
 
 @end
 
@@ -55,16 +55,6 @@ while (0);                                                          \
     self.width                                = [UIScreen mainScreen].bounds.size.width;
     self.height                               = [UIScreen mainScreen].bounds.size.height;
     self.view.backgroundColor                 = [UIColor whiteColor];
-}
-
-- (void)setView:(UIView *)view withTag:(NSInteger)tag {
-
-    [_viewsWeakMap setObject:view forKey:@(tag).stringValue];
-}
-
-- (id)viewWithTag:(NSInteger)tag {
-
-    return [_viewsWeakMap objectForKey:@(tag).stringValue];
 }
 
 - (void)useInteractivePopGestureRecognizer {
@@ -168,6 +158,18 @@ while (0);                                                          \
     
     NSString *showSting = [NSString stringWithFormat:@"\n%@\n%@\n%@\n", flagString, classString, flagString];
     ControllerLog(@"%@", showSting);
+}
+
+#pragma mark - AccessViewTagProtocol
+
+- (void)setView:(UIView *)view withTag:(NSInteger)tag {
+    
+    [_viewsWeakMap setObject:view forKey:@(tag).stringValue];
+}
+
+- (id)viewWithTag:(NSInteger)tag {
+    
+    return [_viewsWeakMap objectForKey:@(tag).stringValue];
 }
 
 @end

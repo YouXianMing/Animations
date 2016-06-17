@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AccessViewTagProtocol.h"
 #import "CustomViewController.h"
 
-@interface CustomNavigationController : UINavigationController
+@interface CustomNavigationController : UINavigationController <AccessViewTagProtocol>
 
 /**
  *  Init with rootViewController.

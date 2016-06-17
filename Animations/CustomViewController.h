@@ -7,25 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AccessViewTagProtocol.h"
 
-@interface CustomViewController : UIViewController
-
-/**
- *  Set the view whose tag matches the specified value.
- *
- *  @param view View.
- *  @param tag  tag.
- */
-- (void)setView:(UIView *)view withTag:(NSInteger)tag;
-
-/**
- *  Get the view from the tag.
- *
- *  @param tag.
- *
- *  @return view's object.
- */
-- (id)viewWithTag:(NSInteger)tag;
+@interface CustomViewController : UIViewController <AccessViewTagProtocol>
 
 /**
  *  Screen's width.
