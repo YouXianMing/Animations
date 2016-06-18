@@ -10,6 +10,7 @@
 #import "UIView+AnimationsListViewController.h"
 #import "UIView+SetRect.h"
 #import "UIView+GlowView.h"
+#import "UITableView+CellClass.h"
 #import "ListItemCell.h"
 #import "LineBackgroundView.h"
 #import "Item.h"
@@ -71,10 +72,10 @@
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
-@property (nonatomic, strong) UITableView   *tableView;
-@property (nonatomic)         BOOL           tableViewLoadData;
+@property (nonatomic, strong) UITableView    *tableView;
+@property (nonatomic)         BOOL            tableViewLoadData;
 
-@property (nonatomic, strong) NSMutableArray  *items;
+@property (nonatomic, strong) NSMutableArray  <CellDataAdapter *> *items;
 
 @end
 
@@ -230,10 +231,8 @@
         Item *item = array[i];
         item.index = i + 1;
         [item createAttributedString];
-        
-        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"ListItemCell" data:item
-                                                                                    cellHeight:0 cellType:0];
-        [self.items addObject:dataAdapter];
+
+        [self.items addObject:[ListItemCell dataAdapterWithCellReuseIdentifier:nil data:item cellHeight:0 type:0]];
     }
 }
 
@@ -246,7 +245,7 @@
     self.tableView.dataSource     = self;
     self.tableView.rowHeight      = 50.f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerClass:[ListItemCell class] forCellReuseIdentifier:@"ListItemCell"];
+    [self.tableView registerCellsClass:@[cellClass(@"ListItemCell", nil)]];
     
     [self.contentView addSubview:self.tableView];
     
@@ -279,14 +278,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataAdapter *dataAdapter = self.items[indexPath.row];
-    CustomCell      *cell        = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
-    cell.indexPath               = indexPath;
-    cell.dataAdapter             = dataAdapter;
-    
-    [cell loadContent];
-    
-    return cell;
+    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_items[indexPath.row] indexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -92,10 +92,8 @@
  *
  *  @return Cell's dataAdapter.
  */
-+ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
-                                                   data:(id)data
-                                             cellHeight:(CGFloat)height
-                                                   type:(NSInteger)type;
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data
+                                             cellHeight:(CGFloat)height type:(NSInteger)type;
 
 /**
  *  Convenient method to set some weak reference.
@@ -105,10 +103,8 @@
  *  @param indexPath   IndexPath.
  *  @param tableView   TableView.
  */
-- (void)setWeakReferenceWithCellDataAdapter:(CellDataAdapter *)dataAdapter
-                                       data:(id)data
-                                  indexPath:(NSIndexPath *)indexPath
-                                  tableView:(UITableView *)tableView;
+- (void)setWeakReferenceWithCellDataAdapter:(CellDataAdapter *)dataAdapter data:(id)data
+                                  indexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView;
 
 /**
  *  Selected event, you should use this method in 'tableView:didSelectRowAtIndexPath:' to make it effective.

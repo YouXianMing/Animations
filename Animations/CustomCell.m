@@ -38,10 +38,8 @@
     
 }
 
-- (void)setWeakReferenceWithCellDataAdapter:(CellDataAdapter *)dataAdapter
-                                       data:(id)data
-                                  indexPath:(NSIndexPath *)indexPath
-                                  tableView:(UITableView *)tableView {
+- (void)setWeakReferenceWithCellDataAdapter:(CellDataAdapter *)dataAdapter data:(id)data
+                                  indexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView {
     
     _dataAdapter = dataAdapter;
     _data        = data;
@@ -49,13 +47,10 @@
     _tableView   = tableView;
 }
 
-+ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
-                                                   data:(id)data
-                                             cellHeight:(CGFloat)height
-                                                   type:(NSInteger)type {
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data cellHeight:(CGFloat)height type:(NSInteger)type {
     
-    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:NSStringFromClass([self class])
-                                                              data:data cellHeight:height cellType:type];
+    NSString *tmpReuseIdentifier = reuseIdentifier.length <= 0 ? NSStringFromClass([self class]) : reuseIdentifier;
+    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:tmpReuseIdentifier data:data cellHeight:height cellType:type];
 }
 
 - (void)updateWithNewCellHeight:(CGFloat)height animated:(BOOL)animated {

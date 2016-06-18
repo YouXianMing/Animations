@@ -16,6 +16,7 @@
 #import "UIView+SetRect.h"
 #import "MessageAlertView.h"
 #import "LoadingView.h"
+#import "UITableView+CellClass.h"
 #import "GCD.h"
 
 @interface TableViewLoadDataController () <UITableViewDelegate, UITableViewDataSource, AbsNetworkingDelegate>
@@ -66,7 +67,7 @@
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerClass:[LoadUrlDataCell class] forCellReuseIdentifier:@"LoadUrlDataCell"];
+    [self.tableView registerCellsClass:@[cellClass(@"LoadUrlDataCell", nil)]];
     [self.contentView addSubview:self.tableView];
 }
 
@@ -77,21 +78,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataAdapter *adapter = self.datasArray[indexPath.row];
-    
-    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
-    cell.dataAdapter = adapter;
-    cell.indexPath   = indexPath;
-    [cell loadContent];
-    
-    return cell;
+    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_datasArray[indexPath.row] indexPath:indexPath];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataAdapter *adapter = self.datasArray[indexPath.row];
-    
-    return adapter.cellHeight;
+    return _datasArray[indexPath.row].cellHeight;
 }
 
 - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath {
@@ -129,9 +121,8 @@
                 NSDictionary *fontInfo   = @{NSFontAttributeName: [UIFont HeitiSCWithFontSize:14.f]};
                 CGFloat       height     = [dataModel.user.infomation.text heightWithStringAttribute:fontInfo fixedWidth:Width - 80];
                 CGFloat       cellHeight = height <= 50 ? 10 + 50 + 10 : 10 + height + 10;
-                CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"LoadUrlDataCell" data:dataModel
-                                                                                            cellHeight:cellHeight cellType:0];
-                [self.datasArray addObject:dataAdapter];
+
+                [self.datasArray addObject:[LoadUrlDataCell dataAdapterWithCellReuseIdentifier:nil data:dataModel cellHeight:cellHeight type:0]];
             }
             
             [GCDQueue executeInMainQueue:^{

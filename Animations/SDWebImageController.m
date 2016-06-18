@@ -10,6 +10,7 @@
 #import "PictureCell.h"
 #import "PictureModel.h"
 #import "UIView+SetRect.h"
+#import "UITableView+CellClass.h"
 
 @interface SDWebImageController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -44,9 +45,7 @@
         NSURL           *url         = [NSURL URLWithString:picsArray[count]];
         PictureModel    *model       = [PictureModel pictureModelWithPictureUrl:url haveAnimated:NO];
         model.pictureUrlString       = picsArray[count];
-        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"PictureCell" data:model
-                                                                                    cellHeight:0 cellType:0];
-        [_modelsArray addObject:dataAdapter];
+        [_modelsArray addObject:[PictureCell dataAdapterWithCellReuseIdentifier:nil data:model cellHeight:0 type:0]];
     }
     
     // 初始化tableView
@@ -56,7 +55,7 @@
     self.tableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight       = Width;
     self.tableView.backgroundColor = [UIColor blackColor];
-    [self.tableView registerClass:[PictureCell class] forCellReuseIdentifier:@"PictureCell"];
+    [self.tableView registerCellsClass:@[cellClass(@"PictureCell", nil)]];
     [self.contentView addSubview:self.tableView];
 }
 
@@ -69,14 +68,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataAdapter *dataAdapter = _modelsArray[indexPath.row];
-    
-    CustomCell *cell  = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
-    cell.dataAdapter  = dataAdapter;
-    cell.indexPath    = indexPath;
-    [cell loadContent];
-    
-    return cell;
+    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_modelsArray[indexPath.row] indexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {

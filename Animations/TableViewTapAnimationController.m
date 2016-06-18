@@ -8,6 +8,7 @@
 
 #import "TableViewTapAnimationController.h"
 #import "TableViewTapAnimationCell.h"
+#import "UITableView+CellClass.h"
 #import "UIView+SetRect.h"
 #import "TapAnimationModel.h"
 
@@ -32,11 +33,7 @@
     
     for (int i = 0; i < array.count; i++) {
         
-        CellDataAdapter *dataAdapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"TableViewTapAnimationCell"
-                                                                                          data:array[i]
-                                                                                    cellHeight:80
-                                                                                      cellType:0];
-        [self.dataArray addObject:dataAdapter];
+        [self.dataArray addObject:[TableViewTapAnimationCell dataAdapterWithCellReuseIdentifier:nil data:array[i] cellHeight:80 type:0]];
     }
     
     // Init TableView.
@@ -45,7 +42,7 @@
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerClass:[TableViewTapAnimationCell class] forCellReuseIdentifier:@"TableViewTapAnimationCell"];
+    [self.tableView registerCellsClass:@[cellClass(@"TableViewTapAnimationCell", nil)]];
     [self.contentView addSubview:self.tableView];
 }
 
@@ -58,11 +55,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataAdapter *dataAdapter = _dataArray[indexPath.row];
-    
-    TableViewTapAnimationCell *cell = [tableView dequeueReusableCellWithIdentifier:dataAdapter.cellReuseIdentifier];
-    cell.dataAdapter                = dataAdapter;
-    [cell loadContent];
+    TableViewTapAnimationCell *cell = (TableViewTapAnimationCell *)[tableView dequeueAndLoadContentReusableCellFromAdapter:_dataArray[indexPath.row]
+                                                                                                                 indexPath:indexPath];
     [cell changeStateAnimated:NO];
     
     return cell;

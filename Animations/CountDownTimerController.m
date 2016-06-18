@@ -9,6 +9,7 @@
 #import "CountDownTimerController.h"
 #import "CountDownTimeCell.h"
 #import "TimeModel.h"
+#import "UITableView+CellClass.h"
 #import "UIView+SetRect.h"
 
 @interface CountDownTimerController () <UITableViewDelegate, UITableViewDataSource>
@@ -49,9 +50,7 @@
     
     for (int i = 0; i < array.count; i++) {
         
-        CellDataAdapter *adapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"CountDownTimeCell" data:array[i]
-                                                                                cellHeight:0 cellType:0];
-        [self.timesArray addObject:adapter];
+        [self.timesArray addObject:[CountDownTimeCell dataAdapterWithCellReuseIdentifier:nil data:array[i] cellHeight:0 type:0]];
     }
 }
 
@@ -63,7 +62,7 @@
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight      = 60.f;
-    [self.tableView registerClass:[CountDownTimeCell class] forCellReuseIdentifier:@"CountDownTimeCell"];
+    [self.tableView registerCellsClass:@[cellClass(@"CountDownTimeCell", nil)]];
     [self.contentView addSubview:self.tableView];
 }
 
@@ -95,13 +94,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataAdapter *adapter = self.timesArray[indexPath.row];
-    CustomCell      *cell    = [tableView dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
-    cell.dataAdapter         = adapter;
-    cell.indexPath           = indexPath;
-    [cell loadContent];
-    
-    return cell;
+    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_timesArray[indexPath.row] indexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
