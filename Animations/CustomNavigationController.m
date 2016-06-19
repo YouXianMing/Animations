@@ -47,4 +47,9 @@
     return [_viewsWeakMap objectForKey:@(tag).stringValue];
 }
 
+- (void)removeReferenceWithTag:(NSInteger)tag {
+
+    [_viewsWeakMap removeObjectForKey:@(tag).stringValue];
+}
+
 @end

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef void(^ViewSetupBlock)(UIView * view);
+
 @protocol AccessViewTagProtocol <NSObject>
 
 @required
@@ -20,6 +22,13 @@
  *  @param tag  tag.
  */
 - (void)setView:(UIView *)view withTag:(NSInteger)tag;
+
+/**
+ *  Remove the tag.
+ *
+ *  @param tag View's tag.
+ */
+- (void)removeReferenceWithTag:(NSInteger)tag;
 
 /**
  *  Get the view from the tag.

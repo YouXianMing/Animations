@@ -12,6 +12,7 @@
 #import "UIView+SetRect.h"
 #import "UIImage+ImageEffects.h"
 #import "PressScaleButton.h"
+#import "UIView+FrameAndTag.h"
 
 @interface ButtonPressViewController () <POPScaleControlDelegate>
 
