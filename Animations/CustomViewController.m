@@ -164,6 +164,8 @@ while (0);                                                          \
 
 - (void)setView:(UIView *)view withTag:(NSInteger)tag {
     
+    view.tag ? [self removeReferenceWithTag:view.tag] : 0;
+    view.tag = tag;
     [_viewsWeakMap setObject:view forKey:@(tag).stringValue];
 }
 
