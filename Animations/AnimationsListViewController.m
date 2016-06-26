@@ -69,6 +69,7 @@
 #import "InfiniteLoopViewController.h"
 #import "BaseControlViewController.h"
 #import "SpringScaleViewController.h"
+#import "TapPathDrawViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
@@ -222,7 +223,8 @@
                        [Item itemWithName:@"水平方向瀑布流" object:[GridFlowLayoutViewController class]],
                        [Item itemWithName:@"无限轮播图" object:[InfiniteLoopViewController class]],
                        [Item itemWithName:@"BaseControl按钮合集" object:[BaseControlViewController class]],
-                       [Item itemWithName:@"POP-缩放" object:[SpringScaleViewController class]]];
+                       [Item itemWithName:@"POP-缩放" object:[SpringScaleViewController class]],
+                       [Item itemWithName:@"点击区域的绘制" object:[TapPathDrawViewController class]]];
     
     self.items = [NSMutableArray array];
     
