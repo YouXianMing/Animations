@@ -50,7 +50,7 @@
     return width;
 }
 
-+ (CGFloat)aLineOfTextHeightWithStringAttribute:(NSDictionary <NSString *, id> *)attribute {
++ (CGFloat)oneLineOfTextHeightWithStringAttribute:(NSDictionary <NSString *, id> *)attribute {
     
     CGFloat height = 0;
     CGRect rect    = [@"One" boundingRectWithSize:CGSizeMake(200, MAXFLOAT)

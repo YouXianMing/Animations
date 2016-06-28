@@ -25,7 +25,7 @@
 
 - (void)calculateTheNormalStringHeightWithStringAttribute:(NSDictionary <NSString *, id> *)attribute fixedWidth:(CGFloat)width {
 
-    CGFloat oneLineHeight = [NSString aLineOfTextHeightWithStringAttribute:attribute];
+    CGFloat oneLineHeight = [NSString oneLineOfTextHeightWithStringAttribute:attribute];
     CGFloat textHeight    = [self.inputString heightWithStringAttribute:attribute fixedWidth:width];
 
     CGFloat normalTextHeight = textHeight >= 3 * oneLineHeight ? 3 * oneLineHeight : textHeight;
