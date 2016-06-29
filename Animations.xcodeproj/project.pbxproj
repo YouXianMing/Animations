@@ -183,6 +183,8 @@
 		104FCCA61D23573D00308B73 /* TapDrawImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104FCC9F1D23573D00308B73 /* TapDrawImageView.m */; };
 		104FCCA71D23573D00308B73 /* TapDrawPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 104FCCA11D23573D00308B73 /* TapDrawPathManager.m */; };
 		104FCCA81D23573D00308B73 /* TapDrawObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 104FCCA31D23573D00308B73 /* TapDrawObject.m */; };
+		104FCCAD1D235A1000308B73 /* IconEdgeInsetsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 104FCCAA1D235A1000308B73 /* IconEdgeInsetsLabel.m */; };
+		104FCCAE1D235A1000308B73 /* EdgeInsetsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 104FCCAC1D235A1000308B73 /* EdgeInsetsLabel.m */; };
 		1051890C1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1051890B1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m */; };
 		10567E491C45411700625C6B /* api.md in Resources */ = {isa = PBXBuildFile; fileRef = 10567E481C45411700625C6B /* api.md */; };
 		105702121CF6CE16003B10C6 /* POPScaleControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 105702111CF6CE16003B10C6 /* POPScaleControl.m */; };
@@ -719,6 +721,10 @@
 		104FCCA11D23573D00308B73 /* TapDrawPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDrawPathManager.m; sourceTree = "<group>"; };
 		104FCCA21D23573D00308B73 /* TapDrawObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDrawObject.h; sourceTree = "<group>"; };
 		104FCCA31D23573D00308B73 /* TapDrawObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDrawObject.m; sourceTree = "<group>"; };
+		104FCCA91D235A1000308B73 /* IconEdgeInsetsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconEdgeInsetsLabel.h; sourceTree = "<group>"; };
+		104FCCAA1D235A1000308B73 /* IconEdgeInsetsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconEdgeInsetsLabel.m; sourceTree = "<group>"; };
+		104FCCAB1D235A1000308B73 /* EdgeInsetsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeInsetsLabel.h; sourceTree = "<group>"; };
+		104FCCAC1D235A1000308B73 /* EdgeInsetsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeInsetsLabel.m; sourceTree = "<group>"; };
 		1051890A1D0A65DE00F606FB /* NSObject+PropertiesInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertiesInfomation.h"; sourceTree = "<group>"; };
 		1051890B1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertiesInfomation.m"; sourceTree = "<group>"; };
 		10567E481C45411700625C6B /* api.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = api.md; sourceTree = "<group>"; };
@@ -2163,6 +2169,17 @@
 			name = TapPathDrawViewController;
 			sourceTree = "<group>";
 		};
+		104FCCAF1D235A1700308B73 /* EdgeInsetsLabel */ = {
+			isa = PBXGroup;
+			children = (
+				104FCCA91D235A1000308B73 /* IconEdgeInsetsLabel.h */,
+				104FCCAA1D235A1000308B73 /* IconEdgeInsetsLabel.m */,
+				104FCCAB1D235A1000308B73 /* EdgeInsetsLabel.h */,
+				104FCCAC1D235A1000308B73 /* EdgeInsetsLabel.m */,
+			);
+			name = EdgeInsetsLabel;
+			sourceTree = "<group>";
+		};
 		105189091D0A65D500F606FB /* NSObject+Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -2325,6 +2342,7 @@
 				1048F6EA1C28D56B0052F1DD /* MDScratchImageView */,
 				10589D1E1C2393C200F20BC0 /* FBShimmering */,
 				B5D011961C0BE2440075BC2E /* RotateView */,
+				104FCCAF1D235A1700308B73 /* EdgeInsetsLabel */,
 			);
 			name = "UI-Component";
 			sourceTree = "<group>";
@@ -3010,6 +3028,7 @@
 				102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */,
 				104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */,
 				1020E33B1C759C2F00FF233E /* UIView+MotionEffect.m in Sources */,
+				104FCCAE1D235A1000308B73 /* EdgeInsetsLabel.m in Sources */,
 				10E2D4EA1CD5962000666EEB /* SDImageCache.m in Sources */,
 				106BCFDE1CDC77A6007C3EEE /* CircleNodeStateView.m in Sources */,
 				10381FD11BF9D2C600E5E476 /* StrokeCircleLayerConfigure.m in Sources */,
@@ -3234,6 +3253,7 @@
 				102B84EF1C3BCAD0001699A9 /* CellDataAdapter.m in Sources */,
 				104FCCA61D23573D00308B73 /* TapDrawImageView.m in Sources */,
 				109606281C93B47800CCB3AD /* Networking.m in Sources */,
+				104FCCAD1D235A1000308B73 /* IconEdgeInsetsLabel.m in Sources */,
 				1068FCCD1CF7D87A00BE431C /* PressScaleButton.m in Sources */,
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
 				10CEC5891C21345600B0CA7D /* FullTitleVisualEffectViewController.m in Sources */,
