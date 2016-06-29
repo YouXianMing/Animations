@@ -37,6 +37,6 @@
  *
  *  @return String's width.
  */
-+ (CGFloat)oneLineOfTextHeightWithStringAttribute:(NSDictionary <NSString *, id> *)attribute;
++ (CGFloat)aLineOfTextHeightWithStringAttribute:(NSDictionary <NSString *, id> *)attribute;
 
 @end
