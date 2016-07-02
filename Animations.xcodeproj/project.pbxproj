@@ -11,6 +11,7 @@
 		100252C51CBC778B00722169 /* ReplicatorLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100252C41CBC778B00722169 /* ReplicatorLineViewController.m */; };
 		100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 100252C81CBC780100722169 /* ReplicatorLineAnimationView.m */; };
 		100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100BFAE81C2392F5008C5523 /* ShimmerController.m */; };
+		100D4B1A1D27A3A300EDE29B /* AppleSystemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 100D4B191D27A3A300EDE29B /* AppleSystemService.m */; };
 		1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */; };
 		1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010C6DD1C0AA639004CFBCE /* POPSpringParameterController.m */; };
 		1011BA551CD40C2900F29FB9 /* UIView+UserInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1011BA541CD40C2900F29FB9 /* UIView+UserInteraction.m */; };
@@ -296,7 +297,6 @@
 		10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0DDF81CBA831C0089DF1E /* MSWeakTimer.m */; };
 		10B0DDFC1CBA84400089DF1E /* AttributedStringInitConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0DDFB1CBA84400089DF1E /* AttributedStringInitConfig.m */; };
 		10B0DDFF1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0DDFE1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m */; };
-		10B345151CEE9BAD00BFC15B /* PhoneCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B345141CEE9BAD00BFC15B /* PhoneCall.m */; };
 		10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3CE1C953E5B007E8254 /* ScrollViewAnimationController.m */; };
 		10B6F3D31C953FEA007E8254 /* ScrollComputingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3D21C953FEA007E8254 /* ScrollComputingValue.m */; };
 		10B6F3D61C954749007E8254 /* ScrollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6F3D51C954749007E8254 /* ScrollTitleView.m */; };
@@ -360,6 +360,8 @@
 		100252C81CBC780100722169 /* ReplicatorLineAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLineAnimationView.m; sourceTree = "<group>"; };
 		100BFAE71C2392F5008C5523 /* ShimmerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShimmerController.h; sourceTree = "<group>"; };
 		100BFAE81C2392F5008C5523 /* ShimmerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShimmerController.m; sourceTree = "<group>"; };
+		100D4B181D27A3A300EDE29B /* AppleSystemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleSystemService.h; sourceTree = "<group>"; };
+		100D4B191D27A3A300EDE29B /* AppleSystemService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleSystemService.m; sourceTree = "<group>"; };
 		1010C6D91C0A9DA0004CFBCE /* RangeValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeValueView.h; sourceTree = "<group>"; };
 		1010C6DA1C0A9DA0004CFBCE /* RangeValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeValueView.m; sourceTree = "<group>"; };
 		1010C6DC1C0AA639004CFBCE /* POPSpringParameterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringParameterController.h; sourceTree = "<group>"; };
@@ -953,8 +955,6 @@
 		10B0DDFB1CBA84400089DF1E /* AttributedStringInitConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedStringInitConfig.m; sourceTree = "<group>"; };
 		10B0DDFD1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AttributedStringInitConfig+Constructor.h"; sourceTree = "<group>"; };
 		10B0DDFE1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AttributedStringInitConfig+Constructor.m"; sourceTree = "<group>"; };
-		10B345131CEE9BAD00BFC15B /* PhoneCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneCall.h; sourceTree = "<group>"; };
-		10B345141CEE9BAD00BFC15B /* PhoneCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneCall.m; sourceTree = "<group>"; };
 		10B6F3CD1C953E5B007E8254 /* ScrollViewAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewAnimationController.h; sourceTree = "<group>"; };
 		10B6F3CE1C953E5B007E8254 /* ScrollViewAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewAnimationController.m; sourceTree = "<group>"; };
 		10B6F3D11C953FEA007E8254 /* ScrollComputingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollComputingValue.h; sourceTree = "<group>"; };
@@ -1239,7 +1239,7 @@
 				10EFE2061D015FB900159779 /* DefaultNotificationCenter */,
 				1068FD4A1CF8479500BE431C /* TransitionAnimator */,
 				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
-				10B345161CEE9BB700BFC15B /* PhoneCall */,
+				10B345161CEE9BB700BFC15B /* AppleSystemService */,
 				1011BAE81CD4957400F29FB9 /* ValueStorageManager */,
 				102A0FF41C92725400BF3F1B /* NSData+GZip */,
 				1020E2D01C73196D00FF233E /* CAGradientView */,
@@ -2743,13 +2743,13 @@
 			name = JSAnimatedImagesView;
 			sourceTree = "<group>";
 		};
-		10B345161CEE9BB700BFC15B /* PhoneCall */ = {
+		10B345161CEE9BB700BFC15B /* AppleSystemService */ = {
 			isa = PBXGroup;
 			children = (
-				10B345131CEE9BAD00BFC15B /* PhoneCall.h */,
-				10B345141CEE9BAD00BFC15B /* PhoneCall.m */,
+				100D4B181D27A3A300EDE29B /* AppleSystemService.h */,
+				100D4B191D27A3A300EDE29B /* AppleSystemService.m */,
 			);
-			name = PhoneCall;
+			name = AppleSystemService;
 			sourceTree = "<group>";
 		};
 		10B6F3D01C953E61007E8254 /* ScrollViewAnimationController */ = {
@@ -3017,6 +3017,7 @@
 				1011BAF21CD4959300F29FB9 /* NSString+Base64.m in Sources */,
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
 				104FCCA71D23573D00308B73 /* TapDrawPathManager.m in Sources */,
+				100D4B1A1D27A3A300EDE29B /* AppleSystemService.m in Sources */,
 				10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */,
 				104F0D311BFC1C9C00C46E6A /* StringAttribute.m in Sources */,
 				1011BAE31CD48C8D00F29FB9 /* NodePressAnimationView.m in Sources */,
@@ -3216,7 +3217,6 @@
 				102296B21C38D122001AF5BB /* WaterfallPictureModel.m in Sources */,
 				1068FD541CF847AD00BE431C /* PopAnimator.m in Sources */,
 				106BCFC01CDC672A007C3EEE /* InfiniteLoopViewController.m in Sources */,
-				10B345151CEE9BAD00BFC15B /* PhoneCall.m in Sources */,
 				100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */,
 				109606501C93B4A300CCB3AD /* AFSecurityPolicy.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
