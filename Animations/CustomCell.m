@@ -38,6 +38,11 @@
     
 }
 
++ (CGFloat)cellHeightWithData:(id)data {
+
+    return 0.f;
+}
+
 - (void)setWeakReferenceWithCellDataAdapter:(CellDataAdapter *)dataAdapter data:(id)data
                                   indexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView {
     
@@ -55,18 +60,18 @@
 
 - (void)updateWithNewCellHeight:(CGFloat)height animated:(BOOL)animated {
     
-    if (self.tableView && self.dataAdapter) {
+    if (_tableView && _dataAdapter) {
         
         if (animated) {
             
-            self.dataAdapter.cellHeight = height;
-            [self.tableView beginUpdates];
-            [self.tableView endUpdates];
+            _dataAdapter.cellHeight = height;
+            [_tableView beginUpdates];
+            [_tableView endUpdates];
             
         } else {
             
-            self.dataAdapter.cellHeight = height;
-            [self.tableView reloadData];
+            _dataAdapter.cellHeight = height;
+            [_tableView reloadData];
         }
     }
 }

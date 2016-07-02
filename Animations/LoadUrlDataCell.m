@@ -13,6 +13,7 @@
 #import "DataModel.h"
 #import "UIView+SetRect.h"
 #import "UIFont+Fonts.h"
+#import "NSString+LabelWidthAndHeight.h"
 
 @interface LoadUrlDataCell ()
 
@@ -127,6 +128,17 @@
 - (void)selectedEvent {
 
     [self showSelectedAnimation];
+}
+
++ (CGFloat)cellHeightWithData:(id)data {
+
+    DataModel *model = data;
+    
+    NSDictionary *fontInfo   = @{NSFontAttributeName: [UIFont HeitiSCWithFontSize:14.f]};
+    CGFloat       height     = [model.user.infomation.text heightWithStringAttribute:fontInfo fixedWidth:Width - 80];
+    CGFloat       cellHeight = height <= 50 ? 10 + 50 + 10 : 10 + height + 10;
+    
+    return cellHeight;
 }
 
 @end

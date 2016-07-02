@@ -41,10 +41,8 @@
  *
  *  @return CellDataAdapter's object.
  */
-+ (CellDataAdapter *)cellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers
-                                                       data:(id)data
-                                                 cellHeight:(CGFloat)cellHeight
-                                                   cellType:(NSInteger)cellType;
++ (CellDataAdapter *)cellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
+                                                 cellHeight:(CGFloat)cellHeight cellType:(NSInteger)cellType;
 
 /**
  *  CellDataAdapter's convenient method, used for UICollectionView.
@@ -55,8 +53,7 @@
  *
  *  @return CellDataAdapter's object.
  */
-+ (CellDataAdapter *)collectionCellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers
-                                                                 data:(id)data
++ (CellDataAdapter *)collectionCellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
                                                              cellType:(NSInteger)cellType;
 
 #pragma mark - Optional properties.

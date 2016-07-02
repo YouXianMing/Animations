@@ -12,17 +12,7 @@
 @interface ShowTextModel : NSObject
 
 @property (nonatomic, strong)   NSString   *inputString;
-@property (nonatomic, readonly) CGFloat     expendStringHeight;
-@property (nonatomic, readonly) CGFloat     normalStringHeight;
-
-/**
- *  Calculate the expendStringHeight height.
- */
-- (void)calculateTheExpendStringHeightWithStringAttribute:(NSDictionary <NSString *, id> *)attribute fixedWidth:(CGFloat)width;
-
-/**
- *  Calculate the normal height.
- */
-- (void)calculateTheNormalStringHeightWithStringAttribute:(NSDictionary <NSString *, id> *)attribute fixedWidth:(CGFloat)width;
+@property (nonatomic)           CGFloat     expendStringHeight;
+@property (nonatomic)           CGFloat     normalStringHeight;
 
 @end

@@ -118,11 +118,10 @@
                     continue;
                 }
                 
-                NSDictionary *fontInfo   = @{NSFontAttributeName: [UIFont HeitiSCWithFontSize:14.f]};
-                CGFloat       height     = [dataModel.user.infomation.text heightWithStringAttribute:fontInfo fixedWidth:Width - 80];
-                CGFloat       cellHeight = height <= 50 ? 10 + 50 + 10 : 10 + height + 10;
-
-                [self.datasArray addObject:[LoadUrlDataCell dataAdapterWithCellReuseIdentifier:nil data:dataModel cellHeight:cellHeight type:0]];
+                [self.datasArray addObject:[LoadUrlDataCell dataAdapterWithCellReuseIdentifier:nil
+                                                                                          data:dataModel
+                                                                                    cellHeight:[LoadUrlDataCell cellHeightWithData:dataModel]
+                                                                                          type:0]];
             }
             
             [GCDQueue executeInMainQueue:^{

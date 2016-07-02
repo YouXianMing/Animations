@@ -80,6 +80,15 @@
  */
 - (void)loadContent;
 
+/**
+ *  Calculate the cell's from data, override by subclass.
+ *
+ *  @param data Data.
+ *
+ *  @return Cell's height.
+ */
++ (CGFloat)cellHeightWithData:(id)data;
+
 #pragma mark - Useful method.
 
 /**

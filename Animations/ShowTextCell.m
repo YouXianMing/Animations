@@ -10,6 +10,7 @@
 #import "UIView+SetRect.h"
 #import "UIFont+Fonts.h"
 #import "ShowTextModel.h"
+#import "NSString+LabelWidthAndHeight.h"
 
 @interface ShowTextCell ()
 
@@ -23,7 +24,7 @@
 @implementation ShowTextCell
 
 - (void)setupCell {
-
+    
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
@@ -51,7 +52,7 @@
 }
 
 - (void)changeState {
-
+    
     ShowTextModel   *model   = self.dataAdapter.data;
     CellDataAdapter *adapter = self.dataAdapter;
     
@@ -62,7 +63,7 @@
         [self expendState];
         
     } else {
-    
+        
         adapter.cellType = kShowTextCellNormalType;
         [self updateWithNewCellHeight:model.normalStringHeight animated:YES];
         [self normalState];
@@ -70,7 +71,7 @@
 }
 
 - (void)normalState {
- 
+    
     [UIView animateWithDuration:0.25f animations:^{
         
         self.normalLabel.alpha         = 1;
@@ -80,7 +81,7 @@
 }
 
 - (void)expendState {
-
+    
     [UIView animateWithDuration:0.25f animations:^{
         
         self.normalLabel.alpha         = 0;
@@ -90,7 +91,7 @@
 }
 
 - (void)loadContent {
-
+    
     ShowTextModel   *model   = self.dataAdapter.data;
     CellDataAdapter *adapter = self.dataAdapter;
     
@@ -109,7 +110,7 @@
         self.stateView.backgroundColor = [UIColor grayColor];
         
     } else {
-    
+        
         self.normalLabel.text  = model.inputString;
         self.normalLabel.frame = CGRectMake(10, 10, Width - 20, 0);
         self.normalLabel.alpha = 0;
@@ -128,14 +129,37 @@
         self.line.hidden = YES;
         
     } else {
-    
+        
         self.line.hidden = NO;
     }
 }
 
 - (void)selectedEvent {
-
+    
     [self changeState];
+}
+
++ (CGFloat)cellHeightWithData:(id)data {
+    
+    ShowTextModel *model = data;
+    
+    if (model) {
+
+        NSDictionary *attribute = @{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]};
+        CGFloat       width     = Width - 20.f;
+        
+        CGFloat totalStringHeight = [model.inputString heightWithStringAttribute:attribute fixedWidth:width];
+        CGFloat oneLineHeight     = [NSString oneLineOfTextHeightWithStringAttribute:attribute];
+        CGFloat normalTextHeight  = totalStringHeight >= 3 * oneLineHeight ? 3 * oneLineHeight : totalStringHeight;
+        
+        // Expend string height.
+        model.expendStringHeight = 10 + totalStringHeight + 10;
+        
+        // One line height.
+        model.normalStringHeight = 10 + normalTextHeight + 10;
+    }
+    
+    return 0.f;
 }
 
 @end
