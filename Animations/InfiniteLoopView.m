@@ -52,25 +52,27 @@
 
 - (void)prepare {
     
-    if (self.customCellClass == nil) {
-        
-        [NSException raise:@"InfiniteLoopView prepare error"
-                    format:@"You should set the property customCellClass before you run the prepare method."];
-        
-    } else if (self.models == nil) {
-    
-        [NSException raise:@"InfiniteLoopView prepare error"
-                    format:@"You should set the property models before you run the prepare method."];
-    }
-    
-    NSParameterAssert(self.customCellClass);
     NSParameterAssert(self.models);
     
-    self.flowLayout.scrollDirection = self.scrollDirection;
+    // Check cell's class.
+    for (id <InfiniteLoopCellClassProtocol> cellInfo  in self.models) {
+        
+        if ([[cellInfo cellClass] isSubclassOfClass:[CustomInfiniteLoopCell class]] == NO) {
+            
+            [NSException raise:@"InfiniteLoopView prepare error"
+                        format:@"The cellClass must be the Subclass of CustomInfiniteLoopCell"];
+        }
+    }
     
-    self.collectionView.delegate   = self;
-    self.collectionView.dataSource = self;
-    [self.collectionView registerClass:self.customCellClass forCellWithReuseIdentifier:NSStringFromClass(self.customCellClass)];
+    // Register cell's class.
+    for (id <InfiniteLoopCellClassProtocol> cellInfo  in self.models) {
+        
+        [self.collectionView registerClass:[cellInfo cellClass] forCellWithReuseIdentifier:[cellInfo cellReuseIdentifier]];
+    }
+    
+    self.flowLayout.scrollDirection = self.scrollDirection;
+    self.collectionView.delegate    = self;
+    self.collectionView.dataSource  = self;
     [self.collectionView reloadData];
     
     // Scroll to specified position.
@@ -112,7 +114,7 @@
 }
 
 - (void)action {
-
+    
     if (self.models.count == 0) {
         
         return;
@@ -144,8 +146,9 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    CustomInfiniteLoopViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(self.customCellClass)
-                                                                                 forIndexPath:indexPath];
+    CustomInfiniteLoopCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[_models[indexPath.row] cellReuseIdentifier]
+                                                                             forIndexPath:indexPath];
+    
     cell.indexPath = indexPath;
     cell.dataModel = self.models[indexPath.row];
     [cell loadContent];
@@ -155,23 +158,21 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(infiniteLoopView:data:selectedIndex:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(infiniteLoopView:data:selectedIndex:cell:)]) {
         
-        [self.delegate infiniteLoopView:self data:self.models[indexPath.row] selectedIndex:indexPath.row];
+        [self.delegate infiniteLoopView:self data:self.models[indexPath.row]
+                          selectedIndex:indexPath.row
+                                   cell:(CustomInfiniteLoopCell *)[collectionView cellForItemAtIndexPath:indexPath]];
     }
 }
 
-- (void)collectionView:(UICollectionView *)collectionView
-       willDisplayCell:(CustomInfiniteLoopViewCell *)cell
-    forItemAtIndexPath:(NSIndexPath *)indexPath {
-
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(CustomInfiniteLoopCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     [cell willDisplay];
 }
 
-- (void)collectionView:(UICollectionView *)collectionView
-  didEndDisplayingCell:(CustomInfiniteLoopViewCell *)cell
-    forItemAtIndexPath:(NSIndexPath *)indexPath {
-
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(CustomInfiniteLoopCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     [cell didEndDisplay];
 }
 
@@ -203,7 +204,7 @@
     NSInteger newValue = [self currentIndex] % self.models.count;
     
     if (_currentPage != newValue) {
-    
+        
         _currentPage = newValue;
         if (self.delegate && [self.delegate respondsToSelector:@selector(infiniteLoopView:didScrollCurrentPage:)]) {
             

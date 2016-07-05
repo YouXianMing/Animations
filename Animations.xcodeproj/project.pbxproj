@@ -211,6 +211,7 @@
 		105FFEAA1CBE8740006213B1 /* DrawMarqueeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105FFEA91CBE8740006213B1 /* DrawMarqueeViewController.m */; };
 		105FFEAE1CBE88B7006213B1 /* DrawMarqueeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 105FFEAD1CBE88B7006213B1 /* DrawMarqueeView.m */; };
 		106249981C2785630090AD65 /* EmitterSnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106249971C2785630090AD65 /* EmitterSnowController.m */; };
+		10651F611D2BB2BC004AF473 /* CustomInfiniteLoopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10651F601D2BB2BC004AF473 /* CustomInfiniteLoopCell.m */; };
 		10667E181C7F2CCA00B9AC08 /* SCViewShakerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E171C7F2CCA00B9AC08 /* SCViewShakerController.m */; };
 		10667E1D1C7F2CFB00B9AC08 /* UIView+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 10667E1C1C7F2CFB00B9AC08 /* UIView+Shake.m */; };
 		1067A8F81CE81BF5003FBF17 /* AbsAlertMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1067A8F71CE81BF5003FBF17 /* AbsAlertMessageView.m */; };
@@ -224,7 +225,6 @@
 		106BCFC81CDC6780007C3EEE /* InfiniteLoopViewBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFC71CDC6780007C3EEE /* InfiniteLoopViewBuilder.m */; };
 		106BCFCB1CDC6787007C3EEE /* CustomNodeStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFCA1CDC6787007C3EEE /* CustomNodeStateView.m */; };
 		106BCFD11CDC678F007C3EEE /* InfiniteLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFCD1CDC678F007C3EEE /* InfiniteLoopView.m */; };
-		106BCFD21CDC678F007C3EEE /* CustomInfiniteLoopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFCF1CDC678F007C3EEE /* CustomInfiniteLoopViewCell.m */; };
 		106BCFD91CDC67CC007C3EEE /* LoopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFD41CDC67CC007C3EEE /* LoopViewCell.m */; };
 		106BCFDA1CDC67CC007C3EEE /* NodeStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFD61CDC67CC007C3EEE /* NodeStateView.m */; };
 		106BCFDB1CDC67CC007C3EEE /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFD81CDC67CC007C3EEE /* ImageModel.m */; };
@@ -778,6 +778,9 @@
 		105FFEAD1CBE88B7006213B1 /* DrawMarqueeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawMarqueeView.m; sourceTree = "<group>"; };
 		106249961C2785630090AD65 /* EmitterSnowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterSnowController.h; sourceTree = "<group>"; };
 		106249971C2785630090AD65 /* EmitterSnowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSnowController.m; sourceTree = "<group>"; };
+		10651F5E1D2BB2B1004AF473 /* InfiniteLoopCellClassProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteLoopCellClassProtocol.h; sourceTree = "<group>"; };
+		10651F5F1D2BB2BC004AF473 /* CustomInfiniteLoopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInfiniteLoopCell.h; sourceTree = "<group>"; };
+		10651F601D2BB2BC004AF473 /* CustomInfiniteLoopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInfiniteLoopCell.m; sourceTree = "<group>"; };
 		10667E161C7F2CCA00B9AC08 /* SCViewShakerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewShakerController.h; sourceTree = "<group>"; };
 		10667E171C7F2CCA00B9AC08 /* SCViewShakerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCViewShakerController.m; sourceTree = "<group>"; };
 		10667E1B1C7F2CFB00B9AC08 /* UIView+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shake.h"; sourceTree = "<group>"; };
@@ -804,8 +807,6 @@
 		106BCFCA1CDC6787007C3EEE /* CustomNodeStateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNodeStateView.m; sourceTree = "<group>"; };
 		106BCFCC1CDC678F007C3EEE /* InfiniteLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteLoopView.h; sourceTree = "<group>"; };
 		106BCFCD1CDC678F007C3EEE /* InfiniteLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteLoopView.m; sourceTree = "<group>"; };
-		106BCFCE1CDC678F007C3EEE /* CustomInfiniteLoopViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInfiniteLoopViewCell.h; sourceTree = "<group>"; };
-		106BCFCF1CDC678F007C3EEE /* CustomInfiniteLoopViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInfiniteLoopViewCell.m; sourceTree = "<group>"; };
 		106BCFD01CDC678F007C3EEE /* InfiniteLoopViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteLoopViewProtocol.h; sourceTree = "<group>"; };
 		106BCFD31CDC67CC007C3EEE /* LoopViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopViewCell.h; sourceTree = "<group>"; };
 		106BCFD41CDC67CC007C3EEE /* LoopViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopViewCell.m; sourceTree = "<group>"; };
@@ -2406,9 +2407,10 @@
 			children = (
 				106BCFCC1CDC678F007C3EEE /* InfiniteLoopView.h */,
 				106BCFCD1CDC678F007C3EEE /* InfiniteLoopView.m */,
-				106BCFCE1CDC678F007C3EEE /* CustomInfiniteLoopViewCell.h */,
-				106BCFCF1CDC678F007C3EEE /* CustomInfiniteLoopViewCell.m */,
+				10651F5F1D2BB2BC004AF473 /* CustomInfiniteLoopCell.h */,
+				10651F601D2BB2BC004AF473 /* CustomInfiniteLoopCell.m */,
 				106BCFD01CDC678F007C3EEE /* InfiniteLoopViewProtocol.h */,
+				10651F5E1D2BB2B1004AF473 /* InfiniteLoopCellClassProtocol.h */,
 			);
 			name = InfiniteLoopView;
 			sourceTree = "<group>";
@@ -2447,12 +2449,12 @@
 		106BCFE01CDC7E73007C3EEE /* Type2 */ = {
 			isa = PBXGroup;
 			children = (
+				106BCFE41CDC80CD007C3EEE /* LoopTypeTwoCell.h */,
+				106BCFE51CDC80CD007C3EEE /* LoopTypeTwoCell.m */,
 				106BCFD51CDC67CC007C3EEE /* NodeStateView.h */,
 				106BCFD61CDC67CC007C3EEE /* NodeStateView.m */,
 				106BCFE11CDC7EA3007C3EEE /* InfiniteLoopModel.h */,
 				106BCFE21CDC7EA3007C3EEE /* InfiniteLoopModel.m */,
-				106BCFE41CDC80CD007C3EEE /* LoopTypeTwoCell.h */,
-				106BCFE51CDC80CD007C3EEE /* LoopTypeTwoCell.m */,
 			);
 			name = Type2;
 			sourceTree = "<group>";
@@ -3131,7 +3133,6 @@
 				1047E23D1CC5AF8400E13D1C /* LazyFadeInLayer.m in Sources */,
 				108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */,
 				102B1F2E1C60E66F00A8FD40 /* EntitiesModel.m in Sources */,
-				106BCFD21CDC678F007C3EEE /* CustomInfiniteLoopViewCell.m in Sources */,
 				102B1F2C1C60E66F00A8FD40 /* DataModel.m in Sources */,
 				10E2D4F71CD5962000666EEB /* UIView+WebCacheOperation.m in Sources */,
 				104FCCA41D23573D00308B73 /* TapPathDrawViewController.m in Sources */,
@@ -3280,6 +3281,7 @@
 				1096065C1C93B4A300CCB3AD /* UIWebView+AFNetworking.m in Sources */,
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
 				104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */,
+				10651F611D2BB2BC004AF473 /* CustomInfiniteLoopCell.m in Sources */,
 				102B1F331C60E66F00A8FD40 /* SourceModel.m in Sources */,
 				107D6BB91CFE756C00A1CC0A /* LoadingView.m in Sources */,
 				1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */,

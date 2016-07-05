@@ -49,11 +49,14 @@
     return self;
 }
 
-- (void)infiniteLoopView:(InfiniteLoopView *)infiniteLoopView data:(id <InfiniteLoopViewProtocol>)data selectedIndex:(NSInteger)index {
+- (void)infiniteLoopView:(InfiniteLoopView *)infiniteLoopView
+                    data:(id <InfiniteLoopViewProtocol>)data
+           selectedIndex:(NSInteger)index
+                    cell:(CustomInfiniteLoopCell *)cell {
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(infiniteLoopViewBuilder:data:selectedIndex:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(infiniteLoopViewBuilder:data:selectedIndex:cell:)]) {
         
-        [self.delegate infiniteLoopViewBuilder:self data:data selectedIndex:index];
+        [self.delegate infiniteLoopViewBuilder:self data:data selectedIndex:index cell:cell];
     }
 }
 
@@ -87,7 +90,6 @@
     }
     
     [self.loopView reset];
-    self.loopView.customCellClass    = self.customCellClass;
     self.loopView.models             = self.models;
     self.loopView.scrollDirection    = self.scrollDirection;
     self.loopView.scrollTimeInterval = self.scrollTimeInterval;

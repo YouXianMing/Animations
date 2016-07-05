@@ -1,15 +1,15 @@
 //
-//  CustomInfiniteLoopViewCell.h
+//  CustomInfiniteLoopCell.h
 //  InfiniteLoopView
 //
-//  Created by YouXianMing on 16/5/5.
-//  Copyright © 2016年 YouXianMing. All rights reserved.
+//  Created by XianMing You on 16/7/5.
+//  Copyright © 2016年 XianMing You. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "InfiniteLoopViewProtocol.h"
 
-@interface CustomInfiniteLoopViewCell : UICollectionViewCell
+@interface CustomInfiniteLoopCell : UICollectionViewCell
 
 /**
  *  Data model.

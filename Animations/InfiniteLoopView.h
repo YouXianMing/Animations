@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "InfiniteLoopViewProtocol.h"
-#import "CustomInfiniteLoopViewCell.h"
+#import "InfiniteLoopCellClassProtocol.h"
+#import "CustomInfiniteLoopCell.h"
 @class InfiniteLoopView;
 
 @protocol InfiniteLoopViewDelegate <NSObject>
@@ -21,8 +22,12 @@
  *  @param infiniteLoopView InfiniteLoopView's object.
  *  @param data             data.
  *  @param index            Current index.
+ *  @param cell             CustomInfiniteLoopCell type's cell.
  */
-- (void)infiniteLoopView:(InfiniteLoopView *)infiniteLoopView data:(id <InfiniteLoopViewProtocol>)data selectedIndex:(NSInteger)index;
+- (void)infiniteLoopView:(InfiniteLoopView *)infiniteLoopView
+                    data:(id <InfiniteLoopViewProtocol>)data
+           selectedIndex:(NSInteger)index
+                    cell:(CustomInfiniteLoopCell *)cell;
 
 /**
  *  Did scroll to get the current page.
@@ -42,14 +47,9 @@
 @property (nonatomic, weak) id <InfiniteLoopViewDelegate> delegate;
 
 /**
- *  The cell's class, you must set this value.
- */
-@property (nonatomic) Class  customCellClass;
-
-/**
  *  Image model's array, you must set this value.
  */
-@property (nonatomic, strong) NSArray <InfiniteLoopViewProtocol> *models;
+@property (nonatomic, strong) NSArray <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol> *models;
 
 /**
  *  Scroll time interval, default is 4s.

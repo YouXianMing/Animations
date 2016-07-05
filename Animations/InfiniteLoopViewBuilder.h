@@ -10,6 +10,8 @@
 #import "CustomNodeStateView.h"
 #import "UIView+SetRect.h"
 #import "InfiniteLoopViewProtocol.h"
+#import "InfiniteLoopCellClassProtocol.h"
+#import "CustomInfiniteLoopCell.h"
 @class InfiniteLoopViewBuilder;
 
 @protocol InfiniteLoopViewBuilderEventDelegate <NSObject>
@@ -25,7 +27,8 @@
  */
 - (void)infiniteLoopViewBuilder:(InfiniteLoopViewBuilder *)infiniteLoopViewBuilder
                            data:(id <InfiniteLoopViewProtocol>)data
-                  selectedIndex:(NSInteger)index;
+                  selectedIndex:(NSInteger)index
+                           cell:(CustomInfiniteLoopCell *)cell;
 
 /**
  *  Did scroll to get the current page.
@@ -83,7 +86,7 @@ typedef enum : NSUInteger {
 /**
  *  Image model's array, you must set this value.
  */
-@property (nonatomic, strong) NSArray <InfiniteLoopViewProtocol>  *models;
+@property (nonatomic, strong) NSArray <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol>  *models;
 
 /**
  *  Set the NodeView's size, default is (10, 10).
@@ -94,11 +97,6 @@ typedef enum : NSUInteger {
  *  The CustomNodeStateViews show position, default is kNodeViewBottom.
  */
 @property (nonatomic) ENodeViewShowPosition  position;
-
-/**
- *  The cell's class, you must set this value.
- */
-@property (nonatomic) Class  customCellClass;
 
 /**
  *  Scroll time interval, default is 4s.

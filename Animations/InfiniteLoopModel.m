@@ -32,4 +32,16 @@
     return _imageUrl;
 }
 
+#pragma mark - InfiniteLoopCellClassProtocol's method.
+
+- (NSString *)cellReuseIdentifier {
+    
+    return _infiniteLoopCellReuseIdentifier;
+}
+
+- (Class)cellClass {
+    
+    return _infiniteLoopCellClass;
+}
+
 @end

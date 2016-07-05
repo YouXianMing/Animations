@@ -1,19 +1,19 @@
 //
-//  CustomInfiniteLoopViewCell.m
+//  CustomInfiniteLoopCell.m
 //  InfiniteLoopView
 //
-//  Created by YouXianMing on 16/5/5.
-//  Copyright © 2016年 YouXianMing. All rights reserved.
+//  Created by XianMing You on 16/7/5.
+//  Copyright © 2016年 XianMing You. All rights reserved.
 //
 
-#import "CustomInfiniteLoopViewCell.h"
+#import "CustomInfiniteLoopCell.h"
 
-@implementation CustomInfiniteLoopViewCell
+@implementation CustomInfiniteLoopCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {
-    
+        
         [self setupCollectionViewCell];
         [self buildSubView];
     }
@@ -22,23 +22,23 @@
 }
 
 - (void)setupCollectionViewCell {
-
+    
 }
 
 - (void)buildSubView {
-
+    
 }
 
 - (void)loadContent {
-
+    
 }
 
 - (void)willDisplay {
-
+    
 }
 
 - (void)didEndDisplay {
-
+    
 }
 
 @end

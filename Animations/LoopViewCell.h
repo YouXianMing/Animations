@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "CustomInfiniteLoopViewCell.h"
+#import "CustomInfiniteLoopCell.h"
 
-@interface LoopViewCell : CustomInfiniteLoopViewCell
+@interface LoopViewCell : CustomInfiniteLoopCell
 
 @end

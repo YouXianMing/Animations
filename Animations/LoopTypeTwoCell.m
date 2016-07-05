@@ -41,7 +41,7 @@
 
 - (void)loadContent {
     
-    InfiniteLoopModel *model = self.dataModel;
+    InfiniteLoopModel *model = (id)self.dataModel;
     self.label.text          = model.title;
     [self.label sizeToFit];
     

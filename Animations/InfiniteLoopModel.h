@@ -8,13 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "InfiniteLoopViewProtocol.h"
+#import "InfiniteLoopCellClassProtocol.h"
 
-@interface InfiniteLoopModel : NSObject <InfiniteLoopViewProtocol>
+@interface InfiniteLoopModel : NSObject <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol>
 
 @property (nonatomic, strong) NSString *imageUrl;
 @property (nonatomic, strong) NSString *title;
 
 + (instancetype)infiniteLoopModelWithImageUrl:(NSString *)url
                                         title:(NSString *)title;
+
+@property (nonatomic, strong) NSString *infiniteLoopCellReuseIdentifier;
+@property (nonatomic)         Class     infiniteLoopCellClass;
 
 @end

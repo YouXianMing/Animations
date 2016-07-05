@@ -37,24 +37,28 @@
         NSMutableArray *models = [NSMutableArray array];
         for (int i = 0; i < strings.count; i++) {
             
-            [models addObject:[ImageModel imageModelWithImageUrl:strings[i]]];
+            ImageModel *model                     = [ImageModel imageModelWithImageUrl:strings[i]];
+            
+            // Setup model.
+            model.infiniteLoopCellClass           = [LoopViewCell class];
+            model.infiniteLoopCellReuseIdentifier = [NSString stringWithFormat:@"LoopViewCell_%d", i];
+            [models addObject:model];
         }
         
         InfiniteLoopViewBuilder *loopView = [[InfiniteLoopViewBuilder alloc] initWithFrame:CGRectMake(0, 0, Width, self.contentView.height / 2.f)];
-        loopView.customCellClass    = [LoopViewCell class];
         loopView.nodeViewTemplate   = [CircleNodeStateView new];
         loopView.delegate           = self;
         loopView.sampleNodeViewSize = CGSizeMake(8, 6);
         loopView.position           = kNodeViewBottomRight;
         loopView.edgeInsets         = UIEdgeInsetsMake(0, 0, 7, 5);
-        loopView.models             = (NSArray <InfiniteLoopViewProtocol> *)models;
+        loopView.models             = (NSArray <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol> *)models;
         [loopView startLoopAnimated:YES];
         [self.contentView addSubview:loopView];
         
-        UIView *whiteView         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, loopView.width, 20)];
-        whiteView.bottom          = loopView.height;
-        whiteView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5f];
-        [loopView.contentView addSubview:whiteView];
+        UIView *blackView         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, loopView.width, 20)];
+        blackView.bottom          = loopView.height;
+        blackView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5f];
+        [loopView.contentView addSubview:blackView];
     }
     
     {
@@ -71,12 +75,17 @@
         NSMutableArray *models = [NSMutableArray array];
         for (int i = 0; i < strings.count; i++) {
             
-            [models addObject:[InfiniteLoopModel infiniteLoopModelWithImageUrl:strings[i] title:titles[i]]];
+            InfiniteLoopModel *model = [InfiniteLoopModel infiniteLoopModelWithImageUrl:strings[i] title:titles[i]];
+            
+            // Setup model.
+            model.infiniteLoopCellClass           = [LoopViewCell class];
+            model.infiniteLoopCellReuseIdentifier = [NSString stringWithFormat:@"LoopTypeTwoCell_%d", i];
+
+            [models addObject:model];
         }
         
         InfiniteLoopViewBuilder *loopView = [[InfiniteLoopViewBuilder alloc] initWithFrame:CGRectMake(0, self.contentView.height / 2.f,
                                                                                                       Width, self.contentView.height / 2.f)];
-        loopView.customCellClass    = [LoopTypeTwoCell class];
         loopView.nodeViewTemplate   = [NodeStateView new];
         loopView.delegate           = self;
         loopView.scrollTimeInterval = 5.f;
@@ -84,7 +93,7 @@
         loopView.sampleNodeViewSize = CGSizeMake(8, 20);
         loopView.position           = kNodeViewRightBottom;
         loopView.edgeInsets         = UIEdgeInsetsMake(0, 0, 2, 2);
-        loopView.models = (NSArray <InfiniteLoopViewProtocol> *)models;
+        loopView.models             = (NSArray <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol> *)models;
         [loopView startLoopAnimated:YES];
         [self.contentView addSubview:loopView];
     }
@@ -92,9 +101,10 @@
 
 - (void)infiniteLoopViewBuilder:(InfiniteLoopViewBuilder *)infiniteLoopViewBuilder
                            data:(id <InfiniteLoopViewProtocol>)data
-                  selectedIndex:(NSInteger)index {
+                  selectedIndex:(NSInteger)index
+                           cell:(CustomInfiniteLoopCell *)cell {
     
-    NSLog(@"index:%ld - %@", (long)index, data);
+    NSLog(@"index:%ld - %@ %@", (long)index, data, cell);
 }
 
 - (void)infiniteLoopViewBuilder:(InfiniteLoopViewBuilder *)infiniteLoopViewBuilder
