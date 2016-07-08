@@ -225,7 +225,7 @@
                        [Item itemWithName:@"无限轮播图" object:[InfiniteLoopViewController class]],
                        [Item itemWithName:@"BaseControl按钮合集" object:[BaseControlViewController class]],
                        [Item itemWithName:@"POP-缩放" object:[SpringScaleViewController class]],
-//                       [Item itemWithName:@"点击区域的绘制" object:[TapPathDrawViewController class]],
+                       [Item itemWithName:@"点击区域的绘制" object:[TapPathDrawViewController class]],
                        [Item itemWithName:@"QR-Code" object:[QRCodeViewController class]]];
     
     self.items = [NSMutableArray array];

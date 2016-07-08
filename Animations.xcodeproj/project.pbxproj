@@ -353,6 +353,7 @@
 		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
 		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
 		C582E7A21D2F4933003433EC /* CutOutMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7A11D2F4933003433EC /* CutOutMaskView.m */; };
+		C582E8181D2FB089003433EC /* CalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E8171D2FB089003433EC /* CalendarEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1075,6 +1076,8 @@
 		C582E7971D2F4184003433EC /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
 		C582E7A01D2F4933003433EC /* CutOutMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutMaskView.h; sourceTree = "<group>"; };
 		C582E7A11D2F4933003433EC /* CutOutMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutOutMaskView.m; sourceTree = "<group>"; };
+		C582E8161D2FB089003433EC /* CalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEvent.h; sourceTree = "<group>"; };
+		C582E8171D2FB089003433EC /* CalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1270,6 +1273,7 @@
 				104F0D211BFC1C9C00C46E6A /* StringAttribute */,
 				105AFB4C1CF18CF5003DD84A /* StringRangeManager */,
 				104F0D091BFAFB5400C46E6A /* CGContextObject */,
+				C582E8151D2FB076003433EC /* CalendarEvent */,
 				10381FD51BF9DE6E00E5E476 /* GCD */,
 				10381F7B1BF9B55B00E5E476 /* POP */,
 			);
@@ -2935,6 +2939,15 @@
 			name = QRCodeViewController;
 			sourceTree = "<group>";
 		};
+		C582E8151D2FB076003433EC /* CalendarEvent */ = {
+			isa = PBXGroup;
+			children = (
+				C582E8161D2FB089003433EC /* CalendarEvent.h */,
+				C582E8171D2FB089003433EC /* CalendarEvent.m */,
+			);
+			name = CalendarEvent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3278,6 +3291,7 @@
 				102A0FFB1C92727200BF3F1B /* NSFileManager+Godzippa.m in Sources */,
 				105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */,
 				105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */,
+				C582E8181D2FB089003433EC /* CalendarEvent.m in Sources */,
 				10E2D4F61CD5962000666EEB /* UIImageView+WebCache.m in Sources */,
 				B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */,
 				102ED8761C3BFCCC00E9863E /* CustomCell.m in Sources */,
