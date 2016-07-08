@@ -349,6 +349,10 @@
 		B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0119D1C0BE33E0075BC2E /* StudentModel.m */; };
 		B5D011A71C0BE3D30075BC2E /* ClassHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011A51C0BE3D30075BC2E /* ClassHeaderView.m */; };
 		B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */; };
+		C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7911D2F40DF003433EC /* QRCodeViewController.m */; };
+		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
+		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
+		C582E7A21D2F4933003433EC /* CutOutMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7A11D2F4933003433EC /* CutOutMaskView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1063,6 +1067,14 @@
 		B5D011A51C0BE3D30075BC2E /* ClassHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassHeaderView.m; sourceTree = "<group>"; };
 		B5D011A81C0BE7F00075BC2E /* CustomHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderFooterView.h; sourceTree = "<group>"; };
 		B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderFooterView.m; sourceTree = "<group>"; };
+		C582E7901D2F40DF003433EC /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		C582E7911D2F40DF003433EC /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		C582E7941D2F4184003433EC /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
+		C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDeviceAuthorization.m; sourceTree = "<group>"; };
+		C582E7961D2F4184003433EC /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
+		C582E7971D2F4184003433EC /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
+		C582E7A01D2F4933003433EC /* CutOutMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutMaskView.h; sourceTree = "<group>"; };
+		C582E7A11D2F4933003433EC /* CutOutMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutOutMaskView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1858,6 +1870,7 @@
 				1057021C1CF6DABA003B10C6 /* BaseControlViewController */,
 				10EFE2131D01874E00159779 /* SpringScaleViewController */,
 				104FCC991D23573200308B73 /* TapPathDrawViewController */,
+				C582E7931D2F40E5003433EC /* QRCodeViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2907,6 +2920,21 @@
 			name = RotateView;
 			sourceTree = "<group>";
 		};
+		C582E7931D2F40E5003433EC /* QRCodeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C582E7901D2F40DF003433EC /* QRCodeViewController.h */,
+				C582E7911D2F40DF003433EC /* QRCodeViewController.m */,
+				C582E7941D2F4184003433EC /* VideoDeviceAuthorization.h */,
+				C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */,
+				C582E7961D2F4184003433EC /* QRCodeView.h */,
+				C582E7971D2F4184003433EC /* QRCodeView.m */,
+				C582E7A01D2F4933003433EC /* CutOutMaskView.h */,
+				C582E7A11D2F4933003433EC /* CutOutMaskView.m */,
+			);
+			name = QRCodeViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3005,6 +3033,7 @@
 				106BCFE31CDC7EA3007C3EEE /* InfiniteLoopModel.m in Sources */,
 				10A67C651C12D68D00C3E505 /* DrawView.m in Sources */,
 				10E2D5011CD5D9A900666EEB /* SystemFontInfoController.m in Sources */,
+				C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */,
 				100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */,
 				10D4F6091C41486E00D056EB /* CATransform3DM34Controller.m in Sources */,
 				10CEC5971C223A5400B0CA7D /* ScaleLabel.m in Sources */,
@@ -3013,6 +3042,7 @@
 				10CEC5941C2238E700B0CA7D /* LabelScaleViewController.m in Sources */,
 				104228C31C3694B10011409C /* SDWebImageController.m in Sources */,
 				109ECD5E1C3D3F1500290307 /* CALayer+SetRect.m in Sources */,
+				C582E7991D2F4184003433EC /* QRCodeView.m in Sources */,
 				106BCFD11CDC678F007C3EEE /* InfiniteLoopView.m in Sources */,
 				103088B31C05679A00C8B623 /* ScrollBlurImageViewController.m in Sources */,
 				1068FD4D1CF8479E00BE431C /* TransitionAnimator.m in Sources */,
@@ -3042,6 +3072,7 @@
 				1096065A1C93B4A300CCB3AD /* UIProgressView+AFNetworking.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
 				102A10451C9808FF00BF3F1B /* AbsRequestParameterSerializer.m in Sources */,
+				C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */,
 				102B1F341C60E66F00A8FD40 /* TableViewLoadDataRootModel.m in Sources */,
 				B5D0119E1C0BE33E0075BC2E /* ClassModel.m in Sources */,
 				10381F711BF9B47000E5E476 /* Item.m in Sources */,
@@ -3280,6 +3311,7 @@
 				104326941C4B9D570033CEC0 /* SpringEffectController.m in Sources */,
 				1096065C1C93B4A300CCB3AD /* UIWebView+AFNetworking.m in Sources */,
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
+				C582E7A21D2F4933003433EC /* CutOutMaskView.m in Sources */,
 				104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */,
 				10651F611D2BB2BC004AF473 /* CustomInfiniteLoopCell.m in Sources */,
 				102B1F331C60E66F00A8FD40 /* SourceModel.m in Sources */,
