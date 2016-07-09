@@ -88,7 +88,7 @@
     }];
 }
 
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
     if (_currentSelectedManager) {
         
@@ -98,7 +98,7 @@
     _currentSelectedManager = nil;
 }
 
-- (void)touchesCancelled:(nullable NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
     if (_currentSelectedManager) {
         
