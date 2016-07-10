@@ -351,6 +351,7 @@
 		B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */; };
 		C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */; };
 		C50F24391D32055200C3E02A /* CutOutClearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24381D32055200C3E02A /* CutOutClearView.m */; };
+		C50F243B1D321A6A00C3E02A /* MaskShapeViewController.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */; };
 		C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7911D2F40DF003433EC /* QRCodeViewController.m */; };
 		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
 		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
@@ -1073,6 +1074,7 @@
 		C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskShapeViewController.m; sourceTree = "<group>"; };
 		C50F24371D32055200C3E02A /* CutOutClearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutClearView.h; sourceTree = "<group>"; };
 		C50F24381D32055200C3E02A /* CutOutClearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutOutClearView.m; sourceTree = "<group>"; };
+		C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MaskShapeViewController.jpg; sourceTree = "<group>"; };
 		C582E7901D2F40DF003433EC /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		C582E7911D2F40DF003433EC /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		C582E7941D2F4184003433EC /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
@@ -2933,6 +2935,7 @@
 			children = (
 				C50F24101D31CC3000C3E02A /* MaskShapeViewController.h */,
 				C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */,
+				C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */,
 			);
 			name = MaskShapeViewController;
 			sourceTree = "<group>";
@@ -3024,6 +3027,7 @@
 				1011BAE11CD48C8D00F29FB9 /* NodeModelViewControllerBack_black@3x.png in Resources */,
 				10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */,
 				10567E491C45411700625C6B /* api.md in Resources */,
+				C50F243B1D321A6A00C3E02A /* MaskShapeViewController.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

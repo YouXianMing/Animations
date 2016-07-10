@@ -176,8 +176,7 @@
 
 - (void)configureDataSource {
     
-    NSArray *array = @[[Item itemWithName:@"不规则的形状mask" object:[MaskShapeViewController class]],
-                       [Item itemWithName:@"POP-按钮动画" object:[ButtonPressViewController class]],
+    NSArray *array = @[[Item itemWithName:@"POP-按钮动画" object:[ButtonPressViewController class]],
                        [Item itemWithName:@"POP-Stroke动画" object:[PopStrokeController class]],
                        [Item itemWithName:@"CAShapeLayer的path动画" object:[CAShapeLayerPathController class]],
                        [Item itemWithName:@"图片碎片化mask动画" object:[TransformFadeViewController class]],
@@ -228,7 +227,8 @@
                        [Item itemWithName:@"BaseControl按钮合集" object:[BaseControlViewController class]],
                        [Item itemWithName:@"POP-缩放" object:[SpringScaleViewController class]],
                        [Item itemWithName:@"点击区域的绘制" object:[TapPathDrawViewController class]],
-                       [Item itemWithName:@"QR-Code" object:[QRCodeViewController class]]];
+                       [Item itemWithName:@"QR-Code" object:[QRCodeViewController class]],
+                       [Item itemWithName:@"不规则形状的Mask" object:[MaskShapeViewController class]]];
     
     self.items = [NSMutableArray array];
     
