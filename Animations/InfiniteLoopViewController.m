@@ -78,7 +78,7 @@
             InfiniteLoopModel *model = [InfiniteLoopModel infiniteLoopModelWithImageUrl:strings[i] title:titles[i]];
             
             // Setup model.
-            model.infiniteLoopCellClass           = [LoopViewCell class];
+            model.infiniteLoopCellClass           = [LoopTypeTwoCell class];
             model.infiniteLoopCellReuseIdentifier = [NSString stringWithFormat:@"LoopTypeTwoCell_%d", i];
 
             [models addObject:model];

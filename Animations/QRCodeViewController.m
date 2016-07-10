@@ -12,7 +12,7 @@
 #import "MessageAlertView.h"
 #import "GCD.h"
 #import "VideoDeviceAuthorization.h"
-#import "CutOutMaskView.h"
+#import "CutOutClearView.h"
 
 @interface QRCodeViewController () <QRCodeViewDelegate>
 
@@ -39,6 +39,11 @@
     imageView.center       = self.contentView.middlePoint;
     imageView.centerY     += StatusBarAndNavigationBarHeight / 2.f;
     [self.contentView addSubview:imageView];
+
+    // Cutout mask view.
+    CutOutClearView *maskView = [[CutOutClearView alloc] initWithFrame:self.contentView.bounds];
+    maskView.fillColor        = [UIColor blackColor];
+    maskView.paths            = @[[UIBezierPath bezierPathWithRect:imageView.frame]];
     
     // Code view.
     self.codeView                             = [[QRCodeView alloc] initWithFrame:self.contentView.bounds];
@@ -46,14 +51,8 @@
     self.codeView.delegate                    = self;
     self.codeView.interestArea                = imageView.frame;
     self.codeView.contentView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5f];
+    self.codeView.contentView.maskView        = maskView;
     [self.contentView addSubview:self.codeView];
-    
-    // Cutout mask view.
-    CutOutMaskView *cutOutMaskView = [[CutOutMaskView alloc] initWithFrame:self.contentView.bounds];
-    cutOutMaskView.fillColor       = [UIColor blackColor];
-    cutOutMaskView.framesToCutOut  = @[[NSValue valueWithCGRect:imageView.frame]];
-    [cutOutMaskView makeEffective];
-    self.codeView.contentView.maskView = cutOutMaskView;
     [self.contentView bringSubviewToFront:imageView];
 }
 

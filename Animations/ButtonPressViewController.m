@@ -29,15 +29,15 @@
     [super setup];
     
     // Blur ImageView.
-    self.normalImageView             = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
-    self.blurImageView               = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
+    self.normalImageView             = [[UIImageView alloc] initWithFrame:self.backgroundView.bounds];
+    self.blurImageView               = [[UIImageView alloc] initWithFrame:self.backgroundView.bounds];
     self.normalImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.blurImageView.contentMode   = UIViewContentModeScaleAspectFill;
     UIImage *normalImage             = [UIImage imageNamed:@"1"];
     self.normalImageView.image       = normalImage;
     self.blurImageView.image         = [normalImage blurImage];
-    [self.contentView addSubview:self.normalImageView];
-    [self.contentView addSubview:self.blurImageView];
+    [self.backgroundView addSubview:self.normalImageView];
+    [self.backgroundView addSubview:self.blurImageView];
     
     // PressScaleButton.
     PressScaleButton *button = [[PressScaleButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];

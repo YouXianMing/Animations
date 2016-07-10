@@ -47,4 +47,11 @@
  */
 + (NSString *)appVersion;
 
+/**
+ *  获取启动页图片
+ *
+ *  @return 启动页图片
+ */
++ (UIImage *)launchImage;
+
 @end

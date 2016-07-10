@@ -349,10 +349,11 @@
 		B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0119D1C0BE33E0075BC2E /* StudentModel.m */; };
 		B5D011A71C0BE3D30075BC2E /* ClassHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011A51C0BE3D30075BC2E /* ClassHeaderView.m */; };
 		B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */; };
+		C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */; };
+		C50F24391D32055200C3E02A /* CutOutClearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24381D32055200C3E02A /* CutOutClearView.m */; };
 		C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7911D2F40DF003433EC /* QRCodeViewController.m */; };
 		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
 		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
-		C582E7A21D2F4933003433EC /* CutOutMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7A11D2F4933003433EC /* CutOutMaskView.m */; };
 		C582E8181D2FB089003433EC /* CalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E8171D2FB089003433EC /* CalendarEvent.m */; };
 /* End PBXBuildFile section */
 
@@ -1068,14 +1069,16 @@
 		B5D011A51C0BE3D30075BC2E /* ClassHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassHeaderView.m; sourceTree = "<group>"; };
 		B5D011A81C0BE7F00075BC2E /* CustomHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderFooterView.h; sourceTree = "<group>"; };
 		B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderFooterView.m; sourceTree = "<group>"; };
+		C50F24101D31CC3000C3E02A /* MaskShapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskShapeViewController.h; sourceTree = "<group>"; };
+		C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskShapeViewController.m; sourceTree = "<group>"; };
+		C50F24371D32055200C3E02A /* CutOutClearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutClearView.h; sourceTree = "<group>"; };
+		C50F24381D32055200C3E02A /* CutOutClearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutOutClearView.m; sourceTree = "<group>"; };
 		C582E7901D2F40DF003433EC /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		C582E7911D2F40DF003433EC /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		C582E7941D2F4184003433EC /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
 		C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDeviceAuthorization.m; sourceTree = "<group>"; };
 		C582E7961D2F4184003433EC /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
 		C582E7971D2F4184003433EC /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
-		C582E7A01D2F4933003433EC /* CutOutMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutMaskView.h; sourceTree = "<group>"; };
-		C582E7A11D2F4933003433EC /* CutOutMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutOutMaskView.m; sourceTree = "<group>"; };
 		C582E8161D2FB089003433EC /* CalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEvent.h; sourceTree = "<group>"; };
 		C582E8171D2FB089003433EC /* CalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1875,6 +1878,7 @@
 				10EFE2131D01874E00159779 /* SpringScaleViewController */,
 				104FCC991D23573200308B73 /* TapPathDrawViewController */,
 				C582E7931D2F40E5003433EC /* QRCodeViewController */,
+				C50F24131D31CC4E00C3E02A /* MaskShapeViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2924,6 +2928,15 @@
 			name = RotateView;
 			sourceTree = "<group>";
 		};
+		C50F24131D31CC4E00C3E02A /* MaskShapeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C50F24101D31CC3000C3E02A /* MaskShapeViewController.h */,
+				C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */,
+			);
+			name = MaskShapeViewController;
+			sourceTree = "<group>";
+		};
 		C582E7931D2F40E5003433EC /* QRCodeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2933,8 +2946,8 @@
 				C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */,
 				C582E7961D2F4184003433EC /* QRCodeView.h */,
 				C582E7971D2F4184003433EC /* QRCodeView.m */,
-				C582E7A01D2F4933003433EC /* CutOutMaskView.h */,
-				C582E7A11D2F4933003433EC /* CutOutMaskView.m */,
+				C50F24371D32055200C3E02A /* CutOutClearView.h */,
+				C50F24381D32055200C3E02A /* CutOutClearView.m */,
 			);
 			name = QRCodeViewController;
 			sourceTree = "<group>";
@@ -3141,6 +3154,7 @@
 				10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */,
 				105FFEAA1CBE8740006213B1 /* DrawMarqueeViewController.m in Sources */,
 				10A34F661C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m in Sources */,
+				C50F24391D32055200C3E02A /* CutOutClearView.m in Sources */,
 				10B0DDFF1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m in Sources */,
 				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
 				102B85001C3C9FBB001699A9 /* NumberFormatter.m in Sources */,
@@ -3166,6 +3180,7 @@
 				106CF0921C3764090006419B /* AlertViewController.m in Sources */,
 				104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */,
 				105702151CF6CF05003B10C6 /* POPBaseControl.m in Sources */,
+				C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */,
 				1011BA9E1CD4898D00F29FB9 /* ConsumptionModel.m in Sources */,
 				1020E2D31C73197B00FF233E /* CAGradientView.m in Sources */,
 				106BCFCB1CDC6787007C3EEE /* CustomNodeStateView.m in Sources */,
@@ -3325,7 +3340,6 @@
 				104326941C4B9D570033CEC0 /* SpringEffectController.m in Sources */,
 				1096065C1C93B4A300CCB3AD /* UIWebView+AFNetworking.m in Sources */,
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
-				C582E7A21D2F4933003433EC /* CutOutMaskView.m in Sources */,
 				104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */,
 				10651F611D2BB2BC004AF473 /* CustomInfiniteLoopCell.m in Sources */,
 				102B1F331C60E66F00A8FD40 /* SourceModel.m in Sources */,

@@ -78,11 +78,11 @@
     
     // Init attributes.
     FontAttribute *totalFont = [FontAttribute new];
-    totalFont.font           = [UIFont fontWithName:@"IowanOldStyle-Roman" size:30.f];
+    totalFont.font           = [UIFont HYQiHeiWithFontSize:30.f];
     totalFont.effectRange    = _manager.contentRange;
     
     FontAttribute *numberFont = [FontAttribute new];
-    numberFont.font           = [UIFont HelveticaNeueFontSize:60.f];
+    numberFont.font           = [UIFont HYQiHeiWithFontSize:60.f];
     numberFont.effectRange    = [[[_manager rangesFromPartName:@"num" options:0] firstObject] rangeValue];
     
     ForegroundColorAttribute *totalColor = [ForegroundColorAttribute new];

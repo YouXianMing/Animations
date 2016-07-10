@@ -36,11 +36,11 @@ typedef enum : NSUInteger {
 
     [super setup];
     
-    self.images = @[[UIImage imageNamed:@"1"],
+    self.images = @[[UIImage imageNamed:@"5"],
+                    [UIImage imageNamed:@"1"],
                     [UIImage imageNamed:@"2"],
                     [UIImage imageNamed:@"3"],
-                    [UIImage imageNamed:@"4"],
-                    [UIImage imageNamed:@"5"]];
+                    [UIImage imageNamed:@"4"]];
         
     self.tranformFadeViewOne               = [[CAGradientMaskView alloc] initWithFrame:self.contentView.bounds];
     self.tranformFadeViewOne.contentMode   = UIViewContentModeScaleAspectFill;

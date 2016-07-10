@@ -133,7 +133,7 @@
     
         [self.showLoadingView hide];
         
-    } afterDelaySecs:1.f];
+    } afterDelaySecs:0.5f];
     
     self.rootModel = data;
     [self.tableView reloadData];

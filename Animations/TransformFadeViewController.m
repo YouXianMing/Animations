@@ -36,32 +36,32 @@ typedef enum : NSUInteger {
 
     [super setup];
     
-    self.images = @[[UIImage imageNamed:@"1"],
+    self.images = @[[UIImage imageNamed:@"5"],
+                    [UIImage imageNamed:@"1"],
                     [UIImage imageNamed:@"2"],
                     [UIImage imageNamed:@"3"],
-                    [UIImage imageNamed:@"4"],
-                    [UIImage imageNamed:@"5"]];
+                    [UIImage imageNamed:@"4"]];
     
     // 图片1
     self.tranformFadeViewOne                      = [[TranformFadeView alloc] initWithFrame:self.contentView.bounds];
     self.tranformFadeViewOne.contentMode          = UIViewContentModeScaleAspectFill;
     self.tranformFadeViewOne.image                = [self currentImage];
-    self.tranformFadeViewOne.verticalCount        = 2;
+    self.tranformFadeViewOne.verticalCount        = 3;
     self.tranformFadeViewOne.horizontalCount      = 12;
     self.tranformFadeViewOne.center               = self.contentView.center;
     self.tranformFadeViewOne.fadeDuradtion        = 1.f;
-    self.tranformFadeViewOne.animationGapDuration = 0.1f;
+    self.tranformFadeViewOne.animationGapDuration = 0.075f;
     [self.tranformFadeViewOne buildMaskView];
     [self.contentView addSubview:self.tranformFadeViewOne];
     
     // 图片2
     self.tranformFadeViewTwo                      = [[TranformFadeView alloc] initWithFrame:self.contentView.bounds];
     self.tranformFadeViewTwo.contentMode          = UIViewContentModeScaleAspectFill;
-    self.tranformFadeViewTwo.verticalCount        = 2;
+    self.tranformFadeViewTwo.verticalCount        = 3;
     self.tranformFadeViewTwo.horizontalCount      = 12;
     self.tranformFadeViewTwo.center               = self.contentView.center;
     self.tranformFadeViewTwo.fadeDuradtion        = 1.f;
-    self.tranformFadeViewTwo.animationGapDuration = 0.1f;
+    self.tranformFadeViewTwo.animationGapDuration = 0.075f;
     [self.tranformFadeViewTwo buildMaskView];
     [self.contentView addSubview:self.tranformFadeViewTwo];
     [self.tranformFadeViewTwo fadeAnimated:NO];
@@ -73,7 +73,7 @@ typedef enum : NSUInteger {
         
         [weakSelf timerEvent];
         
-    } timeIntervalWithSecs:6 delaySecs:1.f];
+    } timeIntervalWithSecs:8 delaySecs:1.f];
     [self.timer start];
 }
 
