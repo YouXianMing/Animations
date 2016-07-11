@@ -352,6 +352,8 @@
 		C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */; };
 		C50F24391D32055200C3E02A /* CutOutClearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24381D32055200C3E02A /* CutOutClearView.m */; };
 		C50F243B1D321A6A00C3E02A /* MaskShapeViewController.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */; };
+		C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */; };
+		C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C01D1D33A22D00E40201 /* UIAlertAction+Constructor.m */; };
 		C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7911D2F40DF003433EC /* QRCodeViewController.m */; };
 		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
 		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
@@ -1075,6 +1077,10 @@
 		C50F24371D32055200C3E02A /* CutOutClearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutClearView.h; sourceTree = "<group>"; };
 		C50F24381D32055200C3E02A /* CutOutClearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutOutClearView.m; sourceTree = "<group>"; };
 		C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MaskShapeViewController.jpg; sourceTree = "<group>"; };
+		C574C0181D33A21B00E40201 /* UIAlertController+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Constructor.h"; sourceTree = "<group>"; };
+		C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Constructor.m"; sourceTree = "<group>"; };
+		C574C01C1D33A22D00E40201 /* UIAlertAction+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertAction+Constructor.h"; sourceTree = "<group>"; };
+		C574C01D1D33A22D00E40201 /* UIAlertAction+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertAction+Constructor.m"; sourceTree = "<group>"; };
 		C582E7901D2F40DF003433EC /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		C582E7911D2F40DF003433EC /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		C582E7941D2F4184003433EC /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
@@ -2345,6 +2351,8 @@
 		1068FCCA1CF7D76E00BE431C /* UI-Component */ = {
 			isa = PBXGroup;
 			children = (
+				C574C0171D33A20800E40201 /* UIAlertController+Category */,
+				C574C01B1D33A22600E40201 /* UIAlertAction+Category */,
 				105DF1AC1D0D2882002B10F8 /* UITableView+Category */,
 				1059EB361CF0505500B7A4B0 /* UITextField+Category */,
 				1041AE4C1CEBFE24005697B8 /* NSString+Category */,
@@ -2940,6 +2948,24 @@
 			name = MaskShapeViewController;
 			sourceTree = "<group>";
 		};
+		C574C0171D33A20800E40201 /* UIAlertController+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C574C0181D33A21B00E40201 /* UIAlertController+Constructor.h */,
+				C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */,
+			);
+			name = "UIAlertController+Category";
+			sourceTree = "<group>";
+		};
+		C574C01B1D33A22600E40201 /* UIAlertAction+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C574C01C1D33A22D00E40201 /* UIAlertAction+Constructor.h */,
+				C574C01D1D33A22D00E40201 /* UIAlertAction+Constructor.m */,
+			);
+			name = "UIAlertAction+Category";
+			sourceTree = "<group>";
+		};
 		C582E7931D2F40E5003433EC /* QRCodeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -3115,6 +3141,7 @@
 				102B852F1C3CF19F001699A9 /* UIImage+SolidColor.m in Sources */,
 				10381FB51BF9B55B00E5E476 /* POPAnimationTracer.mm in Sources */,
 				10E2D4EE1CD5962000666EEB /* SDWebImageDownloaderOperation.m in Sources */,
+				C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */,
 				102296AF1C38D122001AF5BB /* CmtsModel.m in Sources */,
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
 				104326671C4B505E0033CEC0 /* ProgressColor+Colors.m in Sources */,
@@ -3235,6 +3262,7 @@
 				10E2D4EF1CD5962000666EEB /* SDWebImageManager.m in Sources */,
 				1068FD531CF847AD00BE431C /* PushAnimator.m in Sources */,
 				1030886A1C03F1A000C8B623 /* easing.c in Sources */,
+				C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */,
 				104228C91C36956C0011409C /* PictureCell.m in Sources */,
 				109606581C93B4A300CCB3AD /* UIButton+AFNetworking.m in Sources */,
 				1011BA9F1CD4898D00F29FB9 /* DailyListModel.m in Sources */,
