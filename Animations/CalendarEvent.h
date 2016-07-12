@@ -104,6 +104,13 @@ typedef enum : NSUInteger {
  */
 - (void)remove;
 
+/**
+ *  To indicate the event have saved or not.
+ *
+ *  @return
+ */
+- (BOOL)haveSaved;
+
 #pragma mark - Constructor method.
 
 + (instancetype)calendarEventWithEventTitle:(NSString *)title startDate:(NSDate *)startDate endDate:(NSDate *)endDate;

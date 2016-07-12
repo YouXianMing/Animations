@@ -22,18 +22,35 @@
         EKEvent      *event      = [eventStore eventWithIdentifier:eventId];
         NSError      *error      = nil;
         [eventStore removeEvent:event span:EKSpanThisEvent error:&error];
-
+        
         if (self.delegate && [self.delegate respondsToSelector:@selector(calendarEvent:removedStatus:error:)]) {
             
-            [self.delegate calendarEvent:self
-                           removedStatus:error ? kCalendarEventAccessRemovedFailed : kCalendarEventAccessRemovedSucess
-                                   error:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.delegate calendarEvent:self
+                               removedStatus:error ? kCalendarEventAccessRemovedFailed : kCalendarEventAccessRemovedSucess
+                                       error:nil];
+            });
         }
     }
 }
 
-- (void)save {
+- (BOOL)haveSaved {
+    
+    NSString *eventId = [[NSUserDefaults standardUserDefaults] objectForKey:[self storedKey]];
+    
+    if (eventId.length) {
+        
+        return YES;
+        
+    } else {
+        
+        return NO;
+    }
+}
 
+- (void)save {
+    
     NSParameterAssert(self.eventTitle);
     NSParameterAssert(self.startDate);
     NSParameterAssert(self.endDate);
@@ -57,10 +74,13 @@
             if ([eventStore saveEvent:event span:EKSpanThisEvent commit:YES error:&savedError]) {
                 
                 if (self.delegate && [self.delegate respondsToSelector:@selector(calendarEvent:savedStatus:error:)]) {
-                 
-                    [self.delegate calendarEvent:self
-                                     savedStatus:kCalendarEventAccessSavedSucess
-                                           error:nil];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        [self.delegate calendarEvent:self
+                                         savedStatus:kCalendarEventAccessSavedSucess
+                                               error:nil];
+                    });
                 }
                 
                 // 存储事件的键值
@@ -70,9 +90,12 @@
                 
                 if (self.delegate && [self.delegate respondsToSelector:@selector(calendarEvent:savedStatus:error:)]) {
                     
-                    [self.delegate calendarEvent:self
-                                     savedStatus:kCalendarEventAccessSavedFailed
-                                           error:savedError];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        [self.delegate calendarEvent:self
+                                         savedStatus:kCalendarEventAccessSavedFailed
+                                               error:savedError];
+                    });
                 }
             }
             
@@ -80,16 +103,19 @@
             
             if (self.delegate && [self.delegate respondsToSelector:@selector(calendarEvent:savedStatus:error:)]) {
                 
-                [self.delegate calendarEvent:self
-                                 savedStatus:kCalendarEventAccessDenied
-                                       error:error];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [self.delegate calendarEvent:self
+                                     savedStatus:kCalendarEventAccessDenied
+                                           error:error];
+                });
             }
         }
     }];
 }
 
 - (NSString *)storedKey {
-
+    
     NSParameterAssert(self.eventTitle);
     NSParameterAssert(self.startDate);
     NSParameterAssert(self.endDate);
@@ -113,7 +139,7 @@
 }
 
 + (instancetype)calendarEventWithEventTitle:(NSString *)title startDate:(NSDate *)startDate endDate:(NSDate *)endDate {
-
+    
     CalendarEvent *event = [[self class] new];
     event.eventTitle     = title;
     event.startDate      = startDate;
