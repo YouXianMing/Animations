@@ -354,6 +354,7 @@
 		C50F243B1D321A6A00C3E02A /* MaskShapeViewController.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */; };
 		C516777C1D3620A00032AC09 /* UIView+ScreensShot.m in Sources */ = {isa = PBXBuildFile; fileRef = C516777B1D3620A00032AC09 /* UIView+ScreensShot.m */; };
 		C516777F1D3620D50032AC09 /* PhotosAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C516777E1D3620D50032AC09 /* PhotosAlbumManager.m */; };
+		C51677971D363E6F0032AC09 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C51677961D363E6F0032AC09 /* Base64.m */; };
 		C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */; };
 		C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C01D1D33A22D00E40201 /* UIAlertAction+Constructor.m */; };
 		C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7911D2F40DF003433EC /* QRCodeViewController.m */; };
@@ -1083,6 +1084,8 @@
 		C516777B1D3620A00032AC09 /* UIView+ScreensShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScreensShot.m"; sourceTree = "<group>"; };
 		C516777D1D3620D50032AC09 /* PhotosAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosAlbumManager.h; sourceTree = "<group>"; };
 		C516777E1D3620D50032AC09 /* PhotosAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosAlbumManager.m; sourceTree = "<group>"; };
+		C51677951D363E6F0032AC09 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		C51677961D363E6F0032AC09 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		C574C0181D33A21B00E40201 /* UIAlertController+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Constructor.h"; sourceTree = "<group>"; };
 		C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Constructor.m"; sourceTree = "<group>"; };
 		C574C01C1D33A22D00E40201 /* UIAlertAction+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertAction+Constructor.h"; sourceTree = "<group>"; };
@@ -1211,6 +1214,8 @@
 		1011BAE81CD4957400F29FB9 /* ValueStorageManager */ = {
 			isa = PBXGroup;
 			children = (
+				C51677951D363E6F0032AC09 /* Base64.h */,
+				C51677961D363E6F0032AC09 /* Base64.m */,
 				1011BB071CD4961800F29FB9 /* BaseValueStorageManager */,
 				1011BB031CD4960200F29FB9 /* EncryptingMode */,
 				1011BAF61CD495E200F29FB9 /* FastCoder */,
@@ -3414,6 +3419,7 @@
 				109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */,
 				1096065B1C93B4A300CCB3AD /* UIRefreshControl+AFNetworking.m in Sources */,
 				102ED87A1C3C005800E9863E /* MixedColorProgressViewController.m in Sources */,
+				C51677971D363E6F0032AC09 /* Base64.m in Sources */,
 				105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */,
 				104228C61C3695230011409C /* PictureModel.m in Sources */,
 				109606541C93B4A300CCB3AD /* AFAutoPurgingImageCache.m in Sources */,
