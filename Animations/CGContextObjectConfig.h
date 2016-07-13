@@ -11,6 +11,18 @@
 #import <Foundation/Foundation.h>
 #import "RGBColor.h"
 
+/**
+ *  Get the CGFloat's array.
+ *
+ *  @param count Array's count.
+ *
+ *  @return CGFloat's array.
+ */
+NS_INLINE CGFloat * CGFloatArrayWithCount(NSUInteger count) {
+    
+    return (CGFloat *)malloc(count * sizeof(CGFloat));
+}
+
 @interface CGContextObjectConfig : NSObject
 
 /**
