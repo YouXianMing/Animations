@@ -38,13 +38,15 @@
     
 }
 
-+ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
-                                                   data:(id)data
-                                             cellHeight:(CGFloat)height
-                                                   type:(NSInteger)type {
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data type:(NSInteger)type {
     
-    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:NSStringFromClass([self class])
-                                                              data:data cellHeight:height cellType:type];
+    NSString *tmpReuseIdentifier = reuseIdentifier.length <= 0 ? NSStringFromClass([self class]) : reuseIdentifier;
+    return [CellDataAdapter collectionCellDataAdapterWithCellReuseIdentifier:tmpReuseIdentifier data:data cellType:type];
+}
+
++ (CellDataAdapter *)dataAdapterWithData:(id)data type:(NSInteger)type {
+
+    return [CellDataAdapter collectionCellDataAdapterWithCellReuseIdentifier:nil data:data cellType:type];
 }
 
 @end

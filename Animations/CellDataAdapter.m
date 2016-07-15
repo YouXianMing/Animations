@@ -10,10 +10,8 @@
 
 @implementation CellDataAdapter
 
-+ (CellDataAdapter *)cellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers
-                                                       data:(id)data
-                                                 cellHeight:(CGFloat)cellHeight
-                                                   cellType:(NSInteger)cellType {
++ (CellDataAdapter *)cellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
+                                                 cellHeight:(CGFloat)cellHeight cellType:(NSInteger)cellType {
     
     CellDataAdapter *adapter    = [[self class] new];
     adapter.cellReuseIdentifier = cellReuseIdentifiers;
@@ -24,9 +22,7 @@
     return adapter;
 }
 
-+ (CellDataAdapter *)collectionCellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers
-                                                                 data:(id)data
-                                                             cellType:(NSInteger)cellType {
++ (CellDataAdapter *)collectionCellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data cellType:(NSInteger)cellType {
     
     CellDataAdapter *adapter    = [[self class] new];
     adapter.cellReuseIdentifier = cellReuseIdentifiers;

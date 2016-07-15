@@ -58,6 +58,21 @@
     return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:tmpReuseIdentifier data:data cellHeight:height cellType:type];
 }
 
++ (CellDataAdapter *)dataAdapterWithData:(id)data cellHeight:(CGFloat)height type:(NSInteger)type {
+
+    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:nil data:data cellHeight:height cellType:type];
+}
+
++ (CellDataAdapter *)dataAdapterWithData:(id)data cellHeight:(CGFloat)height {
+
+    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:nil data:data cellHeight:height cellType:0];
+}
+
++ (CellDataAdapter *)dataAdapterWithData:(id)data {
+
+    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:nil data:data cellHeight:0 cellType:0];
+}
+
 - (void)updateWithNewCellHeight:(CGFloat)height animated:(BOOL)animated {
     
     if (_tableView && _dataAdapter) {

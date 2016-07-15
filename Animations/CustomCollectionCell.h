@@ -85,19 +85,27 @@
  */
 - (void)selectedEvent;
 
+#pragma mark - Constructor method.
+
 /**
  *  Create the cell's dataAdapter.
  *
  *  @param reuseIdentifier Cell reuseIdentifier, can be nil.
  *  @param data            Cell's data, can be nil.
- *  @param height          Cell's height.
  *  @param type            Cell's type.
  *
  *  @return Cell's dataAdapter.
  */
-+ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
-                                                   data:(id)data
-                                             cellHeight:(CGFloat)height
-                                                   type:(NSInteger)type;
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data type:(NSInteger)type;
+
+/**
+ *  Create the cell's dataAdapter, the reuseIdentifier is the cell's class string.
+ *
+ *  @param data            Cell's data, can be nil.
+ *  @param type            Cell's type.
+ *
+ *  @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)dataAdapterWithData:(id)data type:(NSInteger)type;
 
 @end

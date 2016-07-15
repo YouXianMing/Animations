@@ -197,8 +197,6 @@
 		10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10589D221C2393C200F20BC0 /* FBShimmeringLayer.m */; };
 		10589D261C2393C200F20BC0 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10589D241C2393C200F20BC0 /* FBShimmeringView.m */; };
 		1059EB351CF0504D00B7A4B0 /* UITextField+UsefulMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059EB341CF0504D00B7A4B0 /* UITextField+UsefulMethod.m */; };
-		1059F3A31CF4015200F63810 /* GridCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059F3A01CF4015200F63810 /* GridCollectionView.m */; };
-		1059F3A41CF4015200F63810 /* GridCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059F3A21CF4015200F63810 /* GridCollectionViewCell.m */; };
 		105AFB4B1CF18CEF003DD84A /* NSString+Range.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AFB4A1CF18CEF003DD84A /* NSString+Range.m */; };
 		105AFB4F1CF18D04003DD84A /* StringRangeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AFB4E1CF18D04003DD84A /* StringRangeManager.m */; };
 		105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */; };
@@ -361,6 +359,9 @@
 		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
 		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
 		C582E8181D2FB089003433EC /* CalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E8171D2FB089003433EC /* CalendarEvent.m */; };
+		C58978C11D38CD3A000B7D1C /* CollectionGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978BC1D38CD3A000B7D1C /* CollectionGridView.m */; };
+		C58978C21D38CD3A000B7D1C /* CustomCollectionGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978BE1D38CD3A000B7D1C /* CustomCollectionGridViewCell.m */; };
+		C58978C31D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978C01D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -761,10 +762,6 @@
 		10589D241C2393C200F20BC0 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
 		1059EB331CF0504D00B7A4B0 /* UITextField+UsefulMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+UsefulMethod.h"; sourceTree = "<group>"; };
 		1059EB341CF0504D00B7A4B0 /* UITextField+UsefulMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+UsefulMethod.m"; sourceTree = "<group>"; };
-		1059F39F1CF4015200F63810 /* GridCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCollectionView.h; sourceTree = "<group>"; };
-		1059F3A01CF4015200F63810 /* GridCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCollectionView.m; sourceTree = "<group>"; };
-		1059F3A11CF4015200F63810 /* GridCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCollectionViewCell.h; sourceTree = "<group>"; };
-		1059F3A21CF4015200F63810 /* GridCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCollectionViewCell.m; sourceTree = "<group>"; };
 		105AFB491CF18CEF003DD84A /* NSString+Range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Range.h"; sourceTree = "<group>"; };
 		105AFB4A1CF18CEF003DD84A /* NSString+Range.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Range.m"; sourceTree = "<group>"; };
 		105AFB4D1CF18D04003DD84A /* StringRangeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringRangeManager.h; sourceTree = "<group>"; };
@@ -1098,6 +1095,12 @@
 		C582E7971D2F4184003433EC /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
 		C582E8161D2FB089003433EC /* CalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEvent.h; sourceTree = "<group>"; };
 		C582E8171D2FB089003433EC /* CalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarEvent.m; sourceTree = "<group>"; };
+		C58978BB1D38CD3A000B7D1C /* CollectionGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionGridView.h; sourceTree = "<group>"; };
+		C58978BC1D38CD3A000B7D1C /* CollectionGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionGridView.m; sourceTree = "<group>"; };
+		C58978BD1D38CD3A000B7D1C /* CustomCollectionGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionGridViewCell.h; sourceTree = "<group>"; };
+		C58978BE1D38CD3A000B7D1C /* CustomCollectionGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionGridViewCell.m; sourceTree = "<group>"; };
+		C58978BF1D38CD3A000B7D1C /* CollectionGridCellDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionGridCellDataAdapter.h; sourceTree = "<group>"; };
+		C58978C01D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionGridCellDataAdapter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2267,15 +2270,17 @@
 			name = "UITextField+Category";
 			sourceTree = "<group>";
 		};
-		1059F39E1CF4014700F63810 /* GridCollectionView */ = {
+		1059F39E1CF4014700F63810 /* CollectionGridView */ = {
 			isa = PBXGroup;
 			children = (
-				1059F39F1CF4015200F63810 /* GridCollectionView.h */,
-				1059F3A01CF4015200F63810 /* GridCollectionView.m */,
-				1059F3A11CF4015200F63810 /* GridCollectionViewCell.h */,
-				1059F3A21CF4015200F63810 /* GridCollectionViewCell.m */,
+				C58978BB1D38CD3A000B7D1C /* CollectionGridView.h */,
+				C58978BC1D38CD3A000B7D1C /* CollectionGridView.m */,
+				C58978BD1D38CD3A000B7D1C /* CustomCollectionGridViewCell.h */,
+				C58978BE1D38CD3A000B7D1C /* CustomCollectionGridViewCell.m */,
+				C58978BF1D38CD3A000B7D1C /* CollectionGridCellDataAdapter.h */,
+				C58978C01D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m */,
 			);
-			name = GridCollectionView;
+			name = CollectionGridView;
 			sourceTree = "<group>";
 		};
 		105AFB4C1CF18CF5003DD84A /* StringRangeManager */ = {
@@ -2376,7 +2381,7 @@
 				106CF09A1C3765490006419B /* UIFont+Categories */,
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
 				1020A3741D08F9C000056B0E /* BadgeValueView */,
-				1059F39E1CF4014700F63810 /* GridCollectionView */,
+				1059F39E1CF4014700F63810 /* CollectionGridView */,
 				106BCFC21CDC6740007C3EEE /* InfiniteLoopView */,
 				10E2D50F1CD63EDF00666EEB /* iCarousel */,
 				1047E2351CC5AF8400E13D1C /* LazyFadeInView */,
@@ -3110,6 +3115,7 @@
 				10E2D4F31CD5962000666EEB /* UIImage+MultiFormat.m in Sources */,
 				108A99421C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m in Sources */,
 				106BCFDA1CDC67CC007C3EEE /* NodeStateView.m in Sources */,
+				C58978C31D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m in Sources */,
 				106BCFE31CDC7EA3007C3EEE /* InfiniteLoopModel.m in Sources */,
 				10A67C651C12D68D00C3E505 /* DrawView.m in Sources */,
 				10E2D5011CD5D9A900666EEB /* SystemFontInfoController.m in Sources */,
@@ -3234,6 +3240,7 @@
 				B5D011A71C0BE3D30075BC2E /* ClassHeaderView.m in Sources */,
 				107CF3951C2FFC01002DF93C /* LiveImageViewController.m in Sources */,
 				106CF0921C3764090006419B /* AlertViewController.m in Sources */,
+				C58978C21D38CD3A000B7D1C /* CustomCollectionGridViewCell.m in Sources */,
 				104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */,
 				105702151CF6CF05003B10C6 /* POPBaseControl.m in Sources */,
 				C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */,
@@ -3311,7 +3318,6 @@
 				1096062A1C93B47800CCB3AD /* NetworkingReachability.m in Sources */,
 				10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
-				1059F3A41CF4015200F63810 /* GridCollectionViewCell.m in Sources */,
 				10B0DDF61CBA83050089DF1E /* JSAnimatedImagesView.m in Sources */,
 				106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */,
 				109606551C93B4A300CCB3AD /* AFImageDownloader.m in Sources */,
@@ -3340,7 +3346,6 @@
 				10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */,
 				10B0DDFC1CBA84400089DF1E /* AttributedStringInitConfig.m in Sources */,
 				10B6F3D61C954749007E8254 /* ScrollTitleView.m in Sources */,
-				1059F3A31CF4015200F63810 /* GridCollectionView.m in Sources */,
 				102B1F2D1C60E66F00A8FD40 /* DescriptionModel.m in Sources */,
 				B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */,
 				1047E2341CC5AF5400E13D1C /* LazyFadeInViewController.m in Sources */,
@@ -3429,6 +3434,7 @@
 				10589D261C2393C200F20BC0 /* FBShimmeringView.m in Sources */,
 				104F0D0F1BFB006C00C46E6A /* UIView+SetRect.m in Sources */,
 				109606511C93B4A300CCB3AD /* AFURLRequestSerialization.m in Sources */,
+				C58978C11D38CD3A000B7D1C /* CollectionGridView.m in Sources */,
 				10381F521BF9B44A00E5E476 /* main.m in Sources */,
 				10381FB81BF9B55B00E5E476 /* POPCGUtils.mm in Sources */,
 				1011BA8F1CD484FE00F29FB9 /* OffsetCellViewController.m in Sources */,
