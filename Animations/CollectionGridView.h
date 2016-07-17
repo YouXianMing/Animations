@@ -61,12 +61,7 @@
 @property (nonatomic) NSUInteger horizontalCellCount;
 
 /**
- *  To make the config effective.
- */
-- (void)makeTheConfigEffective;
-
-/**
- *  Register the cells, the cell's class must be kind of CustomCollectionGridViewCell.
+ *  Register the cells.
  */
 @property (nonatomic, strong) NSArray <CollectionGridViewCellClassType *> *registerCells;
 
@@ -74,6 +69,11 @@
  *  The cells data adapter.
  */
 @property (nonatomic, strong) NSArray <CollectionGridCellDataAdapter *> *adapters;
+
+/**
+ *  To make the config effective.
+ */
+- (void)makeTheConfigEffective;
 
 /**
  *  Reset the view's size.
@@ -89,6 +89,18 @@
  *  Get the CollectionView's content size.
  */
 @property (nonatomic, readonly) CGSize contentSize;
+
+/**
+ *  Reloads just the items at the specified index paths.
+ *
+ *  @param indexPaths An array of NSIndexPath objects identifying the items you want to update.
+ */
+- (void)reloadItemsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths;
+
+/**
+ *  Reload data.
+ */
+- (void)reloadData;
 
 @end
 

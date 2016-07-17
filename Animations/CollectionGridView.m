@@ -53,14 +53,14 @@
         self.collectionView.backgroundColor                = [UIColor clearColor];
         self.collectionView.delegate                       = self;
         self.collectionView.dataSource                     = self;
-        [self addSubview:self.collectionView];        
+        [self addSubview:self.collectionView];
     }
     
     return self;
 }
 
 - (void)makeTheConfigEffective {
-
+    
     CGFloat width     = self.frame.size.width;
     CGFloat cellWidth = (width - self.contentEdgeInsets.left -
                          self.contentEdgeInsets.right -
@@ -72,6 +72,18 @@
     self.flowLayout.itemSize                = CGSizeMake(cellWidth, self.gridHeight);
     
     self.cellSize = self.flowLayout.itemSize;
+}
+
+#pragma mark - Reload data.
+
+- (void)reloadItemsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths {
+    
+    [self.collectionView reloadItemsAtIndexPaths:indexPaths];
+}
+
+- (void)reloadData {
+    
+    [self.collectionView reloadData];
 }
 
 #pragma mark - UICollectionView's delegate & data source.
@@ -86,10 +98,11 @@
     CollectionGridCellDataAdapter *adapter = _adapters[indexPath.row];
     CustomCollectionGridViewCell  *cell    = [collectionView dequeueReusableCellWithReuseIdentifier:adapter.cellReuseIdentifier
                                                                                        forIndexPath:indexPath];
-    cell.dataAdapter    = adapter;
-    cell.data           = adapter.data;
-    cell.indexPath      = indexPath;
-    cell.collectionView = collectionView;
+    cell.dataAdapter        = adapter;
+    cell.data               = adapter.data;
+    cell.indexPath          = indexPath;
+    cell.collectionView     = collectionView;
+    cell.collectionGridView = self;
     [cell loadContent];
     
     return cell;
@@ -119,7 +132,7 @@
 }
 
 - (CGSize)contentSize {
-
+    
     CGSize size = [_flowLayout collectionViewContentSize];
     
     size.width  += self.contentEdgeInsets.left + self.contentEdgeInsets.right;
@@ -129,13 +142,10 @@
 }
 
 - (void)resetSize {
-
+    
     CGRect newFrame = self.frame;
     newFrame.size   = [self contentSize];
     self.frame      = newFrame;
 }
 
 @end
-
-
-

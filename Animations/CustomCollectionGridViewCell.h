@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CollectionGridCellDataAdapter.h"
+@class CollectionGridView;
 
 @interface CustomCollectionGridViewCell : UICollectionViewCell
 
@@ -15,6 +16,7 @@
 @property (nonatomic, weak) CollectionGridCellDataAdapter  *dataAdapter;
 @property (nonatomic, weak) UICollectionView               *collectionView;
 @property (nonatomic, weak) NSIndexPath                    *indexPath;
+@property (nonatomic, weak) CollectionGridView             *collectionGridView;
 
 #pragma mark - Method you should overwrite.
 
@@ -40,34 +42,8 @@
 
 #pragma mark - Constructor.
 
-/**
- *  Constructor to create the CollectionGridCellDataAdapter.
- *
- *  @param reuseIdentifier Cell's reuseIdentifier.
- *  @param data            Data, can be nil.
- *  @param type            Cell's type.
- *
- *  @return CollectionGridCellDataAdapter
- */
-+ (CollectionGridCellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data type:(NSInteger)type;
-
-/**
- *  Constructor to create the CollectionGridCellDataAdapter, the reuseIdentifier is the class string.
- *
- *  @param data Data, can be nil.
- *  @param type Cell's type.
- *
- *  @return CollectionGridCellDataAdapter
- */
-+ (CollectionGridCellDataAdapter *)dataAdapterWithData:(id)data type:(NSInteger)type;
-
-/**
- *  Constructor to create the CollectionGridCellDataAdapter, the reuseIdentifier is the class string.
- *
- *  @param data Data, can be nil.
- *
- *  @return CollectionGridCellDataAdapter
- */
-+ (CollectionGridCellDataAdapter *)dataAdapterWithData:(id)data;
++ (CollectionGridCellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
+                                                                 data:(id)data
+                                                                 type:(NSInteger)type;
 
 @end
