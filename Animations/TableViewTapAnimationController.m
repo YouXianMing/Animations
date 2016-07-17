@@ -14,8 +14,8 @@
 
 @interface TableViewTapAnimationController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView     *tableView;
-@property (nonatomic, strong) NSMutableArray  *dataArray;
+@property (nonatomic, strong) UITableView                        *tableView;
+@property (nonatomic, strong) NSMutableArray <CellDataAdapter *> *dataArray;
 
 @end
 
@@ -28,8 +28,8 @@
     // Init dataArray.
     self.dataArray = [NSMutableArray array];
     NSArray *array = @[[TapAnimationModel modelWithName:@"YouXianMing" selected:YES],
-                       [TapAnimationModel modelWithName:@"NoZuoNoDie" selected:NO],
-                       [TapAnimationModel modelWithName:@"Animations" selected:NO]];
+                       [TapAnimationModel modelWithName:@"NoZuoNoDie"  selected:NO],
+                       [TapAnimationModel modelWithName:@"Animations"  selected:NO]];
     
     for (int i = 0; i < array.count; i++) {
         
@@ -37,8 +37,7 @@
     }
     
     // Init TableView.
-    self.tableView                = [[UITableView alloc] initWithFrame:self.contentView.bounds
-                                                                 style:UITableViewStylePlain];
+    self.tableView                = [[UITableView alloc] initWithFrame:self.contentView.bounds];
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -46,7 +45,7 @@
     [self.contentView addSubview:self.tableView];
 }
 
-#pragma mark - UITableView's delegate.
+#pragma mark - UITableView's delegate & dataSource.
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -55,26 +54,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    TableViewTapAnimationCell *cell = (TableViewTapAnimationCell *)[tableView dequeueAndLoadContentReusableCellFromAdapter:_dataArray[indexPath.row]
-                                                                                                                 indexPath:indexPath];
-    [cell changeStateAnimated:NO];
-    
-    return cell;
+    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_dataArray[indexPath.row] indexPath:indexPath];
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    TableViewTapAnimationCell *cell = (TableViewTapAnimationCell *)[tableView cellForRowAtIndexPath:indexPath];
-    [cell showSelectedAnimation];
-    [cell changeStateAnimated:YES];
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [(CustomCell *)[tableView cellForRowAtIndexPath:indexPath] selectedEvent];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataAdapter *dataAdapter = _dataArray[indexPath.row];
-    
-    return dataAdapter.cellHeight;
+    return _dataArray[indexPath.row].cellHeight;
 }
 
 @end

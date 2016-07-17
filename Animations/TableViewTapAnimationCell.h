@@ -10,16 +10,4 @@
 
 @interface TableViewTapAnimationCell : CustomCell
 
-/**
- *  Show selected animation.
- */
-- (void)showSelectedAnimation;
-
-/**
- *  Change cell's state.
- *
- *  @param animated Animated or not.
- */
-- (void)changeStateAnimated:(BOOL)animated;
-
 @end

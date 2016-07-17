@@ -90,7 +90,6 @@
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.contentView addSubview:self.tableView];
-    
     [self.tableView registerCellsClass:@[cellClass(@"ShowTextCell", nil)]];
 }
 
@@ -106,8 +105,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    ShowTextCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [cell selectedEvent];
+    [(CustomCell *)[tableView cellForRowAtIndexPath:indexPath] selectedEvent];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
