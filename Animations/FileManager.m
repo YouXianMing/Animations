@@ -12,7 +12,7 @@
 
 + (File *)scanRelatedFilePath:(NSString *)relatedFilePath
                  maxTreeLevel:(NSInteger)maxTreeLevel {
-
+    
     File *file = nil;
     
     // Get the real file path.
@@ -26,9 +26,9 @@
     if (isExist) {
         
         file = [FileManager cerateFileWithFilePath:filePath isDirectory:isDirectory];
-
-        if (file.isDirectory) {
         
+        if (file.isDirectory) {
+            
             [FileManager scanDir:file.filePath rootFile:file maxScanLevel:(maxTreeLevel <= 0 ? 0 : maxTreeLevel)];
         }
     }
@@ -37,15 +37,20 @@
 }
 
 + (BOOL)fileExistWithRealFilePath:(NSString *)theRealFilePath {
-
+    
     BOOL isDirectory = NO;
     BOOL isExist     = [[NSFileManager defaultManager] fileExistsAtPath:theRealFilePath isDirectory:&isDirectory];
     
     return isExist;
 }
 
-+ (File *)cerateFileWithFilePath:(NSString *)filePath isDirectory:(BOOL)isDirectory {
++ (NSString *)bundleFileWithName:(NSString *)name {
+    
+    return [[NSBundle mainBundle] pathForResource:name ofType:nil];
+}
 
++ (File *)cerateFileWithFilePath:(NSString *)filePath isDirectory:(BOOL)isDirectory {
+    
     File *file        = [[File alloc] init];
     file.filePath     = filePath;
     file.fileName     = [filePath lastPathComponent];
@@ -72,7 +77,7 @@
         
         file.isHiden = YES;
     }
-
+    
     return file;
 }
 
@@ -106,7 +111,7 @@
 }
 
 + (NSString *)theRealFilePath:(NSString *)relatedFilePath {
-
+    
     NSString *rootPath = nil;
     
     if (relatedFilePath.length) {
@@ -116,16 +121,16 @@
             rootPath = [relatedFilePath stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:NSHomeDirectory()];
             
         } else if ([relatedFilePath characterAtIndex:0] == '-') {
-        
+            
             rootPath = [relatedFilePath stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[NSBundle mainBundle] bundlePath]];
             
         } else {
-        
+            
             rootPath = nil;
         }
         
     } else {
-    
+        
         rootPath = NSHomeDirectory();
     }
     

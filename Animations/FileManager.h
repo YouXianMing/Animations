@@ -32,6 +32,15 @@
 + (NSString *)theRealFilePath:(NSString *)relatedFilePath;
 
 /**
+ *  Get the bundle file path by the bundle file name.
+ *
+ *  @param name Bundle file name.
+ *
+ *  @return Bundle file path.
+ */
++ (NSString *)bundleFileWithName:(NSString *)name;
+
+/**
  *  To check the file at the given file path exist or not.
  *
  *  @param theRealFilePath The real file path.
