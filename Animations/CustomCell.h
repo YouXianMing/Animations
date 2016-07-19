@@ -120,6 +120,21 @@
                                              cellHeight:(CGFloat)height type:(NSInteger)type;
 
 /**
+ *  Create the cell's dataAdapter.
+ *
+ *  @param reuseIdentifier Cell reuseIdentifier, can be nil.
+ *  @param data            Cell's data, can be nil.
+ *  @param height          Cell's height.
+ *  @param width           Cell's width.
+ *  @param type            Cell's type.
+ *
+ *  @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data
+                                             cellHeight:(CGFloat)height cellWidth:(CGFloat)cellWidth
+                                                   type:(NSInteger)type;
+
+/**
  *  Create the cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
  *
  *  @param data            Cell's data, can be nil.

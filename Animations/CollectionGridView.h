@@ -12,7 +12,7 @@
 @class CollectionGridView;
 @class CollectionGridViewCellClassType;
 
-#pragma mark - CollectionGridView Class
+#pragma mark - CollectionGridViewDelegate
 
 @protocol CollectionGridViewDelegate <NSObject>
 
@@ -28,6 +28,8 @@
 
 @end
 
+#pragma mark - CollectionGridView Class
+
 @interface CollectionGridView : UIView
 
 /**
@@ -36,7 +38,7 @@
 @property (nonatomic, weak) id <CollectionGridViewDelegate> delegate;
 
 /**
- *  content edgeInsets, default is UIEdgeInsetsMake(5, 5, 5, 5).
+ *  Content edgeInsets, default is UIEdgeInsetsMake(5, 5, 5, 5).
  */
 @property (nonatomic) UIEdgeInsets contentEdgeInsets;
 

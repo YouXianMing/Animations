@@ -362,6 +362,9 @@
 		C58978C11D38CD3A000B7D1C /* CollectionGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978BC1D38CD3A000B7D1C /* CollectionGridView.m */; };
 		C58978C21D38CD3A000B7D1C /* CustomCollectionGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978BE1D38CD3A000B7D1C /* CustomCollectionGridViewCell.m */; };
 		C58978C31D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978C01D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m */; };
+		C59608C91D3DFADB006BF6E0 /* TableGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608C81D3DFADB006BF6E0 /* TableGridView.m */; };
+		C59608CC1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */; };
+		C59608CF1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1101,6 +1104,12 @@
 		C58978BE1D38CD3A000B7D1C /* CustomCollectionGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionGridViewCell.m; sourceTree = "<group>"; };
 		C58978BF1D38CD3A000B7D1C /* CollectionGridCellDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionGridCellDataAdapter.h; sourceTree = "<group>"; };
 		C58978C01D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionGridCellDataAdapter.m; sourceTree = "<group>"; };
+		C59608C71D3DFADB006BF6E0 /* TableGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableGridView.h; sourceTree = "<group>"; };
+		C59608C81D3DFADB006BF6E0 /* TableGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableGridView.m; sourceTree = "<group>"; };
+		C59608CA1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TableGridView+ConvenientMethod.h"; sourceTree = "<group>"; };
+		C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TableGridView+ConvenientMethod.m"; sourceTree = "<group>"; };
+		C59608CD1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CollectionGridView+ConvenientMethod.h"; sourceTree = "<group>"; };
+		C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CollectionGridView+ConvenientMethod.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2275,6 +2284,8 @@
 			children = (
 				C58978BB1D38CD3A000B7D1C /* CollectionGridView.h */,
 				C58978BC1D38CD3A000B7D1C /* CollectionGridView.m */,
+				C59608CD1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.h */,
+				C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */,
 				C58978BD1D38CD3A000B7D1C /* CustomCollectionGridViewCell.h */,
 				C58978BE1D38CD3A000B7D1C /* CustomCollectionGridViewCell.m */,
 				C58978BF1D38CD3A000B7D1C /* CollectionGridCellDataAdapter.h */,
@@ -2381,6 +2392,7 @@
 				106CF09A1C3765490006419B /* UIFont+Categories */,
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
 				1020A3741D08F9C000056B0E /* BadgeValueView */,
+				C59608C61D3DF76E006BF6E0 /* TableGridView */,
 				1059F39E1CF4014700F63810 /* CollectionGridView */,
 				106BCFC21CDC6740007C3EEE /* InfiniteLoopView */,
 				10E2D50F1CD63EDF00666EEB /* iCarousel */,
@@ -3018,6 +3030,17 @@
 			name = CalendarEvent;
 			sourceTree = "<group>";
 		};
+		C59608C61D3DF76E006BF6E0 /* TableGridView */ = {
+			isa = PBXGroup;
+			children = (
+				C59608C71D3DFADB006BF6E0 /* TableGridView.h */,
+				C59608C81D3DFADB006BF6E0 /* TableGridView.m */,
+				C59608CA1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.h */,
+				C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */,
+			);
+			name = TableGridView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3136,6 +3159,7 @@
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
 				104FCCA71D23573D00308B73 /* TapDrawPathManager.m in Sources */,
 				100D4B1A1D27A3A300EDE29B /* AppleSystemService.m in Sources */,
+				C59608CC1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m in Sources */,
 				10CEC5541C20F5F400B0CA7D /* CustomFullContentViewController.m in Sources */,
 				104F0D311BFC1C9C00C46E6A /* StringAttribute.m in Sources */,
 				1011BAE31CD48C8D00F29FB9 /* NodePressAnimationView.m in Sources */,
@@ -3159,6 +3183,7 @@
 				1096065A1C93B4A300CCB3AD /* UIProgressView+AFNetworking.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
 				102A10451C9808FF00BF3F1B /* AbsRequestParameterSerializer.m in Sources */,
+				C59608CF1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m in Sources */,
 				C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */,
 				102B1F341C60E66F00A8FD40 /* TableViewLoadDataRootModel.m in Sources */,
 				B5D0119E1C0BE33E0075BC2E /* ClassModel.m in Sources */,
@@ -3315,6 +3340,7 @@
 				10EFE2051D015FA500159779 /* DefaultNotificationCenter.m in Sources */,
 				103088641C03F18700C8B623 /* CircleAnimationViewController.m in Sources */,
 				10A34F6D1C55AE9500E1A0E0 /* SignMaker.m in Sources */,
+				C59608C91D3DFADB006BF6E0 /* TableGridView.m in Sources */,
 				1096062A1C93B47800CCB3AD /* NetworkingReachability.m in Sources */,
 				10CEC5511C20F5E400B0CA7D /* CustomNormalContentViewController.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
