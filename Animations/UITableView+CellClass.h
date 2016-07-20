@@ -51,5 +51,7 @@ NS_INLINE CellClassType *cellClass(NSString *classString, NSString *reuseIdentif
 - (void)registerCellsClass:(NSArray <CellClassType *> *)cellClasses;
 
 - (CustomCell *)dequeueAndLoadContentReusableCellFromAdapter:(CellDataAdapter *)adapter indexPath:(NSIndexPath *)indexPath;
+- (CustomCell *)dequeueAndLoadContentReusableCellFromAdapter:(CellDataAdapter *)adapter indexPath:(NSIndexPath *)indexPath
+                                                  controller:(UIViewController *)controller;
 
 @end

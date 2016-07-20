@@ -30,6 +30,17 @@
     return cell;
 }
 
+- (CustomCell *)dequeueAndLoadContentReusableCellFromAdapter:(CellDataAdapter *)adapter indexPath:(NSIndexPath *)indexPath
+                                                  controller:(UIViewController *)controller {
+
+    CustomCell *cell = [self dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
+    cell.controller  = controller;
+    [cell setWeakReferenceWithCellDataAdapter:adapter data:adapter.data indexPath:indexPath tableView:self];
+    [cell loadContent];
+    
+    return cell;
+}
+
 @end
 
 @implementation CellClassType

@@ -56,6 +56,14 @@
     }
 }
 
+- (void)selectedEvent {
+
+    Item             *item        = self.data;
+    UIViewController *controller  = [item.object new];
+    controller.title              = item.name;
+    [self.controller.navigationController pushViewController:controller animated:YES];
+}
+
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
 
     [super setHighlighted:highlighted animated:animated];

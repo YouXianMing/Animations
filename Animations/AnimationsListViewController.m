@@ -252,7 +252,6 @@
     self.tableView.rowHeight      = 50.f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerCellsClass:@[cellClass(@"ListItemCell", nil)]];
-    
     [self.contentView addSubview:self.tableView];
     
     [GCDQueue executeInMainQueue:^{
@@ -272,29 +271,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if (self.tableViewLoadData == NO) {
-        
-        return 0;
-        
-    } else {
-        
-        return self.items.count;
-    }
+    return self.tableViewLoadData ? self.items.count : 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_items[indexPath.row] indexPath:indexPath];
+    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_items[indexPath.row] indexPath:indexPath controller:self];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataAdapter  *dataAdapter = self.items[indexPath.row];
-    Item             *item        = dataAdapter.data;
-    UIViewController *controller  = [item.object new];
-    controller.title              = item.name;
-    
-    [self.navigationController pushViewController:controller animated:YES];
+    [(CustomCell *)[tableView cellForRowAtIndexPath:indexPath] selectedEvent];    
 }
 
 #pragma mark - Overwrite system methods.
