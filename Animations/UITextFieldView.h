@@ -190,6 +190,12 @@ typedef BOOL (^textFieldShouldReturn_t)(UITextFieldView *textFieldView);
 
 #pragma mark - InputAccessoryView.
 
+/**
+ *  Create the inputAccessoryView.
+ *
+ *  @param height The inputAccessoryView's height that you specified.
+ *  @param block  The block that you can use to add views on inputAccessoryView.
+ */
 - (void)createInputAccessoryViewWithViewHeight:(CGFloat)height block:(void (^)(UIView *inputAccessoryView, UITextFieldView *textFieldView))block;
 
 #pragma mark - Transform position.
@@ -202,10 +208,6 @@ typedef BOOL (^textFieldShouldReturn_t)(UITextFieldView *textFieldView);
  *  @return The rect.
  */
 - (CGRect)rectFromView:(UIView *)view;
-
-#pragma mark - Constructor method.
-
-//- (instancetype)
 
 @end
 
