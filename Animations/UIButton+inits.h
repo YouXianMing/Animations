@@ -29,12 +29,8 @@ typedef enum : NSUInteger {
  *
  *  @return 创建好的button
  */
-+ (UIButton *)createButtonWithFrame:(CGRect)frame
-                         buttonType:(EButtonType)type
-                              title:(NSString *)title
-                                tag:(NSInteger)tag
-                             target:(id)target
-                             action:(SEL)selector;
++ (UIButton *)createButtonWithFrame:(CGRect)frame buttonType:(EButtonType)type title:(NSString *)title tag:(NSInteger)tag
+                             target:(id)target action:(SEL)selector;
 
 /**
  *  设置高亮图片

@@ -357,6 +357,7 @@
 		C517332A1D45AFDE005D57AE /* UITextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733251D45AFDE005D57AE /* UITextFieldView.m */; };
 		C517332B1D45AFDE005D57AE /* TextFieldValidatorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733271D45AFDE005D57AE /* TextFieldValidatorMessage.m */; };
 		C517332C1D45AFDE005D57AE /* AbsTextFieldViewValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */; };
+		C56B7AF71D470E19009AE3C8 /* UIButton+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */; };
 		C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */; };
 		C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C01D1D33A22D00E40201 /* UIAlertAction+Constructor.m */; };
 		C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7911D2F40DF003433EC /* QRCodeViewController.m */; };
@@ -1099,6 +1100,8 @@
 		C51733281D45AFDE005D57AE /* AbsTextFieldViewValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsTextFieldViewValidator.h; sourceTree = "<group>"; };
 		C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsTextFieldViewValidator.m; sourceTree = "<group>"; };
 		C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
+		C56B7AF51D470E19009AE3C8 /* UIButton+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Event.h"; sourceTree = "<group>"; };
+		C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Event.m"; sourceTree = "<group>"; };
 		C574C0181D33A21B00E40201 /* UIAlertController+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Constructor.h"; sourceTree = "<group>"; };
 		C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Constructor.m"; sourceTree = "<group>"; };
 		C574C01C1D33A22D00E40201 /* UIAlertAction+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertAction+Constructor.h"; sourceTree = "<group>"; };
@@ -2551,6 +2554,8 @@
 			children = (
 				106CF08C1C3763E30006419B /* UIButton+inits.h */,
 				106CF08D1C3763E30006419B /* UIButton+inits.m */,
+				C56B7AF51D470E19009AE3C8 /* UIButton+Event.h */,
+				C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */,
 				10585B2A1C3F468E0052990F /* UIButton+Style.h */,
 				10585B2B1C3F468E0052990F /* UIButton+Style.m */,
 			);
@@ -3472,6 +3477,7 @@
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
 				104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */,
 				10651F611D2BB2BC004AF473 /* CustomInfiniteLoopCell.m in Sources */,
+				C56B7AF71D470E19009AE3C8 /* UIButton+Event.m in Sources */,
 				102B1F331C60E66F00A8FD40 /* SourceModel.m in Sources */,
 				107D6BB91CFE756C00A1CC0A /* LoadingView.m in Sources */,
 				1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */,
