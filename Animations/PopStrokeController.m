@@ -41,7 +41,7 @@
     
     _timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
 
-    __weak typeof(self) weakSelf = self;
+    _md_get_weakSelf();
     [_timer event:^{
         
         CGFloat value1 = arc4random() % 101 / 100.f;

@@ -24,6 +24,7 @@
 #import "NSDictionary+JSONData.h"
 #import "NSArray+JSONData.h"
 #import "CreateModel.h"
+#import "MacroDefinition.h"
 
 #endif
 

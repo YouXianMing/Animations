@@ -40,11 +40,11 @@
                               [UIImage imageNamed:@"pic_3"],
                               [UIImage imageNamed:@"pic_4"]];
     
-    __weak typeof(self) weakSelf = self;
-    _timer                       = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
+    _md_get_weakSelf();
+    _timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [_timer event:^{
         
-        liveImageView.image    = pictureArray[weakSelf.count++ % pictureArray.count];
+        liveImageView.image = pictureArray[weakSelf.count++ % pictureArray.count];
         [UIView animateWithDuration:0.5 animations:^{
             
             CGRect tmpRect         = liveImageView.bounds;

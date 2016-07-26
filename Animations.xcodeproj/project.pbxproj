@@ -1098,6 +1098,7 @@
 		C51733271D45AFDE005D57AE /* TextFieldValidatorMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidatorMessage.m; sourceTree = "<group>"; };
 		C51733281D45AFDE005D57AE /* AbsTextFieldViewValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsTextFieldViewValidator.h; sourceTree = "<group>"; };
 		C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsTextFieldViewValidator.m; sourceTree = "<group>"; };
+		C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		C574C0181D33A21B00E40201 /* UIAlertController+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Constructor.h"; sourceTree = "<group>"; };
 		C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Constructor.m"; sourceTree = "<group>"; };
 		C574C01C1D33A22D00E40201 /* UIAlertAction+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertAction+Constructor.h"; sourceTree = "<group>"; };
@@ -1739,6 +1740,7 @@
 				10567E481C45411700625C6B /* api.md */,
 				10381F741BF9B4E800E5E476 /* Animations.pch */,
 				105EFAF71C42878F00394044 /* SimpleNSLog.h */,
+				C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */,
 				10381F761BF9B4F800E5E476 /* HYQiHei-25JF.otf */,
 			);
 			name = "Supporting Files";

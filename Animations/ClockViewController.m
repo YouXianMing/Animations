@@ -139,7 +139,7 @@
         [self.contentView addSubview:circle];
     }
     
-    __weak typeof(self) weakSelf = self;
+    _md_get_weakSelf();
     self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [self.timer event:^{
         

@@ -46,8 +46,8 @@
 - (void)timerEvent {
 
     // Timer event.
-    __weak typeof(self) weakSelf = self;
-    self.timer                   = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
+    _md_get_weakSelf();
+    self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [self.timer event:^{
         
         if (weakSelf.transformState == NO) {

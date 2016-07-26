@@ -83,8 +83,8 @@
     [self.contentView bringSubviewToFront:_upView];
     
     // 给上面一层的frame值做动画
-    __weak typeof(self) weakSelf = self;
-    _timer                       = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
+    _md_get_weakSelf();
+    _timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [_timer event:^{
         
         [UIView animateWithDuration:0.5f delay:0.f usingSpringWithDamping:3.f initialSpringVelocity:0 options:0 animations:^{

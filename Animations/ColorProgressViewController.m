@@ -46,8 +46,8 @@
         [self.contentView addSubview:self.redColorProgressView];
     }
     
-    __weak typeof(self) weakSelf = self;
-    self.timer                   = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
+    _md_get_weakSelf();
+    self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [self.timer event:^{
         
         [UIView animateWithDuration:0.5f delay:0 usingSpringWithDamping:2 initialSpringVelocity:0 options:0 animations:^{

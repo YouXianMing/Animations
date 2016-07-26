@@ -43,7 +43,7 @@
     self.numberAnimation.delegate = self;
     
     // Timer event.
-    __weak PopNumberController *weakSelf = self;
+    _md_get_weakSelf();
     self.timer = [[GCDTimer alloc] initInQueue:[GCDQueue mainQueue]];
     [self.timer event:^{
         
