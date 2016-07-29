@@ -30,29 +30,38 @@
 /**
  *  CustomHeaderFooterView's delegate.
  */
-@property (nonatomic, weak)  id <CustomHeaderFooterViewDelegate>   delegate;
+@property (nonatomic, weak) id <CustomHeaderFooterViewDelegate> delegate;
 
 /**
  *  CustomHeaderFooterView's data.
  */
-@property (nonatomic, weak)  id                data;
+@property (nonatomic, weak) id data;
 
 /**
  *  UITableView's section.
  */
-@property (nonatomic)        NSInteger         section;
+@property (nonatomic) NSInteger section;
 
 /**
  *  TableView.
  */
-@property (nonatomic, weak) UITableView       *tableView;
+@property (nonatomic, weak) UITableView *tableView;
 
 /**
  *  Controller.
  */
-@property (nonatomic, weak) UIViewController  *controller;
+@property (nonatomic, weak) UIViewController *controller;
 
-#pragma mark - Useful method.
+#pragma mark - Some useful method.
+
+/**
+ *  Set HeaderFooterView backgroundColor.
+ *
+ *  @param color Color.
+ */
+- (void)setHeaderFooterViewBackgroundColor:(UIColor *)color;
+
+#pragma mark - Method override by subclass.
 
 /**
  *  Setup HeaderFooterView, override by subclass.

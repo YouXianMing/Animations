@@ -15,11 +15,15 @@
     if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
         
         [self setupHeaderFooterView];
-        
         [self buildSubview];
     }
     
     return self;
+}
+
+- (void)setHeaderFooterViewBackgroundColor:(UIColor *)color {
+
+    self.contentView.backgroundColor = color;
 }
 
 - (void)setupHeaderFooterView {
