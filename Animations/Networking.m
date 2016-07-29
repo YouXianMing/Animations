@@ -259,17 +259,9 @@
     Networking *networking      = [[Networking alloc] init];
     networking.urlString        = urlString;
     networking.requestParameter = requestParameter;
-    
-    if (requestBodyType) {
-        
-        networking.requestBodyType = requestBodyType;
-    }
-    
-    if (responseDataType) {
-        
-        networking.responseDataType = responseDataType;
-    }
-    
+    requestBodyType             ? networking.requestBodyType = requestBodyType   : 0;
+    responseDataType            ? networking.responseDataType = responseDataType : 0;
+
     return networking;
 }
 
@@ -281,17 +273,9 @@
     Networking *networking      = [[Networking alloc] init];
     networking.urlString        = urlString;
     networking.requestParameter = requestParameter;
-    networking.method            = [PostMethod type];
-    
-    if (requestBodyType) {
-        
-        networking.requestBodyType = requestBodyType;
-    }
-    
-    if (responseDataType) {
-        
-        networking.responseDataType = responseDataType;
-    }
+    networking.method           = [PostMethod type];
+    requestBodyType             ? networking.requestBodyType  = requestBodyType  : 0;
+    responseDataType            ? networking.responseDataType = responseDataType : 0;
     
     return networking;
 }
@@ -309,16 +293,8 @@
     networking.method                = [UploadMethod type];
     networking.constructingBodyBlock = constructingBodyBlock;
     networking.uploadProgressBlock   = uploadProgressBlock;
-    
-    if (requestBodyType) {
-        
-        networking.requestBodyType = requestBodyType;
-    }
-    
-    if (responseDataType) {
-        
-        networking.responseDataType = responseDataType;
-    }
+    requestBodyType                  ? networking.requestBodyType  = requestBodyType  : 0;
+    responseDataType                 ? networking.responseDataType = responseDataType : 0;
     
     return networking;
 }
