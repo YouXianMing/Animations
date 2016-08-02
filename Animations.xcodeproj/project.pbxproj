@@ -360,6 +360,12 @@
 		C56B7AF71D470E19009AE3C8 /* UIButton+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */; };
 		C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */; };
 		C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C01D1D33A22D00E40201 /* UIAlertAction+Constructor.m */; };
+		C57526BF1D5030A40064F6CD /* WaterWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526BE1D5030A40064F6CD /* WaterWaveViewController.m */; };
+		C57526CA1D5032690064F6CD /* CustomDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C31D5032690064F6CD /* CustomDrawingView.m */; };
+		C57526CB1D5032690064F6CD /* DrawRectObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C51D5032690064F6CD /* DrawRectObject.m */; };
+		C57526CC1D5032690064F6CD /* DrawingStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C71D5032690064F6CD /* DrawingStyle.m */; };
+		C57526CD1D5032690064F6CD /* DrawingColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C91D5032690064F6CD /* DrawingColor.m */; };
+		C57526D01D50327F0064F6CD /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526CF1D50327F0064F6CD /* WaveView.m */; };
 		C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7911D2F40DF003433EC /* QRCodeViewController.m */; };
 		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
 		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
@@ -1106,6 +1112,18 @@
 		C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Constructor.m"; sourceTree = "<group>"; };
 		C574C01C1D33A22D00E40201 /* UIAlertAction+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertAction+Constructor.h"; sourceTree = "<group>"; };
 		C574C01D1D33A22D00E40201 /* UIAlertAction+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertAction+Constructor.m"; sourceTree = "<group>"; };
+		C57526BD1D5030A40064F6CD /* WaterWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterWaveViewController.h; sourceTree = "<group>"; };
+		C57526BE1D5030A40064F6CD /* WaterWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterWaveViewController.m; sourceTree = "<group>"; };
+		C57526C21D5032690064F6CD /* CustomDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDrawingView.h; sourceTree = "<group>"; };
+		C57526C31D5032690064F6CD /* CustomDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDrawingView.m; sourceTree = "<group>"; };
+		C57526C41D5032690064F6CD /* DrawRectObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawRectObject.h; sourceTree = "<group>"; };
+		C57526C51D5032690064F6CD /* DrawRectObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawRectObject.m; sourceTree = "<group>"; };
+		C57526C61D5032690064F6CD /* DrawingStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingStyle.h; sourceTree = "<group>"; };
+		C57526C71D5032690064F6CD /* DrawingStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingStyle.m; sourceTree = "<group>"; };
+		C57526C81D5032690064F6CD /* DrawingColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingColor.h; sourceTree = "<group>"; };
+		C57526C91D5032690064F6CD /* DrawingColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingColor.m; sourceTree = "<group>"; };
+		C57526CE1D50327F0064F6CD /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
+		C57526CF1D50327F0064F6CD /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
 		C582E7901D2F40DF003433EC /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		C582E7911D2F40DF003433EC /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		C582E7941D2F4184003433EC /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
@@ -1928,6 +1946,7 @@
 				104FCC991D23573200308B73 /* TapPathDrawViewController */,
 				C582E7931D2F40E5003433EC /* QRCodeViewController */,
 				C50F24131D31CC4E00C3E02A /* MaskShapeViewController */,
+				C57526C01D5031C70064F6CD /* WaterWaveViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2424,6 +2443,8 @@
 				1048F6EA1C28D56B0052F1DD /* MDScratchImageView */,
 				10589D1E1C2393C200F20BC0 /* FBShimmering */,
 				B5D011961C0BE2440075BC2E /* RotateView */,
+				C57526D11D5032880064F6CD /* WaveView */,
+				C57526C11D5032580064F6CD /* DrawRectObject */,
 				104FCCAF1D235A1700308B73 /* EdgeInsetsLabel */,
 			);
 			name = "UI-Component";
@@ -3049,6 +3070,39 @@
 			name = "UIAlertAction+Category";
 			sourceTree = "<group>";
 		};
+		C57526C01D5031C70064F6CD /* WaterWaveViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C57526BD1D5030A40064F6CD /* WaterWaveViewController.h */,
+				C57526BE1D5030A40064F6CD /* WaterWaveViewController.m */,
+			);
+			name = WaterWaveViewController;
+			sourceTree = "<group>";
+		};
+		C57526C11D5032580064F6CD /* DrawRectObject */ = {
+			isa = PBXGroup;
+			children = (
+				C57526C21D5032690064F6CD /* CustomDrawingView.h */,
+				C57526C31D5032690064F6CD /* CustomDrawingView.m */,
+				C57526C41D5032690064F6CD /* DrawRectObject.h */,
+				C57526C51D5032690064F6CD /* DrawRectObject.m */,
+				C57526C61D5032690064F6CD /* DrawingStyle.h */,
+				C57526C71D5032690064F6CD /* DrawingStyle.m */,
+				C57526C81D5032690064F6CD /* DrawingColor.h */,
+				C57526C91D5032690064F6CD /* DrawingColor.m */,
+			);
+			name = DrawRectObject;
+			sourceTree = "<group>";
+		};
+		C57526D11D5032880064F6CD /* WaveView */ = {
+			isa = PBXGroup;
+			children = (
+				C57526CE1D50327F0064F6CD /* WaveView.h */,
+				C57526CF1D50327F0064F6CD /* WaveView.m */,
+			);
+			name = WaveView;
+			sourceTree = "<group>";
+		};
 		C582E7931D2F40E5003433EC /* QRCodeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -3239,6 +3293,7 @@
 				104F0D191BFB28D700C46E6A /* TranformFadeView.m in Sources */,
 				105702221CF6F008003B10C6 /* POPPressButton.m in Sources */,
 				102B852F1C3CF19F001699A9 /* UIImage+SolidColor.m in Sources */,
+				C57526BF1D5030A40064F6CD /* WaterWaveViewController.m in Sources */,
 				10381FB51BF9B55B00E5E476 /* POPAnimationTracer.mm in Sources */,
 				10E2D4EE1CD5962000666EEB /* SDWebImageDownloaderOperation.m in Sources */,
 				C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */,
@@ -3295,15 +3350,18 @@
 				1011BAF11CD4959300F29FB9 /* NSData+CommonCrypto.m in Sources */,
 				109606291C93B47800CCB3AD /* NetworkingIndicator.m in Sources */,
 				10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */,
+				C57526CC1D5032690064F6CD /* DrawingStyle.m in Sources */,
 				104CD3091CDAD4B700C836E6 /* GridManager.m in Sources */,
 				10E2D50E1CD5DE0400666EEB /* FontInfoModel.m in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
 				10381FD41BF9D8B300E5E476 /* FillCircleLayerConfigure.m in Sources */,
 				1011BAA61CD48A1C00F29FB9 /* WanDouJiaDataSerializer.m in Sources */,
 				10E2D4F01CD5962000666EEB /* SDWebImagePrefetcher.m in Sources */,
+				C57526CB1D5032690064F6CD /* DrawRectObject.m in Sources */,
 				104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */,
 				104326611C4B16310033CEC0 /* ColorProgressView.m in Sources */,
 				104FCCA81D23573D00308B73 /* TapDrawObject.m in Sources */,
+				C57526CA1D5032690064F6CD /* CustomDrawingView.m in Sources */,
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
 				104326641C4B172F0033CEC0 /* ProgressColor.m in Sources */,
 				109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */,
@@ -3358,6 +3416,7 @@
 				106CF0961C37650D0006419B /* MessageAlertView.m in Sources */,
 				109606571C93B4A300CCB3AD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				10A67C5B1C12D4BA00C3E505 /* CGContextObjectConfig.m in Sources */,
+				C57526CD1D5032690064F6CD /* DrawingColor.m in Sources */,
 				109D5B521C0EC15D0039CB04 /* CountDownTimeCell.m in Sources */,
 				109606191C93B46800CCB3AD /* AbsNetworking.m in Sources */,
 				B5D011991C0BE3210075BC2E /* StudentInfoCell.m in Sources */,
@@ -3414,6 +3473,7 @@
 				1068FD541CF847AD00BE431C /* PopAnimator.m in Sources */,
 				106BCFC01CDC672A007C3EEE /* InfiniteLoopViewController.m in Sources */,
 				100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */,
+				C57526D01D50327F0064F6CD /* WaveView.m in Sources */,
 				109606501C93B4A300CCB3AD /* AFSecurityPolicy.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
 				10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */,

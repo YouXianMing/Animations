@@ -26,7 +26,6 @@
         
         self.context       = context;
         self.currentConfig = config;
-        
         self.configs       = [NSMutableDictionary dictionary];
     }
     

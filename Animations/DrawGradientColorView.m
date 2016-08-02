@@ -57,9 +57,9 @@
         CGFloat locations[]       = {0.0, 0.3, 0.7, 1.0};
         CGFloat colorComponents[] = {
             //red, green, blue, alpha
-            [self randomValue], [self randomValue], [self randomValue],  1.0,
-            [self randomValue], [self randomValue], [self randomValue],  1.0,
-            [self randomValue], [self randomValue], [self randomValue],  1.0,
+            [self randomValue], [self randomValue], [self randomValue], 1.0,
+            [self randomValue], [self randomValue], [self randomValue], 1.0,
+            [self randomValue], [self randomValue], [self randomValue], 1.0,
             [self randomValue], [self randomValue], [self randomValue], 1.0};
         
         GradientColor *gradientColor = [GradientColor gradientColorWithLocations:locations

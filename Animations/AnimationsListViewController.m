@@ -72,6 +72,7 @@
 #import "TapPathDrawViewController.h"
 #import "QRCodeViewController.h"
 #import "MaskShapeViewController.h"
+#import "WaterWaveViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
@@ -228,7 +229,8 @@
                        [Item itemWithName:@"POP-缩放" object:[SpringScaleViewController class]],
                        [Item itemWithName:@"点击区域的绘制" object:[TapPathDrawViewController class]],
                        [Item itemWithName:@"QR-Code" object:[QRCodeViewController class]],
-                       [Item itemWithName:@"不规则形状的Mask" object:[MaskShapeViewController class]]];
+                       [Item itemWithName:@"不规则形状的Mask" object:[MaskShapeViewController class]],
+                       [Item itemWithName:@"水波纹效果" object:[WaterWaveViewController class]]];
     
     self.items = [NSMutableArray array];
     
