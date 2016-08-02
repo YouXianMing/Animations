@@ -18,7 +18,7 @@
 ![demo.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151127110741452-740186644.gif)
 ![demo.gif](http://images2015.cnblogs.com/blog/607542/201511/607542-20151129112506438-2085628251.gif)
 ![demo.gif](http://images2015.cnblogs.com/blog/607542/201512/607542-20151201144851780-411768046.gif)
-![demo.gif](http://images0.cnblogs.com/blog2015/607542/201507/092155013143234.gif" width="290">
+![demo.gif](http://images0.cnblogs.com/blog2015/607542/201507/092155013143234.gif)
 ![demo.gif](http://images2015.cnblogs.com/blog/607542/201512/607542-20151203135710705-1762237569.gif)
 ![demo.gif](http://images.cnitblog.com/blog2015/607542/201504/091134007433262.gif)
 ![demo.gif](http://images2015.cnblogs.com/blog/607542/201512/607542-20151208163053761-1976551200.gif)
