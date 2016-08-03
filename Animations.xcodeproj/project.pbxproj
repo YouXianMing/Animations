@@ -1318,6 +1318,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				102A0FF41C92725400BF3F1B /* NSData+GZip */,
 				105189091D0A65D500F606FB /* NSObject+Category */,
 				10EFE2061D015FB900159779 /* DefaultNotificationCenter */,
 				C51677801D3620DB0032AC09 /* PhotosAlbumManager */,
@@ -1325,7 +1326,6 @@
 				10A34F6A1C55AE8F00E1A0E0 /* SignMaker */,
 				10B345161CEE9BB700BFC15B /* AppleSystemService */,
 				1011BAE81CD4957400F29FB9 /* ValueStorageManager */,
-				102A0FF41C92725400BF3F1B /* NSData+GZip */,
 				1020E2D01C73196D00FF233E /* CAGradientView */,
 				102B85011C3C9FBF001699A9 /* NumberFormatter */,
 				101EA3EB1C489C1400D5D487 /* DateFormatter */,
