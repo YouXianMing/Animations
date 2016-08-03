@@ -115,4 +115,9 @@ typedef enum : NSUInteger {
  */
 - (void)startLoopAnimated:(BOOL)animated;
 
+/**
+ *  Adjust when freeze.
+ */
+- (void)adjustWhenFreeze;
+
 @end

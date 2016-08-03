@@ -99,6 +99,11 @@
     [self managerNodeViewsContentView];
 }
 
+- (void)adjustWhenFreeze {
+
+    [self.loopView adjustWhenFreeze];
+}
+
 - (void)managerNodeViewsContentView {
     
     // Remove all subViews.

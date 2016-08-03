@@ -24,10 +24,8 @@
  *  @param index            Current index.
  *  @param cell             CustomInfiniteLoopCell type's cell.
  */
-- (void)infiniteLoopView:(InfiniteLoopView *)infiniteLoopView
-                    data:(id <InfiniteLoopViewProtocol>)data
-           selectedIndex:(NSInteger)index
-                    cell:(CustomInfiniteLoopCell *)cell;
+- (void)infiniteLoopView:(InfiniteLoopView *)infiniteLoopView data:(id <InfiniteLoopViewProtocol>)data
+           selectedIndex:(NSInteger)index cell:(CustomInfiniteLoopCell *)cell;
 
 /**
  *  Did scroll to get the current page.
@@ -86,4 +84,11 @@
  */
 @property (nonatomic, readonly) NSInteger currentPage;
 
+/**
+ *  Adjust when freeze.
+ */
+- (void)adjustWhenFreeze;
+
 @end
+
+

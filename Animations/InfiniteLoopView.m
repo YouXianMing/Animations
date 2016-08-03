@@ -231,4 +231,17 @@
     return index;
 }
 
+- (void)adjustWhenFreeze {
+    
+    long targetIndex = [self currentIndex];
+    
+    // Scroll to specified position.
+    if (targetIndex < _models.count) {
+        
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:100]
+                                    atScrollPosition:(self.flowLayout.scrollDirection == UICollectionViewScrollDirectionHorizontal ? UICollectionViewScrollPositionLeft : UICollectionViewScrollPositionTop)
+                                            animated:NO];
+    }
+}
+
 @end
