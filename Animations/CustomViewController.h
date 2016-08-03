@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AccessViewTagProtocol.h"
 
-@interface CustomViewController : UIViewController <AccessViewTagProtocol>
+@interface CustomViewController : UIViewController
 
 /**
  *  Screen's width.

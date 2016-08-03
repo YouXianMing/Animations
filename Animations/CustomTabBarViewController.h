@@ -7,10 +7,9 @@
 //
 
 #import "CustomViewController.h"
-#import "AccessViewTagProtocol.h"
 @class CustomTabBarViewController;
 
-@protocol CustomTabBarViewControllerDelegate <NSObject, AccessViewTagProtocol>
+@protocol CustomTabBarViewControllerDelegate <NSObject>
 
 @optional
 

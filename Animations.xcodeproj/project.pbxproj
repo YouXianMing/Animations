@@ -310,7 +310,6 @@
 		10D4F6091C41486E00D056EB /* CATransform3DM34Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F6081C41486E00D056EB /* CATransform3DM34Controller.m */; };
 		10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F60C1C41532100D056EB /* PressAnimationButtonController.m */; };
 		10D4F6111C41538C00D056EB /* PressAnimationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D4F6101C41538C00D056EB /* PressAnimationButton.m */; };
-		10D96E341D13B8010070B609 /* UIView+AccessViewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D96E331D13B8010070B609 /* UIView+AccessViewTag.m */; };
 		10E2D4C61CD592B900666EEB /* OffsetHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D4C51CD592B900666EEB /* OffsetHeaderView.m */; };
 		10E2D4E81CD5962000666EEB /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D4C81CD5962000666EEB /* MKAnnotationView+WebCache.m */; };
 		10E2D4E91CD5962000666EEB /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2D4CA1CD5962000666EEB /* NSData+ImageContentType.m */; };
@@ -357,6 +356,7 @@
 		C517332A1D45AFDE005D57AE /* UITextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733251D45AFDE005D57AE /* UITextFieldView.m */; };
 		C517332B1D45AFDE005D57AE /* TextFieldValidatorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733271D45AFDE005D57AE /* TextFieldValidatorMessage.m */; };
 		C517332C1D45AFDE005D57AE /* AbsTextFieldViewValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */; };
+		C524A2A41D51D15B0041C962 /* NSObject+AccessViewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A2A31D51D15B0041C962 /* NSObject+AccessViewTag.m */; };
 		C56B7AF71D470E19009AE3C8 /* UIButton+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */; };
 		C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */; };
 		C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C01D1D33A22D00E40201 /* UIAlertAction+Constructor.m */; };
@@ -1009,9 +1009,6 @@
 		10D4F60C1C41532100D056EB /* PressAnimationButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressAnimationButtonController.m; sourceTree = "<group>"; };
 		10D4F60F1C41538C00D056EB /* PressAnimationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PressAnimationButton.h; sourceTree = "<group>"; };
 		10D4F6101C41538C00D056EB /* PressAnimationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressAnimationButton.m; sourceTree = "<group>"; };
-		10D96E311D13B75F0070B609 /* AccessViewTagProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessViewTagProtocol.h; sourceTree = "<group>"; };
-		10D96E321D13B8010070B609 /* UIView+AccessViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AccessViewTag.h"; sourceTree = "<group>"; };
-		10D96E331D13B8010070B609 /* UIView+AccessViewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AccessViewTag.m"; sourceTree = "<group>"; };
 		10E2D4C41CD592B900666EEB /* OffsetHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffsetHeaderView.h; sourceTree = "<group>"; };
 		10E2D4C51CD592B900666EEB /* OffsetHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffsetHeaderView.m; sourceTree = "<group>"; };
 		10E2D4C71CD5962000666EEB /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -1105,6 +1102,8 @@
 		C51733271D45AFDE005D57AE /* TextFieldValidatorMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidatorMessage.m; sourceTree = "<group>"; };
 		C51733281D45AFDE005D57AE /* AbsTextFieldViewValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsTextFieldViewValidator.h; sourceTree = "<group>"; };
 		C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsTextFieldViewValidator.m; sourceTree = "<group>"; };
+		C524A2A21D51D15B0041C962 /* NSObject+AccessViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AccessViewTag.h"; sourceTree = "<group>"; };
+		C524A2A31D51D15B0041C962 /* NSObject+AccessViewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AccessViewTag.m"; sourceTree = "<group>"; };
 		C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		C56B7AF51D470E19009AE3C8 /* UIButton+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Event.h"; sourceTree = "<group>"; };
 		C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Event.m"; sourceTree = "<group>"; };
@@ -1850,9 +1849,6 @@
 		10381FC51BF9B8A800E5E476 /* CustomControllers */ = {
 			isa = PBXGroup;
 			children = (
-				10D96E311D13B75F0070B609 /* AccessViewTagProtocol.h */,
-				10D96E321D13B8010070B609 /* UIView+AccessViewTag.h */,
-				10D96E331D13B8010070B609 /* UIView+AccessViewTag.m */,
 				104F0CC31BFAC04300C46E6A /* CustomViewController.h */,
 				104F0CC41BFAC04300C46E6A /* CustomViewController.m */,
 				10EFE2001D015F6C00159779 /* CustomTabBarViewController.h */,
@@ -2277,6 +2273,8 @@
 			children = (
 				1051890A1D0A65DE00F606FB /* NSObject+PropertiesInfomation.h */,
 				1051890B1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m */,
+				C524A2A21D51D15B0041C962 /* NSObject+AccessViewTag.h */,
+				C524A2A31D51D15B0041C962 /* NSObject+AccessViewTag.m */,
 			);
 			name = "NSObject+Category";
 			sourceTree = "<group>";
@@ -3317,7 +3315,6 @@
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
 				1020E3381C759B3400FF233E /* MotionEffectViewController.m in Sources */,
 				1011BA551CD40C2900F29FB9 /* UIView+UserInteraction.m in Sources */,
-				10D96E341D13B8010070B609 /* UIView+AccessViewTag.m in Sources */,
 				10381FC41BF9B77000E5E476 /* CustomNavigationController.m in Sources */,
 				105DF1AF1D0D289C002B10F8 /* UITableView+CellClass.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
@@ -3557,6 +3554,7 @@
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
 				109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */,
 				1096065B1C93B4A300CCB3AD /* UIRefreshControl+AFNetworking.m in Sources */,
+				C524A2A41D51D15B0041C962 /* NSObject+AccessViewTag.m in Sources */,
 				102ED87A1C3C005800E9863E /* MixedColorProgressViewController.m in Sources */,
 				C51677971D363E6F0032AC09 /* Base64.m in Sources */,
 				105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */,
