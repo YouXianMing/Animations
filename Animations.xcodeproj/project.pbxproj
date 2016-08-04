@@ -357,6 +357,7 @@
 		C517332B1D45AFDE005D57AE /* TextFieldValidatorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733271D45AFDE005D57AE /* TextFieldValidatorMessage.m */; };
 		C517332C1D45AFDE005D57AE /* AbsTextFieldViewValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */; };
 		C524A2A41D51D15B0041C962 /* NSObject+AccessViewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A2A31D51D15B0041C962 /* NSObject+AccessViewTag.m */; };
+		C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A3081D520BD80041C962 /* FBGlowLabel.m */; };
 		C56B7AF71D470E19009AE3C8 /* UIButton+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */; };
 		C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */; };
 		C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C01D1D33A22D00E40201 /* UIAlertAction+Constructor.m */; };
@@ -1104,6 +1105,8 @@
 		C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsTextFieldViewValidator.m; sourceTree = "<group>"; };
 		C524A2A21D51D15B0041C962 /* NSObject+AccessViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AccessViewTag.h"; sourceTree = "<group>"; };
 		C524A2A31D51D15B0041C962 /* NSObject+AccessViewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AccessViewTag.m"; sourceTree = "<group>"; };
+		C524A3071D520BD80041C962 /* FBGlowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBGlowLabel.h; sourceTree = "<group>"; };
+		C524A3081D520BD80041C962 /* FBGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGlowLabel.m; sourceTree = "<group>"; };
 		C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		C56B7AF51D470E19009AE3C8 /* UIButton+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Event.h"; sourceTree = "<group>"; };
 		C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Event.m"; sourceTree = "<group>"; };
@@ -2444,6 +2447,7 @@
 				C57526D11D5032880064F6CD /* WaveView */,
 				C57526C11D5032580064F6CD /* DrawRectObject */,
 				104FCCAF1D235A1700308B73 /* EdgeInsetsLabel */,
+				C524A30B1D520BE30041C962 /* FBGlowLabel */,
 			);
 			name = "UI-Component";
 			sourceTree = "<group>";
@@ -3050,6 +3054,15 @@
 			name = UITextFieldView;
 			sourceTree = "<group>";
 		};
+		C524A30B1D520BE30041C962 /* FBGlowLabel */ = {
+			isa = PBXGroup;
+			children = (
+				C524A3071D520BD80041C962 /* FBGlowLabel.h */,
+				C524A3081D520BD80041C962 /* FBGlowLabel.m */,
+			);
+			name = FBGlowLabel;
+			sourceTree = "<group>";
+		};
 		C574C0171D33A20800E40201 /* UIAlertController+Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -3451,6 +3464,7 @@
 				106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */,
 				109606551C93B4A300CCB3AD /* AFImageDownloader.m in Sources */,
 				105FFEAE1CBE88B7006213B1 /* DrawMarqueeView.m in Sources */,
+				C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */,
 				109606561C93B4A300CCB3AD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */,
 				1057021B1CF6D9D9003B10C6 /* BaseControlViewController.m in Sources */,
