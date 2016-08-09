@@ -10,7 +10,7 @@
 #import "WaveView.h"
 #import "UIView+SetRect.h"
 #import "DefaultNotificationCenter.h"
-#import "NSObject+AccessViewTag.h"
+#import "NSObject+ViewTag.h"
 #import "GCD.h"
 
 typedef enum : NSUInteger {
@@ -33,7 +33,6 @@ typedef enum : NSUInteger {
     
     [super setup];
     
-    [self supportAccessViews];
     self.contentView.layer.masksToBounds = YES;
     
     // Register notification.
@@ -49,7 +48,7 @@ typedef enum : NSUInteger {
         waveView.waveCount = 2;
         waveView.type      = kStrokeWave | kFillWave;
         [self.contentView addSubview:waveView];
-        [self setView:waveView withId:@(kWaveThree).stringValue];
+        [waveView attachTo:self setIdentifier:@(kWaveThree).stringValue];
         
         {
             DrawingStyle *fillStyle = [DrawingStyle new];
@@ -71,7 +70,7 @@ typedef enum : NSUInteger {
         waveView.waveCount = 2;
         waveView.type      = kStrokeWave | kFillWave;
         [self.contentView addSubview:waveView];
-        [self setView:waveView withId:@(kWaveTwo).stringValue];
+        [waveView attachTo:self setIdentifier:@(kWaveTwo).stringValue];
         
         {
             DrawingStyle *fillStyle = [DrawingStyle new];
@@ -93,7 +92,7 @@ typedef enum : NSUInteger {
         waveView.waveCount = 2;
         waveView.type      = kStrokeWave | kFillWave;
         [self.contentView addSubview:waveView];
-        [self setView:waveView withId:@(kWaveOne).stringValue];
+        [waveView attachTo:self setIdentifier:@(kWaveOne).stringValue];
         
         {
             DrawingStyle *fillStyle = [DrawingStyle new];
@@ -112,9 +111,9 @@ typedef enum : NSUInteger {
 
 - (void)readyToBegin {
     
-     UIView *waveOne   = [self viewWithId:@(kWaveOne).stringValue];
-     UIView *waveTwo   = [self viewWithId:@(kWaveTwo).stringValue];
-     UIView *waveThree = [self viewWithId:@(kWaveThree).stringValue];
+     UIView *waveOne   = [self viewWithIdentifier:@(kWaveOne).stringValue];
+     UIView *waveTwo   = [self viewWithIdentifier:@(kWaveTwo).stringValue];
+     UIView *waveThree = [self viewWithIdentifier:@(kWaveThree).stringValue];
     
     [waveOne.layer   removeAllAnimations];
     [waveTwo.layer   removeAllAnimations];
@@ -130,7 +129,7 @@ typedef enum : NSUInteger {
 - (void)doAnimation {
     
     {
-        UIView *waveView = [self viewWithId:@(kWaveOne).stringValue];
+        UIView *waveView = [self viewWithIdentifier:@(kWaveOne).stringValue];
         [UIView animateWithDuration:2.f
                               delay:0
                             options:UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveLinear | UIViewAnimationOptionAllowUserInteraction
@@ -142,7 +141,7 @@ typedef enum : NSUInteger {
     }
     
     {
-        UIView *waveView = [self viewWithId:@(kWaveTwo).stringValue];
+        UIView *waveView = [self viewWithIdentifier:@(kWaveTwo).stringValue];
         [UIView animateWithDuration:4.f
                               delay:0
                             options:UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveLinear | UIViewAnimationOptionAllowUserInteraction
@@ -154,7 +153,7 @@ typedef enum : NSUInteger {
     }
     
     {
-        UIView *waveView = [self viewWithId:@(kWaveThree).stringValue];
+        UIView *waveView = [self viewWithIdentifier:@(kWaveThree).stringValue];
         [UIView animateWithDuration:6.f
                               delay:0
                             options:UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveLinear | UIViewAnimationOptionAllowUserInteraction
