@@ -9,7 +9,6 @@
 #import "SelectedIconButton.h"
 #import "UIView+SetRect.h"
 #import "UIView+AnimationProperty.h"
-#import "UIImage+ImageEffects.h"
 
 @interface SelectedIconButton ()
 
@@ -34,8 +33,7 @@
         
         self.rectView = [[UIView alloc] initWithFrame:self.bounds];
         [self.contentView addSubview:self.rectView];
-        
-//        self.imageView        = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"c"] scaleWithFixedWidth:self.width + 50]];
+    
         self.imageView        = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"c"]];
         self.imageView.center = self.contentView.middlePoint;
         [self.contentView addSubview:self.imageView];
