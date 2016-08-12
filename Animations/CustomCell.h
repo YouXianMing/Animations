@@ -175,4 +175,19 @@
 - (void)setWeakReferenceWithCellDataAdapter:(CellDataAdapter *)dataAdapter data:(id)data
                                   indexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView;
 
+/**
+ *  Register to tableView with the reuseIdentifier you specified.
+ *
+ *  @param tableView       TableView.
+ *  @param reuseIdentifier The cell reuseIdentifier.
+ */
++ (void)registerToTableView:(UITableView *)tableView reuseIdentifier:(NSString *)reuseIdentifier;
+
+/**
+ *  Register to tableView with the The class name.
+ *
+ *  @param tableView       TableView.
+ */
++ (void)registerToTableView:(UITableView *)tableView;
+
 @end

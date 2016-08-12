@@ -99,4 +99,14 @@
     }
 }
 
++ (void)registerToTableView:(UITableView *)tableView reuseIdentifier:(NSString *)reuseIdentifier {
+    
+    [tableView registerClass:[self class] forCellReuseIdentifier:reuseIdentifier];
+}
+
++ (void)registerToTableView:(UITableView *)tableView {
+    
+    [tableView registerClass:[self class] forCellReuseIdentifier:NSStringFromClass([self class])];
+}
+
 @end
