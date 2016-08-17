@@ -75,7 +75,7 @@ while (0);                                                          \
     
 #ifdef DEBUG
     
-    [self debugWithString:@"Did entered to" debugTag:kEnterControllerType];
+    [self debugWithString:@"[➡️] Did entered to" debugTag:kEnterControllerType];
     
 #endif
 }
@@ -84,7 +84,7 @@ while (0);                                                          \
     
 #ifdef DEBUG
     
-    [self debugWithString:@"Did left from" debugTag:kLeaveControllerType];
+    [self debugWithString:@"[⛔️] Did left from" debugTag:kLeaveControllerType];
     
 #endif
 }
@@ -93,7 +93,7 @@ while (0);                                                          \
     
 #ifdef DEBUG
     
-    [self debugWithString:@"Did released the" debugTag:kDeallocType];
+    [self debugWithString:@"[❌] Did released the" debugTag:kDeallocType];
     
 #endif
 }
