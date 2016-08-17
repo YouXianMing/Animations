@@ -12,65 +12,57 @@
 @interface CircleView : UIView
 
 /**
- *  线条宽度
+ *  Line width.
  */
 @property (nonatomic)         CGFloat   lineWidth;
 
 /**
- *  线条颜色
+ *  Line color.
  */
 @property (nonatomic, strong) UIColor  *lineColor;
 
 /**
- *  旋转方向
+ *  Clockwise or not.
  */
 @property (nonatomic)         BOOL      clockWise;
 
 /**
- *  开始角度
+ *  Start angle, range is 0°~360°
  */
 @property (nonatomic)         CGFloat   startAngle;
 
 /**
- *  初始化view
- */
-- (void)buildView;
-
-/**
- *  做strokeEnd动画
+ *  Start strokeEnd animation.
  *
- *  @param value    取值 [0, 1]
- *  @param func     函数指针
- *  @param animated 是否执行动画
- *  @param duration 动画持续的时间
+ *  @param value    StrokeEnd value, range is [0, 1].
+ *  @param func     Easing function point.
+ *  @param animated Animated or not.
+ *  @param duration The animation's duration.
  */
 - (void)strokeEnd:(CGFloat)value animationType:(AHEasingFunction)func animated:(BOOL)animated duration:(CGFloat)duration;
 
 /**
- *  做strokeStart动画
+ *  Start strokeStart animation.
  *
- *  @param value    取值 [0, 1]
- *  @param func     函数指针
- *  @param animated 是否执行动画
- *  @param duration 动画持续的时间
+ *  @param value    StrokeEnd value, range is [0, 1].
+ *  @param func     Easing function point.
+ *  @param animated Animated or not.
+ *  @param duration The animation's duration.
  */
 - (void)strokeStart:(CGFloat)value animationType:(AHEasingFunction)func animated:(BOOL)animated duration:(CGFloat)duration;
 
 /**
- *  便利构造器创建出实例对象
+ *  Convenient constructor.
  *
- *  @param frame     frame值
- *  @param width     线条宽度
- *  @param color     线条颜色
- *  @param clockWise 是否是顺时钟
- *  @param angle     开始是否的角度(取值范围 0° ~ 360°)
+ *  @param frame     View frame.
+ *  @param width     Line width.
+ *  @param color     Line color.
+ *  @param clockWise Clockwise or not.
+ *  @param angle     Start angle, range is 0°~360°.
  *
- *  @return 实例对象
+ *  @return CircleView instance.
  */
-+ (instancetype)circleViewWithFrame:(CGRect)frame
-                          lineWidth:(CGFloat)width
-                          lineColor:(UIColor *)color
-                          clockWise:(BOOL)clockWise
-                         startAngle:(CGFloat)angle;
++ (instancetype)circleViewWithFrame:(CGRect)frame lineWidth:(CGFloat)width lineColor:(UIColor *)color
+                          clockWise:(BOOL)clockWise startAngle:(CGFloat)angle;
 
 @end
