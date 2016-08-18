@@ -25,7 +25,6 @@
     
     // 添加模糊效果
     self.effectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-    self.effectView.userInteractionEnabled = NO;
     self.effectView.frame                  = self.titleView.bounds;
     self.effectView.userInteractionEnabled = YES;
     [self.titleView addSubview:self.effectView];
@@ -41,8 +40,6 @@
     backButton.center    = CGPointMake(20, self.titleView.middleY);
     [backButton setImage:image forState:UIControlStateNormal];
     [backButton addTarget:self action:@selector(popSelf) forControlEvents:UIControlEventTouchUpInside];
-    [backButton.imageView setContentMode:UIViewContentModeCenter];
-    [self.titleView addSubview:backButton];
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
