@@ -12,7 +12,7 @@
 #import "UIView+GlowView.h"
 #import "UITableView+CellClass.h"
 #import "ListItemCell.h"
-#import "LineBackgroundView.h"
+#import "BackgroundLineView.h"
 #import "Item.h"
 #import "GCD.h"
 #import "PushAnimator.h"
@@ -134,9 +134,11 @@
 
 - (void)configureTitleView {
     
-    LineBackgroundView *lineBackgroundView = [LineBackgroundView createViewWithFrame:CGRectMake(0, 0, self.width, 64) lineWidth:4 lineGap:4
-                                                                           lineColor:[[UIColor blackColor] colorWithAlphaComponent:0.015]];
-    [self.titleView addSubview:lineBackgroundView];
+    BackgroundLineView *lineView = [BackgroundLineView backgroundLineViewWithFrame:CGRectMake(0, 0, self.width, 64)
+                                                                         lineWidth:4 lineGap:4
+                                                                         lineColor:[[UIColor blackColor] colorWithAlphaComponent:0.015]
+                                                                            rotate:M_PI_4];
+    [self.titleView addSubview:lineView];
     
     // Title label.
     UILabel *headlinelabel          = [UIView animationsListViewControllerNormalHeadLabel];
