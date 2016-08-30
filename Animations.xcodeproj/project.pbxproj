@@ -359,6 +359,10 @@
 		C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A3081D520BD80041C962 /* FBGlowLabel.m */; };
 		C525734A1D59805000AF3353 /* NSObject+ViewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C52573491D59805000AF3353 /* NSObject+ViewTag.m */; };
 		C55D7DD41D6BEEE900B1D184 /* BackgroundLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D7DD31D6BEEE900B1D184 /* BackgroundLineView.m */; };
+		C56812311D757621006E6C49 /* IrregularGridCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C568122A1D757621006E6C49 /* IrregularGridCollectionView.m */; };
+		C56812321D757621006E6C49 /* MaximumSpacingFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C568122C1D757621006E6C49 /* MaximumSpacingFlowLayout.m */; };
+		C56812331D757621006E6C49 /* CustomIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C568122E1D757621006E6C49 /* CustomIrregularGridViewCell.m */; };
+		C56812341D757621006E6C49 /* IrregularGridCellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C56812301D757621006E6C49 /* IrregularGridCellDataAdapter.m */; };
 		C56B7AF71D470E19009AE3C8 /* UIButton+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */; };
 		C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */; };
 		C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C01D1D33A22D00E40201 /* UIAlertAction+Constructor.m */; };
@@ -1110,6 +1114,14 @@
 		C52573491D59805000AF3353 /* NSObject+ViewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewTag.m"; sourceTree = "<group>"; };
 		C55D7DD21D6BEEE900B1D184 /* BackgroundLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLineView.h; sourceTree = "<group>"; };
 		C55D7DD31D6BEEE900B1D184 /* BackgroundLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLineView.m; sourceTree = "<group>"; };
+		C56812291D757621006E6C49 /* IrregularGridCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularGridCollectionView.h; sourceTree = "<group>"; };
+		C568122A1D757621006E6C49 /* IrregularGridCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularGridCollectionView.m; sourceTree = "<group>"; };
+		C568122B1D757621006E6C49 /* MaximumSpacingFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaximumSpacingFlowLayout.h; sourceTree = "<group>"; };
+		C568122C1D757621006E6C49 /* MaximumSpacingFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaximumSpacingFlowLayout.m; sourceTree = "<group>"; };
+		C568122D1D757621006E6C49 /* CustomIrregularGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIrregularGridViewCell.h; sourceTree = "<group>"; };
+		C568122E1D757621006E6C49 /* CustomIrregularGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIrregularGridViewCell.m; sourceTree = "<group>"; };
+		C568122F1D757621006E6C49 /* IrregularGridCellDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularGridCellDataAdapter.h; sourceTree = "<group>"; };
+		C56812301D757621006E6C49 /* IrregularGridCellDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularGridCellDataAdapter.m; sourceTree = "<group>"; };
 		C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		C56B7AF51D470E19009AE3C8 /* UIButton+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Event.h"; sourceTree = "<group>"; };
 		C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Event.m"; sourceTree = "<group>"; };
@@ -2436,6 +2448,7 @@
 				1020A3741D08F9C000056B0E /* BadgeValueView */,
 				C59608C61D3DF76E006BF6E0 /* TableGridView */,
 				1059F39E1CF4014700F63810 /* CollectionGridView */,
+				C56812281D757617006E6C49 /* IrregularGridCollectionView */,
 				C517331F1D45AFAD005D57AE /* TouchEventView */,
 				C51733231D45AFD0005D57AE /* UITextFieldView */,
 				106BCFC21CDC6740007C3EEE /* InfiniteLoopView */,
@@ -3068,6 +3081,21 @@
 			name = FBGlowLabel;
 			sourceTree = "<group>";
 		};
+		C56812281D757617006E6C49 /* IrregularGridCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C56812291D757621006E6C49 /* IrregularGridCollectionView.h */,
+				C568122A1D757621006E6C49 /* IrregularGridCollectionView.m */,
+				C568122B1D757621006E6C49 /* MaximumSpacingFlowLayout.h */,
+				C568122C1D757621006E6C49 /* MaximumSpacingFlowLayout.m */,
+				C568122D1D757621006E6C49 /* CustomIrregularGridViewCell.h */,
+				C568122E1D757621006E6C49 /* CustomIrregularGridViewCell.m */,
+				C568122F1D757621006E6C49 /* IrregularGridCellDataAdapter.h */,
+				C56812301D757621006E6C49 /* IrregularGridCellDataAdapter.m */,
+			);
+			name = IrregularGridCollectionView;
+			sourceTree = "<group>";
+		};
 		C574C0171D33A20800E40201 /* UIAlertController+Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -3347,6 +3375,7 @@
 				10A34F691C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.m in Sources */,
 				108A993F1C0FF3B400B693F6 /* NormalRotateAnimationType.m in Sources */,
 				1096064F1C93B4A300CCB3AD /* AFNetworkReachabilityManager.m in Sources */,
+				C56812331D757621006E6C49 /* CustomIrregularGridViewCell.m in Sources */,
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
@@ -3354,6 +3383,7 @@
 				1041AE6A1CEC44DB005697B8 /* UIView+ConvenientMethod.m in Sources */,
 				1047E23E1CC5AF8400E13D1C /* LazyFadeInView.m in Sources */,
 				10E2D5121CD63EDF00666EEB /* iCarousel.m in Sources */,
+				C56812311D757621006E6C49 /* IrregularGridCollectionView.m in Sources */,
 				10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */,
 				105FFEAA1CBE8740006213B1 /* DrawMarqueeViewController.m in Sources */,
 				10A34F661C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m in Sources */,
@@ -3417,6 +3447,7 @@
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				105AFB4B1CF18CEF003DD84A /* NSString+Range.m in Sources */,
 				1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */,
+				C56812321D757621006E6C49 /* MaximumSpacingFlowLayout.m in Sources */,
 				106CF09D1C376DAA0006419B /* ButtonsAlertView.m in Sources */,
 				1017F13A1C35715400E245F8 /* NSDictionary+JSONData.m in Sources */,
 				100148C91C43D53D006D9153 /* BezierPathViewController.m in Sources */,
@@ -3447,6 +3478,7 @@
 				1011BAFF1CD495F200F29FB9 /* AbsEncryptingMode.m in Sources */,
 				1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */,
 				102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */,
+				C56812341D757621006E6C49 /* IrregularGridCellDataAdapter.m in Sources */,
 				1011BB001CD495F200F29FB9 /* AES256EncryptMode.m in Sources */,
 				1011BAA11CD4898D00F29FB9 /* ProviderModel.m in Sources */,
 				104CD3081CDAD4B700C836E6 /* GridLayout.m in Sources */,
