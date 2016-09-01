@@ -16,16 +16,19 @@
     
     /*
      
-     最新编译无警告版本 Xcode Version 7.3.1 (7D1014)
+     Swift version Animations - https://github.com/YouXianMing/Swift-Animations
      
-     QQ   705786299
-     邮箱  YouXianMing1987@126.com
-     博客  http://www.cnblogs.com/YouXianMing/
-     源码  https://github.com/YouXianMing
-     项目  https://github.com/YouXianMing/YoCelsius
+     Lateast no warning version : Xcode Version 7.3.1 (7D1014)
      
-     苹果下载地址： https://itunes.apple.com/us/app/yocelsius/id967721892?l=zh&ls=1&mt=8
-     本人讲解视频： http://my.jikexueyuan.com/YouXianMing/record/
+     QQ    705786299
+     Email YouXianMing1987@126.com
+     
+     http://www.cnblogs.com/YouXianMing/
+     https://github.com/YouXianMing
+     https://github.com/YouXianMing/YoCelsius
+     
+     AppStore : https://itunes.apple.com/us/app/yocelsius/id967721892?l=zh&ls=1&mt=8
+     Video    : http://my.jikexueyuan.com/YouXianMing/record/
      
      */
     
