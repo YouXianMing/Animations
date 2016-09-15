@@ -8,7 +8,7 @@
 
 #import "ColorProgressView.h"
 
-@interface ColorProgressView () {
+@interface ColorProgressView () <CAAnimationDelegate> {
 
     CGFloat  _width;
     CGFloat  _height;

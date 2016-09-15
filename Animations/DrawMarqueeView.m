@@ -8,7 +8,7 @@
 
 #import "DrawMarqueeView.h"
 
-@interface DrawMarqueeView () {
+@interface DrawMarqueeView () <CAAnimationDelegate> {
     
     CGFloat _width;
     CGFloat _height;
