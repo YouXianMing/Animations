@@ -299,7 +299,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear:animated];
-    self.enableInteractivePopGestureRecognizer = YES;
+//    self.enableInteractivePopGestureRecognizer = YES;
 }
 
 @end
