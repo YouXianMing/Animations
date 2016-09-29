@@ -15,7 +15,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     /*
-     
      Swift version Animations - https://github.com/YouXianMing/Swift-Animations
      
      Lateast no warning version : Xcode Version 8.0 (8A218a)
@@ -29,7 +28,6 @@
      
      AppStore : https://itunes.apple.com/us/app/yocelsius/id967721892?l=zh&ls=1&mt=8
      Video    : http://my.jikexueyuan.com/YouXianMing/record/
-     
      */
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
