@@ -120,10 +120,7 @@ while (0);                                                          \
     NSDateFormatter *outputFormatter  = [[NSDateFormatter alloc] init] ;
     outputFormatter.dateFormat        = @"HH:mm:ss.SSS";
     
-    NSString        *classString = [NSString stringWithFormat:@" %@ %@ [%@] ",
-                                    [outputFormatter stringFromDate:[NSDate date]],
-                                    string,
-                                    [self class]];
+    NSString        *classString = [NSString stringWithFormat:@" %@ %@ [%@] ", [outputFormatter stringFromDate:[NSDate date]], string, [self class]];
     NSMutableString *flagString  = [NSMutableString string];
     
     for (int i = 0; i < classString.length; i++) {

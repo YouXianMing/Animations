@@ -17,7 +17,7 @@
     /*
      Swift version Animations - https://github.com/YouXianMing/Swift-Animations
      
-     Lateast no warning version : Xcode Version 8.0 (8A218a)
+     Lateast no warning version : Xcode Version 8.1 (8B62)
      
      QQ    705786299
      Email YouXianMing1987@126.com
