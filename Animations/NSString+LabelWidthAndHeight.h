@@ -11,6 +11,8 @@
 
 @interface NSString (LabelWidthAndHeight)
 
+#pragma mark - StringAttribute.
+
 /**
  *  Get the string's height with the fixed width.
  *
@@ -38,5 +40,35 @@
  *  @return String's width.
  */
 + (CGFloat)oneLineOfTextHeightWithStringAttribute:(NSDictionary <NSString *, id> *)attribute;
+
+#pragma mark - Font.
+
+/**
+ *  Get the string's height with the fixed width.
+ *
+ *  @param font  String's font.
+ *  @param width Fixed width.
+ *
+ *  @return String's height.
+ */
+- (CGFloat)heightWithStringFont:(UIFont *)font fixedWidth:(CGFloat)width;
+
+/**
+ *  Get the string's width.
+ *
+ *  @param font  String's font.
+ *
+ *  @return String's width.
+ */
+- (CGFloat)widthWithStringFont:(UIFont *)font;
+
+/**
+ *  Get a line of text height.
+ *
+ *  @param font  String's font.
+ *
+ *  @return String's width.
+ */
++ (CGFloat)oneLineOfTextHeightWithStringFont:(UIFont *)font;
 
 @end

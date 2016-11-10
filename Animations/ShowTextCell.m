@@ -144,12 +144,9 @@
     ShowTextModel *model = data;
     
     if (model) {
-
-        NSDictionary *attribute = @{NSFontAttributeName : [UIFont HeitiSCWithFontSize:14.f]};
-        CGFloat       width     = Width - 20.f;
         
-        CGFloat totalStringHeight = [model.inputString heightWithStringAttribute:attribute fixedWidth:width];
-        CGFloat oneLineHeight     = [NSString oneLineOfTextHeightWithStringAttribute:attribute];
+        CGFloat totalStringHeight = [model.inputString heightWithStringFont:[UIFont HeitiSCWithFontSize:14.f] fixedWidth:Width - 20.f];
+        CGFloat oneLineHeight     = [NSString oneLineOfTextHeightWithStringFont:[UIFont HeitiSCWithFontSize:14.f]];
         CGFloat normalTextHeight  = totalStringHeight >= 3 * oneLineHeight ? 3 * oneLineHeight : totalStringHeight;
         
         // Expend string height.
