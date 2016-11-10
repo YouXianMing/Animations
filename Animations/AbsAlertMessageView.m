@@ -30,14 +30,14 @@
 
 - (void)show {
     
-    [NSException raise:@"AlertViewProtocol"
-                format:@"Cannot use show method from subclass."];
+    [NSException raise:NSStringFromClass([self class])
+                format:@"Use show method from subclass."];
 }
 
 - (void)hide {
     
-    [NSException raise:@"AlertViewProtocol"
-                format:@"Cannot use hide method from subclass."];
+    [NSException raise:NSStringFromClass([self class])
+                format:@"Use hide method from subclass."];
 }
 
 - (void)setView:(UIView *)view withKey:(NSString *)key {

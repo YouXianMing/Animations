@@ -10,7 +10,7 @@
 
 #pragma mark - IrregularGridCollectionView Class
 
-@interface IrregularGridCollectionView () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface IrregularGridCollectionView () <UICollectionViewDelegate, UICollectionViewDataSource, CustomIrregularGridViewCellDelegate>
 
 @property (nonatomic, strong) UICollectionView            *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout  *flowLayout;
@@ -35,6 +35,7 @@
         self.horizontalGap       = 5.f;
         self.verticalGap         = 5.f;
         self.gridHeight          = 20.f;
+        self.scrollDirection     = UICollectionViewScrollDirectionVertical;
         
         // Init UICollectionViewFlowLayout.
         self.flowLayout = [[MaximumSpacingFlowLayout alloc] init];
@@ -57,6 +58,7 @@
     self.collectionView.contentInset        = self.contentEdgeInsets;
     self.flowLayout.minimumLineSpacing      = self.verticalGap;
     self.flowLayout.minimumInteritemSpacing = self.horizontalGap;
+    self.flowLayout.scrollDirection         = self.scrollDirection;
 }
 
 #pragma mark - UICollectionView's delegate & data source.
@@ -69,12 +71,14 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     IrregularGridCellDataAdapter *adapter = _adapters[indexPath.row];
-    CustomIrregularGridViewCell  *cell    = [collectionView dequeueReusableCellWithReuseIdentifier:adapter.cellReuseIdentifier
-                                                                                       forIndexPath:indexPath];
-    cell.dataAdapter        = adapter;
-    cell.data               = adapter.data;
-    cell.indexPath          = indexPath;
-    cell.collectionView     = collectionView;
+    adapter.indexPath                     = indexPath;
+    
+    CustomIrregularGridViewCell  *cell    = [collectionView dequeueReusableCellWithReuseIdentifier:adapter.cellReuseIdentifier forIndexPath:indexPath];
+    cell.delegate                         = self;
+    cell.dataAdapter                      = adapter;
+    cell.data                             = adapter.data;
+    cell.indexPath                        = indexPath;
+    cell.collectionView                   = collectionView;
     cell.collectionGridView = self;
     [cell loadContent];
     
@@ -87,14 +91,35 @@
     return CGSizeMake(adapter.itemWidth, self.gridHeight);
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
++ (instancetype)irregularGridCollectionViewWithFrame:(CGRect)frame
+                                            delegate:(id <IrregularGridCollectionViewDelegate>)delegate
+                                       registerCells:(NSArray <IrregularGridViewCellClassType *> *)registerCells
+                                     scrollDirection:(UICollectionViewScrollDirection)scrollDirection
+                                   contentEdgeInsets:(UIEdgeInsets)edgeInsets
+                                         verticalGap:(CGFloat)verticalGap
+                                       horizontalGap:(CGFloat)horizontalGap
+                                          gridHeight:(CGFloat)gridHeight {
     
-    CustomIrregularGridViewCell *cell = (CustomIrregularGridViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    [cell selectedEvent];
+    IrregularGridCollectionView *irregularGridView = [[[self class] alloc] initWithFrame:frame];
+    irregularGridView.delegate                     = delegate;
+    irregularGridView.contentEdgeInsets            = edgeInsets;
+    irregularGridView.scrollDirection              = scrollDirection;
+    irregularGridView.verticalGap                  = verticalGap;
+    irregularGridView.horizontalGap                = horizontalGap;
+    irregularGridView.gridHeight                   = gridHeight;
+    irregularGridView.registerCells                = registerCells;
+    [irregularGridView makeTheConfigEffective];
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(irregularGridCollectionView:didSelectedCell:)]) {
+    return irregularGridView;
+}
+
+#pragma mark - CustomIrregularGridViewCellDelegate
+
+- (void)customIrregularGridViewCell:(CustomIrregularGridViewCell *)cell event:(id)event {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(irregularGridCollectionView:didSelectedCell:event:)]) {
         
-        [self.delegate irregularGridCollectionView:self didSelectedCell:cell];
+        [self.delegate irregularGridCollectionView:self didSelectedCell:cell event:event];
     }
 }
 

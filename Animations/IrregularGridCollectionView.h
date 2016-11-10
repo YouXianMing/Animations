@@ -22,9 +22,9 @@
  *
  *  @param collectionGridView CollectionGridView's object.
  *  @param cell               CustomCollectionGridViewCell type's cell.
+ *  @param event              CustomCollectionGridViewCell's event.
  */
-- (void)irregularGridCollectionView:(IrregularGridCollectionView *)irregularGridCollectionView
-                    didSelectedCell:(CustomIrregularGridViewCell *)cell;
+- (void)irregularGridCollectionView:(IrregularGridCollectionView *)irregularGridCollectionView didSelectedCell:(CustomIrregularGridViewCell *)cell event:(id)event;
 
 @end
 
@@ -34,6 +34,16 @@
  *  CollectionGridView's delegate.
  */
 @property (nonatomic, weak) id <IrregularGridCollectionViewDelegate> delegate;
+
+/**
+ *  CollectionView.
+ */
+@property (nonatomic, strong, readonly) UICollectionView *collectionView;
+
+/**
+ *  The scroll direction of the grid, default is UICollectionViewScrollDirectionVertical.
+ */
+@property (nonatomic) UICollectionViewScrollDirection scrollDirection;
 
 /**
  *  Content edgeInsets, default is UIEdgeInsetsMake(5, 5, 5, 5).
@@ -63,7 +73,7 @@
 /**
  *  The cells data adapter.
  */
-@property (nonatomic, strong) NSArray <IrregularGridCellDataAdapter *> *adapters;
+@property (nonatomic, strong) NSMutableArray <IrregularGridCellDataAdapter *> *adapters;
 
 /**
  *  To make the config effective.
@@ -80,6 +90,17 @@
  */
 - (void)resetSize;
 
+#pragma mark - Constructor.
+
++ (instancetype)irregularGridCollectionViewWithFrame:(CGRect)frame
+                                            delegate:(id <IrregularGridCollectionViewDelegate>)delegate
+                                       registerCells:(NSArray <IrregularGridViewCellClassType *> *)registerCells
+                                     scrollDirection:(UICollectionViewScrollDirection)scrollDirection
+                                   contentEdgeInsets:(UIEdgeInsets)edgeInsets
+                                         verticalGap:(CGFloat)verticalGap
+                                       horizontalGap:(CGFloat)horizontalGap
+                                          gridHeight:(CGFloat)gridHeight;
+
 @end
 
 #pragma mark - CollectionGridViewCellClassType Class
@@ -95,7 +116,7 @@ NS_INLINE IrregularGridViewCellClassType *gridViewCellClassType(Class className,
     
     IrregularGridViewCellClassType *type = [IrregularGridViewCellClassType new];
     type.className                        = className;
-    type.reuseIdentifier                  = reuseIdentifier;
+    type.reuseIdentifier                  = reuseIdentifier.length ? reuseIdentifier : NSStringFromClass(className);
     
     return type;
 }
