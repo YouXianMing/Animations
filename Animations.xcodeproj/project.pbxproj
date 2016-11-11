@@ -383,6 +383,10 @@
 		C59608C91D3DFADB006BF6E0 /* TableGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608C81D3DFADB006BF6E0 /* TableGridView.m */; };
 		C59608CC1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */; };
 		C59608CF1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */; };
+		C5C5AFE01DD558F900F35EB8 /* IrregularGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFDF1DD558F900F35EB8 /* IrregularGridViewController.m */; };
+		C5C5AFE41DD55F1400F35EB8 /* IrregularPictureGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE31DD55F1400F35EB8 /* IrregularPictureGridCell.m */; };
+		C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE61DD56C7700F35EB8 /* BlueIrregularGridViewCell.m */; };
+		C5C5AFEA1DD56D7100F35EB8 /* RedIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE91DD56D7100F35EB8 /* RedIrregularGridViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1164,6 +1168,14 @@
 		C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TableGridView+ConvenientMethod.m"; sourceTree = "<group>"; };
 		C59608CD1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CollectionGridView+ConvenientMethod.h"; sourceTree = "<group>"; };
 		C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CollectionGridView+ConvenientMethod.m"; sourceTree = "<group>"; };
+		C5C5AFDE1DD558F900F35EB8 /* IrregularGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularGridViewController.h; sourceTree = "<group>"; };
+		C5C5AFDF1DD558F900F35EB8 /* IrregularGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularGridViewController.m; sourceTree = "<group>"; };
+		C5C5AFE21DD55F1400F35EB8 /* IrregularPictureGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularPictureGridCell.h; sourceTree = "<group>"; };
+		C5C5AFE31DD55F1400F35EB8 /* IrregularPictureGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularPictureGridCell.m; sourceTree = "<group>"; };
+		C5C5AFE51DD56C7700F35EB8 /* BlueIrregularGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueIrregularGridViewCell.h; sourceTree = "<group>"; };
+		C5C5AFE61DD56C7700F35EB8 /* BlueIrregularGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueIrregularGridViewCell.m; sourceTree = "<group>"; };
+		C5C5AFE81DD56D7100F35EB8 /* RedIrregularGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedIrregularGridViewCell.h; sourceTree = "<group>"; };
+		C5C5AFE91DD56D7100F35EB8 /* RedIrregularGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedIrregularGridViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1966,6 +1978,7 @@
 				C582E7931D2F40E5003433EC /* QRCodeViewController */,
 				C50F24131D31CC4E00C3E02A /* MaskShapeViewController */,
 				C57526C01D5031C70064F6CD /* WaterWaveViewController */,
+				C5C5AFE11DD55E7B00F35EB8 /* IrregularGridViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -3187,6 +3200,21 @@
 			name = TableGridView;
 			sourceTree = "<group>";
 		};
+		C5C5AFE11DD55E7B00F35EB8 /* IrregularGridViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C5C5AFDE1DD558F900F35EB8 /* IrregularGridViewController.h */,
+				C5C5AFDF1DD558F900F35EB8 /* IrregularGridViewController.m */,
+				C5C5AFE21DD55F1400F35EB8 /* IrregularPictureGridCell.h */,
+				C5C5AFE31DD55F1400F35EB8 /* IrregularPictureGridCell.m */,
+				C5C5AFE51DD56C7700F35EB8 /* BlueIrregularGridViewCell.h */,
+				C5C5AFE61DD56C7700F35EB8 /* BlueIrregularGridViewCell.m */,
+				C5C5AFE81DD56D7100F35EB8 /* RedIrregularGridViewCell.h */,
+				C5C5AFE91DD56D7100F35EB8 /* RedIrregularGridViewCell.m */,
+			);
+			name = IrregularGridViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3218,7 +3246,7 @@
 				TargetAttributes = {
 					10381F4C1BF9B44A00E5E476 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = W645FT7977;
+						DevelopmentTeam = HT95VAK372;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -3277,6 +3305,7 @@
 				102B1F041C60E26B00A8FD40 /* TableViewLoadDataController.m in Sources */,
 				102B84E11C3B95F0001699A9 /* FileManager.m in Sources */,
 				10E2D4E91CD5962000666EEB /* NSData+ImageContentType.m in Sources */,
+				C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */,
 				102B85321C3CF226001699A9 /* UIImage+ImageEffects.m in Sources */,
 				104FCCA51D23573D00308B73 /* TapDrawPath.m in Sources */,
 				10931AE71C51147A004D120D /* AdditiveAnimationController.m in Sources */,
@@ -3413,6 +3442,7 @@
 				104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */,
 				104326611C4B16310033CEC0 /* ColorProgressView.m in Sources */,
 				104FCCA81D23573D00308B73 /* TapDrawObject.m in Sources */,
+				C5C5AFE01DD558F900F35EB8 /* IrregularGridViewController.m in Sources */,
 				C57526CA1D5032690064F6CD /* CustomDrawingView.m in Sources */,
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
 				104326641C4B172F0033CEC0 /* ProgressColor.m in Sources */,
@@ -3466,6 +3496,7 @@
 				10667E1D1C7F2CFB00B9AC08 /* UIView+Shake.m in Sources */,
 				106BCFDB1CDC67CC007C3EEE /* ImageModel.m in Sources */,
 				1011BAE71CD4909400F29FB9 /* OffsetImageCell.m in Sources */,
+				C5C5AFE41DD55F1400F35EB8 /* IrregularPictureGridCell.m in Sources */,
 				106CF0961C37650D0006419B /* MessageAlertView.m in Sources */,
 				109606571C93B4A300CCB3AD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				10A67C5B1C12D4BA00C3E505 /* CGContextObjectConfig.m in Sources */,
@@ -3494,6 +3525,7 @@
 				102A0FFA1C92727200BF3F1B /* NSData+Godzippa.m in Sources */,
 				1096061A1C93B46800CCB3AD /* RequestMethodType.m in Sources */,
 				102B84D91C3B9424001699A9 /* NSString+MD5.m in Sources */,
+				C5C5AFEA1DD56D7100F35EB8 /* RedIrregularGridViewCell.m in Sources */,
 				102B1F301C60E66F00A8FD40 /* LinksModel.m in Sources */,
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
 				106BCFD91CDC67CC007C3EEE /* LoopViewCell.m in Sources */,
@@ -3729,7 +3761,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = W645FT7977;
+				DEVELOPMENT_TEAM = HT95VAK372;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -3749,7 +3781,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = W645FT7977;
+				DEVELOPMENT_TEAM = HT95VAK372;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

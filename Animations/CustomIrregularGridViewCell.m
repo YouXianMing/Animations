@@ -34,6 +34,14 @@
     
 }
 
+- (void)willDisplay {
+
+}
+
+- (void)didEndDisplay {
+
+}
+
 - (void)selectedEvent {
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(customIrregularGridViewCell:event:)]) {

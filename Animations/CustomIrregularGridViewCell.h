@@ -34,6 +34,10 @@
  */
 - (void)selectedEvent;
 
+- (void)willDisplay;
+
+- (void)didEndDisplay;
+
 #pragma mark - Method you should overwrite.
 
 /**

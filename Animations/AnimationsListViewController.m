@@ -73,6 +73,7 @@
 #import "QRCodeViewController.h"
 #import "MaskShapeViewController.h"
 #import "WaterWaveViewController.h"
+#import "IrregularGridViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
@@ -232,7 +233,8 @@
                        [Item itemWithName:@"点击区域的绘制" object:[TapPathDrawViewController class]],
                        [Item itemWithName:@"QR-Code" object:[QRCodeViewController class]],
                        [Item itemWithName:@"不规则形状的Mask" object:[MaskShapeViewController class]],
-                       [Item itemWithName:@"水波纹效果" object:[WaterWaveViewController class]]];
+                       [Item itemWithName:@"水波纹效果" object:[WaterWaveViewController class]],
+                       [Item itemWithName:@"不规则GridCell" object:[IrregularGridViewController class]]];
     
     self.items = [NSMutableArray array];
     

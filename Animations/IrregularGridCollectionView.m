@@ -91,6 +91,16 @@
     return CGSizeMake(adapter.itemWidth, self.gridHeight);
 }
 
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(8_0) {
+
+    [(CustomIrregularGridViewCell *)cell willDisplay];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    [(CustomIrregularGridViewCell *)cell didEndDisplay];
+}
+
 + (instancetype)irregularGridCollectionViewWithFrame:(CGRect)frame
                                             delegate:(id <IrregularGridCollectionViewDelegate>)delegate
                                        registerCells:(NSArray <IrregularGridViewCellClassType *> *)registerCells
