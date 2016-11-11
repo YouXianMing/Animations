@@ -387,6 +387,7 @@
 		C5C5AFE41DD55F1400F35EB8 /* IrregularPictureGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE31DD55F1400F35EB8 /* IrregularPictureGridCell.m */; };
 		C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE61DD56C7700F35EB8 /* BlueIrregularGridViewCell.m */; };
 		C5C5AFEA1DD56D7100F35EB8 /* RedIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE91DD56D7100F35EB8 /* RedIrregularGridViewCell.m */; };
+		C5C5AFEE1DD59D4F00F35EB8 /* UILabel+SizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1176,6 +1177,8 @@
 		C5C5AFE61DD56C7700F35EB8 /* BlueIrregularGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueIrregularGridViewCell.m; sourceTree = "<group>"; };
 		C5C5AFE81DD56D7100F35EB8 /* RedIrregularGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedIrregularGridViewCell.h; sourceTree = "<group>"; };
 		C5C5AFE91DD56D7100F35EB8 /* RedIrregularGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedIrregularGridViewCell.m; sourceTree = "<group>"; };
+		C5C5AFEC1DD59D4F00F35EB8 /* UILabel+SizeToFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SizeToFit.h"; sourceTree = "<group>"; };
+		C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SizeToFit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2453,6 +2456,7 @@
 		1068FCCA1CF7D76E00BE431C /* UI-Component */ = {
 			isa = PBXGroup;
 			children = (
+				C5C5AFEB1DD59D1C00F35EB8 /* UILabel+Category */,
 				C574C0171D33A20800E40201 /* UIAlertController+Category */,
 				C574C01B1D33A22600E40201 /* UIAlertAction+Category */,
 				105DF1AC1D0D2882002B10F8 /* UITableView+Category */,
@@ -3215,6 +3219,15 @@
 			name = IrregularGridViewController;
 			sourceTree = "<group>";
 		};
+		C5C5AFEB1DD59D1C00F35EB8 /* UILabel+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C5C5AFEC1DD59D4F00F35EB8 /* UILabel+SizeToFit.h */,
+				C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */,
+			);
+			name = "UILabel+Category";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3349,6 +3362,7 @@
 				105AFB4F1CF18D04003DD84A /* StringRangeManager.m in Sources */,
 				102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */,
 				104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */,
+				C5C5AFEE1DD59D4F00F35EB8 /* UILabel+SizeToFit.m in Sources */,
 				1020E33B1C759C2F00FF233E /* UIView+MotionEffect.m in Sources */,
 				104FCCAE1D235A1000308B73 /* EdgeInsetsLabel.m in Sources */,
 				10E2D4EA1CD5962000666EEB /* SDImageCache.m in Sources */,

@@ -12,6 +12,7 @@
 #import "UIImage+SolidColor.h"
 #import "UIFont+Fonts.h"
 #import "UIImage+ImageEffects.h"
+#import "UILabel+SizeToFit.h"
 
 @interface RedIrregularGridViewCell ()
 
@@ -51,12 +52,12 @@
 
 - (void)loadContent {
     
-    self.button.width = self.dataAdapter.itemWidth;
-    
-    self.titleLabel.text = self.data;
-    [self.titleLabel sizeToFit];
-    self.titleLabel.centerY = self.height / 2.f;
-    self.titleLabel.right   = self.dataAdapter.itemWidth - 10.f;
+    self.button.width = self.dataAdapter.itemWidth;    
+    [self.titleLabel sizeToFitWithText:self.data config:^(UILabel *label) {
+        
+        label.centerY = self.height / 2.f;
+        label.right   = self.dataAdapter.itemWidth - 10.f;
+    }];
     
     self.iconImageView.centerY = self.height / 2.f;
     self.iconImageView.left    = 10.f;
