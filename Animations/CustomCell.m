@@ -68,17 +68,17 @@
 
 + (CellDataAdapter *)dataAdapterWithData:(id)data cellHeight:(CGFloat)height type:(NSInteger)type {
     
-    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:nil data:data cellHeight:height cellType:type];
+    return [[self class] dataAdapterWithCellReuseIdentifier:nil data:data cellHeight:height type:type];
 }
 
 + (CellDataAdapter *)dataAdapterWithData:(id)data cellHeight:(CGFloat)height {
     
-    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:nil data:data cellHeight:height cellType:0];
+    return [[self class] dataAdapterWithCellReuseIdentifier:nil data:data cellHeight:height type:0];
 }
 
 + (CellDataAdapter *)dataAdapterWithData:(id)data {
     
-    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:nil data:data cellHeight:0 cellType:0];
+    return [[self class] dataAdapterWithCellReuseIdentifier:nil data:data cellHeight:0 type:0];
 }
 
 - (void)updateWithNewCellHeight:(CGFloat)height animated:(BOOL)animated {

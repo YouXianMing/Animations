@@ -358,11 +358,16 @@
 		C517332C1D45AFDE005D57AE /* AbsTextFieldViewValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */; };
 		C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A3081D520BD80041C962 /* FBGlowLabel.m */; };
 		C525734A1D59805000AF3353 /* NSObject+ViewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C52573491D59805000AF3353 /* NSObject+ViewTag.m */; };
+		C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */; };
+		C559EE781DE6DBC8006C7DAC /* ColorSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE771DE6DBC8006C7DAC /* ColorSpaceCell.m */; };
 		C55D7DD41D6BEEE900B1D184 /* BackgroundLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D7DD31D6BEEE900B1D184 /* BackgroundLineView.m */; };
 		C56812311D757621006E6C49 /* IrregularGridCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C568122A1D757621006E6C49 /* IrregularGridCollectionView.m */; };
 		C56812321D757621006E6C49 /* MaximumSpacingFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C568122C1D757621006E6C49 /* MaximumSpacingFlowLayout.m */; };
 		C56812331D757621006E6C49 /* CustomIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C568122E1D757621006E6C49 /* CustomIrregularGridViewCell.m */; };
 		C56812341D757621006E6C49 /* IrregularGridCellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C56812301D757621006E6C49 /* IrregularGridCellDataAdapter.m */; };
+		C56851C31DE6C1C7000F18C2 /* MixCellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56851C21DE6C1C7000F18C2 /* MixCellsViewController.m */; };
+		C56851C71DE6CBE3000F18C2 /* HeaderIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C56851C61DE6CBE3000F18C2 /* HeaderIconCell.m */; };
+		C56851CA1DE6D3E7000F18C2 /* ContentIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C56851C91DE6D3E7000F18C2 /* ContentIconCell.m */; };
 		C56B7AF71D470E19009AE3C8 /* UIButton+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */; };
 		C56F19C01D891F3600683DB5 /* CustomBuildOutsideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F19BF1D891F3600683DB5 /* CustomBuildOutsideViewCell.m */; };
 		C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */; };
@@ -383,6 +388,7 @@
 		C59608C91D3DFADB006BF6E0 /* TableGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608C81D3DFADB006BF6E0 /* TableGridView.m */; };
 		C59608CC1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */; };
 		C59608CF1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */; };
+		C5B457821DE7D9CA002363AC /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B457811DE7D9CA002363AC /* ShapeView.m */; };
 		C5C5AFE01DD558F900F35EB8 /* IrregularGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFDF1DD558F900F35EB8 /* IrregularGridViewController.m */; };
 		C5C5AFE41DD55F1400F35EB8 /* IrregularPictureGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE31DD55F1400F35EB8 /* IrregularPictureGridCell.m */; };
 		C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE61DD56C7700F35EB8 /* BlueIrregularGridViewCell.m */; };
@@ -1118,6 +1124,10 @@
 		C524A3081D520BD80041C962 /* FBGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGlowLabel.m; sourceTree = "<group>"; };
 		C52573481D59805000AF3353 /* NSObject+ViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewTag.h"; sourceTree = "<group>"; };
 		C52573491D59805000AF3353 /* NSObject+ViewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewTag.m"; sourceTree = "<group>"; };
+		C559EE731DE6D733006C7DAC /* UIColor+ForPublicUse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ForPublicUse.h"; sourceTree = "<group>"; };
+		C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ForPublicUse.m"; sourceTree = "<group>"; };
+		C559EE761DE6DBC8006C7DAC /* ColorSpaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpaceCell.h; sourceTree = "<group>"; };
+		C559EE771DE6DBC8006C7DAC /* ColorSpaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSpaceCell.m; sourceTree = "<group>"; };
 		C55D7DD21D6BEEE900B1D184 /* BackgroundLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLineView.h; sourceTree = "<group>"; };
 		C55D7DD31D6BEEE900B1D184 /* BackgroundLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLineView.m; sourceTree = "<group>"; };
 		C56812291D757621006E6C49 /* IrregularGridCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularGridCollectionView.h; sourceTree = "<group>"; };
@@ -1128,6 +1138,12 @@
 		C568122E1D757621006E6C49 /* CustomIrregularGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIrregularGridViewCell.m; sourceTree = "<group>"; };
 		C568122F1D757621006E6C49 /* IrregularGridCellDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularGridCellDataAdapter.h; sourceTree = "<group>"; };
 		C56812301D757621006E6C49 /* IrregularGridCellDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularGridCellDataAdapter.m; sourceTree = "<group>"; };
+		C56851C11DE6C1C7000F18C2 /* MixCellsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixCellsViewController.h; sourceTree = "<group>"; };
+		C56851C21DE6C1C7000F18C2 /* MixCellsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixCellsViewController.m; sourceTree = "<group>"; };
+		C56851C51DE6CBE3000F18C2 /* HeaderIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderIconCell.h; sourceTree = "<group>"; };
+		C56851C61DE6CBE3000F18C2 /* HeaderIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderIconCell.m; sourceTree = "<group>"; };
+		C56851C81DE6D3E7000F18C2 /* ContentIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentIconCell.h; sourceTree = "<group>"; };
+		C56851C91DE6D3E7000F18C2 /* ContentIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentIconCell.m; sourceTree = "<group>"; };
 		C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		C56B7AF51D470E19009AE3C8 /* UIButton+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Event.h"; sourceTree = "<group>"; };
 		C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Event.m"; sourceTree = "<group>"; };
@@ -1169,6 +1185,8 @@
 		C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TableGridView+ConvenientMethod.m"; sourceTree = "<group>"; };
 		C59608CD1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CollectionGridView+ConvenientMethod.h"; sourceTree = "<group>"; };
 		C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CollectionGridView+ConvenientMethod.m"; sourceTree = "<group>"; };
+		C5B457801DE7D9CA002363AC /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
+		C5B457811DE7D9CA002363AC /* ShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeView.m; sourceTree = "<group>"; };
 		C5C5AFDE1DD558F900F35EB8 /* IrregularGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularGridViewController.h; sourceTree = "<group>"; };
 		C5C5AFDF1DD558F900F35EB8 /* IrregularGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularGridViewController.m; sourceTree = "<group>"; };
 		C5C5AFE21DD55F1400F35EB8 /* IrregularPictureGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularPictureGridCell.h; sourceTree = "<group>"; };
@@ -1982,6 +2000,7 @@
 				C50F24131D31CC4E00C3E02A /* MaskShapeViewController */,
 				C57526C01D5031C70064F6CD /* WaterWaveViewController */,
 				C5C5AFE11DD55E7B00F35EB8 /* IrregularGridViewController */,
+				C56851C41DE6C1F8000F18C2 /* MixCellsViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -3020,6 +3039,8 @@
 			children = (
 				10FDF9CA1CA50AED00871B45 /* UIView+AnimationsListViewController.h */,
 				10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */,
+				C559EE731DE6D733006C7DAC /* UIColor+ForPublicUse.h */,
+				C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */,
 			);
 			name = "Disposable-Tools";
 			sourceTree = "<group>";
@@ -3116,6 +3137,23 @@
 				C56812301D757621006E6C49 /* IrregularGridCellDataAdapter.m */,
 			);
 			name = IrregularGridCollectionView;
+			sourceTree = "<group>";
+		};
+		C56851C41DE6C1F8000F18C2 /* MixCellsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C56851C11DE6C1C7000F18C2 /* MixCellsViewController.h */,
+				C56851C21DE6C1C7000F18C2 /* MixCellsViewController.m */,
+				C5B457801DE7D9CA002363AC /* ShapeView.h */,
+				C5B457811DE7D9CA002363AC /* ShapeView.m */,
+				C56851C51DE6CBE3000F18C2 /* HeaderIconCell.h */,
+				C56851C61DE6CBE3000F18C2 /* HeaderIconCell.m */,
+				C56851C81DE6D3E7000F18C2 /* ContentIconCell.h */,
+				C56851C91DE6D3E7000F18C2 /* ContentIconCell.m */,
+				C559EE761DE6DBC8006C7DAC /* ColorSpaceCell.h */,
+				C559EE771DE6DBC8006C7DAC /* ColorSpaceCell.m */,
+			);
+			name = MixCellsViewController;
 			sourceTree = "<group>";
 		};
 		C574C0171D33A20800E40201 /* UIAlertController+Category */ = {
@@ -3416,6 +3454,7 @@
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
 				10EFE2021D015F6C00159779 /* CustomTabBarViewController.m in Sources */,
 				106CF0A31C376E190006419B /* HexColors.m in Sources */,
+				C56851CA1DE6D3E7000F18C2 /* ContentIconCell.m in Sources */,
 				102296B61C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				10E2D5081CD5DC4500666EEB /* FontListCell.m in Sources */,
 				104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */,
@@ -3427,6 +3466,7 @@
 				1096064F1C93B4A300CCB3AD /* AFNetworkReachabilityManager.m in Sources */,
 				C56812331D757621006E6C49 /* CustomIrregularGridViewCell.m in Sources */,
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
+				C56851C71DE6CBE3000F18C2 /* HeaderIconCell.m in Sources */,
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				1096061E1C93B46800CCB3AD /* AbsResponseDataSerializer.m in Sources */,
@@ -3504,6 +3544,7 @@
 				100148C91C43D53D006D9153 /* BezierPathViewController.m in Sources */,
 				10E2D4F51CD5962000666EEB /* UIImageView+HighlightedWebCache.m in Sources */,
 				10A67C681C12D96500C3E505 /* DrawLineView.m in Sources */,
+				C559EE781DE6DBC8006C7DAC /* ColorSpaceCell.m in Sources */,
 				10E2D50B1CD5DC6D00666EEB /* FontListHeaderView.m in Sources */,
 				1047E23F1CC5AF8400E13D1C /* NSString+LFEmoji.m in Sources */,
 				106CF0991C3765360006419B /* UIFont+Fonts.m in Sources */,
@@ -3558,6 +3599,7 @@
 				105FFEAE1CBE88B7006213B1 /* DrawMarqueeView.m in Sources */,
 				C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */,
 				109606561C93B4A300CCB3AD /* AFNetworkActivityIndicatorManager.m in Sources */,
+				C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */,
 				102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */,
 				1057021B1CF6D9D9003B10C6 /* BaseControlViewController.m in Sources */,
 				1011BADA1CD48C8D00F29FB9 /* CreateModel.m in Sources */,
@@ -3567,6 +3609,7 @@
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */,
 				1020E2E41C7422B600FF233E /* UIView+AnimationPracticalMethod.m in Sources */,
+				C56851C31DE6C1C7000F18C2 /* MixCellsViewController.m in Sources */,
 				10B0DDF11CBA82370089DF1E /* TextKitLoadImageController.m in Sources */,
 				10381FB11BF9B55B00E5E476 /* POPAnimation.mm in Sources */,
 				10B6F3D31C953FEA007E8254 /* ScrollComputingValue.m in Sources */,
@@ -3677,6 +3720,7 @@
 				10381FB81BF9B55B00E5E476 /* POPCGUtils.mm in Sources */,
 				1011BA8F1CD484FE00F29FB9 /* OffsetCellViewController.m in Sources */,
 				1011BAA21CD4898D00F29FB9 /* VideoListModel.m in Sources */,
+				C5B457821DE7D9CA002363AC /* ShapeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

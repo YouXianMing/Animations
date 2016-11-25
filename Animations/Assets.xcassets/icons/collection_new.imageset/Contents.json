@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "collection.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "rotateCircle@2x.png",
       "scale" : "2x"
     },
     {
