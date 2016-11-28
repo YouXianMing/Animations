@@ -385,6 +385,7 @@
 		C58978C11D38CD3A000B7D1C /* CollectionGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978BC1D38CD3A000B7D1C /* CollectionGridView.m */; };
 		C58978C21D38CD3A000B7D1C /* CustomCollectionGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978BE1D38CD3A000B7D1C /* CustomCollectionGridViewCell.m */; };
 		C58978C31D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978C01D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m */; };
+		C59062231DEC3908002562AE /* CAShapeLayer+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C59062221DEC3908002562AE /* CAShapeLayer+CornerRadius.m */; };
 		C59608C91D3DFADB006BF6E0 /* TableGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608C81D3DFADB006BF6E0 /* TableGridView.m */; };
 		C59608CC1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */; };
 		C59608CF1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */; };
@@ -1179,6 +1180,8 @@
 		C58978BE1D38CD3A000B7D1C /* CustomCollectionGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionGridViewCell.m; sourceTree = "<group>"; };
 		C58978BF1D38CD3A000B7D1C /* CollectionGridCellDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionGridCellDataAdapter.h; sourceTree = "<group>"; };
 		C58978C01D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionGridCellDataAdapter.m; sourceTree = "<group>"; };
+		C59062211DEC3908002562AE /* CAShapeLayer+CornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+CornerRadius.h"; sourceTree = "<group>"; };
+		C59062221DEC3908002562AE /* CAShapeLayer+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+CornerRadius.m"; sourceTree = "<group>"; };
 		C59608C71D3DFADB006BF6E0 /* TableGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableGridView.h; sourceTree = "<group>"; };
 		C59608C81D3DFADB006BF6E0 /* TableGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableGridView.m; sourceTree = "<group>"; };
 		C59608CA1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TableGridView+ConvenientMethod.h"; sourceTree = "<group>"; };
@@ -2475,6 +2478,7 @@
 		1068FCCA1CF7D76E00BE431C /* UI-Component */ = {
 			isa = PBXGroup;
 			children = (
+				C59062241DEC390F002562AE /* CAShapeLayer+Category */,
 				C5C5AFEB1DD59D1C00F35EB8 /* UILabel+Category */,
 				C574C0171D33A20800E40201 /* UIAlertController+Category */,
 				C574C01B1D33A22600E40201 /* UIAlertAction+Category */,
@@ -3231,6 +3235,15 @@
 			name = CalendarEvent;
 			sourceTree = "<group>";
 		};
+		C59062241DEC390F002562AE /* CAShapeLayer+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C59062211DEC3908002562AE /* CAShapeLayer+CornerRadius.h */,
+				C59062221DEC3908002562AE /* CAShapeLayer+CornerRadius.m */,
+			);
+			name = "CAShapeLayer+Category";
+			sourceTree = "<group>";
+		};
 		C59608C61D3DF76E006BF6E0 /* TableGridView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3510,6 +3523,7 @@
 				105702151CF6CF05003B10C6 /* POPBaseControl.m in Sources */,
 				C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */,
 				1011BA9E1CD4898D00F29FB9 /* ConsumptionModel.m in Sources */,
+				C59062231DEC3908002562AE /* CAShapeLayer+CornerRadius.m in Sources */,
 				1020E2D31C73197B00FF233E /* CAGradientView.m in Sources */,
 				106BCFCB1CDC6787007C3EEE /* CustomNodeStateView.m in Sources */,
 				1096061B1C93B46800CCB3AD /* RequestBodyType.m in Sources */,
