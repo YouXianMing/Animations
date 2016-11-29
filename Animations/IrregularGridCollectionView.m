@@ -31,11 +31,11 @@
     
     if (self = [super initWithFrame:frame]) {
         
-        self.contentEdgeInsets   = UIEdgeInsetsMake(5, 5, 5, 5);
-        self.horizontalGap       = 5.f;
-        self.verticalGap         = 5.f;
-        self.gridHeight          = 20.f;
-        self.scrollDirection     = UICollectionViewScrollDirectionVertical;
+        self.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
+        self.lineSpacing       = 5.f;
+        self.interitemSpacing  = 5.f;
+        self.gridHeight        = 20.f;
+        self.scrollDirection   = UICollectionViewScrollDirectionVertical;
         
         // Init UICollectionViewFlowLayout.
         self.flowLayout = [[MaximumSpacingFlowLayout alloc] init];
@@ -56,8 +56,8 @@
 - (void)makeTheConfigEffective {
     
     self.collectionView.contentInset        = self.contentEdgeInsets;
-    self.flowLayout.minimumLineSpacing      = self.verticalGap;
-    self.flowLayout.minimumInteritemSpacing = self.horizontalGap;
+    self.flowLayout.minimumLineSpacing      = self.lineSpacing;
+    self.flowLayout.minimumInteritemSpacing = self.interitemSpacing;
     self.flowLayout.scrollDirection         = self.scrollDirection;
 }
 
@@ -106,16 +106,16 @@
                                        registerCells:(NSArray <IrregularGridViewCellClassType *> *)registerCells
                                      scrollDirection:(UICollectionViewScrollDirection)scrollDirection
                                    contentEdgeInsets:(UIEdgeInsets)edgeInsets
-                                         verticalGap:(CGFloat)verticalGap
-                                       horizontalGap:(CGFloat)horizontalGap
+                                         lineSpacing:(CGFloat)lineSpacing
+                                    interitemSpacing:(CGFloat)interitemSpacing
                                           gridHeight:(CGFloat)gridHeight {
     
     IrregularGridCollectionView *irregularGridView = [[[self class] alloc] initWithFrame:frame];
     irregularGridView.delegate                     = delegate;
     irregularGridView.contentEdgeInsets            = edgeInsets;
     irregularGridView.scrollDirection              = scrollDirection;
-    irregularGridView.verticalGap                  = verticalGap;
-    irregularGridView.horizontalGap                = horizontalGap;
+    irregularGridView.lineSpacing                  = lineSpacing;
+    irregularGridView.interitemSpacing             = interitemSpacing;
     irregularGridView.gridHeight                   = gridHeight;
     irregularGridView.registerCells                = registerCells;
     [irregularGridView makeTheConfigEffective];

@@ -68,8 +68,8 @@ typedef enum : NSUInteger {
                                                                             registerCells:@[gridViewCellClassType([IrregularPictureGridCell class], nil)]
                                                                           scrollDirection:UICollectionViewScrollDirectionHorizontal
                                                                         contentEdgeInsets:UIEdgeInsetsMake(edgeInsetTop, 10, edgeInsetBottom, 10)
-                                                                              verticalGap:10.f
-                                                                            horizontalGap:10.f
+                                                                              lineSpacing:0.f
+                                                                         interitemSpacing:10.f
                                                                                gridHeight:gridHeight];
     irregularGridView.tag      = DirectionHorizontalType;
     irregularGridView.adapters = arrays;
@@ -116,8 +116,8 @@ typedef enum : NSUInteger {
                                                                                             gridViewCellClassType([BlueIrregularGridViewCell class], nil)]
                                                                           scrollDirection:UICollectionViewScrollDirectionVertical
                                                                         contentEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)
-                                                                              verticalGap:10
-                                                                            horizontalGap:10.f
+                                                                              lineSpacing:10
+                                                                         interitemSpacing:10.f
                                                                                gridHeight:30.f];
     irregularGridView.tag      = DirectionVerticalType;
     irregularGridView.adapters = array;

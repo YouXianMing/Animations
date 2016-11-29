@@ -51,14 +51,14 @@
 @property (nonatomic) UIEdgeInsets contentEdgeInsets;
 
 /**
- *  Horizontal item's gap, default is 5.f.
+ *  Item's interitemSpacing, default is 5.f.
  */
-@property (nonatomic) CGFloat horizontalGap;
+@property (nonatomic) CGFloat interitemSpacing;
 
 /**
- *  Vertical item's gap, default is 5.f.
+ *  Item's lineSpacing, default is 5.f.
  */
-@property (nonatomic) CGFloat verticalGap;
+@property (nonatomic) CGFloat lineSpacing;
 
 /**
  *  Item's height, default is 20.f.
@@ -97,8 +97,8 @@
                                        registerCells:(NSArray <IrregularGridViewCellClassType *> *)registerCells
                                      scrollDirection:(UICollectionViewScrollDirection)scrollDirection
                                    contentEdgeInsets:(UIEdgeInsets)edgeInsets
-                                         verticalGap:(CGFloat)verticalGap
-                                       horizontalGap:(CGFloat)horizontalGap
+                                         lineSpacing:(CGFloat)lineSpacing
+                                    interitemSpacing:(CGFloat)interitemSpacing
                                           gridHeight:(CGFloat)gridHeight;
 
 @end
