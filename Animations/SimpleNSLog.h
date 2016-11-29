@@ -19,7 +19,6 @@
   {                                                                   \
     NSString *str = [NSString stringWithFormat:fmt, ##__VA_ARGS__];   \
     printf("%s\n",[str UTF8String]);                                  \
-    asl_log(NULL, NULL, ASL_LEVEL_NOTICE, "%s", [str UTF8String]);    \
   }                                                                   \
   while (0);                                                          \
 }
