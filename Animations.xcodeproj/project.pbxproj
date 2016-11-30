@@ -1576,6 +1576,8 @@
 		102296C61C393089001AF5BB /* CustomHeaderFooterView */ = {
 			isa = PBXGroup;
 			children = (
+				C554F8831DEEAA10007C394A /* TableViewSectionItem.h */,
+				C554F8841DEEAA10007C394A /* TableViewSectionItem.m */,
 				B5D011A81C0BE7F00075BC2E /* CustomHeaderFooterView.h */,
 				B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */,
 			);
@@ -1686,8 +1688,6 @@
 			children = (
 				102B84ED1C3BCAD0001699A9 /* CellDataAdapter.h */,
 				102B84EE1C3BCAD0001699A9 /* CellDataAdapter.m */,
-				C554F8831DEEAA10007C394A /* TableViewSectionItem.h */,
-				C554F8841DEEAA10007C394A /* TableViewSectionItem.m */,
 			);
 			name = CellDataAdapter;
 			sourceTree = "<group>";

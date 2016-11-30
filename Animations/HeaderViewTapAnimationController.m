@@ -80,21 +80,6 @@ static NSString *infoHeadFlag = @"ClassHeaderView";
 }
 
 #pragma mark - tableView相关
-- (UITableView *)createTableViewWithDelegate:(id)delegate frame:(CGRect)frame {
-    
-    UITableView *tableView   = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
-    tableView.delegate       = delegate;
-    tableView.dataSource     = delegate;
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    tableView.showsHorizontalScrollIndicator = NO;
-    tableView.showsVerticalScrollIndicator   = NO;
-    
-    [tableView registerClass:[StudentInfoCell class] forCellReuseIdentifier:infoCellFlag];
-    [tableView registerClass:[ClassHeaderView class] forHeaderFooterViewReuseIdentifier:infoHeadFlag];
-    
-    return tableView;
-}
 
 - (void)createTableView {
     
