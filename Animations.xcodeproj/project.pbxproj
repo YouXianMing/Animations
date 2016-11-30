@@ -358,6 +358,7 @@
 		C517332C1D45AFDE005D57AE /* AbsTextFieldViewValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */; };
 		C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A3081D520BD80041C962 /* FBGlowLabel.m */; };
 		C525734A1D59805000AF3353 /* NSObject+ViewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C52573491D59805000AF3353 /* NSObject+ViewTag.m */; };
+		C554F8851DEEAA10007C394A /* TableViewSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C554F8841DEEAA10007C394A /* TableViewSectionItem.m */; };
 		C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */; };
 		C559EE781DE6DBC8006C7DAC /* ColorSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE771DE6DBC8006C7DAC /* ColorSpaceCell.m */; };
 		C55D7DD41D6BEEE900B1D184 /* BackgroundLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D7DD31D6BEEE900B1D184 /* BackgroundLineView.m */; };
@@ -1125,6 +1126,8 @@
 		C524A3081D520BD80041C962 /* FBGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGlowLabel.m; sourceTree = "<group>"; };
 		C52573481D59805000AF3353 /* NSObject+ViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewTag.h"; sourceTree = "<group>"; };
 		C52573491D59805000AF3353 /* NSObject+ViewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewTag.m"; sourceTree = "<group>"; };
+		C554F8831DEEAA10007C394A /* TableViewSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSectionItem.h; sourceTree = "<group>"; };
+		C554F8841DEEAA10007C394A /* TableViewSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSectionItem.m; sourceTree = "<group>"; };
 		C559EE731DE6D733006C7DAC /* UIColor+ForPublicUse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ForPublicUse.h"; sourceTree = "<group>"; };
 		C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ForPublicUse.m"; sourceTree = "<group>"; };
 		C559EE761DE6DBC8006C7DAC /* ColorSpaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpaceCell.h; sourceTree = "<group>"; };
@@ -1683,6 +1686,8 @@
 			children = (
 				102B84ED1C3BCAD0001699A9 /* CellDataAdapter.h */,
 				102B84EE1C3BCAD0001699A9 /* CellDataAdapter.m */,
+				C554F8831DEEAA10007C394A /* TableViewSectionItem.h */,
+				C554F8841DEEAA10007C394A /* TableViewSectionItem.m */,
 			);
 			name = CellDataAdapter;
 			sourceTree = "<group>";
@@ -3442,6 +3447,7 @@
 				10381FB51BF9B55B00E5E476 /* POPAnimationTracer.mm in Sources */,
 				10E2D4EE1CD5962000666EEB /* SDWebImageDownloaderOperation.m in Sources */,
 				C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */,
+				C554F8851DEEAA10007C394A /* TableViewSectionItem.m in Sources */,
 				102296AF1C38D122001AF5BB /* CmtsModel.m in Sources */,
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
 				104326671C4B505E0033CEC0 /* ProgressColor+Colors.m in Sources */,
