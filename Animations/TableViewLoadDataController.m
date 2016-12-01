@@ -92,11 +92,6 @@
     [dataCell cancelAnimation];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    [(CustomCell *)[tableView cellForRowAtIndexPath:indexPath] selectedEvent];
-}
-
 #pragma mark - NetworkingDelegate
 
 - (void)requestSucess:(Networking *)networking data:(id)data {

@@ -95,39 +95,20 @@
     [self.iconImageView.layer removeAllAnimations];
 }
 
-- (void)showSelectedAnimation {
-    
-    UIView *tmpView                = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, self.dataAdapter.cellHeight - 0.5f)];
-    tmpView.alpha                  = 0.f;
-    tmpView.userInteractionEnabled = NO;
-    tmpView.backgroundColor        = [[UIColor colorWithRed:arc4random() % 256 / 255.f
-                                                      green:arc4random() % 256 / 255.f
-                                                       blue:arc4random() % 256 / 255.f
-                                                      alpha:1.f] colorWithAlphaComponent:0.30];
-    [self addSubview:tmpView];
-    
-    [UIView animateWithDuration:0.20 delay:0 options:UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionAllowUserInteraction
-                     animations:^{
-                         
-                         tmpView.alpha = 0.8f;
-                         
-                     } completion:^(BOOL finished) {
-                         
-                         [UIView animateWithDuration:0.20 delay:0.1 options:UIViewAnimationOptionCurveEaseOut | UIViewAnimationOptionAllowUserInteraction
-                                          animations:^{
-                                              
-                                              tmpView.alpha = 0.f;
-                                              
-                                          } completion:^(BOOL finished) {
-                                              
-                                              [tmpView removeFromSuperview];
-                                          }];
-                     }];
-}
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
 
-- (void)selectedEvent {
+    [super setHighlighted:highlighted animated:animated];
 
-    [self showSelectedAnimation];
+    UIColor *color = [[UIColor colorWithRed:arc4random() % 256 / 255.f
+                                      green:arc4random() % 256 / 255.f
+                                       blue:arc4random() % 256 / 255.f
+                                      alpha:1.f] colorWithAlphaComponent:0.30];
+    
+    [UIView animateWithDuration:0.25f delay:0.f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        
+        self.backgroundColor = highlighted ? color : [UIColor whiteColor];
+        
+    } completion:nil];
 }
 
 + (CGFloat)cellHeightWithData:(id)data {
