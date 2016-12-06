@@ -8,9 +8,9 @@
 
 #import "CustomCell.h"
 
-static CGFloat _HeaderIconCellHeight = 300.f;
-
 @interface HeaderIconCell : CustomCell
+
+@property (class, nonatomic, readonly) CGFloat cellHeight;
 
 - (void)offsetY:(CGFloat)offsetY;
 

@@ -15,6 +15,8 @@
 #import "GCD.h"
 #import "UIImage+ImageEffects.h"
 
+static CGFloat _HeaderIconCellHeight = 300.f;
+
 @interface HeaderIconCell () {
     
     Math *_scale;
@@ -45,24 +47,24 @@
 
 - (void)buildSubview {
     
-    self.backgroundContentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, _HeaderIconCellHeight)];
+    self.backgroundContentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, HeaderIconCell.cellHeight)];
     [self addSubview:self.backgroundContentView];
     
     // Used for scale.
-    self.scaleContentView                     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, _HeaderIconCellHeight)];
+    self.scaleContentView                     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, HeaderIconCell.cellHeight)];
     self.scaleContentView.layer.anchorPoint   = CGPointMake(0.5f, 1.f);
     self.scaleContentView.top                 = 0.f;
     self.scaleContentView.layer.masksToBounds = YES;
     [self.backgroundContentView addSubview:self.scaleContentView];
     
     // Normal imageView.
-    self.backgroundImageView             = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, Width, _HeaderIconCellHeight)];
+    self.backgroundImageView             = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, Width, HeaderIconCell.cellHeight)];
     self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.backgroundImageView.image       = [UIImage imageNamed:@"gerenBG"];
     [self.scaleContentView addSubview:self.backgroundImageView];
     
     // Blur imageView.
-    self.blurImageView             = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, Width, _HeaderIconCellHeight)];
+    self.blurImageView             = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, Width, HeaderIconCell.cellHeight)];
     self.blurImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.blurImageView.alpha       = 0.f;
     [self.scaleContentView addSubview:self.blurImageView];
@@ -76,7 +78,7 @@
     }];
     
     // Gray imageView.
-    self.grayImageView             = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, Width, _HeaderIconCellHeight)];
+    self.grayImageView             = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, Width, HeaderIconCell.cellHeight)];
     self.grayImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.grayImageView.alpha       = 0.f;
     [self.scaleContentView addSubview:self.grayImageView];
@@ -90,13 +92,13 @@
     }];
     
     // Bottom shapeView.
-    ShapeView *areaView = [[ShapeView alloc] initWithFrame:CGRectMake(0, 0, Width, _HeaderIconCellHeight)];
+    ShapeView *areaView = [[ShapeView alloc] initWithFrame:CGRectMake(0, 0, Width, HeaderIconCell.cellHeight)];
     areaView.fillColor  = [UIColor backgroundColor];
-    areaView.points     = @[[NSValue valueWithCGPoint:CGPointMake(0, _HeaderIconCellHeight)],
-                            [NSValue valueWithCGPoint:CGPointMake(0, _HeaderIconCellHeight - 50.f)],
-                            [NSValue valueWithCGPoint:CGPointMake(Width, _HeaderIconCellHeight - 100.f)],
-                            [NSValue valueWithCGPoint:CGPointMake(Width, _HeaderIconCellHeight)],
-                            [NSValue valueWithCGPoint:CGPointMake(0, _HeaderIconCellHeight)]];
+    areaView.points     = @[[NSValue valueWithCGPoint:CGPointMake(0, HeaderIconCell.cellHeight)],
+                            [NSValue valueWithCGPoint:CGPointMake(0, HeaderIconCell.cellHeight - 50.f)],
+                            [NSValue valueWithCGPoint:CGPointMake(Width, HeaderIconCell.cellHeight - 100.f)],
+                            [NSValue valueWithCGPoint:CGPointMake(Width, HeaderIconCell.cellHeight)],
+                            [NSValue valueWithCGPoint:CGPointMake(0, HeaderIconCell.cellHeight)]];
     [self addSubview:areaView];
     
     // Icon imageView.
@@ -107,7 +109,7 @@
     self.iconImageView.layer.borderColor   = [[UIColor grayColor] colorWithAlphaComponent:0.25f].CGColor;
     self.iconImageView.image               = [UIImage imageNamed:@"girl"];
     self.iconImageView.centerX             = Width / 2.f;
-    self.iconImageView.centerY             = _HeaderIconCellHeight - 100 + 25.f;
+    self.iconImageView.centerY             = HeaderIconCell.cellHeight - 100 + 25.f;
     [self addSubview:self.iconImageView];
     
     // Name label.
@@ -140,6 +142,18 @@
         self.grayImageView.y     = offsetY / 2.f;
         self.grayImageView.alpha = offsetY * _grayImageViewAlpha.k + _grayImageViewAlpha.b;
     }
+}
+
+#pragma mark - class property.
+
++ (void)setCellHeight:(CGFloat)cellHeight {
+
+    _HeaderIconCellHeight = cellHeight;
+}
+
++ (CGFloat)cellHeight {
+
+    return _HeaderIconCellHeight;
 }
 
 @end

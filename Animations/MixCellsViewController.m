@@ -49,7 +49,7 @@ typedef enum : NSUInteger {
 
     self.adapters = [NSMutableArray array];
     
-    [self.adapters addObject:[HeaderIconCell dataAdapterWithData:nil cellHeight:_HeaderIconCellHeight]];
+    [self.adapters addObject:[HeaderIconCell dataAdapterWithData:nil cellHeight:HeaderIconCell.cellHeight]];
     [self.adapters addObject:[self lineType:kSpace height:20.f]];
     [self.tableView reloadData];
     
