@@ -9,6 +9,7 @@
 #import "ContentIconCell.h"
 #import "UIButton+inits.h"
 #import "UIView+SetRect.h"
+#import "UIView+AnimationProperty.h"
 
 @interface ContentIconCell ()
 
@@ -66,6 +67,25 @@
         self.titleLabel.hidden         = YES;
         self.arrowNextImageView.hidden = YES;
     }
+}
+
+- (void)selectedEvent {
+
+    if (self.delegate && [self.delegate respondsToSelector:@selector(customCell:event:)]) {
+        
+        [self.delegate customCell:self event:self.data];
+    }
+}
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+
+    [UIView animateWithDuration:0.35f delay:0.f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        
+        self.titleLabel.x        = highlighted ? 55.f : 50.f;
+        self.backgroundColor     = highlighted ? [[UIColor whiteColor] colorWithAlphaComponent:0.5f] : [UIColor whiteColor];
+        self.iconImageView.scale = highlighted ? 0.95f : 1.f;
+        
+    } completion:nil];
 }
 
 @end

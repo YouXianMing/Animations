@@ -20,7 +20,7 @@ typedef enum : NSUInteger {
     
 } ELineTypeValue;
 
-@interface MixCellsViewController () <UITableViewDelegate, UITableViewDataSource> {
+@interface MixCellsViewController () <UITableViewDelegate, UITableViewDataSource, CustomCellDelegate> {
 
     HeaderIconCell *_headerCell;
 }
@@ -129,6 +129,7 @@ typedef enum : NSUInteger {
     cell.data                = adapter.data;
     cell.indexPath           = indexPath;
     cell.tableView           = tableView;
+    cell.delegate            = self;
     [cell loadContent];
     
     if (_headerCell == nil && [cell isKindOfClass:[HeaderIconCell class]]) {
@@ -144,9 +145,21 @@ typedef enum : NSUInteger {
     return _adapters[indexPath.row].cellHeight;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    [(CustomCell *)[tableView cellForRowAtIndexPath:indexPath] selectedEvent];
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
     [_headerCell offsetY:scrollView.contentOffset.y];
+}
+
+#pragma mark - CustomCellDelegate
+
+- (void)customCell:(CustomCell *)cell event:(id)event {
+
+    NSLog(@"%@", event);
 }
 
 #pragma mark - Base config.
