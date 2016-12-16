@@ -1,17 +1,17 @@
 //
-//  PushAnimator.m
-//  Animator
+//  ControllerPushAnimator.m
+//  Animations
 //
-//  Created by YouXianMing on 16/5/27.
+//  Created by YouXianMing on 2016/12/16.
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "PushAnimator.h"
+#import "ControllerPushAnimator.h"
 #import "UIView+SetRect.h"
 #import "UIView+AnimationProperty.h"
 #import "AnimationsListViewController.h"
 
-@implementation PushAnimator
+@implementation ControllerPushAnimator
 
 - (void)transitionAnimation {
     
@@ -28,6 +28,7 @@
         
     } completion:^(BOOL finished) {
         
+        controller.view.alpha = 1.f;
         [self completeTransition];
     }];
 }

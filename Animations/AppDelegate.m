@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AnimationsListViewController.h"
-#import "CustomNavigationController.h"
+#import "AnimationsListViewNavigationController.h"
 
 @implementation AppDelegate
 
@@ -32,9 +32,9 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    AnimationsListViewController *viewController       = [AnimationsListViewController new];
-    CustomNavigationController   *navigationController = [[CustomNavigationController alloc] initWithRootViewController:viewController
-                                                                                                 setNavigationBarHidden:YES];
+    AnimationsListViewController           *viewController       = [AnimationsListViewController new];
+    AnimationsListViewNavigationController *navigationController = [[AnimationsListViewNavigationController alloc] initWithRootViewController:viewController
+                                                                                                                       setNavigationBarHidden:YES];
     self.window.rootViewController = navigationController;
     self.window.backgroundColor    = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

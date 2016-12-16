@@ -13,10 +13,11 @@
 #import "UITableView+CellClass.h"
 #import "ListItemCell.h"
 #import "BackgroundLineView.h"
+#import "DefaultNotificationCenter.h"
 #import "Item.h"
 #import "GCD.h"
-#import "PushAnimator.h"
-#import "PopAnimator.h"
+#import "ControllerPushAnimator.h"
+#import "ControllerPopAnimator.h"
 #import "UIFont+Fonts.h"
 
 #import "ButtonPressViewController.h"
@@ -76,10 +77,11 @@
 #import "IrregularGridViewController.h"
 #import "MixCellsViewController.h"
 
-@interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
+@interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate>
 
-@property (nonatomic, strong) UITableView    *tableView;
-@property (nonatomic)         BOOL            tableViewLoadData;
+@property (nonatomic, strong) DefaultNotificationCenter *notificationCenter;
+@property (nonatomic, strong) UITableView               *tableView;
+@property (nonatomic)         BOOL                       tableViewLoadData;
 
 @property (nonatomic, strong) NSMutableArray  <CellDataAdapter *> *items;
 
@@ -92,6 +94,8 @@
     [super setup];
     
     [self rootViewControllerSetup];
+    
+    [self configNotificationCenter];
     
     [self configureDataSource];
     
@@ -120,15 +124,45 @@
     
     if (operation == UINavigationControllerOperationPush) {
         
-        return [PushAnimator new];
+        return [ControllerPushAnimator new];
         
     } else if (operation == UINavigationControllerOperationPop) {
         
-        return [PopAnimator new];
+        return [ControllerPopAnimator new];
         
     } else {
         
         return nil;
+    }
+}
+
+#pragma mark - configNotificationCenter
+
+- (void)configNotificationCenter {
+
+    self.notificationCenter          = [DefaultNotificationCenter new];
+    self.notificationCenter.delegate = self;
+    [self.notificationCenter addNotificationName:noti_showHomePageTableView];
+}
+
+#pragma mark - DefaultNotificationCenterDelegate
+
+- (void)defaultNotificationCenter:(DefaultNotificationCenter *)notification name:(NSString *)name object:(id)object {
+ 
+    if ([name isEqualToString:noti_showHomePageTableView]) {
+        
+        [GCDQueue executeInMainQueue:^{
+            
+            // Load data.
+            NSMutableArray *indexPaths = [NSMutableArray array];
+            for (int i = 0; i < self.items.count; i++) {
+                
+                [indexPaths addObject:[NSIndexPath indexPathForItem:i inSection:0]];
+            }
+            
+            self.tableViewLoadData = YES;
+            [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];   
+        }];
     }
 }
 
@@ -261,20 +295,6 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerCellsClass:@[cellClass(@"ListItemCell", nil)]];
     [self.contentView addSubview:self.tableView];
-    
-    [GCDQueue executeInMainQueue:^{
-        
-        // Load data.
-        NSMutableArray *indexPaths = [NSMutableArray array];
-        for (int i = 0; i < self.items.count; i++) {
-            
-            [indexPaths addObject:[NSIndexPath indexPathForItem:i inSection:0]];
-        }
-        
-        self.tableViewLoadData = YES;
-        [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-        
-    } afterDelaySecs:0.25f];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

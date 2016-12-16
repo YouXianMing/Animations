@@ -11,4 +11,7 @@
 
 #define _md_get_weakSelf() __weak typeof(self) weakSelf = self
 
+// Notification strings
+static NSString *noti_showHomePageTableView = @"noti_showHomePageTableView";
+
 #endif /* MacroDefinition_h */

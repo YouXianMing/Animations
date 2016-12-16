@@ -215,8 +215,6 @@
 		1067A8F81CE81BF5003FBF17 /* AbsAlertMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1067A8F71CE81BF5003FBF17 /* AbsAlertMessageView.m */; };
 		1068FCCD1CF7D87A00BE431C /* PressScaleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1068FCCC1CF7D87A00BE431C /* PressScaleButton.m */; };
 		1068FD4D1CF8479E00BE431C /* TransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1068FD4C1CF8479E00BE431C /* TransitionAnimator.m */; };
-		1068FD531CF847AD00BE431C /* PushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1068FD501CF847AD00BE431C /* PushAnimator.m */; };
-		1068FD541CF847AD00BE431C /* PopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1068FD521CF847AD00BE431C /* PopAnimator.m */; };
 		1068FD5A1CF847BC00BE431C /* PresentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1068FD571CF847BC00BE431C /* PresentAnimator.m */; };
 		1068FD5B1CF847BC00BE431C /* DismissAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1068FD591CF847BC00BE431C /* DismissAnimator.m */; };
 		106BCFC01CDC672A007C3EEE /* InfiniteLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFBF1CDC672A007C3EEE /* InfiniteLoopViewController.m */; };
@@ -358,6 +356,9 @@
 		C517332C1D45AFDE005D57AE /* AbsTextFieldViewValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */; };
 		C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A3081D520BD80041C962 /* FBGlowLabel.m */; };
 		C525734A1D59805000AF3353 /* NSObject+ViewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C52573491D59805000AF3353 /* NSObject+ViewTag.m */; };
+		C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */; };
+		C5525D681E03DCAB00929C52 /* ControllerPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */; };
+		C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */; };
 		C554F8851DEEAA10007C394A /* TableViewSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C554F8841DEEAA10007C394A /* TableViewSectionItem.m */; };
 		C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */; };
 		C559EE781DE6DBC8006C7DAC /* ColorSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE771DE6DBC8006C7DAC /* ColorSpaceCell.m */; };
@@ -834,10 +835,6 @@
 		1068FCCC1CF7D87A00BE431C /* PressScaleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressScaleButton.m; sourceTree = "<group>"; };
 		1068FD4B1CF8479E00BE431C /* TransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimator.h; sourceTree = "<group>"; };
 		1068FD4C1CF8479E00BE431C /* TransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimator.m; sourceTree = "<group>"; };
-		1068FD4F1CF847AD00BE431C /* PushAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAnimator.h; sourceTree = "<group>"; };
-		1068FD501CF847AD00BE431C /* PushAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAnimator.m; sourceTree = "<group>"; };
-		1068FD511CF847AD00BE431C /* PopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimator.h; sourceTree = "<group>"; };
-		1068FD521CF847AD00BE431C /* PopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimator.m; sourceTree = "<group>"; };
 		1068FD561CF847BC00BE431C /* PresentAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentAnimator.h; sourceTree = "<group>"; };
 		1068FD571CF847BC00BE431C /* PresentAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentAnimator.m; sourceTree = "<group>"; };
 		1068FD581CF847BC00BE431C /* DismissAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissAnimator.h; sourceTree = "<group>"; };
@@ -1126,6 +1123,12 @@
 		C524A3081D520BD80041C962 /* FBGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGlowLabel.m; sourceTree = "<group>"; };
 		C52573481D59805000AF3353 /* NSObject+ViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewTag.h"; sourceTree = "<group>"; };
 		C52573491D59805000AF3353 /* NSObject+ViewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewTag.m"; sourceTree = "<group>"; };
+		C5525D631E03DBD300929C52 /* ControllerPopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerPopAnimator.h; sourceTree = "<group>"; };
+		C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerPopAnimator.m; sourceTree = "<group>"; };
+		C5525D661E03DCAB00929C52 /* ControllerPushAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerPushAnimator.h; sourceTree = "<group>"; };
+		C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerPushAnimator.m; sourceTree = "<group>"; };
+		C5525D691E03DEFE00929C52 /* AnimationsListViewNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationsListViewNavigationController.h; sourceTree = "<group>"; };
+		C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationsListViewNavigationController.m; sourceTree = "<group>"; };
 		C554F8831DEEAA10007C394A /* TableViewSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSectionItem.h; sourceTree = "<group>"; };
 		C554F8841DEEAA10007C394A /* TableViewSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSectionItem.m; sourceTree = "<group>"; };
 		C559EE731DE6D733006C7DAC /* UIColor+ForPublicUse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ForPublicUse.h"; sourceTree = "<group>"; };
@@ -1835,6 +1838,8 @@
 			children = (
 				10381F691BF9B47000E5E476 /* AnimationsListViewController.h */,
 				10381F6A1BF9B47000E5E476 /* AnimationsListViewController.m */,
+				C5525D691E03DEFE00929C52 /* AnimationsListViewNavigationController.h */,
+				C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */,
 				10381F6B1BF9B47000E5E476 /* Item.h */,
 				10381F6C1BF9B47000E5E476 /* Item.m */,
 				10381F6D1BF9B47000E5E476 /* ListItemCell.h */,
@@ -2534,10 +2539,10 @@
 		1068FD4E1CF847A100BE431C /* Push & Pop */ = {
 			isa = PBXGroup;
 			children = (
-				1068FD4F1CF847AD00BE431C /* PushAnimator.h */,
-				1068FD501CF847AD00BE431C /* PushAnimator.m */,
-				1068FD511CF847AD00BE431C /* PopAnimator.h */,
-				1068FD521CF847AD00BE431C /* PopAnimator.m */,
+				C5525D661E03DCAB00929C52 /* ControllerPushAnimator.h */,
+				C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */,
+				C5525D631E03DBD300929C52 /* ControllerPopAnimator.h */,
+				C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */,
 			);
 			name = "Push & Pop";
 			sourceTree = "<group>";
@@ -3582,7 +3587,6 @@
 				1011BAA31CD4898D00F29FB9 /* WanDouJiaModel.m in Sources */,
 				109606201C93B46800CCB3AD /* AbsNetworkingReachability.m in Sources */,
 				10E2D4EF1CD5962000666EEB /* SDWebImageManager.m in Sources */,
-				1068FD531CF847AD00BE431C /* PushAnimator.m in Sources */,
 				1030886A1C03F1A000C8B623 /* easing.c in Sources */,
 				C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */,
 				104228C91C36956C0011409C /* PictureCell.m in Sources */,
@@ -3636,12 +3640,12 @@
 				1011BADB1CD48C8D00F29FB9 /* NodeModel.m in Sources */,
 				10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */,
 				102296B21C38D122001AF5BB /* WaterfallPictureModel.m in Sources */,
-				1068FD541CF847AD00BE431C /* PopAnimator.m in Sources */,
 				106BCFC01CDC672A007C3EEE /* InfiniteLoopViewController.m in Sources */,
 				100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */,
 				C57526D01D50327F0064F6CD /* WaveView.m in Sources */,
 				109606501C93B4A300CCB3AD /* AFSecurityPolicy.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
+				C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */,
 				10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */,
 				10B0DDFC1CBA84400089DF1E /* AttributedStringInitConfig.m in Sources */,
 				10B6F3D61C954749007E8254 /* ScrollTitleView.m in Sources */,
@@ -3659,6 +3663,7 @@
 				1017F13B1C35715400E245F8 /* NSString+JSONData.m in Sources */,
 				10585B2C1C3F468E0052990F /* UIButton+Style.m in Sources */,
 				105F3FEA1CB7B5DD007B02C7 /* ShowTextCell.m in Sources */,
+				C5525D681E03DCAB00929C52 /* ControllerPushAnimator.m in Sources */,
 				104F0CF81BFAFA7000C46E6A /* CAShapeLayerPathController.m in Sources */,
 				10CEC58C1C2153EB00B0CA7D /* FullTitleViewController.m in Sources */,
 				104CD2FC1CDAD41A00C836E6 /* GridFlowLayoutViewController.m in Sources */,
@@ -3681,6 +3686,7 @@
 				10CEC5891C21345600B0CA7D /* FullTitleVisualEffectViewController.m in Sources */,
 				10D4F6111C41538C00D056EB /* PressAnimationButton.m in Sources */,
 				102B1F311C60E66F00A8FD40 /* MentionsModel.m in Sources */,
+				C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */,
 				10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
 				105F3FE71CB7B3F1007B02C7 /* TapCellAnimationController.m in Sources */,
