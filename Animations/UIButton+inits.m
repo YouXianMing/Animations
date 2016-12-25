@@ -10,60 +10,39 @@
 
 @implementation UIButton (inits)
 
-+ (UIButton *)createButtonWithFrame:(CGRect)frame title:(NSString *)title tag:(NSInteger)tag target:(id)target action:(SEL)selector {
+- (void)addTarget:(id)target touchUpInsideAction:(SEL)action {
 
-    UIButton *button          = [[UIButton alloc] initWithFrame:frame];
-    button.titleLabel.font    = [UIFont fontWithName:@"Avenir-Book" size:16.f];
-    button.layer.borderWidth  = 1.f;
-    button.layer.cornerRadius = 3.f;
-    button.tag                = tag;
-
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-
-    [button setTitle:title forState:UIControlStateNormal];
-    [button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
-    
-    return button;
+    [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
 }
 
-+ (UIButton *)createButtonWithFrame:(CGRect)frame
-                         buttonType:(EButtonType)type
-                              title:(NSString *)title
-                                tag:(NSInteger)tag
-                             target:(id)target
-                             action:(SEL)selector {
+- (void)setNormalTitle:(NSString *)title {
+    
+    [self setTitle:title forState:UIControlStateNormal];
+}
 
-    UIButton *button          = [[UIButton alloc] initWithFrame:frame];
-    button.titleLabel.font    = [UIFont fontWithName:@"Avenir-Book" size:16.f];
-    button.layer.borderWidth  = 1.f;
-    button.layer.cornerRadius = 3.f;
-    button.tag                = tag;
+- (NSString *)normalTitle {
+
+    return [self titleForState:UIControlStateNormal];
+}
+
+- (void)setHighlightedTitle:(NSString *)title {
     
-    if (type == kButtonNormal) {
-        
-        button.layer.borderColor = [UIColor blackColor].CGColor;
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-        
-    } else if (type == kButtonRed) {
+    [self setTitle:title forState:UIControlStateHighlighted];
+}
+
+- (NSString *)highlightedTitle {
     
-        button.layer.borderColor = [UIColor redColor].CGColor;
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-        
-    } else {
+    return [self titleForState:UIControlStateHighlighted];
+}
+
+- (void)setNormalImage:(UIImage *)image {
     
-        button.layer.borderColor = [UIColor blackColor].CGColor;
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-        
-    }
+    [self setImage:image forState:UIControlStateNormal];
+}
+
+- (UIImage *)normalImage {
     
-    [button setTitle:title forState:UIControlStateNormal];
-    [button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
-    
-    return button;
+    return [self imageForState:UIControlStateNormal];
 }
 
 - (void)setHighlightedImage:(UIImage *)image {
@@ -84,16 +63,6 @@
 - (UIImage *)selectedImage {
     
     return [self imageForState:UIControlStateSelected];
-}
-
-- (void)setNormalImage:(UIImage *)image {
-    
-    [self setImage:image forState:UIControlStateNormal];
-}
-
-- (UIImage *)normalImage {
-    
-    return [self imageForState:UIControlStateNormal];
 }
 
 @end

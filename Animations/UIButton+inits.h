@@ -8,70 +8,84 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum : NSUInteger {
-    
-    kButtonNormal,
-    kButtonRed,
-    
-} EButtonType;
-
 @interface UIButton (inits)
 
 /**
- *  创建button
- *
- *  @param frame    frame值
- *  @param type     类型
- *  @param title    标题
- *  @param tag      标签
- *  @param target   目标
- *  @param selector 执行句柄
- *
- *  @return 创建好的button
+ Associates a target object and action method with the UIControlEventTouchUpInside.
+
+ @param target Target object.
+ @param action The action.
  */
-+ (UIButton *)createButtonWithFrame:(CGRect)frame buttonType:(EButtonType)type title:(NSString *)title tag:(NSInteger)tag
-                             target:(id)target action:(SEL)selector;
+- (void)addTarget:(id)target touchUpInsideAction:(SEL)action;
 
 /**
- *  设置高亮图片
+ *  Set highlighted image.
  *
- *  @param image 高亮图片
+ *  @param image Image object.
  */
 - (void)setHighlightedImage:(UIImage *)image;
 
 /**
- *  返回高亮图片
+ *  Get the highlighted image.
  *
- *  @return 高亮图片
+ *  @return Highlighted image.
  */
 - (UIImage *)highlightedImage;
 
 /**
- *  设置普通图片
+ *  Set normal image.
  *
- *  @param image 普通图片
+ *  @param image Normal image.
  */
 - (void)setNormalImage:(UIImage *)image;
 
 /**
- *  返回普通图片
+ *  Get the normal image.
  *
- *  @return 普通图片
+ *  @return Normal image.
  */
 - (UIImage *)normalImage;
 
 /**
- *  设置选中的图片
+ *  Set selected image.
  *
- *  @param image 选中的图片
+ *  @param image Selected image.
  */
 - (void)setSelectedImage:(UIImage *)image;
 
 /**
- *  返回选中的图片
+ *  Get the selected image.
  *
- *  @return 选中的图片
+ *  @return Selected image.
  */
 - (UIImage *)selectedImage;
+
+/**
+ *  Set normal title.
+ *
+ *  @param title Normal title.
+ */
+- (void)setNormalTitle:(NSString *)title;
+
+/**
+ *  Get the normal title.
+ *
+ *  @return Normal title.
+ */
+- (NSString *)normalTitle;
+
+/**
+ *  Set highlighted title.
+ *
+ *  @param title Title.
+ */
+- (void)setHighlightedTitle:(NSString *)title;
+
+/**
+ *  Get the highlighted title.
+ *
+ *  @return Highlighted title.
+ */
+- (NSString *)highlightedTitle;
 
 @end
