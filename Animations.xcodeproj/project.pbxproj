@@ -356,6 +356,7 @@
 		C517332C1D45AFDE005D57AE /* AbsTextFieldViewValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */; };
 		C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A3081D520BD80041C962 /* FBGlowLabel.m */; };
 		C525734A1D59805000AF3353 /* NSObject+ViewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C52573491D59805000AF3353 /* NSObject+ViewTag.m */; };
+		C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C532B20F1E13A664004C7499 /* PlaceholderImageView.m */; };
 		C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */; };
 		C5525D681E03DCAB00929C52 /* ControllerPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */; };
 		C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */; };
@@ -1126,6 +1127,8 @@
 		C524A3081D520BD80041C962 /* FBGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGlowLabel.m; sourceTree = "<group>"; };
 		C52573481D59805000AF3353 /* NSObject+ViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewTag.h"; sourceTree = "<group>"; };
 		C52573491D59805000AF3353 /* NSObject+ViewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewTag.m"; sourceTree = "<group>"; };
+		C532B20E1E13A664004C7499 /* PlaceholderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderImageView.h; sourceTree = "<group>"; };
+		C532B20F1E13A664004C7499 /* PlaceholderImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderImageView.m; sourceTree = "<group>"; };
 		C5525D631E03DBD300929C52 /* ControllerPopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerPopAnimator.h; sourceTree = "<group>"; };
 		C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerPopAnimator.m; sourceTree = "<group>"; };
 		C5525D661E03DCAB00929C52 /* ControllerPushAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerPushAnimator.h; sourceTree = "<group>"; };
@@ -2517,6 +2520,7 @@
 				C517331F1D45AFAD005D57AE /* TouchEventView */,
 				C51733231D45AFD0005D57AE /* UITextFieldView */,
 				106BCFC21CDC6740007C3EEE /* InfiniteLoopView */,
+				C532B2111E13A668004C7499 /* PlaceholderImageView */,
 				10E2D50F1CD63EDF00666EEB /* iCarousel */,
 				1047E2351CC5AF8400E13D1C /* LazyFadeInView */,
 				10B0DDF31CBA82F90089DF1E /* JSAnimatedImagesView */,
@@ -3152,6 +3156,15 @@
 			name = FBGlowLabel;
 			sourceTree = "<group>";
 		};
+		C532B2111E13A668004C7499 /* PlaceholderImageView */ = {
+			isa = PBXGroup;
+			children = (
+				C532B20E1E13A664004C7499 /* PlaceholderImageView.h */,
+				C532B20F1E13A664004C7499 /* PlaceholderImageView.m */,
+			);
+			name = PlaceholderImageView;
+			sourceTree = "<group>";
+		};
 		C56812281D757617006E6C49 /* IrregularGridCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3670,6 +3683,7 @@
 				100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */,
 				C57526D01D50327F0064F6CD /* WaveView.m in Sources */,
 				109606501C93B4A300CCB3AD /* AFSecurityPolicy.m in Sources */,
+				C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
 				C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */,
 				10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */,

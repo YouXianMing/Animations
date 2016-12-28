@@ -46,12 +46,12 @@
         }
         
         InfiniteLoopViewBuilder *loopView = [[InfiniteLoopViewBuilder alloc] initWithFrame:CGRectMake(0, 0, Width, self.contentView.height / 2.f)];
-        loopView.nodeViewTemplate   = [CircleNodeStateView new];
-        loopView.delegate           = self;
-        loopView.sampleNodeViewSize = CGSizeMake(8, 6);
-        loopView.position           = kNodeViewBottomRight;
-        loopView.edgeInsets         = UIEdgeInsetsMake(0, 0, 7, 5);
-        loopView.models             = (NSArray <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol> *)models;
+        loopView.nodeViewTemplate         = [CircleNodeStateView new];
+        loopView.delegate                 = self;
+        loopView.sampleNodeViewSize       = CGSizeMake(8, 6);
+        loopView.position                 = kNodeViewBottomRight;
+        loopView.edgeInsets               = UIEdgeInsetsMake(0, 0, 7, 5);
+        loopView.models                   = (NSArray <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol> *)models;
         [loopView startLoopAnimated:YES];
         [self.contentView addSubview:loopView];
         

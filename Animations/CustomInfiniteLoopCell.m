@@ -41,4 +41,8 @@
     
 }
 
+- (void)contentOffset:(CGPoint)offset {
+
+}
+
 @end

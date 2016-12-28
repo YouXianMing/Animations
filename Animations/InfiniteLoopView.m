@@ -136,7 +136,7 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     
-    return 5000;
+    return 10000;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -168,6 +168,12 @@
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(CustomInfiniteLoopCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    [self.collectionView.visibleCells enumerateObjectsUsingBlock:^(__kindof CustomInfiniteLoopCell *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        CGPoint point = [obj convertPoint:obj.bounds.origin fromView:self];
+        [obj contentOffset:point];
+    }];
+    
     [cell willDisplay];
 }
 
@@ -195,6 +201,12 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    [self.collectionView.visibleCells enumerateObjectsUsingBlock:^(__kindof CustomInfiniteLoopCell *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        CGPoint point = [obj convertPoint:obj.bounds.origin fromView:self];
+        [obj contentOffset:point];
+    }];
     
     if (self.models.count == 0) {
         

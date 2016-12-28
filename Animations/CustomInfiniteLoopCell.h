@@ -46,4 +46,11 @@
  */
 - (void)didEndDisplay;
 
+/**
+ The contentOffset, you can use this value to do sth.
+
+ @param offset The offset.
+ */
+- (void)contentOffset:(CGPoint)offset;
+
 @end
