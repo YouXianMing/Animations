@@ -64,9 +64,14 @@
 @property (nonatomic, strong) id messageObject;
 
 /**
- *  The contentView.
+ The contentView.
  */
 @property (nonatomic, weak) UIView *contentView;
+
+/**
+ The contentView's UserInteractionEnabled, default is YES, if you set it to NO, you should manage the value by yourself.
+ */
+@property (nonatomic) BOOL contentViewUserInteractionEnabled;
 
 /**
  *  Auto hiden or not, default is NO.
@@ -99,6 +104,7 @@
  @param tag The view tag.
  @param autoHiden Auto hiden or not.
  @param delayAutoHidenDuration If The autoHiden is YES, you should set the delay hiden duration, default is 2.0.
+ @param contentViewUserInteractionEnabled The contentView's user interaction enable or not.
  @param showImmediately Show the BaseMessageView immediately or not.
  @return The BaseMessageView.
  */
@@ -108,10 +114,11 @@
                                      viewTag:(NSInteger)tag
                                    autoHiden:(BOOL)autoHiden
                       delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration
+           contentViewUserInteractionEnabled:(BOOL)contentViewUserInteractionEnabled
                              showImmediately:(BOOL)showImmediately;
 
 /**
- The BaseMessageView Constructor, auto hiden.
+ The BaseMessageView Constructor, auto hiden, contentViewUserInteractionEnabled is NO.
 
  @param messageObject The message object.
  @param contentView The contentView.
@@ -120,7 +127,7 @@
 + (instancetype)showAutoHiddenMessageViewWithMessageObject:(id)messageObject contentView:(UIView *)contentView;
 
 /**
- The BaseMessageView Constructor, manual hiden.
+ The BaseMessageView Constructor, manual hiden, contentViewUserInteractionEnabled is NO.
  
  @param messageObject The message object.
  @param contentView The contentView.
@@ -129,7 +136,7 @@
 + (instancetype)showManualHiddenMessageViewWithMessageObject:(id)messageObject contentView:(UIView *)contentView;
 
 /**
- The BaseMessageView Constructor, auto hiden.
+ The BaseMessageView Constructor, auto hiden, contentViewUserInteractionEnabled is NO.
 
  @param messageObject The message object.
  @param delegate The delegate.
@@ -141,7 +148,7 @@
                                                contentView:(UIView *)contentView viewTag:(NSInteger)tag;
 
 /**
- The BaseMessageView Constructor, manual hiden.
+ The BaseMessageView Constructor, manual hiden, contentViewUserInteractionEnabled is NO.
  
  @param messageObject The message object.
  @param delegate The delegate.
@@ -151,6 +158,46 @@
  */
 + (instancetype)showManualHiddenMessageViewWithMessageObject:(id)messageObject delegate:(id <BaseMessageViewDelegate>)delegate
                                                  contentView:(UIView *)contentView viewTag:(NSInteger)tag;
+
+/**
+ The BaseMessageView Constructor, manual hiden, contentViewUserInteractionEnabled is YES.
+
+ @param messageObject The message object.
+ @return The BaseMessageView.
+ */
++ (instancetype)showManualHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject;
+
+/**
+ The BaseMessageView Constructor, manual hiden, contentViewUserInteractionEnabled is YES.
+
+ @param messageObject The message object.
+ @param delegate The delegate.
+ @param tag The view tag.
+ @return The BaseMessageView.
+ */
++ (instancetype)showManualHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject
+                                                               delegate:(id <BaseMessageViewDelegate>)delegate
+                                                                viewTag:(NSInteger)tag;
+
+/**
+ The BaseMessageView Constructor, auto hiden, contentViewUserInteractionEnabled is YES.
+
+ @param messageObject The message object.
+ @return The BaseMessageView.
+ */
++ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject;
+
+/**
+ The BaseMessageView Constructor, auto hiden, contentViewUserInteractionEnabled is YES.
+
+ @param messageObject The message object.
+ @param delegate The delegate.
+ @param tag The view tag.
+ @return The BaseMessageView.
+ */
++ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject
+                                                             delegate:(id <BaseMessageViewDelegate>)delegate
+                                                              viewTag:(NSInteger)tag;
 
 @end
 

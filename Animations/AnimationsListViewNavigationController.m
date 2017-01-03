@@ -27,7 +27,7 @@
     [self.view addSubview:iconImageView];
     
     // Do animation
-    [UIView animateKeyframesWithDuration:0.5f delay:0.f options:0 animations:^{
+    [UIView animateKeyframesWithDuration:1.f delay:2.f options:0 animations:^{
         
         iconImageView.scale = 1.2f;
         iconImageView.alpha = 0.f;

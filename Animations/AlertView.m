@@ -29,7 +29,7 @@
         
         [self.contentView addSubview:self];
         
-        [self.contentView enabledUserInteraction];
+        self.contentViewUserInteractionEnabled == NO ? [self.contentView enabledUserInteraction] : 0;
         [self createBlackView];
         [self createMessageView];
         
@@ -178,7 +178,7 @@
         
     } completion:^(BOOL finished) {
         
-        [self.contentView disableUserInteraction];
+        self.contentViewUserInteractionEnabled == NO ? [self.contentView disableUserInteraction] : 0;
         [self removeFromSuperview];
         
         if (self.delegate && [self.delegate respondsToSelector:@selector(baseMessageViewDidDisappear:)]) {

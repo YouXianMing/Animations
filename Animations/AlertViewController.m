@@ -62,7 +62,14 @@ typedef enum : NSUInteger {
         NSString *content                = @"惟江上之清风，与山间之明月，\n耳得之而为声，目遇之而成色，\n取之无禁，用之不竭。";
         MessageViewObject *messageObject = MakeMessageViewObject(title, content);
         
-        [MessageView showAutoHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowView viewTag:arc4random() % 100];
+        if (arc4random() % 2) {
+            
+            [MessageView showAutoHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowView viewTag:arc4random() % 100];
+            
+        } else {
+            
+            [MessageView showAutoHiddenMessageViewInKeyWindowWithMessageObject:messageObject delegate:self viewTag:arc4random() % 100];
+        }
         
     } else if (button.tag == kButtonsAlertView) {
         
@@ -70,7 +77,14 @@ typedef enum : NSUInteger {
         NSArray  *buttonTitles                = @[AlertViewNormalStyle(@"Cancel"), AlertViewRedStyle(@"Confirm")];
         AlertViewMessageObject *messageObject = MakeAlertViewMessageObject(content, buttonTitles);
         
-        [AlertView showManualHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowView viewTag:arc4random() % 100];
+        if (arc4random() % 2) {
+            
+            [AlertView showManualHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowView viewTag:arc4random() % 100];
+            
+        } else {
+        
+            [AlertView showManualHiddenMessageViewInKeyWindowWithMessageObject:messageObject delegate:self viewTag:arc4random() % 100];
+        }
     }
 }
 
@@ -89,7 +103,7 @@ typedef enum : NSUInteger {
 
 - (void)baseMessageViewDidAppear:(__kindof BaseMessageView *)messageView {
     
-    NSLog(@"%@, tag:%ld DidAppear", NSStringFromClass([messageView class]), (long)messageView.tag);
+    NSLog(@"%@, tag:%ld DidAppear, contentView is %@", NSStringFromClass([messageView class]), (long)messageView.tag, NSStringFromClass([messageView.contentView class]));
 }
 
 - (void)baseMessageViewWillDisappear:(__kindof BaseMessageView *)messageView {
