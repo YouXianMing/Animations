@@ -14,7 +14,7 @@
 #import "NSString+LabelWidthAndHeight.h"
 #import "UIFont+Fonts.h"
 #import "UIView+SetRect.h"
-#import "MessageAlertView.h"
+#import "MessageView.h"
 #import "LoadingView.h"
 #import "UITableView+CellClass.h"
 #import "GCD.h"
@@ -48,9 +48,7 @@
 
 - (void)startNetworking {
     
-    self.showLoadingView             = [[LoadingView alloc] init];
-    self.showLoadingView.contentView = self.loadingView;
-    [self.showLoadingView show];
+    self.showLoadingView = [LoadingView showManualHiddenMessageViewWithMessageObject:nil contentView:self.loadingView];
     
     self.dataNetworking = [Networking getMethodNetworkingWithUrlString:@"https://api.app.net/stream/0/posts/stream/global"
                                                       requestParameter:nil
@@ -132,24 +130,14 @@
         
     } else {
         
-        AbsAlertMessageView *alertView   = [[MessageAlertView alloc] init];
-        alertView.message                = @"No data now.";
-        alertView.contentView            = self.contentView;
-        alertView.autoHiden              = YES;
-        alertView.delayAutoHidenDuration = 2.f;
-        [alertView show];
+        [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"Warning", @"No data now.") contentView:self.windowView];
     }
 }
 
 - (void)requestFailed:(Networking *)networking error:(NSError *)error {
     
     [self.showLoadingView hide];
-    AbsAlertMessageView *alertView   = [[MessageAlertView alloc] init];
-    alertView.message                = @"Network error.";
-    alertView.contentView            = self.contentView;
-    alertView.autoHiden              = YES;
-    alertView.delayAutoHidenDuration = 2.f;
-    [alertView show];
+    [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"Notice", @"Network error.") contentView:self.windowView];
 }
 
 @end

@@ -11,8 +11,8 @@
 #import "UIButton+ItemStyle.h"
 #import "RedStyle.h"
 #import "UIView+SetRect.h"
-#import "MessageAlertView.h"
-#import "ButtonsAlertView.h"
+#import "MessageView.h"
+#import "AlertView.h"
 
 typedef enum : NSUInteger {
     
@@ -21,7 +21,7 @@ typedef enum : NSUInteger {
     
 } EAlertViewControllerValue;
 
-@interface AlertViewController () <AlertMessageViewDelegate>
+@interface AlertViewController () <BaseMessageViewDelegate>
 
 @end
 
@@ -36,9 +36,9 @@ typedef enum : NSUInteger {
         messageButton.style          = [RedStyle new];
         messageButton.exclusiveTouch = YES;
         messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 3.f);
-        messageButton.normalTitle    = @"MessageAlertView";
+        messageButton.normalTitle    = NSStringFromClass([MessageView class]);
         messageButton.tag            = kMessageAlertView;
-        [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];        
+        [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
         [self.contentView addSubview:messageButton];
     }
     
@@ -47,7 +47,7 @@ typedef enum : NSUInteger {
         messageButton.style          = [RedStyle new];
         messageButton.exclusiveTouch = YES;
         messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 3.f * 2);
-        messageButton.normalTitle    = @"ButtonsAlertView";
+        messageButton.normalTitle    = NSStringFromClass([AlertView class]);
         messageButton.tag            = kButtonsAlertView;
         [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
         [self.contentView addSubview:messageButton];
@@ -58,29 +58,48 @@ typedef enum : NSUInteger {
     
     if (button.tag == kMessageAlertView) {
         
-        AbsAlertMessageView *alertView   = [[MessageAlertView alloc] init];
-        alertView.message                = @"惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。";
-        alertView.contentView            = self.windowView;
-        alertView.autoHiden              = YES;
-        alertView.delayAutoHidenDuration = 2.f;
-        [alertView show];
+        NSString *title                  = arc4random() % 2 ? @"" : @"赤壁赋";
+        NSString *content                = @"惟江上之清风，与山间之明月，\n耳得之而为声，目遇之而成色，\n取之无禁，用之不竭。";
+        MessageViewObject *messageObject = MakeMessageViewObject(title, content);
+        
+        [MessageView showAutoHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowView viewTag:arc4random() % 100];
         
     } else if (button.tag == kButtonsAlertView) {
         
-        AbsAlertMessageView *showView = [ButtonsAlertView new];
-        showView.delegate             = self;
-        showView.contentView          = self.windowView;
-        showView.buttonsTitle         = @[@"继续", @"放弃"];
-        showView.message              = @"您的可用余额不足";
-        UIButton *button              = (UIButton *)[showView viewWithKey:@"secondButton"];
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        [showView show];
+        NSString *content                     = @"Network error, please try later.";
+        NSArray  *buttonTitles                = @[AlertViewNormalStyle(@"Cancel"), AlertViewRedStyle(@"Confirm")];
+        AlertViewMessageObject *messageObject = MakeAlertViewMessageObject(content, buttonTitles);
+        
+        [AlertView showManualHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowView viewTag:arc4random() % 100];
     }
 }
 
-- (void)alertView:(AbsAlertMessageView *)alertView clickAtIndex:(NSInteger)index data:(id)data {
+#pragma mark - BaseMessageViewDelegate
 
-    [alertView hide];
+- (void)baseMessageView:(__kindof BaseMessageView *)messageView event:(id)event {
+    
+    NSLog(@"%@, tag:%ld event:%@", NSStringFromClass([messageView class]), (long)messageView.tag, event);
+    [messageView hide];
+}
+
+- (void)baseMessageViewWillAppear:(__kindof BaseMessageView *)messageView {
+    
+    NSLog(@"%@, tag:%ld WillAppear", NSStringFromClass([messageView class]), (long)messageView.tag);
+}
+
+- (void)baseMessageViewDidAppear:(__kindof BaseMessageView *)messageView {
+    
+    NSLog(@"%@, tag:%ld DidAppear", NSStringFromClass([messageView class]), (long)messageView.tag);
+}
+
+- (void)baseMessageViewWillDisappear:(__kindof BaseMessageView *)messageView {
+    
+    NSLog(@"%@, tag:%ld WillDisappear", NSStringFromClass([messageView class]), (long)messageView.tag);
+}
+
+- (void)baseMessageViewDidDisappear:(__kindof BaseMessageView *)messageView {
+    
+    NSLog(@"%@, tag:%ld DidDisappear", NSStringFromClass([messageView class]), (long)messageView.tag);
 }
 
 @end

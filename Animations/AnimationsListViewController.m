@@ -16,6 +16,7 @@
 #import "DefaultNotificationCenter.h"
 #import "Item.h"
 #import "GCD.h"
+#import "IndexRange.h"
 #import "ControllerPushAnimator.h"
 #import "ControllerPopAnimator.h"
 #import "UIFont+Fonts.h"
@@ -152,16 +153,10 @@
     if ([name isEqualToString:noti_showHomePageTableView]) {
         
         [GCDQueue executeInMainQueue:^{
-            
+                        
             // Load data.
-            NSMutableArray *indexPaths = [NSMutableArray array];
-            for (int i = 0; i < self.items.count; i++) {
-                
-                [indexPaths addObject:[NSIndexPath indexPathForItem:i inSection:0]];
-            }
-            
             self.tableViewLoadData = YES;
-            [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];   
+            [self.tableView insertRowsAtIndexPaths:MakeIndexRanges(@[MakeIndexRange(0, self.items.count, 0)]) withRowAnimation:UITableViewRowAnimationFade];
         }];
     }
 }

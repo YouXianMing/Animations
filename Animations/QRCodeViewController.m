@@ -9,7 +9,7 @@
 #import "QRCodeViewController.h"
 #import "QRCodeView.h"
 #import "UIView+SetRect.h"
-#import "MessageAlertView.h"
+#import "MessageView.h"
 #import "GCD.h"
 #import "VideoDeviceAuthorization.h"
 #import "CutOutClearView.h"
@@ -65,12 +65,7 @@
         [self.lightButton setImage:[UIImage imageNamed:@"newbarcode_light_off"] forState:UIControlStateNormal];
         [codeView stop];
         
-        AbsAlertMessageView *alertView   = [[MessageAlertView alloc] init];
-        alertView.message                = codeString;
-        alertView.contentView            = self.loadingView;
-        alertView.autoHiden              = YES;
-        alertView.delayAutoHidenDuration = 2.f;
-        [alertView show];
+        [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"二维码", codeString) contentView:self.windowView];
     }];
     
     [GCDQueue executeInMainQueue:^{
@@ -115,13 +110,8 @@
             }];
             
         } else {
-        
-            AbsAlertMessageView *alertView   = [[MessageAlertView alloc] init];
-            alertView.message                = @"摄像头不可用";
-            alertView.contentView            = self.loadingView;
-            alertView.autoHiden              = YES;
-            alertView.delayAutoHidenDuration = 2.f;
-            [alertView show];
+            
+            [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"警告", @"摄像头不可用") contentView:self.windowView];
         }
     }
 }

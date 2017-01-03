@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "AbsAlertMessageView.h"
+#import "BaseMessageView.h"
 
-@interface LoadingView : AbsAlertMessageView
+@interface LoadingView : BaseMessageView
 
 @end

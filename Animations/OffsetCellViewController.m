@@ -12,7 +12,7 @@
 #import "WanDouJiaModel.h"
 #import "WanDouJiaDataSerializer.h"
 #import "OffsetImageCell.h"
-#import "MessageAlertView.h"
+#import "MessageView.h"
 #import "OffsetHeaderView.h"
 #import "LoadingView.h"
 #import "GCD.h"
@@ -147,12 +147,7 @@
 - (void)requestFailed:(AbsNetworking *)networking error:(NSError *)error {
     
     [self.showLoadingView hide];
-    AbsAlertMessageView *alertView   = [[MessageAlertView alloc] init];
-    alertView.message                = @"Network error.";
-    alertView.contentView            = self.loadingView;
-    alertView.autoHiden              = YES;
-    alertView.delayAutoHidenDuration = 2.f;
-    [alertView show];
+    [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"警告", @"网络异常,请稍后再试!") contentView:self.loadingView];
 }
 
 @end
