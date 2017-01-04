@@ -356,6 +356,14 @@
 		C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A3081D520BD80041C962 /* FBGlowLabel.m */; };
 		C525734A1D59805000AF3353 /* NSObject+ViewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C52573491D59805000AF3353 /* NSObject+ViewTag.m */; };
 		C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C532B20F1E13A664004C7499 /* PlaceholderImageView.m */; };
+		C54553531E1CD69F00A5BA58 /* ScrollCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553521E1CD69F00A5BA58 /* ScrollCarouselViewController.m */; };
+		C545535C1E1CD76E00A5BA58 /* iCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553571E1CD76E00A5BA58 /* iCarouselView.m */; };
+		C545535D1E1CD76E00A5BA58 /* iCarouselAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553591E1CD76E00A5BA58 /* iCarouselAdapter.m */; };
+		C545535E1E1CD76E00A5BA58 /* iCarouselAbsItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C545535B1E1CD76E00A5BA58 /* iCarouselAbsItemView.m */; };
+		C54553641E1CD7CA00A5BA58 /* ScrollCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553611E1CD7CA00A5BA58 /* ScrollCarouselView.m */; };
+		C54553651E1CD7CA00A5BA58 /* ScrollCarouselItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553631E1CD7CA00A5BA58 /* ScrollCarouselItemView.m */; };
+		C545536B1E1CD7DD00A5BA58 /* LinearCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553681E1CD7DD00A5BA58 /* LinearCarouselView.m */; };
+		C545536C1E1CD7DD00A5BA58 /* LinearCarouseItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C545536A1E1CD7DD00A5BA58 /* LinearCarouseItemView.m */; };
 		C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */; };
 		C5525D681E03DCAB00929C52 /* ControllerPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */; };
 		C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */; };
@@ -1128,6 +1136,22 @@
 		C52573491D59805000AF3353 /* NSObject+ViewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewTag.m"; sourceTree = "<group>"; };
 		C532B20E1E13A664004C7499 /* PlaceholderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderImageView.h; sourceTree = "<group>"; };
 		C532B20F1E13A664004C7499 /* PlaceholderImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderImageView.m; sourceTree = "<group>"; };
+		C54553511E1CD69F00A5BA58 /* ScrollCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollCarouselViewController.h; sourceTree = "<group>"; };
+		C54553521E1CD69F00A5BA58 /* ScrollCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollCarouselViewController.m; sourceTree = "<group>"; };
+		C54553561E1CD76E00A5BA58 /* iCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarouselView.h; sourceTree = "<group>"; };
+		C54553571E1CD76E00A5BA58 /* iCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarouselView.m; sourceTree = "<group>"; };
+		C54553581E1CD76E00A5BA58 /* iCarouselAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarouselAdapter.h; sourceTree = "<group>"; };
+		C54553591E1CD76E00A5BA58 /* iCarouselAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarouselAdapter.m; sourceTree = "<group>"; };
+		C545535A1E1CD76E00A5BA58 /* iCarouselAbsItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarouselAbsItemView.h; sourceTree = "<group>"; };
+		C545535B1E1CD76E00A5BA58 /* iCarouselAbsItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarouselAbsItemView.m; sourceTree = "<group>"; };
+		C54553601E1CD7CA00A5BA58 /* ScrollCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollCarouselView.h; sourceTree = "<group>"; };
+		C54553611E1CD7CA00A5BA58 /* ScrollCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollCarouselView.m; sourceTree = "<group>"; };
+		C54553621E1CD7CA00A5BA58 /* ScrollCarouselItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollCarouselItemView.h; sourceTree = "<group>"; };
+		C54553631E1CD7CA00A5BA58 /* ScrollCarouselItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollCarouselItemView.m; sourceTree = "<group>"; };
+		C54553671E1CD7DD00A5BA58 /* LinearCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearCarouselView.h; sourceTree = "<group>"; };
+		C54553681E1CD7DD00A5BA58 /* LinearCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearCarouselView.m; sourceTree = "<group>"; };
+		C54553691E1CD7DD00A5BA58 /* LinearCarouseItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearCarouseItemView.h; sourceTree = "<group>"; };
+		C545536A1E1CD7DD00A5BA58 /* LinearCarouseItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearCarouseItemView.m; sourceTree = "<group>"; };
 		C5525D631E03DBD300929C52 /* ControllerPopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerPopAnimator.h; sourceTree = "<group>"; };
 		C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerPopAnimator.m; sourceTree = "<group>"; };
 		C5525D661E03DCAB00929C52 /* ControllerPushAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerPushAnimator.h; sourceTree = "<group>"; };
@@ -2030,6 +2054,7 @@
 				C57526C01D5031C70064F6CD /* WaterWaveViewController */,
 				C5C5AFE11DD55E7B00F35EB8 /* IrregularGridViewController */,
 				C56851C41DE6C1F8000F18C2 /* MixCellsViewController */,
+				C54553541E1CD6B100A5BA58 /* ScrollCarouselViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2516,6 +2541,7 @@
 				1041AE4A1CEBFD9D005697B8 /* UIView+Category */,
 				106CF09A1C3765490006419B /* UIFont+Categories */,
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
+				C54553551E1CD76200A5BA58 /* iCarouselView */,
 				C57839CA1E0F4E02004530E3 /* ItemStyle */,
 				1020A3741D08F9C000056B0E /* BadgeValueView */,
 				C59608C61D3DF76E006BF6E0 /* TableGridView */,
@@ -3169,6 +3195,52 @@
 			name = PlaceholderImageView;
 			sourceTree = "<group>";
 		};
+		C54553541E1CD6B100A5BA58 /* ScrollCarouselViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C54553511E1CD69F00A5BA58 /* ScrollCarouselViewController.h */,
+				C54553521E1CD69F00A5BA58 /* ScrollCarouselViewController.m */,
+				C545535F1E1CD7BB00A5BA58 /* ScrollCarouselView */,
+				C54553661E1CD7D400A5BA58 /* LinearCarouselView */,
+			);
+			name = ScrollCarouselViewController;
+			sourceTree = "<group>";
+		};
+		C54553551E1CD76200A5BA58 /* iCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				C54553561E1CD76E00A5BA58 /* iCarouselView.h */,
+				C54553571E1CD76E00A5BA58 /* iCarouselView.m */,
+				C54553581E1CD76E00A5BA58 /* iCarouselAdapter.h */,
+				C54553591E1CD76E00A5BA58 /* iCarouselAdapter.m */,
+				C545535A1E1CD76E00A5BA58 /* iCarouselAbsItemView.h */,
+				C545535B1E1CD76E00A5BA58 /* iCarouselAbsItemView.m */,
+			);
+			name = iCarouselView;
+			sourceTree = "<group>";
+		};
+		C545535F1E1CD7BB00A5BA58 /* ScrollCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				C54553601E1CD7CA00A5BA58 /* ScrollCarouselView.h */,
+				C54553611E1CD7CA00A5BA58 /* ScrollCarouselView.m */,
+				C54553621E1CD7CA00A5BA58 /* ScrollCarouselItemView.h */,
+				C54553631E1CD7CA00A5BA58 /* ScrollCarouselItemView.m */,
+			);
+			name = ScrollCarouselView;
+			sourceTree = "<group>";
+		};
+		C54553661E1CD7D400A5BA58 /* LinearCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				C54553671E1CD7DD00A5BA58 /* LinearCarouselView.h */,
+				C54553681E1CD7DD00A5BA58 /* LinearCarouselView.m */,
+				C54553691E1CD7DD00A5BA58 /* LinearCarouseItemView.h */,
+				C545536A1E1CD7DD00A5BA58 /* LinearCarouseItemView.m */,
+			);
+			name = LinearCarouselView;
+			sourceTree = "<group>";
+		};
 		C56812281D757617006E6C49 /* IrregularGridCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3415,6 +3487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C1830E1C622D1E000C10EB /* LoadUrlDataCell.m in Sources */,
+				C545535E1E1CD76E00A5BA58 /* iCarouselAbsItemView.m in Sources */,
 				1011BAF51CD495A800F29FB9 /* FastCoder.m in Sources */,
 				C5EE65B51E1B3A1100DDF591 /* IndexRange.m in Sources */,
 				1068FD5A1CF847BC00BE431C /* PresentAnimator.m in Sources */,
@@ -3426,6 +3499,7 @@
 				10E2D4E81CD5962000666EEB /* MKAnnotationView+WebCache.m in Sources */,
 				B5D011941C0BE2410075BC2E /* RotateView.m in Sources */,
 				102B1F041C60E26B00A8FD40 /* TableViewLoadDataController.m in Sources */,
+				C545536C1E1CD7DD00A5BA58 /* LinearCarouseItemView.m in Sources */,
 				102B84E11C3B95F0001699A9 /* FileManager.m in Sources */,
 				10E2D4E91CD5962000666EEB /* NSData+ImageContentType.m in Sources */,
 				C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */,
@@ -3588,6 +3662,7 @@
 				105702151CF6CF05003B10C6 /* POPBaseControl.m in Sources */,
 				C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */,
 				1011BA9E1CD4898D00F29FB9 /* ConsumptionModel.m in Sources */,
+				C545535C1E1CD76E00A5BA58 /* iCarouselView.m in Sources */,
 				C59062231DEC3908002562AE /* CAShapeLayer+CornerRadius.m in Sources */,
 				1020E2D31C73197B00FF233E /* CAGradientView.m in Sources */,
 				106BCFCB1CDC6787007C3EEE /* CustomNodeStateView.m in Sources */,
@@ -3632,6 +3707,7 @@
 				1011BAE71CD4909400F29FB9 /* OffsetImageCell.m in Sources */,
 				C5C5AFE41DD55F1400F35EB8 /* IrregularPictureGridCell.m in Sources */,
 				109606571C93B4A300CCB3AD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				C54553651E1CD7CA00A5BA58 /* ScrollCarouselItemView.m in Sources */,
 				10A67C5B1C12D4BA00C3E505 /* CGContextObjectConfig.m in Sources */,
 				C57526CD1D5032690064F6CD /* DrawingColor.m in Sources */,
 				109D5B521C0EC15D0039CB04 /* CountDownTimeCell.m in Sources */,
@@ -3646,6 +3722,7 @@
 				109606581C93B4A300CCB3AD /* UIButton+AFNetworking.m in Sources */,
 				C56F19C01D891F3600683DB5 /* CustomBuildOutsideViewCell.m in Sources */,
 				1011BA9F1CD4898D00F29FB9 /* DailyListModel.m in Sources */,
+				C545535D1E1CD76E00A5BA58 /* iCarouselAdapter.m in Sources */,
 				1011BAFF1CD495F200F29FB9 /* AbsEncryptingMode.m in Sources */,
 				1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */,
 				102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */,
@@ -3706,6 +3783,7 @@
 				102B1F2D1C60E66F00A8FD40 /* DescriptionModel.m in Sources */,
 				B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */,
 				1047E2341CC5AF5400E13D1C /* LazyFadeInViewController.m in Sources */,
+				C54553641E1CD7CA00A5BA58 /* ScrollCarouselView.m in Sources */,
 				1051890C1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m in Sources */,
 				104F0D321BFC1C9C00C46E6A /* FontAttribute.m in Sources */,
 				1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */,
@@ -3743,6 +3821,7 @@
 				C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */,
 				10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
+				C54553531E1CD69F00A5BA58 /* ScrollCarouselViewController.m in Sources */,
 				105F3FE71CB7B3F1007B02C7 /* TapCellAnimationController.m in Sources */,
 				10A8482B1C795E0D00F9ED67 /* FLAnimatedImageView.m in Sources */,
 				10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */,
@@ -3789,6 +3868,7 @@
 				105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */,
 				104228C61C3695230011409C /* PictureModel.m in Sources */,
 				109606541C93B4A300CCB3AD /* AFAutoPurgingImageCache.m in Sources */,
+				C545536B1E1CD7DD00A5BA58 /* LinearCarouselView.m in Sources */,
 				1030886E1C03F1B200C8B623 /* CircleView.m in Sources */,
 				10E2D4EB1CD5962000666EEB /* SDWebImageCompat.m in Sources */,
 				1043265D1C4B15A00033CEC0 /* ColorProgressViewController.m in Sources */,
