@@ -14,12 +14,11 @@
 
     UIButton *button = self.item;
     
-    button.layer.borderWidth   = 1.f;
+    button.layer.borderWidth   = 0.5f;
     button.layer.borderColor   = [UIColor redColor].CGColor;
-    button.layer.cornerRadius  = 3.f;
     button.layer.masksToBounds = YES;
     
-    button.titleLabel.font = [UIFont fontWithName:@"Avenir-Book" size:16.f];
+    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:14.f];
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
 }

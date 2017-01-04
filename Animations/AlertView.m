@@ -124,6 +124,24 @@
         
         self.messageView.height += 50.f;
         self.messageView.center  = self.contentView.middlePoint;
+        
+        // Create Line.
+        UIView *lineView         = [[UIView alloc] initWithFrame:CGRectMake(0, self.messageView.height - 50.f, self.messageView.width, 0.5f)];
+        lineView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.15f];
+        [self.messageView addSubview:lineView];
+        
+        CGFloat lineGap = self.messageView.width / message.buttonsTitle.count;
+        for (int i = 0; i < message.buttonsTitle.count; i++) {
+            
+            if (i == 0) {
+                
+                continue;
+            }
+            
+            UIView *vtLine         = [[UIView alloc] initWithFrame:CGRectMake(i * lineGap, self.messageView.height - 50.f, 0.5f, 50.f)];
+            vtLine.backgroundColor = lineView.backgroundColor;
+            [self.messageView addSubview:vtLine];
+        }
     }
 
     // 执行动画

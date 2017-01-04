@@ -58,6 +58,11 @@
 
 - (void)removeViews {
     
+    if (self.delegate && [self.delegate respondsToSelector:@selector(baseMessageViewWillDisappear:)]) {
+        
+        [self.delegate baseMessageViewWillDisappear:self];
+    }
+    
     [UIView animateWithDuration:0.3f animations:^{
         
         self.blackView.alpha   = 0.f;
@@ -67,6 +72,11 @@
         
         self.contentViewUserInteractionEnabled == NO ? [self.contentView disableUserInteraction] : 0;
         [self removeFromSuperview];
+        
+        if (self.delegate && [self.delegate respondsToSelector:@selector(baseMessageViewDidDisappear:)]) {
+            
+            [self.delegate baseMessageViewDidDisappear:self];
+        }
     }];
 }
 
@@ -77,9 +87,21 @@
     self.blackView.alpha           = 0;
     [self addSubview:self.blackView];
     
+    if (self.delegate && [self.delegate respondsToSelector:@selector(baseMessageViewWillAppear:)]) {
+        
+        [self.delegate baseMessageViewWillAppear:self];
+    }
+    
     [UIView animateWithDuration:0.3f animations:^{
         
         self.blackView.alpha = 1.f;
+        
+    } completion:^(BOOL finished) {
+        
+        if (self.delegate && [self.delegate respondsToSelector:@selector(baseMessageViewDidAppear:)]) {
+            
+            [self.delegate baseMessageViewDidAppear:self];
+        }
     }];
 }
 

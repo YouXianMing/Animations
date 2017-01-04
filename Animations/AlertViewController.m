@@ -13,11 +13,13 @@
 #import "UIView+SetRect.h"
 #import "MessageView.h"
 #import "AlertView.h"
+#import "LoadingView.h"
 
 typedef enum : NSUInteger {
     
     kMessageAlertView = 1000,
     kButtonsAlertView,
+    kLoadingAlertView,
     
 } EAlertViewControllerValue;
 
@@ -35,7 +37,7 @@ typedef enum : NSUInteger {
         UIButton *messageButton      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 180.f, 30.f)];
         messageButton.style          = [RedStyle new];
         messageButton.exclusiveTouch = YES;
-        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 3.f);
+        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 4.f * 1);
         messageButton.normalTitle    = NSStringFromClass([MessageView class]);
         messageButton.tag            = kMessageAlertView;
         [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
@@ -46,9 +48,20 @@ typedef enum : NSUInteger {
         UIButton *messageButton      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 180.f, 30.f)];
         messageButton.style          = [RedStyle new];
         messageButton.exclusiveTouch = YES;
-        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 3.f * 2);
+        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 4.f * 2);
         messageButton.normalTitle    = NSStringFromClass([AlertView class]);
         messageButton.tag            = kButtonsAlertView;
+        [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
+        [self.contentView addSubview:messageButton];
+    }
+    
+    {
+        UIButton *messageButton      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 180.f, 30.f)];
+        messageButton.style          = [RedStyle new];
+        messageButton.exclusiveTouch = YES;
+        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 4.f * 3);
+        messageButton.normalTitle    = NSStringFromClass([LoadingView class]);
+        messageButton.tag            = kLoadingAlertView;
         [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
         [self.contentView addSubview:messageButton];
     }
@@ -73,8 +86,8 @@ typedef enum : NSUInteger {
         
     } else if (button.tag == kButtonsAlertView) {
         
-        NSString *content                     = @"Network error, please try later.";
-        NSArray  *buttonTitles                = @[AlertViewNormalStyle(@"Cancel"), AlertViewRedStyle(@"Confirm")];
+        NSString *content                     = arc4random() % 2 ? @"Network error, please try later." : @"Drinking hot water is an excellent natural remedy for colds.";
+        NSArray  *buttonTitles                = arc4random() % 2 ? @[AlertViewNormalStyle(@"Cancel"), AlertViewRedStyle(@"Confirm")] : @[AlertViewRedStyle(@"Confirm")];
         AlertViewMessageObject *messageObject = MakeAlertViewMessageObject(content, buttonTitles);
         
         if (arc4random() % 2) {
@@ -82,8 +95,19 @@ typedef enum : NSUInteger {
             [AlertView showManualHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowView viewTag:arc4random() % 100];
             
         } else {
-        
+            
             [AlertView showManualHiddenMessageViewInKeyWindowWithMessageObject:messageObject delegate:self viewTag:arc4random() % 100];
+        }
+        
+    } else if (button.tag == kLoadingAlertView) {
+        
+        if (arc4random() % 2) {
+            
+            [LoadingView showAutoHiddenMessageViewWithMessageObject:nil delegate:self contentView:self.windowView viewTag:arc4random() % 100];
+            
+        } else {
+            
+            [LoadingView showAutoHiddenMessageViewInKeyWindowWithMessageObject:nil delegate:self viewTag:arc4random() % 100];
         }
     }
 }
