@@ -409,6 +409,7 @@
 		C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE61DD56C7700F35EB8 /* BlueIrregularGridViewCell.m */; };
 		C5C5AFEA1DD56D7100F35EB8 /* RedIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE91DD56D7100F35EB8 /* RedIrregularGridViewCell.m */; };
 		C5C5AFEE1DD59D4F00F35EB8 /* UILabel+SizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */; };
+		C5C606341E1F7593004E8FDD /* CircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C606331E1F7593004E8FDD /* CircleLoadingView.m */; };
 		C5EE65B51E1B3A1100DDF591 /* IndexRange.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EE65B41E1B3A1100DDF591 /* IndexRange.m */; };
 /* End PBXBuildFile section */
 
@@ -1243,6 +1244,8 @@
 		C5C5AFE91DD56D7100F35EB8 /* RedIrregularGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedIrregularGridViewCell.m; sourceTree = "<group>"; };
 		C5C5AFEC1DD59D4F00F35EB8 /* UILabel+SizeToFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SizeToFit.h"; sourceTree = "<group>"; };
 		C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SizeToFit.m"; sourceTree = "<group>"; };
+		C5C606321E1F7593004E8FDD /* CircleLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLoadingView.h; sourceTree = "<group>"; };
+		C5C606331E1F7593004E8FDD /* CircleLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLoadingView.m; sourceTree = "<group>"; };
 		C5EE65B31E1B3A1100DDF591 /* IndexRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexRange.h; sourceTree = "<group>"; };
 		C5EE65B41E1B3A1100DDF591 /* IndexRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexRange.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2708,6 +2711,8 @@
 				C503B3691E1B468F00967A61 /* MessageView.m */,
 				107D6BB71CFE756C00A1CC0A /* LoadingView.h */,
 				107D6BB81CFE756C00A1CC0A /* LoadingView.m */,
+				C5C606321E1F7593004E8FDD /* CircleLoadingView.h */,
+				C5C606331E1F7593004E8FDD /* CircleLoadingView.m */,
 			);
 			name = AlertViewController;
 			sourceTree = "<group>";
@@ -3591,6 +3596,7 @@
 				C51733221D45AFB8005D57AE /* TouchEventView.m in Sources */,
 				10E2D5151CD63F0900666EEB /* iCarouselViewController.m in Sources */,
 				1011BADE1CD48C8D00F29FB9 /* NodeModelStrings.m in Sources */,
+				C5C606341E1F7593004E8FDD /* CircleLoadingView.m in Sources */,
 				1057021F1CF6DB2B003B10C6 /* SelectedIconButton.m in Sources */,
 				C5AB56781E1B8106003B388F /* AlertView.m in Sources */,
 				B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */,

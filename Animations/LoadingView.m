@@ -24,12 +24,6 @@
 
 @implementation LoadingView
 
-- (void)setContentView:(UIView *)contentView {
-    
-    self.frame = contentView.bounds;
-    [super setContentView:contentView];
-}
-
 - (void)show {
     
     if (self.contentView) {
@@ -147,17 +141,7 @@
     [UIView animateWithDuration:0.3f animations:^{
         
         self.messageView.alpha = 1.f;
-        self.messageView.scale = 1.f;
     }];
-}
-
-+ (LoadingView *)loadingViewStartLoadingInContentView:(UIView *)view {
-    
-    LoadingView *showView = [LoadingView new];
-    showView.contentView  = view;
-    [showView show];
-    
-    return showView;
 }
 
 - (void)stopLoading {

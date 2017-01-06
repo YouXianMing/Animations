@@ -14,12 +14,14 @@
 #import "MessageView.h"
 #import "AlertView.h"
 #import "LoadingView.h"
+#import "CircleLoadingView.h"
 
 typedef enum : NSUInteger {
     
     kMessageAlertView = 1000,
     kButtonsAlertView,
     kLoadingAlertView,
+    kCircleLoadingAlertView,
     
 } EAlertViewControllerValue;
 
@@ -37,7 +39,7 @@ typedef enum : NSUInteger {
         UIButton *messageButton      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 180.f, 30.f)];
         messageButton.style          = [RedStyle new];
         messageButton.exclusiveTouch = YES;
-        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 4.f * 1);
+        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 5.f * 1);
         messageButton.normalTitle    = NSStringFromClass([MessageView class]);
         messageButton.tag            = kMessageAlertView;
         [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
@@ -48,7 +50,7 @@ typedef enum : NSUInteger {
         UIButton *messageButton      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 180.f, 30.f)];
         messageButton.style          = [RedStyle new];
         messageButton.exclusiveTouch = YES;
-        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 4.f * 2);
+        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 5.f * 2);
         messageButton.normalTitle    = NSStringFromClass([AlertView class]);
         messageButton.tag            = kButtonsAlertView;
         [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
@@ -59,9 +61,20 @@ typedef enum : NSUInteger {
         UIButton *messageButton      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 180.f, 30.f)];
         messageButton.style          = [RedStyle new];
         messageButton.exclusiveTouch = YES;
-        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 4.f * 3);
+        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 5.f * 3);
         messageButton.normalTitle    = NSStringFromClass([LoadingView class]);
         messageButton.tag            = kLoadingAlertView;
+        [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
+        [self.contentView addSubview:messageButton];
+    }
+    
+    {
+        UIButton *messageButton      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 180.f, 30.f)];
+        messageButton.style          = [RedStyle new];
+        messageButton.exclusiveTouch = YES;
+        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 5.f * 4);
+        messageButton.normalTitle    = NSStringFromClass([CircleLoadingView class]);
+        messageButton.tag            = kCircleLoadingAlertView;
         [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
         [self.contentView addSubview:messageButton];
     }
@@ -103,11 +116,23 @@ typedef enum : NSUInteger {
         
         if (arc4random() % 2) {
             
-            [LoadingView showAutoHiddenMessageViewWithMessageObject:nil delegate:self contentView:self.windowView viewTag:arc4random() % 100];
+            [LoadingView showAutoHiddenMessageViewWithMessageObject:nil delegate:self contentView:self.windowView viewTag:arc4random() % 100 delayAutoHidenDuration:8.f];
             
         } else {
             
-            [LoadingView showAutoHiddenMessageViewInKeyWindowWithMessageObject:nil delegate:self viewTag:arc4random() % 100];
+            [LoadingView showAutoHiddenMessageViewInKeyWindowWithMessageObject:nil delegate:self viewTag:arc4random() % 100 delayAutoHidenDuration:8.f];
+        }
+        
+    } else if (button.tag == kCircleLoadingAlertView) {
+        
+        if (arc4random() % 2) {
+            
+            [CircleLoadingView showAutoHiddenMessageViewWithMessageObject:nil delegate:self contentView:self.windowView viewTag:arc4random() % 100
+                                                   delayAutoHidenDuration:8.f];
+            
+        } else {
+            
+            [CircleLoadingView showAutoHiddenMessageViewInKeyWindowWithMessageObject:nil delegate:self viewTag:arc4random() % 100 delayAutoHidenDuration:8.f];
         }
     }
 }

@@ -199,6 +199,24 @@
                                                              delegate:(id <BaseMessageViewDelegate>)delegate
                                                               viewTag:(NSInteger)tag;
 
++ (instancetype)showAutoHiddenMessageViewWithMessageObject:(id)messageObject
+                                               contentView:(UIView *)contentView
+                                    delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration;
+
++ (instancetype)showAutoHiddenMessageViewWithMessageObject:(id)messageObject
+                                                  delegate:(id <BaseMessageViewDelegate>)delegate
+                                               contentView:(UIView *)contentView
+                                                   viewTag:(NSInteger)tag
+                                    delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration;
+
++ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject
+                                               delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration;
+
++ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject
+                                                             delegate:(id <BaseMessageViewDelegate>)delegate
+                                                              viewTag:(NSInteger)tag
+                                               delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration;
+
 @end
 
 

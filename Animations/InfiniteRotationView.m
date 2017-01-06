@@ -23,15 +23,18 @@
         self.clockWise = YES;
         
         [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(eventDidBecomeActive:)                                                     name:UIApplicationDidBecomeActiveNotification
+                                                 selector:@selector(eventDidBecomeActive:)
+                                                     name:UIApplicationDidBecomeActiveNotification
                                                    object:nil];
         
         [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(eventDidBecomeActive:)                                                     name:UIApplicationDidEnterBackgroundNotification
+                                                 selector:@selector(eventDidBecomeActive:)
+                                                     name:UIApplicationDidEnterBackgroundNotification
                                                    object:nil];
         
         [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(eventDidBecomeActive:)                                                     name:UIApplicationWillResignActiveNotification
+                                                 selector:@selector(eventDidBecomeActive:)
+                                                     name:UIApplicationWillResignActiveNotification
                                                    object:nil];
     }
     
