@@ -108,4 +108,28 @@
  */
 + (CellDataAdapter *)dataAdapterWithData:(id)data type:(NSInteger)type;
 
+/**
+ *  Create the cell's dataAdapter, the reuseIdentifier is the cell's class string.
+ *
+ *  @param data Cell's data, can be nil.
+ *
+ *  @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)dataAdapterWithData:(id)data;
+
+/**
+ *  Register to collectionView with the reuseIdentifier you specified.
+ *
+ *  @param collectionView  CollectionView.
+ *  @param reuseIdentifier The cell reuseIdentifier.
+ */
++ (void)registerToCollectionView:(UICollectionView *)collectionView reuseIdentifier:(NSString *)reuseIdentifier;
+
+/**
+ *  Register to collectionView with the The class name.
+ *
+ *  @param collectionView  collectionView.
+ */
++ (void)registerToCollectionView:(UICollectionView *)collectionView;
+
 @end

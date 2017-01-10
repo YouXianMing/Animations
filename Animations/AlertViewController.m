@@ -7,25 +7,18 @@
 //
 
 #import "AlertViewController.h"
-#import "UIButton+inits.h"
-#import "UIButton+ItemStyle.h"
-#import "RedStyle.h"
+#import "AlertViewCollectionCell.h"
 #import "UIView+SetRect.h"
 #import "MessageView.h"
 #import "AlertView.h"
 #import "LoadingView.h"
 #import "CircleLoadingView.h"
 
-typedef enum : NSUInteger {
-    
-    kMessageAlertView = 1000,
-    kButtonsAlertView,
-    kLoadingAlertView,
-    kCircleLoadingAlertView,
-    
-} EAlertViewControllerValue;
+@interface AlertViewController () <BaseMessageViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 
-@interface AlertViewController () <BaseMessageViewDelegate>
+@property (nonatomic, strong) NSMutableArray             <CellDataAdapter *> *adapters;
+@property (nonatomic, strong) UICollectionView           *collectionView;
+@property (nonatomic, strong) UICollectionViewFlowLayout *layout;
 
 @end
 
@@ -35,55 +28,55 @@ typedef enum : NSUInteger {
     
     [super setup];
     
-    {
-        UIButton *messageButton      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 180.f, 30.f)];
-        messageButton.style          = [RedStyle new];
-        messageButton.exclusiveTouch = YES;
-        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 5.f * 1);
-        messageButton.normalTitle    = NSStringFromClass([MessageView class]);
-        messageButton.tag            = kMessageAlertView;
-        [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
-        [self.contentView addSubview:messageButton];
-    }
+    // Data source.
+    self.adapters = [NSMutableArray array];
+    [self.adapters addObject:[AlertViewCollectionCell dataAdapterWithData:NSStringFromClass([MessageView       class])]];
+    [self.adapters addObject:[AlertViewCollectionCell dataAdapterWithData:NSStringFromClass([AlertView         class])]];
+    [self.adapters addObject:[AlertViewCollectionCell dataAdapterWithData:NSStringFromClass([LoadingView       class])]];
+    [self.adapters addObject:[AlertViewCollectionCell dataAdapterWithData:NSStringFromClass([CircleLoadingView class])]];
+
+    // Layout.
+    self.layout                         = [[UICollectionViewFlowLayout alloc] init];
+    self.layout.minimumLineSpacing      = 0.f;
+    self.layout.minimumInteritemSpacing = 0.f;
+    self.layout.itemSize                = CGSizeMake(Width / 2.f, Width / 2.f);
     
-    {
-        UIButton *messageButton      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 180.f, 30.f)];
-        messageButton.style          = [RedStyle new];
-        messageButton.exclusiveTouch = YES;
-        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 5.f * 2);
-        messageButton.normalTitle    = NSStringFromClass([AlertView class]);
-        messageButton.tag            = kButtonsAlertView;
-        [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
-        [self.contentView addSubview:messageButton];
-    }
+    // CollectionView.
+    self.collectionView                 = [[UICollectionView alloc] initWithFrame:self.contentView.bounds collectionViewLayout:self.layout];
+    self.collectionView.backgroundColor = [UIColor clearColor];
+    self.collectionView.delegate        = self;
+    self.collectionView.dataSource      = self;
+    [self.contentView addSubview:self.collectionView];
     
-    {
-        UIButton *messageButton      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 180.f, 30.f)];
-        messageButton.style          = [RedStyle new];
-        messageButton.exclusiveTouch = YES;
-        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 5.f * 3);
-        messageButton.normalTitle    = NSStringFromClass([LoadingView class]);
-        messageButton.tag            = kLoadingAlertView;
-        [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
-        [self.contentView addSubview:messageButton];
-    }
-    
-    {
-        UIButton *messageButton      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 180.f, 30.f)];
-        messageButton.style          = [RedStyle new];
-        messageButton.exclusiveTouch = YES;
-        messageButton.center         = CGPointMake(self.contentView.centerX, self.contentView.height / 5.f * 4);
-        messageButton.normalTitle    = NSStringFromClass([CircleLoadingView class]);
-        messageButton.tag            = kCircleLoadingAlertView;
-        [messageButton addTarget:self touchUpInsideAction:@selector(buttonsEvent:)];
-        [self.contentView addSubview:messageButton];
-    }
+    // Register CollectionCell.
+    [AlertViewCollectionCell registerToCollectionView:self.collectionView];
 }
 
-- (void)buttonsEvent:(UIButton *)button {
+#pragma mark - UICollectionViewDelegate, UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+
+    return self.adapters.count;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    CustomCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.adapters[indexPath.row].cellReuseIdentifier forIndexPath:indexPath];
+    cell.indexPath             = indexPath;
+    cell.dataAdapter           = self.adapters[indexPath.row];
+    cell.data                  = self.adapters[indexPath.row].data;
+    cell.indexPath             = indexPath;
+    [cell loadContent];
     
-    if (button.tag == kMessageAlertView) {
-        
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    CellDataAdapter *adapter = self.adapters[indexPath.row];
+    
+    if ([adapter.data isEqualToString:NSStringFromClass([MessageView class])]) {
+       
         NSString *title                  = arc4random() % 2 ? @"" : @"赤壁赋";
         NSString *content                = @"惟江上之清风，与山间之明月，\n耳得之而为声，目遇之而成色，\n取之无禁，用之不竭。";
         MessageViewObject *messageObject = MakeMessageViewObject(title, content);
@@ -97,8 +90,8 @@ typedef enum : NSUInteger {
             [MessageView showAutoHiddenMessageViewInKeyWindowWithMessageObject:messageObject delegate:self viewTag:arc4random() % 100];
         }
         
-    } else if (button.tag == kButtonsAlertView) {
-        
+    } else if ([adapter.data isEqualToString:NSStringFromClass([AlertView class])]) {
+    
         NSString *content                     = arc4random() % 2 ? @"Network error, please try later." : @"Drinking hot water is an excellent natural remedy for colds.";
         NSArray  *buttonTitles                = arc4random() % 2 ? @[AlertViewNormalStyle(@"Cancel"), AlertViewRedStyle(@"Confirm")] : @[AlertViewRedStyle(@"Confirm")];
         AlertViewMessageObject *messageObject = MakeAlertViewMessageObject(content, buttonTitles);
@@ -112,7 +105,7 @@ typedef enum : NSUInteger {
             [AlertView showManualHiddenMessageViewInKeyWindowWithMessageObject:messageObject delegate:self viewTag:arc4random() % 100];
         }
         
-    } else if (button.tag == kLoadingAlertView) {
+    } else if ([adapter.data isEqualToString:NSStringFromClass([LoadingView class])]) {
         
         if (arc4random() % 2) {
             
@@ -123,7 +116,7 @@ typedef enum : NSUInteger {
             [LoadingView showAutoHiddenMessageViewInKeyWindowWithMessageObject:nil delegate:self viewTag:arc4random() % 100 delayAutoHidenDuration:8.f];
         }
         
-    } else if (button.tag == kCircleLoadingAlertView) {
+    } else if ([adapter.data isEqualToString:NSStringFromClass([CircleLoadingView class])]) {
         
         if (arc4random() % 2) {
             

@@ -355,6 +355,7 @@
 		C517332C1D45AFDE005D57AE /* AbsTextFieldViewValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */; };
 		C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A3081D520BD80041C962 /* FBGlowLabel.m */; };
 		C525734A1D59805000AF3353 /* NSObject+ViewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C52573491D59805000AF3353 /* NSObject+ViewTag.m */; };
+		C52C64431E246AAD00624A3D /* AlertViewCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C52C64421E246AAD00624A3D /* AlertViewCollectionCell.m */; };
 		C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C532B20F1E13A664004C7499 /* PlaceholderImageView.m */; };
 		C54553531E1CD69F00A5BA58 /* ScrollCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553521E1CD69F00A5BA58 /* ScrollCarouselViewController.m */; };
 		C545535C1E1CD76E00A5BA58 /* iCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553571E1CD76E00A5BA58 /* iCarouselView.m */; };
@@ -1135,6 +1136,8 @@
 		C524A3081D520BD80041C962 /* FBGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGlowLabel.m; sourceTree = "<group>"; };
 		C52573481D59805000AF3353 /* NSObject+ViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewTag.h"; sourceTree = "<group>"; };
 		C52573491D59805000AF3353 /* NSObject+ViewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewTag.m"; sourceTree = "<group>"; };
+		C52C64411E246AAD00624A3D /* AlertViewCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewCollectionCell.h; sourceTree = "<group>"; };
+		C52C64421E246AAD00624A3D /* AlertViewCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewCollectionCell.m; sourceTree = "<group>"; };
 		C532B20E1E13A664004C7499 /* PlaceholderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderImageView.h; sourceTree = "<group>"; };
 		C532B20F1E13A664004C7499 /* PlaceholderImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderImageView.m; sourceTree = "<group>"; };
 		C54553511E1CD69F00A5BA58 /* ScrollCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollCarouselViewController.h; sourceTree = "<group>"; };
@@ -2705,6 +2708,8 @@
 			children = (
 				106CF0901C3764090006419B /* AlertViewController.h */,
 				106CF0911C3764090006419B /* AlertViewController.m */,
+				C52C64411E246AAD00624A3D /* AlertViewCollectionCell.h */,
+				C52C64421E246AAD00624A3D /* AlertViewCollectionCell.m */,
 				C5AB56761E1B8106003B388F /* AlertView.h */,
 				C5AB56771E1B8106003B388F /* AlertView.m */,
 				C503B3681E1B468F00967A61 /* MessageView.h */,
@@ -3446,7 +3451,6 @@
 				TargetAttributes = {
 					10381F4C1BF9B44A00E5E476 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = HT95VAK372;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -3610,6 +3614,7 @@
 				10381FC41BF9B77000E5E476 /* CustomNavigationController.m in Sources */,
 				105DF1AF1D0D289C002B10F8 /* UITableView+CellClass.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
+				C52C64431E246AAD00624A3D /* AlertViewCollectionCell.m in Sources */,
 				10EFE2021D015F6C00159779 /* CustomTabBarViewController.m in Sources */,
 				106CF0A31C376E190006419B /* HexColors.m in Sources */,
 				C56851CA1DE6D3E7000F18C2 /* ContentIconCell.m in Sources */,
@@ -3985,7 +3990,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = HT95VAK372;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -4005,7 +4010,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = HT95VAK372;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
