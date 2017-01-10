@@ -41,6 +41,7 @@
     self.backgroundTitleLabel.textAlignment = NSTextAlignmentCenter;
     self.backgroundTitleLabel.font          = [UIFont fontWithName:@"GillSans-LightItalic" size:16.f];
     self.backgroundTitleLabel.angle         = M_PI_4;
+    self.backgroundTitleLabel.alpha         = 0.f;
     self.backgroundTitleLabel.textColor     = [UIColor redColor];
     [self.labelContentView addSubview:self.backgroundTitleLabel];
     
@@ -49,6 +50,7 @@
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.titleLabel.font          = [UIFont fontWithName:@"GillSans-LightItalic" size:16.f];
     self.titleLabel.angle         = M_PI_4;
+    self.titleLabel.alpha         = 1.f;
     self.titleLabel.textColor     = [UIColor blackColor];
     [self.labelContentView addSubview:self.titleLabel];
 }
@@ -66,9 +68,10 @@
     
     [UIView animateKeyframesWithDuration:0.35f delay:0.f options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
         
-        self.backgroundColor        = highlighted ? [[UIColor grayColor] colorWithAlphaComponent:0.15f] : [UIColor whiteColor];
-        self.titleLabel.alpha       = highlighted ? 0.f : 1.f;
-        self.labelContentView.scale = highlighted ? 0.975f : 1.f;
+        self.backgroundColor            = highlighted ? [[UIColor grayColor] colorWithAlphaComponent:0.15f] : [UIColor whiteColor];
+        self.titleLabel.alpha           = highlighted ? 0.f : 1.f;
+        self.backgroundTitleLabel.alpha = highlighted ? 1.f : 0.f;
+        self.labelContentView.scale     = highlighted ? 0.975f : 1.f;
         
     } completion:nil];
 }
