@@ -3213,6 +3213,7 @@
 				TargetAttributes = {
 					10381F4C1BF9B44A00E5E476 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = A6524QBUHH;
 					};
 				};
 			};
@@ -3716,11 +3717,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = A6524QBUHH;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.YouXianMing.Animations;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syj.app.news.uilabel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -3732,11 +3734,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = A6524QBUHH;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.YouXianMing.Animations;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syj.app.news.uilabel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
