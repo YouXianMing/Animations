@@ -78,6 +78,7 @@
 #import "IrregularGridViewController.h"
 #import "MixCellsViewController.h"
 #import "ScrollCarouselViewController.h"
+#import "LoadCSSViewController.h"
 
 @interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate>
 
@@ -267,7 +268,8 @@
                        [Item itemWithName:@"水波纹效果" object:[WaterWaveViewController class]],
                        [Item itemWithName:@"不规则GridCell" object:[IrregularGridViewController class]],
                        [Item itemWithName:@"混合cell" object:[MixCellsViewController class]],
-                       [Item itemWithName:@"线性旋转木马" object:[ScrollCarouselViewController class]]];
+                       [Item itemWithName:@"线性旋转木马" object:[ScrollCarouselViewController class]],
+                       [Item itemWithName:@"Load CSS" object:[LoadCSSViewController class]]];
     
     self.items = [NSMutableArray array];
     

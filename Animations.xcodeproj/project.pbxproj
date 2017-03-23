@@ -369,6 +369,8 @@
 		C5525D681E03DCAB00929C52 /* ControllerPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */; };
 		C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */; };
 		C554F8851DEEAA10007C394A /* TableViewSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C554F8841DEEAA10007C394A /* TableViewSectionItem.m */; };
+		C557362D1E8375F0001CDC9A /* LoadCSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C557362C1E8375F0001CDC9A /* LoadCSSViewController.m */; };
+		C557362F1E837661001CDC9A /* news in Resources */ = {isa = PBXBuildFile; fileRef = C557362E1E837661001CDC9A /* news */; };
 		C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */; };
 		C559EE781DE6DBC8006C7DAC /* ColorSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE771DE6DBC8006C7DAC /* ColorSpaceCell.m */; };
 		C55D7DD41D6BEEE900B1D184 /* BackgroundLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D7DD31D6BEEE900B1D184 /* BackgroundLineView.m */; };
@@ -1164,6 +1166,9 @@
 		C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationsListViewNavigationController.m; sourceTree = "<group>"; };
 		C554F8831DEEAA10007C394A /* TableViewSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSectionItem.h; sourceTree = "<group>"; };
 		C554F8841DEEAA10007C394A /* TableViewSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSectionItem.m; sourceTree = "<group>"; };
+		C557362B1E8375F0001CDC9A /* LoadCSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadCSSViewController.h; sourceTree = "<group>"; };
+		C557362C1E8375F0001CDC9A /* LoadCSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadCSSViewController.m; sourceTree = "<group>"; };
+		C557362E1E837661001CDC9A /* news */ = {isa = PBXFileReference; lastKnownFileType = folder; path = news; sourceTree = "<group>"; };
 		C559EE731DE6D733006C7DAC /* UIColor+ForPublicUse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ForPublicUse.h"; sourceTree = "<group>"; };
 		C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ForPublicUse.m"; sourceTree = "<group>"; };
 		C559EE761DE6DBC8006C7DAC /* ColorSpaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpaceCell.h; sourceTree = "<group>"; };
@@ -2061,6 +2066,7 @@
 				C5C5AFE11DD55E7B00F35EB8 /* IrregularGridViewController */,
 				C56851C41DE6C1F8000F18C2 /* MixCellsViewController */,
 				C54553541E1CD6B100A5BA58 /* ScrollCarouselViewController */,
+				C55736301E837961001CDC9A /* LoadCSSViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -3251,6 +3257,16 @@
 			name = LinearCarouselView;
 			sourceTree = "<group>";
 		};
+		C55736301E837961001CDC9A /* LoadCSSViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C557362B1E8375F0001CDC9A /* LoadCSSViewController.h */,
+				C557362C1E8375F0001CDC9A /* LoadCSSViewController.m */,
+				C557362E1E837661001CDC9A /* news */,
+			);
+			name = LoadCSSViewController;
+			sourceTree = "<group>";
+		};
 		C56812281D757617006E6C49 /* IrregularGridCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3479,6 +3495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10381F771BF9B4F800E5E476 /* HYQiHei-25JF.otf in Resources */,
+				C557362F1E837661001CDC9A /* news in Resources */,
 				1011BADF1CD48C8D00F29FB9 /* NodeModelStrings.plist in Resources */,
 				1011BAE21CD48C8D00F29FB9 /* NodeModelViewControllerBack_next@3x.png in Resources */,
 				1011BAE11CD48C8D00F29FB9 /* NodeModelViewControllerBack_black@3x.png in Resources */,
@@ -3785,6 +3802,7 @@
 				100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */,
 				C57526D01D50327F0064F6CD /* WaveView.m in Sources */,
 				109606501C93B4A300CCB3AD /* AFSecurityPolicy.m in Sources */,
+				C557362D1E8375F0001CDC9A /* LoadCSSViewController.m in Sources */,
 				C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
 				C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */,
