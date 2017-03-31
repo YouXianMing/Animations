@@ -47,7 +47,7 @@ static int viewTag = 0x11;
         pointA = MATHPointMake(0, -50);
         pointB = MATHPointMake(self.contentView.width, 270 + 20);
         
-    } else if (type % 4 == 3) {
+    } else {
         
         pointA = MATHPointMake(0, -50);
         pointB = MATHPointMake(self.contentView.width, 270 + 80);

@@ -251,7 +251,7 @@
                        [Item itemWithName:@"震动效果" object:[SCViewShakerController class]],
                        [Item itemWithName:@"ScrollView动画" object:[ScrollViewAnimationController class]],
                        [Item itemWithName:@"Cell点击动画" object:[TapCellAnimationController class]],
-                       [Item itemWithName:@"TextKit简单示例" object:[TextKitLoadImageController class]],
+                       // [Item itemWithName:@"TextKit简单示例" object:[TextKitLoadImageController class]],
                        [Item itemWithName:@"线性重复动画" object:[ReplicatorLineViewController class]],
                        [Item itemWithName:@"跑马灯效果" object:[DrawMarqueeViewController class]],
                        [Item itemWithName:@"文本渐变动画效果" object:[LazyFadeInViewController class]],
