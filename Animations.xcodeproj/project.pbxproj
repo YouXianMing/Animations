@@ -349,6 +349,9 @@
 		C516777C1D3620A00032AC09 /* UIView+ScreensShot.m in Sources */ = {isa = PBXBuildFile; fileRef = C516777B1D3620A00032AC09 /* UIView+ScreensShot.m */; };
 		C516777F1D3620D50032AC09 /* PhotosAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C516777E1D3620D50032AC09 /* PhotosAlbumManager.m */; };
 		C51677971D363E6F0032AC09 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C51677961D363E6F0032AC09 /* Base64.m */; };
+		C516F8391ECA949500A418C8 /* BaseCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C516F8381ECA949500A418C8 /* BaseCustomViewController.m */; };
+		C516F83E1ECA94B000A418C8 /* ShowLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C516F83B1ECA94B000A418C8 /* ShowLoadingView.m */; };
+		C516F83F1ECA94B000A418C8 /* ControllerBaseViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C516F83D1ECA94B000A418C8 /* ControllerBaseViewConfig.m */; };
 		C51733221D45AFB8005D57AE /* TouchEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733211D45AFB8005D57AE /* TouchEventView.m */; };
 		C517332A1D45AFDE005D57AE /* UITextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733251D45AFDE005D57AE /* UITextFieldView.m */; };
 		C517332B1D45AFDE005D57AE /* TextFieldValidatorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733271D45AFDE005D57AE /* TextFieldValidatorMessage.m */; };
@@ -1126,6 +1129,12 @@
 		C516777E1D3620D50032AC09 /* PhotosAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosAlbumManager.m; sourceTree = "<group>"; };
 		C51677951D363E6F0032AC09 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		C51677961D363E6F0032AC09 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		C516F8371ECA949500A418C8 /* BaseCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCustomViewController.h; sourceTree = "<group>"; };
+		C516F8381ECA949500A418C8 /* BaseCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCustomViewController.m; sourceTree = "<group>"; };
+		C516F83A1ECA94B000A418C8 /* ShowLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLoadingView.h; sourceTree = "<group>"; };
+		C516F83B1ECA94B000A418C8 /* ShowLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowLoadingView.m; sourceTree = "<group>"; };
+		C516F83C1ECA94B000A418C8 /* ControllerBaseViewConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerBaseViewConfig.h; sourceTree = "<group>"; };
+		C516F83D1ECA94B000A418C8 /* ControllerBaseViewConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerBaseViewConfig.m; sourceTree = "<group>"; };
 		C51733201D45AFB8005D57AE /* TouchEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchEventView.h; sourceTree = "<group>"; };
 		C51733211D45AFB8005D57AE /* TouchEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchEventView.m; sourceTree = "<group>"; };
 		C51733241D45AFDE005D57AE /* UITextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldView.h; sourceTree = "<group>"; };
@@ -1969,6 +1978,12 @@
 		10381FC51BF9B8A800E5E476 /* CustomControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C516F83A1ECA94B000A418C8 /* ShowLoadingView.h */,
+				C516F83B1ECA94B000A418C8 /* ShowLoadingView.m */,
+				C516F83C1ECA94B000A418C8 /* ControllerBaseViewConfig.h */,
+				C516F83D1ECA94B000A418C8 /* ControllerBaseViewConfig.m */,
+				C516F8371ECA949500A418C8 /* BaseCustomViewController.h */,
+				C516F8381ECA949500A418C8 /* BaseCustomViewController.m */,
 				104F0CC31BFAC04300C46E6A /* CustomViewController.h */,
 				104F0CC41BFAC04300C46E6A /* CustomViewController.m */,
 				10EFE2001D015F6C00159779 /* CustomTabBarViewController.h */,
@@ -3801,10 +3816,12 @@
 				106BCFC01CDC672A007C3EEE /* InfiniteLoopViewController.m in Sources */,
 				100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */,
 				C57526D01D50327F0064F6CD /* WaveView.m in Sources */,
+				C516F8391ECA949500A418C8 /* BaseCustomViewController.m in Sources */,
 				109606501C93B4A300CCB3AD /* AFSecurityPolicy.m in Sources */,
 				C557362D1E8375F0001CDC9A /* LoadCSSViewController.m in Sources */,
 				C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
+				C516F83E1ECA94B000A418C8 /* ShowLoadingView.m in Sources */,
 				C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */,
 				10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */,
 				10B0DDFC1CBA84400089DF1E /* AttributedStringInitConfig.m in Sources */,
@@ -3816,6 +3833,7 @@
 				1051890C1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m in Sources */,
 				104F0D321BFC1C9C00C46E6A /* FontAttribute.m in Sources */,
 				1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */,
+				C516F83F1ECA94B000A418C8 /* ControllerBaseViewConfig.m in Sources */,
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
 				107CF3991C2FFD51002DF93C /* LiveImageView.m in Sources */,
 				102B84E01C3B95F0001699A9 /* File.m in Sources */,
