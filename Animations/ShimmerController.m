@@ -19,9 +19,9 @@
 
 @implementation ShimmerController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     self.backgroundView.backgroundColor = [UIColor blackColor];
     
@@ -64,9 +64,9 @@
     }
 }
 
-- (void)buildTitleView {
+- (void)setupSubViews {
     
-    [super buildTitleView];
+    [super setupSubViews];
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];

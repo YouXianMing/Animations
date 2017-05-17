@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "FullTitleViewController.h"
+#import "FullTitleController.h"
 
-@interface CASpringAnimationController : FullTitleViewController
+@interface CASpringAnimationController : FullTitleController
 
 @end

@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "FullTitleVisualEffectViewController.h"
+#import "FullTitleVisualEffectController.h"
 
-@interface WaterfallLayoutController : FullTitleVisualEffectViewController
+@interface WaterfallLayoutController : FullTitleVisualEffectController
 
 @end

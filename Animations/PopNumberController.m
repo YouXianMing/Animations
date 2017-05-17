@@ -25,9 +25,9 @@
 
 @implementation PopNumberController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     // Init tools.
     self.manager = [StringRangeManager new];

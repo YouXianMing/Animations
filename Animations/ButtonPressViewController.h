@@ -6,8 +6,8 @@
 //  Copyright © 2015年 ZiPeiYi. All rights reserved.
 //
 
-#import "NormalTitleViewController.h"
+#import "NormalTitleController.h"
 
-@interface ButtonPressViewController : NormalTitleViewController
+@interface ButtonPressViewController : NormalTitleController
 
 @end

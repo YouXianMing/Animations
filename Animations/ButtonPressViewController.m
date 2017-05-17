@@ -24,9 +24,9 @@
 
 @implementation ButtonPressViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     // Blur ImageView.
     self.normalImageView             = [[UIImageView alloc] initWithFrame:self.backgroundView.bounds];

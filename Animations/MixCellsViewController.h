@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "FullTitleViewController.h"
+#import "FullTitleController.h"
 
-@interface MixCellsViewController : FullTitleViewController
+@interface MixCellsViewController : FullTitleController
 
 @end

@@ -21,9 +21,9 @@
 
 @implementation LiveImageViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     self.backgroundView.backgroundColor = [UIColor blackColor];
     
@@ -58,16 +58,22 @@
     [_timer start];
 }
 
-- (void)buildTitleView {
+- (void)setupSubViews {
     
-    [super buildTitleView];
+    [self.titleView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        [obj removeFromSuperview];
+    }];
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
-    headlinelabel.font          = [UIFont HeitiSCWithFontSize:20.f];
+    headlinelabel.font          = [UIFont AvenirWithFontSize:20.f];
     headlinelabel.textAlignment = NSTextAlignmentCenter;
-    headlinelabel.textColor     = [UIColor whiteColor];
+    headlinelabel.textColor     = [[UIColor whiteColor] colorWithAlphaComponent:0.75f];
     headlinelabel.text          = self.title;
+    [headlinelabel sizeToFit];
+    
+    headlinelabel.center = self.titleView.middlePoint;
     
     // Line.
     UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, self.view.width, 0.5f)];

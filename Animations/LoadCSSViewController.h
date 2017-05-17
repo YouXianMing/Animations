@@ -6,8 +6,8 @@
 //  Copyright © 2017年 YouXianMing. All rights reserved.
 //
 
-#import "NormalTitleViewController.h"
+#import "NormalTitleController.h"
 
-@interface LoadCSSViewController : NormalTitleViewController
+@interface LoadCSSViewController : NormalTitleController
 
 @end

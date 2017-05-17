@@ -19,9 +19,9 @@
 
 @implementation PressAnimationButtonController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     self.button          = [[PressAnimationButton alloc] initWithFrame:CGRectMake(0, 0, 280, 30)];
     self.button.font     = [UIFont HeitiSCWithFontSize:14.f];

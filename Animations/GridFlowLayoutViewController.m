@@ -31,9 +31,9 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
 
 @implementation GridFlowLayoutViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     _dataSource = [NSMutableArray new];
     

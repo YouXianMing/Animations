@@ -24,9 +24,9 @@
 
 @implementation CircleAnimationViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     CGFloat gapFromTop = 64.f + 20;
     CGFloat width      = self.contentView.width;

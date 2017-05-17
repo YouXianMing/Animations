@@ -19,9 +19,9 @@
 
 @implementation BezierPathViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     // Scale value.
     CGFloat scale = 1;
@@ -245,14 +245,7 @@
     return bezierPath;
 }
 
-- (void)buildTitleView {
-    
-    [super buildTitleView];
-    
-    [self.titleView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        [obj removeFromSuperview];
-    }];
+- (void)setupSubViews {
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];

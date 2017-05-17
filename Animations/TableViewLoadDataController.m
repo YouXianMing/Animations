@@ -30,9 +30,9 @@
 
 @implementation TableViewLoadDataController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     [self createDataSource];
     
@@ -48,7 +48,7 @@
 
 - (void)startNetworking {
     
-    self.showLoadingView = [LoadingView showManualHiddenMessageViewWithMessageObject:nil contentView:self.loadingView];
+    self.showLoadingView = [LoadingView showManualHiddenMessageViewWithMessageObject:nil contentView:self.loadingAreaView];
     
     self.dataNetworking = [Networking getMethodNetworkingWithUrlString:@"https://api.app.net/stream/0/posts/stream/global"
                                                       requestParameter:nil
@@ -130,14 +130,14 @@
         
     } else {
         
-        [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"Warning", @"No data now.") contentView:self.windowView];
+        [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"Warning", @"No data now.") contentView:self.windowAreaView];
     }
 }
 
 - (void)requestFailed:(Networking *)networking error:(NSError *)error {
     
     [self.showLoadingView hide];
-    [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"Notice", @"Network error.") contentView:self.windowView];
+    [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"Notice", @"Network error.") contentView:self.windowAreaView];
 }
 
 @end

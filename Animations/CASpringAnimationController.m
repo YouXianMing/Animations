@@ -23,9 +23,9 @@
 
 @implementation CASpringAnimationController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     [self initRangeViews];
     

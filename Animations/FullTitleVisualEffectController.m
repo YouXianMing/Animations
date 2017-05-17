@@ -1,27 +1,30 @@
 //
-//  FullTitleVisualEffectViewController.m
+//  FullTitleVisualEffectController.m
 //  Animations
 //
-//  Created by YouXianMing on 15/12/16.
-//  Copyright © 2015年 YouXianMing. All rights reserved.
+//  Created by YouXianMing on 2017/5/17.
+//  Copyright © 2017年 YouXianMing. All rights reserved.
 //
 
-#import "FullTitleVisualEffectViewController.h"
+#import "FullTitleVisualEffectController.h"
 #import "UIView+SetRect.h"
 #import "UIFont+Fonts.h"
 
-@interface FullTitleVisualEffectViewController ()
+@interface FullTitleVisualEffectController ()
 
 @property (nonatomic, strong) UIVisualEffectView *effectView;
 @property (nonatomic, strong) UIVisualEffectView *vibrancyEffectView;
 
 @end
 
-@implementation FullTitleVisualEffectViewController
+@implementation FullTitleVisualEffectController
 
-- (void)buildTitleView {
+- (void)makeViewsConfig:(NSMutableDictionary<NSString *,ControllerBaseViewConfig *> *)viewsConfig {
+    
+    viewsConfig[contentViewId].frame = CGRectMake(0, 0, Width, Height);
+}
 
-    [super buildTitleView];
+- (void)setupSubViews {
     
     // 添加模糊效果
     self.effectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
@@ -35,11 +38,13 @@
     [self.effectView.contentView addSubview:self.vibrancyEffectView];
     
     // Back button.
-    UIImage  *image      = [UIImage imageNamed:@"backIconTypeTwo"];
     UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 64)];
     backButton.center    = CGPointMake(20, self.titleView.middleY);
-    [backButton setImage:image forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"backIcon"]             forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"backIcon_highlighted"] forState:UIControlStateHighlighted];
     [backButton addTarget:self action:@selector(popSelf) forControlEvents:UIControlEventTouchUpInside];
+    [backButton.imageView setContentMode:UIViewContentModeCenter];
+    [self.titleView addSubview:backButton];
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];

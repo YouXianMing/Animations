@@ -24,9 +24,9 @@
 
 @implementation AlertViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     // Data source.
     self.adapters = [NSMutableArray array];
@@ -83,7 +83,7 @@
         
         if (arc4random() % 2) {
             
-            [MessageView showAutoHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowView viewTag:arc4random() % 100];
+            [MessageView showAutoHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowAreaView viewTag:arc4random() % 100];
             
         } else {
             
@@ -98,7 +98,7 @@
         
         if (arc4random() % 2) {
             
-            [AlertView showManualHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowView viewTag:arc4random() % 100];
+            [AlertView showManualHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowAreaView viewTag:arc4random() % 100];
             
         } else {
             
@@ -109,7 +109,7 @@
         
         if (arc4random() % 2) {
             
-            [LoadingView showAutoHiddenMessageViewWithMessageObject:nil delegate:self contentView:self.windowView viewTag:arc4random() % 100 delayAutoHidenDuration:8.f];
+            [LoadingView showAutoHiddenMessageViewWithMessageObject:nil delegate:self contentView:self.windowAreaView viewTag:arc4random() % 100 delayAutoHidenDuration:8.f];
             
         } else {
             
@@ -120,7 +120,7 @@
         
         if (arc4random() % 2) {
             
-            [CircleLoadingView showAutoHiddenMessageViewWithMessageObject:nil delegate:self contentView:self.windowView viewTag:arc4random() % 100
+            [CircleLoadingView showAutoHiddenMessageViewWithMessageObject:nil delegate:self contentView:self.windowAreaView viewTag:arc4random() % 100
                                                    delayAutoHidenDuration:8.f];
             
         } else {

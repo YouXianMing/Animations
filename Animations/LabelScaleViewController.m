@@ -18,14 +18,14 @@
 
 @implementation LabelScaleViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     self.backgroundView.backgroundColor = [UIColor blackColor];
     
     {
-        ScaleLabel *label      = [[ScaleLabel alloc] initWithFrame:CGRectMake(0, 0, self.width, 50)];
+        ScaleLabel *label      = [[ScaleLabel alloc] initWithFrame:CGRectMake(0, 0, Width, 50)];
         label.text             = @"Metal Gear Solid V";
         label.startScale       = 0.3f;
         label.endScale         = 2.f;
@@ -44,7 +44,7 @@
     }
     
     {
-        ScaleLabel *label      = [[ScaleLabel alloc] initWithFrame:CGRectMake(0, 0, self.width, 50)];
+        ScaleLabel *label      = [[ScaleLabel alloc] initWithFrame:CGRectMake(0, 0, Width, 50)];
         label.text             = @"Silent Hill";
         label.startScale       = 0.3f;
         label.endScale         = 2.f;
@@ -62,7 +62,7 @@
     }
     
     {
-        ScaleLabel *label      = [[ScaleLabel alloc] initWithFrame:CGRectMake(0, 0, self.width, 50)];
+        ScaleLabel *label      = [[ScaleLabel alloc] initWithFrame:CGRectMake(0, 0, Width, 50)];
         label.text             = @"YouXianMing";
         label.startScale       = 1.5f;
         label.endScale         = 2.f;
@@ -81,9 +81,7 @@
     }
 }
 
-- (void)buildTitleView {
-    
-    [super buildTitleView];
+- (void)setupSubViews {
     
     [self.titleView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         

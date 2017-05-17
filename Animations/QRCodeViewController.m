@@ -24,9 +24,9 @@
 
 @implementation QRCodeViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     // Background view.
     self.blackView                 = [[UIView alloc] initWithFrame:self.contentView.bounds];
@@ -65,7 +65,7 @@
         [self.lightButton setImage:[UIImage imageNamed:@"newbarcode_light_off"] forState:UIControlStateNormal];
         [codeView stop];
         
-        [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"二维码", codeString) contentView:self.windowView];
+        [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"二维码", codeString) contentView:self.windowAreaView];
     }];
     
     [GCDQueue executeInMainQueue:^{
@@ -111,15 +111,15 @@
             
         } else {
             
-            [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"警告", @"摄像头不可用") contentView:self.windowView];
+            [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"警告", @"摄像头不可用") contentView:self.windowAreaView];
         }
     }
 }
 
-- (void)buildTitleView {
-
-    [super buildTitleView];
+- (void)setupSubViews {
     
+    [super setupSubViews];
+
     [[self.titleView subviews] enumerateObjectsUsingBlock:^(UIView *view, NSUInteger idx, BOOL * _Nonnull stop) {
         
         if ([view isKindOfClass:[UIVisualEffectView class]]) {

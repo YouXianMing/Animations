@@ -21,9 +21,9 @@
 
 @implementation ScrollCarouselViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     _lineCarouseView          = [[LinearCarouselView alloc] initWithFrame:CGRectMake(0, 0, Width, self.contentView.height / 2.f - 40.f)];
     _lineCarouseView.delegate = self;

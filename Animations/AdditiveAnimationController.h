@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "NormalTitleViewController.h"
+#import "NormalTitleController.h"
 
-@interface AdditiveAnimationController : NormalTitleViewController
+@interface AdditiveAnimationController : NormalTitleController
 
 @end

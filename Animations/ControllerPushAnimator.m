@@ -9,7 +9,7 @@
 #import "ControllerPushAnimator.h"
 #import "UIView+SetRect.h"
 #import "UIView+AnimationProperty.h"
-#import "AnimationsListViewController.h"
+#import "AnimationsListController.h"
 
 @implementation ControllerPushAnimator
 
@@ -18,7 +18,7 @@
     // http://stackoverflow.com/questions/25588617/ios-8-screen-blank-after-dismissing-view-controller-with-custom-presentation
     [self.containerView addSubview:self.toViewController.view];
     
-    AnimationsListViewController *controller = (AnimationsListViewController *)self.fromViewController;
+    AnimationsListController *controller = (AnimationsListController *)self.fromViewController;
     
     self.toViewController.view.x = Width;
     [UIView animateWithDuration:self.transitionDuration - 0.1f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{

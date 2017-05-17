@@ -21,9 +21,9 @@
 
 @implementation DrawWaveViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     self.drawView        = [[DrawView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
     self.drawView.center = self.contentView.center;

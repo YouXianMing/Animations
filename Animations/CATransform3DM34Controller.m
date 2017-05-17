@@ -21,9 +21,9 @@
 
 @implementation CATransform3DM34Controller
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     [self initLayer];
     

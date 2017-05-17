@@ -6,8 +6,8 @@
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "FullTitleVisualEffectViewController.h"
+#import "FullTitleVisualEffectController.h"
 
-@interface TransformFadeViewController : FullTitleVisualEffectViewController
+@interface TransformFadeViewController : FullTitleVisualEffectController
 
 @end

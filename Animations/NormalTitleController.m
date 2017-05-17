@@ -1,24 +1,22 @@
 //
-//  FullTitleViewController.m
+//  NormalTitleController.m
 //  Animations
 //
-//  Created by YouXianMing on 15/12/16.
-//  Copyright © 2015年 YouXianMing. All rights reserved.
+//  Created by YouXianMing on 2017/5/17.
+//  Copyright © 2017年 YouXianMing. All rights reserved.
 //
 
-#import "FullTitleViewController.h"
+#import "NormalTitleController.h"
 #import "UIView+SetRect.h"
 #import "UIFont+Fonts.h"
 
-@interface FullTitleViewController ()
+@interface NormalTitleController ()
 
 @end
 
-@implementation FullTitleViewController
+@implementation NormalTitleController
 
-- (void)buildTitleView {
-    
-    [super buildTitleView];
+- (void)setupSubViews {
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];
@@ -37,10 +35,10 @@
     [self.titleView addSubview:headlinelabel];
     
     // Back button.
-    UIImage  *image      = [UIImage imageNamed:@"backIcon"];
     UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 64)];
     backButton.center    = CGPointMake(20, self.titleView.middleY);
-    [backButton setImage:image forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"backIcon"]             forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"backIcon_highlighted"] forState:UIControlStateHighlighted];
     [backButton addTarget:self action:@selector(popSelf) forControlEvents:UIControlEventTouchUpInside];
     [backButton.imageView setContentMode:UIViewContentModeCenter];
     [self.titleView addSubview:backButton];

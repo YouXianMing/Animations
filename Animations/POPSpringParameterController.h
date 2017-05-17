@@ -6,8 +6,8 @@
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "FullTitleViewController.h"
+#import "FullTitleController.h"
 
-@interface POPSpringParameterController : FullTitleViewController
+@interface POPSpringParameterController : FullTitleController
 
 @end

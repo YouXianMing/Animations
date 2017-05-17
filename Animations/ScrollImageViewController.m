@@ -24,9 +24,9 @@ static int viewTag = 0x11;
 
 @implementation ScrollImageViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     MATHPoint pointA;
     MATHPoint pointB;
@@ -65,8 +65,8 @@ static int viewTag = 0x11;
                            [UIImage imageNamed:@"5"]];
     
     // Init scrollView.
-    CGFloat height = self.height;
-    CGFloat width  = self.width;
+    CGFloat height = Height;
+    CGFloat width  = Width;
     
     _scrollView = [[UIScrollView alloc] initWithFrame:self.contentView.bounds];
     _scrollView.delegate                       = self;

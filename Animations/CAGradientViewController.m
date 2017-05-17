@@ -32,9 +32,9 @@ typedef enum : NSUInteger {
 
 @implementation CAGradientViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     self.images = @[[UIImage imageNamed:@"5"],
                     [UIImage imageNamed:@"1"],

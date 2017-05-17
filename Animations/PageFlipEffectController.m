@@ -21,9 +21,9 @@
 
 @implementation PageFlipEffectController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     UIImage *image = [UIImage imageNamed:@"pic_1"];
     CGSize   size  = [Math resetFromSize:image.size withFixedWidth:Width / 2.f];

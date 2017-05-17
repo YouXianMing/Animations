@@ -33,9 +33,9 @@ typedef enum : NSUInteger {
 
 @implementation MaskShapeViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     self.backgroundView.backgroundColor = [UIColor blackColor];
     
@@ -120,9 +120,9 @@ typedef enum : NSUInteger {
 
 #pragma mark - Overwrite methods.
 
-- (void)buildTitleView {
+- (void)setupSubViews {
     
-    [super buildTitleView];
+    [super setupSubViews];
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];

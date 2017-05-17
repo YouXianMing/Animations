@@ -18,9 +18,9 @@
 
 @implementation LoadCSSViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     // Load html text from local
     NSString *path = [FileManager theRealFilePath:@"-/news/news.html"];

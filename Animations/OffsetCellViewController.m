@@ -28,9 +28,9 @@
 
 @implementation OffsetCellViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     NSDictionary *params = @{@"num"  : @"5",
                              @"date" : [DateFormatter dateStringFromDate:[NSDate date] outputDateStringFormatter:@"yyyyMMdd"],
@@ -60,7 +60,7 @@
     [self.contentView addSubview:self.tableView];
     
     self.showLoadingView             = [[LoadingView alloc] init];
-    self.showLoadingView.contentView = self.loadingView;
+    self.showLoadingView.contentView = self.loadingAreaView;
     [self.showLoadingView show];
 }
 
@@ -147,7 +147,7 @@
 - (void)requestFailed:(AbsNetworking *)networking error:(NSError *)error {
     
     [self.showLoadingView hide];
-    [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"警告", @"网络异常,请稍后再试!") contentView:self.loadingView];
+    [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"警告", @"网络异常,请稍后再试!") contentView:self.loadingAreaView];
 }
 
 @end

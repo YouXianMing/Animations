@@ -18,9 +18,9 @@
 
 @implementation ReplicatorLineViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     UIImage *image = [UIImage imageNamed:@"typeOneLine"];
     CGRect   rect  = CGRectMake(0, 0, image.size.width, image.size.height);

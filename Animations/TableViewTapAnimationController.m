@@ -21,9 +21,9 @@
 
 @implementation TableViewTapAnimationController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     // Init dataArray.
     self.dataArray = [NSMutableArray array];

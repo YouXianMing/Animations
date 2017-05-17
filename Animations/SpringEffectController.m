@@ -22,9 +22,9 @@
 
 @implementation SpringEffectController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     _centerPoint = self.contentView.center;
     

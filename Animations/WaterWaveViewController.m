@@ -29,9 +29,9 @@ typedef enum : NSUInteger {
 
 @implementation WaterWaveViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     self.contentView.layer.masksToBounds = YES;
     

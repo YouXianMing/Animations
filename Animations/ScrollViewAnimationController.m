@@ -32,9 +32,9 @@ typedef enum : NSUInteger {
 
 @implementation ScrollViewAnimationController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     self.scrollView                                = [[UIScrollView alloc] initWithFrame:self.contentView.bounds];
     self.scrollView.contentSize                    = CGSizeMake(self.contentView.width * 3, self.contentView.height);

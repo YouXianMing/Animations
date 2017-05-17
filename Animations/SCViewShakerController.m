@@ -12,9 +12,9 @@
 
 @implementation SCViewShakerController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     // https://github.com/rFlex/SCViewShaker
     

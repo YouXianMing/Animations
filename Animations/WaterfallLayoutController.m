@@ -33,9 +33,9 @@ static NSString *footerIdentifier = @"WaterfallFooter";
 
 @implementation WaterfallLayoutController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     self.backgroundView.backgroundColor = [UIColor blackColor];
     

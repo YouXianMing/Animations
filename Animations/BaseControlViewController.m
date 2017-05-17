@@ -17,9 +17,9 @@
 
 @implementation BaseControlViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     {
         SelectedIconButton *button = [[SelectedIconButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];

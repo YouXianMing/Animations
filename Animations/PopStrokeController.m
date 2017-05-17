@@ -21,9 +21,9 @@
 
 @implementation PopStrokeController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     self.circleShape           = [CAShapeLayer layer];
     self.circleShape.strokeEnd = 0.f;

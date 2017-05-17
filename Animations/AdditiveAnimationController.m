@@ -17,9 +17,9 @@
 
 @implementation AdditiveAnimationController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     // http://ronnqvi.st/multiple-animations/
     

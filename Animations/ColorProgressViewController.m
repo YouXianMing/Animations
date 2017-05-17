@@ -23,9 +23,9 @@
 
 @implementation ColorProgressViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     self.backgroundView.backgroundColor = [UIColor blackColor];
     
@@ -64,14 +64,7 @@
 /**
  *  Overwrite buildTitleView method.
  */
-- (void)buildTitleView {
-    
-    [super buildTitleView];
-    
-    [self.titleView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        [obj removeFromSuperview];
-    }];
+- (void)setupSubViews {
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];

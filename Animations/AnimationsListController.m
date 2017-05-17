@@ -1,12 +1,12 @@
 //
-//  AnimationsListViewController.m
-//  Facebook-POP-Animation
+//  AnimationsListController.m
+//  Animations
 //
-//  Created by YouXianMing on 15/11/16.
-//  Copyright © 2015年 ZiPeiYi. All rights reserved.
+//  Created by YouXianMing on 2017/5/17.
+//  Copyright © 2017年 YouXianMing. All rights reserved.
 //
 
-#import "AnimationsListViewController.h"
+#import "AnimationsListController.h"
 #import "UIView+AnimationsListViewController.h"
 #import "UIView+SetRect.h"
 #import "UIView+GlowView.h"
@@ -20,6 +20,7 @@
 #import "ControllerPushAnimator.h"
 #import "ControllerPopAnimator.h"
 #import "UIFont+Fonts.h"
+#import "UIView+SetRect.h"
 
 #import "ButtonPressViewController.h"
 #import "PopStrokeController.h"
@@ -80,7 +81,7 @@
 #import "ScrollCarouselViewController.h"
 #import "LoadCSSViewController.h"
 
-@interface AnimationsListViewController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate>
+@interface AnimationsListController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate>
 
 @property (nonatomic, strong) DefaultNotificationCenter *notificationCenter;
 @property (nonatomic, strong) UITableView               *tableView;
@@ -90,11 +91,11 @@
 
 @end
 
-@implementation AnimationsListViewController
+@implementation AnimationsListController
 
-- (void)setup {
-
-    [super setup];
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
     
     [self rootViewControllerSetup];
     
@@ -142,7 +143,7 @@
 #pragma mark - configNotificationCenter
 
 - (void)configNotificationCenter {
-
+    
     self.notificationCenter          = [DefaultNotificationCenter new];
     self.notificationCenter.delegate = self;
     [self.notificationCenter addNotificationName:noti_showHomePageTableView];
@@ -151,11 +152,11 @@
 #pragma mark - DefaultNotificationCenterDelegate
 
 - (void)defaultNotificationCenter:(DefaultNotificationCenter *)notification name:(NSString *)name object:(id)object {
- 
+    
     if ([name isEqualToString:noti_showHomePageTableView]) {
         
         [GCDQueue executeInMainQueue:^{
-                        
+            
             // Load data.
             self.tableViewLoadData = YES;
             [self.tableView insertRowsAtIndexPaths:MakeIndexRanges(@[MakeIndexRange(0, self.items.count, 0)]) withRowAnimation:UITableViewRowAnimationFade];
@@ -167,7 +168,7 @@
 
 - (void)configureTitleView {
     
-    BackgroundLineView *lineView = [BackgroundLineView backgroundLineViewWithFrame:CGRectMake(0, 0, self.width, 64)
+    BackgroundLineView *lineView = [BackgroundLineView backgroundLineViewWithFrame:CGRectMake(0, 0, Width, 64)
                                                                          lineWidth:4 lineGap:4
                                                                          lineColor:[[UIColor blackColor] colorWithAlphaComponent:0.015]
                                                                             rotate:M_PI_4];
@@ -178,14 +179,14 @@
     UILabel *animationHeadLineLabel = [UIView animationsListViewControllerHeadLabel];
     
     // Title view.
-    UIView *titleView             = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, 64)];
+    UIView *titleView             = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, 64)];
     headlinelabel.center          = titleView.middlePoint;
     animationHeadLineLabel.center = titleView.middlePoint;
     [titleView addSubview:headlinelabel];
     [titleView addSubview:animationHeadLineLabel];
     [self.titleView addSubview:titleView];
     
-    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, self.width, 0.5f)];
+    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, Width, 0.5f)];
     line.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.25f];
     [titleView addSubview:line];
     
@@ -274,11 +275,11 @@
     self.items = [NSMutableArray array];
     
     for (int i = 0; i < array.count; i++) {
-    
+        
         Item *item = array[i];
         item.index = i + 1;
         [item createAttributedString];
-
+        
         [self.items addObject:[ListItemCell dataAdapterWithCellReuseIdentifier:nil data:item cellHeight:0 type:0]];
     }
 }
@@ -292,8 +293,9 @@
     self.tableView.dataSource     = self;
     self.tableView.rowHeight      = 50.f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerCellsClass:@[cellClass(@"ListItemCell", nil)]];
     [self.contentView addSubview:self.tableView];
+    
+    [ListItemCell registerToTableView:self.tableView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -308,7 +310,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [(CustomCell *)[tableView cellForRowAtIndexPath:indexPath] selectedEvent];    
+    [(CustomCell *)[tableView cellForRowAtIndexPath:indexPath] selectedEvent];
 }
 
 #pragma mark - Overwrite system methods.
@@ -322,7 +324,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear:animated];
-//    self.enableInteractivePopGestureRecognizer = YES;
+    //    self.enableInteractivePopGestureRecognizer = YES;
 }
 
 @end

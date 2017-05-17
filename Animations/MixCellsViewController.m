@@ -32,9 +32,9 @@ typedef enum : NSUInteger {
 
 @implementation MixCellsViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     [self createTableViewAndRegisterCells];
     

@@ -23,9 +23,9 @@
 
 @implementation MixedColorProgressViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     /*
      给upView的frame值做动画才是label能够混色显示的核心

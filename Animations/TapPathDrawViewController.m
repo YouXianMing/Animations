@@ -21,9 +21,9 @@
 
 @implementation TapPathDrawViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     self.theContentView                            = [self createContentView];
     self.scrollView                                = [[UIScrollView alloc] initWithFrame:self.contentView.bounds];

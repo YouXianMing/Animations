@@ -15,9 +15,6 @@
 #import "NSMutableAttributedString+StringAttribute.h"
 #import "UIFont+Fonts.h"
 
-#define  Width   [UIScreen mainScreen].bounds.size.width
-#define  Height  [UIScreen mainScreen].bounds.size.height
-
 @interface POPSpringParameterController ()
 
 @property (nonatomic, strong) UILabel  *secondsLabel;
@@ -35,9 +32,9 @@
 
 @implementation POPSpringParameterController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     [self initSecondLabel];
     

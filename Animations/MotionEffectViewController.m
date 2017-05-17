@@ -16,9 +16,9 @@
 
 @implementation MotionEffectViewController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     // https://github.com/jvenegas/TLMotionEffect
     

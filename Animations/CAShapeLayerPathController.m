@@ -27,9 +27,9 @@
 
 @implementation CAShapeLayerPathController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     // background view
     self.pathView        = [[PathView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];

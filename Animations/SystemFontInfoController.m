@@ -22,9 +22,9 @@
 
 @implementation SystemFontInfoController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     NSDictionary   *fontListDictionary = [FontInfomation systomFontNameList];
     NSMutableArray *fontList           = [NSMutableArray array];

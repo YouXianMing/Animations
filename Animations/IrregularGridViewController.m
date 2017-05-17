@@ -29,9 +29,9 @@ typedef enum : NSUInteger {
 
 @implementation IrregularGridViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     [self createDirectionHorizontalType];
     

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "AnimationsListViewController.h"
+#import "AnimationsListController.h"
 #import "AnimationsListViewNavigationController.h"
 
 @implementation AppDelegate
@@ -32,7 +32,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    AnimationsListViewController           *viewController       = [AnimationsListViewController new];
+    AnimationsListController               *viewController       = [AnimationsListController new];
     AnimationsListViewNavigationController *navigationController = [[AnimationsListViewNavigationController alloc] initWithRootViewController:viewController
                                                                                                                        setNavigationBarHidden:YES];
     self.window.rootViewController = navigationController;

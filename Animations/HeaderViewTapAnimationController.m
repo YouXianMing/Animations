@@ -27,9 +27,9 @@ static NSString *infoHeadFlag = @"ClassHeaderView";
 
 @implementation HeaderViewTapAnimationController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
     
     [self createDatas];
     

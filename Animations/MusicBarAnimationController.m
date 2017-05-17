@@ -19,11 +19,11 @@
 
 @implementation MusicBarAnimationController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor blackColor];
+    self.backgroundView.backgroundColor = [UIColor blackColor];
     
     CGFloat width  = self.contentView.frame.size.width;
     CGFloat height = self.contentView.frame.size.height;
@@ -68,17 +68,7 @@
     [self.timer start];
 }
 
-/**
- *  Overwrite buildTitleView method.
- */
-- (void)buildTitleView {
-    
-    [super buildTitleView];
-    
-    [self.titleView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        [obj removeFromSuperview];
-    }];
+- (void)setupSubViews {
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];

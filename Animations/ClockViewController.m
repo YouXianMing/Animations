@@ -35,9 +35,9 @@
 
 @implementation ClockViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     NSDictionary *currentTime = [[SystemTimeInfomation sharedInstance] currentTimeInfomation];
     

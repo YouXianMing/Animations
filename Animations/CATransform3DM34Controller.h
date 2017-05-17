@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "NormalTitleViewController.h"
+#import "NormalTitleController.h"
 
-@interface CATransform3DM34Controller : NormalTitleViewController
+@interface CATransform3DM34Controller : NormalTitleController
 
 @end

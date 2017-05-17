@@ -27,9 +27,9 @@
 
 @implementation iCarouselViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     // https://github.com/nicklockwood/iCarousel
     
@@ -112,9 +112,9 @@
 
 #pragma mark - Overwrite some method.
 
-- (void)buildTitleView {
-    
-    [super buildTitleView];
+- (void)setupSubViews {
+
+    [super setupSubViews];
     
     // Title label.
     UILabel *headlinelabel      = [UILabel new];

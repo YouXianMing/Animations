@@ -17,9 +17,9 @@
 
 @implementation ScratchImageViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     self.titleView.backgroundColor       = [UIColor whiteColor];
     self.contentView.layer.masksToBounds = YES;

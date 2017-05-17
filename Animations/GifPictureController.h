@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "NormalTitleViewController.h"
+#import "NormalTitleController.h"
 
-@interface GifPictureController : NormalTitleViewController
+@interface GifPictureController : NormalTitleController
 
 @end

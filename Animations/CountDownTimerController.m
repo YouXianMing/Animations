@@ -22,9 +22,9 @@
 
 @implementation CountDownTimerController
 
-- (void)setup {
+- (void)viewDidLoad {
     
-    [super setup];
+    [super viewDidLoad];
 
     [self createDataSource];
     

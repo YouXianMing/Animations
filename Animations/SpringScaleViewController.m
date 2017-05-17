@@ -20,9 +20,9 @@
 
 @implementation SpringScaleViewController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     // Label
     UILabel *label = [[UILabel alloc] init];

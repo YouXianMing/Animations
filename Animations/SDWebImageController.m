@@ -21,9 +21,9 @@
 
 @implementation SDWebImageController
 
-- (void)setup {
+- (void)viewDidLoad {
 
-    [super setup];
+    [super viewDidLoad];
     
     // 初始化数据源
     NSArray *picsArray = @[@"http://pic.cnitblog.com/avatar/607542/20140226182241.png",
