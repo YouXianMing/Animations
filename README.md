@@ -50,8 +50,6 @@
 
 ![demo.gif](http://images2015.cnblogs.com/blog/607542/201601/607542-20160105215932825-401534015.gif)
 
-![demo.gif](http://images2015.cnblogs.com/blog/607542/201601/607542-20160106204207856-1286069016.gif)
-
 ![demo.gif](http://images2015.cnblogs.com/blog/607542/201601/607542-20160109221403621-361369666.gif)
 
 ![demo.gif](http://images.cnitblog.com/blog/607542/201501/182024215423716.gif)
