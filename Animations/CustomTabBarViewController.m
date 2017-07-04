@@ -10,7 +10,6 @@
 
 @interface CustomTabBarViewController ()
 
-@property (nonatomic, strong) UIView            *contentView;
 @property (nonatomic, strong) UIView            *tabBarView;
 @property (nonatomic, weak)   UIViewController  *currentViewController;
 
@@ -22,35 +21,69 @@
     
     if (self = [super init]) {
         
-        _tabBarHeight   = 49.f;
-        _firstLoadIndex = 0;
+        _tabBarHeight        = 49.f;
+        _firstLoadIndex      = 0;
+        self.viewControllers = [NSMutableArray array];
     }
     
     return self;
 }
 
-- (void)setup {
+- (void)makeViewsConfig:(NSMutableDictionary<NSString *,ControllerBaseViewConfig *> *)viewsConfig {
     
-    [super setup];
+    // 加载区域View
+    {
+        ControllerBaseViewConfig *config = viewsConfig[loadingAreaViewId];
+        config.exist                     = NO;
+    }
     
-    // Add controller's view.
-    self.contentView = [[UIView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:self.contentView];
+    // window加载区域View
+    {
+        ControllerBaseViewConfig *config = viewsConfig[windowAreaViewId];
+        config.exist                     = NO;
+    }
+    
+    // 标题View
+    {
+        ControllerBaseViewConfig *config = viewsConfig[titleViewId];
+        config.exist                     = NO;
+    }
+    
+    // 背景View
+    {
+        ControllerBaseViewConfig *config = viewsConfig[backgroundViewId];
+        config.exist                     = NO;
+    }
+    
+    // 内容View(只显示内容View)
+    {
+        ControllerBaseViewConfig *config = viewsConfig[contentViewId];
+        config.exist                     = YES;
+        config.frame                     = self.view.bounds;
+    }
+}
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
     
     // Add tabBarView.
     self.tabBarView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - _tabBarHeight,
                                                                self.view.frame.size.width, _tabBarHeight)];
     [self.view addSubview:self.tabBarView];
     
-    // Add ChildViewController.
-    for (int i = 0; i < self.viewControllers.count; i++) {
-        
-        CustomViewController *customViewController = self.viewControllers[i];
-        [self addChildViewController:customViewController];
-    }
+    // Add controllers by subClass.
+    [self addChildViewControllers:self.viewControllers];
     
     // Build items.
     [self buildItems];
+    
+    // Add ChildViewController.
+    for (int i = 0; i < self.viewControllers.count; i++) {
+        
+        UIViewController *customViewController = self.viewControllers[i];
+        [self addChildViewController:customViewController];
+    }
     
     // Load first show controller.
     [self.viewControllers[_firstLoadIndex] didMoveToParentViewController:self];
@@ -60,6 +93,11 @@
 }
 
 - (void)buildItems {
+    
+    // Overwrite by subClass.
+}
+
+- (void)addChildViewControllers:(NSMutableArray <UIViewController *> *)controllers {
     
     // Overwrite by subClass.
 }

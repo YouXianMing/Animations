@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "CustomNavigationController.h"
+#import "BaseCustomNavigationController.h"
 
-@interface AnimationsListViewNavigationController : CustomNavigationController
+@interface AnimationsListViewNavigationController : BaseCustomNavigationController
 
 @end

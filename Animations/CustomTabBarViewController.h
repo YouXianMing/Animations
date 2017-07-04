@@ -6,7 +6,7 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "CustomViewController.h"
+#import "BaseCustomViewController.h"
 @class CustomTabBarViewController;
 
 @protocol CustomTabBarViewControllerDelegate <NSObject>
@@ -23,7 +23,7 @@
 
 @end
 
-@interface CustomTabBarViewController : CustomViewController
+@interface CustomTabBarViewController : BaseCustomViewController
 
 /**
  *  CustomTabBarViewController's delegate.
@@ -43,7 +43,7 @@
 /**
  *  ViewControllers.
  */
-@property(nonatomic, strong) NSArray <__kindof CustomViewController *> *viewControllers;
+@property(nonatomic, strong) NSMutableArray <UIViewController *> *viewControllers;
 
 /**
  *  Hide TabBarView or not.
@@ -77,7 +77,14 @@
 - (void)didSelectedIndex:(NSInteger)index;
 
 /**
- *  Build items in the tabBarView.
+ [Overwrite by subClass] Add childViewControllers.
+
+ @param controllers UIViewController's array.
+ */
+- (void)addChildViewControllers:(NSMutableArray <UIViewController *> *)controllers;
+
+/**
+ *  [Overwrite by subClass] Build items on TabBarView.
  */
 - (void)buildItems;
 
