@@ -371,6 +371,7 @@
 		C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */; };
 		C559EE781DE6DBC8006C7DAC /* ColorSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE771DE6DBC8006C7DAC /* ColorSpaceCell.m */; };
 		C55D7DD41D6BEEE900B1D184 /* BackgroundLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D7DD31D6BEEE900B1D184 /* BackgroundLineView.m */; };
+		C55F55F31F0B94C4008F0910 /* CountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C55F55F21F0B94C4008F0910 /* CountDownButton.m */; };
 		C56812311D757621006E6C49 /* IrregularGridCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C568122A1D757621006E6C49 /* IrregularGridCollectionView.m */; };
 		C56812321D757621006E6C49 /* MaximumSpacingFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C568122C1D757621006E6C49 /* MaximumSpacingFlowLayout.m */; };
 		C56812331D757621006E6C49 /* CustomIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C568122E1D757621006E6C49 /* CustomIrregularGridViewCell.m */; };
@@ -1170,6 +1171,8 @@
 		C559EE771DE6DBC8006C7DAC /* ColorSpaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSpaceCell.m; sourceTree = "<group>"; };
 		C55D7DD21D6BEEE900B1D184 /* BackgroundLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLineView.h; sourceTree = "<group>"; };
 		C55D7DD31D6BEEE900B1D184 /* BackgroundLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLineView.m; sourceTree = "<group>"; };
+		C55F55F11F0B94C4008F0910 /* CountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButton.h; sourceTree = "<group>"; };
+		C55F55F21F0B94C4008F0910 /* CountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownButton.m; sourceTree = "<group>"; };
 		C56812291D757621006E6C49 /* IrregularGridCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularGridCollectionView.h; sourceTree = "<group>"; };
 		C568122A1D757621006E6C49 /* IrregularGridCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularGridCollectionView.m; sourceTree = "<group>"; };
 		C568122B1D757621006E6C49 /* MaximumSpacingFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaximumSpacingFlowLayout.h; sourceTree = "<group>"; };
@@ -2582,6 +2585,7 @@
 				C57526C11D5032580064F6CD /* DrawRectObject */,
 				104FCCAF1D235A1700308B73 /* EdgeInsetsLabel */,
 				C524A30B1D520BE30041C962 /* FBGlowLabel */,
+				C55F55F01F0B94BB008F0910 /* CountDownButton */,
 			);
 			name = "UI-Component";
 			sourceTree = "<group>";
@@ -3272,6 +3276,15 @@
 			name = LoadCSSViewController;
 			sourceTree = "<group>";
 		};
+		C55F55F01F0B94BB008F0910 /* CountDownButton */ = {
+			isa = PBXGroup;
+			children = (
+				C55F55F11F0B94C4008F0910 /* CountDownButton.h */,
+				C55F55F21F0B94C4008F0910 /* CountDownButton.m */,
+			);
+			name = CountDownButton;
+			sourceTree = "<group>";
+		};
 		C56812281D757617006E6C49 /* IrregularGridCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3894,6 +3907,7 @@
 				102B1F2B1C60E66F00A8FD40 /* CoverImageModel.m in Sources */,
 				10E2D4ED1CD5962000666EEB /* SDWebImageDownloader.m in Sources */,
 				10667E181C7F2CCA00B9AC08 /* SCViewShakerController.m in Sources */,
+				C55F55F31F0B94C4008F0910 /* CountDownButton.m in Sources */,
 				104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */,
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
 				109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */,
