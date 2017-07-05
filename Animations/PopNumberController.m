@@ -8,15 +8,13 @@
 
 #import "PopNumberController.h"
 #import "POPNumberAnimation.h"
-#import "GCD.h"
-#import "StringAttributeHelper.h"
+#import "AttributedStringConfigHelper.h"
 #import "UIView+SetRect.h"
 #import "UIFont+Fonts.h"
-#import "StringRangeManager.h"
+#import "GCD.h"
 
 @interface PopNumberController () <POPNumberAnimationDelegate>
 
-@property (nonatomic, strong) StringRangeManager *manager;
 @property (nonatomic, strong) POPNumberAnimation *numberAnimation;
 @property (nonatomic, strong) GCDTimer           *timer;
 @property (nonatomic, strong) UILabel            *label;
@@ -26,11 +24,8 @@
 @implementation PopNumberController
 
 - (void)viewDidLoad {
-
-    [super viewDidLoad];
     
-    // Init tools.
-    self.manager = [StringRangeManager new];
+    [super viewDidLoad];
     
     // Init label.
     _label               = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
@@ -56,7 +51,7 @@
 }
 
 - (void)configNumberAnimation {
-
+    
     self.numberAnimation.fromValue      = self.numberAnimation.currentValue;
     self.numberAnimation.toValue        = (arc4random() % 101 / 1.f);
     self.numberAnimation.duration       = 2.f;
@@ -68,48 +63,21 @@
     
     // Init string.
     NSString *numberString = [NSString stringWithFormat:@"%.1f", currentValue];
-    NSString *mpsString    = @"mps";
-    NSString *totalString  = [NSString stringWithFormat:@"%@ %@", numberString, mpsString];
+    NSString *totalString  = [NSString stringWithFormat:@"%@ mps", numberString];
     
-    // Set values.
-    self.manager.content       = totalString;
-    self.manager.parts[@"mps"] = mpsString;
-    self.manager.parts[@"num"] = numberString;
-    
-    // Init attributes.
-    FontAttribute *totalFont = [FontAttribute new];
-    totalFont.font           = [UIFont HYQiHeiWithFontSize:30.f];
-    totalFont.effectRange    = _manager.contentRange;
-    
-    FontAttribute *numberFont = [FontAttribute new];
-    numberFont.font           = [UIFont HYQiHeiWithFontSize:60.f];
-    numberFont.effectRange    = [[[_manager rangesFromPartName:@"num" options:0] firstObject] rangeValue];
-    
-    ForegroundColorAttribute *totalColor = [ForegroundColorAttribute new];
-    totalColor.color                     = [UIColor blackColor];
-    totalColor.effectRange               = _manager.contentRange;
-
-    ForegroundColorAttribute *mpsColor   = [ForegroundColorAttribute new];
-    mpsColor.color                       = [self mpsColorWithValue:currentValue / 100.f];
-    mpsColor.effectRange                 = [[[_manager rangesFromPartName:@"mps" options:0] firstObject] rangeValue];
-    
-    ForegroundColorAttribute *numColor   = [ForegroundColorAttribute new];
-    numColor.color                       = [self numColorWithValue:currentValue / 100.f];
-    numColor.effectRange                 = [[[_manager rangesFromPartName:@"num" options:0] firstObject] rangeValue];
-    
-    // Create richString.
-    NSMutableAttributedString *richString = [[NSMutableAttributedString alloc] initWithString:totalString];
-    [richString addStringAttribute:totalFont];
-    [richString addStringAttribute:totalColor];
-    [richString addStringAttribute:numberFont];
-    [richString addStringAttribute:mpsColor];
-    [richString addStringAttribute:numColor];
+    NSMutableAttributedString *richString = [NSMutableAttributedString mutableAttributedStringWithString:totalString config:^(NSString *string, NSMutableArray<AttributedStringConfig *> *configs) {
+        
+        [configs addObject:[FontAttributeConfig configWithFont:[UIFont HYQiHeiWithFontSize:30.f] range:NSMakeRange(0, string.length)]];
+        [configs addObject:[FontAttributeConfig configWithFont:[UIFont HYQiHeiWithFontSize:60.f] range:NSMakeRange(0, string.length - 4)]];
+        [configs addObject:[ForegroundColorAttributeConfig configWithColor:[self mpsColorWithValue:currentValue / 100.f] range:NSMakeRange(string.length - 4, 4)]];
+        [configs addObject:[ForegroundColorAttributeConfig configWithColor:[self numColorWithValue:currentValue / 100.f] range:NSMakeRange(0, string.length - 4)]];
+    }];
     
     _label.attributedText = richString;
 }
 
 - (UIColor *)numColorWithValue:(CGFloat)value {
-
+    
     return [UIColor colorWithRed:value green:0 blue:0 alpha:1.f];
 }
 

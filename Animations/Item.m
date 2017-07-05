@@ -8,7 +8,7 @@
 
 #import "Item.h"
 #import "UIFont+Fonts.h"
-#import "StringAttributeHelper.h"
+#import "AttributedStringConfigHelper.h"
 
 @interface Item ()
 
@@ -31,35 +31,13 @@
 
     NSString *fullStirng = [NSString stringWithFormat:@"%02ld. %@", (long)self.index, self.name];
     
-    NSMutableAttributedString *richString = [[NSMutableAttributedString alloc] initWithString:fullStirng];
-    
-    {
-        FontAttribute *fontAttribute = [FontAttribute new];
-        fontAttribute.font           = [UIFont HeitiSCWithFontSize:16.f];
-        fontAttribute.effectRange    = NSMakeRange(0, richString.length);
-        [richString addStringAttribute:fontAttribute];
-    }
-    
-    {
-        FontAttribute *fontAttribute = [FontAttribute new];
-        fontAttribute.font           = [UIFont fontWithName:@"GillSans-Italic" size:16.f];
-        fontAttribute.effectRange    = NSMakeRange(0, 3);
-        [richString addStringAttribute:fontAttribute];
-    }
-    
-    {
-        ForegroundColorAttribute *foregroundColorAttribute = [ForegroundColorAttribute new];
-        foregroundColorAttribute.color                     = [[UIColor blackColor] colorWithAlphaComponent:0.65f];
-        foregroundColorAttribute.effectRange               = NSMakeRange(0, richString.length);
-        [richString addStringAttribute:foregroundColorAttribute];
-    }
-    
-    {
-        ForegroundColorAttribute *foregroundColorAttribute = [ForegroundColorAttribute new];
-        foregroundColorAttribute.color                     = [[UIColor redColor] colorWithAlphaComponent:0.65f];
-        foregroundColorAttribute.effectRange               = NSMakeRange(0, 3);
-        [richString addStringAttribute:foregroundColorAttribute];
-    }
+    NSMutableAttributedString *richString = [NSMutableAttributedString mutableAttributedStringWithString:fullStirng config:^(NSString *string, NSMutableArray<AttributedStringConfig *> *configs) {
+        
+        [configs addObject:[FontAttributeConfig configWithFont:[UIFont HeitiSCWithFontSize:16.f] range:NSMakeRange(0, string.length)]];
+        [configs addObject:[FontAttributeConfig configWithFont:[UIFont fontWithName:@"GillSans-Italic" size:16.f] range:NSMakeRange(0, 3)]];
+        [configs addObject:[ForegroundColorAttributeConfig configWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.65f] range:NSMakeRange(0, string.length)]];
+        [configs addObject:[ForegroundColorAttributeConfig configWithColor:[[UIColor redColor] colorWithAlphaComponent:0.65f] range:NSMakeRange(0, 3)]];
+    }];
     
     self.nameString = richString;
 }

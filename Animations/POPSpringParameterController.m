@@ -7,13 +7,11 @@
 //
 
 #import "POPSpringParameterController.h"
+#import "AttributedStringConfigHelper.h"
 #import "RangeValueView.h"
 #import "UIView+SetRect.h"
-#import "POP.h"
-#import "FontAttribute.h"
-#import "ForegroundColorAttribute.h"
-#import "NSMutableAttributedString+StringAttribute.h"
 #import "UIFont+Fonts.h"
+#import "POP.h"
 
 @interface POPSpringParameterController ()
 
@@ -61,29 +59,13 @@
     UIFont *allFont        = [UIFont AvenirWithFontSize:12.f];
     UIFont *numFont        = [UIFont AvenirLightWithFontSize:20.f];
     
-    FontAttribute *totalFont = [FontAttribute new];
-    totalFont.font           = allFont;
-    totalFont.effectRange    = NSMakeRange(0, totalString.length);
-    
-    FontAttribute *valueFont = [FontAttribute new];
-    valueFont.font           = numFont;
-    valueFont.effectRange    = [totalString rangeOfString:stringValue];
-    
-    ForegroundColorAttribute *textColor = [ForegroundColorAttribute new];
-    textColor.color                     = [UIColor grayColor];
-    textColor.effectRange               = NSMakeRange(0, totalString.length);
-    
-    ForegroundColorAttribute *numColor = [ForegroundColorAttribute new];
-    numColor.color                     = [UIColor blackColor];
-    numColor.effectRange               = [totalString rangeOfString:stringValue];
-    
-    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:totalString];
-    [attributeString addStringAttribute:totalFont];
-    [attributeString addStringAttribute:valueFont];
-    [attributeString addStringAttribute:textColor];
-    [attributeString addStringAttribute:numColor];
-    
-    return attributeString;
+    return [NSMutableAttributedString mutableAttributedStringWithString:totalString config:^(NSString *string, NSMutableArray<AttributedStringConfig *> *configs) {
+        
+        [configs addObject:[FontAttributeConfig configWithFont:allFont range:NSMakeRange(0, totalString.length)]];
+        [configs addObject:[FontAttributeConfig configWithFont:numFont range:[totalString rangeOfString:stringValue]]];
+        [configs addObject:[ForegroundColorAttributeConfig configWithColor:[UIColor grayColor] range:NSMakeRange(0, totalString.length)]];
+        [configs addObject:[ForegroundColorAttributeConfig configWithColor:[UIColor blackColor] range:[totalString rangeOfString:stringValue]]];
+    }];
 }
 
 - (void)initButton {

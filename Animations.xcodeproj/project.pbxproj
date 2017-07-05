@@ -171,11 +171,6 @@
 		104F0D191BFB28D700C46E6A /* TranformFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D181BFB28D700C46E6A /* TranformFadeView.m */; };
 		104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D1B1BFC113A00C46E6A /* PopNumberController.m */; };
 		104F0D201BFC118900C46E6A /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D1F1BFC118900C46E6A /* POPNumberAnimation.m */; };
-		104F0D311BFC1C9C00C46E6A /* StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D241BFC1C9C00C46E6A /* StringAttribute.m */; };
-		104F0D321BFC1C9C00C46E6A /* FontAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D281BFC1C9C00C46E6A /* FontAttribute.m */; };
-		104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2A1BFC1C9C00C46E6A /* ForegroundColorAttribute.m */; };
-		104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2D1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m */; };
-		104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */; };
 		104FCCA41D23573D00308B73 /* TapPathDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104FCC9B1D23573D00308B73 /* TapPathDrawViewController.m */; };
 		104FCCA51D23573D00308B73 /* TapDrawPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 104FCC9D1D23573D00308B73 /* TapDrawPath.m */; };
 		104FCCA61D23573D00308B73 /* TapDrawImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104FCC9F1D23573D00308B73 /* TapDrawImageView.m */; };
@@ -317,6 +312,13 @@
 		B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0119D1C0BE33E0075BC2E /* StudentModel.m */; };
 		B5D011A71C0BE3D30075BC2E /* ClassHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011A51C0BE3D30075BC2E /* ClassHeaderView.m */; };
 		B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */; };
+		C501F2191F0C7DE90051B4C6 /* AttributedStringConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F20B1F0C7DE90051B4C6 /* AttributedStringConfig.m */; };
+		C501F21A1F0C7DE90051B4C6 /* FontAttributeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F20E1F0C7DE90051B4C6 /* FontAttributeConfig.m */; };
+		C501F21B1F0C7DE90051B4C6 /* ForegroundColorAttributeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2101F0C7DE90051B4C6 /* ForegroundColorAttributeConfig.m */; };
+		C501F21C1F0C7DE90051B4C6 /* ParagraphAttributeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2121F0C7DE90051B4C6 /* ParagraphAttributeConfig.m */; };
+		C501F21D1F0C7DE90051B4C6 /* NSAttributedString+AttributedStringConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2141F0C7DE90051B4C6 /* NSAttributedString+AttributedStringConfig.m */; };
+		C501F21E1F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2161F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.m */; };
+		C501F21F1F0C7DE90051B4C6 /* NSString+AttributedStringConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2181F0C7DE90051B4C6 /* NSString+AttributedStringConfig.m */; };
 		C503B3671E1B422600967A61 /* BaseMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C503B3661E1B422600967A61 /* BaseMessageView.m */; };
 		C503B36A1E1B468F00967A61 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C503B3691E1B468F00967A61 /* MessageView.m */; };
 		C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */; };
@@ -761,18 +763,6 @@
 		104F0D1B1BFC113A00C46E6A /* PopNumberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopNumberController.m; sourceTree = "<group>"; };
 		104F0D1E1BFC118900C46E6A /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
 		104F0D1F1BFC118900C46E6A /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
-		104F0D231BFC1C9C00C46E6A /* StringAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringAttribute.h; sourceTree = "<group>"; };
-		104F0D241BFC1C9C00C46E6A /* StringAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringAttribute.m; sourceTree = "<group>"; };
-		104F0D251BFC1C9C00C46E6A /* StringAttributeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringAttributeProtocol.h; sourceTree = "<group>"; };
-		104F0D271BFC1C9C00C46E6A /* FontAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAttribute.h; sourceTree = "<group>"; };
-		104F0D281BFC1C9C00C46E6A /* FontAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontAttribute.m; sourceTree = "<group>"; };
-		104F0D291BFC1C9C00C46E6A /* ForegroundColorAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForegroundColorAttribute.h; sourceTree = "<group>"; };
-		104F0D2A1BFC1C9C00C46E6A /* ForegroundColorAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForegroundColorAttribute.m; sourceTree = "<group>"; };
-		104F0D2C1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+StringAttribute.h"; sourceTree = "<group>"; };
-		104F0D2D1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+StringAttribute.m"; sourceTree = "<group>"; };
-		104F0D2E1BFC1C9C00C46E6A /* NSString+StringAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringAttribute.h"; sourceTree = "<group>"; };
-		104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringAttribute.m"; sourceTree = "<group>"; };
-		104F0D301BFC1C9C00C46E6A /* StringAttributeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringAttributeHelper.h; sourceTree = "<group>"; };
 		104FCC9A1D23573D00308B73 /* TapPathDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapPathDrawViewController.h; sourceTree = "<group>"; };
 		104FCC9B1D23573D00308B73 /* TapPathDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapPathDrawViewController.m; sourceTree = "<group>"; };
 		104FCC9C1D23573D00308B73 /* TapDrawPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDrawPath.h; sourceTree = "<group>"; };
@@ -1061,6 +1051,21 @@
 		B5D011A51C0BE3D30075BC2E /* ClassHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassHeaderView.m; sourceTree = "<group>"; };
 		B5D011A81C0BE7F00075BC2E /* CustomHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderFooterView.h; sourceTree = "<group>"; };
 		B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderFooterView.m; sourceTree = "<group>"; };
+		C501F20A1F0C7DE90051B4C6 /* AttributedStringConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedStringConfig.h; sourceTree = "<group>"; };
+		C501F20B1F0C7DE90051B4C6 /* AttributedStringConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedStringConfig.m; sourceTree = "<group>"; };
+		C501F20D1F0C7DE90051B4C6 /* FontAttributeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAttributeConfig.h; sourceTree = "<group>"; };
+		C501F20E1F0C7DE90051B4C6 /* FontAttributeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontAttributeConfig.m; sourceTree = "<group>"; };
+		C501F20F1F0C7DE90051B4C6 /* ForegroundColorAttributeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForegroundColorAttributeConfig.h; sourceTree = "<group>"; };
+		C501F2101F0C7DE90051B4C6 /* ForegroundColorAttributeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForegroundColorAttributeConfig.m; sourceTree = "<group>"; };
+		C501F2111F0C7DE90051B4C6 /* ParagraphAttributeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParagraphAttributeConfig.h; sourceTree = "<group>"; };
+		C501F2121F0C7DE90051B4C6 /* ParagraphAttributeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParagraphAttributeConfig.m; sourceTree = "<group>"; };
+		C501F2131F0C7DE90051B4C6 /* NSAttributedString+AttributedStringConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+AttributedStringConfig.h"; sourceTree = "<group>"; };
+		C501F2141F0C7DE90051B4C6 /* NSAttributedString+AttributedStringConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+AttributedStringConfig.m"; sourceTree = "<group>"; };
+		C501F2151F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+AttributedStringConfig.h"; sourceTree = "<group>"; };
+		C501F2161F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+AttributedStringConfig.m"; sourceTree = "<group>"; };
+		C501F2171F0C7DE90051B4C6 /* NSString+AttributedStringConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AttributedStringConfig.h"; sourceTree = "<group>"; };
+		C501F2181F0C7DE90051B4C6 /* NSString+AttributedStringConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AttributedStringConfig.m"; sourceTree = "<group>"; };
+		C501F2201F0C7E580051B4C6 /* AttributedStringConfigHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributedStringConfigHelper.h; sourceTree = "<group>"; };
 		C503B3651E1B422600967A61 /* BaseMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMessageView.h; sourceTree = "<group>"; };
 		C503B3661E1B422600967A61 /* BaseMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMessageView.m; sourceTree = "<group>"; };
 		C503B3681E1B468F00967A61 /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
@@ -1455,7 +1460,7 @@
 				1017F0FB1C356EE700E245F8 /* SDWebImage */,
 				103088B41C05880000C8B623 /* Math */,
 				103088651C03F19500C8B623 /* Easing */,
-				104F0D211BFC1C9C00C46E6A /* StringAttribute */,
+				C501F2091F0C7DE90051B4C6 /* AttributedStringConfig */,
 				105AFB4C1CF18CF5003DD84A /* StringRangeManager */,
 				104F0D091BFAFB5400C46E6A /* CGContextObject */,
 				C582E8151D2FB076003433EC /* CalendarEvent */,
@@ -2317,49 +2322,6 @@
 			name = PopNumberController;
 			sourceTree = "<group>";
 		};
-		104F0D211BFC1C9C00C46E6A /* StringAttribute */ = {
-			isa = PBXGroup;
-			children = (
-				104F0D221BFC1C9C00C46E6A /* AbstractAttribute */,
-				104F0D261BFC1C9C00C46E6A /* ConcreteAttribute */,
-				104F0D2B1BFC1C9C00C46E6A /* StringAttribute+Category */,
-				104F0D301BFC1C9C00C46E6A /* StringAttributeHelper.h */,
-			);
-			path = StringAttribute;
-			sourceTree = "<group>";
-		};
-		104F0D221BFC1C9C00C46E6A /* AbstractAttribute */ = {
-			isa = PBXGroup;
-			children = (
-				104F0D231BFC1C9C00C46E6A /* StringAttribute.h */,
-				104F0D241BFC1C9C00C46E6A /* StringAttribute.m */,
-				104F0D251BFC1C9C00C46E6A /* StringAttributeProtocol.h */,
-			);
-			path = AbstractAttribute;
-			sourceTree = "<group>";
-		};
-		104F0D261BFC1C9C00C46E6A /* ConcreteAttribute */ = {
-			isa = PBXGroup;
-			children = (
-				104F0D271BFC1C9C00C46E6A /* FontAttribute.h */,
-				104F0D281BFC1C9C00C46E6A /* FontAttribute.m */,
-				104F0D291BFC1C9C00C46E6A /* ForegroundColorAttribute.h */,
-				104F0D2A1BFC1C9C00C46E6A /* ForegroundColorAttribute.m */,
-			);
-			path = ConcreteAttribute;
-			sourceTree = "<group>";
-		};
-		104F0D2B1BFC1C9C00C46E6A /* StringAttribute+Category */ = {
-			isa = PBXGroup;
-			children = (
-				104F0D2C1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.h */,
-				104F0D2D1BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m */,
-				104F0D2E1BFC1C9C00C46E6A /* NSString+StringAttribute.h */,
-				104F0D2F1BFC1C9C00C46E6A /* NSString+StringAttribute.m */,
-			);
-			path = "StringAttribute+Category";
-			sourceTree = "<group>";
-		};
 		104FCC991D23573200308B73 /* TapPathDrawViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -3093,6 +3055,36 @@
 			name = RotateView;
 			sourceTree = "<group>";
 		};
+		C501F2091F0C7DE90051B4C6 /* AttributedStringConfig */ = {
+			isa = PBXGroup;
+			children = (
+				C501F2201F0C7E580051B4C6 /* AttributedStringConfigHelper.h */,
+				C501F20A1F0C7DE90051B4C6 /* AttributedStringConfig.h */,
+				C501F20B1F0C7DE90051B4C6 /* AttributedStringConfig.m */,
+				C501F20C1F0C7DE90051B4C6 /* ConcreteAttributeStringConfigs */,
+				C501F2131F0C7DE90051B4C6 /* NSAttributedString+AttributedStringConfig.h */,
+				C501F2141F0C7DE90051B4C6 /* NSAttributedString+AttributedStringConfig.m */,
+				C501F2151F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.h */,
+				C501F2161F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.m */,
+				C501F2171F0C7DE90051B4C6 /* NSString+AttributedStringConfig.h */,
+				C501F2181F0C7DE90051B4C6 /* NSString+AttributedStringConfig.m */,
+			);
+			path = AttributedStringConfig;
+			sourceTree = "<group>";
+		};
+		C501F20C1F0C7DE90051B4C6 /* ConcreteAttributeStringConfigs */ = {
+			isa = PBXGroup;
+			children = (
+				C501F20D1F0C7DE90051B4C6 /* FontAttributeConfig.h */,
+				C501F20E1F0C7DE90051B4C6 /* FontAttributeConfig.m */,
+				C501F20F1F0C7DE90051B4C6 /* ForegroundColorAttributeConfig.h */,
+				C501F2101F0C7DE90051B4C6 /* ForegroundColorAttributeConfig.m */,
+				C501F2111F0C7DE90051B4C6 /* ParagraphAttributeConfig.h */,
+				C501F2121F0C7DE90051B4C6 /* ParagraphAttributeConfig.m */,
+			);
+			path = ConcreteAttributeStringConfigs;
+			sourceTree = "<group>";
+		};
 		C503B3641E1B421600967A61 /* BaseMessageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3599,7 +3591,6 @@
 				100D4B1A1D27A3A300EDE29B /* AppleSystemService.m in Sources */,
 				C59608CC1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m in Sources */,
 				C517332A1D45AFDE005D57AE /* UITextFieldView.m in Sources */,
-				104F0D311BFC1C9C00C46E6A /* StringAttribute.m in Sources */,
 				1011BAE31CD48C8D00F29FB9 /* NodePressAnimationView.m in Sources */,
 				104F0D051BFAFB4200C46E6A /* GradientColor.m in Sources */,
 				C516418F1EF76E010037C550 /* AFAutoPurgingImageCache.m in Sources */,
@@ -3653,6 +3644,7 @@
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
+				C501F21E1F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.m in Sources */,
 				C57839D31E0F4EAB004530E3 /* RedStyle.m in Sources */,
 				C51733221D45AFB8005D57AE /* TouchEventView.m in Sources */,
 				10E2D5151CD63F0900666EEB /* iCarouselViewController.m in Sources */,
@@ -3660,6 +3652,7 @@
 				C5C606341E1F7593004E8FDD /* CircleLoadingView.m in Sources */,
 				1057021F1CF6DB2B003B10C6 /* SelectedIconButton.m in Sources */,
 				C5AB56781E1B8106003B388F /* AlertView.m in Sources */,
+				C501F21A1F0C7DE90051B4C6 /* FontAttributeConfig.m in Sources */,
 				B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */,
 				1047D0F21C465753009ADED6 /* InfiniteRotationView.m in Sources */,
 				C517332C1D45AFDE005D57AE /* AbsTextFieldViewValidator.m in Sources */,
@@ -3675,7 +3668,6 @@
 				C56851CA1DE6D3E7000F18C2 /* ContentIconCell.m in Sources */,
 				102296B61C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				10E2D5081CD5DC4500666EEB /* FontListCell.m in Sources */,
-				104F0D341BFC1C9C00C46E6A /* NSMutableAttributedString+StringAttribute.m in Sources */,
 				10E2D4EC1CD5962000666EEB /* SDWebImageDecoder.m in Sources */,
 				102B1F351C60E66F00A8FD40 /* UserModel.m in Sources */,
 				104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */,
@@ -3706,6 +3698,7 @@
 				104CD3091CDAD4B700C836E6 /* GridManager.m in Sources */,
 				10E2D50E1CD5DE0400666EEB /* FontInfoModel.m in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
+				C501F21B1F0C7DE90051B4C6 /* ForegroundColorAttributeConfig.m in Sources */,
 				10381FD41BF9D8B300E5E476 /* FillCircleLayerConfigure.m in Sources */,
 				1011BAA61CD48A1C00F29FB9 /* WanDouJiaDataSerializer.m in Sources */,
 				10E2D4F01CD5962000666EEB /* SDWebImagePrefetcher.m in Sources */,
@@ -3729,10 +3722,12 @@
 				105702151CF6CF05003B10C6 /* POPBaseControl.m in Sources */,
 				C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */,
 				1011BA9E1CD4898D00F29FB9 /* ConsumptionModel.m in Sources */,
+				C501F21D1F0C7DE90051B4C6 /* NSAttributedString+AttributedStringConfig.m in Sources */,
 				C545535C1E1CD76E00A5BA58 /* iCarouselView.m in Sources */,
 				C59062231DEC3908002562AE /* CAShapeLayer+CornerRadius.m in Sources */,
 				1020E2D31C73197B00FF233E /* CAGradientView.m in Sources */,
 				106BCFCB1CDC6787007C3EEE /* CustomNodeStateView.m in Sources */,
+				C501F2191F0C7DE90051B4C6 /* AttributedStringConfig.m in Sources */,
 				1096061B1C93B46800CCB3AD /* RequestBodyType.m in Sources */,
 				10E2D4F21CD5962000666EEB /* UIImage+GIF.m in Sources */,
 				1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */,
@@ -3756,6 +3751,7 @@
 				1041AE6D1CEC4507005697B8 /* CustomCollectionCell.m in Sources */,
 				102296B11C38D122001AF5BB /* ResponseData.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
+				C501F21C1F0C7DE90051B4C6 /* ParagraphAttributeConfig.m in Sources */,
 				105AFB4B1CF18CEF003DD84A /* NSString+Range.m in Sources */,
 				1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */,
 				C56812321D757621006E6C49 /* MaximumSpacingFlowLayout.m in Sources */,
@@ -3854,7 +3850,6 @@
 				1047E2341CC5AF5400E13D1C /* LazyFadeInViewController.m in Sources */,
 				C54553641E1CD7CA00A5BA58 /* ScrollCarouselView.m in Sources */,
 				1051890C1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m in Sources */,
-				104F0D321BFC1C9C00C46E6A /* FontAttribute.m in Sources */,
 				1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */,
 				C516F83F1ECA94B000A418C8 /* ControllerBaseViewConfig.m in Sources */,
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
@@ -3887,6 +3882,7 @@
 				1068FCCD1CF7D87A00BE431C /* PressScaleButton.m in Sources */,
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
 				10D4F6111C41538C00D056EB /* PressAnimationButton.m in Sources */,
+				C501F21F1F0C7DE90051B4C6 /* NSString+AttributedStringConfig.m in Sources */,
 				102B1F311C60E66F00A8FD40 /* MentionsModel.m in Sources */,
 				C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */,
 				10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */,
@@ -3907,7 +3903,6 @@
 				102296B01C38D122001AF5BB /* PictureData.m in Sources */,
 				104326941C4B9D570033CEC0 /* SpringEffectController.m in Sources */,
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
-				104F0D351BFC1C9C00C46E6A /* NSString+StringAttribute.m in Sources */,
 				10651F611D2BB2BC004AF473 /* CustomInfiniteLoopCell.m in Sources */,
 				C56B7AF71D470E19009AE3C8 /* UIButton+Event.m in Sources */,
 				102B1F331C60E66F00A8FD40 /* SourceModel.m in Sources */,
@@ -3926,7 +3921,6 @@
 				10667E181C7F2CCA00B9AC08 /* SCViewShakerController.m in Sources */,
 				C55F55F31F0B94C4008F0910 /* CountDownButton.m in Sources */,
 				C55F55F61F0B95E7008F0910 /* BaseCustomNavigationController.m in Sources */,
-				104F0D331BFC1C9C00C46E6A /* ForegroundColorAttribute.m in Sources */,
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
 				109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */,
 				102ED87A1C3C005800E9863E /* MixedColorProgressViewController.m in Sources */,
