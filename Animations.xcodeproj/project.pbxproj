@@ -319,6 +319,9 @@
 		C501F21D1F0C7DE90051B4C6 /* NSAttributedString+AttributedStringConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2141F0C7DE90051B4C6 /* NSAttributedString+AttributedStringConfig.m */; };
 		C501F21E1F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2161F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.m */; };
 		C501F21F1F0C7DE90051B4C6 /* NSString+AttributedStringConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2181F0C7DE90051B4C6 /* NSString+AttributedStringConfig.m */; };
+		C501F2241F0C8BDB0051B4C6 /* CountDownButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2231F0C8BDB0051B4C6 /* CountDownButtonController.m */; };
+		C501F2271F0C8CC80051B4C6 /* RedCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2261F0C8CC80051B4C6 /* RedCountDownButton.m */; };
+		C501F2511F0CC4000051B4C6 /* RegexManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2501F0CC4000051B4C6 /* RegexManager.m */; };
 		C503B3671E1B422600967A61 /* BaseMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C503B3661E1B422600967A61 /* BaseMessageView.m */; };
 		C503B36A1E1B468F00967A61 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C503B3691E1B468F00967A61 /* MessageView.m */; };
 		C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */; };
@@ -1066,6 +1069,12 @@
 		C501F2171F0C7DE90051B4C6 /* NSString+AttributedStringConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AttributedStringConfig.h"; sourceTree = "<group>"; };
 		C501F2181F0C7DE90051B4C6 /* NSString+AttributedStringConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AttributedStringConfig.m"; sourceTree = "<group>"; };
 		C501F2201F0C7E580051B4C6 /* AttributedStringConfigHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributedStringConfigHelper.h; sourceTree = "<group>"; };
+		C501F2221F0C8BDB0051B4C6 /* CountDownButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButtonController.h; sourceTree = "<group>"; };
+		C501F2231F0C8BDB0051B4C6 /* CountDownButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownButtonController.m; sourceTree = "<group>"; };
+		C501F2251F0C8CC80051B4C6 /* RedCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedCountDownButton.h; sourceTree = "<group>"; };
+		C501F2261F0C8CC80051B4C6 /* RedCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedCountDownButton.m; sourceTree = "<group>"; };
+		C501F24F1F0CC4000051B4C6 /* RegexManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexManager.h; sourceTree = "<group>"; };
+		C501F2501F0CC4000051B4C6 /* RegexManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexManager.m; sourceTree = "<group>"; };
 		C503B3651E1B422600967A61 /* BaseMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMessageView.h; sourceTree = "<group>"; };
 		C503B3661E1B422600967A61 /* BaseMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMessageView.m; sourceTree = "<group>"; };
 		C503B3681E1B468F00967A61 /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
@@ -1439,6 +1448,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C501F24E1F0CC3F50051B4C6 /* RegexManager */,
 				C5EE65B21E1B39FC00DDF591 /* IndexRange */,
 				102A0FF41C92725400BF3F1B /* NSData+GZip */,
 				105189091D0A65D500F606FB /* NSObject+Category */,
@@ -2068,6 +2078,7 @@
 				C56851C41DE6C1F8000F18C2 /* MixCellsViewController */,
 				C54553541E1CD6B100A5BA58 /* ScrollCarouselViewController */,
 				C55736301E837961001CDC9A /* LoadCSSViewController */,
+				C501F2211F0C8BBB0051B4C6 /* CountDownButtonController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -3085,6 +3096,26 @@
 			path = ConcreteAttributeStringConfigs;
 			sourceTree = "<group>";
 		};
+		C501F2211F0C8BBB0051B4C6 /* CountDownButtonController */ = {
+			isa = PBXGroup;
+			children = (
+				C501F2221F0C8BDB0051B4C6 /* CountDownButtonController.h */,
+				C501F2231F0C8BDB0051B4C6 /* CountDownButtonController.m */,
+				C501F2251F0C8CC80051B4C6 /* RedCountDownButton.h */,
+				C501F2261F0C8CC80051B4C6 /* RedCountDownButton.m */,
+			);
+			name = CountDownButtonController;
+			sourceTree = "<group>";
+		};
+		C501F24E1F0CC3F50051B4C6 /* RegexManager */ = {
+			isa = PBXGroup;
+			children = (
+				C501F24F1F0CC4000051B4C6 /* RegexManager.h */,
+				C501F2501F0CC4000051B4C6 /* RegexManager.m */,
+			);
+			name = RegexManager;
+			sourceTree = "<group>";
+		};
 		C503B3641E1B421600967A61 /* BaseMessageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3496,7 +3527,8 @@
 				TargetAttributes = {
 					10381F4C1BF9B44A00E5E476 = {
 						CreatedOnToolsVersion = 7.1;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = HT95VAK372;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -3712,6 +3744,7 @@
 				104326641C4B172F0033CEC0 /* ProgressColor.m in Sources */,
 				109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */,
 				10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */,
+				C501F2511F0CC4000051B4C6 /* RegexManager.m in Sources */,
 				C51641921EF76E010037C550 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				B5D011A71C0BE3D30075BC2E /* ClassHeaderView.m in Sources */,
 				107CF3951C2FFC01002DF93C /* LiveImageViewController.m in Sources */,
@@ -3773,6 +3806,7 @@
 				10A67C5B1C12D4BA00C3E505 /* CGContextObjectConfig.m in Sources */,
 				C57526CD1D5032690064F6CD /* DrawingColor.m in Sources */,
 				109D5B521C0EC15D0039CB04 /* CountDownTimeCell.m in Sources */,
+				C501F2271F0C8CC80051B4C6 /* RedCountDownButton.m in Sources */,
 				109606191C93B46800CCB3AD /* AbsNetworking.m in Sources */,
 				B5D011991C0BE3210075BC2E /* StudentInfoCell.m in Sources */,
 				C516418B1EF76E010037C550 /* AFSecurityPolicy.m in Sources */,
@@ -3918,6 +3952,7 @@
 				104F0D201BFC118900C46E6A /* POPNumberAnimation.m in Sources */,
 				102B1F2B1C60E66F00A8FD40 /* CoverImageModel.m in Sources */,
 				10E2D4ED1CD5962000666EEB /* SDWebImageDownloader.m in Sources */,
+				C501F2241F0C8BDB0051B4C6 /* CountDownButtonController.m in Sources */,
 				10667E181C7F2CCA00B9AC08 /* SCViewShakerController.m in Sources */,
 				C55F55F31F0B94C4008F0910 /* CountDownButton.m in Sources */,
 				C55F55F61F0B95E7008F0910 /* BaseCustomNavigationController.m in Sources */,
@@ -4040,7 +4075,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HT95VAK372;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -4060,7 +4095,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HT95VAK372;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

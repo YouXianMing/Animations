@@ -74,8 +74,11 @@
 
 - (void)showNormalContentView:(BOOL)show {
     
-    self.nomalContentView.hidden     = !show;
-    self.countDownContentView.hidden = show;
+    [UIView animateWithDuration:0.1f animations:^{
+        
+        self.nomalContentView.alpha     = show ? 1 : 0;
+        self.countDownContentView.alpha = show ? 0 : 1;
+    }];
 }
 
 - (void)buttonEvent:(UIButton *)button {
