@@ -10,9 +10,9 @@
 
 @interface RegexManager ()
 
-@property (nonatomic, strong) NSRegularExpression *regex;
-@property (nonatomic)         NSUInteger                         numberOfMatches;
-@property (nonatomic, strong) NSMutableArray <NSValue *>        *matchs;
+@property (nonatomic, strong) NSRegularExpression        *regex;
+@property (nonatomic)         NSUInteger                  numberOfMatches;
+@property (nonatomic, strong) NSMutableArray <NSValue *> *matchs;
 
 @end
 
