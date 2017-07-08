@@ -12,7 +12,6 @@
 #import "CellDataAdapter.h"
 #import "UIFont+Fonts.h"
 #import "UIView+SetRect.h"
-#import "UITableView+CellClass.h"
 #import "GCD.h"
 
 @interface TapCellAnimationController () <UITableViewDelegate, UITableViewDataSource>
@@ -90,7 +89,7 @@
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.contentView addSubview:self.tableView];
-    [self.tableView registerCellsClass:@[cellClass(@"ShowTextCell", nil)]];
+    [ShowTextCell registerToTableView:self.tableView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -100,7 +99,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_datasArray[indexPath.row] indexPath:indexPath];
+    return [tableView dequeueReusableCellAndLoadDataWithAdapter:_datasArray[indexPath.row] indexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

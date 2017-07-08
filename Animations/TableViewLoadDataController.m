@@ -16,7 +16,6 @@
 #import "UIView+SetRect.h"
 #import "MessageView.h"
 #import "LoadingView.h"
-#import "UITableView+CellClass.h"
 #import "GCD.h"
 
 @interface TableViewLoadDataController () <UITableViewDelegate, UITableViewDataSource, AbsNetworkingDelegate>
@@ -65,7 +64,7 @@
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerCellsClass:@[cellClass(@"LoadUrlDataCell", nil)]];
+    [LoadUrlDataCell registerToTableView:self.tableView];
     [self.contentView addSubview:self.tableView];
 }
 
@@ -76,7 +75,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_datasArray[indexPath.row] indexPath:indexPath];
+    return [tableView dequeueReusableCellAndLoadDataWithAdapter:_datasArray[indexPath.row] indexPath:indexPath];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

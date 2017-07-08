@@ -10,7 +10,6 @@
 #import "PictureCell.h"
 #import "PictureModel.h"
 #import "UIView+SetRect.h"
-#import "UITableView+CellClass.h"
 
 @interface SDWebImageController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -55,7 +54,7 @@
     self.tableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight       = Width;
     self.tableView.backgroundColor = [UIColor blackColor];
-    [self.tableView registerCellsClass:@[cellClass(@"PictureCell", nil)]];
+    [PictureCell registerToTableView:self.tableView];
     [self.contentView addSubview:self.tableView];
 }
 
@@ -68,7 +67,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_modelsArray[indexPath.row] indexPath:indexPath];
+    return [tableView dequeueReusableCellAndLoadDataWithAdapter:_modelsArray[indexPath.row] indexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {

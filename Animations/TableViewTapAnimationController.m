@@ -8,7 +8,6 @@
 
 #import "TableViewTapAnimationController.h"
 #import "TableViewTapAnimationCell.h"
-#import "UITableView+CellClass.h"
 #import "UIView+SetRect.h"
 #import "TapAnimationModel.h"
 
@@ -41,7 +40,7 @@
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerCellsClass:@[cellClass(@"TableViewTapAnimationCell", nil)]];
+    [TableViewTapAnimationCell registerToTableView:self.tableView];
     [self.contentView addSubview:self.tableView];
 }
 
@@ -54,7 +53,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_dataArray[indexPath.row] indexPath:indexPath];
+    return [tableView dequeueReusableCellAndLoadDataWithAdapter:_dataArray[indexPath.row] indexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

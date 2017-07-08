@@ -9,7 +9,6 @@
 #import "CountDownTimerController.h"
 #import "CountDownTimeCell.h"
 #import "TimeModel.h"
-#import "UITableView+CellClass.h"
 #import "UIView+SetRect.h"
 
 @interface CountDownTimerController () <UITableViewDelegate, UITableViewDataSource>
@@ -62,7 +61,7 @@
     self.tableView.dataSource     = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight      = 60.f;
-    [self.tableView registerCellsClass:@[cellClass(@"CountDownTimeCell", nil)]];
+    [CountDownTimeCell registerToTableView:self.tableView];
     [self.contentView addSubview:self.tableView];
 }
 
@@ -94,7 +93,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_timesArray[indexPath.row] indexPath:indexPath];
+    return [tableView dequeueReusableCellAndLoadDataWithAdapter:_timesArray[indexPath.row] indexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {

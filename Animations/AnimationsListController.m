@@ -10,7 +10,6 @@
 #import "UIView+AnimationsListViewController.h"
 #import "UIView+SetRect.h"
 #import "UIView+GlowView.h"
-#import "UITableView+CellClass.h"
 #import "ListItemCell.h"
 #import "BackgroundLineView.h"
 #import "DefaultNotificationCenter.h"
@@ -282,7 +281,7 @@
         item.index = i + 1;
         [item createAttributedString];
         
-        [self.items addObject:[ListItemCell dataAdapterWithCellReuseIdentifier:nil data:item cellHeight:0 type:0]];
+        [self.items addObject:[ListItemCell dataAdapterWithData:item]];
     }
 }
 
@@ -307,7 +306,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [tableView dequeueAndLoadContentReusableCellFromAdapter:_items[indexPath.row] indexPath:indexPath controller:self];
+    CustomCell *cell = [tableView dequeueReusableCellAndLoadDataWithAdapter:_items[indexPath.row] indexPath:indexPath];
+    cell.controller  = self;
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

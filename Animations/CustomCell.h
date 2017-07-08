@@ -66,22 +66,22 @@
 #pragma mark - Method you should overwrite.
 
 /**
- *  Setup cell, override by subclass.
+ *  Setup cell, overwrite by subclass.
  */
 - (void)setupCell;
 
 /**
- *  Build subview, override by subclass.
+ *  Build subview, overwrite by subclass.
  */
 - (void)buildSubview;
 
 /**
- *  Load content, override by subclass.
+ *  Load content, overwrite by subclass.
  */
 - (void)loadContent;
 
 /**
- *  Calculate the cell's from data, override by subclass.
+ *  Calculate the cell's from data, overwrite by subclass.
  *
  *  @param data Data.
  *
@@ -116,8 +116,10 @@
  *
  *  @return Cell's dataAdapter.
  */
-+ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data
-                                             cellHeight:(CGFloat)height type:(NSInteger)type;
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
+                                                   data:(id)data
+                                             cellHeight:(CGFloat)height
+                                                   type:(NSInteger)type;
 
 /**
  *  Create the cell's dataAdapter.
@@ -125,13 +127,15 @@
  *  @param reuseIdentifier Cell reuseIdentifier, can be nil.
  *  @param data            Cell's data, can be nil.
  *  @param height          Cell's height.
- *  @param width           Cell's width.
+ *  @param cellWidth       Cell's width.
  *  @param type            Cell's type.
  *
  *  @return Cell's dataAdapter.
  */
-+ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data
-                                             cellHeight:(CGFloat)height cellWidth:(CGFloat)cellWidth
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
+                                                   data:(id)data
+                                             cellHeight:(CGFloat)height
+                                              cellWidth:(CGFloat)cellWidth
                                                    type:(NSInteger)type;
 
 /**
@@ -143,7 +147,9 @@
  *
  *  @return Cell's dataAdapter.
  */
-+ (CellDataAdapter *)dataAdapterWithData:(id)data cellHeight:(CGFloat)height type:(NSInteger)type;
++ (CellDataAdapter *)dataAdapterWithData:(id)data
+                              cellHeight:(CGFloat)height
+                                    type:(NSInteger)type;
 
 /**
  *  Create the cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
@@ -153,7 +159,8 @@
  *
  *  @return Cell's dataAdapter.
  */
-+ (CellDataAdapter *)dataAdapterWithData:(id)data cellHeight:(CGFloat)height;
++ (CellDataAdapter *)dataAdapterWithData:(id)data
+                              cellHeight:(CGFloat)height;
 
 /**
  *  Create the cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
@@ -165,15 +172,83 @@
 + (CellDataAdapter *)dataAdapterWithData:(id)data;
 
 /**
- *  Convenient method to set some weak reference.
- *
- *  @param dataAdapter CellDataAdapter's object.
- *  @param data        Data.
- *  @param indexPath   IndexPath.
- *  @param tableView   TableView.
+ Create the cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
+ 
+ @param height Cell's height.
+ @return Cell's dataAdapter.
  */
-- (void)setWeakReferenceWithCellDataAdapter:(CellDataAdapter *)dataAdapter data:(id)data
-                                  indexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView;
++ (CellDataAdapter *)dataAdapterWithCellHeight:(CGFloat)height;
+
+/**
+ Create the layout type cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
+ 
+ @param reuseIdentifier Cell reuseIdentifier, can be nil.
+ @param data Cell's data, can be nil.
+ @param type Cell's type.
+ @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)layoutTypeAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data type:(NSInteger)type;
+
+/**
+ Create the layout type cell's dataAdapter.
+ 
+ @param data Cell's data, can be nil.
+ @param type Cell's type.
+ @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)layoutTypeAdapterWithData:(id)data type:(NSInteger)type;
+
+/**
+ Create the layout type cell's dataAdapter.
+ 
+ @param data Cell's data, can be nil.
+ @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)layoutTypeAdapterWithData:(id)data;
+
+/**
+ Create the layout type cell's dataAdapter.
+ 
+ @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)layoutTypeAdapter;
+
+/**
+ Set the dataAdapter and load content.
+ 
+ @param dataAdapter The CellDataAdapter.
+ @param indexPath The indexPath.
+ */
+- (void)loadContentWithAdapter:(CellDataAdapter *)dataAdapter indexPath:(NSIndexPath *)indexPath;
+
+/**
+ Set the dataAdapter and load content.
+ 
+ @param dataAdapter The CellDataAdapter.
+ */
+- (void)loadContentWithAdapter:(CellDataAdapter *)dataAdapter;
+
+/**
+ Set the dataAdapter and load content.
+ 
+ @param dataAdapter The CellDataAdapter.
+ @param delegate The delegate
+ @param indexPath The indexPath.
+ */
+- (void)loadContentWithAdapter:(CellDataAdapter *)dataAdapter delegate:(id <CustomCellDelegate>)delegate indexPath:(NSIndexPath *)indexPath;
+
+/**
+ Set the dataAdapter and load content.
+ 
+ @param dataAdapter The CellDataAdapter.
+ @param delegate The delegate.
+ @param tableView The tableView.
+ @param indexPath The indexPath.
+ */
+- (void)loadContentWithAdapter:(CellDataAdapter *)dataAdapter
+                      delegate:(id <CustomCellDelegate>)delegate
+                     tableView:(UITableView *)tableView
+                     indexPath:(NSIndexPath *)indexPath;
 
 /**
  *  Register to tableView with the reuseIdentifier you specified.
@@ -181,7 +256,8 @@
  *  @param tableView       TableView.
  *  @param reuseIdentifier The cell reuseIdentifier.
  */
-+ (void)registerToTableView:(UITableView *)tableView reuseIdentifier:(NSString *)reuseIdentifier;
++ (void)registerToTableView:(UITableView *)tableView
+            reuseIdentifier:(NSString *)reuseIdentifier;
 
 /**
  *  Register to tableView with the The class name.
@@ -189,5 +265,18 @@
  *  @param tableView       TableView.
  */
 + (void)registerToTableView:(UITableView *)tableView;
+
+@end
+
+#pragma mark - UITableView category.
+
+@interface UITableView (CustomCell)
+
+- (CustomCell *)dequeueReusableCellAndLoadDataWithAdapter:(CellDataAdapter *)adapter indexPath:(NSIndexPath *)indexPath;
+
+- (CustomCell *)dequeueReusableCellAndLoadDataWithAdapter:(CellDataAdapter *)adapter delegate:(id <CustomCellDelegate>)delegate
+                                                indexPath:(NSIndexPath *)indexPath;
+
+- (CGFloat)cellHeightWithAdapter:(CellDataAdapter *)adapter;
 
 @end

@@ -194,7 +194,6 @@
 		105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */; };
 		105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */; };
 		105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */; };
-		105DF1AF1D0D289C002B10F8 /* UITableView+CellClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 105DF1AE1D0D289C002B10F8 /* UITableView+CellClass.m */; };
 		105F3FE71CB7B3F1007B02C7 /* TapCellAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F3FE61CB7B3F1007B02C7 /* TapCellAnimationController.m */; };
 		105F3FEA1CB7B5DD007B02C7 /* ShowTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F3FE91CB7B5DD007B02C7 /* ShowTextCell.m */; };
 		105F3FED1CB7B6B1007B02C7 /* ShowTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F3FEC1CB7B6B1007B02C7 /* ShowTextModel.m */; };
@@ -812,8 +811,6 @@
 		105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTapAnimationCell.m; sourceTree = "<group>"; };
 		105D98A81C07FC2C00FD1013 /* TapAnimationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapAnimationModel.h; sourceTree = "<group>"; };
 		105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapAnimationModel.m; sourceTree = "<group>"; };
-		105DF1AD1D0D289C002B10F8 /* UITableView+CellClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CellClass.h"; sourceTree = "<group>"; };
-		105DF1AE1D0D289C002B10F8 /* UITableView+CellClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CellClass.m"; sourceTree = "<group>"; };
 		105EFAF71C42878F00394044 /* SimpleNSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleNSLog.h; sourceTree = "<group>"; };
 		105F3FE51CB7B3F1007B02C7 /* TapCellAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapCellAnimationController.h; sourceTree = "<group>"; };
 		105F3FE61CB7B3F1007B02C7 /* TapCellAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapCellAnimationController.m; sourceTree = "<group>"; };
@@ -2456,15 +2453,6 @@
 			name = CustomCell;
 			sourceTree = "<group>";
 		};
-		105DF1AC1D0D2882002B10F8 /* UITableView+Category */ = {
-			isa = PBXGroup;
-			children = (
-				105DF1AD1D0D289C002B10F8 /* UITableView+CellClass.h */,
-				105DF1AE1D0D289C002B10F8 /* UITableView+CellClass.m */,
-			);
-			name = "UITableView+Category";
-			sourceTree = "<group>";
-		};
 		105F3FE41CB7B3AF007B02C7 /* TapCellAnimationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2514,7 +2502,6 @@
 				C5C5AFEB1DD59D1C00F35EB8 /* UILabel+Category */,
 				C574C0171D33A20800E40201 /* UIAlertController+Category */,
 				C574C01B1D33A22600E40201 /* UIAlertAction+Category */,
-				105DF1AC1D0D2882002B10F8 /* UITableView+Category */,
 				1059EB361CF0505500B7A4B0 /* UITextField+Category */,
 				1041AE4C1CEBFE24005697B8 /* NSString+Category */,
 				1041AE4B1CEBFDD7005697B8 /* CALayer+Category */,
@@ -3693,7 +3680,6 @@
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
 				1020E3381C759B3400FF233E /* MotionEffectViewController.m in Sources */,
 				1011BA551CD40C2900F29FB9 /* UIView+UserInteraction.m in Sources */,
-				105DF1AF1D0D289C002B10F8 /* UITableView+CellClass.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
 				C52C64431E246AAD00624A3D /* AlertViewCollectionCell.m in Sources */,
 				106CF0A31C376E190006419B /* HexColors.m in Sources */,

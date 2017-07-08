@@ -14,6 +14,8 @@
     
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         [self setupCell];
         
         [self buildSubview];
@@ -43,23 +45,61 @@
     return 0.f;
 }
 
-- (void)setWeakReferenceWithCellDataAdapter:(CellDataAdapter *)dataAdapter data:(id)data
-                                  indexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView {
+- (void)loadContentWithAdapter:(CellDataAdapter *)dataAdapter {
     
     _dataAdapter = dataAdapter;
-    _data        = data;
-    _indexPath   = indexPath;
-    _tableView   = tableView;
+    _data        = dataAdapter.data;
+    [self loadContent];
 }
 
-+ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data cellHeight:(CGFloat)height type:(NSInteger)type {
+- (void)loadContentWithAdapter:(CellDataAdapter *)dataAdapter
+                     indexPath:(NSIndexPath *)indexPath {
+    
+    _dataAdapter = dataAdapter;
+    _data        = dataAdapter.data;
+    _indexPath   = indexPath;
+    [self loadContent];
+}
+
+- (void)loadContentWithAdapter:(CellDataAdapter *)dataAdapter
+                      delegate:(id <CustomCellDelegate>)delegate
+                     indexPath:(NSIndexPath *)indexPath {
+    
+    _dataAdapter = dataAdapter;
+    _data        = dataAdapter.data;
+    _indexPath   = indexPath;
+    _delegate    = delegate;
+    [self loadContent];
+}
+
+- (void)loadContentWithAdapter:(CellDataAdapter *)dataAdapter
+                      delegate:(id <CustomCellDelegate>)delegate
+                     tableView:(UITableView *)tableView
+                     indexPath:(NSIndexPath *)indexPath {
+    
+    _dataAdapter = dataAdapter;
+    _data        = dataAdapter.data;
+    _indexPath   = indexPath;
+    _delegate    = delegate;
+    _tableView   = tableView;
+    [self loadContent];
+}
+
+#pragma mark - Normal type adapter.
+
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
+                                                   data:(id)data
+                                             cellHeight:(CGFloat)height
+                                                   type:(NSInteger)type {
     
     NSString *tmpReuseIdentifier = reuseIdentifier.length <= 0 ? NSStringFromClass([self class]) : reuseIdentifier;
     return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:tmpReuseIdentifier data:data cellHeight:height cellType:type];
 }
 
-+ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data
-                                             cellHeight:(CGFloat)height cellWidth:(CGFloat)cellWidth
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
+                                                   data:(id)data
+                                             cellHeight:(CGFloat)height
+                                              cellWidth:(CGFloat)cellWidth
                                                    type:(NSInteger)type {
     
     NSString *tmpReuseIdentifier = reuseIdentifier.length <= 0 ? NSStringFromClass([self class]) : reuseIdentifier;
@@ -80,6 +120,35 @@
     
     return [[self class] dataAdapterWithCellReuseIdentifier:nil data:data cellHeight:0 type:0];
 }
+
++ (CellDataAdapter *)dataAdapterWithCellHeight:(CGFloat)height {
+    
+    return [[self class] dataAdapterWithCellReuseIdentifier:nil data:nil cellHeight:height type:0];
+}
+
+#pragma mark - Layout type adapter.
+
++ (CellDataAdapter *)layoutTypeAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data type:(NSInteger)type {
+    
+    return [[self class] dataAdapterWithCellReuseIdentifier:reuseIdentifier data:data cellHeight:UITableViewAutomaticDimension type:type];
+}
+
++ (CellDataAdapter *)layoutTypeAdapterWithData:(id)data type:(NSInteger)type {
+    
+    return [[self class] dataAdapterWithCellReuseIdentifier:nil data:data cellHeight:UITableViewAutomaticDimension type:type];
+}
+
++ (CellDataAdapter *)layoutTypeAdapterWithData:(id)data {
+    
+    return [[self class] dataAdapterWithCellReuseIdentifier:nil data:data cellHeight:UITableViewAutomaticDimension type:0];
+}
+
++ (CellDataAdapter *)layoutTypeAdapter {
+    
+    return [[self class] dataAdapterWithCellReuseIdentifier:nil data:nil cellHeight:UITableViewAutomaticDimension type:0];
+}
+
+#pragma mark -
 
 - (void)updateWithNewCellHeight:(CGFloat)height animated:(BOOL)animated {
     
@@ -107,6 +176,33 @@
 + (void)registerToTableView:(UITableView *)tableView {
     
     [tableView registerClass:[self class] forCellReuseIdentifier:NSStringFromClass([self class])];
+}
+
+@end
+
+@implementation UITableView (CustomCell)
+
+- (CustomCell *)dequeueReusableCellAndLoadDataWithAdapter:(CellDataAdapter *)adapter indexPath:(NSIndexPath *)indexPath {
+    
+    CustomCell *cell = [self dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier forIndexPath:indexPath];
+    [cell loadContentWithAdapter:adapter delegate:nil tableView:self indexPath:indexPath];
+    
+    return cell;
+}
+
+- (CustomCell *)dequeueReusableCellAndLoadDataWithAdapter:(CellDataAdapter *)adapter
+                                                 delegate:(id <CustomCellDelegate>)delegate
+                                                indexPath:(NSIndexPath *)indexPath {
+    
+    CustomCell *cell = [self dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier forIndexPath:indexPath];
+    [cell loadContentWithAdapter:adapter delegate:delegate tableView:self indexPath:indexPath];
+    
+    return cell;
+}
+
+- (CGFloat)cellHeightWithAdapter:(CellDataAdapter *)adapter {
+    
+    return adapter.cellHeight;
 }
 
 @end
