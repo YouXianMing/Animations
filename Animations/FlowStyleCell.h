@@ -6,9 +6,9 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "CustomCollectionCell.h"
+#import "BaseCustomCollectionCell.h"
 
-@interface FlowStyleCell : CustomCollectionCell
+@interface FlowStyleCell : BaseCustomCollectionCell
 
 @property (nonatomic) CGFloat rowHeight;
 

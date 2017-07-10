@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CellDataAdapter.h"
-@class CustomCollectionCell;
+@class BaseCustomCollectionCell;
 
 @protocol CustomCollectionCellDelegate <NSObject>
 
@@ -20,11 +20,11 @@
  *  @param cell  CustomCollectionCell
  *  @param event Event.
  */
-- (void)customCollectionCell:(CustomCollectionCell *)cell event:(id)event;
+- (void)customCollectionCell:(BaseCustomCollectionCell *)cell event:(id)event;
 
 @end
 
-@interface CustomCollectionCell : UICollectionViewCell
+@interface BaseCustomCollectionCell : UICollectionViewCell
 
 /**
  *  CustomCollectionCell's delegate.

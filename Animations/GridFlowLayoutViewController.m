@@ -53,8 +53,7 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
     }
     layout.manager.rowHeights = rowHeights;
     
-    self.collectionView                                = [[UICollectionView alloc] initWithFrame:self.contentView.bounds
-                                                                            collectionViewLayout:layout];
+    self.collectionView                                = [[UICollectionView alloc] initWithFrame:self.contentView.bounds collectionViewLayout:layout];
     self.collectionView.delegate                       = self;
     self.collectionView.dataSource                     = self;
     self.collectionView.backgroundColor                = [UIColor clearColor];

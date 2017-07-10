@@ -6,9 +6,9 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "CustomCollectionCell.h"
+#import "BaseCustomCollectionCell.h"
 
-@implementation CustomCollectionCell
+@implementation BaseCustomCollectionCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
     

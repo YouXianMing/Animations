@@ -61,11 +61,11 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    CustomCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.adapters[indexPath.row].cellReuseIdentifier forIndexPath:indexPath];
-    cell.indexPath             = indexPath;
-    cell.dataAdapter           = self.adapters[indexPath.row];
-    cell.data                  = self.adapters[indexPath.row].data;
-    cell.indexPath             = indexPath;
+    BaseCustomCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.adapters[indexPath.row].cellReuseIdentifier forIndexPath:indexPath];
+    cell.indexPath                 = indexPath;
+    cell.dataAdapter               = self.adapters[indexPath.row];
+    cell.data                      = self.adapters[indexPath.row].data;
+    cell.indexPath                 = indexPath;
     [cell loadContent];
     
     return cell;

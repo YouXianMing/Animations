@@ -6,8 +6,8 @@
 //  Copyright © 2017年 YouXianMing. All rights reserved.
 //
 
-#import "CustomCollectionCell.h"
+#import "BaseCustomCollectionCell.h"
 
-@interface AlertViewCollectionCell : CustomCollectionCell
+@interface AlertViewCollectionCell : BaseCustomCollectionCell
 
 @end

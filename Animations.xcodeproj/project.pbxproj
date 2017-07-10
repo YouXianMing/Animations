@@ -136,7 +136,7 @@
 		10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FDC1BF9DE6E00E5E476 /* GCDSemaphore.m */; };
 		10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10381FDE1BF9DE6E00E5E476 /* GCDTimer.m */; };
 		1041AE6A1CEC44DB005697B8 /* UIView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1041AE691CEC44DB005697B8 /* UIView+ConvenientMethod.m */; };
-		1041AE6D1CEC4507005697B8 /* CustomCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1041AE6C1CEC4507005697B8 /* CustomCollectionCell.m */; };
+		1041AE6D1CEC4507005697B8 /* BaseCustomCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1041AE6C1CEC4507005697B8 /* BaseCustomCollectionCell.m */; };
 		1041AE991CEC5AE4005697B8 /* BaseControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1041AE981CEC5AE4005697B8 /* BaseControl.m */; };
 		104228C31C3694B10011409C /* SDWebImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C21C3694B10011409C /* SDWebImageController.m */; };
 		104228C61C3695230011409C /* PictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 104228C51C3695230011409C /* PictureModel.m */; };
@@ -694,8 +694,8 @@
 		10381FDE1BF9DE6E00E5E476 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
 		1041AE681CEC44DB005697B8 /* UIView+ConvenientMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ConvenientMethod.h"; sourceTree = "<group>"; };
 		1041AE691CEC44DB005697B8 /* UIView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ConvenientMethod.m"; sourceTree = "<group>"; };
-		1041AE6B1CEC4507005697B8 /* CustomCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionCell.h; sourceTree = "<group>"; };
-		1041AE6C1CEC4507005697B8 /* CustomCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionCell.m; sourceTree = "<group>"; };
+		1041AE6B1CEC4507005697B8 /* BaseCustomCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCustomCollectionCell.h; sourceTree = "<group>"; };
+		1041AE6C1CEC4507005697B8 /* BaseCustomCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCustomCollectionCell.m; sourceTree = "<group>"; };
 		1041AE971CEC5AE4005697B8 /* BaseControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseControl.h; sourceTree = "<group>"; };
 		1041AE981CEC5AE4005697B8 /* BaseControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseControl.m; sourceTree = "<group>"; };
 		104228C11C3694B10011409C /* SDWebImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageController.h; sourceTree = "<group>"; };
@@ -2447,8 +2447,8 @@
 				102ED8751C3BFCCC00E9863E /* CustomCell.m */,
 				C56F19BE1D891F3600683DB5 /* CustomBuildOutsideViewCell.h */,
 				C56F19BF1D891F3600683DB5 /* CustomBuildOutsideViewCell.m */,
-				1041AE6B1CEC4507005697B8 /* CustomCollectionCell.h */,
-				1041AE6C1CEC4507005697B8 /* CustomCollectionCell.m */,
+				1041AE6B1CEC4507005697B8 /* BaseCustomCollectionCell.h */,
+				1041AE6C1CEC4507005697B8 /* BaseCustomCollectionCell.m */,
 			);
 			name = CustomCell;
 			sourceTree = "<group>";
@@ -3767,7 +3767,7 @@
 				106BCFE61CDC80CD007C3EEE /* LoopTypeTwoCell.m in Sources */,
 				10EFE2121D01874900159779 /* SpringScaleViewController.m in Sources */,
 				C517332B1D45AFDE005D57AE /* TextFieldValidatorMessage.m in Sources */,
-				1041AE6D1CEC4507005697B8 /* CustomCollectionCell.m in Sources */,
+				1041AE6D1CEC4507005697B8 /* BaseCustomCollectionCell.m in Sources */,
 				102296B11C38D122001AF5BB /* ResponseData.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				C501F21C1F0C7DE90051B4C6 /* ParagraphAttributeConfig.m in Sources */,
