@@ -415,6 +415,9 @@
 		C5C5AFEE1DD59D4F00F35EB8 /* UILabel+SizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */; };
 		C5C606341E1F7593004E8FDD /* CircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C606331E1F7593004E8FDD /* CircleLoadingView.m */; };
 		C5EE65B51E1B3A1100DDF591 /* IndexRange.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EE65B41E1B3A1100DDF591 /* IndexRange.m */; };
+		C5EFF2421F14734B00BD5AF0 /* CustomCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF2411F14734B00BD5AF0 /* CustomCollectionView.m */; };
+		C5EFF2471F14735A00BD5AF0 /* HorizontalCollectionItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF2441F14735A00BD5AF0 /* HorizontalCollectionItemView.m */; };
+		C5EFF2481F14735A00BD5AF0 /* HorizontalCollectionItemViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF2461F14735A00BD5AF0 /* HorizontalCollectionItemViewCell.m */; };
 		C5F8FE7A1ECC1E3B00377E01 /* AnimationsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8FE791ECC1E3B00377E01 /* AnimationsListController.m */; };
 		C5F8FE7D1ECC228D00377E01 /* NormalTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8FE7C1ECC228D00377E01 /* NormalTitleController.m */; };
 		C5F8FE801ECC260A00377E01 /* FullTitleVisualEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8FE7F1ECC260A00377E01 /* FullTitleVisualEffectController.m */; };
@@ -1262,6 +1265,12 @@
 		C5C606331E1F7593004E8FDD /* CircleLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLoadingView.m; sourceTree = "<group>"; };
 		C5EE65B31E1B3A1100DDF591 /* IndexRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexRange.h; sourceTree = "<group>"; };
 		C5EE65B41E1B3A1100DDF591 /* IndexRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexRange.m; sourceTree = "<group>"; };
+		C5EFF2401F14734B00BD5AF0 /* CustomCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionView.h; sourceTree = "<group>"; };
+		C5EFF2411F14734B00BD5AF0 /* CustomCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionView.m; sourceTree = "<group>"; };
+		C5EFF2431F14735A00BD5AF0 /* HorizontalCollectionItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionItemView.h; sourceTree = "<group>"; };
+		C5EFF2441F14735A00BD5AF0 /* HorizontalCollectionItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionItemView.m; sourceTree = "<group>"; };
+		C5EFF2451F14735A00BD5AF0 /* HorizontalCollectionItemViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionItemViewCell.h; sourceTree = "<group>"; };
+		C5EFF2461F14735A00BD5AF0 /* HorizontalCollectionItemViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionItemViewCell.m; sourceTree = "<group>"; };
 		C5F8FE781ECC1E3B00377E01 /* AnimationsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationsListController.h; sourceTree = "<group>"; };
 		C5F8FE791ECC1E3B00377E01 /* AnimationsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationsListController.m; sourceTree = "<group>"; };
 		C5F8FE7B1ECC228D00377E01 /* NormalTitleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalTitleController.h; sourceTree = "<group>"; };
@@ -2514,6 +2523,7 @@
 				1020A3741D08F9C000056B0E /* BadgeValueView */,
 				C59608C61D3DF76E006BF6E0 /* TableGridView */,
 				1059F39E1CF4014700F63810 /* CollectionGridView */,
+				C5EFF23F1F14733900BD5AF0 /* CustomCollectionView */,
 				C56812281D757617006E6C49 /* IrregularGridCollectionView */,
 				C517331F1D45AFAD005D57AE /* TouchEventView */,
 				C51733231D45AFD0005D57AE /* UITextFieldView */,
@@ -3483,6 +3493,27 @@
 			name = IndexRange;
 			sourceTree = "<group>";
 		};
+		C5EFF23F1F14733900BD5AF0 /* CustomCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C5EFF2401F14734B00BD5AF0 /* CustomCollectionView.h */,
+				C5EFF2411F14734B00BD5AF0 /* CustomCollectionView.m */,
+				C5EFF2491F14741C00BD5AF0 /* HorizontalCollectionItemView */,
+			);
+			name = CustomCollectionView;
+			sourceTree = "<group>";
+		};
+		C5EFF2491F14741C00BD5AF0 /* HorizontalCollectionItemView */ = {
+			isa = PBXGroup;
+			children = (
+				C5EFF2431F14735A00BD5AF0 /* HorizontalCollectionItemView.h */,
+				C5EFF2441F14735A00BD5AF0 /* HorizontalCollectionItemView.m */,
+				C5EFF2451F14735A00BD5AF0 /* HorizontalCollectionItemViewCell.h */,
+				C5EFF2461F14735A00BD5AF0 /* HorizontalCollectionItemViewCell.m */,
+			);
+			name = HorizontalCollectionItemView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3576,6 +3607,7 @@
 				C545536C1E1CD7DD00A5BA58 /* LinearCarouseItemView.m in Sources */,
 				102B84E11C3B95F0001699A9 /* FileManager.m in Sources */,
 				10E2D4E91CD5962000666EEB /* NSData+ImageContentType.m in Sources */,
+				C5EFF2471F14735A00BD5AF0 /* HorizontalCollectionItemView.m in Sources */,
 				C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */,
 				C57839CD1E0F4E19004530E3 /* ItemStyle.m in Sources */,
 				102B85321C3CF226001699A9 /* UIImage+ImageEffects.m in Sources */,
@@ -3731,6 +3763,7 @@
 				109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */,
 				10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */,
 				C501F2511F0CC4000051B4C6 /* RegexManager.m in Sources */,
+				C5EFF2421F14734B00BD5AF0 /* CustomCollectionView.m in Sources */,
 				C51641921EF76E010037C550 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				B5D011A71C0BE3D30075BC2E /* ClassHeaderView.m in Sources */,
 				107CF3951C2FFC01002DF93C /* LiveImageViewController.m in Sources */,
@@ -3787,6 +3820,7 @@
 				10667E1D1C7F2CFB00B9AC08 /* UIView+Shake.m in Sources */,
 				106BCFDB1CDC67CC007C3EEE /* ImageModel.m in Sources */,
 				1011BAE71CD4909400F29FB9 /* OffsetImageCell.m in Sources */,
+				C5EFF2481F14735A00BD5AF0 /* HorizontalCollectionItemViewCell.m in Sources */,
 				C5C5AFE41DD55F1400F35EB8 /* IrregularPictureGridCell.m in Sources */,
 				C54553651E1CD7CA00A5BA58 /* ScrollCarouselItemView.m in Sources */,
 				10A67C5B1C12D4BA00C3E505 /* CGContextObjectConfig.m in Sources */,
