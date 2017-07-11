@@ -26,6 +26,37 @@
     self.layout                        = layout;
 }
 
++ (instancetype)horizontalCollectionItemViewWithFrame:(CGRect)frame
+                                            ItemSpace:(CGFloat)itemSpace
+                                          contentEdge:(UIEdgeInsets)contentEdge {
+    
+    HorizontalCollectionItemView *itemView = [[HorizontalCollectionItemView alloc] initWithFrame:frame];
+    itemView.itemSpace                     = itemSpace;
+    itemView.contentEdge                   = contentEdge;
+    
+    return itemView;
+}
+
++ (instancetype)horizontalCollectionItemViewWithFrame:(CGRect)frame
+                                            ItemSpace:(CGFloat)itemSpace
+                                          contentEdge:(UIEdgeInsets)contentEdge
+                                             delegate:(id <CustomCollectionViewDelegate>)delegate
+                                        registerCells:(void (^)(HorizontalCollectionItemView *collectionView))registerCellsBlock
+                                          addAdapters:(void (^)(NSMutableArray <CellDataAdapter *> *adapters))addAdaptersBlock {
+    
+    HorizontalCollectionItemView *itemView = [[HorizontalCollectionItemView alloc] initWithFrame:frame];
+    itemView.itemSpace                     = itemSpace;
+    itemView.contentEdge                   = contentEdge;
+    itemView.delegate                      = delegate;
+    
+    registerCellsBlock ? registerCellsBlock(itemView) : 0;
+    addAdaptersBlock   ? addAdaptersBlock(itemView.adapters) : 0;
+    
+    [itemView reloadData];
+    
+    return itemView;
+}
+
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {

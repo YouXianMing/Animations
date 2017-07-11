@@ -80,6 +80,7 @@
 #import "ScrollCarouselViewController.h"
 #import "LoadCSSViewController.h"
 #import "CountDownButtonController.h"
+#import "CustomCollectionViewController.h"
 
 @interface AnimationsListController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate>
 
@@ -271,7 +272,8 @@
                        [Item itemWithName:@"混合cell" object:[MixCellsViewController class]],
                        [Item itemWithName:@"线性旋转木马" object:[ScrollCarouselViewController class]],
                        [Item itemWithName:@"Load CSS" object:[LoadCSSViewController class]],
-                       [Item itemWithName:@"倒计时按钮" object:[CountDownButtonController class]]];
+                       [Item itemWithName:@"倒计时按钮" object:[CountDownButtonController class]],
+                       [Item itemWithName:@"定制的CollectionView" object:[CustomCollectionViewController class]]];
     
     self.items = [NSMutableArray array];
     

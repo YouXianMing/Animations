@@ -20,4 +20,17 @@
  */
 @property (nonatomic) UIEdgeInsets contentEdge;
 
+#pragma mark - Constructors
+
++ (instancetype)horizontalCollectionItemViewWithFrame:(CGRect)frame
+                                            ItemSpace:(CGFloat)itemSpace
+                                          contentEdge:(UIEdgeInsets)contentEdge;
+
++ (instancetype)horizontalCollectionItemViewWithFrame:(CGRect)frame
+                                            ItemSpace:(CGFloat)itemSpace
+                                          contentEdge:(UIEdgeInsets)contentEdge
+                                             delegate:(id <CustomCollectionViewDelegate>)delegate
+                                        registerCells:(void (^)(HorizontalCollectionItemView *collectionView))registerCellsBlock
+                                          addAdapters:(void (^)(NSMutableArray <CellDataAdapter *> *adapters))addAdaptersBlock;
+
 @end

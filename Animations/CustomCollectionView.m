@@ -13,7 +13,7 @@
 - (instancetype)init {
     
     if (self = [super init]) {
-    
+        
         [self buildCollectionView];
     }
     
@@ -23,7 +23,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {
-    
+        
         [self buildCollectionView];
     }
     
@@ -33,7 +33,10 @@
 - (void)buildCollectionView {
     
     if (!self.collectionView) {
-
+        
+        // Do some setup work.
+        [self setup];
+        
         // Create the layout.
         [self createLayout];
         
@@ -53,7 +56,12 @@
 }
 
 - (void)createLayout {
+    
+    // Overwrite by subClass.
+}
 
+- (void)setup {
+    
     // Overwrite by subClass.
 }
 
@@ -61,6 +69,12 @@
     
     [self.collectionView registerClass:cellClass forCellWithReuseIdentifier:reuseIdentifier];
 }
+
+- (void)registerClass:(Class)cellClass {
+    
+    [self.collectionView registerClass:cellClass forCellWithReuseIdentifier:NSStringFromClass(cellClass)];
+}
+
 
 - (void)reloadData {
     
@@ -126,7 +140,7 @@
 #pragma mark - CustomCollectionCellDelegate
 
 - (void)customCollectionCell:(BaseCustomCollectionCell *)cell event:(id)event {
-
+    
     if (self.delegate && [self.delegate respondsToSelector:@selector(customCollectionView:cell:event:)]) {
         
         [self.delegate customCollectionView:self cell:cell event:event];

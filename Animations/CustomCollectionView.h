@@ -16,7 +16,7 @@
 
 /**
  CustomCollectionView did select cell.
-
+ 
  @param customCollectionView The CustomCollectionView.
  @param cell The BaseCustomCollectionCell's cell.
  @param indexPath The indexPath.
@@ -27,7 +27,7 @@
  The customCollectionView's cell event.
  
  [IMPORMANT] The cell must call it's delegate's methods '- (void)customCollectionCell:(BaseCustomCollectionCell *)cell event:(id)event;' to make this active.
-
+ 
  @param customCollectionView The CustomCollectionView.
  @param cell The BaseCustomCollectionCell's cell.
  @param event The cell's event.
@@ -67,13 +67,20 @@
 - (void)registerClass:(Class)cellClass forCellWithReuseIdentifier:(NSString *)reuseIdentifier;
 
 /**
+ Register cell's class with the class's name.
+ 
+ @param cellClass HorizontalCollectionItemViewCell's subclass.
+ */
+- (void)registerClass:(Class)cellClass;
+
+/**
  Reload the data.
  */
 - (void)reloadData;
 
 /**
  Animates multiple insert, delete, reload, and move operations as a group.
-
+ 
  @param editAdaptersBlock Edit the dataSource.
  @param editItemsBlock Edit the indexPaths.
  @param completionBlock Completion callback.
@@ -88,5 +95,10 @@
  [- Overwrite by sub class -] Create the layout.
  */
 - (void)createLayout;
+
+/**
+ [- Overwrite by sub class -] setup.
+ */
+- (void)setup;
 
 @end
