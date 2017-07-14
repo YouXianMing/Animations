@@ -7,7 +7,7 @@
 //
 
 #import "ContentIconCell.h"
-#import "UIButton+inits.h"
+#import "UIButton+Inits.h"
 #import "UIView+SetRect.h"
 #import "UIView+AnimationProperty.h"
 

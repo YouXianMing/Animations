@@ -217,7 +217,7 @@
 		106BCFDE1CDC77A6007C3EEE /* CircleNodeStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFDD1CDC77A6007C3EEE /* CircleNodeStateView.m */; };
 		106BCFE31CDC7EA3007C3EEE /* InfiniteLoopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFE21CDC7EA3007C3EEE /* InfiniteLoopModel.m */; };
 		106BCFE61CDC80CD007C3EEE /* LoopTypeTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 106BCFE51CDC80CD007C3EEE /* LoopTypeTwoCell.m */; };
-		106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF08D1C3763E30006419B /* UIButton+inits.m */; };
+		106CF08E1C3763E30006419B /* UIButton+Inits.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF08D1C3763E30006419B /* UIButton+Inits.m */; };
 		106CF0921C3764090006419B /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0911C3764090006419B /* AlertViewController.m */; };
 		106CF0991C3765360006419B /* UIFont+Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0981C3765360006419B /* UIFont+Fonts.m */; };
 		106CF0A31C376E190006419B /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 106CF0A01C376E190006419B /* HexColors.m */; };
@@ -879,8 +879,8 @@
 		106BCFE21CDC7EA3007C3EEE /* InfiniteLoopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteLoopModel.m; sourceTree = "<group>"; };
 		106BCFE41CDC80CD007C3EEE /* LoopTypeTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopTypeTwoCell.h; sourceTree = "<group>"; };
 		106BCFE51CDC80CD007C3EEE /* LoopTypeTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopTypeTwoCell.m; sourceTree = "<group>"; };
-		106CF08C1C3763E30006419B /* UIButton+inits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+inits.h"; sourceTree = "<group>"; };
-		106CF08D1C3763E30006419B /* UIButton+inits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+inits.m"; sourceTree = "<group>"; };
+		106CF08C1C3763E30006419B /* UIButton+Inits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Inits.h"; sourceTree = "<group>"; };
+		106CF08D1C3763E30006419B /* UIButton+Inits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Inits.m"; sourceTree = "<group>"; };
 		106CF0901C3764090006419B /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
 		106CF0911C3764090006419B /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
 		106CF0971C3765360006419B /* UIFont+Fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Fonts.h"; sourceTree = "<group>"; };
@@ -2717,8 +2717,8 @@
 		106CF08F1C3763E60006419B /* UIButton+Categories */ = {
 			isa = PBXGroup;
 			children = (
-				106CF08C1C3763E30006419B /* UIButton+inits.h */,
-				106CF08D1C3763E30006419B /* UIButton+inits.m */,
+				106CF08C1C3763E30006419B /* UIButton+Inits.h */,
+				106CF08D1C3763E30006419B /* UIButton+Inits.m */,
 				C56B7AF51D470E19009AE3C8 /* UIButton+Event.h */,
 				C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */,
 				10585B2A1C3F468E0052990F /* UIButton+Style.h */,
@@ -3989,7 +3989,7 @@
 				1096062A1C93B47800CCB3AD /* NetworkingReachability.m in Sources */,
 				10381F721BF9B47000E5E476 /* ListItemCell.m in Sources */,
 				10B0DDF61CBA83050089DF1E /* JSAnimatedImagesView.m in Sources */,
-				106CF08E1C3763E30006419B /* UIButton+inits.m in Sources */,
+				106CF08E1C3763E30006419B /* UIButton+Inits.m in Sources */,
 				105FFEAE1CBE88B7006213B1 /* DrawMarqueeView.m in Sources */,
 				C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */,
 				C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */,
