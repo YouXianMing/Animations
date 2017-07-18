@@ -190,7 +190,6 @@
 		10589D261C2393C200F20BC0 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10589D241C2393C200F20BC0 /* FBShimmeringView.m */; };
 		1059EB351CF0504D00B7A4B0 /* UITextField+UsefulMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059EB341CF0504D00B7A4B0 /* UITextField+UsefulMethod.m */; };
 		105AFB4B1CF18CEF003DD84A /* NSString+Range.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AFB4A1CF18CEF003DD84A /* NSString+Range.m */; };
-		105AFB4F1CF18D04003DD84A /* StringRangeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AFB4E1CF18D04003DD84A /* StringRangeManager.m */; };
 		105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */; };
 		105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A61C07F52D00FD1013 /* TableViewTapAnimationCell.m */; };
 		105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105D98A91C07FC2C00FD1013 /* TapAnimationModel.m */; };
@@ -822,8 +821,6 @@
 		1059EB341CF0504D00B7A4B0 /* UITextField+UsefulMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+UsefulMethod.m"; sourceTree = "<group>"; };
 		105AFB491CF18CEF003DD84A /* NSString+Range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Range.h"; sourceTree = "<group>"; };
 		105AFB4A1CF18CEF003DD84A /* NSString+Range.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Range.m"; sourceTree = "<group>"; };
-		105AFB4D1CF18D04003DD84A /* StringRangeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringRangeManager.h; sourceTree = "<group>"; };
-		105AFB4E1CF18D04003DD84A /* StringRangeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringRangeManager.m; sourceTree = "<group>"; };
 		105D989E1C07F0E500FD1013 /* TableViewTapAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewTapAnimationController.h; sourceTree = "<group>"; };
 		105D989F1C07F0E500FD1013 /* TableViewTapAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTapAnimationController.m; sourceTree = "<group>"; };
 		105D98A51C07F52D00FD1013 /* TableViewTapAnimationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewTapAnimationCell.h; sourceTree = "<group>"; };
@@ -1530,7 +1527,6 @@
 				103088B41C05880000C8B623 /* Math */,
 				103088651C03F19500C8B623 /* Easing */,
 				C501F2091F0C7DE90051B4C6 /* AttributedStringConfig */,
-				105AFB4C1CF18CF5003DD84A /* StringRangeManager */,
 				104F0D091BFAFB5400C46E6A /* CGContextObject */,
 				C582E8151D2FB076003433EC /* CalendarEvent */,
 				10381FD51BF9DE6E00E5E476 /* GCD */,
@@ -2480,15 +2476,6 @@
 				C58978C01D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m */,
 			);
 			name = CollectionGridView;
-			sourceTree = "<group>";
-		};
-		105AFB4C1CF18CF5003DD84A /* StringRangeManager */ = {
-			isa = PBXGroup;
-			children = (
-				105AFB4D1CF18D04003DD84A /* StringRangeManager.h */,
-				105AFB4E1CF18D04003DD84A /* StringRangeManager.m */,
-			);
-			name = StringRangeManager;
 			sourceTree = "<group>";
 		};
 		105D989D1C07F0B600FD1013 /* TableViewTapAnimationController */ = {
@@ -3766,7 +3753,6 @@
 				C51641961EF76E010037C550 /* UIRefreshControl+AFNetworking.m in Sources */,
 				C5EFF2541F14C39100BD5AF0 /* CustomCollectionViewController.m in Sources */,
 				102B1F0C1C60E3D700A8FD40 /* RefreshObject.m in Sources */,
-				105AFB4F1CF18D04003DD84A /* StringRangeManager.m in Sources */,
 				102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */,
 				104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */,
 				C5F8FE7A1ECC1E3B00377E01 /* AnimationsListController.m in Sources */,
