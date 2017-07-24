@@ -81,6 +81,7 @@
 #import "LoadCSSViewController.h"
 #import "CountDownButtonController.h"
 #import "CustomCollectionViewController.h"
+#import "TreeStructureTableViewController.h"
 
 @interface AnimationsListController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate>
 
@@ -273,7 +274,8 @@
                        [Item itemWithName:@"线性旋转木马" object:[ScrollCarouselViewController class]],
                        [Item itemWithName:@"Load CSS" object:[LoadCSSViewController class]],
                        [Item itemWithName:@"倒计时按钮" object:[CountDownButtonController class]],
-                       [Item itemWithName:@"定制的CollectionView" object:[CustomCollectionViewController class]]];
+                       [Item itemWithName:@"定制的CollectionView" object:[CustomCollectionViewController class]],
+                       [Item itemWithName:@"树形结构cell" object:[TreeStructureTableViewController class]]];
     
     self.items = [NSMutableArray array];
     
