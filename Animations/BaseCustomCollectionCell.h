@@ -34,32 +34,32 @@
 /**
  *  CustomCell's data.
  */
-@property (nonatomic, weak) CellDataAdapter         *dataAdapter;
+@property (nonatomic, weak) CellDataAdapter *dataAdapter;
 
 /**
  *  CustomCell's data.
  */
-@property (nonatomic, weak) id                       data;
+@property (nonatomic, weak) id data;
 
 /**
  *  CustomCell's indexPath.
  */
-@property (nonatomic, weak) NSIndexPath             *indexPath;
+@property (nonatomic, weak) NSIndexPath *indexPath;
 
 /**
  *  TableView.
  */
-@property (nonatomic, weak) UICollectionView        *collectionView;
+@property (nonatomic, weak) UICollectionView *collectionView;
 
 /**
  *  Controller.
  */
-@property (nonatomic, weak) UIViewController        *controller;
+@property (nonatomic, weak) UIViewController *controller;
 
 /**
  *  Cell is showed or not, you can set this property in UICollectionView's method 'collectionView:willDisplayCell:forItemAtIndexPath:' at runtime.
  */
-@property (nonatomic)       BOOL                     display;
+@property (nonatomic) BOOL display;
 
 #pragma mark - Method you should overwrite.
 

@@ -9,6 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "ShowLoadingView.h"
 #import "ControllerBaseViewConfig.h"
+@class BaseCustomViewController;
+
+@protocol BaseCustomViewControllerDelegate <NSObject>
+
+@optional
+
+/**
+ The BaseCustomViewController's event.
+
+ @param controller The kind of BaseCustomViewController.
+ @param event The event.
+ */
+- (void)baseCustomViewController:(__kindof BaseCustomViewController *)controller event:(id)event;
+
+@end
 
 @interface BaseCustomViewController : UIViewController
 
@@ -18,18 +33,23 @@ extern NSString * const titleViewId;
 extern NSString * const contentViewId;
 extern NSString * const backgroundViewId;
 
-//  level            view            frame
+/**
+ The BaseCustomViewController's delegate.
+ */
+@property (nonatomic, weak) id <BaseCustomViewControllerDelegate> customViewControllerDelegate;
+
+//  level            view                frame
 //  ---------------------------------------------------------------
 //
-//  highest          windowView      0 x  0 x width x height
+//  highest          windowAreaView      0 x  0 x width x height
 //
-//  higher           loadingView     0 x 64 x width x (height - 64)
+//  higher           loadingAreaView     0 x 64 x width x (height - 64)
 //
-//  high             titleView       0 x  0 x width x 64
+//  high             titleView           0 x  0 x width x 64
 //
-//  high             contentView     0 x 64 x width x (height - 64)
+//  high             contentView         0 x 64 x width x (height - 64)
 //
-//  normal           backgroundView  0 x  0 x width x height
+//  normal           backgroundView      0 x  0 x width x height
 //
 
 @property (nonatomic, strong) ShowLoadingView  *windowAreaView;

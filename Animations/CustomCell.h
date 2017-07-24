@@ -31,37 +31,37 @@
 /**
  *  CustomCell's delegate.
  */
-@property (nonatomic, weak) id <CustomCellDelegate>  delegate;
+@property (nonatomic, weak) id <CustomCellDelegate> delegate;
 
 /**
  *  CustomCell's dataAdapter.
  */
-@property (nonatomic, weak) CellDataAdapter         *dataAdapter;
+@property (nonatomic, weak) CellDataAdapter *dataAdapter;
 
 /**
  *  CustomCell's data.
  */
-@property (nonatomic, weak) id                       data;
+@property (nonatomic, weak) id data;
 
 /**
  *  CustomCell's indexPath.
  */
-@property (nonatomic, weak) NSIndexPath             *indexPath;
+@property (nonatomic, weak) NSIndexPath *indexPath;
 
 /**
  *  TableView.
  */
-@property (nonatomic, weak) UITableView             *tableView;
+@property (nonatomic, weak) UITableView *tableView;
 
 /**
  *  Controller.
  */
-@property (nonatomic, weak) UIViewController        *controller;
+@property (nonatomic, weak) UIViewController *controller;
 
 /**
  *  Cell is showed or not, you can set this property in UITableView's method 'tableView:willDisplayCell:forRowAtIndexPath:' & 'tableView:didEndDisplayingCell:forRowAtIndexPath:' at runtime.
  */
-@property (nonatomic)       BOOL                     display;
+@property (nonatomic) BOOL display;
 
 #pragma mark - Method you should overwrite.
 
