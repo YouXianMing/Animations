@@ -350,8 +350,8 @@
 		C517332A1D45AFDE005D57AE /* UITextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733251D45AFDE005D57AE /* UITextFieldView.m */; };
 		C517332B1D45AFDE005D57AE /* TextFieldValidatorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733271D45AFDE005D57AE /* TextFieldValidatorMessage.m */; };
 		C517332C1D45AFDE005D57AE /* AbsTextFieldViewValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */; };
+		C51793541F284DFD0061B0F8 /* NSObject+WeakList.m in Sources */ = {isa = PBXBuildFile; fileRef = C51793531F284DFD0061B0F8 /* NSObject+WeakList.m */; };
 		C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A3081D520BD80041C962 /* FBGlowLabel.m */; };
-		C525734A1D59805000AF3353 /* NSObject+ViewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C52573491D59805000AF3353 /* NSObject+ViewTag.m */; };
 		C52C64431E246AAD00624A3D /* AlertViewCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C52C64421E246AAD00624A3D /* AlertViewCollectionCell.m */; };
 		C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C532B20F1E13A664004C7499 /* PlaceholderImageView.m */; };
 		C54553531E1CD69F00A5BA58 /* ScrollCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553521E1CD69F00A5BA58 /* ScrollCarouselViewController.m */; };
@@ -1155,10 +1155,10 @@
 		C51733271D45AFDE005D57AE /* TextFieldValidatorMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidatorMessage.m; sourceTree = "<group>"; };
 		C51733281D45AFDE005D57AE /* AbsTextFieldViewValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsTextFieldViewValidator.h; sourceTree = "<group>"; };
 		C51733291D45AFDE005D57AE /* AbsTextFieldViewValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsTextFieldViewValidator.m; sourceTree = "<group>"; };
+		C51793521F284DFD0061B0F8 /* NSObject+WeakList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WeakList.h"; sourceTree = "<group>"; };
+		C51793531F284DFD0061B0F8 /* NSObject+WeakList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WeakList.m"; sourceTree = "<group>"; };
 		C524A3071D520BD80041C962 /* FBGlowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBGlowLabel.h; sourceTree = "<group>"; };
 		C524A3081D520BD80041C962 /* FBGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGlowLabel.m; sourceTree = "<group>"; };
-		C52573481D59805000AF3353 /* NSObject+ViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewTag.h"; sourceTree = "<group>"; };
-		C52573491D59805000AF3353 /* NSObject+ViewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewTag.m"; sourceTree = "<group>"; };
 		C52C64411E246AAD00624A3D /* AlertViewCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewCollectionCell.h; sourceTree = "<group>"; };
 		C52C64421E246AAD00624A3D /* AlertViewCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewCollectionCell.m; sourceTree = "<group>"; };
 		C532B20E1E13A664004C7499 /* PlaceholderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderImageView.h; sourceTree = "<group>"; };
@@ -1519,10 +1519,10 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				105189091D0A65D500F606FB /* NSObject+Category */,
 				C501F24E1F0CC3F50051B4C6 /* RegexManager */,
 				C5EE65B21E1B39FC00DDF591 /* IndexRange */,
 				102A0FF41C92725400BF3F1B /* NSData+GZip */,
-				105189091D0A65D500F606FB /* NSObject+Category */,
 				10EFE2061D015FB900159779 /* DefaultNotificationCenter */,
 				C51677801D3620DB0032AC09 /* PhotosAlbumManager */,
 				1068FD4A1CF8479500BE431C /* TransitionAnimator */,
@@ -2443,8 +2443,8 @@
 			children = (
 				1051890A1D0A65DE00F606FB /* NSObject+PropertiesInfomation.h */,
 				1051890B1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m */,
-				C52573481D59805000AF3353 /* NSObject+ViewTag.h */,
-				C52573491D59805000AF3353 /* NSObject+ViewTag.m */,
+				C51793521F284DFD0061B0F8 /* NSObject+WeakList.h */,
+				C51793531F284DFD0061B0F8 /* NSObject+WeakList.m */,
 			);
 			name = "NSObject+Category";
 			sourceTree = "<group>";
@@ -4101,6 +4101,7 @@
 				1041AE991CEC5AE4005697B8 /* BaseControl.m in Sources */,
 				102B1F2F1C60E66F00A8FD40 /* HashtagsModel.m in Sources */,
 				1011BB021CD495F200F29FB9 /* CASTEncryptMode.m in Sources */,
+				C51793541F284DFD0061B0F8 /* NSObject+WeakList.m in Sources */,
 				102B1F321C60E66F00A8FD40 /* MetaModel.m in Sources */,
 				1059EB351CF0504D00B7A4B0 /* UITextField+UsefulMethod.m in Sources */,
 				102B1F291C60E66F00A8FD40 /* AvatarImageModel.m in Sources */,
@@ -4132,7 +4133,6 @@
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
 				109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */,
 				102ED87A1C3C005800E9863E /* MixedColorProgressViewController.m in Sources */,
-				C525734A1D59805000AF3353 /* NSObject+ViewTag.m in Sources */,
 				C51677971D363E6F0032AC09 /* Base64.m in Sources */,
 				C516418E1EF76E010037C550 /* AFURLSessionManager.m in Sources */,
 				105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */,
