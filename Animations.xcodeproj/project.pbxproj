@@ -381,6 +381,8 @@
 		C56851C31DE6C1C7000F18C2 /* MixCellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56851C21DE6C1C7000F18C2 /* MixCellsViewController.m */; };
 		C56851C71DE6CBE3000F18C2 /* HeaderIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C56851C61DE6CBE3000F18C2 /* HeaderIconCell.m */; };
 		C56851CA1DE6D3E7000F18C2 /* ContentIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C56851C91DE6D3E7000F18C2 /* ContentIconCell.m */; };
+		C56B3A6C1F2830A400133AC0 /* UIView+ConvertRect.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B3A691F2830A400133AC0 /* UIView+ConvertRect.m */; };
+		C56B3A6D1F2830A400133AC0 /* UIView+DebugFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B3A6B1F2830A400133AC0 /* UIView+DebugFrame.m */; };
 		C56B7AF71D470E19009AE3C8 /* UIButton+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */; };
 		C56F19C01D891F3600683DB5 /* CustomBuildOutsideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F19BF1D891F3600683DB5 /* CustomBuildOutsideViewCell.m */; };
 		C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */; };
@@ -1214,6 +1216,10 @@
 		C56851C61DE6CBE3000F18C2 /* HeaderIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderIconCell.m; sourceTree = "<group>"; };
 		C56851C81DE6D3E7000F18C2 /* ContentIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentIconCell.h; sourceTree = "<group>"; };
 		C56851C91DE6D3E7000F18C2 /* ContentIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentIconCell.m; sourceTree = "<group>"; };
+		C56B3A681F2830A400133AC0 /* UIView+ConvertRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ConvertRect.h"; sourceTree = "<group>"; };
+		C56B3A691F2830A400133AC0 /* UIView+ConvertRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ConvertRect.m"; sourceTree = "<group>"; };
+		C56B3A6A1F2830A400133AC0 /* UIView+DebugFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DebugFrame.h"; sourceTree = "<group>"; };
+		C56B3A6B1F2830A400133AC0 /* UIView+DebugFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DebugFrame.m"; sourceTree = "<group>"; };
 		C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		C56B7AF51D470E19009AE3C8 /* UIButton+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Event.h"; sourceTree = "<group>"; };
 		C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Event.m"; sourceTree = "<group>"; };
@@ -2198,6 +2204,10 @@
 				1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */,
 				1041AE681CEC44DB005697B8 /* UIView+ConvenientMethod.h */,
 				1041AE691CEC44DB005697B8 /* UIView+ConvenientMethod.m */,
+				C56B3A681F2830A400133AC0 /* UIView+ConvertRect.h */,
+				C56B3A691F2830A400133AC0 /* UIView+ConvertRect.m */,
+				C56B3A6A1F2830A400133AC0 /* UIView+DebugFrame.h */,
+				C56B3A6B1F2830A400133AC0 /* UIView+DebugFrame.m */,
 			);
 			name = "UIView+Category";
 			sourceTree = "<group>";
@@ -3767,6 +3777,7 @@
 				100D4B1A1D27A3A300EDE29B /* AppleSystemService.m in Sources */,
 				C59608CC1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m in Sources */,
 				C517332A1D45AFDE005D57AE /* UITextFieldView.m in Sources */,
+				C56B3A6C1F2830A400133AC0 /* UIView+ConvertRect.m in Sources */,
 				1011BAE31CD48C8D00F29FB9 /* NodePressAnimationView.m in Sources */,
 				104F0D051BFAFB4200C46E6A /* GradientColor.m in Sources */,
 				C516418F1EF76E010037C550 /* AFAutoPurgingImageCache.m in Sources */,
@@ -3907,6 +3918,7 @@
 				C545535C1E1CD76E00A5BA58 /* iCarouselView.m in Sources */,
 				C59062231DEC3908002562AE /* CAShapeLayer+CornerRadius.m in Sources */,
 				1020E2D31C73197B00FF233E /* CAGradientView.m in Sources */,
+				C56B3A6D1F2830A400133AC0 /* UIView+DebugFrame.m in Sources */,
 				106BCFCB1CDC6787007C3EEE /* CustomNodeStateView.m in Sources */,
 				C501F2191F0C7DE90051B4C6 /* AttributedStringConfig.m in Sources */,
 				1096061B1C93B46800CCB3AD /* RequestBodyType.m in Sources */,
