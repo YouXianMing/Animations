@@ -325,6 +325,7 @@
 		C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */; };
 		C50F24391D32055200C3E02A /* CutOutClearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24381D32055200C3E02A /* CutOutClearView.m */; };
 		C50F243B1D321A6A00C3E02A /* MaskShapeViewController.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */; };
+		C510B4A31F29730D009D7DB8 /* NSObject+ItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C510B4A21F29730D009D7DB8 /* NSObject+ItemStyle.m */; };
 		C51641891EF76E010037C550 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C51641681EF76E010037C550 /* AFHTTPSessionManager.m */; };
 		C516418A1EF76E010037C550 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C516416B1EF76E010037C550 /* AFNetworkReachabilityManager.m */; };
 		C516418B1EF76E010037C550 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = C516416D1EF76E010037C550 /* AFSecurityPolicy.m */; };
@@ -393,9 +394,6 @@
 		C57526CC1D5032690064F6CD /* DrawingStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C71D5032690064F6CD /* DrawingStyle.m */; };
 		C57526CD1D5032690064F6CD /* DrawingColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C91D5032690064F6CD /* DrawingColor.m */; };
 		C57526D01D50327F0064F6CD /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526CF1D50327F0064F6CD /* WaveView.m */; };
-		C57839CD1E0F4E19004530E3 /* ItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C57839CC1E0F4E19004530E3 /* ItemStyle.m */; };
-		C57839D01E0F4E91004530E3 /* UIButton+ItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C57839CF1E0F4E91004530E3 /* UIButton+ItemStyle.m */; };
-		C57839D31E0F4EAB004530E3 /* RedStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C57839D21E0F4EAB004530E3 /* RedStyle.m */; };
 		C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7911D2F40DF003433EC /* QRCodeViewController.m */; };
 		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
 		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
@@ -1102,6 +1100,9 @@
 		C50F24371D32055200C3E02A /* CutOutClearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutClearView.h; sourceTree = "<group>"; };
 		C50F24381D32055200C3E02A /* CutOutClearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutOutClearView.m; sourceTree = "<group>"; };
 		C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MaskShapeViewController.jpg; sourceTree = "<group>"; };
+		C510B4A11F29730D009D7DB8 /* NSObject+ItemStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ItemStyle.h"; sourceTree = "<group>"; };
+		C510B4A21F29730D009D7DB8 /* NSObject+ItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ItemStyle.m"; sourceTree = "<group>"; };
+		C510B4A41F2974BB009D7DB8 /* ItemStyleInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStyleInterface.h; sourceTree = "<group>"; };
 		C51641671EF76E010037C550 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		C51641681EF76E010037C550 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		C51641691EF76E010037C550 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -1241,12 +1242,6 @@
 		C57526C91D5032690064F6CD /* DrawingColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingColor.m; sourceTree = "<group>"; };
 		C57526CE1D50327F0064F6CD /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
 		C57526CF1D50327F0064F6CD /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
-		C57839CB1E0F4E19004530E3 /* ItemStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStyle.h; sourceTree = "<group>"; };
-		C57839CC1E0F4E19004530E3 /* ItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStyle.m; sourceTree = "<group>"; };
-		C57839CE1E0F4E91004530E3 /* UIButton+ItemStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ItemStyle.h"; sourceTree = "<group>"; };
-		C57839CF1E0F4E91004530E3 /* UIButton+ItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ItemStyle.m"; sourceTree = "<group>"; };
-		C57839D11E0F4EAB004530E3 /* RedStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedStyle.h; sourceTree = "<group>"; };
-		C57839D21E0F4EAB004530E3 /* RedStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedStyle.m; sourceTree = "<group>"; };
 		C582E7901D2F40DF003433EC /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		C582E7911D2F40DF003433EC /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		C582E7941D2F4184003433EC /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
@@ -2445,6 +2440,9 @@
 				1051890B1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m */,
 				C51793521F284DFD0061B0F8 /* NSObject+WeakList.h */,
 				C51793531F284DFD0061B0F8 /* NSObject+WeakList.m */,
+				C510B4A11F29730D009D7DB8 /* NSObject+ItemStyle.h */,
+				C510B4A21F29730D009D7DB8 /* NSObject+ItemStyle.m */,
+				C510B4A41F2974BB009D7DB8 /* ItemStyleInterface.h */,
 			);
 			name = "NSObject+Category";
 			sourceTree = "<group>";
@@ -2581,7 +2579,6 @@
 				106CF09A1C3765490006419B /* UIFont+Categories */,
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
 				C54553551E1CD76200A5BA58 /* iCarouselView */,
-				C57839CA1E0F4E02004530E3 /* ItemStyle */,
 				1020A3741D08F9C000056B0E /* BadgeValueView */,
 				C59608C61D3DF76E006BF6E0 /* TableGridView */,
 				1059F39E1CF4014700F63810 /* CollectionGridView */,
@@ -2730,10 +2727,6 @@
 				C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */,
 				10585B2A1C3F468E0052990F /* UIButton+Style.h */,
 				10585B2B1C3F468E0052990F /* UIButton+Style.m */,
-				C57839CE1E0F4E91004530E3 /* UIButton+ItemStyle.h */,
-				C57839CF1E0F4E91004530E3 /* UIButton+ItemStyle.m */,
-				C57839D11E0F4EAB004530E3 /* RedStyle.h */,
-				C57839D21E0F4EAB004530E3 /* RedStyle.m */,
 			);
 			name = "UIButton+Categories";
 			sourceTree = "<group>";
@@ -3469,15 +3462,6 @@
 			name = WaveView;
 			sourceTree = "<group>";
 		};
-		C57839CA1E0F4E02004530E3 /* ItemStyle */ = {
-			isa = PBXGroup;
-			children = (
-				C57839CB1E0F4E19004530E3 /* ItemStyle.h */,
-				C57839CC1E0F4E19004530E3 /* ItemStyle.m */,
-			);
-			name = ItemStyle;
-			sourceTree = "<group>";
-		};
 		C582E7931D2F40E5003433EC /* QRCodeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -3742,12 +3726,10 @@
 				10E2D4E91CD5962000666EEB /* NSData+ImageContentType.m in Sources */,
 				C5EFF2471F14735A00BD5AF0 /* HorizontalCollectionItemView.m in Sources */,
 				C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */,
-				C57839CD1E0F4E19004530E3 /* ItemStyle.m in Sources */,
 				102B85321C3CF226001699A9 /* UIImage+ImageEffects.m in Sources */,
 				104FCCA51D23573D00308B73 /* TapDrawPath.m in Sources */,
 				10931AE71C51147A004D120D /* AdditiveAnimationController.m in Sources */,
 				108A99381C0FE01100B693F6 /* RotateAnimationView.m in Sources */,
-				C57839D01E0F4E91004530E3 /* UIButton+ItemStyle.m in Sources */,
 				C5EFF2711F14C46700BD5AF0 /* MASConstraint.m in Sources */,
 				B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */,
 				10381FBB1BF9B55B00E5E476 /* POPGeometry.mm in Sources */,
@@ -3800,6 +3782,7 @@
 				109F66621C38CC7A0082BC95 /* WaterfallLayoutController.m in Sources */,
 				1011BAA01CD4898D00F29FB9 /* PlayInfoModel.m in Sources */,
 				109ECD5A1C3D3B1900290307 /* PageFlipEffectController.m in Sources */,
+				C510B4A31F29730D009D7DB8 /* NSObject+ItemStyle.m in Sources */,
 				10E2D5051CD5D9E000666EEB /* FontInfomation.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
 				102A10451C9808FF00BF3F1B /* AbsRequestParameterSerializer.m in Sources */,
@@ -3834,7 +3817,6 @@
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
 				C501F21E1F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.m in Sources */,
-				C57839D31E0F4EAB004530E3 /* RedStyle.m in Sources */,
 				C51733221D45AFB8005D57AE /* TouchEventView.m in Sources */,
 				10E2D5151CD63F0900666EEB /* iCarouselViewController.m in Sources */,
 				1011BADE1CD48C8D00F29FB9 /* NodeModelStrings.m in Sources */,
