@@ -11,13 +11,14 @@
 
 @implementation NSObject (ItemStyle)
 
-- (void)setItemStyle:(id<ItemStyleInterface>)itemStyle {
- 
+- (void)setItemStyle:(ItemStyle *)itemStyle {
+    
     objc_setAssociatedObject(self, @selector(itemStyle), itemStyle, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [itemStyle makeStyleEffectiveWithSourceObject:self];
+    itemStyle.source = self;
+    [itemStyle makeStyleEffective];
 }
 
-- (id<ItemStyleInterface>)itemStyle {
+- (ItemStyle *)itemStyle {
     
     return objc_getAssociatedObject(self, _cmd);
 }

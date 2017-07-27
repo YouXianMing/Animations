@@ -325,7 +325,8 @@
 		C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */; };
 		C50F24391D32055200C3E02A /* CutOutClearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24381D32055200C3E02A /* CutOutClearView.m */; };
 		C50F243B1D321A6A00C3E02A /* MaskShapeViewController.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */; };
-		C510B4A31F29730D009D7DB8 /* NSObject+ItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C510B4A21F29730D009D7DB8 /* NSObject+ItemStyle.m */; };
+		C510B4DA1F297D2F009D7DB8 /* NSObject+ItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C510B4D71F297D2F009D7DB8 /* NSObject+ItemStyle.m */; };
+		C510B4DB1F297D2F009D7DB8 /* ItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C510B4D91F297D2F009D7DB8 /* ItemStyle.m */; };
 		C51641891EF76E010037C550 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C51641681EF76E010037C550 /* AFHTTPSessionManager.m */; };
 		C516418A1EF76E010037C550 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C516416B1EF76E010037C550 /* AFNetworkReachabilityManager.m */; };
 		C516418B1EF76E010037C550 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = C516416D1EF76E010037C550 /* AFSecurityPolicy.m */; };
@@ -1100,9 +1101,10 @@
 		C50F24371D32055200C3E02A /* CutOutClearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutClearView.h; sourceTree = "<group>"; };
 		C50F24381D32055200C3E02A /* CutOutClearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutOutClearView.m; sourceTree = "<group>"; };
 		C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MaskShapeViewController.jpg; sourceTree = "<group>"; };
-		C510B4A11F29730D009D7DB8 /* NSObject+ItemStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ItemStyle.h"; sourceTree = "<group>"; };
-		C510B4A21F29730D009D7DB8 /* NSObject+ItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ItemStyle.m"; sourceTree = "<group>"; };
-		C510B4A41F2974BB009D7DB8 /* ItemStyleInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStyleInterface.h; sourceTree = "<group>"; };
+		C510B4D61F297D2F009D7DB8 /* NSObject+ItemStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ItemStyle.h"; sourceTree = "<group>"; };
+		C510B4D71F297D2F009D7DB8 /* NSObject+ItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ItemStyle.m"; sourceTree = "<group>"; };
+		C510B4D81F297D2F009D7DB8 /* ItemStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStyle.h; sourceTree = "<group>"; };
+		C510B4D91F297D2F009D7DB8 /* ItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStyle.m; sourceTree = "<group>"; };
 		C51641671EF76E010037C550 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		C51641681EF76E010037C550 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		C51641691EF76E010037C550 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -2440,9 +2442,10 @@
 				1051890B1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m */,
 				C51793521F284DFD0061B0F8 /* NSObject+WeakList.h */,
 				C51793531F284DFD0061B0F8 /* NSObject+WeakList.m */,
-				C510B4A11F29730D009D7DB8 /* NSObject+ItemStyle.h */,
-				C510B4A21F29730D009D7DB8 /* NSObject+ItemStyle.m */,
-				C510B4A41F2974BB009D7DB8 /* ItemStyleInterface.h */,
+				C510B4D61F297D2F009D7DB8 /* NSObject+ItemStyle.h */,
+				C510B4D71F297D2F009D7DB8 /* NSObject+ItemStyle.m */,
+				C510B4D81F297D2F009D7DB8 /* ItemStyle.h */,
+				C510B4D91F297D2F009D7DB8 /* ItemStyle.m */,
 			);
 			name = "NSObject+Category";
 			sourceTree = "<group>";
@@ -3782,7 +3785,7 @@
 				109F66621C38CC7A0082BC95 /* WaterfallLayoutController.m in Sources */,
 				1011BAA01CD4898D00F29FB9 /* PlayInfoModel.m in Sources */,
 				109ECD5A1C3D3B1900290307 /* PageFlipEffectController.m in Sources */,
-				C510B4A31F29730D009D7DB8 /* NSObject+ItemStyle.m in Sources */,
+				C510B4DA1F297D2F009D7DB8 /* NSObject+ItemStyle.m in Sources */,
 				10E2D5051CD5D9E000666EEB /* FontInfomation.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
 				102A10451C9808FF00BF3F1B /* AbsRequestParameterSerializer.m in Sources */,
@@ -4090,6 +4093,7 @@
 				102296B01C38D122001AF5BB /* PictureData.m in Sources */,
 				C5EFF2761F14C46700BD5AF0 /* NSArray+MASAdditions.m in Sources */,
 				104326941C4B9D570033CEC0 /* SpringEffectController.m in Sources */,
+				C510B4DB1F297D2F009D7DB8 /* ItemStyle.m in Sources */,
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
 				10651F611D2BB2BC004AF473 /* CustomInfiniteLoopCell.m in Sources */,
 				C5EFF2851F14D03400BD5AF0 /* HorizontalPicItemModel.m in Sources */,

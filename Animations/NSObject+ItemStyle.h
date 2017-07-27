@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ItemStyleInterface.h"
+#import "ItemStyle.h"
 
 @interface NSObject (ItemStyle)
 
 /**
- 元素样式
+ To use the item style.
  */
-@property (nonatomic, strong) id <ItemStyleInterface> itemStyle;
+@property (nonatomic, strong) ItemStyle *itemStyle;
 
 @end
