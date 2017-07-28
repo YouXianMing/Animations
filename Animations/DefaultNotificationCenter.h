@@ -65,4 +65,14 @@
  */
 - (void)removeAllNotifications;
 
+/**
+ DefaultNotificationCenter Constructor.
+ 
+ @param delegate DefaultNotificationCenter's delegate.
+ @param addNotificationNamesBlock The block to add NotificationNames.
+ @return DefaultNotificationCenter object.
+ */
++ (instancetype)defaultNotificationCenterWithDelegate:(id <DefaultNotificationCenterDelegate>)delegate
+                                 addNotificationNames:(void (^)(NSMutableArray <NSString *> *names))addNotificationNamesBlock;
+
 @end

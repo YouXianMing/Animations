@@ -145,10 +145,11 @@
 #pragma mark - configNotificationCenter
 
 - (void)configNotificationCenter {
-    
-    self.notificationCenter          = [DefaultNotificationCenter new];
-    self.notificationCenter.delegate = self;
-    [self.notificationCenter addNotificationName:noti_showHomePageTableView];
+        
+    self.notificationCenter = [DefaultNotificationCenter defaultNotificationCenterWithDelegate:self addNotificationNames:^(NSMutableArray<NSString *> *names) {
+        
+        [names addObject:noti_showHomePageTableView];
+    }];
 }
 
 #pragma mark - DefaultNotificationCenterDelegate

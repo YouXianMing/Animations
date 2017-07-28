@@ -38,12 +38,12 @@
 }
 
 + (void)postEventToNotificationName:(NSString *)name object:(id)object {
-
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:name object:object];
 }
 
 - (void)addNotificationName:(NSString *)name {
-
+    
     // Check have the same name or not.
     __block BOOL haveTheSameName = NO;
     
@@ -94,7 +94,7 @@
 }
 
 - (NSArray <NSString *> *)notificationNames {
-
+    
     NSMutableArray *namesArray = [NSMutableArray array];
     [self.stringsArray enumerateObjectsUsingBlock:^(DefaultNotificationCenterModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
@@ -105,7 +105,7 @@
 }
 
 - (void)removeAllNotifications {
-
+    
     [self.stringsArray enumerateObjectsUsingBlock:^(DefaultNotificationCenterModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         [[NSNotificationCenter defaultCenter] removeObserver:self name:obj.name object:nil];
@@ -115,9 +115,9 @@
 }
 
 - (void)notificationEvent:(id)obj {
-
+    
     NSNotification *notification = obj;
-
+    
     if (self.delegate && [self.delegate respondsToSelector:@selector(defaultNotificationCenter:name:object:)]) {
         
         [self.delegate defaultNotificationCenter:self name:notification.name object:notification.object];
@@ -125,8 +125,30 @@
 }
 
 - (void)dealloc {
-
+    
     [self removeAllNotifications];
+}
+
++ (instancetype)defaultNotificationCenterWithDelegate:(id <DefaultNotificationCenterDelegate>)delegate
+                                 addNotificationNames:(void (^)(NSMutableArray <NSString *> *names))addNotificationNamesBlock {
+    
+    DefaultNotificationCenter *defaultNotificationCenter = [[self class] new];
+    defaultNotificationCenter.delegate                   = delegate;
+    
+    NSMutableArray *array = nil;
+    
+    if (addNotificationNamesBlock) {
+        
+        array = [NSMutableArray array];
+        addNotificationNamesBlock(array);
+    }
+    
+    [array enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        [defaultNotificationCenter addNotificationName:obj];
+    }];
+    
+    return defaultNotificationCenter;
 }
 
 @end
