@@ -328,6 +328,7 @@
 		C510B4DA1F297D2F009D7DB8 /* NSObject+ItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C510B4D71F297D2F009D7DB8 /* NSObject+ItemStyle.m */; };
 		C510B4DB1F297D2F009D7DB8 /* ItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C510B4D91F297D2F009D7DB8 /* ItemStyle.m */; };
 		C5159D2D1F2F12B300AF92E3 /* UIViewController+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = C5159D2C1F2F12B300AF92E3 /* UIViewController+Status.m */; };
+		C5159D301F2F2AC500AF92E3 /* NormalTitleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5159D2F1F2F2AC500AF92E3 /* NormalTitleTableViewController.m */; };
 		C51641891EF76E010037C550 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C51641681EF76E010037C550 /* AFHTTPSessionManager.m */; };
 		C516418A1EF76E010037C550 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C516416B1EF76E010037C550 /* AFNetworkReachabilityManager.m */; };
 		C516418B1EF76E010037C550 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = C516416D1EF76E010037C550 /* AFSecurityPolicy.m */; };
@@ -1108,6 +1109,8 @@
 		C510B4D91F297D2F009D7DB8 /* ItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStyle.m; sourceTree = "<group>"; };
 		C5159D2B1F2F12B300AF92E3 /* UIViewController+Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Status.h"; sourceTree = "<group>"; };
 		C5159D2C1F2F12B300AF92E3 /* UIViewController+Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Status.m"; sourceTree = "<group>"; };
+		C5159D2E1F2F2AC500AF92E3 /* NormalTitleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalTitleTableViewController.h; sourceTree = "<group>"; };
+		C5159D2F1F2F2AC500AF92E3 /* NormalTitleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalTitleTableViewController.m; sourceTree = "<group>"; };
 		C51641671EF76E010037C550 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		C51641681EF76E010037C550 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		C51641691EF76E010037C550 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -2060,6 +2063,8 @@
 			children = (
 				C5F8FE7B1ECC228D00377E01 /* NormalTitleController.h */,
 				C5F8FE7C1ECC228D00377E01 /* NormalTitleController.m */,
+				C5159D2E1F2F2AC500AF92E3 /* NormalTitleTableViewController.h */,
+				C5159D2F1F2F2AC500AF92E3 /* NormalTitleTableViewController.m */,
 				C5F8FE811ECC27B600377E01 /* FullTitleController.h */,
 				C5F8FE821ECC27B600377E01 /* FullTitleController.m */,
 				C5F8FE7E1ECC260A00377E01 /* FullTitleVisualEffectController.h */,
@@ -4030,6 +4035,7 @@
 				1011BADB1CD48C8D00F29FB9 /* NodeModel.m in Sources */,
 				10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */,
 				102296B21C38D122001AF5BB /* WaterfallPictureModel.m in Sources */,
+				C5159D301F2F2AC500AF92E3 /* NormalTitleTableViewController.m in Sources */,
 				106BCFC01CDC672A007C3EEE /* InfiniteLoopViewController.m in Sources */,
 				100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */,
 				C57526D01D50327F0064F6CD /* WaveView.m in Sources */,

@@ -52,6 +52,7 @@ NSString * const backgroundViewId  = @"backgroundViewId";
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    [self setupDataSource];
     [self initViewsConfigs];
     [self makeViewsConfig:self.viewsConfig];
     [self buildConfigViews];
@@ -276,6 +277,10 @@ NSString * const backgroundViewId  = @"backgroundViewId";
 #pragma mark - Overwrite by subclass.
 
 - (void)makeViewsConfig:(NSMutableDictionary <NSString *, ControllerBaseViewConfig *> *)viewsConfig {
+    
+}
+
+- (void)setupDataSource {
     
 }
 

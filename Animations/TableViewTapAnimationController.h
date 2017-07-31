@@ -6,8 +6,8 @@
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "NormalTitleController.h"
+#import "NormalTitleTableViewController.h"
 
-@interface TableViewTapAnimationController : NormalTitleController
+@interface TableViewTapAnimationController : NormalTitleTableViewController
 
 @end
