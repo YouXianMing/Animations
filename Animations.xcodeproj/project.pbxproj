@@ -327,6 +327,7 @@
 		C50F243B1D321A6A00C3E02A /* MaskShapeViewController.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */; };
 		C510B4DA1F297D2F009D7DB8 /* NSObject+ItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C510B4D71F297D2F009D7DB8 /* NSObject+ItemStyle.m */; };
 		C510B4DB1F297D2F009D7DB8 /* ItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C510B4D91F297D2F009D7DB8 /* ItemStyle.m */; };
+		C5159D2D1F2F12B300AF92E3 /* UIViewController+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = C5159D2C1F2F12B300AF92E3 /* UIViewController+Status.m */; };
 		C51641891EF76E010037C550 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C51641681EF76E010037C550 /* AFHTTPSessionManager.m */; };
 		C516418A1EF76E010037C550 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C516416B1EF76E010037C550 /* AFNetworkReachabilityManager.m */; };
 		C516418B1EF76E010037C550 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = C516416D1EF76E010037C550 /* AFSecurityPolicy.m */; };
@@ -1105,6 +1106,8 @@
 		C510B4D71F297D2F009D7DB8 /* NSObject+ItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ItemStyle.m"; sourceTree = "<group>"; };
 		C510B4D81F297D2F009D7DB8 /* ItemStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStyle.h; sourceTree = "<group>"; };
 		C510B4D91F297D2F009D7DB8 /* ItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStyle.m; sourceTree = "<group>"; };
+		C5159D2B1F2F12B300AF92E3 /* UIViewController+Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Status.h"; sourceTree = "<group>"; };
+		C5159D2C1F2F12B300AF92E3 /* UIViewController+Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Status.m"; sourceTree = "<group>"; };
 		C51641671EF76E010037C550 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		C51641681EF76E010037C550 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		C51641691EF76E010037C550 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -2570,6 +2573,7 @@
 		1068FCCA1CF7D76E00BE431C /* UI-Component */ = {
 			isa = PBXGroup;
 			children = (
+				C5159D2A1F2F125900AF92E3 /* UIViewController+Category */,
 				C59062241DEC390F002562AE /* CAShapeLayer+Category */,
 				C5C5AFEB1DD59D1C00F35EB8 /* UILabel+Category */,
 				C574C0171D33A20800E40201 /* UIAlertController+Category */,
@@ -3190,6 +3194,15 @@
 			name = MaskShapeViewController;
 			sourceTree = "<group>";
 		};
+		C5159D2A1F2F125900AF92E3 /* UIViewController+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C5159D2B1F2F12B300AF92E3 /* UIViewController+Status.h */,
+				C5159D2C1F2F12B300AF92E3 /* UIViewController+Status.m */,
+			);
+			name = "UIViewController+Category";
+			sourceTree = "<group>";
+		};
 		C51641661EF76E010037C550 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -3783,6 +3796,7 @@
 				10381FD11BF9D2C600E5E476 /* StrokeCircleLayerConfigure.m in Sources */,
 				C503B3671E1B422600967A61 /* BaseMessageView.m in Sources */,
 				109F66621C38CC7A0082BC95 /* WaterfallLayoutController.m in Sources */,
+				C5159D2D1F2F12B300AF92E3 /* UIViewController+Status.m in Sources */,
 				1011BAA01CD4898D00F29FB9 /* PlayInfoModel.m in Sources */,
 				109ECD5A1C3D3B1900290307 /* PageFlipEffectController.m in Sources */,
 				C510B4DA1F297D2F009D7DB8 /* NSObject+ItemStyle.m in Sources */,
