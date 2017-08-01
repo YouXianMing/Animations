@@ -11,20 +11,19 @@
 #import "PictureModel.h"
 #import "UIView+SetRect.h"
 
-@interface SDWebImageController () <UITableViewDataSource, UITableViewDelegate>
-
-@property (nonatomic, strong) NSMutableArray   *modelsArray;
-@property (nonatomic, strong) UITableView      *tableView;
+@interface SDWebImageController ()
 
 @end
 
 @implementation SDWebImageController
 
-- (void)viewDidLoad {
+# pragma mark - Overwrite super class's method
 
-    [super viewDidLoad];
+- (void)setupDataSource {
     
-    // 初始化数据源
+    [super setupDataSource];
+    
+    // Data source.
     NSArray *picsArray = @[@"http://pic.cnitblog.com/avatar/607542/20140226182241.png",
                            @"http://pic.cnitblog.com/avatar/751954/20150430140947.png",
                            @"http://pic.cnitblog.com/avatar/680363/20150315172929.png",
@@ -37,38 +36,23 @@
                            @"http://pic.cnitblog.com/avatar/485855/20140824172432.png",
                            @"http://pic.cnitblog.com/avatar/741774/20150408141002.png",
                            @"http://pic.cnitblog.com/avatar/618574/20140329230350.png"];
-
-    self.modelsArray = [NSMutableArray array];
-    for (int count = 0; count < picsArray.count; count++) {
+    
+    // Adapters.
+    [picsArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        NSURL           *url         = [NSURL URLWithString:picsArray[count]];
-        PictureModel    *model       = [PictureModel pictureModelWithPictureUrl:url haveAnimated:NO];
-        model.pictureUrlString       = picsArray[count];
-        [_modelsArray addObject:[PictureCell dataAdapterWithCellReuseIdentifier:nil data:model cellHeight:0 type:0]];
-    }
-    
-    // 初始化tableView
-    self.tableView                 = [[UITableView alloc] initWithFrame:self.contentView.bounds];
-    self.tableView.delegate        = self;
-    self.tableView.dataSource      = self;
-    self.tableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
-    self.tableView.rowHeight       = Width;
-    self.tableView.backgroundColor = [UIColor blackColor];
-    [PictureCell registerToTableView:self.tableView];
-    [self.contentView addSubview:self.tableView];
+        NSURL           *url   = [NSURL URLWithString:picsArray[idx]];
+        PictureModel    *model = [PictureModel pictureModelWithPictureUrl:url haveAnimated:NO];
+        model.pictureUrlString = picsArray[idx];
+        [self.adapters addObject:[PictureCell dataAdapterWithCellReuseIdentifier:nil data:model cellHeight:Width type:0]];
+    }];
 }
 
-#pragma mark - TableView's Delegate & DataSource.
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (void)registerCellsWithTableView:(UITableView *)tableView {
     
-    return _modelsArray.count;
+    [PictureCell registerToTableView:tableView];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return [tableView dequeueReusableCellAndLoadDataWithAdapter:_modelsArray[indexPath.row] indexPath:indexPath];
-}
+#pragma mark - TableView's Delegate
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 

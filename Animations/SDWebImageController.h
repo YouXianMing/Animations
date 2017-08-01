@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "NormalTitleController.h"
+#import "NormalTitleTableViewController.h"
 
-@interface SDWebImageController : NormalTitleController
+@interface SDWebImageController : NormalTitleTableViewController
 
 @end

@@ -14,6 +14,8 @@
 
 @implementation NormalTitleTableViewController
 
+#pragma mark - Overwrite super method.
+
 - (void)setupDataSource {
     
     self.adapters = [NSMutableArray array];

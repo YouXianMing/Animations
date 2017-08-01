@@ -14,29 +14,17 @@
 #import "UIView+SetRect.h"
 #import "GCD.h"
 
-@interface TapCellAnimationController () <UITableViewDelegate, UITableViewDataSource>
-
-@property (nonatomic, strong) UITableView    *tableView;
-@property (nonatomic, strong) NSMutableArray <CellDataAdapter *> *datasArray;
+@interface TapCellAnimationController ()
 
 @end
 
 @implementation TapCellAnimationController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-    
-    [self buildTableView];
-    
-    [self createDataSource];
-}
+# pragma mark - Overwrite super class's method
 
-#pragma mark - DataSource
-
-- (void)createDataSource {
+- (void)setupDataSource {
     
-    self.datasArray = [NSMutableArray array];
+    [super setupDataSource];
     
     NSArray *strings = @[
                          @"AFNetworking is a delightful networking library for iOS and Mac OS X. It's built on top of the Foundation URL Loading System, extending the powerful high-level networking abstractions built into Cocoa. It has a modular architecture with well-designed, feature-rich APIs that are a joy to use. Perhaps the most important feature of all, however, is the amazing community of developers who use and contribute to AFNetworking every day. AFNetworking powers some of the most popular and critically-acclaimed apps on the iPhone, iPad, and Mac. Choose AFNetworking for your next project, or migrate over your existing projects—you'll be happy you did!",
@@ -64,7 +52,7 @@
             CellDataAdapter *adapter = [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:@"ShowTextCell" data:model
                                                                                     cellHeight:model.normalStringHeight
                                                                                       cellType:kShowTextCellNormalType];
-            [self.datasArray addObject:adapter];
+            [self.adapters addObject:adapter];
             [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
         }
         
@@ -80,36 +68,9 @@
     } afterDelaySecs:1.f];
 }
 
-#pragma mark - UITableView
-
-- (void)buildTableView {
+- (void)registerCellsWithTableView:(UITableView *)tableView {
     
-    self.tableView                = [[UITableView alloc] initWithFrame:self.contentView.bounds];
-    self.tableView.delegate       = self;
-    self.tableView.dataSource     = self;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.contentView addSubview:self.tableView];
-    [ShowTextCell registerToTableView:self.tableView];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return _datasArray.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return [tableView dequeueReusableCellAndLoadDataWithAdapter:_datasArray[indexPath.row] indexPath:indexPath];
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [(CustomCell *)[tableView cellForRowAtIndexPath:indexPath] selectedEvent];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return _datasArray[indexPath.row].cellHeight;
+    [ShowTextCell registerToTableView:tableView];
 }
 
 @end

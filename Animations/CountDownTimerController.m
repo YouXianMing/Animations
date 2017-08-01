@@ -11,30 +11,20 @@
 #import "TimeModel.h"
 #import "UIView+SetRect.h"
 
-@interface CountDownTimerController () <UITableViewDelegate, UITableViewDataSource>
+@interface CountDownTimerController ()
 
-@property (nonatomic, strong) NSMutableArray  *timesArray;
-@property (nonatomic, strong) UITableView     *tableView;
-@property (nonatomic, strong) NSTimer         *timer;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
 @implementation CountDownTimerController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
+#pragma mark - Overwrite super class's method
 
-    [self createDataSource];
+- (void)setupDataSource {
     
-    [self createTableView];
+    [super setupDataSource];
     
-    [self createTimer];
-}
-
-- (void)createDataSource {
-    
-    self.timesArray = [NSMutableArray array];
     NSArray *array  = @[TimeModelWithTitle(@"YouXianMing", @20034),
                         TimeModelWithTitle(@"Aaron"      , @31),
                         TimeModelWithTitle(@"Nicholas"   , @1003),
@@ -47,23 +37,20 @@
                         TimeModelWithTitle(@"Steven"     , @54524),
                         TimeModelWithTitle(@"Saadiya"    , @235)];
     
-    for (int i = 0; i < array.count; i++) {
-        
-        [self.timesArray addObject:[CountDownTimeCell dataAdapterWithCellReuseIdentifier:nil data:array[i] cellHeight:0 type:0]];
-    }
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       
+        [self.adapters addObject:[CountDownTimeCell dataAdapterWithCellReuseIdentifier:nil data:array[idx] cellHeight:60 type:0]];
+    }];
+    
+    [self createTimer];
 }
 
-- (void)createTableView {
+- (void)registerCellsWithTableView:(UITableView *)tableView {
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.contentView.bounds
-                                                  style:UITableViewStylePlain];
-    self.tableView.delegate       = self;
-    self.tableView.dataSource     = self;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.rowHeight      = 60.f;
-    [CountDownTimeCell registerToTableView:self.tableView];
-    [self.contentView addSubview:self.tableView];
+    [CountDownTimeCell registerToTableView:tableView];
 }
+
+#pragma mark - TimerEvent
 
 - (void)createTimer {
     
@@ -73,9 +60,9 @@
 
 - (void)timerEvent {
     
-    for (int count = 0; count < _timesArray.count; count++) {
+    for (int count = 0; count < self.adapters.count; count++) {
         
-        CellDataAdapter *adapter = _timesArray[count];
+        CellDataAdapter *adapter = self.adapters[count];
         TimeModel       *model   = adapter.data;
         
         [model countDown];
@@ -84,17 +71,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:NSNotificationCountDownTimeCell object:nil];
 }
 
-#pragma mark - tableView代理
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return self.timesArray.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return [tableView dequeueReusableCellAndLoadDataWithAdapter:_timesArray[indexPath.row] indexPath:indexPath];
-}
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     

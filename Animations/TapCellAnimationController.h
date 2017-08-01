@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import "NormalTitleController.h"
+#import "NormalTitleTableViewController.h"
 
-@interface TapCellAnimationController : NormalTitleController
+@interface TapCellAnimationController : NormalTitleTableViewController
 
 @end

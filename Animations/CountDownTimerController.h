@@ -6,8 +6,8 @@
 //  Copyright © 2015年 YouXianMing. All rights reserved.
 //
 
-#import "NormalTitleController.h"
+#import "NormalTitleTableViewController.h"
 
-@interface CountDownTimerController : NormalTitleController
+@interface CountDownTimerController : NormalTitleTableViewController
 
 @end

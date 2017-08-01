@@ -92,12 +92,12 @@ extern NSString * const backgroundViewId;
 - (void)makeViewsConfig:(NSMutableDictionary <NSString *, ControllerBaseViewConfig *> *)viewsConfig;
 
 /**
- *  Overwrite to setup the data source, array etc.
+ *  Overwrite to setup the data source, like array etc.
  */
 - (void)setupDataSource;
 
 /**
- *  Overwrite to setup titleView, contentView etc.
+ *  Overwrite to setup titleView, like contentView etc.
  */
 - (void)setupSubViews;
 
