@@ -115,7 +115,7 @@
 
 #pragma mark - UIScrollView's delegate.
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     NSArray <OffsetImageCell *> *array = [self.tableView visibleCells];
     

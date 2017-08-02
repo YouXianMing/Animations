@@ -11,8 +11,13 @@
 #import "UIView+SetRect.h"
 #import "PlaceholderImageView.h"
 #import "UIImageView+WebCache.h"
+#import "UIView+ConvertRect.h"
+#import "Math.h"
 
-@interface LoopViewCell ()
+@interface LoopViewCell () {
+    
+    Math *_math;
+}
 
 @property (nonatomic, strong) PlaceholderImageView *imageView;
 
@@ -23,6 +28,8 @@
 - (void)setupCollectionViewCell {
     
     self.layer.masksToBounds = YES;
+    
+    _math = [Math mathOnceLinearEquationWithPointA:MATHPointMake(0, Width / 2.f) PointB:MATHPointMake(-Width, Width / 2.f + Width * 0.9)];
 }
 
 - (void)buildSubView {
@@ -35,6 +42,22 @@
 - (void)loadContent {
         
     self.imageView.urlString = [self.dataModel imageUrlString];
+}
+
+- (void)willDisplay {
+    
+    [self resetImageViewCenterPoint];
+}
+
+- (void)contentOffset:(CGPoint)offset {
+    
+    [self resetImageViewCenterPoint];
+}
+
+- (void)resetImageViewCenterPoint {
+    
+    CGPoint point = [self frameOriginFromView:self.window];
+    self.imageView.centerX = _math.k * point.x + _math.b;
 }
 
 @end
