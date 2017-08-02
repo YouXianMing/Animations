@@ -366,6 +366,7 @@
 		C54553651E1CD7CA00A5BA58 /* ScrollCarouselItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553631E1CD7CA00A5BA58 /* ScrollCarouselItemView.m */; };
 		C545536B1E1CD7DD00A5BA58 /* LinearCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553681E1CD7DD00A5BA58 /* LinearCarouselView.m */; };
 		C545536C1E1CD7DD00A5BA58 /* LinearCarouseItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C545536A1E1CD7DD00A5BA58 /* LinearCarouseItemView.m */; };
+		C54CB91D1F31B68900DFFE15 /* NSArray+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C54CB91C1F31B68900DFFE15 /* NSArray+IndexPath.m */; };
 		C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */; };
 		C5525D681E03DCAB00929C52 /* ControllerPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */; };
 		C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */; };
@@ -1188,6 +1189,8 @@
 		C54553681E1CD7DD00A5BA58 /* LinearCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearCarouselView.m; sourceTree = "<group>"; };
 		C54553691E1CD7DD00A5BA58 /* LinearCarouseItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearCarouseItemView.h; sourceTree = "<group>"; };
 		C545536A1E1CD7DD00A5BA58 /* LinearCarouseItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearCarouseItemView.m; sourceTree = "<group>"; };
+		C54CB91B1F31B68900DFFE15 /* NSArray+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+IndexPath.h"; sourceTree = "<group>"; };
+		C54CB91C1F31B68900DFFE15 /* NSArray+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+IndexPath.m"; sourceTree = "<group>"; };
 		C5525D631E03DBD300929C52 /* ControllerPopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerPopAnimator.h; sourceTree = "<group>"; };
 		C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerPopAnimator.m; sourceTree = "<group>"; };
 		C5525D661E03DCAB00929C52 /* ControllerPushAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerPushAnimator.h; sourceTree = "<group>"; };
@@ -1522,6 +1525,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C54CB91A1F31B67600DFFE15 /* NSArray+IndexPath */,
 				105189091D0A65D500F606FB /* NSObject+Category */,
 				C501F24E1F0CC3F50051B4C6 /* RegexManager */,
 				C5EE65B21E1B39FC00DDF591 /* IndexRange */,
@@ -3350,6 +3354,15 @@
 			name = LinearCarouselView;
 			sourceTree = "<group>";
 		};
+		C54CB91A1F31B67600DFFE15 /* NSArray+IndexPath */ = {
+			isa = PBXGroup;
+			children = (
+				C54CB91B1F31B68900DFFE15 /* NSArray+IndexPath.h */,
+				C54CB91C1F31B68900DFFE15 /* NSArray+IndexPath.m */,
+			);
+			name = "NSArray+IndexPath";
+			sourceTree = "<group>";
+		};
 		C55736301E837961001CDC9A /* LoadCSSViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -4155,6 +4168,7 @@
 				C51641971EF76E010037C550 /* UIWebView+AFNetworking.m in Sources */,
 				1011BA8F1CD484FE00F29FB9 /* OffsetCellViewController.m in Sources */,
 				1011BAA21CD4898D00F29FB9 /* VideoListModel.m in Sources */,
+				C54CB91D1F31B68900DFFE15 /* NSArray+IndexPath.m in Sources */,
 				C5B457821DE7D9CA002363AC /* ShapeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
