@@ -34,6 +34,10 @@
     
 }
 
+- (void)contentOffset:(CGPoint)offset {
+    
+}
+
 - (void)selectedEvent {
     
 }

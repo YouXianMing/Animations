@@ -78,6 +78,11 @@
  */
 - (void)loadContent;
 
+/**
+ *  The content offset, override by subclass.
+ */
+- (void)contentOffset:(CGPoint)offset;
+
 #pragma mark - Useful method.
 
 /**

@@ -373,6 +373,7 @@
 		C554F8851DEEAA10007C394A /* TableViewSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C554F8841DEEAA10007C394A /* TableViewSectionItem.m */; };
 		C55661C81F32CDFC0092ACA4 /* MathematicalComputation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661C51F32CDFC0092ACA4 /* MathematicalComputation.m */; };
 		C55661C91F32CDFC0092ACA4 /* ComputationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661C71F32CDFC0092ACA4 /* ComputationStrategy.m */; };
+		C55661FF1F3312540092ACA4 /* InfiniteLoopCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661FE1F3312540092ACA4 /* InfiniteLoopCollectionView.m */; };
 		C557362D1E8375F0001CDC9A /* LoadCSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C557362C1E8375F0001CDC9A /* LoadCSSViewController.m */; };
 		C557362F1E837661001CDC9A /* news in Resources */ = {isa = PBXBuildFile; fileRef = C557362E1E837661001CDC9A /* news */; };
 		C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */; };
@@ -1205,6 +1206,8 @@
 		C55661C51F32CDFC0092ACA4 /* MathematicalComputation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathematicalComputation.m; sourceTree = "<group>"; };
 		C55661C61F32CDFC0092ACA4 /* ComputationStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputationStrategy.h; sourceTree = "<group>"; };
 		C55661C71F32CDFC0092ACA4 /* ComputationStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComputationStrategy.m; sourceTree = "<group>"; };
+		C55661FD1F3312540092ACA4 /* InfiniteLoopCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteLoopCollectionView.h; sourceTree = "<group>"; };
+		C55661FE1F3312540092ACA4 /* InfiniteLoopCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteLoopCollectionView.m; sourceTree = "<group>"; };
 		C557362B1E8375F0001CDC9A /* LoadCSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadCSSViewController.h; sourceTree = "<group>"; };
 		C557362C1E8375F0001CDC9A /* LoadCSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadCSSViewController.m; sourceTree = "<group>"; };
 		C557362E1E837661001CDC9A /* news */ = {isa = PBXFileReference; lastKnownFileType = folder; path = news; sourceTree = "<group>"; };
@@ -2680,6 +2683,7 @@
 		106BCFC21CDC6740007C3EEE /* InfiniteLoopView */ = {
 			isa = PBXGroup;
 			children = (
+				C55661FC1F33123F0092ACA4 /* InfiniteLoopCollectionView */,
 				106BCFC51CDC6760007C3EEE /* InfiniteLoopViewBuilder */,
 				106BCFC41CDC675E007C3EEE /* InfiniteNodeView */,
 				106BCFC31CDC6759007C3EEE /* InfiniteLoopView */,
@@ -3373,6 +3377,15 @@
 			name = "NSArray+IndexPath";
 			sourceTree = "<group>";
 		};
+		C55661FC1F33123F0092ACA4 /* InfiniteLoopCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C55661FD1F3312540092ACA4 /* InfiniteLoopCollectionView.h */,
+				C55661FE1F3312540092ACA4 /* InfiniteLoopCollectionView.m */,
+			);
+			name = InfiniteLoopCollectionView;
+			sourceTree = "<group>";
+		};
 		C55736301E837961001CDC9A /* LoadCSSViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -3927,6 +3940,7 @@
 				C57526CA1D5032690064F6CD /* CustomDrawingView.m in Sources */,
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
 				104326641C4B172F0033CEC0 /* ProgressColor.m in Sources */,
+				C55661FF1F3312540092ACA4 /* InfiniteLoopCollectionView.m in Sources */,
 				109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */,
 				10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */,
 				C501F2511F0CC4000051B4C6 /* RegexManager.m in Sources */,
