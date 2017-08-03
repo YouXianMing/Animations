@@ -371,6 +371,8 @@
 		C5525D681E03DCAB00929C52 /* ControllerPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */; };
 		C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */; };
 		C554F8851DEEAA10007C394A /* TableViewSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C554F8841DEEAA10007C394A /* TableViewSectionItem.m */; };
+		C55661C81F32CDFC0092ACA4 /* MathematicalComputation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661C51F32CDFC0092ACA4 /* MathematicalComputation.m */; };
+		C55661C91F32CDFC0092ACA4 /* ComputationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661C71F32CDFC0092ACA4 /* ComputationStrategy.m */; };
 		C557362D1E8375F0001CDC9A /* LoadCSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C557362C1E8375F0001CDC9A /* LoadCSSViewController.m */; };
 		C557362F1E837661001CDC9A /* news in Resources */ = {isa = PBXBuildFile; fileRef = C557362E1E837661001CDC9A /* news */; };
 		C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */; };
@@ -1199,6 +1201,10 @@
 		C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationsListViewNavigationController.m; sourceTree = "<group>"; };
 		C554F8831DEEAA10007C394A /* TableViewSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSectionItem.h; sourceTree = "<group>"; };
 		C554F8841DEEAA10007C394A /* TableViewSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSectionItem.m; sourceTree = "<group>"; };
+		C55661C41F32CDFC0092ACA4 /* MathematicalComputation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathematicalComputation.h; sourceTree = "<group>"; };
+		C55661C51F32CDFC0092ACA4 /* MathematicalComputation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathematicalComputation.m; sourceTree = "<group>"; };
+		C55661C61F32CDFC0092ACA4 /* ComputationStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputationStrategy.h; sourceTree = "<group>"; };
+		C55661C71F32CDFC0092ACA4 /* ComputationStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComputationStrategy.m; sourceTree = "<group>"; };
 		C557362B1E8375F0001CDC9A /* LoadCSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadCSSViewController.h; sourceTree = "<group>"; };
 		C557362C1E8375F0001CDC9A /* LoadCSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadCSSViewController.m; sourceTree = "<group>"; };
 		C557362E1E837661001CDC9A /* news */ = {isa = PBXFileReference; lastKnownFileType = folder; path = news; sourceTree = "<group>"; };
@@ -1928,6 +1934,10 @@
 			children = (
 				103088B51C05880B00C8B623 /* Math.h */,
 				103088B61C05880B00C8B623 /* Math.m */,
+				C55661C41F32CDFC0092ACA4 /* MathematicalComputation.h */,
+				C55661C51F32CDFC0092ACA4 /* MathematicalComputation.m */,
+				C55661C61F32CDFC0092ACA4 /* ComputationStrategy.h */,
+				C55661C71F32CDFC0092ACA4 /* ComputationStrategy.m */,
 			);
 			name = Math;
 			sourceTree = "<group>";
@@ -3804,6 +3814,7 @@
 				102B1F0C1C60E3D700A8FD40 /* RefreshObject.m in Sources */,
 				102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */,
 				104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */,
+				C55661C81F32CDFC0092ACA4 /* MathematicalComputation.m in Sources */,
 				C5F8FE7A1ECC1E3B00377E01 /* AnimationsListController.m in Sources */,
 				C5C5AFEE1DD59D4F00F35EB8 /* UILabel+SizeToFit.m in Sources */,
 				1020E33B1C759C2F00FF233E /* UIView+MotionEffect.m in Sources */,
@@ -3895,6 +3906,7 @@
 				10B0DDFF1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m in Sources */,
 				10A67C5F1C12D59000C3E505 /* DrawWaveViewController.m in Sources */,
 				102B85001C3C9FBB001699A9 /* NumberFormatter.m in Sources */,
+				C55661C91F32CDFC0092ACA4 /* ComputationStrategy.m in Sources */,
 				102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */,
 				1011BAF11CD4959300F29FB9 /* NSData+CommonCrypto.m in Sources */,
 				109606291C93B47800CCB3AD /* NetworkingIndicator.m in Sources */,
