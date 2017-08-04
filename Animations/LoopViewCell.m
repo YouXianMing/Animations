@@ -44,11 +44,6 @@
     self.imageView.urlString = [self.dataModel imageUrlString];
 }
 
-- (void)willDisplay {
-    
-    [self resetImageViewCenterPoint];
-}
-
 - (void)contentOffset:(CGPoint)offset {
     
     [self resetImageViewCenterPoint];
