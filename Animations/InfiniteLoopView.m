@@ -167,13 +167,9 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(CustomInfiniteLoopCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [self.collectionView.visibleCells enumerateObjectsUsingBlock:^(__kindof CustomInfiniteLoopCell *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        CGPoint point = [obj convertPoint:obj.bounds.origin fromView:self];
-        [obj contentOffset:point];
-    }];
-    
+
+    CGPoint point = [cell convertPoint:cell.bounds.origin fromView:self];
+    [cell contentOffset:point];
     [cell willDisplay];
 }
 
