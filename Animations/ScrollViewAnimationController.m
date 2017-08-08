@@ -46,7 +46,6 @@ typedef enum : NSUInteger {
     
     self.titlesContentView                        = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, TabbarHeight)];
     self.titlesContentView.backgroundColor        = [[UIColor blackColor] colorWithAlphaComponent:0.65f];
-    self.titlesContentView.userInteractionEnabled = NO;
     self.titlesContentView.bottom                 = self.contentView.height;
     [self.contentView addSubview:self.titlesContentView];
     
@@ -72,6 +71,7 @@ typedef enum : NSUInteger {
         titleView.title            = self.titles[i];
         titleView.tag              = kTitleViewTag + i;
         [titleView buildSubViews];
+        [titleView addTarget:self action:@selector(scrollTitleViewEvents:) forControlEvents:UIControlEventTouchUpInside];
         [self.titlesContentView addSubview:titleView];
         
         // Init values.
@@ -113,6 +113,15 @@ typedef enum : NSUInteger {
         titleView.inputValue = value.outputValue;
         imageView.alpha      = value.outputValue;
     }
+}
+
+- (void)scrollTitleViewEvents:(ScrollTitleView *)titleView {
+ 
+    NSInteger index = titleView.tag - kTitleViewTag;
+    [UIView animateWithDuration:0.35f animations:^{
+        
+        self.scrollView.contentOffset = CGPointMake(index * Width, 0);
+    }];
 }
 
 @end

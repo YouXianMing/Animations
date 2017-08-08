@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScrollTitleView : UIView
+@interface ScrollTitleView : UIButton
 
 /**
  *  Title

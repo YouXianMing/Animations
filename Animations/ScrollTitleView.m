@@ -21,18 +21,20 @@
 
 - (void)buildSubViews {
     
-    self.backLabel               = [[UILabel alloc] initWithFrame:self.bounds];
-    self.backLabel.text          = self.title;
-    self.backLabel.font          = [UIFont HeitiSCWithFontSize:16.f];
-    self.backLabel.textAlignment = NSTextAlignmentCenter;
-    self.backLabel.textColor     = [[UIColor whiteColor] colorWithAlphaComponent:0.5f];
+    self.backLabel                        = [[UILabel alloc] initWithFrame:self.bounds];
+    self.backLabel.text                   = self.title;
+    self.backLabel.font                   = [UIFont HeitiSCWithFontSize:16.f];
+    self.backLabel.textAlignment          = NSTextAlignmentCenter;
+    self.backLabel.textColor              = [[UIColor whiteColor] colorWithAlphaComponent:0.5f];
+    self.backLabel.userInteractionEnabled = NO;
     [self addSubview:self.backLabel];
     
-    self.frontLabel               = [[UILabel alloc] initWithFrame:self.bounds];
-    self.frontLabel.text          = self.title;
-    self.frontLabel.font          = [UIFont HeitiSCWithFontSize:16.f];
-    self.frontLabel.textAlignment = NSTextAlignmentCenter;
-    self.frontLabel.textColor     = [UIColor redColor];
+    self.frontLabel                        = [[UILabel alloc] initWithFrame:self.bounds];
+    self.frontLabel.text                   = self.title;
+    self.frontLabel.font                   = [UIFont HeitiSCWithFontSize:16.f];
+    self.frontLabel.textAlignment          = NSTextAlignmentCenter;
+    self.frontLabel.textColor              = [UIColor redColor];
+    self.frontLabel.userInteractionEnabled = NO;
     [self addSubview:self.frontLabel];
 }
 
