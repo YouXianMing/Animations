@@ -27,7 +27,7 @@
 
 /**
  Start to search.
-
+ 
  @return RegexManager's instance.
  */
 - (instancetype)start;
@@ -44,7 +44,7 @@
 
 /**
  The replacing's result.
-
+ 
  @param string The templete.
  @return The result string.
  */
@@ -52,7 +52,7 @@
 
 /**
  [ Constructor ]
-
+ 
  @param string The source string.
  @param pattern The regex pattern.
  @param options The search's option.
@@ -62,7 +62,7 @@
 
 /**
  [ Constructor ]
-
+ 
  @param string The source string.
  @param pattern The regex pattern.
  @return RegexManager's instance.
@@ -80,6 +80,9 @@
 
 - (NSMutableArray <NSValue *> *)matchsWithRegexPattern:(NSString *)pattern;
 - (NSMutableArray <NSValue *> *)matchsWithRegexPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options;
+
+- (NSMutableArray <NSString *> *)matchStringsArrayWithRegexPattern:(NSString *)pattern;
+- (NSMutableArray <NSString *> *)matchStringsArrayWithRegexPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options;
 
 - (NSString *)replacingWithPattern:(NSString *)pattern template:(NSString *)templ;
 - (NSString *)replacingWithPattern:(NSString *)pattern template:(NSString *)templ options:(NSRegularExpressionOptions)options;

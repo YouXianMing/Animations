@@ -19,7 +19,7 @@
 @implementation RegexManager
 
 - (instancetype)start {
-
+    
     NSParameterAssert(self.pattern);
     self.regex = [NSRegularExpression regularExpressionWithPattern:self.pattern options:self.options error:nil];
     
@@ -78,7 +78,7 @@
 @implementation NSString (RegexManager)
 
 - (BOOL)existWithRegexPattern:(NSString *)pattern {
-
+    
     return [[[RegexManager regexManagerWithString:self pattern:pattern] start] numberOfMatches] > 0 ? YES : NO;
 }
 
@@ -88,7 +88,7 @@
 }
 
 - (NSMutableArray <NSValue *> *)matchsWithRegexPattern:(NSString *)pattern {
-
+    
     return [[[RegexManager regexManagerWithString:self pattern:pattern] start] matchs];
 }
 
@@ -97,8 +97,38 @@
     return [[[RegexManager regexManagerWithString:self pattern:pattern options:options] start] matchs];
 }
 
-- (NSString *)replacingWithPattern:(NSString *)pattern template:(NSString *)templ {
+- (NSMutableArray <NSString *> *)matchStringsArrayWithRegexPattern:(NSString *)pattern {
+    
+    // Get all rangeValues.
+    NSMutableArray <NSValue *> *rangeValues  = [[[RegexManager regexManagerWithString:self pattern:pattern] start] matchs];
+    
+    // Store match strings.
+    NSMutableArray *matchStrings = [NSMutableArray array];
+    [rangeValues enumerateObjectsUsingBlock:^(NSValue *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        [matchStrings addObject:[self substringWithRange:obj.rangeValue]];
+    }];
+    
+    return matchStrings;
+}
 
+- (NSMutableArray <NSString *> *)matchStringsArrayWithRegexPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options {
+    
+    // Get all rangeValues.
+    NSMutableArray <NSValue *> *rangeValues  = [[[RegexManager regexManagerWithString:self pattern:pattern options:options] start] matchs];
+    
+    // Store match strings.
+    NSMutableArray *matchStrings = [NSMutableArray array];
+    [rangeValues enumerateObjectsUsingBlock:^(NSValue *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        [matchStrings addObject:[self substringWithRange:obj.rangeValue]];
+    }];
+    
+    return matchStrings;
+}
+
+- (NSString *)replacingWithPattern:(NSString *)pattern template:(NSString *)templ {
+    
     return [[[RegexManager regexManagerWithString:self pattern:pattern] start] replacingWithTemplate:templ];
 }
 
