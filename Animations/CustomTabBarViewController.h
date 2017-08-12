@@ -28,7 +28,7 @@
 /**
  *  CustomTabBarViewController's delegate.
  */
-@property (nonatomic, weak) id <CustomTabBarViewControllerDelegate> delegate;
+@property (nonatomic, weak) id <CustomTabBarViewControllerDelegate> tabBarViewControllerDelegate;
 
 /**
  *  TabBar's height, default is 49.f.
@@ -78,8 +78,8 @@
 
 /**
  [Overwrite by subClass] Add childViewControllers.
-
- @param controllers UIViewController's array.
+ 
+ @param controllers UIViewController数组
  */
 - (void)addChildViewControllers:(NSMutableArray <UIViewController *> *)controllers;
 

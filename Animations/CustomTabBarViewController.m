@@ -104,9 +104,9 @@
 
 - (BOOL)willSelectIndex:(NSInteger)index {
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(customTabBarController:shouldSelectViewController:selectedIndex:)]) {
+    if (self.tabBarViewControllerDelegate && [self.tabBarViewControllerDelegate respondsToSelector:@selector(customTabBarController:shouldSelectViewController:selectedIndex:)]) {
         
-        return [self.delegate customTabBarController:self shouldSelectViewController:self.viewControllers[index] selectedIndex:index];
+        return [self.tabBarViewControllerDelegate customTabBarController:self shouldSelectViewController:self.viewControllers[index] selectedIndex:index];
         
     } else {
         
@@ -116,9 +116,9 @@
 
 - (void)didSelectedIndex:(NSInteger)index {
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(customTabBarController:didSelectViewController:selectedIndex:)]) {
+    if (self.tabBarViewControllerDelegate && [self.tabBarViewControllerDelegate respondsToSelector:@selector(customTabBarController:didSelectViewController:selectedIndex:)]) {
         
-        [self.delegate customTabBarController:self didSelectViewController:self.viewControllers[index] selectedIndex:index];
+        [self.tabBarViewControllerDelegate customTabBarController:self didSelectViewController:self.viewControllers[index] selectedIndex:index];
     }
     
     if ([self.currentViewController isEqual:self.viewControllers[index]]) {

@@ -52,7 +52,6 @@ NSString * const backgroundViewId  = @"backgroundViewId";
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    [self setupDataSource];
     [self initViewsConfigs];
     [self makeViewsConfig:self.viewsConfig];
     [self buildConfigViews];
@@ -213,7 +212,7 @@ NSString * const backgroundViewId  = @"backgroundViewId";
     
 #ifdef DEBUG
     
-    [self debugWithString:@"[❌] Did released the" debugTag:kDeallocType];
+    [self debugWithString:@"[⚠️] Did released the" debugTag:kDeallocType];
     
 #endif
 }
@@ -280,11 +279,11 @@ NSString * const backgroundViewId  = @"backgroundViewId";
     
 }
 
-- (void)setupDataSource {
+- (void)setupSubViews {
     
 }
 
-- (void)setupSubViews {
+- (void)setupDataSource {
     
 }
 
