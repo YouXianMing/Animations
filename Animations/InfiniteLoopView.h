@@ -38,7 +38,7 @@
 @end
 
 @interface InfiniteLoopView : UIView
-
+@property (nonatomic)         BOOL                         isAnimating;
 /**
  *  InfiniteLoopView's delegate.
  */
@@ -50,9 +50,13 @@
 @property (nonatomic, strong) NSArray <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol> *models;
 
 /**
- *  Scroll time interval, default is 4s.
+ *  Scroll time interval, default is 3s.
  */
 @property (nonatomic) NSTimeInterval  scrollTimeInterval;
+/**
+ *  AutoScroll time interval, default is 1.5s.
+ */
+@property (nonatomic,assign) NSTimeInterval autoScrollDuringTimeInterval;
 
 /**
  *  Scroll direction, default is horizontal.

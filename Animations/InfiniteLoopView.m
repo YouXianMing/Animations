@@ -7,14 +7,14 @@
 //
 
 #import "InfiniteLoopView.h"
-
+#import "POP.h"
 @interface InfiniteLoopView () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) UICollectionView            *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout  *flowLayout;
 @property (nonatomic, strong) NSTimer                     *currentTimer;
 @property (nonatomic)         NSInteger                    currentPage;
-@property (nonatomic)         BOOL                         isAnimating;
+
 
 @end
 
@@ -24,13 +24,14 @@
     
     if (self = [super initWithFrame:frame]) {
         
-        self.scrollTimeInterval = 4.f;
+        self.scrollTimeInterval = 3.f;
+        self.autoScrollDuringTimeInterval = 1.5;
         self.scrollDirection    = UICollectionViewScrollDirectionHorizontal;
         
         // Init flowLayout.
         self.flowLayout                    = [[UICollectionViewFlowLayout alloc] init];
-        self.flowLayout.minimumLineSpacing = 0;
-        self.flowLayout.itemSize           = self.bounds.size;
+        //self.flowLayout.minimumLineSpacing = 0;
+        //self.flowLayout.itemSize           = self.bounds.size;
         
         // Init UICollectionView.
         self.collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:self.flowLayout];
@@ -43,7 +44,13 @@
     
     return self;
 }
-
+#pragma mark - ******** 适配Frame变化
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.collectionView.frame = self.bounds;
+    [self.collectionView reloadData];
+}
 - (void)reset {
     
     [self stopLoopAnimation];
@@ -52,6 +59,9 @@
 
 - (void)prepare {
     
+    if (self.models.count == 0) {
+        return;
+    }
     NSParameterAssert(self.models);
     
     // Check cell's class.
@@ -100,7 +110,7 @@
 
 - (void)setupTimer {
     
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.scrollTimeInterval target:self selector:@selector(action)
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.scrollTimeInterval+self.autoScrollDuringTimeInterval target:self selector:@selector(action)
                                                     userInfo:nil repeats:YES];
     
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
@@ -125,13 +135,56 @@
     NSInteger newRow     = (currentIndexPath.row + 1) % self.models.count;
     NSInteger newSection = currentIndexPath.section + (newRow == 0 ? 1 : 0);
     
-    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:newRow inSection:newSection];
+    CGFloat oldOffsetValue = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? self.collectionView.contentOffset.x : self.collectionView.contentOffset.y;
+    CGFloat newOffsetValue = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? self.bounds.size.width*(newSection*self.models.count+newRow) : self.bounds.size.height*(newSection*self.models.count+newRow) ;
     
-    [self.collectionView scrollToItemAtIndexPath:newIndexPath
-                                atScrollPosition:(self.flowLayout.scrollDirection == UICollectionViewScrollDirectionHorizontal ? UICollectionViewScrollPositionLeft : UICollectionViewScrollPositionTop)
-                                        animated:YES];
+    
+    POPAnimatableProperty *prop = [POPAnimatableProperty propertyWithName:@"prop" initializer:^(POPMutableAnimatableProperty *prop) {
+        // read value
+        prop.readBlock = ^(id obj, CGFloat values[]) {
+        };
+        // write value
+        
+        prop.writeBlock = ^(id obj, const CGFloat values[]) {
+            //NSLog(@"old:%f current:%f,to:%f",offsetX,values[0],offsetX);
+            
+            self.collectionView.contentOffset = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? CGPointMake(values[0], 0) : CGPointMake(0,values[0]);
+        };
+        // dynamics threshold
+        prop.threshold = 0.01;
+    }];
+    POPBasicAnimation *anBasic = [POPBasicAnimation easeInEaseOutAnimation];   //秒表当然必须是线性的时间函数
+    anBasic.property = prop;    //自定义属性
+    anBasic.fromValue = @(oldOffsetValue);   //从0开始
+    anBasic.toValue = @(newOffsetValue);  //180秒
+    anBasic.duration = self.autoScrollDuringTimeInterval;   //持续1.5秒
+    anBasic.beginTime = CACurrentMediaTime() + 0.0f;    //延迟1秒开始
+    [self.collectionView pop_addAnimation:anBasic forKey:@"countdown"];
+
+}
+#pragma mark - UICollectionViewDelegateFlowLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.bounds.size;
 }
 
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    //return UIEdgeInsetsMake(kTopBottomMargin, kLineSpacing, kTopBottomMargin, kLineSpacing);
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+// 第一行与第二行之间的距离
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
+// 第一列与第二列之间的距离
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
 #pragma mark - UICollectionView's delegate & dataSource.
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -168,6 +221,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(CustomInfiniteLoopCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
 
+    // 用于竖向
     CGPoint point = [cell convertPoint:cell.bounds.origin fromView:self];
     [cell contentOffset:point];
     [cell willDisplay];
@@ -200,7 +254,9 @@
     
     [self.collectionView.visibleCells enumerateObjectsUsingBlock:^(__kindof CustomInfiniteLoopCell *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
+        // 用于竖向
         CGPoint point = [obj convertPoint:obj.bounds.origin fromView:self];
+        
         [obj contentOffset:point];
     }];
     
@@ -227,13 +283,13 @@
     
     NSInteger index = 0;
     
-    if (_flowLayout.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
+    if (self.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
         
-        index = (_collectionView.contentOffset.x + _flowLayout.itemSize.width * 0.5) / _flowLayout.itemSize.width;
+        index = (_collectionView.contentOffset.x + self.bounds.size.width * 0.5) / self.bounds.size.width;
         
     } else {
         
-        index = (_collectionView.contentOffset.y + _flowLayout.itemSize.height * 0.5) / _flowLayout.itemSize.height;
+        index = (_collectionView.contentOffset.y + self.bounds.size.height * 0.5) / self.bounds.size.height;
     }
     
     return index;

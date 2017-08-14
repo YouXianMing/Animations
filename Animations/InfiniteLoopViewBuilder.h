@@ -87,7 +87,7 @@ typedef enum : NSUInteger {
  *  Image model's array, you must set this value.
  */
 @property (nonatomic, strong) NSArray <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol>  *models;
-
+@property (nonatomic,strong) NSArray * titleGroup;
 /**
  *  Set the NodeView's size, default is (10, 10).
  */
@@ -102,7 +102,20 @@ typedef enum : NSUInteger {
  *  Scroll time interval, default is 4s.
  */
 @property (nonatomic) NSTimeInterval  scrollTimeInterval;
+/**
+ *  AutoScroll time interval, default is 1.5s.
+ */
+@property (nonatomic,assign) NSTimeInterval autoScrollDuringTimeInterval;
 
+/**
+   AutoScroll default is NO
+ */
+@property (nonatomic,assign) BOOL autoScroll;
+
+/**
+ placeHolderImage
+ */
+@property (nonatomic,strong) UIImage * placeHolderImage;
 /**
  *  Scroll direction, default is horizontal.
  */

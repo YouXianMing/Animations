@@ -43,6 +43,11 @@
         
     self.imageView.urlString = [self.dataModel imageUrlString];
 }
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.imageView.frame = self.bounds;
+}
 
 - (void)contentOffset:(CGPoint)offset {
     
