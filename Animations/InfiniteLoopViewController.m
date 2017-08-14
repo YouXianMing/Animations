@@ -42,26 +42,48 @@
             // Setup model.
             model.infiniteLoopCellClass           = [LoopViewCell class];
             model.infiniteLoopCellReuseIdentifier = [NSString stringWithFormat:@"LoopViewCell_%d", i];
+            //model.infiniteLoopCellReuseIdentifier = @"LoopViewCell";
             [models addObject:model];
         }
         
-        InfiniteLoopViewBuilder *loopView = [[InfiniteLoopViewBuilder alloc] initWithFrame:CGRectMake(0, 0, Width, self.contentView.height / 2.f)];
+        InfiniteLoopViewBuilder *loopView = [[InfiniteLoopViewBuilder alloc] initWithFrame:CGRectMake(0, 0, Width, self.contentView.height / 4.f)];
         loopView.nodeViewTemplate         = [CircleNodeStateView new];
         loopView.delegate                 = self;
         loopView.sampleNodeViewSize       = CGSizeMake(8, 6);
         loopView.position                 = kNodeViewBottomRight;
         loopView.edgeInsets               = UIEdgeInsetsMake(0, 0, 7, 5);
         loopView.models                   = (NSArray <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol> *)models;
-        [loopView startLoopAnimated:YES];
+        //[loopView startLoopAnimated:YES];
+        loopView.autoScroll = YES;
+        loopView.autoScrollDuringTimeInterval = 1.5;
         [self.contentView addSubview:loopView];
+        loopView.titleGroup = @[@"你好",@"我好",@"YES I can",@"no problem",@"大家好",@"helloworld",@"Animations",@"为爱守候"];
         
-        UIView *blackView         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, loopView.width, 20)];
-        blackView.bottom          = loopView.height;
-        blackView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5f];
-        [loopView.contentView addSubview:blackView];
+        //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //            loopView.frame = CGRectMake(0, 0, Width, self.contentView.height / 10.f);
+        //        });
     }
     
+    
     {
+        
+        
+        InfiniteLoopViewBuilder *loopView = [[InfiniteLoopViewBuilder alloc] initWithFrame:CGRectMake(0, self.contentView.height / 4.f+20,
+                                                                                                      Width, self.contentView.height / 10.f)];
+        loopView.nodeViewTemplate   = [NodeStateView new];
+        loopView.delegate           = self;
+        loopView.scrollTimeInterval = 5.f;
+        loopView.scrollDirection    = UICollectionViewScrollDirectionVertical;
+        loopView.sampleNodeViewSize = CGSizeMake(8, 20);
+        loopView.position           = kNodeViewRightBottom;
+        loopView.edgeInsets         = UIEdgeInsetsMake(0, 0, 2, 2);
+        loopView.autoScroll = YES;
+        [loopView startLoopAnimated:YES];
+        loopView.autoScrollDuringTimeInterval = 3;
+        [self.contentView addSubview:loopView];
+        
+        
+        
         NSArray *strings = @[@"http://img.wdjimg.com/image/video/b8ff75ba333183e0fa92efc4a52ffda0_0_0.jpeg",
                              @"http://img.wdjimg.com/image/video/d160e33391a555127be999d1d6273a17_0_0.jpeg",
                              @"http://img.wdjimg.com/image/video/b8ff75ba333183e0fa92efc4a52ffda0_0_0.jpeg",
@@ -80,22 +102,17 @@
             // Setup model.
             model.infiniteLoopCellClass           = [LoopTypeTwoCell class];
             model.infiniteLoopCellReuseIdentifier = [NSString stringWithFormat:@"LoopTypeTwoCell_%d", i];
-
+            
             [models addObject:model];
         }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            loopView.models             = (NSArray <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol> *)models;
+        });
         
-        InfiniteLoopViewBuilder *loopView = [[InfiniteLoopViewBuilder alloc] initWithFrame:CGRectMake(0, self.contentView.height / 2.f,
-                                                                                                      Width, self.contentView.height / 2.f)];
-        loopView.nodeViewTemplate   = [NodeStateView new];
-        loopView.delegate           = self;
-        loopView.scrollTimeInterval = 5.f;
-        loopView.scrollDirection    = UICollectionViewScrollDirectionVertical;
-        loopView.sampleNodeViewSize = CGSizeMake(8, 20);
-        loopView.position           = kNodeViewRightBottom;
-        loopView.edgeInsets         = UIEdgeInsetsMake(0, 0, 2, 2);
-        loopView.models             = (NSArray <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol> *)models;
-        [loopView startLoopAnimated:YES];
-        [self.contentView addSubview:loopView];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            loopView.frame = CGRectMake(0, self.contentView.height / 4.f+20,
+                                        Width, self.contentView.height / 4.f);
+        });
     }
 }
 

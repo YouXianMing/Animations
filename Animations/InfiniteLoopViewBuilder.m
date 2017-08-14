@@ -14,6 +14,8 @@
 @property (nonatomic, strong) InfiniteLoopView *loopView;
 @property (nonatomic, strong) UIView           *nodeViewsContentView;
 @property (nonatomic, strong) UIView           *contentView;
+@property (nonatomic,strong)  UIView           * blackView;
+@property (nonatomic,strong)  UILabel          * titleLbl;
 
 @end
 
@@ -26,6 +28,7 @@
         // Set the default values.
         self.scrollDirection    = UICollectionViewScrollDirectionHorizontal;
         self.scrollTimeInterval = 4.f;
+        self.autoScrollDuringTimeInterval = 1.5f;
         self.position           = kNodeViewBottom;
         self.sampleNodeViewSize = CGSizeMake(10, 10);
         
@@ -39,16 +42,46 @@
         self.contentView.userInteractionEnabled = NO;
         [self addSubview:self.contentView];
         
+        self.blackView = [[UIView alloc] initWithFrame:CGRectMake(0, self.bounds.size.height-21, self.bounds.size.width, 21)];
+        self.blackView.backgroundColor = [UIColor blackColor];
+        self.blackView.alpha = 0.6;
+        self.blackView.hidden = YES;
+        [self.contentView addSubview:self.blackView];
+        
+        self.titleLbl                           = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.bounds.size.width-20, 21)];
+        self.titleLbl.textColor = [UIColor whiteColor];
+        self.titleLbl.font = [UIFont systemFontOfSize:14];
+        [self.blackView addSubview:self.titleLbl];
+        
         // Init nodeViewsContentView.
         self.nodeViewsContentView                        = [[UIView alloc] init];
         self.nodeViewsContentView.alpha                  = 0.f;
         self.nodeViewsContentView.userInteractionEnabled = NO;
         [self addSubview:self.nodeViewsContentView];
+        
+
     }
     
     return self;
 }
-
+#pragma mark - ******** 适配Frame变化
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    NSLog(@"bounds:%@,%@",self,NSStringFromCGRect(self.bounds));
+    self.loopView.frame = self.bounds;
+    self.contentView.frame = self.bounds;
+    self.blackView.frame                           = CGRectMake(0, self.bounds.size.height-21, self.bounds.size.width, 21);
+    [self managerNodeViewsContentView];
+}
+//- (void)setFrame:(CGRect)frame
+//{
+//    [super setFrame:frame];
+//    self.loopView.frame = self.bounds;
+//    [self managerNodeViewsContentView];
+//}
+#pragma mark - ******** InfiniteLoopViewDelegate
+#pragma mark ******** 点击某个Cell
 - (void)infiniteLoopView:(InfiniteLoopView *)infiniteLoopView
                     data:(id <InfiniteLoopViewProtocol>)data
            selectedIndex:(NSInteger)index
@@ -59,7 +92,7 @@
         [self.delegate infiniteLoopViewBuilder:self data:data selectedIndex:index cell:cell];
     }
 }
-
+#pragma mark ******** 滚动到了某个Cell
 - (void)infiniteLoopView:(InfiniteLoopView *)infiniteLoopView didScrollCurrentPage:(NSInteger)index {
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(infiniteLoopViewBuilder:didScrollCurrentPage:)]) {
@@ -79,8 +112,12 @@
             [obj changeToState:kInfiniteLoopNormalState animated:YES];
         }
     }];
+    self.titleLbl.text = @"";
+    if (index<self.titleGroup.count) {
+        self.titleLbl.text = self.titleGroup[index];
+    }
 }
-
+#pragma mark - ******** 开始动画
 - (void)startLoopAnimated:(BOOL)animated {
     
     if (self.nodeViewTemplate == nil) {
@@ -95,15 +132,48 @@
     self.loopView.scrollTimeInterval = self.scrollTimeInterval;
     [self.loopView prepare];
     animated == YES ? [self.loopView startLoopAnimation] : 0;
-    
     [self managerNodeViewsContentView];
 }
-
+- (void)setModels:(NSArray<InfiniteLoopViewProtocol,InfiniteLoopCellClassProtocol> *)models
+{
+    _models = models;
+    [self.loopView reset];
+    self.loopView.models             = self.models;
+    self.loopView.scrollDirection    = self.scrollDirection;
+    self.loopView.scrollTimeInterval = self.scrollTimeInterval;
+    [self.loopView prepare];
+    if (self.autoScroll) {
+        [self.loopView startLoopAnimation];
+    }
+    [self managerNodeViewsContentView];
+}
+- (void)setTitleGroup:(NSArray *)titleGroup
+{
+    _titleGroup = titleGroup;
+    if (titleGroup.count > 0) {
+        self.blackView.hidden = NO;
+        NSInteger index = [self.loopView currentPage];
+        self.titleLbl.text = @"";
+        if (index < titleGroup.count) {
+            self.titleLbl.text = titleGroup[index];
+        }
+    }else{
+        self.blackView.hidden = YES;
+        
+    }
+}
+- (void)setAutoScroll:(BOOL)autoScroll
+{
+    _autoScroll = autoScroll;
+    if (autoScroll && self.loopView.models.count>0) {
+        [self.loopView startLoopAnimation];
+    }
+}
 - (void)adjustWhenFreeze {
 
     [self.loopView adjustWhenFreeze];
 }
-
+#pragma mark - ******** 将control滚动到第几个的内容重置
 - (void)managerNodeViewsContentView {
     
     // Remove all subViews.
