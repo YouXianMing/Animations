@@ -116,10 +116,7 @@
  *
  *  @return Cell's dataAdapter.
  */
-+ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
-                                                   data:(id)data
-                                             cellHeight:(CGFloat)height
-                                                   type:(NSInteger)type;
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data cellHeight:(CGFloat)height type:(NSInteger)type;
 
 /**
  *  Create the cell's dataAdapter.
@@ -132,10 +129,7 @@
  *
  *  @return Cell's dataAdapter.
  */
-+ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
-                                                   data:(id)data
-                                             cellHeight:(CGFloat)height
-                                              cellWidth:(CGFloat)cellWidth
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data cellHeight:(CGFloat)height cellWidth:(CGFloat)cellWidth
                                                    type:(NSInteger)type;
 
 /**
@@ -147,9 +141,7 @@
  *
  *  @return Cell's dataAdapter.
  */
-+ (CellDataAdapter *)dataAdapterWithData:(id)data
-                              cellHeight:(CGFloat)height
-                                    type:(NSInteger)type;
++ (CellDataAdapter *)dataAdapterWithData:(id)data cellHeight:(CGFloat)height type:(NSInteger)type;
 
 /**
  *  Create the cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
@@ -159,8 +151,7 @@
  *
  *  @return Cell's dataAdapter.
  */
-+ (CellDataAdapter *)dataAdapterWithData:(id)data
-                              cellHeight:(CGFloat)height;
++ (CellDataAdapter *)dataAdapterWithData:(id)data cellHeight:(CGFloat)height;
 
 /**
  *  Create the cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
@@ -245,9 +236,7 @@
  @param tableView The tableView.
  @param indexPath The indexPath.
  */
-- (void)loadContentWithAdapter:(CellDataAdapter *)dataAdapter
-                      delegate:(id <CustomCellDelegate>)delegate
-                     tableView:(UITableView *)tableView
+- (void)loadContentWithAdapter:(CellDataAdapter *)dataAdapter delegate:(id <CustomCellDelegate>)delegate tableView:(UITableView *)tableView
                      indexPath:(NSIndexPath *)indexPath;
 
 /**
@@ -256,8 +245,7 @@
  *  @param tableView       TableView.
  *  @param reuseIdentifier The cell reuseIdentifier.
  */
-+ (void)registerToTableView:(UITableView *)tableView
-            reuseIdentifier:(NSString *)reuseIdentifier;
++ (void)registerToTableView:(UITableView *)tableView reuseIdentifier:(NSString *)reuseIdentifier;
 
 /**
  *  Register to tableView with the The class name.

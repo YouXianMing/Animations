@@ -179,7 +179,6 @@
 		104FCCAD1D235A1000308B73 /* IconEdgeInsetsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 104FCCAA1D235A1000308B73 /* IconEdgeInsetsLabel.m */; };
 		104FCCAE1D235A1000308B73 /* EdgeInsetsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 104FCCAC1D235A1000308B73 /* EdgeInsetsLabel.m */; };
 		1051890C1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1051890B1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m */; };
-		10567E491C45411700625C6B /* api.md in Resources */ = {isa = PBXBuildFile; fileRef = 10567E481C45411700625C6B /* api.md */; };
 		105702121CF6CE16003B10C6 /* POPScaleControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 105702111CF6CE16003B10C6 /* POPScaleControl.m */; };
 		105702151CF6CF05003B10C6 /* POPBaseControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 105702141CF6CF05003B10C6 /* POPBaseControl.m */; };
 		1057021B1CF6D9D9003B10C6 /* BaseControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1057021A1CF6D9D9003B10C6 /* BaseControlViewController.m */; };
@@ -809,7 +808,6 @@
 		104FCCAC1D235A1000308B73 /* EdgeInsetsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeInsetsLabel.m; sourceTree = "<group>"; };
 		1051890A1D0A65DE00F606FB /* NSObject+PropertiesInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertiesInfomation.h"; sourceTree = "<group>"; };
 		1051890B1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertiesInfomation.m"; sourceTree = "<group>"; };
-		10567E481C45411700625C6B /* api.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = api.md; sourceTree = "<group>"; };
 		105702101CF6CE16003B10C6 /* POPScaleControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPScaleControl.h; sourceTree = "<group>"; };
 		105702111CF6CE16003B10C6 /* POPScaleControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPScaleControl.m; sourceTree = "<group>"; };
 		105702131CF6CF05003B10C6 /* POPBaseControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPBaseControl.h; sourceTree = "<group>"; };
@@ -1984,7 +1982,6 @@
 				10381F5C1BF9B44A00E5E476 /* Assets.xcassets */,
 				10381F611BF9B44A00E5E476 /* Info.plist */,
 				10381F511BF9B44A00E5E476 /* main.m */,
-				10567E481C45411700625C6B /* api.md */,
 				10381F741BF9B4E800E5E476 /* Animations.pch */,
 				105EFAF71C42878F00394044 /* SimpleNSLog.h */,
 				C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */,
@@ -3753,7 +3750,6 @@
 				1011BAE21CD48C8D00F29FB9 /* NodeModelViewControllerBack_next@3x.png in Resources */,
 				1011BAE11CD48C8D00F29FB9 /* NodeModelViewControllerBack_black@3x.png in Resources */,
 				10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */,
-				10567E491C45411700625C6B /* api.md in Resources */,
 				C50F243B1D321A6A00C3E02A /* MaskShapeViewController.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
