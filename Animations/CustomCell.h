@@ -171,6 +171,47 @@
 + (CellDataAdapter *)dataAdapterWithCellHeight:(CGFloat)height;
 
 /**
+ [= Must over write class method 'cellHeightWithData:' to get the height =]
+ 
+ Create the cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
+ 
+ @param reuseIdentifier Cell reuseIdentifier, can be nil.
+ @param data Cell's data, can be nil.
+ @param type Cell's type.
+ @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)fixedHeightTypeDataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data type:(NSInteger)type;
+
+/**
+ [= Must over write class method 'cellHeightWithData:' to get the height =]
+ 
+ Create the cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
+ 
+ @param data Cell's data, can be nil.
+ @param type Cell's type.
+ @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)fixedHeightTypeDataAdapterWithData:(id)data type:(NSInteger)type;
+
+/**
+ [= Must over write class method 'cellHeightWithData:' to get the height =]
+ 
+ Create the cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
+ 
+ @param data Cell's data, can be nil.
+ @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)fixedHeightTypeDataAdapterWithData:(id)data;
+
+/**
+ [= Must over write class method 'cellHeightWithData:' to get the height =]
+ 
+ Create the cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
+ @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)fixedHeightTypeDataAdapter;
+
+/**
  Create the layout type cell's dataAdapter, the CellReuseIdentifier is the cell's class string.
  
  @param reuseIdentifier Cell reuseIdentifier, can be nil.

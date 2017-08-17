@@ -126,6 +126,34 @@
     return [[self class] dataAdapterWithCellReuseIdentifier:nil data:nil cellHeight:height type:0];
 }
 
++ (CellDataAdapter *)fixedHeightTypeDataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier
+                                                                  data:(id)data
+                                                                  type:(NSInteger)type {
+    
+    NSString *tmpReuseIdentifier = reuseIdentifier.length <= 0 ? NSStringFromClass([self class]) : reuseIdentifier;
+    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:tmpReuseIdentifier data:data cellHeight:[[self class] cellHeightWithData:nil]
+                                                          cellType:type];
+}
+
++ (CellDataAdapter *)fixedHeightTypeDataAdapterWithData:(id)data type:(NSInteger)type {
+    
+    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:NSStringFromClass([self class])
+                                                              data:data cellHeight:[[self class] cellHeightWithData:nil]
+                                                          cellType:type];
+}
+
++ (CellDataAdapter *)fixedHeightTypeDataAdapterWithData:(id)data {
+    
+    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:NSStringFromClass([self class])
+                                                              data:data cellHeight:[[self class] cellHeightWithData:nil]
+                                                          cellType:0];
+}
+
++ (CellDataAdapter *)fixedHeightTypeDataAdapter {
+    
+    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:NSStringFromClass([self class]) data:nil cellHeight:[[self class] cellHeightWithData:nil] cellType:0];
+}
+
 #pragma mark - Layout type adapter.
 
 + (CellDataAdapter *)layoutTypeAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data type:(NSInteger)type {
