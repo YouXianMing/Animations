@@ -400,6 +400,12 @@
 		C57526CC1D5032690064F6CD /* DrawingStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C71D5032690064F6CD /* DrawingStyle.m */; };
 		C57526CD1D5032690064F6CD /* DrawingColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C91D5032690064F6CD /* DrawingColor.m */; };
 		C57526D01D50327F0064F6CD /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526CF1D50327F0064F6CD /* WaveView.m */; };
+		C5792EE31F4743B3000B0D1B /* YXNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EDC1F4743B3000B0D1B /* YXNetworking.m */; };
+		C5792EE41F4743B3000B0D1B /* NetworkingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EDE1F4743B3000B0D1B /* NetworkingInfo.m */; };
+		C5792EE51F4743B3000B0D1B /* RequestParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EE01F4743B3000B0D1B /* RequestParameterSerializer.m */; };
+		C5792EE61F4743B3000B0D1B /* ResponseDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EE21F4743B3000B0D1B /* ResponseDataSerializer.m */; };
+		C5792EE91F4749FD000B0D1B /* WanDouJiaModelSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EE81F4749FD000B0D1B /* WanDouJiaModelSerializer.m */; };
+		C5792EEC1F474C44000B0D1B /* WanDouJiaParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EEB1F474C44000B0D1B /* WanDouJiaParameterSerializer.m */; };
 		C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7911D2F40DF003433EC /* QRCodeViewController.m */; };
 		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
 		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
@@ -1260,6 +1266,18 @@
 		C57526C91D5032690064F6CD /* DrawingColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingColor.m; sourceTree = "<group>"; };
 		C57526CE1D50327F0064F6CD /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
 		C57526CF1D50327F0064F6CD /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
+		C5792EDB1F4743B3000B0D1B /* YXNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXNetworking.h; sourceTree = "<group>"; };
+		C5792EDC1F4743B3000B0D1B /* YXNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXNetworking.m; sourceTree = "<group>"; };
+		C5792EDD1F4743B3000B0D1B /* NetworkingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingInfo.h; sourceTree = "<group>"; };
+		C5792EDE1F4743B3000B0D1B /* NetworkingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingInfo.m; sourceTree = "<group>"; };
+		C5792EDF1F4743B3000B0D1B /* RequestParameterSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestParameterSerializer.h; sourceTree = "<group>"; };
+		C5792EE01F4743B3000B0D1B /* RequestParameterSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestParameterSerializer.m; sourceTree = "<group>"; };
+		C5792EE11F4743B3000B0D1B /* ResponseDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseDataSerializer.h; sourceTree = "<group>"; };
+		C5792EE21F4743B3000B0D1B /* ResponseDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseDataSerializer.m; sourceTree = "<group>"; };
+		C5792EE71F4749FD000B0D1B /* WanDouJiaModelSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanDouJiaModelSerializer.h; sourceTree = "<group>"; };
+		C5792EE81F4749FD000B0D1B /* WanDouJiaModelSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanDouJiaModelSerializer.m; sourceTree = "<group>"; };
+		C5792EEA1F474C44000B0D1B /* WanDouJiaParameterSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanDouJiaParameterSerializer.h; sourceTree = "<group>"; };
+		C5792EEB1F474C44000B0D1B /* WanDouJiaParameterSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanDouJiaParameterSerializer.m; sourceTree = "<group>"; };
 		C582E7901D2F40DF003433EC /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		C582E7911D2F40DF003433EC /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		C582E7941D2F4184003433EC /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
@@ -1430,6 +1448,10 @@
 			children = (
 				1011BAA41CD48A1C00F29FB9 /* WanDouJiaDataSerializer.h */,
 				1011BAA51CD48A1C00F29FB9 /* WanDouJiaDataSerializer.m */,
+				C5792EE71F4749FD000B0D1B /* WanDouJiaModelSerializer.h */,
+				C5792EE81F4749FD000B0D1B /* WanDouJiaModelSerializer.m */,
+				C5792EEA1F474C44000B0D1B /* WanDouJiaParameterSerializer.h */,
+				C5792EEB1F474C44000B0D1B /* WanDouJiaParameterSerializer.m */,
 				1011BA921CD4898D00F29FB9 /* ConsumptionModel.h */,
 				1011BA931CD4898D00F29FB9 /* ConsumptionModel.m */,
 				1011BA941CD4898D00F29FB9 /* DailyListModel.h */,
@@ -1532,6 +1554,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C5792EDA1F4743A1000B0D1B /* YXNetworking */,
 				C54CB91A1F31B67600DFFE15 /* NSArray+IndexPath */,
 				105189091D0A65D500F606FB /* NSObject+Category */,
 				C501F24E1F0CC3F50051B4C6 /* RegexManager */,
@@ -3516,6 +3539,21 @@
 			name = WaveView;
 			sourceTree = "<group>";
 		};
+		C5792EDA1F4743A1000B0D1B /* YXNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				C5792EDB1F4743B3000B0D1B /* YXNetworking.h */,
+				C5792EDC1F4743B3000B0D1B /* YXNetworking.m */,
+				C5792EDD1F4743B3000B0D1B /* NetworkingInfo.h */,
+				C5792EDE1F4743B3000B0D1B /* NetworkingInfo.m */,
+				C5792EDF1F4743B3000B0D1B /* RequestParameterSerializer.h */,
+				C5792EE01F4743B3000B0D1B /* RequestParameterSerializer.m */,
+				C5792EE11F4743B3000B0D1B /* ResponseDataSerializer.h */,
+				C5792EE21F4743B3000B0D1B /* ResponseDataSerializer.m */,
+			);
+			name = YXNetworking;
+			sourceTree = "<group>";
+		};
 		C582E7931D2F40E5003433EC /* QRCodeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -3762,6 +3800,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C1830E1C622D1E000C10EB /* LoadUrlDataCell.m in Sources */,
+				C5792EE51F4743B3000B0D1B /* RequestParameterSerializer.m in Sources */,
 				C545535E1E1CD76E00A5BA58 /* iCarouselAbsItemView.m in Sources */,
 				1011BAF51CD495A800F29FB9 /* FastCoder.m in Sources */,
 				C5EE65B51E1B3A1100DDF591 /* IndexRange.m in Sources */,
@@ -3779,6 +3818,7 @@
 				10E2D4E91CD5962000666EEB /* NSData+ImageContentType.m in Sources */,
 				C5EFF2471F14735A00BD5AF0 /* HorizontalCollectionItemView.m in Sources */,
 				C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */,
+				C5792EE31F4743B3000B0D1B /* YXNetworking.m in Sources */,
 				102B85321C3CF226001699A9 /* UIImage+ImageEffects.m in Sources */,
 				104FCCA51D23573D00308B73 /* TapDrawPath.m in Sources */,
 				10931AE71C51147A004D120D /* AdditiveAnimationController.m in Sources */,
@@ -3810,6 +3850,7 @@
 				10381FB31BF9B55B00E5E476 /* POPAnimationExtras.mm in Sources */,
 				104FCCA71D23573D00308B73 /* TapDrawPathManager.m in Sources */,
 				100D4B1A1D27A3A300EDE29B /* AppleSystemService.m in Sources */,
+				C5792EE41F4743B3000B0D1B /* NetworkingInfo.m in Sources */,
 				C59608CC1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m in Sources */,
 				C517332A1D45AFDE005D57AE /* UITextFieldView.m in Sources */,
 				C56B3A6C1F2830A400133AC0 /* UIView+ConvertRect.m in Sources */,
@@ -4035,6 +4076,7 @@
 				C5C5AFEA1DD56D7100F35EB8 /* RedIrregularGridViewCell.m in Sources */,
 				102B1F301C60E66F00A8FD40 /* LinksModel.m in Sources */,
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
+				C5792EEC1F474C44000B0D1B /* WanDouJiaParameterSerializer.m in Sources */,
 				C5EFF2701F14C46700BD5AF0 /* MASCompositeConstraint.m in Sources */,
 				106BCFD91CDC67CC007C3EEE /* LoopViewCell.m in Sources */,
 				1011BADD1CD48C8D00F29FB9 /* NodeModelRootNavigationController.m in Sources */,
@@ -4058,6 +4100,7 @@
 				1096061F1C93B46800CCB3AD /* AbsNetworkingIndicator.m in Sources */,
 				103088B71C05880B00C8B623 /* Math.m in Sources */,
 				105F3FED1CB7B6B1007B02C7 /* ShowTextModel.m in Sources */,
+				C5792EE61F4743B3000B0D1B /* ResponseDataSerializer.m in Sources */,
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
 				108A99351C0FD7A900B693F6 /* SystemTimeInfomation.m in Sources */,
 				1020E2E41C7422B600FF233E /* UIView+AnimationPracticalMethod.m in Sources */,
@@ -4187,6 +4230,7 @@
 				C58978C11D38CD3A000B7D1C /* CollectionGridView.m in Sources */,
 				10381F521BF9B44A00E5E476 /* main.m in Sources */,
 				10381FB81BF9B55B00E5E476 /* POPCGUtils.mm in Sources */,
+				C5792EE91F4749FD000B0D1B /* WanDouJiaModelSerializer.m in Sources */,
 				C51641971EF76E010037C550 /* UIWebView+AFNetworking.m in Sources */,
 				1011BA8F1CD484FE00F29FB9 /* OffsetCellViewController.m in Sources */,
 				1011BAA21CD4898D00F29FB9 /* VideoListModel.m in Sources */,

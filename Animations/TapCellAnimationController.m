@@ -20,7 +20,7 @@
 
 @implementation TapCellAnimationController
 
-# pragma mark - Overwrite super class's method
+#pragma mark - Overwrite super class's method
 
 - (void)setupDataSource {
     

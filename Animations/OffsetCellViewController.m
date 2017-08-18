@@ -7,19 +7,19 @@
 //
 
 #import "OffsetCellViewController.h"
-#import "Networking.h"
-#import "DateFormatter.h"
+#import "YXNetworking.h"
 #import "WanDouJiaModel.h"
-#import "WanDouJiaDataSerializer.h"
+#import "WanDouJiaModelSerializer.h"
+#import "WanDouJiaParameterSerializer.h"
 #import "OffsetImageCell.h"
 #import "MessageView.h"
 #import "OffsetHeaderView.h"
 #import "LoadingView.h"
 #import "GCD.h"
 
-@interface OffsetCellViewController () <AbsNetworkingDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface OffsetCellViewController () <UITableViewDelegate, UITableViewDataSource, YXNetworkingDelegate>
 
-@property (nonatomic, strong) Networking        *networking;
+@property (nonatomic, strong) YXNetworking      *networking;
 @property (nonatomic, strong) UITableView       *tableView;
 @property (nonatomic, strong) WanDouJiaModel    *rootModel;
 @property (nonatomic, strong) LoadingView       *showLoadingView;
@@ -32,21 +32,6 @@
     
     [super viewDidLoad];
     
-    NSDictionary *params = @{@"num"  : @"5",
-                             @"date" : [DateFormatter dateStringFromDate:[NSDate date] outputDateStringFormatter:@"yyyyMMdd"],
-                             @"vc"   : @"67",
-                             @"u"    : @"011f2924aa2cf27aa5dc8066c041fe08116a9a0c",
-                             @"v"    : @"1.8.0",
-                             @"f"    : @"iphone"};
-    
-    self.networking = [Networking getMethodNetworkingWithUrlString:@"http://baobab.wandoujia.com/api/v1/feed"
-                                                  requestParameter:params
-                                                   requestBodyType:[HttpBodyType type]
-                                                  responseDataType:[JsonDataType type]];
-    self.networking.delegate               = self;
-    self.networking.responseDataSerializer = [WanDouJiaDataSerializer new];
-    [self.networking startRequest];
-        
     self.tableView                     = [[UITableView alloc] initWithFrame:self.contentView.bounds];
     self.tableView.delegate            = self;
     self.tableView.dataSource          = self;
@@ -62,6 +47,22 @@
     self.showLoadingView             = [[LoadingView alloc] init];
     self.showLoadingView.contentView = self.loadingAreaView;
     [self.showLoadingView show];
+    
+    self.networking = [YXNetworking networkingWithUrlString:@"http://baobab.wandoujia.com/api/v1/feed"
+                                           requestParameter:@{@"num" : @"5",
+                                                              @"vc"  : @"67"}
+                                                     method:kYXNetworkingGET
+                                 requestParameterSerializer:[WanDouJiaParameterSerializer new]
+                                     responseDataSerializer:[WanDouJiaModelSerializer new]
+                                                        tag:1000
+                                                   delegate:self
+                                          requestSerializer:[AFHTTPRequestSerializer serializer]
+                                         ResponseSerializer:[AFJSONResponseSerializer serializer]];
+    
+    self.networking.serviceInfo    = @"图片列表请求";
+    self.networking.networkingInfo = [NetworkingInfo new];
+    self.networking.object         = self.tableView;
+    [self.networking startRequest];
 }
 
 #pragma mark - UITableView's delegate.
@@ -125,18 +126,18 @@
     }];
 }
 
-#pragma mark - Networking's delegate.
+#pragma mark - YXNetworking's delegate.
 
-- (void)requestSucess:(AbsNetworking *)networking data:(id)data {
-    
+- (void)YXNetworkingRequestSucess:(YXNetworking *)networking tag:(NSInteger)tag data:(id)data {
+ 
     [GCDQueue executeInMainQueue:^{
-    
+        
         [self.showLoadingView hide];
         
     } afterDelaySecs:0.5f];
     
     self.rootModel = data;
-    [self.tableView reloadData];
+    [networking.object reloadData];
     
     [UIView animateWithDuration:0.5f animations:^{
         
@@ -144,8 +145,8 @@
     }];
 }
 
-- (void)requestFailed:(AbsNetworking *)networking error:(NSError *)error {
-    
+- (void)YXNetworkingRequestFailed:(YXNetworking *)networking tag:(NSInteger)tag error:(NSError *)error {
+
     [self.showLoadingView hide];
     [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"警告", @"网络异常,请稍后再试!") contentView:self.loadingAreaView];
 }

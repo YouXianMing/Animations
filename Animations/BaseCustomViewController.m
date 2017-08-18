@@ -56,6 +56,7 @@ NSString * const backgroundViewId  = @"backgroundViewId";
     [self makeViewsConfig:self.viewsConfig];
     [self buildConfigViews];
     [self setupSubViews];
+    [self setupDataSource];
 }
 
 - (void)initViewsConfigs {
