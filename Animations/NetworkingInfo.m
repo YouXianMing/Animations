@@ -7,7 +7,7 @@
 //
 
 #import "NetworkingInfo.h"
-#import "YXNetworking.h"
+#import "Networking.h"
 
 @implementation NetworkingInfo
 
@@ -32,11 +32,35 @@
             break;
     }
     
-    NSLog(@"\n\n-------------------------------------------------------------------------\n服务描述: %@\n\n服务地址: [%@] %@\n\n参数列表: \n%@\n-------------------------------------------------------------------------\n\n",
-          self.networking.serviceInfo,
-          method,
-          self.networking.urlString,
-          [self.networking.requestParameterSerializer serializeRequestParameter:self.networking.requestParameter]);
+    NSMutableString *string = [NSMutableString string];
+    
+    [string appendString:@"\n\n-------------------------------------------------------------------------\n"];
+    
+    if (self.networking.serviceInfo) {
+        
+        [string appendFormat:@"服务描述: %@\n\n", self.networking.serviceInfo];
+    }
+    
+    [string appendFormat:@"服务地址: [%@] %@\n\n", method, self.networking.urlString];
+    
+    if (self.networking.responseSerializer.acceptableContentTypes.allObjects.count) {
+        
+        [string appendFormat:@"Response ContentTypes: %@\n\n", self.networking.responseSerializer.acceptableContentTypes];
+    }
+    
+    if (self.networking.HTTPHeaderFieldsWithValues.allKeys.count) {
+        
+        [string appendFormat:@"头部信息: \n%@\n", self.networking.HTTPHeaderFieldsWithValues];
+    }
+    
+    if (self.networking.requestParameter) {
+        
+        [string appendFormat:@"参数列表: \n%@\n", [self.networking.requestParameterSerializer serializeRequestParameter:self.networking.requestParameter]];
+    }
+    
+    [string appendString:@"-------------------------------------------------------------------------\n"];
+    
+    NSLog(@"%@", string);
 }
 
 @end

@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-@class YXNetworking;
+@class Networking;
 
 @interface NetworkingInfo : NSObject
 
-@property (nonatomic, weak) YXNetworking *networking;
+@property (nonatomic, weak) Networking *networking;
 
 /**
  *  显示信息

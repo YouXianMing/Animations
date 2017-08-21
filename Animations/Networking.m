@@ -1,13 +1,12 @@
 //
-//  Networking.m
-//  AFNetworking-3.x
+//  YXNetworking.m
+//  Networking
 //
-//  Created by YouXianMing on 16/3/12.
-//  Copyright © 2016年 YouXianMing. All rights reserved.
+//  Created by YouXianMing on 2017/8/18.
+//  Copyright © 2017年 TechCode. All rights reserved.
 //
 
 #import "Networking.h"
-#import "AFNetworking.h"
 
 @interface Networking ()
 
@@ -18,212 +17,55 @@
 
 @implementation Networking
 
-- (void)setup {
+- (instancetype)init {
     
-    [super setup];
+    if (self = [super init]) {
+     
+        // AFNetworking 3.x 相关初始化
+        self.session = [AFHTTPSessionManager manager];
+        
+        // requestSerializer
+        self.requestSerializer = [AFHTTPRequestSerializer serializer];
+        
+        // responseSerializer
+        self.responseSerializer = [AFHTTPResponseSerializer serializer];
+        
+        // 请求参数预处理策略
+        self.requestParameterSerializer = [RequestParameterSerializer new];
+        
+        // 回复数据预处理策略
+        self.responseDataSerializer = [ResponseDataSerializer new];
+        
+        // timeoutInterval
+        self.timeoutInterval = @(5.f);
+        
+        // 默认GET请求
+        self.method = kYXNetworkingGET;
+    }
     
-    // AFNetworking 3.x 相关初始化
-    self.session = [AFHTTPSessionManager manager];
+    return self;
 }
 
 - (void)startRequest {
-    
+
     NSParameterAssert(self.urlString);
+    NSParameterAssert(self.requestSerializer);
+    NSParameterAssert(self.responseSerializer);
     NSParameterAssert(self.requestParameterSerializer);
     NSParameterAssert(self.responseDataSerializer);
     
-    [self resetData];
-    [self accessRequestSerializer];
-    [self accessResponseSerializer];
-    [self accessHeaderField];
-    [self accessTimeoutInterval];
+    // 设置请求序列化
+    self.session.requestSerializer = self.requestSerializer;
     
-    if ([self.method isKindOfClass:[GetMethod class]]) {
+    // 设置超时时间
+    if (self.timeoutInterval && self.timeoutInterval.floatValue > 0) {
         
-        [self accessGetRequest];
-        
-    } else if ([self.method isKindOfClass:[PostMethod class]]) {
-        
-        [self accessPostRequest];
-        
-    } else if ([self.method isKindOfClass:[UploadMethod class]]) {
-        
-        [self accessUploadRequest];
+        [self.session.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+        self.session.requestSerializer.timeoutInterval = self.timeoutInterval.floatValue;
+        [self.session.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     }
     
-    [self safetySetKey:@"absoluteString"         object:self.dataTask.currentRequest.URL.absoluteString];
-    [self safetySetKey:@"host"                   object:self.dataTask.currentRequest.URL.host];
-    [self safetySetKey:@"query"                  object:self.dataTask.currentRequest.URL.query];
-    [self safetySetKey:@"scheme"                 object:self.dataTask.currentRequest.URL.scheme];
-    [self safetySetKey:@"timeoutInterval"        object:@(self.dataTask.currentRequest.timeoutInterval)];
-    [self safetySetKey:@"allHTTPHeaderFields"    object:self.dataTask.currentRequest.allHTTPHeaderFields];
-    [self safetySetKey:@"acceptableContentTypes" object:self.session.responseSerializer.acceptableContentTypes];
-    [self safetySetKey:@"parameter"              object:self.requestParameter];
-}
-
-- (void)safetySetKey:(NSString *)key object:(id)object {
-    
-    if (object) {
-        
-        [self.networkingInfomation setObject:object forKey:key];
-    }
-}
-
-- (void)cancelRequest {
-    
-    [self.dataTask cancel];
-}
-
-- (void)accessGetRequest {
-    
-    self.isRunning              = YES;
-    __weak Networking *weakSelf = self;
-    
-    self.dataTask = [self.session GET:self.urlString
-                           parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
-                             progress:nil
-                              success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                  
-                                  weakSelf.isRunning              = NO;
-                                  weakSelf.originalResponseData   = responseObject;
-                                  weakSelf.serializerResponseData = [weakSelf.responseDataSerializer serializeResponseData:responseObject];
-                                  
-                                  if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(requestSucess:data:)]) {
-                                      
-                                      [weakSelf.delegate requestSucess:weakSelf data:weakSelf.serializerResponseData];
-                                  }
-                                  
-                              } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                  
-                                  weakSelf.isRunning = NO;
-                                  
-                                  if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(requestFailed:error:)]) {
-                                      
-                                      [weakSelf.delegate requestFailed:weakSelf error:error];
-                                  }
-                              }];
-}
-
-- (void)accessPostRequest {
-    
-    self.isRunning              = YES;
-    __weak Networking *weakSelf = self;
-    
-    self.dataTask = [self.session POST:self.urlString
-                            parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
-                              progress:nil
-                               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                   
-                                   weakSelf.isRunning              = NO;
-                                   weakSelf.originalResponseData   = responseObject;
-                                   weakSelf.serializerResponseData = [weakSelf.responseDataSerializer serializeResponseData:responseObject];
-                                   
-                                   if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(requestSucess:data:)]) {
-                                       
-                                       [weakSelf.delegate requestSucess:weakSelf data:weakSelf.serializerResponseData];
-                                   }
-                                   
-                               } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                   
-                                   weakSelf.isRunning = NO;
-                                   
-                                   if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(requestFailed:error:)]) {
-                                       
-                                       [weakSelf.delegate requestFailed:weakSelf error:error];
-                                   }
-                               }];
-}
-
-- (void)accessUploadRequest {
-    
-    self.isRunning              = YES;
-    __weak Networking *weakSelf = self;
-    
-    self.dataTask = [self.session POST:self.urlString
-                            parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
-             constructingBodyWithBlock:weakSelf.constructingBodyBlock
-                              progress:weakSelf.uploadProgressBlock
-                               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                   
-                                   weakSelf.isRunning              = NO;
-                                   weakSelf.originalResponseData   = responseObject;
-                                   weakSelf.serializerResponseData = [weakSelf.responseDataSerializer serializeResponseData:responseObject];
-                                   
-                                   if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(requestSucess:data:)]) {
-                                       
-                                       [weakSelf.delegate requestSucess:weakSelf data:weakSelf.serializerResponseData];
-                                   }
-                                   
-                               } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                   
-                                   weakSelf.isRunning = NO;
-                                   
-                                   if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(requestFailed:error:)]) {
-                                       
-                                       [weakSelf.delegate requestFailed:weakSelf error:error];
-                                   }
-                               }];
-}
-
-/**
- *  重置数据
- */
-- (void)resetData {
-    
-    self.originalResponseData   = nil;
-    self.serializerResponseData = nil;
-}
-
-/**
- *  处理请求body类型
- */
-- (void)accessRequestSerializer {
-    
-    if ([self.requestBodyType isKindOfClass:[HttpBodyType class]]) {
-        
-        self.session.requestSerializer = [AFHTTPRequestSerializer serializer];
-        
-    } else if ([self.requestBodyType isKindOfClass:[JsonBodyType class]]) {
-        
-        self.session.requestSerializer = [AFJSONRequestSerializer serializer];
-        
-    } else if ([self.requestBodyType isKindOfClass:[PlistBodyType class]]) {
-        
-        self.session.requestSerializer = [AFPropertyListRequestSerializer serializer];
-        
-    } else {
-        
-        self.session.requestSerializer = [AFHTTPRequestSerializer serializer];
-    }
-}
-
-/**
- *  处理回复data类型
- */
-- (void)accessResponseSerializer {
-    
-    if ([self.responseDataType isKindOfClass:[HttpDataType class]]) {
-        
-        self.session.responseSerializer = [AFHTTPResponseSerializer serializer];
-        
-    } else if ([self.responseDataType isKindOfClass:[JsonDataType class]]) {
-        
-        self.session.responseSerializer = [AFJSONResponseSerializer serializer];
-        
-    } else {
-        
-        self.session.responseSerializer = [AFHTTPResponseSerializer serializer];
-    }
-    
-    self.session.responseSerializer.acceptableContentTypes = [self.session.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    self.session.responseSerializer.acceptableContentTypes = [self.session.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
-}
-
-/**
- *  处理请求头部信息
- */
-- (void)accessHeaderField {
-    
+    // 设置请求头部信息
     if (self.HTTPHeaderFieldsWithValues) {
         
         NSArray *allKeys = self.HTTPHeaderFieldsWithValues.allKeys;
@@ -234,69 +76,135 @@
             [self.session.requestSerializer setValue:value forHTTPHeaderField:headerField];
         }
     }
-}
-
-/**
- *  设置超时时间
- */
-- (void)accessTimeoutInterval {
     
-    if (self.timeoutInterval && self.timeoutInterval.floatValue > 0) {
+    // 设置回复序列化以及回复数据的ContentType支持的类型
+    self.session.responseSerializer                        = self.responseSerializer;
+    self.session.responseSerializer.acceptableContentTypes = [self.session.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    self.session.responseSerializer.acceptableContentTypes = [self.session.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
+    
+    // 如果设置了信息对象,则显示信息
+    if (self.networkingInfo) {
         
-        [self.session.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-        self.session.requestSerializer.timeoutInterval = self.timeoutInterval.floatValue;
-        [self.session.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+        self.networkingInfo.networking = self;
+        [self.networkingInfo showMessage];
+    }
+    
+    if /* GET */ (self.method == kYXNetworkingGET) {
+        
+        self.isRunning              = YES;
+        __weak Networking *weakSelf = self;
+        
+        self.dataTask = [self.session GET:self.urlString
+                               parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
+                                 progress:nil
+                                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                      
+                                      weakSelf.isRunning              = NO;
+                                      weakSelf.originalResponseData   = responseObject;
+                                      weakSelf.serializerResponseData = [weakSelf.responseDataSerializer serializeResponseData:responseObject];
+                                      
+                                      if (weakSelf.responseDataManager) {
+                                          
+                                          [weakSelf.responseDataManager requestSuccess:YES networking:weakSelf];
+                                      }
+                                      
+                                      if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(networkingRequestSucess:tag:data:)]) {
+                                          
+                                          [weakSelf.delegate networkingRequestSucess:self tag:self.tag data:weakSelf.serializerResponseData];
+                                      }
+                                      
+                                  } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                      
+                                      weakSelf.isRunning = NO;
+                                      
+                                      if (weakSelf.responseDataManager) {
+                                          
+                                          [weakSelf.responseDataManager requestSuccess:NO networking:weakSelf];
+                                      }
+                                      
+                                      if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(networkingRequestFailed:tag:error:)]) {
+                                          
+                                          [weakSelf.delegate networkingRequestFailed:self tag:self.tag error:error];
+                                      }
+                                  }];
+        
+    } /* POST */ else if (self.method == kYXNetworkingPOST) {
+        
+        self.isRunning              = YES;
+        __weak Networking *weakSelf = self;
+        
+        self.dataTask = [self.session POST:self.urlString
+                                parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
+                                  progress:nil
+                                   success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                       
+                                       weakSelf.isRunning              = NO;
+                                       weakSelf.originalResponseData   = responseObject;
+                                       weakSelf.serializerResponseData = [weakSelf.responseDataSerializer serializeResponseData:responseObject];
+                                       
+                                       if (weakSelf.responseDataManager) {
+                                           
+                                           [weakSelf.responseDataManager requestSuccess:YES networking:weakSelf];
+                                       }
+                                       
+                                       if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(networkingRequestSucess:tag:data:)]) {
+                                           
+                                           [weakSelf.delegate networkingRequestSucess:self tag:self.tag data:weakSelf.serializerResponseData];
+                                       }
+                                       
+                                   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                       
+                                       weakSelf.isRunning = NO;
+                                       
+                                       if (weakSelf.responseDataManager) {
+                                           
+                                           [weakSelf.responseDataManager requestSuccess:NO networking:weakSelf];
+                                       }
+                                       
+                                       if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(networkingRequestFailed:tag:error:)]) {
+                                           
+                                           [weakSelf.delegate networkingRequestFailed:self tag:self.tag error:error];
+                                       }
+                                   }];
     }
 }
 
-#pragma mark - 便利构造器
-
-+ (id)getMethodNetworkingWithUrlString:(NSString *)urlString
-                      requestParameter:(id)requestParameter
-                       requestBodyType:(RequestBodyType *)requestBodyType
-                      responseDataType:(ResponseDataType *)responseDataType {
-    
-    Networking *networking      = [[Networking alloc] init];
-    networking.urlString        = urlString;
-    networking.requestParameter = requestParameter;
-    requestBodyType             ? networking.requestBodyType = requestBodyType   : 0;
-    responseDataType            ? networking.responseDataType = responseDataType : 0;
-
-    return networking;
+- (void)cancelRequest {
+ 
+    [self.dataTask cancel];
 }
 
-+ (id)postMethodNetworkingWithUrlString:(NSString *)urlString
++ (instancetype)networkingWithUrlString:(NSString *)urlString
                        requestParameter:(id)requestParameter
-                        requestBodyType:(RequestBodyType *)requestBodyType
-                       responseDataType:(ResponseDataType *)responseDataType {
+                                 method:(EYXNetworkingMethod)method
+             requestParameterSerializer:(RequestParameterSerializer *)requestParameterSerializer
+                 responseDataSerializer:(ResponseDataSerializer *)responseDataSerializer
+                                    tag:(NSInteger)tag
+                               delegate:(id <NetworkingDelegate>)delegate
+                      requestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer
+                     ResponseSerializer:(AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer {
     
-    Networking *networking      = [[Networking alloc] init];
+    Networking *networking    = [[self class] new];
     networking.urlString        = urlString;
+    networking.method           = method;
+    networking.tag              = tag;
     networking.requestParameter = requestParameter;
-    networking.method           = [PostMethod type];
-    requestBodyType             ? networking.requestBodyType  = requestBodyType  : 0;
-    responseDataType            ? networking.responseDataType = responseDataType : 0;
+    networking.delegate         = delegate;
+
+    requestSerializer  ? networking.requestSerializer  = requestSerializer : 0;
+    responseSerializer ? networking.responseSerializer = responseSerializer : 0;
+    requestParameterSerializer ? networking.requestParameterSerializer = requestParameterSerializer : 0;
+    responseDataSerializer     ? networking.responseDataSerializer     = responseDataSerializer     : 0;
     
     return networking;
 }
 
-+ (id)uploadMethodNetworkingWithUrlString:(NSString *)urlString
-                         requestParameter:(id)requestParameter
-                          requestBodyType:(RequestBodyType *)requestBodyType
-                         responseDataType:(ResponseDataType *)responseDataType
-                constructingBodyWithBlock:(AFNetworkingConstructingBodyBlock)constructingBodyBlock
-                                 progress:(UploadProgressBlock)uploadProgressBlock {
+- (void)dealloc {
     
-    Networking *networking           = [[Networking alloc] init];
-    networking.urlString             = urlString;
-    networking.requestParameter      = requestParameter;
-    networking.method                = [UploadMethod type];
-    networking.constructingBodyBlock = constructingBodyBlock;
-    networking.uploadProgressBlock   = uploadProgressBlock;
-    requestBodyType                  ? networking.requestBodyType  = requestBodyType  : 0;
-    responseDataType                 ? networking.responseDataType = responseDataType : 0;
-    
-    return networking;
+    NSLog(@"%@ dealloc", self.serviceInfo);
+    [self.dataTask cancel];
+    self.dataTask = nil;
+    self.session  = nil;
 }
 
 @end

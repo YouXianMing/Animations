@@ -7,7 +7,7 @@
 //
 
 #import "OffsetCellViewController.h"
-#import "YXNetworking.h"
+#import "Networking+wandoujia.h"
 #import "WanDouJiaModel.h"
 #import "WanDouJiaModelSerializer.h"
 #import "WanDouJiaParameterSerializer.h"
@@ -17,9 +17,9 @@
 #import "LoadingView.h"
 #import "GCD.h"
 
-@interface OffsetCellViewController () <UITableViewDelegate, UITableViewDataSource, YXNetworkingDelegate>
+@interface OffsetCellViewController () <UITableViewDelegate, UITableViewDataSource, NetworkingDelegate>
 
-@property (nonatomic, strong) YXNetworking      *networking;
+@property (nonatomic, strong) Networking        *networking;
 @property (nonatomic, strong) UITableView       *tableView;
 @property (nonatomic, strong) WanDouJiaModel    *rootModel;
 @property (nonatomic, strong) LoadingView       *showLoadingView;
@@ -48,20 +48,11 @@
     self.showLoadingView.contentView = self.loadingAreaView;
     [self.showLoadingView show];
     
-    self.networking = [YXNetworking networkingWithUrlString:@"http://baobab.wandoujia.com/api/v1/feed"
-                                           requestParameter:@{@"num" : @"5",
-                                                              @"vc"  : @"67"}
-                                                     method:kYXNetworkingGET
-                                 requestParameterSerializer:[WanDouJiaParameterSerializer new]
-                                     responseDataSerializer:[WanDouJiaModelSerializer new]
-                                                        tag:1000
-                                                   delegate:self
-                                          requestSerializer:[AFHTTPRequestSerializer serializer]
-                                         ResponseSerializer:[AFJSONResponseSerializer serializer]];
-    
-    self.networking.serviceInfo    = @"图片列表请求";
-    self.networking.networkingInfo = [NetworkingInfo new];
-    self.networking.object         = self.tableView;
+    self.networking = [Networking networkingWithUrlString:@"http://baobab.wandoujia.com/api/v1/feed"
+                                         requestParameter:@{@"num" : @"5",
+                                                            @"vc"  : @"67"}
+                                              serviceInfo:@"豌豆荚图片列表请求"
+                                                 delegate:self];
     [self.networking startRequest];
 }
 
@@ -80,13 +71,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OffsetImageCell"];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(OffsetImageCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     [cell cellOffset];
     
     DailyListModel *dailyModel = self.rootModel.dailyList[indexPath.section];
@@ -98,7 +89,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(OffsetImageCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath {
-
+    
     [cell cancelAnimation];
 }
 
@@ -126,18 +117,18 @@
     }];
 }
 
-#pragma mark - YXNetworking's delegate.
+#pragma mark - Networking's delegate.
 
-- (void)YXNetworkingRequestSucess:(YXNetworking *)networking tag:(NSInteger)tag data:(id)data {
- 
+- (void)networkingRequestSucess:(Networking *)networking tag:(NSInteger)tag data:(WanDouJiaModel *)model {
+    
     [GCDQueue executeInMainQueue:^{
         
         [self.showLoadingView hide];
         
     } afterDelaySecs:0.5f];
     
-    self.rootModel = data;
-    [networking.object reloadData];
+    self.rootModel = model;
+    [self.tableView reloadData];
     
     [UIView animateWithDuration:0.5f animations:^{
         
@@ -145,8 +136,8 @@
     }];
 }
 
-- (void)YXNetworkingRequestFailed:(YXNetworking *)networking tag:(NSInteger)tag error:(NSError *)error {
-
+- (void)networkingRequestFailed:(Networking *)networking tag:(NSInteger)tag error:(NSError *)error {
+    
     [self.showLoadingView hide];
     [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"警告", @"网络异常,请稍后再试!") contentView:self.loadingAreaView];
 }

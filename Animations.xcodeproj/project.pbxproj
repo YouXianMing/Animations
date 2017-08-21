@@ -232,7 +232,7 @@
 		1096061E1C93B46800CCB3AD /* AbsResponseDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606141C93B46800CCB3AD /* AbsResponseDataSerializer.m */; };
 		1096061F1C93B46800CCB3AD /* AbsNetworkingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606161C93B46800CCB3AD /* AbsNetworkingIndicator.m */; };
 		109606201C93B46800CCB3AD /* AbsNetworkingReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606181C93B46800CCB3AD /* AbsNetworkingReachability.m */; };
-		109606281C93B47800CCB3AD /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606231C93B47800CCB3AD /* Networking.m */; };
+		109606281C93B47800CCB3AD /* AFNetworking_3x.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606231C93B47800CCB3AD /* AFNetworking_3x.m */; };
 		109606291C93B47800CCB3AD /* NetworkingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606251C93B47800CCB3AD /* NetworkingIndicator.m */; };
 		1096062A1C93B47800CCB3AD /* NetworkingReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 109606271C93B47800CCB3AD /* NetworkingReachability.m */; };
 		109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109BF1221C4E639F000F21BF /* CASpringAnimationController.m */; };
@@ -396,7 +396,7 @@
 		C57526CC1D5032690064F6CD /* DrawingStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C71D5032690064F6CD /* DrawingStyle.m */; };
 		C57526CD1D5032690064F6CD /* DrawingColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C91D5032690064F6CD /* DrawingColor.m */; };
 		C57526D01D50327F0064F6CD /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526CF1D50327F0064F6CD /* WaveView.m */; };
-		C5792EE31F4743B3000B0D1B /* YXNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EDC1F4743B3000B0D1B /* YXNetworking.m */; };
+		C5792EE31F4743B3000B0D1B /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EDC1F4743B3000B0D1B /* Networking.m */; };
 		C5792EE41F4743B3000B0D1B /* NetworkingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EDE1F4743B3000B0D1B /* NetworkingInfo.m */; };
 		C5792EE51F4743B3000B0D1B /* RequestParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EE01F4743B3000B0D1B /* RequestParameterSerializer.m */; };
 		C5792EE61F4743B3000B0D1B /* ResponseDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EE21F4743B3000B0D1B /* ResponseDataSerializer.m */; };
@@ -450,6 +450,8 @@
 		C5F8FE831ECC27B600377E01 /* FullTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8FE821ECC27B600377E01 /* FullTitleController.m */; };
 		C5F9E7D51F4A7502004B6198 /* duitang.json in Resources */ = {isa = PBXBuildFile; fileRef = C5F9E7D41F4A7502004B6198 /* duitang.json */; };
 		C5F9E7D81F4A7663004B6198 /* DuitangPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F9E7D71F4A7663004B6198 /* DuitangPicModel.m */; };
+		C5F9E82D1F4A8C8F004B6198 /* ResponseDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F9E82C1F4A8C8F004B6198 /* ResponseDataManager.m */; };
+		C5F9E8301F4A8F74004B6198 /* Networking+wandoujia.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F9E82F1F4A8F74004B6198 /* Networking+wandoujia.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -923,8 +925,8 @@
 		109606161C93B46800CCB3AD /* AbsNetworkingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsNetworkingIndicator.m; sourceTree = "<group>"; };
 		109606171C93B46800CCB3AD /* AbsNetworkingReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsNetworkingReachability.h; sourceTree = "<group>"; };
 		109606181C93B46800CCB3AD /* AbsNetworkingReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsNetworkingReachability.m; sourceTree = "<group>"; };
-		109606221C93B47800CCB3AD /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
-		109606231C93B47800CCB3AD /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		109606221C93B47800CCB3AD /* AFNetworking_3x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking_3x.h; sourceTree = "<group>"; };
+		109606231C93B47800CCB3AD /* AFNetworking_3x.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworking_3x.m; sourceTree = "<group>"; };
 		109606241C93B47800CCB3AD /* NetworkingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingIndicator.h; sourceTree = "<group>"; };
 		109606251C93B47800CCB3AD /* NetworkingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingIndicator.m; sourceTree = "<group>"; };
 		109606261C93B47800CCB3AD /* NetworkingReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingReachability.h; sourceTree = "<group>"; };
@@ -1256,8 +1258,8 @@
 		C57526C91D5032690064F6CD /* DrawingColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingColor.m; sourceTree = "<group>"; };
 		C57526CE1D50327F0064F6CD /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
 		C57526CF1D50327F0064F6CD /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
-		C5792EDB1F4743B3000B0D1B /* YXNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXNetworking.h; sourceTree = "<group>"; };
-		C5792EDC1F4743B3000B0D1B /* YXNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXNetworking.m; sourceTree = "<group>"; };
+		C5792EDB1F4743B3000B0D1B /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		C5792EDC1F4743B3000B0D1B /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		C5792EDD1F4743B3000B0D1B /* NetworkingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingInfo.h; sourceTree = "<group>"; };
 		C5792EDE1F4743B3000B0D1B /* NetworkingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingInfo.m; sourceTree = "<group>"; };
 		C5792EDF1F4743B3000B0D1B /* RequestParameterSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestParameterSerializer.h; sourceTree = "<group>"; };
@@ -1368,6 +1370,10 @@
 		C5F9E7D41F4A7502004B6198 /* duitang.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = duitang.json; sourceTree = "<group>"; };
 		C5F9E7D61F4A7663004B6198 /* DuitangPicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuitangPicModel.h; sourceTree = "<group>"; };
 		C5F9E7D71F4A7663004B6198 /* DuitangPicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuitangPicModel.m; sourceTree = "<group>"; };
+		C5F9E82B1F4A8C8F004B6198 /* ResponseDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseDataManager.h; sourceTree = "<group>"; };
+		C5F9E82C1F4A8C8F004B6198 /* ResponseDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseDataManager.m; sourceTree = "<group>"; };
+		C5F9E82E1F4A8F74004B6198 /* Networking+wandoujia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Networking+wandoujia.h"; sourceTree = "<group>"; };
+		C5F9E82F1F4A8F74004B6198 /* Networking+wandoujia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Networking+wandoujia.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1427,6 +1433,8 @@
 			children = (
 				1011BA8D1CD484FE00F29FB9 /* OffsetCellViewController.h */,
 				1011BA8E1CD484FE00F29FB9 /* OffsetCellViewController.m */,
+				C5F9E82E1F4A8F74004B6198 /* Networking+wandoujia.h */,
+				C5F9E82F1F4A8F74004B6198 /* Networking+wandoujia.m */,
 				1011BAE51CD4909400F29FB9 /* OffsetImageCell.h */,
 				1011BAE61CD4909400F29FB9 /* OffsetImageCell.m */,
 				10E2D4C41CD592B900666EEB /* OffsetHeaderView.h */,
@@ -1547,7 +1555,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
-				C5792EDA1F4743A1000B0D1B /* YXNetworking */,
+				C5792EDA1F4743A1000B0D1B /* Networking */,
 				C54CB91A1F31B67600DFFE15 /* NSArray+IndexPath */,
 				105189091D0A65D500F606FB /* NSObject+Category */,
 				C501F24E1F0CC3F50051B4C6 /* RegexManager */,
@@ -1562,7 +1570,7 @@
 				1020E2D01C73196D00FF233E /* CAGradientView */,
 				102B85011C3C9FBF001699A9 /* NumberFormatter */,
 				101EA3EB1C489C1400D5D487 /* DateFormatter */,
-				102B85841C3CF28A001699A9 /* Networking */,
+				102B85841C3CF28A001699A9 /* AFNetworking-3.x */,
 				102B84DB1C3B95E8001699A9 /* FileManager */,
 				102B84DA1C3B9521001699A9 /* MD5 */,
 				1022969D1C38CF79001AF5BB /* CreateModel */,
@@ -1880,14 +1888,14 @@
 			name = "UIImage+Category";
 			sourceTree = "<group>";
 		};
-		102B85841C3CF28A001699A9 /* Networking */ = {
+		102B85841C3CF28A001699A9 /* AFNetworking-3.x */ = {
 			isa = PBXGroup;
 			children = (
-				109606211C93B46C00CCB3AD /* Networking */,
+				109606211C93B46C00CCB3AD /* AFNetworking_3x */,
 				109606071C93B44E00CCB3AD /* AbsNetworking */,
 				109606081C93B45300CCB3AD /* AFNetworking-3.x */,
 			);
-			name = Networking;
+			name = "AFNetworking-3.x";
 			sourceTree = "<group>";
 		};
 		102ED87B1C3C02A800E9863E /* MixedColorProgressViewController */ = {
@@ -2878,17 +2886,17 @@
 			name = "AFNetworking-3.x";
 			sourceTree = "<group>";
 		};
-		109606211C93B46C00CCB3AD /* Networking */ = {
+		109606211C93B46C00CCB3AD /* AFNetworking_3x */ = {
 			isa = PBXGroup;
 			children = (
-				109606221C93B47800CCB3AD /* Networking.h */,
-				109606231C93B47800CCB3AD /* Networking.m */,
+				109606221C93B47800CCB3AD /* AFNetworking_3x.h */,
+				109606231C93B47800CCB3AD /* AFNetworking_3x.m */,
 				109606241C93B47800CCB3AD /* NetworkingIndicator.h */,
 				109606251C93B47800CCB3AD /* NetworkingIndicator.m */,
 				109606261C93B47800CCB3AD /* NetworkingReachability.h */,
 				109606271C93B47800CCB3AD /* NetworkingReachability.m */,
 			);
-			name = Networking;
+			name = AFNetworking_3x;
 			sourceTree = "<group>";
 		};
 		109BF1241C4E70AD000F21BF /* CASpringAnimationController */ = {
@@ -3527,19 +3535,21 @@
 			name = WaveView;
 			sourceTree = "<group>";
 		};
-		C5792EDA1F4743A1000B0D1B /* YXNetworking */ = {
+		C5792EDA1F4743A1000B0D1B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				C5792EDB1F4743B3000B0D1B /* YXNetworking.h */,
-				C5792EDC1F4743B3000B0D1B /* YXNetworking.m */,
+				C5792EDB1F4743B3000B0D1B /* Networking.h */,
+				C5792EDC1F4743B3000B0D1B /* Networking.m */,
 				C5792EDD1F4743B3000B0D1B /* NetworkingInfo.h */,
 				C5792EDE1F4743B3000B0D1B /* NetworkingInfo.m */,
 				C5792EDF1F4743B3000B0D1B /* RequestParameterSerializer.h */,
 				C5792EE01F4743B3000B0D1B /* RequestParameterSerializer.m */,
 				C5792EE11F4743B3000B0D1B /* ResponseDataSerializer.h */,
 				C5792EE21F4743B3000B0D1B /* ResponseDataSerializer.m */,
+				C5F9E82B1F4A8C8F004B6198 /* ResponseDataManager.h */,
+				C5F9E82C1F4A8C8F004B6198 /* ResponseDataManager.m */,
 			);
-			name = YXNetworking;
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		C582E7931D2F40E5003433EC /* QRCodeViewController */ = {
@@ -3807,7 +3817,7 @@
 				10E2D4E91CD5962000666EEB /* NSData+ImageContentType.m in Sources */,
 				C5EFF2471F14735A00BD5AF0 /* HorizontalCollectionItemView.m in Sources */,
 				C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */,
-				C5792EE31F4743B3000B0D1B /* YXNetworking.m in Sources */,
+				C5792EE31F4743B3000B0D1B /* Networking.m in Sources */,
 				102B85321C3CF226001699A9 /* UIImage+ImageEffects.m in Sources */,
 				104FCCA51D23573D00308B73 /* TapDrawPath.m in Sources */,
 				10931AE71C51147A004D120D /* AdditiveAnimationController.m in Sources */,
@@ -3982,6 +3992,7 @@
 				105702151CF6CF05003B10C6 /* POPBaseControl.m in Sources */,
 				C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */,
 				1011BA9E1CD4898D00F29FB9 /* ConsumptionModel.m in Sources */,
+				C5F9E8301F4A8F74004B6198 /* Networking+wandoujia.m in Sources */,
 				C5EFF2781F14C46700BD5AF0 /* View+MASAdditions.m in Sources */,
 				C501F21D1F0C7DE90051B4C6 /* NSAttributedString+AttributedStringConfig.m in Sources */,
 				C545535C1E1CD76E00A5BA58 /* iCarouselView.m in Sources */,
@@ -4149,7 +4160,7 @@
 				1068FD5B1CF847BC00BE431C /* DismissAnimator.m in Sources */,
 				102B84EF1C3BCAD0001699A9 /* CellDataAdapter.m in Sources */,
 				104FCCA61D23573D00308B73 /* TapDrawImageView.m in Sources */,
-				109606281C93B47800CCB3AD /* Networking.m in Sources */,
+				109606281C93B47800CCB3AD /* AFNetworking_3x.m in Sources */,
 				104FCCAD1D235A1000308B73 /* IconEdgeInsetsLabel.m in Sources */,
 				C55F55F91F0B9686008F0910 /* CustomTabBarViewController.m in Sources */,
 				1068FCCD1CF7D87A00BE431C /* PressScaleButton.m in Sources */,
@@ -4157,6 +4168,7 @@
 				10D4F6111C41538C00D056EB /* PressAnimationButton.m in Sources */,
 				C501F21F1F0C7DE90051B4C6 /* NSString+AttributedStringConfig.m in Sources */,
 				102B1F311C60E66F00A8FD40 /* MentionsModel.m in Sources */,
+				C5F9E82D1F4A8C8F004B6198 /* ResponseDataManager.m in Sources */,
 				C5E7760D1F2580F900C304A1 /* TreeStructureTableViewController.m in Sources */,
 				C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */,
 				10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */,

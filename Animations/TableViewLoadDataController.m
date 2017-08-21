@@ -7,7 +7,7 @@
 //
 
 #import "TableViewLoadDataController.h"
-#import "Networking.h"
+#import "AFNetworking_3x.h"
 #import "TableViewLoadDataRootModel.h"
 #import "LoadUrlDataCell.h"
 #import "CellDataAdapter.h"
@@ -21,7 +21,7 @@
 @interface TableViewLoadDataController () <UITableViewDelegate, UITableViewDataSource, AbsNetworkingDelegate>
 
 @property (nonatomic, strong) UITableView                         *tableView;
-@property (nonatomic, strong) Networking                          *dataNetworking;
+@property (nonatomic, strong) AFNetworking_3x                     *dataNetworking;
 @property (nonatomic, strong) NSMutableArray <CellDataAdapter *>  *datasArray;
 @property (nonatomic, strong) LoadingView                         *showLoadingView;
 
@@ -49,10 +49,10 @@
     
     self.showLoadingView = [LoadingView showManualHiddenMessageViewWithMessageObject:nil contentView:self.loadingAreaView];
     
-    self.dataNetworking = [Networking getMethodNetworkingWithUrlString:@"https://api.app.net/stream/0/posts/stream/global"
-                                                      requestParameter:nil
-                                                       requestBodyType:[HttpBodyType type]
-                                                      responseDataType:[JsonDataType type]];
+    self.dataNetworking = [AFNetworking_3x getMethodNetworkingWithUrlString:@"https://api.app.net/stream/0/posts/stream/global"
+                                                           requestParameter:nil
+                                                            requestBodyType:[HttpBodyType type]
+                                                           responseDataType:[JsonDataType type]];
     self.dataNetworking.delegate        = self;
     self.dataNetworking.timeoutInterval = @(15);
     [self.dataNetworking startRequest];
@@ -84,14 +84,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath {
-
+    
     LoadUrlDataCell *dataCell = (LoadUrlDataCell *)[tableView cellForRowAtIndexPath:indexPath];
     [dataCell cancelAnimation];
 }
 
 #pragma mark - NetworkingDelegate
 
-- (void)requestSucess:(Networking *)networking data:(id)data {
+- (void)requestSucess:(AFNetworking_3x *)networking data:(id)data {
     
     [self.showLoadingView hide];
     TableViewLoadDataRootModel *rootModel = [[TableViewLoadDataRootModel alloc] initWithDictionary:data];
@@ -133,7 +133,7 @@
     }
 }
 
-- (void)requestFailed:(Networking *)networking error:(NSError *)error {
+- (void)requestFailed:(AFNetworking_3x *)networking error:(NSError *)error {
     
     [self.showLoadingView hide];
     [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"Notice", @"Network error.") contentView:self.windowAreaView];
