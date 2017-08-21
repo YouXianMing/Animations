@@ -1,16 +1,14 @@
 //
-//  WaterfallPictureModel.m
+//  DuitangPicModel.m
+//  Animations
 //
-//  http://www.cnblogs.com/YouXianMing/
-//  https://github.com/YouXianMing
-//
-//  Copyright (c) YouXianMing All rights reserved.
+//  Created by YouXianMing on 2017/8/21.
+//  Copyright © 2017年 YouXianMing. All rights reserved.
 //
 
+#import "DuitangPicModel.h"
 
-#import "WaterfallPictureModel.h"
-
-@implementation WaterfallPictureModel
+@implementation DuitangPicModel
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     
@@ -21,7 +19,7 @@
      *      self.productID = value;
      *      return;
      *  }
-     */    
+     */
 }
 
 - (void)setValue:(id)value forKey:(NSString *)key {
@@ -31,21 +29,7 @@
         
         return;
     }
-    // cmts
-    if ([key isEqualToString:@"cmts"] && [value isKindOfClass:[NSArray class]]) {
-        
-        NSArray        *array     = value;
-        NSMutableArray *dataArray = [NSMutableArray array];
-        
-        for (NSDictionary *dictionary in array) {
-            
-            CmtsModel *model = [[CmtsModel alloc] initWithDictionary:dictionary];
-            [dataArray addObject:model];
-        }
-        
-        value = dataArray;
-    }
-
+    
     [super setValue:value forKey:key];
 }
 
@@ -63,4 +47,3 @@
 }
 
 @end
-

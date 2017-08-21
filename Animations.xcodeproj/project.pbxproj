@@ -56,10 +56,6 @@
 		1020E2E41C7422B600FF233E /* UIView+AnimationPracticalMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */; };
 		1020E3381C759B3400FF233E /* MotionEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E3371C759B3400FF233E /* MotionEffectViewController.m */; };
 		1020E33B1C759C2F00FF233E /* UIView+MotionEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E33A1C759C2F00FF233E /* UIView+MotionEffect.m */; };
-		102296AF1C38D122001AF5BB /* CmtsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296A81C38D122001AF5BB /* CmtsModel.m */; };
-		102296B01C38D122001AF5BB /* PictureData.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296AA1C38D122001AF5BB /* PictureData.m */; };
-		102296B11C38D122001AF5BB /* ResponseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296AC1C38D122001AF5BB /* ResponseData.m */; };
-		102296B21C38D122001AF5BB /* WaterfallPictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296AE1C38D122001AF5BB /* WaterfallPictureModel.m */; };
 		102296B61C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296B51C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m */; };
 		102296BB1C38D3D6001AF5BB /* WaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296BA1C38D3D6001AF5BB /* WaterfallCell.m */; };
 		102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296BD1C38D420001AF5BB /* WaterfallHeaderView.m */; };
@@ -452,6 +448,8 @@
 		C5F8FE7D1ECC228D00377E01 /* NormalTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8FE7C1ECC228D00377E01 /* NormalTitleController.m */; };
 		C5F8FE801ECC260A00377E01 /* FullTitleVisualEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8FE7F1ECC260A00377E01 /* FullTitleVisualEffectController.m */; };
 		C5F8FE831ECC27B600377E01 /* FullTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8FE821ECC27B600377E01 /* FullTitleController.m */; };
+		C5F9E7D51F4A7502004B6198 /* duitang.json in Resources */ = {isa = PBXBuildFile; fileRef = C5F9E7D41F4A7502004B6198 /* duitang.json */; };
+		C5F9E7D81F4A7663004B6198 /* DuitangPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F9E7D71F4A7663004B6198 /* DuitangPicModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -550,14 +548,6 @@
 		1020E3371C759B3400FF233E /* MotionEffectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionEffectViewController.m; sourceTree = "<group>"; };
 		1020E3391C759C2F00FF233E /* UIView+MotionEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MotionEffect.h"; sourceTree = "<group>"; };
 		1020E33A1C759C2F00FF233E /* UIView+MotionEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MotionEffect.m"; sourceTree = "<group>"; };
-		102296A71C38D122001AF5BB /* CmtsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmtsModel.h; sourceTree = "<group>"; };
-		102296A81C38D122001AF5BB /* CmtsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CmtsModel.m; sourceTree = "<group>"; };
-		102296A91C38D122001AF5BB /* PictureData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureData.h; sourceTree = "<group>"; };
-		102296AA1C38D122001AF5BB /* PictureData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureData.m; sourceTree = "<group>"; };
-		102296AB1C38D122001AF5BB /* ResponseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseData.h; sourceTree = "<group>"; };
-		102296AC1C38D122001AF5BB /* ResponseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseData.m; sourceTree = "<group>"; };
-		102296AD1C38D122001AF5BB /* WaterfallPictureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallPictureModel.h; sourceTree = "<group>"; };
-		102296AE1C38D122001AF5BB /* WaterfallPictureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallPictureModel.m; sourceTree = "<group>"; };
 		102296B41C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
 		102296B51C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		102296B91C38D3D6001AF5BB /* WaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallCell.h; sourceTree = "<group>"; };
@@ -1375,6 +1365,9 @@
 		C5F8FE7F1ECC260A00377E01 /* FullTitleVisualEffectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTitleVisualEffectController.m; sourceTree = "<group>"; };
 		C5F8FE811ECC27B600377E01 /* FullTitleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTitleController.h; sourceTree = "<group>"; };
 		C5F8FE821ECC27B600377E01 /* FullTitleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTitleController.m; sourceTree = "<group>"; };
+		C5F9E7D41F4A7502004B6198 /* duitang.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = duitang.json; sourceTree = "<group>"; };
+		C5F9E7D61F4A7663004B6198 /* DuitangPicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuitangPicModel.h; sourceTree = "<group>"; };
+		C5F9E7D71F4A7663004B6198 /* DuitangPicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuitangPicModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1722,24 +1715,19 @@
 				102296BD1C38D420001AF5BB /* WaterfallHeaderView.m */,
 				102296BF1C38D65F001AF5BB /* WaterfallFooterView.h */,
 				102296C01C38D65F001AF5BB /* WaterfallFooterView.m */,
-				102296B81C38D3C1001AF5BB /* Models */,
+				102296B81C38D3C1001AF5BB /* Model */,
 			);
 			name = WaterfallLayoutController;
 			sourceTree = "<group>";
 		};
-		102296B81C38D3C1001AF5BB /* Models */ = {
+		102296B81C38D3C1001AF5BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				102296A71C38D122001AF5BB /* CmtsModel.h */,
-				102296A81C38D122001AF5BB /* CmtsModel.m */,
-				102296A91C38D122001AF5BB /* PictureData.h */,
-				102296AA1C38D122001AF5BB /* PictureData.m */,
-				102296AB1C38D122001AF5BB /* ResponseData.h */,
-				102296AC1C38D122001AF5BB /* ResponseData.m */,
-				102296AD1C38D122001AF5BB /* WaterfallPictureModel.h */,
-				102296AE1C38D122001AF5BB /* WaterfallPictureModel.m */,
+				C5F9E7D41F4A7502004B6198 /* duitang.json */,
+				C5F9E7D61F4A7663004B6198 /* DuitangPicModel.h */,
+				C5F9E7D71F4A7663004B6198 /* DuitangPicModel.m */,
 			);
-			name = Models;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		102296C21C392B0F001AF5BB /* LineBackgroundView */ = {
@@ -3782,6 +3770,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F9E7D51F4A7502004B6198 /* duitang.json in Resources */,
 				10381F771BF9B4F800E5E476 /* HYQiHei-25JF.otf in Resources */,
 				C557362F1E837661001CDC9A /* news in Resources */,
 				1011BADF1CD48C8D00F29FB9 /* NodeModelStrings.plist in Resources */,
@@ -3903,7 +3892,6 @@
 				C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */,
 				C554F8851DEEAA10007C394A /* TableViewSectionItem.m in Sources */,
 				C5EFF2751F14C46700BD5AF0 /* MASViewConstraint.m in Sources */,
-				102296AF1C38D122001AF5BB /* CmtsModel.m in Sources */,
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
 				104326671C4B505E0033CEC0 /* ProgressColor+Colors.m in Sources */,
 				C51641901EF76E010037C550 /* AFImageDownloader.m in Sources */,
@@ -3928,6 +3916,7 @@
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
 				1020E3381C759B3400FF233E /* MotionEffectViewController.m in Sources */,
 				1011BA551CD40C2900F29FB9 /* UIView+UserInteraction.m in Sources */,
+				C5F9E7D81F4A7663004B6198 /* DuitangPicModel.m in Sources */,
 				10381FB01BF9B55B00E5E476 /* POPAnimatableProperty.mm in Sources */,
 				C52C64431E246AAD00624A3D /* AlertViewCollectionCell.m in Sources */,
 				106CF0A31C376E190006419B /* HexColors.m in Sources */,
@@ -4023,7 +4012,6 @@
 				10EFE2121D01874900159779 /* SpringScaleViewController.m in Sources */,
 				C517332B1D45AFDE005D57AE /* TextFieldValidatorMessage.m in Sources */,
 				1041AE6D1CEC4507005697B8 /* BaseCustomCollectionCell.m in Sources */,
-				102296B11C38D122001AF5BB /* ResponseData.m in Sources */,
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				C501F21C1F0C7DE90051B4C6 /* ParagraphAttributeConfig.m in Sources */,
 				105AFB4B1CF18CEF003DD84A /* NSString+Range.m in Sources */,
@@ -4112,7 +4100,6 @@
 				10B6F3D31C953FEA007E8254 /* ScrollComputingValue.m in Sources */,
 				1011BADB1CD48C8D00F29FB9 /* NodeModel.m in Sources */,
 				10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */,
-				102296B21C38D122001AF5BB /* WaterfallPictureModel.m in Sources */,
 				C5159D301F2F2AC500AF92E3 /* NormalTitleTableViewController.m in Sources */,
 				106BCFC01CDC672A007C3EEE /* InfiniteLoopViewController.m in Sources */,
 				100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */,
@@ -4188,7 +4175,6 @@
 				102B1F321C60E66F00A8FD40 /* MetaModel.m in Sources */,
 				1059EB351CF0504D00B7A4B0 /* UITextField+UsefulMethod.m in Sources */,
 				102B1F291C60E66F00A8FD40 /* AvatarImageModel.m in Sources */,
-				102296B01C38D122001AF5BB /* PictureData.m in Sources */,
 				C5EFF2761F14C46700BD5AF0 /* NSArray+MASAdditions.m in Sources */,
 				104326941C4B9D570033CEC0 /* SpringEffectController.m in Sources */,
 				C510B4DB1F297D2F009D7DB8 /* ItemStyle.m in Sources */,

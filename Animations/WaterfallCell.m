@@ -8,7 +8,7 @@
 
 #import "WaterfallCell.h"
 #import "UIImageView+WebCache.h"
-#import "WaterfallPictureModel.h"
+#import "DuitangPicModel.h"
 #import "UIView+AnimationProperty.h"
 #import "UIView+SetRect.h"
 
@@ -44,10 +44,10 @@
 
 - (void)loadContent {
 
-    WaterfallPictureModel *model = self.data;
-    __weak WaterfallCell  *wself = self;
+    DuitangPicModel      *model = self.data;
+    __weak WaterfallCell *wself = self;
 
-    [self.showImageView sd_setImageWithURL:[NSURL URLWithString:model.isrc]
+    [self.showImageView sd_setImageWithURL:[NSURL URLWithString:model.img]
                                  completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                      
                                      wself.showImageView.image = image;

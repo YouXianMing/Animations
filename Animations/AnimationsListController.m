@@ -249,7 +249,7 @@
                        [Item itemWithName:@"果冻效果" object:[SpringEffectController class]],
                        [Item itemWithName:@"CASpringAnimation" object:[CASpringAnimationController class]],
                        [Item itemWithName:@"Additive属性动画" object:[AdditiveAnimationController class]],
-                       [Item itemWithName:@"加载网络数据" object:[TableViewLoadDataController class]],
+                       // [Item itemWithName:@"加载网络数据" object:[TableViewLoadDataController class]],
                        [Item itemWithName:@"MotionEffect效果" object:[MotionEffectViewController class]],
                        [Item itemWithName:@"加载GIF图片" object:[GifPictureController class]],
                        [Item itemWithName:@"震动效果" object:[SCViewShakerController class]],

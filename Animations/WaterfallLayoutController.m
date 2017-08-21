@@ -8,16 +8,14 @@
 
 #import "WaterfallLayoutController.h"
 #import "NSData+JSONData.h"
-#import "GCD.h"
-#import "ResponseData.h"
 #import "CHTCollectionViewWaterfallLayout.h"
 #import "WaterfallCell.h"
 #import "WaterfallHeaderView.h"
 #import "WaterfallFooterView.h"
 #import "NSString+MD5.h"
 #import "FileManager.h"
+#import "DuitangPicModel.h"
 
-static NSString *picturesSource   = @"http://www.duitang.com/album/1733789/masn/p/0/50/";
 static NSString *cellIdentifier   = @"WaterfallCell";
 static NSString *headerIdentifier = @"WaterfallHeader";
 static NSString *footerIdentifier = @"WaterfallFooter";
@@ -25,9 +23,7 @@ static NSString *footerIdentifier = @"WaterfallFooter";
 @interface WaterfallLayoutController () <UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) NSMutableArray   <WaterfallPictureModel *> *dataSource;
-
-@property (nonatomic, strong) ResponseData *picturesData;
+@property (nonatomic, strong) NSMutableArray   <DuitangPicModel *> *dataSource;
 
 @end
 
@@ -73,41 +69,12 @@ static NSString *footerIdentifier = @"WaterfallFooter";
     // 添加到视图当中
     [self.contentView addSubview:_collectionView];
     
-    // 获取数据
-    [GCDQueue executeInGlobalQueue:^{
+    // 数据源
+    self.dataSource = [NSMutableArray array];
+    NSArray *duitangPics = [[NSData dataWithContentsOfFile:[FileManager bundleFileWithName:@"duitang.json"]] toListProperty];
+    [duitangPics enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        NSString *string       = [picturesSource lowerMD532BitString];
-        NSString *realFilePath = [FileManager theRealFilePath:[NSString stringWithFormat:@"~/Documents/%@", string]];
-        NSData   *data         = nil;
-
-        if ([FileManager fileExistWithRealFilePath:realFilePath] == NO) {
-            
-            data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:picturesSource]];
-            [data writeToFile:realFilePath atomically:YES];
-            
-        } else {
-        
-            data = [NSData dataWithContentsOfFile:realFilePath];
-        }
-        
-        NSDictionary *dataDic = [data toListProperty];
-        
-        [GCDQueue executeInMainQueue:^{
-            
-            self.picturesData = [[ResponseData alloc] initWithDictionary:dataDic];
-            if (self.picturesData.success.integerValue == 1) {
-
-                NSMutableArray *indexPaths = [NSMutableArray array];
-                
-                for (int i = 0; i < self.picturesData.data.blogs.count; i++) {
-                    
-                    [_dataSource addObject:self.picturesData.data.blogs[i]];
-                    [indexPaths addObject:[NSIndexPath indexPathForItem:i inSection:0]];
-                }
-                
-                [_collectionView insertItemsAtIndexPaths:indexPaths];
-            }
-        }];
+        [self.dataSource addObject:[[DuitangPicModel alloc] initWithDictionary:obj]];
     }];
 }
 
@@ -165,9 +132,9 @@ static NSString *footerIdentifier = @"WaterfallFooter";
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    WaterfallPictureModel *pictureModel = _dataSource[indexPath.row];
+    DuitangPicModel *pictureModel = _dataSource[indexPath.row];
     
-    return CGSizeMake(pictureModel.iwd.floatValue, pictureModel.iht.floatValue);
+    return CGSizeMake(pictureModel.width.floatValue, pictureModel.height.floatValue);
 }
 
 @end
