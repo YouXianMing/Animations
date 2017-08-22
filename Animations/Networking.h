@@ -14,6 +14,9 @@
 #import "NetworkingInfo.h"
 @class Networking;
 
+typedef void (^ConstructingBodyBlock)(id <AFMultipartFormData> formData);
+typedef void (^UploadProgressBlock)(NSProgress *uploadProgress);
+
 typedef enum : NSUInteger {
     
     kYXNetworkingGET,
@@ -70,6 +73,16 @@ typedef enum : NSUInteger {
  *  请求用参数
  */
 @property (nonatomic, strong) id requestParameter;
+
+/**
+ *  构造上传数据的block
+ */
+@property (nonatomic, copy) ConstructingBodyBlock constructingBodyBlock;
+
+/**
+ *  检测下载进度的block
+ */
+@property (nonatomic, copy) UploadProgressBlock uploadProgressBlock;
 
 /**
  *  请求参数预处理策略
@@ -171,15 +184,17 @@ typedef enum : NSUInteger {
 /**
  *  请求的便利构造器
  *
- *  @param urlString                  网址
- *  @param method                     请求类型
- *  @param tag                        tag值
- *  @param requestParameter           请求参数
- *  @param requestParameterSerializer 请求参数转换策略
- *  @param delegate                   代理
- *  @param requestSerializer          请求包体类型
- *  @param responseSerializer         回复数据类型
- *  @param responseDataSerializer     回复数据转换策略
+ *  @param urlString                   网址
+ *  @param requestParameter            请求参数
+ *  @param method                      请求类型
+ *  @param requestParameterSerializer  请求参数转换策略
+ *  @param responseDataSerializer      回复数据转换策略
+ *  @param constructingBodyBlock       构造body的block
+ *  @param uploadProgressBlock         进度block
+ *  @param tag                         tag值
+ *  @param delegate                    代理
+ *  @param requestSerializer           请求包体类型
+ *  @param responseSerializer          回复数据类型
  *
  *  @return Networking对象
  */
@@ -188,6 +203,8 @@ typedef enum : NSUInteger {
                                  method:(EYXNetworkingMethod)method
              requestParameterSerializer:(RequestParameterSerializer *)requestParameterSerializer
                  responseDataSerializer:(ResponseDataSerializer *)responseDataSerializer
+              constructingBodyWithBlock:(ConstructingBodyBlock)constructingBodyBlock
+                               progress:(UploadProgressBlock)uploadProgressBlock
                                     tag:(NSInteger)tag
                                delegate:(id <NetworkingDelegate>)delegate
                       requestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer

@@ -113,15 +113,11 @@ static NSString *footerIdentifier = @"WaterfallFooter";
     
     if ([kind isEqualToString:CHTCollectionElementKindSectionHeader]) {
         
-        reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind
-                                                          withReuseIdentifier:headerIdentifier
-                                                                 forIndexPath:indexPath];
+        reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerIdentifier forIndexPath:indexPath];
         
     } else if ([kind isEqualToString:CHTCollectionElementKindSectionFooter]) {
         
-        reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind
-                                                          withReuseIdentifier:footerIdentifier
-                                                                 forIndexPath:indexPath];
+        reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:footerIdentifier forIndexPath:indexPath];
     }
     
     return reusableView;

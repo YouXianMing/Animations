@@ -8,10 +8,9 @@
 
 #import "LiveImageView.h"
 
-@interface LiveImageView () {
+@interface LiveImageView ()
 
-    CALayer  *_Layer;
-}
+@property (nonatomic, weak) CALayer *viewLayer;
 
 @end
 
@@ -19,10 +18,10 @@
 
 - (id)initWithFrame:(CGRect)frame {
     
-    if ([super initWithFrame:frame]) {
+    if (self = [super initWithFrame:frame]) {
         
-        _duration = 0.3f;
-        _Layer    = self.layer;
+        self.duration  = 0.3f;
+        self.viewLayer = self.layer;
     }
     
     return self;
@@ -37,9 +36,9 @@
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"contents"];
         animation.fromValue         = (__bridge id)(_image.CGImage);
         animation.toValue           =  (__bridge id)(image.CGImage);
-        animation.duration          = _duration;
-        _Layer.contents             = (__bridge id)(image.CGImage);
-        [_Layer addAnimation:animation forKey:nil];
+        animation.duration          = self.duration;
+        self.viewLayer.contents     = (__bridge id)(image.CGImage);
+        [self.viewLayer addAnimation:animation forKey:nil];
         
         _image = image;
     }

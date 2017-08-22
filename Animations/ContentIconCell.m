@@ -88,4 +88,9 @@
     } completion:nil];
 }
 
++ (CGFloat)cellHeightWithData:(id)data {
+    
+    return 50.f;
+}
+
 @end

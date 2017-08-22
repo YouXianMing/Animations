@@ -48,11 +48,7 @@
     self.showLoadingView.contentView = self.loadingAreaView;
     [self.showLoadingView show];
     
-    self.networking = [Networking networkingWithUrlString:@"http://baobab.wandoujia.com/api/v1/feed"
-                                         requestParameter:@{@"num" : @"5",
-                                                            @"vc"  : @"67"}
-                                              serviceInfo:@"豌豆荚图片列表请求"
-                                                 delegate:self];
+    self.networking = [Networking networkingWithNetworkConfig:feed() requestParameter:@{@"num" : @"5", @"vc" : @"67"} delegate:self];
     [self.networking startRequest];
 }
 

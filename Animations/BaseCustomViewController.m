@@ -202,6 +202,8 @@ NSString * const backgroundViewId  = @"backgroundViewId";
 
 - (void)viewDidDisappear:(BOOL)animated {
     
+    [super viewDidDisappear:animated];
+    
 #ifdef DEBUG
     
     [self debugWithString:@"[⛔️] Did left from" debugTag:kLeaveControllerType];

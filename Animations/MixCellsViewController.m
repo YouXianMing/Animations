@@ -60,13 +60,11 @@ typedef enum : NSUInteger {
     } completion:^(BOOL finished) {
         
         [self.adapters addObject:[self lineType:kLongType height:0.5f]];
-        [self.adapters addObject:[ContentIconCell dataAdapterWithData:@{@"icon" : @"signlist_new",   @"title" : @"Event Register"}  cellHeight:50.f]];
-        
+        [self.adapters addObject:[ContentIconCell fixedHeightTypeDataAdapterWithData:@{@"icon" : @"signlist_new",   @"title" : @"Event Register"}]];
         [self.adapters addObject:[self lineType:kShortType height:0.5f]];
-        [self.adapters addObject:[ContentIconCell dataAdapterWithData:@{@"icon" : @"collection_new", @"title" : @"Collected Event"} cellHeight:50.f]];
-        
+        [self.adapters addObject:[ContentIconCell fixedHeightTypeDataAdapterWithData:@{@"icon" : @"collection_new", @"title" : @"Collected Event"}]];
         [self.adapters addObject:[self lineType:kShortType height:0.5f]];
-        [self.adapters addObject:[ContentIconCell dataAdapterWithData:@{@"icon" : @"drawer_setting", @"title" : @"Settings"}        cellHeight:50.f]];
+        [self.adapters addObject:[ContentIconCell fixedHeightTypeDataAdapterWithData:@{@"icon" : @"drawer_setting", @"title" : @"Settings"}]];
         [self.adapters addObject:[self lineType:kLongType height:0.5f]];
         
         NSMutableArray *indexPaths = [NSMutableArray array];

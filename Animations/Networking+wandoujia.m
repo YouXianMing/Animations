@@ -10,24 +10,27 @@
 #import "WanDouJiaParameterSerializer.h"
 #import "WanDouJiaModelSerializer.h"
 
+@implementation NetworkConfig
+
+@end
+
 @implementation Networking (wandoujia)
 
-+ (instancetype)networkingWithUrlString:(NSString *)urlString
-                       requestParameter:(id)requestParameter
-                            serviceInfo:(NSString *)serviceInfo
-                               delegate:(id <NetworkingDelegate>)delegate  {
++ (instancetype)networkingWithNetworkConfig:(NetworkConfig *)config requestParameter:(id)requestParameter delegate:(id <NetworkingDelegate>)delegate {
     
-    Networking *networking = [Networking networkingWithUrlString:urlString
+    Networking *networking = [Networking networkingWithUrlString:config.urlString
                                                 requestParameter:requestParameter
-                                                          method:kYXNetworkingGET
+                                                          method:config.method
                                       requestParameterSerializer:[WanDouJiaParameterSerializer new]
                                           responseDataSerializer:[WanDouJiaModelSerializer new]
-                                                             tag:0
+                                       constructingBodyWithBlock:nil
+                                                        progress:nil
+                                                             tag:config.tag
                                                         delegate:delegate
                                                requestSerializer:[AFHTTPRequestSerializer serializer]
                                               ResponseSerializer:[AFJSONResponseSerializer serializer]];
     
-    networking.serviceInfo    = serviceInfo;
+    networking.serviceInfo    = config.functionName;
     networking.networkingInfo = [NetworkingInfo new];
     
     return networking;

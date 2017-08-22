@@ -20,7 +20,7 @@
 - (instancetype)init {
     
     if (self = [super init]) {
-     
+        
         // AFNetworking 3.x 相关初始化
         self.session = [AFHTTPSessionManager manager];
         
@@ -47,7 +47,7 @@
 }
 
 - (void)startRequest {
-
+    
     NSParameterAssert(self.urlString);
     NSParameterAssert(self.requestSerializer);
     NSParameterAssert(self.responseSerializer);
@@ -96,7 +96,7 @@
         
         self.dataTask = [self.session GET:self.urlString
                                parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
-                                 progress:nil
+                                 progress:weakSelf.uploadProgressBlock
                                   success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                       
                                       weakSelf.isRunning              = NO;
@@ -135,7 +135,47 @@
         
         self.dataTask = [self.session POST:self.urlString
                                 parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
-                                  progress:nil
+                                  progress:weakSelf.uploadProgressBlock
+                                   success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                       
+                                       weakSelf.isRunning              = NO;
+                                       weakSelf.originalResponseData   = responseObject;
+                                       weakSelf.serializerResponseData = [weakSelf.responseDataSerializer serializeResponseData:responseObject];
+                                       
+                                       if (weakSelf.responseDataManager) {
+                                           
+                                           [weakSelf.responseDataManager requestSuccess:YES networking:weakSelf];
+                                       }
+                                       
+                                       if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(networkingRequestSucess:tag:data:)]) {
+                                           
+                                           [weakSelf.delegate networkingRequestSucess:self tag:self.tag data:weakSelf.serializerResponseData];
+                                       }
+                                       
+                                   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                       
+                                       weakSelf.isRunning = NO;
+                                       
+                                       if (weakSelf.responseDataManager) {
+                                           
+                                           [weakSelf.responseDataManager requestSuccess:NO networking:weakSelf];
+                                       }
+                                       
+                                       if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(networkingRequestFailed:tag:error:)]) {
+                                           
+                                           [weakSelf.delegate networkingRequestFailed:self tag:self.tag error:error];
+                                       }
+                                   }];
+        
+    } /* UPLOAD */ else if (self.method == kYXNetworkingUPLOAD) {
+        
+        self.isRunning              = YES;
+        __weak Networking *weakSelf = self;
+        
+        self.dataTask = [self.session POST:self.urlString
+                                parameters:[self.requestParameterSerializer serializeRequestParameter:self.requestParameter]
+                 constructingBodyWithBlock:weakSelf.constructingBodyBlock
+                                  progress:weakSelf.uploadProgressBlock
                                    success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                        
                                        weakSelf.isRunning              = NO;
@@ -170,7 +210,7 @@
 }
 
 - (void)cancelRequest {
- 
+    
     [self.dataTask cancel];
 }
 
@@ -179,6 +219,8 @@
                                  method:(EYXNetworkingMethod)method
              requestParameterSerializer:(RequestParameterSerializer *)requestParameterSerializer
                  responseDataSerializer:(ResponseDataSerializer *)responseDataSerializer
+              constructingBodyWithBlock:(ConstructingBodyBlock)constructingBodyBlock
+                               progress:(UploadProgressBlock)uploadProgressBlock
                                     tag:(NSInteger)tag
                                delegate:(id <NetworkingDelegate>)delegate
                       requestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer
@@ -190,11 +232,14 @@
     networking.tag              = tag;
     networking.requestParameter = requestParameter;
     networking.delegate         = delegate;
-
+    
     requestSerializer  ? networking.requestSerializer  = requestSerializer : 0;
     responseSerializer ? networking.responseSerializer = responseSerializer : 0;
     requestParameterSerializer ? networking.requestParameterSerializer = requestParameterSerializer : 0;
     responseDataSerializer     ? networking.responseDataSerializer     = responseDataSerializer     : 0;
+    
+    constructingBodyBlock ? networking.constructingBodyBlock = constructingBodyBlock : 0;
+    uploadProgressBlock   ? networking.uploadProgressBlock   = uploadProgressBlock   : 0;
     
     return networking;
 }

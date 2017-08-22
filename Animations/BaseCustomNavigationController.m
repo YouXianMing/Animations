@@ -61,6 +61,8 @@ while (0);                                                          \
 
 - (void)viewDidDisappear:(BOOL)animated {
     
+    [super viewDidDisappear:animated];
+    
 #ifdef DEBUG
     
     [self debugWithString:@"[⛔️] Did left from" debugTag:kLeaveControllerType];
