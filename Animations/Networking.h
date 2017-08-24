@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
+#import "UIKit+AFNetworking.h"
 #import "RequestParameterSerializer.h"
 #import "ResponseDataSerializer.h"
 #import "ResponseDataManager.h"
@@ -178,6 +179,15 @@ typedef enum : NSUInteger {
  *  返回数据的管理
  */
 @property (nonatomic, strong) ResponseDataManager *responseDataManager;
+
+#pragma mark - 菊花
+
+/**
+ *  是否显示旋转的菊花
+ *
+ *  @param show 是否显示旋转的菊花
+ */
++ (void)showNetworkActivityIndicator:(BOOL)show;
 
 #pragma mark - 便利构造器
 

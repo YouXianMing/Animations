@@ -317,6 +317,17 @@
 		C501F2511F0CC4000051B4C6 /* RegexManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2501F0CC4000051B4C6 /* RegexManager.m */; };
 		C503B3671E1B422600967A61 /* BaseMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C503B3661E1B422600967A61 /* BaseMessageView.m */; };
 		C503B36A1E1B468F00967A61 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C503B3691E1B468F00967A61 /* MessageView.m */; };
+		C50E75731F4E6CB200EB9819 /* DrawRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E75721F4E6CB200EB9819 /* DrawRectViewController.m */; };
+		C50E75801F4E6D6800EB9819 /* CGContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E75771F4E6D6800EB9819 /* CGContextManager.m */; };
+		C50E75811F4E6D6800EB9819 /* UIView+DrawRect.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E75791F4E6D6800EB9819 /* UIView+DrawRect.m */; };
+		C50E75821F4E6D6800EB9819 /* DrawingAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E757B1F4E6D6800EB9819 /* DrawingAttribute.m */; };
+		C50E75831F4E6D6800EB9819 /* CGPointExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E757D1F4E6D6800EB9819 /* CGPointExtension.m */; };
+		C50E75841F4E6D6900EB9819 /* UIBezierPath+Interpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E757F1F4E6D6800EB9819 /* UIBezierPath+Interpolation.m */; };
+		C50E75871F4E6DF200EB9819 /* StudyInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E75861F4E6DF200EB9819 /* StudyInfoCell.m */; };
+		C50E758A1F4E6E7F00EB9819 /* StudyInfoDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E75891F4E6E7F00EB9819 /* StudyInfoDrawView.m */; };
+		C50E758D1F4E6FB900EB9819 /* StudyInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E758C1F4E6FB900EB9819 /* StudyInfoModel.m */; };
+		C50E75921F4EA05500EB9819 /* InterpolationTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E75911F4EA05500EB9819 /* InterpolationTypeCell.m */; };
+		C50E75951F4EA09200EB9819 /* InterpolationTypeDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E75941F4EA09200EB9819 /* InterpolationTypeDrawView.m */; };
 		C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */; };
 		C50F24391D32055200C3E02A /* CutOutClearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F24381D32055200C3E02A /* CutOutClearView.m */; };
 		C50F243B1D321A6A00C3E02A /* MaskShapeViewController.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C50F243A1D321A6A00C3E02A /* MaskShapeViewController.jpg */; };
@@ -1095,6 +1106,28 @@
 		C503B3661E1B422600967A61 /* BaseMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMessageView.m; sourceTree = "<group>"; };
 		C503B3681E1B468F00967A61 /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
 		C503B3691E1B468F00967A61 /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
+		C50E75711F4E6CB200EB9819 /* DrawRectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawRectViewController.h; sourceTree = "<group>"; };
+		C50E75721F4E6CB200EB9819 /* DrawRectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawRectViewController.m; sourceTree = "<group>"; };
+		C50E75761F4E6D6800EB9819 /* CGContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextManager.h; sourceTree = "<group>"; };
+		C50E75771F4E6D6800EB9819 /* CGContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGContextManager.m; sourceTree = "<group>"; };
+		C50E75781F4E6D6800EB9819 /* UIView+DrawRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DrawRect.h"; sourceTree = "<group>"; };
+		C50E75791F4E6D6800EB9819 /* UIView+DrawRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DrawRect.m"; sourceTree = "<group>"; };
+		C50E757A1F4E6D6800EB9819 /* DrawingAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingAttribute.h; sourceTree = "<group>"; };
+		C50E757B1F4E6D6800EB9819 /* DrawingAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingAttribute.m; sourceTree = "<group>"; };
+		C50E757C1F4E6D6800EB9819 /* CGPointExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointExtension.h; sourceTree = "<group>"; };
+		C50E757D1F4E6D6800EB9819 /* CGPointExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPointExtension.m; sourceTree = "<group>"; };
+		C50E757E1F4E6D6800EB9819 /* UIBezierPath+Interpolation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Interpolation.h"; sourceTree = "<group>"; };
+		C50E757F1F4E6D6800EB9819 /* UIBezierPath+Interpolation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Interpolation.m"; sourceTree = "<group>"; };
+		C50E75851F4E6DF200EB9819 /* StudyInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyInfoCell.h; sourceTree = "<group>"; };
+		C50E75861F4E6DF200EB9819 /* StudyInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyInfoCell.m; sourceTree = "<group>"; };
+		C50E75881F4E6E7F00EB9819 /* StudyInfoDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyInfoDrawView.h; sourceTree = "<group>"; };
+		C50E75891F4E6E7F00EB9819 /* StudyInfoDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyInfoDrawView.m; sourceTree = "<group>"; };
+		C50E758B1F4E6FB900EB9819 /* StudyInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyInfoModel.h; sourceTree = "<group>"; };
+		C50E758C1F4E6FB900EB9819 /* StudyInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyInfoModel.m; sourceTree = "<group>"; };
+		C50E75901F4EA05500EB9819 /* InterpolationTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpolationTypeCell.h; sourceTree = "<group>"; };
+		C50E75911F4EA05500EB9819 /* InterpolationTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpolationTypeCell.m; sourceTree = "<group>"; };
+		C50E75931F4EA09200EB9819 /* InterpolationTypeDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpolationTypeDrawView.h; sourceTree = "<group>"; };
+		C50E75941F4EA09200EB9819 /* InterpolationTypeDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpolationTypeDrawView.m; sourceTree = "<group>"; };
 		C50F24101D31CC3000C3E02A /* MaskShapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskShapeViewController.h; sourceTree = "<group>"; };
 		C50F24111D31CC3000C3E02A /* MaskShapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskShapeViewController.m; sourceTree = "<group>"; };
 		C50F24371D32055200C3E02A /* CutOutClearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutClearView.h; sourceTree = "<group>"; };
@@ -1547,6 +1580,7 @@
 			isa = PBXGroup;
 			children = (
 				C5792EDA1F4743A1000B0D1B /* Networking */,
+				C50E75751F4E6D5D00EB9819 /* CGContextManager */,
 				C54CB91A1F31B67600DFFE15 /* NSArray+IndexPath */,
 				105189091D0A65D500F606FB /* NSObject+Category */,
 				C501F24E1F0CC3F50051B4C6 /* RegexManager */,
@@ -2181,6 +2215,7 @@
 				C501F2211F0C8BBB0051B4C6 /* CountDownButtonController */,
 				C5EFF2551F14C39600BD5AF0 /* CustomCollectionViewController */,
 				C5E7760E1F25811200C304A1 /* TreeStructureTableViewController */,
+				C50E75741F4E6CCD00EB9819 /* DrawRectViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -3213,6 +3248,58 @@
 			name = BaseMessageView;
 			sourceTree = "<group>";
 		};
+		C50E75741F4E6CCD00EB9819 /* DrawRectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C50E75711F4E6CB200EB9819 /* DrawRectViewController.h */,
+				C50E75721F4E6CB200EB9819 /* DrawRectViewController.m */,
+				C50E758E1F4E9FB200EB9819 /* StudyInfoCell */,
+				C50E758F1F4EA03E00EB9819 /* InterpolationTypeCell */,
+			);
+			name = DrawRectViewController;
+			sourceTree = "<group>";
+		};
+		C50E75751F4E6D5D00EB9819 /* CGContextManager */ = {
+			isa = PBXGroup;
+			children = (
+				C50E75761F4E6D6800EB9819 /* CGContextManager.h */,
+				C50E75771F4E6D6800EB9819 /* CGContextManager.m */,
+				C50E75781F4E6D6800EB9819 /* UIView+DrawRect.h */,
+				C50E75791F4E6D6800EB9819 /* UIView+DrawRect.m */,
+				C50E757A1F4E6D6800EB9819 /* DrawingAttribute.h */,
+				C50E757B1F4E6D6800EB9819 /* DrawingAttribute.m */,
+				C50E757C1F4E6D6800EB9819 /* CGPointExtension.h */,
+				C50E757D1F4E6D6800EB9819 /* CGPointExtension.m */,
+				C50E757E1F4E6D6800EB9819 /* UIBezierPath+Interpolation.h */,
+				C50E757F1F4E6D6800EB9819 /* UIBezierPath+Interpolation.m */,
+			);
+			name = CGContextManager;
+			sourceTree = "<group>";
+		};
+		C50E758E1F4E9FB200EB9819 /* StudyInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				C50E75851F4E6DF200EB9819 /* StudyInfoCell.h */,
+				C50E75861F4E6DF200EB9819 /* StudyInfoCell.m */,
+				C50E75881F4E6E7F00EB9819 /* StudyInfoDrawView.h */,
+				C50E75891F4E6E7F00EB9819 /* StudyInfoDrawView.m */,
+				C50E758B1F4E6FB900EB9819 /* StudyInfoModel.h */,
+				C50E758C1F4E6FB900EB9819 /* StudyInfoModel.m */,
+			);
+			name = StudyInfoCell;
+			sourceTree = "<group>";
+		};
+		C50E758F1F4EA03E00EB9819 /* InterpolationTypeCell */ = {
+			isa = PBXGroup;
+			children = (
+				C50E75901F4EA05500EB9819 /* InterpolationTypeCell.h */,
+				C50E75911F4EA05500EB9819 /* InterpolationTypeCell.m */,
+				C50E75931F4EA09200EB9819 /* InterpolationTypeDrawView.h */,
+				C50E75941F4EA09200EB9819 /* InterpolationTypeDrawView.m */,
+			);
+			name = InterpolationTypeCell;
+			sourceTree = "<group>";
+		};
 		C50F24131D31CC4E00C3E02A /* MaskShapeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -3781,6 +3868,7 @@
 				1011BAF51CD495A800F29FB9 /* FastCoder.m in Sources */,
 				C5EE65B51E1B3A1100DDF591 /* IndexRange.m in Sources */,
 				1068FD5A1CF847BC00BE431C /* PresentAnimator.m in Sources */,
+				C50E75821F4E6D6800EB9819 /* DrawingAttribute.m in Sources */,
 				C516777C1D3620A00032AC09 /* UIView+ScreensShot.m in Sources */,
 				10A848251C795DE400F9ED67 /* GifPictureController.m in Sources */,
 				1096061C1C93B46800CCB3AD /* ResponseDataType.m in Sources */,
@@ -3863,6 +3951,7 @@
 				102296BB1C38D3D6001AF5BB /* WaterfallCell.m in Sources */,
 				10381FBA1BF9B55B00E5E476 /* POPDecayAnimation.mm in Sources */,
 				1048F6EF1C28D56B0052F1DD /* MDMatrix.m in Sources */,
+				C50E75731F4E6CB200EB9819 /* DrawRectViewController.m in Sources */,
 				10381FB61BF9B55B00E5E476 /* POPAnimator.mm in Sources */,
 				104F0D191BFB28D700C46E6A /* TranformFadeView.m in Sources */,
 				105702221CF6F008003B10C6 /* POPPressButton.m in Sources */,
@@ -3934,6 +4023,7 @@
 				C57526CC1D5032690064F6CD /* DrawingStyle.m in Sources */,
 				C58B1AB91F4C12AA00B681E1 /* AFAutoPurgingImageCache.m in Sources */,
 				104CD3091CDAD4B700C836E6 /* GridManager.m in Sources */,
+				C50E75841F4E6D6900EB9819 /* UIBezierPath+Interpolation.m in Sources */,
 				10E2D50E1CD5DE0400666EEB /* FontInfoModel.m in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
 				C501F21B1F0C7DE90051B4C6 /* ForegroundColorAttributeConfig.m in Sources */,
@@ -3941,6 +4031,7 @@
 				1011BAA61CD48A1C00F29FB9 /* WanDouJiaDataSerializer.m in Sources */,
 				10E2D4F01CD5962000666EEB /* SDWebImagePrefetcher.m in Sources */,
 				C57526CB1D5032690064F6CD /* DrawRectObject.m in Sources */,
+				C50E75831F4E6D6800EB9819 /* CGPointExtension.m in Sources */,
 				104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */,
 				104326611C4B16310033CEC0 /* ColorProgressView.m in Sources */,
 				104FCCA81D23573D00308B73 /* TapDrawObject.m in Sources */,
@@ -3978,6 +4069,7 @@
 				10E2D4F21CD5962000666EEB /* UIImage+GIF.m in Sources */,
 				1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */,
 				1011BADC1CD48C8D00F29FB9 /* NodeModelCell.m in Sources */,
+				C50E75871F4E6DF200EB9819 /* StudyInfoCell.m in Sources */,
 				1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */,
 				1047E23D1CC5AF8400E13D1C /* LazyFadeInLayer.m in Sources */,
 				108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */,
@@ -3985,6 +4077,7 @@
 				102B1F2E1C60E66F00A8FD40 /* EntitiesModel.m in Sources */,
 				102B1F2C1C60E66F00A8FD40 /* DataModel.m in Sources */,
 				10E2D4F71CD5962000666EEB /* UIView+WebCacheOperation.m in Sources */,
+				C50E758A1F4E6E7F00EB9819 /* StudyInfoDrawView.m in Sources */,
 				104FCCA41D23573D00308B73 /* TapPathDrawViewController.m in Sources */,
 				C5EFF2731F14C46700BD5AF0 /* MASLayoutConstraint.m in Sources */,
 				105702121CF6CE16003B10C6 /* POPScaleControl.m in Sources */,
@@ -4034,6 +4127,7 @@
 				1011BA9F1CD4898D00F29FB9 /* DailyListModel.m in Sources */,
 				C545535D1E1CD76E00A5BA58 /* iCarouselAdapter.m in Sources */,
 				1011BAFF1CD495F200F29FB9 /* AbsEncryptingMode.m in Sources */,
+				C50E75951F4EA09200EB9819 /* InterpolationTypeDrawView.m in Sources */,
 				1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */,
 				102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */,
 				C56812341D757621006E6C49 /* IrregularGridCellDataAdapter.m in Sources */,
@@ -4068,6 +4162,8 @@
 				C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */,
 				C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */,
 				102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */,
+				C50E75921F4EA05500EB9819 /* InterpolationTypeCell.m in Sources */,
+				C50E758D1F4E6FB900EB9819 /* StudyInfoModel.m in Sources */,
 				1057021B1CF6D9D9003B10C6 /* BaseControlViewController.m in Sources */,
 				1011BADA1CD48C8D00F29FB9 /* CreateModel.m in Sources */,
 				1096061F1C93B46800CCB3AD /* AbsNetworkingIndicator.m in Sources */,
@@ -4101,6 +4197,7 @@
 				10B0DDFC1CBA84400089DF1E /* AttributedStringInitConfig.m in Sources */,
 				10B6F3D61C954749007E8254 /* ScrollTitleView.m in Sources */,
 				102B1F2D1C60E66F00A8FD40 /* DescriptionModel.m in Sources */,
+				C50E75801F4E6D6800EB9819 /* CGContextManager.m in Sources */,
 				B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */,
 				C5EFF2741F14C46700BD5AF0 /* MASViewAttribute.m in Sources */,
 				1047E2341CC5AF5400E13D1C /* LazyFadeInViewController.m in Sources */,
@@ -4109,6 +4206,7 @@
 				1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */,
 				C516F83F1ECA94B000A418C8 /* ControllerBaseViewConfig.m in Sources */,
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
+				C50E75811F4E6D6800EB9819 /* UIView+DrawRect.m in Sources */,
 				107CF3991C2FFD51002DF93C /* LiveImageView.m in Sources */,
 				102B84E01C3B95F0001699A9 /* File.m in Sources */,
 				1011BAE41CD48C8D00F29FB9 /* PropertyInfomation.m in Sources */,

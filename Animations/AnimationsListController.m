@@ -82,6 +82,7 @@
 #import "CountDownButtonController.h"
 #import "CustomCollectionViewController.h"
 #import "TreeStructureTableViewController.h"
+#import "DrawRectViewController.h"
 
 @interface AnimationsListController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate>
 
@@ -236,7 +237,7 @@
                        [Item itemWithName:@"粒子动画-雪花" object:[EmitterSnowController class]],
                        [Item itemWithName:@"刮奖效果" object:[ScratchImageViewController class]],
                        [Item itemWithName:@"图片切换效果" object:[LiveImageViewController class]],
-                       [Item itemWithName:@"SDWebImage加载图片" object:[SDWebImageController class]],
+                       // [Item itemWithName:@"SDWebImage加载图片" object:[SDWebImageController class]],
                        [Item itemWithName:@"抽象的AlertView" object:[AlertViewController class]],
                        [Item itemWithName:@"瀑布流效果" object:[WaterfallLayoutController class]],
                        [Item itemWithName:@"UILabel混色显示" object:[MixedColorProgressViewController class]],
@@ -276,7 +277,8 @@
                        [Item itemWithName:@"Load CSS" object:[LoadCSSViewController class]],
                        [Item itemWithName:@"倒计时按钮" object:[CountDownButtonController class]],
                        [Item itemWithName:@"定制的CollectionView" object:[CustomCollectionViewController class]],
-                       [Item itemWithName:@"树形结构cell" object:[TreeStructureTableViewController class]]];
+                       [Item itemWithName:@"树形结构cell" object:[TreeStructureTableViewController class]],
+                       [Item itemWithName:@"DrawRect" object:[DrawRectViewController class]]];
     
     self.items = [NSMutableArray array];
     
@@ -332,7 +334,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear:animated];
-    //    self.enableInteractivePopGestureRecognizer = YES;
+    // self.enableInteractivePopGestureRecognizer = YES;
 }
 
 @end

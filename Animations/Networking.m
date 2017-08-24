@@ -214,6 +214,11 @@
     [self.dataTask cancel];
 }
 
++ (void)showNetworkActivityIndicator:(BOOL)show {
+    
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:show];
+}
+
 + (instancetype)networkingWithUrlString:(NSString *)urlString
                        requestParameter:(id)requestParameter
                                  method:(EYXNetworkingMethod)method
