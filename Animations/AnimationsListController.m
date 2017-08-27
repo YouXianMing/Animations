@@ -83,6 +83,7 @@
 #import "CustomCollectionViewController.h"
 #import "TreeStructureTableViewController.h"
 #import "DrawRectViewController.h"
+#import "TwoLevelLinkageViewController.h"
 
 @interface AnimationsListController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate>
 
@@ -278,7 +279,8 @@
                        [Item itemWithName:@"倒计时按钮" object:[CountDownButtonController class]],
                        [Item itemWithName:@"定制的CollectionView" object:[CustomCollectionViewController class]],
                        [Item itemWithName:@"树形结构cell" object:[TreeStructureTableViewController class]],
-                       [Item itemWithName:@"DrawRect" object:[DrawRectViewController class]]];
+                       [Item itemWithName:@"DrawRect" object:[DrawRectViewController class]],
+                       [Item itemWithName:@"级联菜单" object:[TwoLevelLinkageViewController class]]];
     
     self.items = [NSMutableArray array];
     

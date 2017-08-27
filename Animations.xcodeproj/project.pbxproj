@@ -343,6 +343,20 @@
 		C516F83F1ECA94B000A418C8 /* ControllerBaseViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C516F83D1ECA94B000A418C8 /* ControllerBaseViewConfig.m */; };
 		C51733221D45AFB8005D57AE /* TouchEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51733211D45AFB8005D57AE /* TouchEventView.m */; };
 		C51793541F284DFD0061B0F8 /* NSObject+WeakList.m in Sources */ = {isa = PBXBuildFile; fileRef = C51793531F284DFD0061B0F8 /* NSObject+WeakList.m */; };
+		C51B11921F52A0DD00EBF6A0 /* TwoLevelLinkageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11911F52A0DD00EBF6A0 /* TwoLevelLinkageViewController.m */; };
+		C51B119D1F52A16900EBF6A0 /* TwoLevelLinkageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11961F52A16900EBF6A0 /* TwoLevelLinkageView.m */; };
+		C51B119E1F52A16900EBF6A0 /* LinkageOneLevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11981F52A16900EBF6A0 /* LinkageOneLevelModel.m */; };
+		C51B119F1F52A16900EBF6A0 /* LinkageTwoLevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B119A1F52A16900EBF6A0 /* LinkageTwoLevelModel.m */; };
+		C51B11A01F52A16900EBF6A0 /* CustomLevelLinkageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B119C1F52A16900EBF6A0 /* CustomLevelLinkageCell.m */; };
+		C51B11A31F52A19200EBF6A0 /* CellHeaderFooterDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11A21F52A19200EBF6A0 /* CellHeaderFooterDataAdapter.m */; };
+		C51B11AA1F52A2BB00EBF6A0 /* LeftSideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11A51F52A2BB00EBF6A0 /* LeftSideCell.m */; };
+		C51B11AB1F52A2BB00EBF6A0 /* RightSideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11A71F52A2BB00EBF6A0 /* RightSideCell.m */; };
+		C51B11AC1F52A2BB00EBF6A0 /* RightSideHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11A91F52A2BB00EBF6A0 /* RightSideHeaderView.m */; };
+		C51B11B61F52A2D600EBF6A0 /* ItemManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11AF1F52A2D600EBF6A0 /* ItemManagerModel.m */; };
+		C51B11B71F52A2D600EBF6A0 /* ShopItemDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11B11F52A2D600EBF6A0 /* ShopItemDataModel.m */; };
+		C51B11B81F52A2D600EBF6A0 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11B31F52A2D600EBF6A0 /* CategoryModel.m */; };
+		C51B11B91F52A2D600EBF6A0 /* ShopItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11B51F52A2D600EBF6A0 /* ShopItemModel.m */; };
+		C51B11BC1F52A2F400EBF6A0 /* liwushuo.json in Resources */ = {isa = PBXBuildFile; fileRef = C51B11BB1F52A2F400EBF6A0 /* liwushuo.json */; };
 		C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A3081D520BD80041C962 /* FBGlowLabel.m */; };
 		C52C64431E246AAD00624A3D /* AlertViewCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C52C64421E246AAD00624A3D /* AlertViewCollectionCell.m */; };
 		C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C532B20F1E13A664004C7499 /* PlaceholderImageView.m */; };
@@ -1157,6 +1171,33 @@
 		C51733211D45AFB8005D57AE /* TouchEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchEventView.m; sourceTree = "<group>"; };
 		C51793521F284DFD0061B0F8 /* NSObject+WeakList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WeakList.h"; sourceTree = "<group>"; };
 		C51793531F284DFD0061B0F8 /* NSObject+WeakList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WeakList.m"; sourceTree = "<group>"; };
+		C51B11901F52A0DD00EBF6A0 /* TwoLevelLinkageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoLevelLinkageViewController.h; sourceTree = "<group>"; };
+		C51B11911F52A0DD00EBF6A0 /* TwoLevelLinkageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoLevelLinkageViewController.m; sourceTree = "<group>"; };
+		C51B11951F52A16900EBF6A0 /* TwoLevelLinkageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoLevelLinkageView.h; sourceTree = "<group>"; };
+		C51B11961F52A16900EBF6A0 /* TwoLevelLinkageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoLevelLinkageView.m; sourceTree = "<group>"; };
+		C51B11971F52A16900EBF6A0 /* LinkageOneLevelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageOneLevelModel.h; sourceTree = "<group>"; };
+		C51B11981F52A16900EBF6A0 /* LinkageOneLevelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageOneLevelModel.m; sourceTree = "<group>"; };
+		C51B11991F52A16900EBF6A0 /* LinkageTwoLevelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageTwoLevelModel.h; sourceTree = "<group>"; };
+		C51B119A1F52A16900EBF6A0 /* LinkageTwoLevelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageTwoLevelModel.m; sourceTree = "<group>"; };
+		C51B119B1F52A16900EBF6A0 /* CustomLevelLinkageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLevelLinkageCell.h; sourceTree = "<group>"; };
+		C51B119C1F52A16900EBF6A0 /* CustomLevelLinkageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLevelLinkageCell.m; sourceTree = "<group>"; };
+		C51B11A11F52A19200EBF6A0 /* CellHeaderFooterDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellHeaderFooterDataAdapter.h; sourceTree = "<group>"; };
+		C51B11A21F52A19200EBF6A0 /* CellHeaderFooterDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellHeaderFooterDataAdapter.m; sourceTree = "<group>"; };
+		C51B11A41F52A2BB00EBF6A0 /* LeftSideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSideCell.h; sourceTree = "<group>"; };
+		C51B11A51F52A2BB00EBF6A0 /* LeftSideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideCell.m; sourceTree = "<group>"; };
+		C51B11A61F52A2BB00EBF6A0 /* RightSideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightSideCell.h; sourceTree = "<group>"; };
+		C51B11A71F52A2BB00EBF6A0 /* RightSideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightSideCell.m; sourceTree = "<group>"; };
+		C51B11A81F52A2BB00EBF6A0 /* RightSideHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightSideHeaderView.h; sourceTree = "<group>"; };
+		C51B11A91F52A2BB00EBF6A0 /* RightSideHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightSideHeaderView.m; sourceTree = "<group>"; };
+		C51B11AE1F52A2D600EBF6A0 /* ItemManagerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemManagerModel.h; sourceTree = "<group>"; };
+		C51B11AF1F52A2D600EBF6A0 /* ItemManagerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemManagerModel.m; sourceTree = "<group>"; };
+		C51B11B01F52A2D600EBF6A0 /* ShopItemDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopItemDataModel.h; sourceTree = "<group>"; };
+		C51B11B11F52A2D600EBF6A0 /* ShopItemDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopItemDataModel.m; sourceTree = "<group>"; };
+		C51B11B21F52A2D600EBF6A0 /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		C51B11B31F52A2D600EBF6A0 /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		C51B11B41F52A2D600EBF6A0 /* ShopItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopItemModel.h; sourceTree = "<group>"; };
+		C51B11B51F52A2D600EBF6A0 /* ShopItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopItemModel.m; sourceTree = "<group>"; };
+		C51B11BB1F52A2F400EBF6A0 /* liwushuo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = liwushuo.json; sourceTree = "<group>"; };
 		C524A3071D520BD80041C962 /* FBGlowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBGlowLabel.h; sourceTree = "<group>"; };
 		C524A3081D520BD80041C962 /* FBGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGlowLabel.m; sourceTree = "<group>"; };
 		C52C64411E246AAD00624A3D /* AlertViewCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewCollectionCell.h; sourceTree = "<group>"; };
@@ -1889,6 +1930,8 @@
 			children = (
 				102B84ED1C3BCAD0001699A9 /* CellDataAdapter.h */,
 				102B84EE1C3BCAD0001699A9 /* CellDataAdapter.m */,
+				C51B11A11F52A19200EBF6A0 /* CellHeaderFooterDataAdapter.h */,
+				C51B11A21F52A19200EBF6A0 /* CellHeaderFooterDataAdapter.m */,
 			);
 			name = CellDataAdapter;
 			sourceTree = "<group>";
@@ -2216,6 +2259,7 @@
 				C5EFF2551F14C39600BD5AF0 /* CustomCollectionViewController */,
 				C5E7760E1F25811200C304A1 /* TreeStructureTableViewController */,
 				C50E75741F4E6CCD00EB9819 /* DrawRectViewController */,
+				C51B11931F52A0E200EBF6A0 /* TwoLevelLinkageViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2649,6 +2693,7 @@
 				1041AE4A1CEBFD9D005697B8 /* UIView+Category */,
 				106CF09A1C3765490006419B /* UIFont+Categories */,
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
+				C51B11941F52A14D00EBF6A0 /* TwoLevelLinkageView */,
 				C54553551E1CD76200A5BA58 /* iCarouselView */,
 				1020A3741D08F9C000056B0E /* BadgeValueView */,
 				C59608C61D3DF76E006BF6E0 /* TableGridView */,
@@ -3337,6 +3382,61 @@
 			name = TouchEventView;
 			sourceTree = "<group>";
 		};
+		C51B11931F52A0E200EBF6A0 /* TwoLevelLinkageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C51B11901F52A0DD00EBF6A0 /* TwoLevelLinkageViewController.h */,
+				C51B11911F52A0DD00EBF6A0 /* TwoLevelLinkageViewController.m */,
+				C51B11A41F52A2BB00EBF6A0 /* LeftSideCell.h */,
+				C51B11A51F52A2BB00EBF6A0 /* LeftSideCell.m */,
+				C51B11A61F52A2BB00EBF6A0 /* RightSideCell.h */,
+				C51B11A71F52A2BB00EBF6A0 /* RightSideCell.m */,
+				C51B11A81F52A2BB00EBF6A0 /* RightSideHeaderView.h */,
+				C51B11A91F52A2BB00EBF6A0 /* RightSideHeaderView.m */,
+				C51B11BA1F52A2E700EBF6A0 /* data */,
+				C51B11AD1F52A2C500EBF6A0 /* Models */,
+			);
+			name = TwoLevelLinkageViewController;
+			sourceTree = "<group>";
+		};
+		C51B11941F52A14D00EBF6A0 /* TwoLevelLinkageView */ = {
+			isa = PBXGroup;
+			children = (
+				C51B11951F52A16900EBF6A0 /* TwoLevelLinkageView.h */,
+				C51B11961F52A16900EBF6A0 /* TwoLevelLinkageView.m */,
+				C51B11971F52A16900EBF6A0 /* LinkageOneLevelModel.h */,
+				C51B11981F52A16900EBF6A0 /* LinkageOneLevelModel.m */,
+				C51B11991F52A16900EBF6A0 /* LinkageTwoLevelModel.h */,
+				C51B119A1F52A16900EBF6A0 /* LinkageTwoLevelModel.m */,
+				C51B119B1F52A16900EBF6A0 /* CustomLevelLinkageCell.h */,
+				C51B119C1F52A16900EBF6A0 /* CustomLevelLinkageCell.m */,
+			);
+			name = TwoLevelLinkageView;
+			sourceTree = "<group>";
+		};
+		C51B11AD1F52A2C500EBF6A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C51B11AE1F52A2D600EBF6A0 /* ItemManagerModel.h */,
+				C51B11AF1F52A2D600EBF6A0 /* ItemManagerModel.m */,
+				C51B11B01F52A2D600EBF6A0 /* ShopItemDataModel.h */,
+				C51B11B11F52A2D600EBF6A0 /* ShopItemDataModel.m */,
+				C51B11B21F52A2D600EBF6A0 /* CategoryModel.h */,
+				C51B11B31F52A2D600EBF6A0 /* CategoryModel.m */,
+				C51B11B41F52A2D600EBF6A0 /* ShopItemModel.h */,
+				C51B11B51F52A2D600EBF6A0 /* ShopItemModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C51B11BA1F52A2E700EBF6A0 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				C51B11BB1F52A2F400EBF6A0 /* liwushuo.json */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
 		C524A30B1D520BE30041C962 /* FBGlowLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -3817,7 +3917,8 @@
 				TargetAttributes = {
 					10381F4C1BF9B44A00E5E476 = {
 						CreatedOnToolsVersion = 7.1;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = HT95VAK372;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -3848,6 +3949,7 @@
 				10381F771BF9B4F800E5E476 /* HYQiHei-25JF.otf in Resources */,
 				C557362F1E837661001CDC9A /* news in Resources */,
 				1011BADF1CD48C8D00F29FB9 /* NodeModelStrings.plist in Resources */,
+				C51B11BC1F52A2F400EBF6A0 /* liwushuo.json in Resources */,
 				1011BAE21CD48C8D00F29FB9 /* NodeModelViewControllerBack_next@3x.png in Resources */,
 				1011BAE11CD48C8D00F29FB9 /* NodeModelViewControllerBack_black@3x.png in Resources */,
 				10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */,
@@ -3869,6 +3971,7 @@
 				C5EE65B51E1B3A1100DDF591 /* IndexRange.m in Sources */,
 				1068FD5A1CF847BC00BE431C /* PresentAnimator.m in Sources */,
 				C50E75821F4E6D6800EB9819 /* DrawingAttribute.m in Sources */,
+				C51B11A31F52A19200EBF6A0 /* CellHeaderFooterDataAdapter.m in Sources */,
 				C516777C1D3620A00032AC09 /* UIView+ScreensShot.m in Sources */,
 				10A848251C795DE400F9ED67 /* GifPictureController.m in Sources */,
 				1096061C1C93B46800CCB3AD /* ResponseDataType.m in Sources */,
@@ -3877,6 +3980,7 @@
 				B5D011941C0BE2410075BC2E /* RotateView.m in Sources */,
 				102B1F041C60E26B00A8FD40 /* TableViewLoadDataController.m in Sources */,
 				C545536C1E1CD7DD00A5BA58 /* LinearCarouseItemView.m in Sources */,
+				C51B119F1F52A16900EBF6A0 /* LinkageTwoLevelModel.m in Sources */,
 				102B84E11C3B95F0001699A9 /* FileManager.m in Sources */,
 				10E2D4E91CD5962000666EEB /* NSData+ImageContentType.m in Sources */,
 				C5EFF2471F14735A00BD5AF0 /* HorizontalCollectionItemView.m in Sources */,
@@ -3885,6 +3989,7 @@
 				102B85321C3CF226001699A9 /* UIImage+ImageEffects.m in Sources */,
 				104FCCA51D23573D00308B73 /* TapDrawPath.m in Sources */,
 				10931AE71C51147A004D120D /* AdditiveAnimationController.m in Sources */,
+				C51B11AC1F52A2BB00EBF6A0 /* RightSideHeaderView.m in Sources */,
 				108A99381C0FE01100B693F6 /* RotateAnimationView.m in Sources */,
 				C5EFF2711F14C46700BD5AF0 /* MASConstraint.m in Sources */,
 				B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */,
@@ -3942,6 +4047,7 @@
 				10E2D5051CD5D9E000666EEB /* FontInfomation.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
 				102A10451C9808FF00BF3F1B /* AbsRequestParameterSerializer.m in Sources */,
+				C51B119D1F52A16900EBF6A0 /* TwoLevelLinkageView.m in Sources */,
 				C59608CF1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m in Sources */,
 				C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */,
 				102B1F341C60E66F00A8FD40 /* TableViewLoadDataRootModel.m in Sources */,
@@ -3963,6 +4069,7 @@
 				C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */,
 				C554F8851DEEAA10007C394A /* TableViewSectionItem.m in Sources */,
 				C5EFF2751F14C46700BD5AF0 /* MASViewConstraint.m in Sources */,
+				C51B11921F52A0DD00EBF6A0 /* TwoLevelLinkageViewController.m in Sources */,
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
 				104326671C4B505E0033CEC0 /* ProgressColor+Colors.m in Sources */,
 				10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */,
@@ -4009,6 +4116,7 @@
 				C56812311D757621006E6C49 /* IrregularGridCollectionView.m in Sources */,
 				10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */,
 				105FFEAA1CBE8740006213B1 /* DrawMarqueeViewController.m in Sources */,
+				C51B11A01F52A16900EBF6A0 /* CustomLevelLinkageCell.m in Sources */,
 				10A34F661C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m in Sources */,
 				C50F24391D32055200C3E02A /* CutOutClearView.m in Sources */,
 				10B0DDFF1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m in Sources */,
@@ -4061,6 +4169,7 @@
 				C545535C1E1CD76E00A5BA58 /* iCarouselView.m in Sources */,
 				C58B1AB61F4C12AA00B681E1 /* AFURLRequestSerialization.m in Sources */,
 				C59062231DEC3908002562AE /* CAShapeLayer+CornerRadius.m in Sources */,
+				C51B119E1F52A16900EBF6A0 /* LinkageOneLevelModel.m in Sources */,
 				1020E2D31C73197B00FF233E /* CAGradientView.m in Sources */,
 				C56B3A6D1F2830A400133AC0 /* UIView+DebugFrame.m in Sources */,
 				106BCFCB1CDC6787007C3EEE /* CustomNodeStateView.m in Sources */,
@@ -4092,6 +4201,7 @@
 				10381FC01BF9B55B00E5E476 /* POPVector.mm in Sources */,
 				C501F21C1F0C7DE90051B4C6 /* ParagraphAttributeConfig.m in Sources */,
 				105AFB4B1CF18CEF003DD84A /* NSString+Range.m in Sources */,
+				C51B11AA1F52A2BB00EBF6A0 /* LeftSideCell.m in Sources */,
 				1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */,
 				C56812321D757621006E6C49 /* MaximumSpacingFlowLayout.m in Sources */,
 				1017F13A1C35715400E245F8 /* NSDictionary+JSONData.m in Sources */,
@@ -4137,6 +4247,7 @@
 				1017F1391C35715400E245F8 /* NSArray+JSONData.m in Sources */,
 				102A0FFA1C92727200BF3F1B /* NSData+Godzippa.m in Sources */,
 				1096061A1C93B46800CCB3AD /* RequestMethodType.m in Sources */,
+				C51B11B91F52A2D600EBF6A0 /* ShopItemModel.m in Sources */,
 				C58B1AB41F4C12AA00B681E1 /* AFNetworkReachabilityManager.m in Sources */,
 				102B84D91C3B9424001699A9 /* NSString+MD5.m in Sources */,
 				C58B1AB81F4C12AA00B681E1 /* AFURLSessionManager.m in Sources */,
@@ -4144,6 +4255,7 @@
 				102B1F301C60E66F00A8FD40 /* LinksModel.m in Sources */,
 				104F0D021BFAFB3300C46E6A /* DrawGradientColorView.m in Sources */,
 				C5792EEC1F474C44000B0D1B /* WanDouJiaParameterSerializer.m in Sources */,
+				C51B11AB1F52A2BB00EBF6A0 /* RightSideCell.m in Sources */,
 				C5EFF2701F14C46700BD5AF0 /* MASCompositeConstraint.m in Sources */,
 				106BCFD91CDC67CC007C3EEE /* LoopViewCell.m in Sources */,
 				1011BADD1CD48C8D00F29FB9 /* NodeModelRootNavigationController.m in Sources */,
@@ -4187,6 +4299,7 @@
 				C57526D01D50327F0064F6CD /* WaveView.m in Sources */,
 				C516F8391ECA949500A418C8 /* BaseCustomViewController.m in Sources */,
 				C557362D1E8375F0001CDC9A /* LoadCSSViewController.m in Sources */,
+				C51B11B71F52A2D600EBF6A0 /* ShopItemDataModel.m in Sources */,
 				C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */,
 				C5EFF27C1F14C54900BD5AF0 /* GridItemCollectionViewCell.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
@@ -4205,6 +4318,7 @@
 				1051890C1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m in Sources */,
 				1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */,
 				C516F83F1ECA94B000A418C8 /* ControllerBaseViewConfig.m in Sources */,
+				C51B11B61F52A2D600EBF6A0 /* ItemManagerModel.m in Sources */,
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
 				C50E75811F4E6D6800EB9819 /* UIView+DrawRect.m in Sources */,
 				107CF3991C2FFD51002DF93C /* LiveImageView.m in Sources */,
@@ -4236,6 +4350,7 @@
 				104FCCAD1D235A1000308B73 /* IconEdgeInsetsLabel.m in Sources */,
 				C55F55F91F0B9686008F0910 /* CustomTabBarViewController.m in Sources */,
 				1068FCCD1CF7D87A00BE431C /* PressScaleButton.m in Sources */,
+				C51B11B81F52A2D600EBF6A0 /* CategoryModel.m in Sources */,
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
 				10D4F6111C41538C00D056EB /* PressAnimationButton.m in Sources */,
 				C501F21F1F0C7DE90051B4C6 /* NSString+AttributedStringConfig.m in Sources */,
@@ -4404,7 +4519,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HT95VAK372;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -4424,7 +4539,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HT95VAK372;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -11,7 +11,7 @@
 @implementation CustomHeaderFooterView
 
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-
+    
     if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
         
         [self setupHeaderFooterView];
@@ -22,7 +22,7 @@
 }
 
 - (void)setHeaderFooterViewBackgroundColor:(UIColor *)color {
-
+    
     self.contentView.backgroundColor = color;
 }
 
@@ -31,21 +31,21 @@
 }
 
 - (void)buildSubview {
-
+    
 }
 
 - (void)loadContent {
-
+    
 }
 
 + (void)registerToTableView:(UITableView *)tableView reuseIdentifier:(NSString *)reuseIdentifier {
-
+    
     NSString *identifier = reuseIdentifier.length <= 0 ? NSStringFromClass([self class]) : reuseIdentifier;
     [tableView registerClass:[self class] forHeaderFooterViewReuseIdentifier:identifier];
 }
 
 + (void)registerToTableView:(UITableView *)tableView {
-
+    
     [tableView registerClass:[self class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([self class])];
 }
 

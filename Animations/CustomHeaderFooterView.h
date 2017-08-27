@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CellHeaderFooterDataAdapter.h"
 @class CustomHeaderFooterView;
 
 @protocol CustomHeaderFooterViewDelegate <NSObject>
@@ -31,6 +32,11 @@
  *  CustomHeaderFooterView's delegate.
  */
 @property (nonatomic, weak) id <CustomHeaderFooterViewDelegate> delegate;
+
+/**
+ *  CustomHeaderFooterView's dataAdapter.
+ */
+@property (nonatomic, weak) CellHeaderFooterDataAdapter *dataAdapter;
 
 /**
  *  CustomHeaderFooterView's data.
