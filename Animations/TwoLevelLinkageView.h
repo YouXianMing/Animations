@@ -29,6 +29,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame leftSideWidth:(CGFloat)leftSideWidth;
 
+- (void)leftTableViewCellMakeSelectedAtRow:(NSInteger)row;
 - (void)reloadData;
 - (void)registerCellsWithLeftSideTableView:(void (^)(UITableView *tableView))leftSideTableViewBlock registerCellsAndHeadersWithRightSideTableView:(void (^)(UITableView *tableView))rightSideTableViewBlock;
 

@@ -28,9 +28,6 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
-    NSData *data          = [NSData dataWithContentsOfFile:[FileManager bundleFileWithName:@"liwushuo.json"]];
-    self.itemManagerModel = [[ItemManagerModel alloc] initWithDictionary:[data toListProperty]];
     
     // Init view.
     TwoLevelLinkageView *view = [[TwoLevelLinkageView alloc] initWithFrame:self.contentView.bounds leftSideWidth:100.f];
@@ -57,38 +54,44 @@
     
     // Reload data.
     [view reloadData];
+    [view leftTableViewCellMakeSelectedAtRow:0];
 }
 
 - (NSArray <LinkageOneLevelModel *> *)models {
     
-    NSMutableArray *models = [NSMutableArray array];
+    // Get data.
+    NSData *data          = [NSData dataWithContentsOfFile:[FileManager bundleFileWithName:@"liwushuo.json"]];
+    self.itemManagerModel = [[ItemManagerModel alloc] initWithDictionary:[data toListProperty]];
+    [self.itemManagerModel.data.categories removeObjectAtIndex:0];
+    
+    // Transform data.
+    NSMutableArray <LinkageOneLevelModel *> *models = [NSMutableArray array];
     [self.itemManagerModel.data.categories enumerateObjectsUsingBlock:^(CategoryModel * categoryModel, NSUInteger idx, BOOL *stop) {
         
-        NSMutableArray *subModels = [NSMutableArray array];
+        NSMutableArray <LinkageTwoLevelModel *> *subModels = [NSMutableArray array];
         [categoryModel.subcategories enumerateObjectsUsingBlock:^(ShopItemModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
             
+            // Create LinkageTwoLevelModel.
             LinkageTwoLevelModel *twoLevelModel = [LinkageTwoLevelModel new];
             twoLevelModel.adapter               = [RightSideCell fixedHeightTypeDataAdapterWithData:model];
             [subModels addObject:twoLevelModel];
         }];
         
-        LinkageOneLevelModel *model = [LinkageOneLevelModel new];
-        idx == 1 ? model.selected = YES : 0;
-        
-        model.adapter = [LeftSideCell fixedHeightTypeDataAdapterWithData:categoryModel];
-        
         CellHeaderFooterDataAdapter *headerAdapter = [CellHeaderFooterDataAdapter new];
         headerAdapter.cellHeaderReuseIdentifier    = NSStringFromClass([RightSideHeaderView class]);
         headerAdapter.data                         = categoryModel;
         headerAdapter.headerHeight                 = 25.f;
-        model.headerAdapter                        = headerAdapter;
         
-        model.subModels = subModels;
-        
+        // Create LinkageOneLevelModel.
+        LinkageOneLevelModel *model = [LinkageOneLevelModel new];
+        model.adapter               = [LeftSideCell fixedHeightTypeDataAdapterWithData:categoryModel];
+        model.subModels             = subModels;
+        model.headerAdapter         = headerAdapter;
         [models addObject:model];
     }];
     
-    [models removeObjectAtIndex:0];
+    // 让第一个选中
+    models.firstObject.selected = YES;
 
     return models;
 }

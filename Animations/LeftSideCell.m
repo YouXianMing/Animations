@@ -15,8 +15,10 @@
 
 @interface LeftSideCell ()
 
+@property (nonatomic, strong) UIView *bgView;
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UIView *lineView;
+@property (nonatomic, strong) UIView *leftLineView;
+@property (nonatomic, strong) UIView *rightLineView;
 @property (nonatomic, strong) PlaceholderImageView *iconImageView;
 
 @end
@@ -25,17 +27,24 @@
 
 - (void)buildSubview {
     
-    self.iconImageView                  = [[PlaceholderImageView alloc] initWithFrame:CGRectMake(0, 25.f, 100.f, 100.f)];
+    self.iconImageView                  = [[PlaceholderImageView alloc] initWithFrame:CGRectMake(0.f, 0.f, 100.f, 100.f)];
     self.iconImageView.placeholderImage = [UIImage imageNamed:@"logo-bg"];
     [self addSubview:self.iconImageView];
     
-    self.lineView                 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 3.f, 15.f)];
-    self.lineView.centerY         = [LeftSideCell cellHeightWithData:nil] / 2.f;
-    self.lineView.backgroundColor = [UIColor redColor];
-    [self addSubview:self.lineView];
+    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    [self addSubview:self.bgView];
     
-    self.titleLabel      = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100.f, [LeftSideCell cellHeightWithData:nil])];
-    self.titleLabel.font = [UIFont AvenirLightWithFontSize:13.f];
+    self.leftLineView                 = [[UIView alloc] initWithFrame:CGRectMake(0, 35.f, 1.f, 30.f)];
+    self.leftLineView.backgroundColor = [UIColor redColor];
+    [self addSubview:self.leftLineView];
+    
+    self.rightLineView                 = [[UIView alloc] initWithFrame:CGRectMake(99.f, 35.f, 1.f, 30.f)];
+    self.rightLineView.backgroundColor = [UIColor redColor];
+    [self addSubview:self.rightLineView];
+    
+    self.titleLabel               = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100.f, [LeftSideCell cellHeightWithData:nil])];
+    self.titleLabel.font          = [UIFont AvenirLightWithFontSize:13.f];
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:self.titleLabel];
 }
 
@@ -57,8 +66,6 @@
 }
 
 - (void)updateToSelectedStateAnimated:(BOOL)animated {
-
-    [self updateWithNewCellHeight:130.f animated:animated];
     
     [UIView animateWithDuration:animated ? 0.35 : 0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         
@@ -69,8 +76,6 @@
 }
 
 - (void)updateToNormalStateAnimated:(BOOL)animated {
-
-    [self updateWithNewCellHeight:40.f animated:animated];
     
     [UIView animateWithDuration:animated ? 0.35 : 0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
 
@@ -83,23 +88,35 @@
     
     if (normal) {
         
-        self.lineView.alpha      = 0.f;
-        self.titleLabel.x        = 5.f;
-        self.titleLabel.alpha    = 0.35f;
+        self.leftLineView.alpha = 0.f;
+        self.leftLineView.frame = CGRectMake(0, 35.f, 1.f, 0.f);
+        
+        self.rightLineView.alpha = 0.f;
+        self.rightLineView.frame = CGRectMake(99.f, 65.f, 1.f, 0.f);
+        
+        self.titleLabel.alpha    = 1.f;
         self.iconImageView.alpha = 0.f;
+        
+        self.bgView.backgroundColor = [UIColor clearColor];
         
     } else {
         
-        self.lineView.alpha      = 1.f;
-        self.titleLabel.x        = 10.f;
-        self.titleLabel.alpha    = 1.f;
+        self.leftLineView.alpha = 1.f;
+        self.leftLineView.frame = CGRectMake(0, 35.f, 1.f, 30.f);
+        
+        self.rightLineView.alpha = 1.f;
+        self.rightLineView.frame = CGRectMake(99.f, 35.f, 1.f, 30.f);
+        
+        self.titleLabel.alpha    = 0.f;
         self.iconImageView.alpha = 1.f;
+        
+        self.bgView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.1f];
     }
 }
 
 + (CGFloat)cellHeightWithData:(id)data {
     
-    return 40.f;
+    return 100.f;
 }
 
 @end

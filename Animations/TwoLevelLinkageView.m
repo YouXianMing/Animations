@@ -307,8 +307,11 @@
     
     [_leftSideTableView reloadData];
     [_rightSideTableView reloadData];
+}
+
+- (void)leftTableViewCellMakeSelectedAtRow:(NSInteger)row {
     
-    CustomLevelLinkageCell *cell = [_leftSideTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    CustomLevelLinkageCell *cell = [_leftSideTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:0]];
     [cell updateToSelectedStateAnimated:NO];
 }
 
