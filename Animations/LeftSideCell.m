@@ -67,19 +67,19 @@
 
 - (void)updateToSelectedStateAnimated:(BOOL)animated {
     
-    [UIView animateWithDuration:animated ? 0.35 : 0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-        
-        [self stateNormal:NO];
-        
-    } completion:nil];
-
+    [self animationStateNormal:NO animated:animated];
 }
 
 - (void)updateToNormalStateAnimated:(BOOL)animated {
     
-    [UIView animateWithDuration:animated ? 0.35 : 0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+    [self animationStateNormal:YES animated:animated];
+}
 
-        [self stateNormal:YES];
+- (void)animationStateNormal:(BOOL)normal animated:(BOOL)animated {
+    
+    [UIView animateWithDuration:animated ? 0.35 : 0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        
+        [self stateNormal:normal];
         
     } completion:nil];
 }

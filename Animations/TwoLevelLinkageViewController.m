@@ -90,10 +90,22 @@
         [models addObject:model];
     }];
     
-    // 让第一个选中
+    // Let the first item selected.
     models.firstObject.selected = YES;
 
     return models;
+}
+
+#pragma mark - TwoLevelLinkageViewDelegate
+
+- (void)twoLevelLinkageView:(TwoLevelLinkageView *)linkageView selectedLeftSideTableViewItemRow:(NSInteger)row item:(id)data {
+ 
+    NSLog(@"%@", data);
+}
+
+- (void)twoLevelLinkageView:(TwoLevelLinkageView *)linkageView selectedRightSideTableViewItemIndexPath:(NSIndexPath *)indexPath item:(id)data {
+    
+    NSLog(@"%@", data);
 }
 
 @end
