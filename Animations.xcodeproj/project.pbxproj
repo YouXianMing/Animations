@@ -372,7 +372,6 @@
 		C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */; };
 		C5525D681E03DCAB00929C52 /* ControllerPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */; };
 		C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */; };
-		C554F8851DEEAA10007C394A /* TableViewSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C554F8841DEEAA10007C394A /* TableViewSectionItem.m */; };
 		C55661C81F32CDFC0092ACA4 /* MathematicalComputation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661C51F32CDFC0092ACA4 /* MathematicalComputation.m */; };
 		C55661C91F32CDFC0092ACA4 /* ComputationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661C71F32CDFC0092ACA4 /* ComputationStrategy.m */; };
 		C55661FF1F3312540092ACA4 /* InfiniteLoopCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661FE1F3312540092ACA4 /* InfiniteLoopCollectionView.m */; };
@@ -1228,8 +1227,6 @@
 		C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerPushAnimator.m; sourceTree = "<group>"; };
 		C5525D691E03DEFE00929C52 /* AnimationsListViewNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationsListViewNavigationController.h; sourceTree = "<group>"; };
 		C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationsListViewNavigationController.m; sourceTree = "<group>"; };
-		C554F8831DEEAA10007C394A /* TableViewSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSectionItem.h; sourceTree = "<group>"; };
-		C554F8841DEEAA10007C394A /* TableViewSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSectionItem.m; sourceTree = "<group>"; };
 		C55661C41F32CDFC0092ACA4 /* MathematicalComputation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathematicalComputation.h; sourceTree = "<group>"; };
 		C55661C51F32CDFC0092ACA4 /* MathematicalComputation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathematicalComputation.m; sourceTree = "<group>"; };
 		C55661C61F32CDFC0092ACA4 /* ComputationStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputationStrategy.h; sourceTree = "<group>"; };
@@ -1818,8 +1815,6 @@
 		102296C61C393089001AF5BB /* CustomHeaderFooterView */ = {
 			isa = PBXGroup;
 			children = (
-				C554F8831DEEAA10007C394A /* TableViewSectionItem.h */,
-				C554F8841DEEAA10007C394A /* TableViewSectionItem.m */,
 				B5D011A81C0BE7F00075BC2E /* CustomHeaderFooterView.h */,
 				B5D011A91C0BE7F00075BC2E /* CustomHeaderFooterView.m */,
 			);
@@ -1925,7 +1920,7 @@
 			name = FileManager;
 			sourceTree = "<group>";
 		};
-		102B84EC1C3BCAB4001699A9 /* CellDataAdapter */ = {
+		102B84EC1C3BCAB4001699A9 /* TableViewDataAdapter */ = {
 			isa = PBXGroup;
 			children = (
 				102B84ED1C3BCAD0001699A9 /* CellDataAdapter.h */,
@@ -1933,7 +1928,7 @@
 				C51B11A11F52A19200EBF6A0 /* CellHeaderFooterDataAdapter.h */,
 				C51B11A21F52A19200EBF6A0 /* CellHeaderFooterDataAdapter.m */,
 			);
-			name = CellDataAdapter;
+			name = TableViewDataAdapter;
 			sourceTree = "<group>";
 		};
 		102B85011C3C9FBF001699A9 /* NumberFormatter */ = {
@@ -2268,7 +2263,7 @@
 			isa = PBXGroup;
 			children = (
 				C503B3641E1B421600967A61 /* BaseMessageView */,
-				102B84EC1C3BCAB4001699A9 /* CellDataAdapter */,
+				102B84EC1C3BCAB4001699A9 /* TableViewDataAdapter */,
 				102296C61C393089001AF5BB /* CustomHeaderFooterView */,
 				105D98A11C07F16700FD1013 /* CustomCell */,
 				10381FC51BF9B8A800E5E476 /* CustomControllers */,
@@ -4066,7 +4061,6 @@
 				C5EFF2721F14C46700BD5AF0 /* MASConstraintMaker.m in Sources */,
 				10E2D4EE1CD5962000666EEB /* SDWebImageDownloaderOperation.m in Sources */,
 				C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */,
-				C554F8851DEEAA10007C394A /* TableViewSectionItem.m in Sources */,
 				C5EFF2751F14C46700BD5AF0 /* MASViewConstraint.m in Sources */,
 				C51B11921F52A0DD00EBF6A0 /* TwoLevelLinkageViewController.m in Sources */,
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,

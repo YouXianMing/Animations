@@ -118,7 +118,7 @@
         
         CellHeaderFooterDataAdapter *adapter = self.models[section].headerAdapter;
         
-        CustomHeaderFooterView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:adapter.cellHeaderReuseIdentifier];
+        CustomHeaderFooterView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:adapter.reuseIdentifier];
         headerView.dataAdapter             = adapter;
         headerView.data                    = adapter.data;
         headerView.section                 = section;
@@ -136,7 +136,7 @@
     
     if ([tableView isEqual:_rightSideTableView]) {
         
-        return self.models[section].headerAdapter.headerHeight;
+        return self.models[section].headerAdapter.height;
         
     } else {
         

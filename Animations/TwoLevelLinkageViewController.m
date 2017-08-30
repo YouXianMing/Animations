@@ -45,7 +45,7 @@
         
     } registerCellsAndHeadersWithRightSideTableView:^(UITableView *tableView) {
         
-        [RightSideCell registerToTableView:tableView];
+        [RightSideCell       registerToTableView:tableView];
         [RightSideHeaderView registerToTableView:tableView];
     }];
     
@@ -77,16 +77,11 @@
             [subModels addObject:twoLevelModel];
         }];
         
-        CellHeaderFooterDataAdapter *headerAdapter = [CellHeaderFooterDataAdapter new];
-        headerAdapter.cellHeaderReuseIdentifier    = NSStringFromClass([RightSideHeaderView class]);
-        headerAdapter.data                         = categoryModel;
-        headerAdapter.headerHeight                 = 25.f;
-        
         // Create LinkageOneLevelModel.
         LinkageOneLevelModel *model = [LinkageOneLevelModel new];
-        model.adapter               = [LeftSideCell fixedHeightTypeDataAdapterWithData:categoryModel];
         model.subModels             = subModels;
-        model.headerAdapter         = headerAdapter;
+        model.adapter               = [LeftSideCell fixedHeightTypeDataAdapterWithData:categoryModel];
+        model.headerAdapter         = [RightSideHeaderView fixedHeightTypeDataAdapterWithData:categoryModel];;
         [models addObject:model];
     }];
     

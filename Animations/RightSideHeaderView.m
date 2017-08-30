@@ -26,4 +26,9 @@
     self.textLabel.text  = model.name;
 }
 
++ (CGFloat)heightWithData:(id)data {
+    
+    return 25.f;
+}
+
 @end

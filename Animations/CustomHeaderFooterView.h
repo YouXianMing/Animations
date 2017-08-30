@@ -99,4 +99,26 @@
  */
 - (void)loadContent;
 
+/**
+ *  Calculate the cell's from data, overwrite by subclass.
+ *
+ *  @param data Data.
+ *
+ *  @return HeaderFooterView's height.
+ */
++ (CGFloat)heightWithData:(id)data;
+
+#pragma mark - Adapters.
+
++ (CellHeaderFooterDataAdapter *)dataAdapterWithReuseIdentifier:(NSString *)reuseIdentifier data:(id)data height:(CGFloat)height type:(NSInteger)type;
++ (CellHeaderFooterDataAdapter *)dataAdapterWithData:(id)data height:(CGFloat)height type:(NSInteger)type;
++ (CellHeaderFooterDataAdapter *)dataAdapterWithData:(id)data height:(CGFloat)height;
++ (CellHeaderFooterDataAdapter *)dataAdapterWithHeight:(CGFloat)height type:(NSInteger)type;
++ (CellHeaderFooterDataAdapter *)dataAdapterWithHeight:(CGFloat)height;
+
++ (CellHeaderFooterDataAdapter *)fixedHeightTypeDataAdapterWithReuseIdentifier:(NSString *)reuseIdentifier data:(id)data type:(NSInteger)type;
++ (CellHeaderFooterDataAdapter *)fixedHeightTypeDataAdapterWithData:(id)data type:(NSInteger)type;
++ (CellHeaderFooterDataAdapter *)fixedHeightTypeDataAdapterWithData:(id)data;
++ (CellHeaderFooterDataAdapter *)fixedHeightTypeDataAdapter;
+
 @end

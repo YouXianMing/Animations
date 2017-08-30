@@ -95,7 +95,7 @@
     
     [self.collectionView performBatchUpdates:^{
         
-        editAdaptersBlock ? editAdaptersBlock(self.adapters) : 0;
+        editAdaptersBlock ? editAdaptersBlock(self.adapters)    : 0;
         editItemsBlock    ? editItemsBlock(self.collectionView) : 0;
         
     } completion:^(BOOL finished) {

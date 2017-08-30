@@ -131,21 +131,21 @@
                                                                   type:(NSInteger)type {
     
     NSString *tmpReuseIdentifier = reuseIdentifier.length <= 0 ? NSStringFromClass([self class]) : reuseIdentifier;
-    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:tmpReuseIdentifier data:data cellHeight:[[self class] cellHeightWithData:nil]
+    return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:tmpReuseIdentifier data:data cellHeight:[[self class] cellHeightWithData:data]
                                                           cellType:type];
 }
 
 + (CellDataAdapter *)fixedHeightTypeDataAdapterWithData:(id)data type:(NSInteger)type {
     
     return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:NSStringFromClass([self class])
-                                                              data:data cellHeight:[[self class] cellHeightWithData:nil]
+                                                              data:data cellHeight:[[self class] cellHeightWithData:data]
                                                           cellType:type];
 }
 
 + (CellDataAdapter *)fixedHeightTypeDataAdapterWithData:(id)data {
     
     return [CellDataAdapter cellDataAdapterWithCellReuseIdentifier:NSStringFromClass([self class])
-                                                              data:data cellHeight:[[self class] cellHeightWithData:nil]
+                                                              data:data cellHeight:[[self class] cellHeightWithData:data]
                                                           cellType:0];
 }
 
