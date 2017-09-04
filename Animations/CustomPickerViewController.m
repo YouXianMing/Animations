@@ -16,6 +16,7 @@
 #import "FileManager.h"
 #import "NSData+JSONData.h"
 #import "ItemManagerModel.h"
+#import "CustomPickerViewControllerUserDefaults.h"
 
 @interface CustomPickerViewController () <CustomPickerViewDelegate>
 
@@ -52,7 +53,8 @@
         // Second component.
         PickerViewComponent *secondComponent = [PickerViewComponent pickerViewComponentWithRowsBlock:^(NSMutableArray<PickerViewRow *> *rows) {
             
-            [self.itemManagerModel.data.categories.firstObject.subcategories enumerateObjectsUsingBlock:^(ShopItemModel *model, NSUInteger idx, BOOL *stop) {
+            [self.itemManagerModel.data.categories[CustomPickerViewControllerUserDefaults.selectedRowInFirstComponent].subcategories
+             enumerateObjectsUsingBlock:^(ShopItemModel *model, NSUInteger idx, BOOL *stop) {
                 
                 [rows addObject:[PickerViewRow pickerViewRowWithViewClass:[ShopItemInfoView class] data:model]];
             }];
@@ -71,6 +73,8 @@
                                                   dataAdapter:self.pickerViewDataAdapter];
     self.pickerView.center = self.contentView.middlePoint;
     [self.contentView addSubview:self.pickerView];
+    [self.pickerView selectRow:CustomPickerViewControllerUserDefaults.selectedRowInFirstComponent  inComponent:0 animated:NO];
+    [self.pickerView selectRow:CustomPickerViewControllerUserDefaults.selectedRowInSecondComponent inComponent:1 animated:NO];
 }
 
 #pragma mark - CustomPickerViewDelegate
@@ -93,6 +97,8 @@
 - (void)customPickerView:(CustomPickerView *)pickerView didSelectedRows:(NSArray <NSNumber *> *)rows selectedDatas:(NSArray <id> *)datas {
     
     NSLog(@"%@ %@", rows, datas);
+    CustomPickerViewControllerUserDefaults.selectedRowInFirstComponent  = rows[0].integerValue;
+    CustomPickerViewControllerUserDefaults.selectedRowInSecondComponent = rows[1].integerValue;
 }
 
 @end
