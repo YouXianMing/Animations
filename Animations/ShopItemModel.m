@@ -23,6 +23,12 @@
      *  }
      */
     
+    if ([key isEqualToString:@"id"]) {
+        
+        self.itemId = value;
+        return;
+    }
+    
     // show undefined key
     NSLog(@"%@.h have undefined key '%@', the key's type is '%@'.", NSStringFromClass([self class]), key, [value class]);
 }

@@ -29,7 +29,5 @@
  */
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
-@property (nonatomic) BOOL selected;
-
 @end
 

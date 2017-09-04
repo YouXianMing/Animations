@@ -408,6 +408,14 @@
 		C5792EE61F4743B3000B0D1B /* ResponseDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EE21F4743B3000B0D1B /* ResponseDataSerializer.m */; };
 		C5792EE91F4749FD000B0D1B /* WanDouJiaModelSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EE81F4749FD000B0D1B /* WanDouJiaModelSerializer.m */; };
 		C5792EEC1F474C44000B0D1B /* WanDouJiaParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EEB1F474C44000B0D1B /* WanDouJiaParameterSerializer.m */; };
+		C57C8D7F1F5CEDC200F62803 /* CustomPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D7E1F5CEDC200F62803 /* CustomPickerViewController.m */; };
+		C57C8D8C1F5CEE2000F62803 /* CustomPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D831F5CEE2000F62803 /* CustomPickerView.m */; };
+		C57C8D8D1F5CEE2000F62803 /* PickerViewDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D851F5CEE2000F62803 /* PickerViewDataAdapter.m */; };
+		C57C8D8E1F5CEE2000F62803 /* PickerViewComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D871F5CEE2000F62803 /* PickerViewComponent.m */; };
+		C57C8D8F1F5CEE2000F62803 /* PickerViewRow.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D891F5CEE2000F62803 /* PickerViewRow.m */; };
+		C57C8D901F5CEE2000F62803 /* PickerCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D8B1F5CEE2000F62803 /* PickerCustomView.m */; };
+		C57C8D961F5CEED800F62803 /* ShopItemInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D931F5CEED800F62803 /* ShopItemInfoView.m */; };
+		C57C8D971F5CEED800F62803 /* CategoryInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D951F5CEED800F62803 /* CategoryInfoView.m */; };
 		C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7911D2F40DF003433EC /* QRCodeViewController.m */; };
 		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
 		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
@@ -1299,6 +1307,22 @@
 		C5792EE81F4749FD000B0D1B /* WanDouJiaModelSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanDouJiaModelSerializer.m; sourceTree = "<group>"; };
 		C5792EEA1F474C44000B0D1B /* WanDouJiaParameterSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanDouJiaParameterSerializer.h; sourceTree = "<group>"; };
 		C5792EEB1F474C44000B0D1B /* WanDouJiaParameterSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanDouJiaParameterSerializer.m; sourceTree = "<group>"; };
+		C57C8D7D1F5CEDC200F62803 /* CustomPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerViewController.h; sourceTree = "<group>"; };
+		C57C8D7E1F5CEDC200F62803 /* CustomPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerViewController.m; sourceTree = "<group>"; };
+		C57C8D821F5CEE2000F62803 /* CustomPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerView.h; sourceTree = "<group>"; };
+		C57C8D831F5CEE2000F62803 /* CustomPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerView.m; sourceTree = "<group>"; };
+		C57C8D841F5CEE2000F62803 /* PickerViewDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewDataAdapter.h; sourceTree = "<group>"; };
+		C57C8D851F5CEE2000F62803 /* PickerViewDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewDataAdapter.m; sourceTree = "<group>"; };
+		C57C8D861F5CEE2000F62803 /* PickerViewComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewComponent.h; sourceTree = "<group>"; };
+		C57C8D871F5CEE2000F62803 /* PickerViewComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewComponent.m; sourceTree = "<group>"; };
+		C57C8D881F5CEE2000F62803 /* PickerViewRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewRow.h; sourceTree = "<group>"; };
+		C57C8D891F5CEE2000F62803 /* PickerViewRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewRow.m; sourceTree = "<group>"; };
+		C57C8D8A1F5CEE2000F62803 /* PickerCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerCustomView.h; sourceTree = "<group>"; };
+		C57C8D8B1F5CEE2000F62803 /* PickerCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerCustomView.m; sourceTree = "<group>"; };
+		C57C8D921F5CEED800F62803 /* ShopItemInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopItemInfoView.h; sourceTree = "<group>"; };
+		C57C8D931F5CEED800F62803 /* ShopItemInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopItemInfoView.m; sourceTree = "<group>"; };
+		C57C8D941F5CEED800F62803 /* CategoryInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryInfoView.h; sourceTree = "<group>"; };
+		C57C8D951F5CEED800F62803 /* CategoryInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryInfoView.m; sourceTree = "<group>"; };
 		C582E7901D2F40DF003433EC /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		C582E7911D2F40DF003433EC /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		C582E7941D2F4184003433EC /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
@@ -2255,6 +2279,7 @@
 				C5E7760E1F25811200C304A1 /* TreeStructureTableViewController */,
 				C50E75741F4E6CCD00EB9819 /* DrawRectViewController */,
 				C51B11931F52A0E200EBF6A0 /* TwoLevelLinkageViewController */,
+				C57C8D801F5CEDCA00F62803 /* CustomPickerViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2690,6 +2715,7 @@
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
 				C51B11941F52A14D00EBF6A0 /* TwoLevelLinkageView */,
 				C54553551E1CD76200A5BA58 /* iCarouselView */,
+				C57C8D811F5CEE0C00F62803 /* CustomPickerView */,
 				1020A3741D08F9C000056B0E /* BadgeValueView */,
 				C59608C61D3DF76E006BF6E0 /* TableGridView */,
 				1059F39E1CF4014700F63810 /* CollectionGridView */,
@@ -3664,6 +3690,44 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		C57C8D801F5CEDCA00F62803 /* CustomPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C57C8D7D1F5CEDC200F62803 /* CustomPickerViewController.h */,
+				C57C8D7E1F5CEDC200F62803 /* CustomPickerViewController.m */,
+				C57C8D911F5CEED100F62803 /* views */,
+			);
+			name = CustomPickerViewController;
+			sourceTree = "<group>";
+		};
+		C57C8D811F5CEE0C00F62803 /* CustomPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				C57C8D821F5CEE2000F62803 /* CustomPickerView.h */,
+				C57C8D831F5CEE2000F62803 /* CustomPickerView.m */,
+				C57C8D841F5CEE2000F62803 /* PickerViewDataAdapter.h */,
+				C57C8D851F5CEE2000F62803 /* PickerViewDataAdapter.m */,
+				C57C8D861F5CEE2000F62803 /* PickerViewComponent.h */,
+				C57C8D871F5CEE2000F62803 /* PickerViewComponent.m */,
+				C57C8D881F5CEE2000F62803 /* PickerViewRow.h */,
+				C57C8D891F5CEE2000F62803 /* PickerViewRow.m */,
+				C57C8D8A1F5CEE2000F62803 /* PickerCustomView.h */,
+				C57C8D8B1F5CEE2000F62803 /* PickerCustomView.m */,
+			);
+			name = CustomPickerView;
+			sourceTree = "<group>";
+		};
+		C57C8D911F5CEED100F62803 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C57C8D941F5CEED800F62803 /* CategoryInfoView.h */,
+				C57C8D951F5CEED800F62803 /* CategoryInfoView.m */,
+				C57C8D921F5CEED800F62803 /* ShopItemInfoView.h */,
+				C57C8D931F5CEED800F62803 /* ShopItemInfoView.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		C582E7931D2F40E5003433EC /* QRCodeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -4037,6 +4101,7 @@
 				C5159D2D1F2F12B300AF92E3 /* UIViewController+Status.m in Sources */,
 				1011BAA01CD4898D00F29FB9 /* PlayInfoModel.m in Sources */,
 				109ECD5A1C3D3B1900290307 /* PageFlipEffectController.m in Sources */,
+				C57C8D8C1F5CEE2000F62803 /* CustomPickerView.m in Sources */,
 				C510B4DA1F297D2F009D7DB8 /* NSObject+ItemStyle.m in Sources */,
 				10E2D5051CD5D9E000666EEB /* FontInfomation.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
@@ -4080,6 +4145,7 @@
 				C501F21A1F0C7DE90051B4C6 /* FontAttributeConfig.m in Sources */,
 				B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */,
 				1047D0F21C465753009ADED6 /* InfiniteRotationView.m in Sources */,
+				C57C8D7F1F5CEDC200F62803 /* CustomPickerViewController.m in Sources */,
 				10E2D4F11CD5962000666EEB /* UIButton+WebCache.m in Sources */,
 				1020A3731D08F9BB00056B0E /* BadgeValueView.m in Sources */,
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
@@ -4151,6 +4217,7 @@
 				106CF0921C3764090006419B /* AlertViewController.m in Sources */,
 				C58978C21D38CD3A000B7D1C /* CustomCollectionGridViewCell.m in Sources */,
 				C5F8FE801ECC260A00377E01 /* FullTitleVisualEffectController.m in Sources */,
+				C57C8D8F1F5CEE2000F62803 /* PickerViewRow.m in Sources */,
 				104F0D121BFB1BB800C46E6A /* UIView+GlowView.m in Sources */,
 				105702151CF6CF05003B10C6 /* POPBaseControl.m in Sources */,
 				C50F24121D31CC3000C3E02A /* MaskShapeViewController.m in Sources */,
@@ -4197,6 +4264,7 @@
 				C51B11AA1F52A2BB00EBF6A0 /* LeftSideCell.m in Sources */,
 				1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */,
 				C56812321D757621006E6C49 /* MaximumSpacingFlowLayout.m in Sources */,
+				C57C8D971F5CEED800F62803 /* CategoryInfoView.m in Sources */,
 				1017F13A1C35715400E245F8 /* NSDictionary+JSONData.m in Sources */,
 				100148C91C43D53D006D9153 /* BezierPathViewController.m in Sources */,
 				C5F8FE831ECC27B600377E01 /* FullTitleController.m in Sources */,
@@ -4234,6 +4302,7 @@
 				1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */,
 				102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */,
 				C56812341D757621006E6C49 /* IrregularGridCellDataAdapter.m in Sources */,
+				C57C8D901F5CEE2000F62803 /* PickerCustomView.m in Sources */,
 				1011BB001CD495F200F29FB9 /* AES256EncryptMode.m in Sources */,
 				1011BAA11CD4898D00F29FB9 /* ProviderModel.m in Sources */,
 				104CD3081CDAD4B700C836E6 /* GridLayout.m in Sources */,
@@ -4327,6 +4396,7 @@
 				104CD2FC1CDAD41A00C836E6 /* GridFlowLayoutViewController.m in Sources */,
 				10381FBE1BF9B55B00E5E476 /* POPPropertyAnimation.mm in Sources */,
 				1011BB011CD495F200F29FB9 /* DESEncryptMode.m in Sources */,
+				C57C8D8D1F5CEE2000F62803 /* PickerViewDataAdapter.m in Sources */,
 				102A0FFB1C92727200BF3F1B /* NSFileManager+Godzippa.m in Sources */,
 				C5F8FE7D1ECC228D00377E01 /* NormalTitleController.m in Sources */,
 				105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */,
@@ -4347,6 +4417,7 @@
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
 				10D4F6111C41538C00D056EB /* PressAnimationButton.m in Sources */,
 				C501F21F1F0C7DE90051B4C6 /* NSString+AttributedStringConfig.m in Sources */,
+				C57C8D8E1F5CEE2000F62803 /* PickerViewComponent.m in Sources */,
 				102B1F311C60E66F00A8FD40 /* MentionsModel.m in Sources */,
 				C5F9E82D1F4A8C8F004B6198 /* ResponseDataManager.m in Sources */,
 				C5E7760D1F2580F900C304A1 /* TreeStructureTableViewController.m in Sources */,
@@ -4413,6 +4484,7 @@
 				1011BA8F1CD484FE00F29FB9 /* OffsetCellViewController.m in Sources */,
 				1011BAA21CD4898D00F29FB9 /* VideoListModel.m in Sources */,
 				C54CB91D1F31B68900DFFE15 /* NSArray+IndexPath.m in Sources */,
+				C57C8D961F5CEED800F62803 /* ShopItemInfoView.m in Sources */,
 				C5B457821DE7D9CA002363AC /* ShapeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

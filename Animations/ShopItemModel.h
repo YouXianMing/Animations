@@ -13,7 +13,7 @@
 @interface ShopItemModel : NSObject
 
 @property (nonatomic, strong) NSNumber *status;
-@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, strong) NSNumber *itemId;
 @property (nonatomic, strong) NSNumber *items_count;
 @property (nonatomic, strong) NSNumber *order;
 @property (nonatomic, strong) NSString *icon_url;
