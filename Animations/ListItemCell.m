@@ -58,10 +58,10 @@
 
 - (void)selectedEvent {
 
-    Item             *item        = self.data;
-    UIViewController *controller  = [item.object new];
-    controller.title              = item.name;
-    [self.controller.navigationController pushViewController:controller animated:YES];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(customCell:event:)]) {
+        
+        [self.delegate customCell:self event:self.data];
+    }
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {

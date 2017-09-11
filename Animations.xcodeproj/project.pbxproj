@@ -452,6 +452,10 @@
 		C5C5AFEA1DD56D7100F35EB8 /* RedIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE91DD56D7100F35EB8 /* RedIrregularGridViewCell.m */; };
 		C5C5AFEE1DD59D4F00F35EB8 /* UILabel+SizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */; };
 		C5C606341E1F7593004E8FDD /* CircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C606331E1F7593004E8FDD /* CircleLoadingView.m */; };
+		C5DAC1A01F661FB3000D2F91 /* SKEmitterNodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC19F1F661FB3000D2F91 /* SKEmitterNodeController.m */; };
+		C5DAC1A71F661FE1000D2F91 /* ParticleSKView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC1A31F661FE1000D2F91 /* ParticleSKView.m */; };
+		C5DAC1A81F661FE1000D2F91 /* ParticleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC1A51F661FE1000D2F91 /* ParticleScene.m */; };
+		C5DAC1A91F661FE1000D2F91 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = C5DAC1A61F661FE1000D2F91 /* Magic.sks */; };
 		C5E7760D1F2580F900C304A1 /* TreeStructureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E7760C1F2580F900C304A1 /* TreeStructureTableViewController.m */; };
 		C5E776111F2582E700C304A1 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E776101F2582E700C304A1 /* CityModel.m */; };
 		C5E776141F25850900C304A1 /* CityModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E776131F25850900C304A1 /* CityModelCell.m */; };
@@ -1400,6 +1404,14 @@
 		C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SizeToFit.m"; sourceTree = "<group>"; };
 		C5C606321E1F7593004E8FDD /* CircleLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLoadingView.h; sourceTree = "<group>"; };
 		C5C606331E1F7593004E8FDD /* CircleLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLoadingView.m; sourceTree = "<group>"; };
+		C5DAC19E1F661FB3000D2F91 /* SKEmitterNodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKEmitterNodeController.h; sourceTree = "<group>"; };
+		C5DAC19F1F661FB3000D2F91 /* SKEmitterNodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKEmitterNodeController.m; sourceTree = "<group>"; };
+		C5DAC1A21F661FE1000D2F91 /* ParticleSKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSKView.h; sourceTree = "<group>"; };
+		C5DAC1A31F661FE1000D2F91 /* ParticleSKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleSKView.m; sourceTree = "<group>"; };
+		C5DAC1A41F661FE1000D2F91 /* ParticleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleScene.h; sourceTree = "<group>"; };
+		C5DAC1A51F661FE1000D2F91 /* ParticleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleScene.m; sourceTree = "<group>"; };
+		C5DAC1A61F661FE1000D2F91 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
+		C5DAC1AA1F6621C0000D2F91 /* ControllersHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllersHeader.h; sourceTree = "<group>"; };
 		C5E7760B1F2580F900C304A1 /* TreeStructureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeStructureTableViewController.h; sourceTree = "<group>"; };
 		C5E7760C1F2580F900C304A1 /* TreeStructureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeStructureTableViewController.m; sourceTree = "<group>"; };
 		C5E7760F1F2582E700C304A1 /* CityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModel.h; sourceTree = "<group>"; };
@@ -2106,6 +2118,7 @@
 		10381F731BF9B47400E5E476 /* RootController */ = {
 			isa = PBXGroup;
 			children = (
+				C5DAC1AA1F6621C0000D2F91 /* ControllersHeader.h */,
 				C5F8FE781ECC1E3B00377E01 /* AnimationsListController.h */,
 				C5F8FE791ECC1E3B00377E01 /* AnimationsListController.m */,
 				C5525D691E03DEFE00929C52 /* AnimationsListViewNavigationController.h */,
@@ -2287,6 +2300,7 @@
 				C50E75741F4E6CCD00EB9819 /* DrawRectViewController */,
 				C51B11931F52A0E200EBF6A0 /* TwoLevelLinkageViewController */,
 				C57C8D801F5CEDCA00F62803 /* CustomPickerViewController */,
+				C5DAC1A11F661FB7000D2F91 /* SKEmitterNodeController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -3861,6 +3875,20 @@
 			name = "UILabel+Category";
 			sourceTree = "<group>";
 		};
+		C5DAC1A11F661FB7000D2F91 /* SKEmitterNodeController */ = {
+			isa = PBXGroup;
+			children = (
+				C5DAC19E1F661FB3000D2F91 /* SKEmitterNodeController.h */,
+				C5DAC19F1F661FB3000D2F91 /* SKEmitterNodeController.m */,
+				C5DAC1A21F661FE1000D2F91 /* ParticleSKView.h */,
+				C5DAC1A31F661FE1000D2F91 /* ParticleSKView.m */,
+				C5DAC1A41F661FE1000D2F91 /* ParticleScene.h */,
+				C5DAC1A51F661FE1000D2F91 /* ParticleScene.m */,
+				C5DAC1A61F661FE1000D2F91 /* Magic.sks */,
+			);
+			name = SKEmitterNodeController;
+			sourceTree = "<group>";
+		};
 		C5E7760E1F25811200C304A1 /* TreeStructureTableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -4028,6 +4056,7 @@
 				C51B11BC1F52A2F400EBF6A0 /* liwushuo.json in Resources */,
 				1011BAE21CD48C8D00F29FB9 /* NodeModelViewControllerBack_next@3x.png in Resources */,
 				1011BAE11CD48C8D00F29FB9 /* NodeModelViewControllerBack_black@3x.png in Resources */,
+				C5DAC1A91F661FE1000D2F91 /* Magic.sks in Resources */,
 				10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */,
 				C50F243B1D321A6A00C3E02A /* MaskShapeViewController.jpg in Resources */,
 			);
@@ -4148,6 +4177,7 @@
 				C5EFF2751F14C46700BD5AF0 /* MASViewConstraint.m in Sources */,
 				C51B11921F52A0DD00EBF6A0 /* TwoLevelLinkageViewController.m in Sources */,
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
+				C5DAC1A71F661FE1000D2F91 /* ParticleSKView.m in Sources */,
 				104326671C4B505E0033CEC0 /* ProgressColor+Colors.m in Sources */,
 				10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */,
 				102B1F2A1C60E66F00A8FD40 /* CountsModel.m in Sources */,
@@ -4215,6 +4245,7 @@
 				C501F21B1F0C7DE90051B4C6 /* ForegroundColorAttributeConfig.m in Sources */,
 				10381FD41BF9D8B300E5E476 /* FillCircleLayerConfigure.m in Sources */,
 				1011BAA61CD48A1C00F29FB9 /* WanDouJiaDataSerializer.m in Sources */,
+				C5DAC1A81F661FE1000D2F91 /* ParticleScene.m in Sources */,
 				10E2D4F01CD5962000666EEB /* SDWebImagePrefetcher.m in Sources */,
 				C57526CB1D5032690064F6CD /* DrawRectObject.m in Sources */,
 				C50E75831F4E6D6800EB9819 /* CGPointExtension.m in Sources */,
@@ -4230,6 +4261,7 @@
 				10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */,
 				C501F2511F0CC4000051B4C6 /* RegexManager.m in Sources */,
 				C5EFF2821F14CF9E00BD5AF0 /* HorizontalPicItemCell.m in Sources */,
+				C5DAC1A01F661FB3000D2F91 /* SKEmitterNodeController.m in Sources */,
 				C5EFF2421F14734B00BD5AF0 /* CustomCollectionView.m in Sources */,
 				B5D011A71C0BE3D30075BC2E /* ClassHeaderView.m in Sources */,
 				107CF3951C2FFC01002DF93C /* LiveImageViewController.m in Sources */,

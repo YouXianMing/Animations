@@ -20,73 +20,9 @@
 #import "ControllerPopAnimator.h"
 #import "UIFont+Fonts.h"
 #import "UIView+SetRect.h"
+#import "ControllersHeader.h"
 
-#import "ButtonPressViewController.h"
-#import "PopStrokeController.h"
-#import "CAShapeLayerPathController.h"
-#import "TransformFadeViewController.h"
-#import "CAGradientViewController.h"
-#import "PopNumberController.h"
-#import "CircleAnimationViewController.h"
-#import "ScrollImageViewController.h"
-#import "ScrollBlurImageViewController.h"
-#import "TableViewTapAnimationController.h"
-#import "POPSpringParameterController.h"
-#import "HeaderViewTapAnimationController.h"
-#import "CountDownTimerController.h"
-#import "ClockViewController.h"
-#import "DrawWaveViewController.h"
-#import "LabelScaleViewController.h"
-#import "ShimmerController.h"
-#import "EmitterSnowController.h"
-#import "ScratchImageViewController.h"
-#import "LiveImageViewController.h"
-#import "SDWebImageController.h"
-#import "AlertViewController.h"
-#import "WaterfallLayoutController.h"
-#import "MixedColorProgressViewController.h"
-#import "PageFlipEffectController.h"
-#import "CATransform3DM34Controller.h"
-#import "PressAnimationButtonController.h"
-#import "BezierPathViewController.h"
-#import "MusicBarAnimationController.h"
-#import "ColorProgressViewController.h"
-#import "SpringEffectController.h"
-#import "CASpringAnimationController.h"
-#import "AdditiveAnimationController.h"
-#import "TableViewLoadDataController.h"
-#import "MotionEffectViewController.h"
-#import "GifPictureController.h"
-#import "SCViewShakerController.h"
-#import "ScrollViewAnimationController.h"
-#import "TapCellAnimationController.h"
-#import "TextKitLoadImageController.h"
-#import "ReplicatorLineViewController.h"
-#import "DrawMarqueeViewController.h"
-#import "LazyFadeInViewController.h"
-#import "OffsetCellViewController.h"
-#import "SystemFontInfoController.h"
-#import "iCarouselViewController.h"
-#import "GridFlowLayoutViewController.h"
-#import "InfiniteLoopViewController.h"
-#import "BaseControlViewController.h"
-#import "SpringScaleViewController.h"
-#import "TapPathDrawViewController.h"
-#import "QRCodeViewController.h"
-#import "MaskShapeViewController.h"
-#import "WaterWaveViewController.h"
-#import "IrregularGridViewController.h"
-#import "MixCellsViewController.h"
-#import "ScrollCarouselViewController.h"
-#import "LoadCSSViewController.h"
-#import "CountDownButtonController.h"
-#import "CustomCollectionViewController.h"
-#import "TreeStructureTableViewController.h"
-#import "DrawRectViewController.h"
-#import "TwoLevelLinkageViewController.h"
-#import "CustomPickerViewController.h"
-
-@interface AnimationsListController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate>
+@interface AnimationsListController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate, CustomCellDelegate>
 
 @property (nonatomic, strong) DefaultNotificationCenter *notificationCenter;
 @property (nonatomic, strong) UITableView               *tableView;
@@ -282,7 +218,8 @@
                        [Item itemWithName:@"树形结构cell" object:[TreeStructureTableViewController class]],
                        [Item itemWithName:@"DrawRect" object:[DrawRectViewController class]],
                        [Item itemWithName:@"级联菜单" object:[TwoLevelLinkageViewController class]],
-                       [Item itemWithName:@"自定义PickerView" object:[CustomPickerViewController class]],];
+                       [Item itemWithName:@"自定义PickerView" object:[CustomPickerViewController class]],
+                       [Item itemWithName:@"SKEmitterNode的使用" object:[SKEmitterNodeController class]],];
     
     self.items = [NSMutableArray array];
     
@@ -317,14 +254,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CustomCell *cell = [tableView dequeueReusableCellAndLoadDataWithAdapter:_items[indexPath.row] indexPath:indexPath];
-    cell.controller  = self;
-    return cell;
+    return [tableView dequeueReusableCellAndLoadDataWithAdapter:_items[indexPath.row] delegate:self indexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [(CustomCell *)[tableView cellForRowAtIndexPath:indexPath] selectedEvent];
+}
+
+#pragma mark - CustomCellDelegate.
+
+- (void)customCell:(CustomCell *)cell event:(id)event {
+    
+    if ([cell isKindOfClass:[ListItemCell class]]) {
+        
+        Item             *item        = event;
+        UIViewController *controller  = [item.object new];
+        controller.title              = item.name;
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 #pragma mark - Overwrite system methods.
