@@ -219,6 +219,7 @@
                        [Item itemWithName:@"DrawRect" object:[DrawRectViewController class]],
                        [Item itemWithName:@"级联菜单" object:[TwoLevelLinkageViewController class]],
                        [Item itemWithName:@"自定义PickerView" object:[CustomPickerViewController class]],
+                       [Item itemWithName:@"城市选择器" object:[CustomCityPickerViewController class]],
                        [Item itemWithName:@"SKEmitterNode的使用" object:[SKEmitterNodeController class]],];
     
     self.items = [NSMutableArray array];

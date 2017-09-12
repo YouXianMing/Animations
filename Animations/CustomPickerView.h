@@ -53,4 +53,8 @@ typedef enum : NSUInteger {
 - (void)selectRow:(NSInteger)row inComponent:(NSInteger)component animated:(BOOL)animated;
 - (NSInteger)selectedRowInComponent:(NSInteger)component;
 
+#pragma mark - Debug
+
+@property (nonatomic) BOOL showPickerCustomViewFrame;
+
 @end

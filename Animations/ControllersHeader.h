@@ -73,6 +73,7 @@
 #import "DrawRectViewController.h"
 #import "TwoLevelLinkageViewController.h"
 #import "CustomPickerViewController.h"
+#import "CustomCityPickerViewController.h"
 #import "SKEmitterNodeController.h"
 
 #endif /* ControllersHeader_h */

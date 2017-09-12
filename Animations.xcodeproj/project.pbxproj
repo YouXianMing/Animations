@@ -358,6 +358,15 @@
 		C51B11B91F52A2D600EBF6A0 /* ShopItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C51B11B51F52A2D600EBF6A0 /* ShopItemModel.m */; };
 		C51B11BC1F52A2F400EBF6A0 /* liwushuo.json in Resources */ = {isa = PBXBuildFile; fileRef = C51B11BB1F52A2F400EBF6A0 /* liwushuo.json */; };
 		C524A3091D520BD80041C962 /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C524A3081D520BD80041C962 /* FBGlowLabel.m */; };
+		C52A3CB31F67827600C2F862 /* CustomCityPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A3CB21F67827600C2F862 /* CustomCityPickerViewController.m */; };
+		C52A3CB61F67841000C2F862 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = C52A3CB51F67841000C2F862 /* city.json */; };
+		C52A3CBE1F67851000C2F862 /* PickerProvinceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A3CBD1F67851000C2F862 /* PickerProvinceModel.m */; };
+		C52A3CC11F67851D00C2F862 /* PickerCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A3CC01F67851D00C2F862 /* PickerCityModel.m */; };
+		C52A3CC41F67852900C2F862 /* PickerAreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A3CC31F67852900C2F862 /* PickerAreaModel.m */; };
+		C52A3CC71F67871D00C2F862 /* PickerCityDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A3CC61F67871D00C2F862 /* PickerCityDataManager.m */; };
+		C52A3CCB1F67C73200C2F862 /* PickerProvinceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A3CCA1F67C73200C2F862 /* PickerProvinceView.m */; };
+		C52A3CCE1F67C73D00C2F862 /* PickerCityView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A3CCD1F67C73D00C2F862 /* PickerCityView.m */; };
+		C52A3CD11F67C74500C2F862 /* PickerAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A3CD01F67C74500C2F862 /* PickerAreaView.m */; };
 		C52C64431E246AAD00624A3D /* AlertViewCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C52C64421E246AAD00624A3D /* AlertViewCollectionCell.m */; };
 		C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C532B20F1E13A664004C7499 /* PlaceholderImageView.m */; };
 		C54553531E1CD69F00A5BA58 /* ScrollCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553521E1CD69F00A5BA58 /* ScrollCarouselViewController.m */; };
@@ -1213,6 +1222,23 @@
 		C51B11BB1F52A2F400EBF6A0 /* liwushuo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = liwushuo.json; sourceTree = "<group>"; };
 		C524A3071D520BD80041C962 /* FBGlowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBGlowLabel.h; sourceTree = "<group>"; };
 		C524A3081D520BD80041C962 /* FBGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGlowLabel.m; sourceTree = "<group>"; };
+		C52A3CB11F67827600C2F862 /* CustomCityPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCityPickerViewController.h; sourceTree = "<group>"; };
+		C52A3CB21F67827600C2F862 /* CustomCityPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCityPickerViewController.m; sourceTree = "<group>"; };
+		C52A3CB51F67841000C2F862 /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+		C52A3CBC1F67851000C2F862 /* PickerProvinceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerProvinceModel.h; sourceTree = "<group>"; };
+		C52A3CBD1F67851000C2F862 /* PickerProvinceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerProvinceModel.m; sourceTree = "<group>"; };
+		C52A3CBF1F67851D00C2F862 /* PickerCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerCityModel.h; sourceTree = "<group>"; };
+		C52A3CC01F67851D00C2F862 /* PickerCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerCityModel.m; sourceTree = "<group>"; };
+		C52A3CC21F67852900C2F862 /* PickerAreaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerAreaModel.h; sourceTree = "<group>"; };
+		C52A3CC31F67852900C2F862 /* PickerAreaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerAreaModel.m; sourceTree = "<group>"; };
+		C52A3CC51F67871D00C2F862 /* PickerCityDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerCityDataManager.h; sourceTree = "<group>"; };
+		C52A3CC61F67871D00C2F862 /* PickerCityDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerCityDataManager.m; sourceTree = "<group>"; };
+		C52A3CC91F67C73200C2F862 /* PickerProvinceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerProvinceView.h; sourceTree = "<group>"; };
+		C52A3CCA1F67C73200C2F862 /* PickerProvinceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerProvinceView.m; sourceTree = "<group>"; };
+		C52A3CCC1F67C73D00C2F862 /* PickerCityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerCityView.h; sourceTree = "<group>"; };
+		C52A3CCD1F67C73D00C2F862 /* PickerCityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerCityView.m; sourceTree = "<group>"; };
+		C52A3CCF1F67C74500C2F862 /* PickerAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerAreaView.h; sourceTree = "<group>"; };
+		C52A3CD01F67C74500C2F862 /* PickerAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerAreaView.m; sourceTree = "<group>"; };
 		C52C64411E246AAD00624A3D /* AlertViewCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewCollectionCell.h; sourceTree = "<group>"; };
 		C52C64421E246AAD00624A3D /* AlertViewCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewCollectionCell.m; sourceTree = "<group>"; };
 		C532B20E1E13A664004C7499 /* PlaceholderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderImageView.h; sourceTree = "<group>"; };
@@ -2300,6 +2326,7 @@
 				C50E75741F4E6CCD00EB9819 /* DrawRectViewController */,
 				C51B11931F52A0E200EBF6A0 /* TwoLevelLinkageViewController */,
 				C57C8D801F5CEDCA00F62803 /* CustomPickerViewController */,
+				C52A3CB41F67827F00C2F862 /* CustomCityPickerViewController */,
 				C5DAC1A11F661FB7000D2F91 /* SKEmitterNodeController */,
 			);
 			name = Controllers;
@@ -3488,6 +3515,54 @@
 			name = FBGlowLabel;
 			sourceTree = "<group>";
 		};
+		C52A3CB41F67827F00C2F862 /* CustomCityPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C52A3CB11F67827600C2F862 /* CustomCityPickerViewController.h */,
+				C52A3CB21F67827600C2F862 /* CustomCityPickerViewController.m */,
+				C52A3CC81F67C71200C2F862 /* views */,
+				C52A3CB81F67846100C2F862 /* Models */,
+				C52A3CB71F67843900C2F862 /* data */,
+			);
+			name = CustomCityPickerViewController;
+			sourceTree = "<group>";
+		};
+		C52A3CB71F67843900C2F862 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				C52A3CB51F67841000C2F862 /* city.json */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		C52A3CB81F67846100C2F862 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C52A3CBC1F67851000C2F862 /* PickerProvinceModel.h */,
+				C52A3CBD1F67851000C2F862 /* PickerProvinceModel.m */,
+				C52A3CBF1F67851D00C2F862 /* PickerCityModel.h */,
+				C52A3CC01F67851D00C2F862 /* PickerCityModel.m */,
+				C52A3CC21F67852900C2F862 /* PickerAreaModel.h */,
+				C52A3CC31F67852900C2F862 /* PickerAreaModel.m */,
+				C52A3CC51F67871D00C2F862 /* PickerCityDataManager.h */,
+				C52A3CC61F67871D00C2F862 /* PickerCityDataManager.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C52A3CC81F67C71200C2F862 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C52A3CC91F67C73200C2F862 /* PickerProvinceView.h */,
+				C52A3CCA1F67C73200C2F862 /* PickerProvinceView.m */,
+				C52A3CCC1F67C73D00C2F862 /* PickerCityView.h */,
+				C52A3CCD1F67C73D00C2F862 /* PickerCityView.m */,
+				C52A3CCF1F67C74500C2F862 /* PickerAreaView.h */,
+				C52A3CD01F67C74500C2F862 /* PickerAreaView.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		C532B2111E13A668004C7499 /* PlaceholderImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -4056,6 +4131,7 @@
 				C51B11BC1F52A2F400EBF6A0 /* liwushuo.json in Resources */,
 				1011BAE21CD48C8D00F29FB9 /* NodeModelViewControllerBack_next@3x.png in Resources */,
 				1011BAE11CD48C8D00F29FB9 /* NodeModelViewControllerBack_black@3x.png in Resources */,
+				C52A3CB61F67841000C2F862 /* city.json in Resources */,
 				C5DAC1A91F661FE1000D2F91 /* Magic.sks in Resources */,
 				10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */,
 				C50F243B1D321A6A00C3E02A /* MaskShapeViewController.jpg in Resources */,
@@ -4074,6 +4150,7 @@
 				C545535E1E1CD76E00A5BA58 /* iCarouselAbsItemView.m in Sources */,
 				1011BAF51CD495A800F29FB9 /* FastCoder.m in Sources */,
 				C5EE65B51E1B3A1100DDF591 /* IndexRange.m in Sources */,
+				C52A3CCB1F67C73200C2F862 /* PickerProvinceView.m in Sources */,
 				1068FD5A1CF847BC00BE431C /* PresentAnimator.m in Sources */,
 				C50E75821F4E6D6800EB9819 /* DrawingAttribute.m in Sources */,
 				C51B11A31F52A19200EBF6A0 /* CellHeaderFooterDataAdapter.m in Sources */,
@@ -4182,6 +4259,7 @@
 				10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */,
 				102B1F2A1C60E66F00A8FD40 /* CountsModel.m in Sources */,
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
+				C52A3CD11F67C74500C2F862 /* PickerAreaView.m in Sources */,
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
 				C501F21E1F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.m in Sources */,
@@ -4215,6 +4293,7 @@
 				C56812331D757621006E6C49 /* CustomIrregularGridViewCell.m in Sources */,
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
 				C56851C71DE6CBE3000F18C2 /* HeaderIconCell.m in Sources */,
+				C52A3CB31F67827600C2F862 /* CustomCityPickerViewController.m in Sources */,
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
 				1096061E1C93B46800CCB3AD /* AbsResponseDataSerializer.m in Sources */,
@@ -4238,6 +4317,7 @@
 				10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */,
 				C57526CC1D5032690064F6CD /* DrawingStyle.m in Sources */,
 				C58B1AB91F4C12AA00B681E1 /* AFAutoPurgingImageCache.m in Sources */,
+				C52A3CC41F67852900C2F862 /* PickerAreaModel.m in Sources */,
 				104CD3091CDAD4B700C836E6 /* GridManager.m in Sources */,
 				C50E75841F4E6D6900EB9819 /* UIBezierPath+Interpolation.m in Sources */,
 				10E2D50E1CD5DE0400666EEB /* FontInfoModel.m in Sources */,
@@ -4255,10 +4335,12 @@
 				C5C5AFE01DD558F900F35EB8 /* IrregularGridViewController.m in Sources */,
 				C57526CA1D5032690064F6CD /* CustomDrawingView.m in Sources */,
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
+				C52A3CCE1F67C73D00C2F862 /* PickerCityView.m in Sources */,
 				104326641C4B172F0033CEC0 /* ProgressColor.m in Sources */,
 				C55661FF1F3312540092ACA4 /* InfiniteLoopCollectionView.m in Sources */,
 				109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */,
 				10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */,
+				C52A3CC71F67871D00C2F862 /* PickerCityDataManager.m in Sources */,
 				C501F2511F0CC4000051B4C6 /* RegexManager.m in Sources */,
 				C5EFF2821F14CF9E00BD5AF0 /* HorizontalPicItemCell.m in Sources */,
 				C5DAC1A01F661FB3000D2F91 /* SKEmitterNodeController.m in Sources */,
@@ -4291,6 +4373,7 @@
 				1011BADC1CD48C8D00F29FB9 /* NodeModelCell.m in Sources */,
 				C50E75871F4E6DF200EB9819 /* StudyInfoCell.m in Sources */,
 				1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */,
+				C52A3CBE1F67851000C2F862 /* PickerProvinceModel.m in Sources */,
 				1047E23D1CC5AF8400E13D1C /* LazyFadeInLayer.m in Sources */,
 				108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */,
 				C58B1ABA1F4C12AA00B681E1 /* AFImageDownloader.m in Sources */,
@@ -4391,6 +4474,7 @@
 				C50E75921F4EA05500EB9819 /* InterpolationTypeCell.m in Sources */,
 				C50E758D1F4E6FB900EB9819 /* StudyInfoModel.m in Sources */,
 				1057021B1CF6D9D9003B10C6 /* BaseControlViewController.m in Sources */,
+				C52A3CC11F67851D00C2F862 /* PickerCityModel.m in Sources */,
 				1011BADA1CD48C8D00F29FB9 /* CreateModel.m in Sources */,
 				1096061F1C93B46800CCB3AD /* AbsNetworkingIndicator.m in Sources */,
 				103088B71C05880B00C8B623 /* Math.m in Sources */,

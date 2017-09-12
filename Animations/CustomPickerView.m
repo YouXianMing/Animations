@@ -140,6 +140,11 @@
     customView.data      = pickerViewRow.data;
     [customView loadContent];
     
+    if (self.showPickerCustomViewFrame == YES) {
+
+        customView.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.15f];
+    }
+    
     return customView;
 }
 
