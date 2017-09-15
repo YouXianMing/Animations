@@ -40,6 +40,12 @@
     self.tableView.separatorStyle      = UITableViewCellSeparatorStyleNone;
     self.tableView.alpha               = 0.f;
     
+    // Adjust iOS 11.0
+    if (@available(iOS 11.0, *)) {
+        
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    
     [self.tableView registerClass:[OffsetImageCell class]  forCellReuseIdentifier:@"OffsetImageCell"];
     [self.tableView registerClass:[OffsetHeaderView class] forHeaderFooterViewReuseIdentifier:@"OffsetHeaderView"];
     [self.contentView addSubview:self.tableView];

@@ -245,6 +245,11 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.contentView addSubview:self.tableView];
     
+    if (@available(iOS 11.0, *)) {
+        
+        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    
     [ListItemCell registerToTableView:self.tableView];
 }
 

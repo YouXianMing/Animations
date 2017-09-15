@@ -57,6 +57,12 @@ static NSString *footerIdentifier = @"WaterfallFooter";
     _collectionView.delegate         = self;
     _collectionView.backgroundColor  = [UIColor clearColor];
     
+    // Adjust iOS 11.0
+    if (@available(iOS 11.0, *)) {
+        
+        _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    
     // 注册cell以及HeaderView，FooterView
     [_collectionView registerClass:[WaterfallCell class] forCellWithReuseIdentifier:cellIdentifier ];
     [_collectionView registerClass:[WaterfallHeaderView class]

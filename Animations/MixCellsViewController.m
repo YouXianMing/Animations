@@ -109,6 +109,11 @@ typedef enum : NSUInteger {
     self.tableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
     [self.contentView addSubview:self.tableView];
     
+    if (@available(iOS 11.0, *)) {
+        
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    
     [HeaderIconCell  registerToTableView:self.tableView];
     [ContentIconCell registerToTableView:self.tableView];
     [ColorSpaceCell  registerToTableView:self.tableView];
