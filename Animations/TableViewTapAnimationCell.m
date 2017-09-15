@@ -70,7 +70,7 @@ typedef enum : NSUInteger {
     
     [self showSelectedAnimation];
     TapAnimationModel *model = self.dataAdapter.data;
-    model.selected ? (model.selected = NO, [self changeToState:kNormalState animated:YES]) : (model.selected = YES, [self changeToState:kSelectedState animated:YES]);
+    model.selected ? ((void)(model.selected = NO), [self changeToState:kNormalState animated:YES]) : ((void)(model.selected = YES), [self changeToState:kSelectedState animated:YES]);
 }
 
 - (void)changeToState:(ETableViewTapAnimationCellState)state animated:(BOOL)animated {

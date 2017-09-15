@@ -45,17 +45,17 @@
     [self.view fillRectPathWithContext:self.context rect:rect];
 }
 
-- (void)fillWithRectValueArrayBlock:(NSArray <NSValue *> * (^)())rectValueArrayBlock {
+- (void)fillWithRectValueArrayBlock:(NSArray <NSValue *> * (^)(void))rectValueArrayBlock {
     
     [self.view fillRectsPathWithContext:self.context rectValueArrayBlock:rectValueArrayBlock];
 }
 
-- (void)strokeLinePathWithPointValueArrayBlock:(NSArray <NSValue *> * (^)())pointValueArrayBlock closePath:(BOOL)closePath {
+- (void)strokeLinePathWithPointValueArrayBlock:(NSArray <NSValue *> * (^)(void))pointValueArrayBlock closePath:(BOOL)closePath {
     
     [self.view strokeLinePathWithContext:self.context pointValueArrayBlock:pointValueArrayBlock closePath:closePath];
 }
 
-- (void)strokeLinesPathWithPointValuesArraysBlock:(NSArray <NSArray <NSValue *> *> * (^)())pointValuesArraysBlock closePath:(BOOL)closePath {
+- (void)strokeLinesPathWithPointValuesArraysBlock:(NSArray <NSArray <NSValue *> *> * (^)(void))pointValuesArraysBlock closePath:(BOOL)closePath {
     
     [self.view strokeLinesPathWithContext:self.context pointValuesArraysBlock:pointValuesArraysBlock closePath:closePath];
 }
@@ -65,7 +65,7 @@
     [self.view fillCircleWithContext:self.context radius:radius centerPoint:centerPoint];
 }
 
-- (void)fillCirclesWithRadius:(CGFloat)radius centerPointValueArrayBlock:(NSArray <NSValue *> * (^)())centerPointValueArrayBlock {
+- (void)fillCirclesWithRadius:(CGFloat)radius centerPointValueArrayBlock:(NSArray <NSValue *> * (^)(void))centerPointValueArrayBlock {
     
     [self.view fillCirclesWithContext:self.context radius:radius centerPointValueArrayBlock:centerPointValueArrayBlock];
 }
@@ -75,7 +75,7 @@
     [self.view strokeCircleWithContext:self.context radius:radius centerPoint:centerPoint];
 }
 
-- (void)strokeCirclesRadius:(CGFloat)radius centerPointValueArrayBlock:(NSArray <NSValue *> * (^)())centerPointValueArrayBlock {
+- (void)strokeCirclesRadius:(CGFloat)radius centerPointValueArrayBlock:(NSArray <NSValue *> * (^)(void))centerPointValueArrayBlock {
     
     [self.view strokeCirclesWithContext:self.context radius:radius centerPointValueArrayBlock:centerPointValueArrayBlock];
 }

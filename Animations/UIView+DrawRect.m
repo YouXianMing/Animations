@@ -65,7 +65,7 @@
 }
 
 - (void)fillRectsPathWithContext:(CGContextRef)context
-             rectValueArrayBlock:(NSArray <NSValue *> * (^)())rectValueArrayBlock {
+             rectValueArrayBlock:(NSArray <NSValue *> * (^)(void))rectValueArrayBlock {
     
     // 在context中创建一条空path
     CGContextBeginPath(context);
@@ -90,7 +90,7 @@
 }
 
 - (void)strokeLinePathWithContext:(CGContextRef)context
-             pointValueArrayBlock:(NSArray <NSValue *> * (^)())pointValueArrayBlock
+             pointValueArrayBlock:(NSArray <NSValue *> * (^)(void))pointValueArrayBlock
                         closePath:(BOOL)closePath {
     
     // 在context中创建一条空path
@@ -116,7 +116,7 @@
 }
 
 - (void)strokeLinesPathWithContext:(CGContextRef)context
-            pointValuesArraysBlock:(NSArray <NSArray <NSValue *> *> * (^)())pointValuesArraysBlock
+            pointValuesArraysBlock:(NSArray <NSArray <NSValue *> *> * (^)(void))pointValuesArraysBlock
                          closePath:(BOOL)closePath {
     
     // 在context中创建一条空path
@@ -157,7 +157,7 @@
 
 - (void)fillCirclesWithContext:(CGContextRef)context
                         radius:(CGFloat)radius
-    centerPointValueArrayBlock:(NSArray <NSValue *> * (^)())centerPointValueArrayBlock {
+    centerPointValueArrayBlock:(NSArray <NSValue *> * (^)(void))centerPointValueArrayBlock {
     
     NSArray <NSValue *> *valuesArray = nil;
     
@@ -181,7 +181,7 @@
 
 - (void)strokeCirclesWithContext:(CGContextRef)context
                           radius:(CGFloat)radius
-      centerPointValueArrayBlock:(NSArray <NSValue *> * (^)())centerPointValueArrayBlock {
+      centerPointValueArrayBlock:(NSArray <NSValue *> * (^)(void))centerPointValueArrayBlock {
     
     NSArray <NSValue *> *valuesArray = nil;
     

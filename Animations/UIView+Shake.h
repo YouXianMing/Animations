@@ -34,7 +34,7 @@ typedef enum : NSUInteger {
     
 } SCShakeOptions;
 
-typedef void(^ShakeCompletionHandler)();
+typedef void(^ShakeCompletionHandler)(void);
 
 @interface UIView (Shake)
 

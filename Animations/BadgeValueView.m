@@ -94,14 +94,14 @@
     
     // 根据位置更新尺寸
     CGFloat offset = self.fixedHeight / 2.f;
-    self.position == BadgePositionCenterLeft  ? self.left = -offset, self.centerY = self.contentView.middleY : 0;
-    self.position == BadgePositionCenterRight ? self.left = self.contentView.width - offset, self.centerY = self.contentView.middleY : 0;
+    self.position == BadgePositionCenterLeft  ? (void)(self.left = -offset), self.centerY = self.contentView.middleY : 0;
+    self.position == BadgePositionCenterRight ? (void)(self.left = self.contentView.width - offset), self.centerY = self.contentView.middleY : 0;
     
-    self.position == BadgePositionTopLeft     ? self.left = -offset, self.y    = -offset : 0;
-    self.position == BadgePositionTopRight    ? self.top  = -offset, self.left = self.contentView.width - offset : 0;
+    self.position == BadgePositionTopLeft     ? (void)(self.left = -offset), self.y    = -offset : 0;
+    self.position == BadgePositionTopRight    ? (void)(self.top  = -offset), self.left = self.contentView.width - offset : 0;
     
-    self.position == BadgePositionBottomLeft  ? self.left = -offset, self.top = self.contentView.height - offset : 0;
-    self.position == BadgePositionBottomRight ? self.left = self.contentView.width - offset, self.top = self.contentView.height - offset : 0;
+    self.position == BadgePositionBottomLeft  ? (void)(self.left = -offset), self.top = self.contentView.height - offset : 0;
+    self.position == BadgePositionBottomRight ? (void)(self.left = self.contentView.width - offset), self.top = self.contentView.height - offset : 0;
 }
 
 @end

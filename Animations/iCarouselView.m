@@ -78,7 +78,7 @@
         __block iCarouselAbsItemView *tapedView = nil;
         [carousel.visibleItemViews enumerateObjectsUsingBlock:^(__kindof iCarouselAbsItemView *view, NSUInteger idx, BOOL * _Nonnull stop) {
             
-            view.index == index ? tapedView = view, *stop = YES : 0;
+            view.index == index ? (void)(tapedView = view), *stop = YES : 0;
         }];
         
         [self.delegate iCarouselView:self didSelectCarouselAbsItemView:tapedView adapter:_adapters[index]];

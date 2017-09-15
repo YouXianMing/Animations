@@ -23,19 +23,19 @@
 
 - (void)fillRect:(CGRect)rect;
 
-- (void)fillWithRectValueArrayBlock:(NSArray <NSValue *> * (^)())rectValueArrayBlock;
+- (void)fillWithRectValueArrayBlock:(NSArray <NSValue *> * (^)(void))rectValueArrayBlock;
 
-- (void)strokeLinePathWithPointValueArrayBlock:(NSArray <NSValue *> * (^)())pointValueArrayBlock closePath:(BOOL)closePath;
+- (void)strokeLinePathWithPointValueArrayBlock:(NSArray <NSValue *> * (^)(void))pointValueArrayBlock closePath:(BOOL)closePath;
 
-- (void)strokeLinesPathWithPointValuesArraysBlock:(NSArray <NSArray <NSValue *> *> * (^)())pointValuesArraysBlock closePath:(BOOL)closePath;
+- (void)strokeLinesPathWithPointValuesArraysBlock:(NSArray <NSArray <NSValue *> *> * (^)(void))pointValuesArraysBlock closePath:(BOOL)closePath;
 
 - (void)fillCircleWithRadius:(CGFloat)radius centerPoint:(CGPoint)centerPoint;
 
-- (void)fillCirclesWithRadius:(CGFloat)radius centerPointValueArrayBlock:(NSArray <NSValue *> * (^)())centerPointValueArrayBlock;
+- (void)fillCirclesWithRadius:(CGFloat)radius centerPointValueArrayBlock:(NSArray <NSValue *> * (^)(void))centerPointValueArrayBlock;
 
 - (void)strokeCircleRadius:(CGFloat)radius centerPoint:(CGPoint)centerPoint;
 
-- (void)strokeCirclesRadius:(CGFloat)radius centerPointValueArrayBlock:(NSArray <NSValue *> * (^)())centerPointValueArrayBlock;
+- (void)strokeCirclesRadius:(CGFloat)radius centerPointValueArrayBlock:(NSArray <NSValue *> * (^)(void))centerPointValueArrayBlock;
 
 - (void)drawInSpecialState:(void (^)(CGContextRef context))specialStateBlock;
 

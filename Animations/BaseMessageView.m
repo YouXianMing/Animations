@@ -32,14 +32,6 @@
     [NSException raise:NSStringFromClass([self class]) format:@"Use hide method from subclass."];
 }
 
-+ (instancetype)autoHidenWithMessageObject:(id)messageObject
-                                  delegate:(id <BaseMessageViewDelegate>)delegate
-                               contentView:(UIView *)contentView
-                           showImmediately:(BOOL)showImmediately {
-    
-    return [[self class] new];
-}
-
 + (instancetype)messageViewWithMessageObject:(id)messageObject
                                     delegate:(id <BaseMessageViewDelegate>)delegate
                                  contentView:(UIView *)contentView

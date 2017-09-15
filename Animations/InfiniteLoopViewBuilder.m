@@ -125,27 +125,27 @@
             self.nodeViewsContentView.frame = CGRectMake(0, 0, width * self.models.count, height);
             
             self.position == kNodeViewBottom ?
-            self.nodeViewsContentView.centerX = self.middleX,
+            (void)(self.nodeViewsContentView.centerX = self.middleX),
             self.nodeViewsContentView.bottom  = self.height - self.edgeInsets.bottom : 0;
             
             self.position == kNodeViewBottomLeft ?
-            self.nodeViewsContentView.x      = self.edgeInsets.left,
+            (void)(self.nodeViewsContentView.x      = self.edgeInsets.left),
             self.nodeViewsContentView.bottom = self.height - self.edgeInsets.bottom : 0;
             
             self.position == kNodeViewBottomRight ?
-            self.nodeViewsContentView.right  = self.width - self.edgeInsets.right,
+            (void)(self.nodeViewsContentView.right  = self.width - self.edgeInsets.right),
             self.nodeViewsContentView.bottom = self.height - self.edgeInsets.bottom : 0;
             
             self.position == kNodeViewTop ?
-            self.nodeViewsContentView.centerX = self.middleX,
+            (void)(self.nodeViewsContentView.centerX = self.middleX),
             self.nodeViewsContentView.top     = 0 + self.edgeInsets.top : 0;
             
             self.position == kNodeViewTopLeft ?
-            self.nodeViewsContentView.x = self.edgeInsets.left,
+            (void)(self.nodeViewsContentView.x = self.edgeInsets.left),
             self.nodeViewsContentView.y = self.edgeInsets.top : 0;
             
             self.position == kNodeViewTopRight ?
-            self.nodeViewsContentView.right = self.width - self.edgeInsets.right,
+            (void)(self.nodeViewsContentView.right = self.width - self.edgeInsets.right),
             self.nodeViewsContentView.y     = self.edgeInsets.top : 0;
             
             for (int i = 0; i < self.models.count; i++) {
@@ -169,27 +169,27 @@
             self.nodeViewsContentView.frame = CGRectMake(0, 0, width, height  * self.models.count);
             
             self.position == kNodeViewLeft ?
-            self.nodeViewsContentView.centerY = self.middleY,
+            (void)(self.nodeViewsContentView.centerY = self.middleY),
             self.nodeViewsContentView.x       = self.edgeInsets.left : 0;
             
             self.position == kNodeViewLeftTop ?
-            self.nodeViewsContentView.y = self.edgeInsets.top,
+            (void)(self.nodeViewsContentView.y = self.edgeInsets.top),
             self.nodeViewsContentView.x = self.edgeInsets.left : 0;
             
             self.position == kNodeViewLeftBottom ?
-            self.nodeViewsContentView.bottom = self.height - self.edgeInsets.bottom,
+            (void)(self.nodeViewsContentView.bottom = self.height - self.edgeInsets.bottom),
             self.nodeViewsContentView.x      = self.edgeInsets.left : 0;
             
             self.position == kNodeViewRight ?
-            self.nodeViewsContentView.centerY = self.middleY,
+            (void)(self.nodeViewsContentView.centerY = self.middleY),
             self.nodeViewsContentView.right   = self.width - self.edgeInsets.right : 0;
             
             self.position == kNodeViewRightTop ?
-            self.nodeViewsContentView.y     = self.edgeInsets.top,
+            (void)(self.nodeViewsContentView.y     = self.edgeInsets.top),
             self.nodeViewsContentView.right = self.width - self.edgeInsets.right : 0;
             
             self.position == kNodeViewRightBottom ?
-            self.nodeViewsContentView.bottom = self.height - self.edgeInsets.bottom,
+            (void)(self.nodeViewsContentView.bottom = self.height - self.edgeInsets.bottom),
             self.nodeViewsContentView.right  = self.width - self.edgeInsets.right : 0;
             
             for (int i = 0; i < self.models.count; i++) {

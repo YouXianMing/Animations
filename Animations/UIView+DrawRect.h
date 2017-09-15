@@ -77,7 +77,7 @@ NS_INLINE CGFloat * CGFloatArrayWithCount(NSUInteger count) {
  @param rectValueArrayBlock 提供CGRect参数的一维数组的block
  */
 - (void)fillRectsPathWithContext:(CGContextRef)context
-             rectValueArrayBlock:(NSArray <NSValue *> * (^)())rectValueArrayBlock;
+             rectValueArrayBlock:(NSArray <NSValue *> * (^)(void))rectValueArrayBlock;
 
 /**
  在一个path上描绘一条线条
@@ -87,7 +87,7 @@ NS_INLINE CGFloat * CGFloatArrayWithCount(NSUInteger count) {
  @param closePath 是否闭合线条
  */
 - (void)strokeLinePathWithContext:(CGContextRef)context
-             pointValueArrayBlock:(NSArray <NSValue *> * (^)())pointValueArrayBlock
+             pointValueArrayBlock:(NSArray <NSValue *> * (^)(void))pointValueArrayBlock
                         closePath:(BOOL)closePath;
 
 /**
@@ -98,7 +98,7 @@ NS_INLINE CGFloat * CGFloatArrayWithCount(NSUInteger count) {
  @param closePath 是否闭合线条
  */
 - (void)strokeLinesPathWithContext:(CGContextRef)context
-            pointValuesArraysBlock:(NSArray <NSArray <NSValue *> *> * (^)())pointValuesArraysBlock
+            pointValuesArraysBlock:(NSArray <NSArray <NSValue *> *> * (^)(void))pointValuesArraysBlock
                          closePath:(BOOL)closePath;
 
 /**
@@ -119,7 +119,7 @@ NS_INLINE CGFloat * CGFloatArrayWithCount(NSUInteger count) {
  */
 - (void)fillCirclesWithContext:(CGContextRef)context
                         radius:(CGFloat)radius
-    centerPointValueArrayBlock:(NSArray <NSValue *> * (^)())centerPointValueArrayBlock;
+    centerPointValueArrayBlock:(NSArray <NSValue *> * (^)(void))centerPointValueArrayBlock;
 
 /**
  根据给定的圆心点,在一个path上进行圆的描绘
@@ -139,7 +139,7 @@ NS_INLINE CGFloat * CGFloatArrayWithCount(NSUInteger count) {
  */
 - (void)strokeCirclesWithContext:(CGContextRef)context
                           radius:(CGFloat)radius
-      centerPointValueArrayBlock:(NSArray <NSValue *> * (^)())centerPointValueArrayBlock;
+      centerPointValueArrayBlock:(NSArray <NSValue *> * (^)(void))centerPointValueArrayBlock;
 
 /**
  在一个特殊的设置下绘制,绘制结束后,恢复到之前的设置
