@@ -60,7 +60,7 @@ static NSString *footerIdentifier = @"WaterfallFooter";
     // Adjust iOS 11.0
     if (@available(iOS 11.0, *)) {
         
-        _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;        
     }
     
     // 注册cell以及HeaderView，FooterView

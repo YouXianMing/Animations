@@ -16,27 +16,39 @@
 
 @implementation NormalTitleController
 
+- (void)makeViewsConfig:(NSMutableDictionary<NSString *,ControllerBaseViewConfig *> *)viewsConfig {
+    
+    if (iPhoneX) {
+        
+        CGFloat realHeight = 64 + UIView.additionaliPhoneXTopSafeHeight;
+        
+        ControllerBaseViewConfig *titleViewConfig = viewsConfig[titleViewId];
+        ControllerBaseViewConfig *contentViewConfig = viewsConfig[contentViewId];
+        
+        titleViewConfig.frame   = CGRectMake(0, 0, Width, realHeight);
+        contentViewConfig.frame = CGRectMake(0, realHeight, Width, Height - realHeight);
+    }
+}
+
 - (void)setupSubViews {
     
     // Title label.
-    UILabel *headlinelabel      = [UILabel new];
-    headlinelabel.font          = [UIFont HeitiSCWithFontSize:20.f];
-    headlinelabel.textAlignment = NSTextAlignmentCenter;
-    headlinelabel.textColor     = [UIColor colorWithRed:0.329  green:0.329  blue:0.329 alpha:1];
-    headlinelabel.text          = self.title;
-    [headlinelabel sizeToFit];
-    
-    headlinelabel.center = self.titleView.middlePoint;
+    UILabel *titleLabel      = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, Width, 64.f)];
+    titleLabel.font          = [UIFont HeitiSCWithFontSize:20.f];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.textColor     = [UIColor colorWithRed:0.329  green:0.329  blue:0.329 alpha:1];
+    titleLabel.text          = self.title;
+    titleLabel.bottom        = self.titleView.height;
+    [self.titleView addSubview:titleLabel];
     
     // Line.
-    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, self.view.width, 0.5f)];
+    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, self.titleView.height - 0.5, self.view.width, 0.5)];
     line.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.25f];
     [self.titleView addSubview:line];
-    [self.titleView addSubview:headlinelabel];
     
     // Back button.
     UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 64)];
-    backButton.center    = CGPointMake(20, self.titleView.middleY);
+    backButton.center    = CGPointMake(20, titleLabel.centerY);
     [backButton setImage:[UIImage imageNamed:@"backIcon"]             forState:UIControlStateNormal];
     [backButton setImage:[UIImage imageNamed:@"backIcon_highlighted"] forState:UIControlStateHighlighted];
     [backButton addTarget:self action:@selector(popSelf) forControlEvents:UIControlEventTouchUpInside];

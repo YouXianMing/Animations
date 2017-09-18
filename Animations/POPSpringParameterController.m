@@ -43,7 +43,7 @@
 
 - (void)initSecondLabel {
     
-    self.secondsLabel                = [[UILabel alloc] initWithFrame:CGRectMake(10, 10 + 64, 100, 20)];
+    self.secondsLabel                = [[UILabel alloc] initWithFrame:CGRectMake(10, 10 + 64 + UIView.additionaliPhoneXTopSafeHeight, 100, 20)];
     self.secondsLabel.attributedText = [self stringWithFloat:0.f];
     [self.contentView addSubview:self.secondsLabel];
 }

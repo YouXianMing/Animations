@@ -106,11 +106,27 @@
     }
 }
 
+#pragma mark - Overwrite super class method.
+
+- (void)makeViewsConfig:(NSMutableDictionary<NSString *,ControllerBaseViewConfig *> *)viewsConfig {
+    
+    if (iPhoneX) {
+        
+        CGFloat realHeight = 64 + UIView.additionaliPhoneXTopSafeHeight;
+        
+        ControllerBaseViewConfig *titleViewConfig = viewsConfig[titleViewId];
+        ControllerBaseViewConfig *contentViewConfig = viewsConfig[contentViewId];
+        
+        titleViewConfig.frame   = CGRectMake(0, 0, Width, realHeight);
+        contentViewConfig.frame = CGRectMake(0, realHeight, Width, Height - realHeight);
+    }
+}
+
 #pragma mark - Config TitleView.
 
 - (void)configureTitleView {
     
-    BackgroundLineView *lineView = [BackgroundLineView backgroundLineViewWithFrame:CGRectMake(0, 0, Width, 64)
+    BackgroundLineView *lineView = [BackgroundLineView backgroundLineViewWithFrame:CGRectMake(0, 0, Width, 64 + (iPhoneX ? UIView.additionaliPhoneXTopSafeHeight : 0))
                                                                          lineWidth:4 lineGap:4
                                                                          lineColor:[[UIColor blackColor] colorWithAlphaComponent:0.015]
                                                                             rotate:M_PI_4];
@@ -121,14 +137,14 @@
     UILabel *animationHeadLineLabel = [UIView animationsListViewControllerHeadLabel];
     
     // Title view.
-    UIView *titleView             = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, 64)];
+    UIView *titleView             = [[UIView alloc] initWithFrame:CGRectMake(0, iPhoneX ? UIView.additionaliPhoneXTopSafeHeight : 0, Width, 64)];
     headlinelabel.center          = titleView.middlePoint;
     animationHeadLineLabel.center = titleView.middlePoint;
     [titleView addSubview:headlinelabel];
     [titleView addSubview:animationHeadLineLabel];
     [self.titleView addSubview:titleView];
     
-    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, Width, 0.5f)];
+    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, titleView.height - 0.5, Width, 0.5f)];
     line.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.25f];
     [titleView addSubview:line];
     
@@ -244,12 +260,6 @@
     self.tableView.rowHeight      = 50.f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.contentView addSubview:self.tableView];
-    
-    if (@available(iOS 11.0, *)) {
-        
-        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }
-    
     [ListItemCell registerToTableView:self.tableView];
 }
 

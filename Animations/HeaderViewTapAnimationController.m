@@ -90,12 +90,6 @@ static NSString *infoHeadFlag = @"ClassHeaderView";
     self.tableView.showsHorizontalScrollIndicator = NO;
     self.tableView.showsVerticalScrollIndicator   = NO;
     
-    // Adjust iOS 11.0
-    if (@available(iOS 11.0, *)) {
-        
-        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }
-    
     [self.tableView registerClass:[StudentInfoCell class] forCellReuseIdentifier:infoCellFlag];
     [self.tableView registerClass:[ClassHeaderView class] forHeaderFooterViewReuseIdentifier:infoHeadFlag];
     

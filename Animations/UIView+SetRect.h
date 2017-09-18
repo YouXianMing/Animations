@@ -44,19 +44,24 @@
 #define  iPhone4_4s     (Width == 320.f && Height == 480.f ? YES : NO)
 
 /**
- *  iPhone5 or iPhone5s
+ *  iPhone5 or iPhone5s or iPhoneSE
  */
 #define  iPhone5_5s     (Width == 320.f && Height == 568.f ? YES : NO)
 
 /**
- *  iPhone6 or iPhone6s
+ *  iPhone6 or iPhone6s or iPhone 7 or iPhone 8
  */
 #define  iPhone6_6s     (Width == 375.f && Height == 667.f ? YES : NO)
 
 /**
- *  iPhone6Plus or iPhone6sPlus
+ *  iPhone6Plus or iPhone6sPlus or iPhone7sPlus or iPhone8sPlus
  */
 #define  iPhone6_6sPlus (Width == 414.f && Height == 736.f ? YES : NO)
+
+/**
+ *  iPhoneX
+ */
+#define  iPhoneX        (Width == 375.f && Height == 812.f ? YES : NO)
 
 @interface UIView (SetRect)
 
@@ -88,4 +93,12 @@
 @property (nonatomic, readonly) CGFloat middleY;
 @property (nonatomic, readonly) CGPoint middlePoint;
 
+/*-----------
+ * iPhone X *
+ -----------*/
+
+@property (class, nonatomic, readonly) CGFloat additionaliPhoneXBottomSafeHeight;
+@property (class, nonatomic, readonly) CGFloat additionaliPhoneXTopSafeHeight;
+
 @end
+
