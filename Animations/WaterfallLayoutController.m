@@ -15,6 +15,7 @@
 #import "NSString+MD5.h"
 #import "FileManager.h"
 #import "DuitangPicModel.h"
+#import "UIView+SetRect.h"
 
 static NSString *cellIdentifier   = @"WaterfallCell";
 static NSString *headerIdentifier = @"WaterfallHeader";
@@ -60,7 +61,12 @@ static NSString *footerIdentifier = @"WaterfallFooter";
     // Adjust iOS 11.0
     if (@available(iOS 11.0, *)) {
         
-        _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;        
+        _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        
+        if (iPhoneX) {
+            
+            _collectionView.contentInset = UIEdgeInsetsMake(UIView.additionaliPhoneXTopSafeHeight, 0, UIView.additionaliPhoneXBottomSafeHeight, 0);
+        }
     }
     
     // 注册cell以及HeaderView，FooterView

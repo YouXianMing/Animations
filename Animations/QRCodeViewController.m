@@ -138,7 +138,7 @@
                     [lightButton setImage:image forState:UIControlStateNormal];
                     [lightButton addTarget:self action:@selector(buttonEvent:) forControlEvents:UIControlEventTouchUpInside];
                     [lightButton.imageView setContentMode:UIViewContentModeCenter];
-                    [subEffectiveView addSubview:lightButton];
+                    [subEffectiveView.contentView addSubview:lightButton];
                     
                     self.lightButton       = lightButton;
                     self.lightButton.alpha = 0.f;

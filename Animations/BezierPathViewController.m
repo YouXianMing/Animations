@@ -39,7 +39,8 @@
         scale = 0.8f;
     }
     
-    self.backgroundView.backgroundColor = [UIColor blackColor];
+    self.backgroundView.backgroundColor  = [UIColor blackColor];
+    self.contentView.layer.masksToBounds = YES;
     
     // Used as background.
     {

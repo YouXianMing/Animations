@@ -125,34 +125,30 @@ typedef enum : NSUInteger {
     [super setupSubViews];
     
     // Title label.
-    UILabel *headlinelabel      = [UILabel new];
-    headlinelabel.font          = [UIFont HeitiSCWithFontSize:20.f];
-    headlinelabel.textAlignment = NSTextAlignmentCenter;
-    headlinelabel.textColor     = [UIColor cyanColor];
-    headlinelabel.text          = self.title;
-    [headlinelabel sizeToFit];
+    UILabel *titleLabel      = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, Width, 64.f)];
+    titleLabel.font          = [UIFont HeitiSCWithFontSize:20.f];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.textColor     = [UIColor cyanColor];
+    titleLabel.text          = self.title;
     
-    headlinelabel.center = self.titleView.middlePoint;
-    
-    FBShimmeringView *shimmeringView           = [[FBShimmeringView alloc] initWithFrame:self.titleView.bounds];
+    FBShimmeringView *shimmeringView           = [[FBShimmeringView alloc] initWithFrame:titleLabel.bounds];
     shimmeringView.shimmering                  = YES;
     shimmeringView.shimmeringBeginFadeDuration = 0.3;
     shimmeringView.shimmeringOpacity           = 0.1f;
     shimmeringView.shimmeringAnimationOpacity  = 1.f;
+    shimmeringView.bottom                      = self.titleView.height;
+    shimmeringView.contentView                 = titleLabel;
     [self.titleView addSubview:shimmeringView];
     
-    shimmeringView.contentView = headlinelabel;
-    
     // Line.
-    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, self.view.width, 0.5f)];
+    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, self.titleView.height - 0.5, self.view.width, 0.5f)];
     line.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.25f];
     [self.titleView addSubview:line];
-    [self.titleView addSubview:headlinelabel];
     
     // Back button.
     UIImage  *image      = [UIImage imageNamed:@"backIconVer2"];
     UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 64)];
-    backButton.center    = CGPointMake(20, self.titleView.middleY);
+    backButton.center    = CGPointMake(20, shimmeringView.centerY);
     [backButton setImage:image forState:UIControlStateNormal];
     [backButton addTarget:self action:@selector(popSelf) forControlEvents:UIControlEventTouchUpInside];
     [backButton.imageView setContentMode:UIViewContentModeCenter];

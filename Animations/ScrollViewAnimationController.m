@@ -44,7 +44,7 @@ typedef enum : NSUInteger {
     self.scrollView.delegate                       = self;
     [self.contentView addSubview:self.scrollView];
     
-    self.titlesContentView                        = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, TabbarHeight)];
+    self.titlesContentView                        = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, TabbarHeight + UIView.additionaliPhoneXBottomSafeHeight)];
     self.titlesContentView.backgroundColor        = [[UIColor blackColor] colorWithAlphaComponent:0.65f];
     self.titlesContentView.bottom                 = self.contentView.height;
     [self.contentView addSubview:self.titlesContentView];
@@ -67,7 +67,7 @@ typedef enum : NSUInteger {
         [self.contentView addSubview:imageView];
         
         // Setup TitleViews.
-        ScrollTitleView *titleView = [[ScrollTitleView alloc] initWithFrame:CGRectMake(i * Width / 3.f, 0, Width / 3.f, self.titlesContentView.height)];
+        ScrollTitleView *titleView = [[ScrollTitleView alloc] initWithFrame:CGRectMake(i * Width / 3.f, 0, Width / 3.f, self.titlesContentView.height - UIView.additionaliPhoneXBottomSafeHeight)];
         titleView.title            = self.titles[i];
         titleView.tag              = kTitleViewTag + i;
         [titleView buildSubViews];
