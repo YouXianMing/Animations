@@ -90,6 +90,10 @@ static NSString *infoHeadFlag = @"ClassHeaderView";
     self.tableView.showsHorizontalScrollIndicator = NO;
     self.tableView.showsVerticalScrollIndicator   = NO;
     
+    self.tableView.estimatedRowHeight           = 0.f;
+    self.tableView.estimatedSectionFooterHeight = 0.f;
+    self.tableView.estimatedSectionHeaderHeight = 0.f;
+    
     [self.tableView registerClass:[StudentInfoCell class] forCellReuseIdentifier:infoCellFlag];
     [self.tableView registerClass:[ClassHeaderView class] forHeaderFooterViewReuseIdentifier:infoHeadFlag];
     
@@ -197,6 +201,7 @@ static NSString *infoHeadFlag = @"ClassHeaderView";
             
             [indexPaths addObject:[NSIndexPath indexPathForItem:i inSection:section]];
         }
+        
         [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
         
     } else {
@@ -210,6 +215,7 @@ static NSString *infoHeadFlag = @"ClassHeaderView";
             
             [indexPaths addObject:[NSIndexPath indexPathForItem:i inSection:section]];
         }
+        
         [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
     }
 }

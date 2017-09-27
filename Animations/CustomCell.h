@@ -104,6 +104,11 @@
  */
 - (void)selectedEvent;
 
+/**
+ *  Used for delegate event.
+ */
+- (void)delegateEvent;
+
 #pragma mark - Constructor method.
 
 /**

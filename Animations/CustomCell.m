@@ -40,6 +40,14 @@
     
 }
 
+- (void)delegateEvent {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(customCell:event:)]) {
+        
+        [self.delegate customCell:self event:self.data];
+    }
+}
+
 + (CGFloat)cellHeightWithData:(id)data {
     
     return 0.f;
