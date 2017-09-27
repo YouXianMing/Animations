@@ -40,7 +40,7 @@
         self.timeoutInterval = @(5.f);
         
         // 默认GET请求
-        self.method = kYXNetworkingGET;
+        self.method = kNetworkingGET;
     }
     
     return self;
@@ -89,7 +89,7 @@
         [self.networkingInfo showMessage];
     }
     
-    if /* GET */ (self.method == kYXNetworkingGET) {
+    if /* GET */ (self.method == kNetworkingGET) {
         
         self.isRunning              = YES;
         __weak Networking *weakSelf = self;
@@ -128,7 +128,7 @@
                                       }
                                   }];
         
-    } /* POST */ else if (self.method == kYXNetworkingPOST) {
+    } /* POST */ else if (self.method == kNetworkingPOST) {
         
         self.isRunning              = YES;
         __weak Networking *weakSelf = self;
@@ -167,7 +167,7 @@
                                        }
                                    }];
         
-    } /* UPLOAD */ else if (self.method == kYXNetworkingUPLOAD) {
+    } /* UPLOAD */ else if (self.method == kNetworkingUPLOAD) {
         
         self.isRunning              = YES;
         __weak Networking *weakSelf = self;
@@ -221,7 +221,7 @@
 
 + (instancetype)networkingWithUrlString:(NSString *)urlString
                        requestParameter:(id)requestParameter
-                                 method:(EYXNetworkingMethod)method
+                                 method:(ENetworkingMethod)method
              requestParameterSerializer:(RequestParameterSerializer *)requestParameterSerializer
                  responseDataSerializer:(ResponseDataSerializer *)responseDataSerializer
               constructingBodyWithBlock:(ConstructingBodyBlock)constructingBodyBlock
@@ -229,7 +229,7 @@
                                     tag:(NSInteger)tag
                                delegate:(id <NetworkingDelegate>)delegate
                       requestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer
-                     ResponseSerializer:(AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer {
+                     responseSerializer:(AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer {
     
     Networking *networking    = [[self class] new];
     networking.urlString        = urlString;

@@ -23,7 +23,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) NSString           *urlString;
 @property (nonatomic, strong) NSString           *functionName;
 @property (nonatomic)         NSInteger           tag;
-@property (nonatomic)         EYXNetworkingMethod method;
+@property (nonatomic)         ENetworkingMethod method;
 
 @end
 
@@ -36,7 +36,7 @@ static inline NetworkConfig *feed() {
     config.urlString      = [baseURL stringByAppendingString:@"/api/v1/feed"];
     config.functionName   = @"豌豆荚图片列表请求";
     config.tag            = kFeed;
-    config.method         = kYXNetworkingGET;
+    config.method         = kNetworkingGET;
     
     return config;
 }

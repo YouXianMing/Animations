@@ -28,7 +28,7 @@
                                                              tag:config.tag
                                                         delegate:delegate
                                                requestSerializer:[AFHTTPRequestSerializer serializer]
-                                              ResponseSerializer:[AFJSONResponseSerializer serializer]];
+                                              responseSerializer:[AFJSONResponseSerializer serializer]];
     
     networking.serviceInfo    = config.functionName;
     networking.networkingInfo = [NetworkingInfo new];

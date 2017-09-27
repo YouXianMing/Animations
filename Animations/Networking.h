@@ -20,11 +20,11 @@ typedef void (^UploadProgressBlock)(NSProgress *uploadProgress);
 
 typedef enum : NSUInteger {
     
-    kYXNetworkingGET,
-    kYXNetworkingPOST,
-    kYXNetworkingUPLOAD,
+    kNetworkingGET,
+    kNetworkingPOST,
+    kNetworkingUPLOAD,
     
-} EYXNetworkingMethod;
+} ENetworkingMethod;
 
 @protocol NetworkingDelegate <NSObject>
 
@@ -63,7 +63,7 @@ typedef enum : NSUInteger {
 /**
  *  请求类型设置,默认值为GET请求
  */
-@property (nonatomic) EYXNetworkingMethod method;
+@property (nonatomic) ENetworkingMethod method;
 
 /**
  *  网络请求地址（空网址直接崩溃）
@@ -210,7 +210,7 @@ typedef enum : NSUInteger {
  */
 + (instancetype)networkingWithUrlString:(NSString *)urlString
                        requestParameter:(id)requestParameter
-                                 method:(EYXNetworkingMethod)method
+                                 method:(ENetworkingMethod)method
              requestParameterSerializer:(RequestParameterSerializer *)requestParameterSerializer
                  responseDataSerializer:(ResponseDataSerializer *)responseDataSerializer
               constructingBodyWithBlock:(ConstructingBodyBlock)constructingBodyBlock
@@ -218,6 +218,6 @@ typedef enum : NSUInteger {
                                     tag:(NSInteger)tag
                                delegate:(id <NetworkingDelegate>)delegate
                       requestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer
-                     ResponseSerializer:(AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer;
+                     responseSerializer:(AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer;
 
 @end

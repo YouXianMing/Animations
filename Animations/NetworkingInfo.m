@@ -16,15 +16,15 @@
     NSString *method = nil;
     switch (self.networking.method) {
             
-        case kYXNetworkingGET:
+        case kNetworkingGET:
             method = @"GET";
             break;
             
-        case kYXNetworkingPOST:
+        case kNetworkingPOST:
             method = @"POST";
             break;
             
-        case kYXNetworkingUPLOAD:
+        case kNetworkingUPLOAD:
             method = @"UPLOAD";
             break;
             
