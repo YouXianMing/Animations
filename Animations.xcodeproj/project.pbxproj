@@ -431,6 +431,10 @@
 		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
 		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
 		C582E8181D2FB089003433EC /* CalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E8171D2FB089003433EC /* CalendarEvent.m */; };
+		C5876F121F949E8700CF4278 /* LineLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5876F111F949E8700CF4278 /* LineLayoutViewController.m */; };
+		C5876F1B1F949EC400CF4278 /* LineLayoutCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5876F151F949EC300CF4278 /* LineLayoutCollectionViewCell.m */; };
+		C5876F1C1F949EC400CF4278 /* LineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5876F181F949EC300CF4278 /* LineLayout.m */; };
+		C5876F1D1F949EC400CF4278 /* ComplexLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5876F1A1F949EC400CF4278 /* ComplexLineLayout.m */; };
 		C58978C11D38CD3A000B7D1C /* CollectionGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978BC1D38CD3A000B7D1C /* CollectionGridView.m */; };
 		C58978C21D38CD3A000B7D1C /* CustomCollectionGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978BE1D38CD3A000B7D1C /* CustomCollectionGridViewCell.m */; };
 		C58978C31D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978C01D38CD3A000B7D1C /* CollectionGridCellDataAdapter.m */; };
@@ -1367,6 +1371,15 @@
 		C582E7971D2F4184003433EC /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
 		C582E8161D2FB089003433EC /* CalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEvent.h; sourceTree = "<group>"; };
 		C582E8171D2FB089003433EC /* CalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarEvent.m; sourceTree = "<group>"; };
+		C5876F101F949E8700CF4278 /* LineLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineLayoutViewController.h; sourceTree = "<group>"; };
+		C5876F111F949E8700CF4278 /* LineLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineLayoutViewController.m; sourceTree = "<group>"; };
+		C5876F141F949EC200CF4278 /* LineLayoutCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineLayoutCollectionViewCell.h; sourceTree = "<group>"; };
+		C5876F151F949EC300CF4278 /* LineLayoutCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineLayoutCollectionViewCell.m; sourceTree = "<group>"; };
+		C5876F161F949EC300CF4278 /* LineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineLayout.h; sourceTree = "<group>"; };
+		C5876F171F949EC300CF4278 /* ComplexLineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplexLineLayout.h; sourceTree = "<group>"; };
+		C5876F181F949EC300CF4278 /* LineLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineLayout.m; sourceTree = "<group>"; };
+		C5876F191F949EC300CF4278 /* ComplexLineLayout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ComplexLineLayout.png; sourceTree = "<group>"; };
+		C5876F1A1F949EC400CF4278 /* ComplexLineLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplexLineLayout.m; sourceTree = "<group>"; };
 		C58978BB1D38CD3A000B7D1C /* CollectionGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionGridView.h; sourceTree = "<group>"; };
 		C58978BC1D38CD3A000B7D1C /* CollectionGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionGridView.m; sourceTree = "<group>"; };
 		C58978BD1D38CD3A000B7D1C /* CustomCollectionGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionGridViewCell.h; sourceTree = "<group>"; };
@@ -2328,6 +2341,7 @@
 				C57C8D801F5CEDCA00F62803 /* CustomPickerViewController */,
 				C52A3CB41F67827F00C2F862 /* CustomCityPickerViewController */,
 				C5DAC1A11F661FB7000D2F91 /* SKEmitterNodeController */,
+				C5876F131F949EA400CF4278 /* LineLayoutViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -3859,6 +3873,22 @@
 			name = CalendarEvent;
 			sourceTree = "<group>";
 		};
+		C5876F131F949EA400CF4278 /* LineLayoutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C5876F101F949E8700CF4278 /* LineLayoutViewController.h */,
+				C5876F111F949E8700CF4278 /* LineLayoutViewController.m */,
+				C5876F161F949EC300CF4278 /* LineLayout.h */,
+				C5876F181F949EC300CF4278 /* LineLayout.m */,
+				C5876F171F949EC300CF4278 /* ComplexLineLayout.h */,
+				C5876F1A1F949EC400CF4278 /* ComplexLineLayout.m */,
+				C5876F191F949EC300CF4278 /* ComplexLineLayout.png */,
+				C5876F141F949EC200CF4278 /* LineLayoutCollectionViewCell.h */,
+				C5876F151F949EC300CF4278 /* LineLayoutCollectionViewCell.m */,
+			);
+			name = LineLayoutViewController;
+			sourceTree = "<group>";
+		};
 		C58B1A901F4C12AA00B681E1 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -4287,6 +4317,7 @@
 				10E2D5081CD5DC4500666EEB /* FontListCell.m in Sources */,
 				10E2D4EC1CD5962000666EEB /* SDWebImageDecoder.m in Sources */,
 				102B1F351C60E66F00A8FD40 /* UserModel.m in Sources */,
+				C5876F121F949E8700CF4278 /* LineLayoutViewController.m in Sources */,
 				104F0D081BFAFB4E00C46E6A /* RGBColor.m in Sources */,
 				10A34F691C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.m in Sources */,
 				108A993F1C0FF3B400B693F6 /* NormalRotateAnimationType.m in Sources */,
@@ -4477,6 +4508,7 @@
 				C52A3CC11F67851D00C2F862 /* PickerCityModel.m in Sources */,
 				1011BADA1CD48C8D00F29FB9 /* CreateModel.m in Sources */,
 				1096061F1C93B46800CCB3AD /* AbsNetworkingIndicator.m in Sources */,
+				C5876F1C1F949EC400CF4278 /* LineLayout.m in Sources */,
 				103088B71C05880B00C8B623 /* Math.m in Sources */,
 				105F3FED1CB7B6B1007B02C7 /* ShowTextModel.m in Sources */,
 				C5792EE61F4743B3000B0D1B /* ResponseDataSerializer.m in Sources */,
@@ -4516,6 +4548,7 @@
 				1051890C1D0A65DE00F606FB /* NSObject+PropertiesInfomation.m in Sources */,
 				1048F6F01C28D56B0052F1DD /* MDScratchImageView.mm in Sources */,
 				C516F83F1ECA94B000A418C8 /* ControllerBaseViewConfig.m in Sources */,
+				C5876F1D1F949EC400CF4278 /* ComplexLineLayout.m in Sources */,
 				C51B11B61F52A2D600EBF6A0 /* ItemManagerModel.m in Sources */,
 				10381FBD1BF9B55B00E5E476 /* POPMath.mm in Sources */,
 				C50E75811F4E6D6800EB9819 /* UIView+DrawRect.m in Sources */,
@@ -4566,6 +4599,7 @@
 				10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */,
 				104CD3031CDAD4AE00C836E6 /* FlowStyleCell.m in Sources */,
 				106249981C2785630090AD65 /* EmitterSnowController.m in Sources */,
+				C5876F1B1F949EC400CF4278 /* LineLayoutCollectionViewCell.m in Sources */,
 				101EA3EE1C489C2E00D5D487 /* DateFormatter.m in Sources */,
 				1041AE991CEC5AE4005697B8 /* BaseControl.m in Sources */,
 				102B1F2F1C60E66F00A8FD40 /* HashtagsModel.m in Sources */,
