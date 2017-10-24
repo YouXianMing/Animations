@@ -411,6 +411,7 @@
 		C57526CC1D5032690064F6CD /* DrawingStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C71D5032690064F6CD /* DrawingStyle.m */; };
 		C57526CD1D5032690064F6CD /* DrawingColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C91D5032690064F6CD /* DrawingColor.m */; };
 		C57526D01D50327F0064F6CD /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526CF1D50327F0064F6CD /* WaveView.m */; };
+		C57693521F9ED1A600491005 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57693511F9ED1A600491005 /* CustomViewController.m */; };
 		C5792EE31F4743B3000B0D1B /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EDC1F4743B3000B0D1B /* Networking.m */; };
 		C5792EE41F4743B3000B0D1B /* NetworkingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EDE1F4743B3000B0D1B /* NetworkingInfo.m */; };
 		C5792EE51F4743B3000B0D1B /* RequestParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EE01F4743B3000B0D1B /* RequestParameterSerializer.m */; };
@@ -1331,6 +1332,8 @@
 		C57526C91D5032690064F6CD /* DrawingColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingColor.m; sourceTree = "<group>"; };
 		C57526CE1D50327F0064F6CD /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
 		C57526CF1D50327F0064F6CD /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
+		C57693501F9ED1A600491005 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		C57693511F9ED1A600491005 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		C5792EDB1F4743B3000B0D1B /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		C5792EDC1F4743B3000B0D1B /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		C5792EDD1F4743B3000B0D1B /* NetworkingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingInfo.h; sourceTree = "<group>"; };
@@ -2248,8 +2251,7 @@
 				C5F8FE821ECC27B600377E01 /* FullTitleController.m */,
 				C5F8FE7E1ECC260A00377E01 /* FullTitleVisualEffectController.h */,
 				C5F8FE7F1ECC260A00377E01 /* FullTitleVisualEffectController.m */,
-				C55F55FA1F0B96BA008F0910 /* BaseCustomViewController */,
-				C55F55FB1F0B96DE008F0910 /* CustomTabBarViewController */,
+				C55F55FA1F0B96BA008F0910 /* CustomViewController */,
 				C55F55FC1F0B96E8008F0910 /* BaseCustomNavigationController */,
 			);
 			name = CustomControllers;
@@ -3669,17 +3671,14 @@
 			name = CountDownButton;
 			sourceTree = "<group>";
 		};
-		C55F55FA1F0B96BA008F0910 /* BaseCustomViewController */ = {
+		C55F55FA1F0B96BA008F0910 /* CustomViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C516F8371ECA949500A418C8 /* BaseCustomViewController.h */,
-				C516F8381ECA949500A418C8 /* BaseCustomViewController.m */,
-				C516F83A1ECA94B000A418C8 /* ShowLoadingView.h */,
-				C516F83B1ECA94B000A418C8 /* ShowLoadingView.m */,
-				C516F83C1ECA94B000A418C8 /* ControllerBaseViewConfig.h */,
-				C516F83D1ECA94B000A418C8 /* ControllerBaseViewConfig.m */,
+				C57693501F9ED1A600491005 /* CustomViewController.h */,
+				C57693511F9ED1A600491005 /* CustomViewController.m */,
+				C57693531F9ED33600491005 /* BaseCustomViewController - Manual layout */,
 			);
-			name = BaseCustomViewController;
+			name = CustomViewController;
 			sourceTree = "<group>";
 		};
 		C55F55FB1F0B96DE008F0910 /* CustomTabBarViewController */ = {
@@ -3781,6 +3780,20 @@
 				C57526CF1D50327F0064F6CD /* WaveView.m */,
 			);
 			name = WaveView;
+			sourceTree = "<group>";
+		};
+		C57693531F9ED33600491005 /* BaseCustomViewController - Manual layout */ = {
+			isa = PBXGroup;
+			children = (
+				C516F8371ECA949500A418C8 /* BaseCustomViewController.h */,
+				C516F8381ECA949500A418C8 /* BaseCustomViewController.m */,
+				C516F83A1ECA94B000A418C8 /* ShowLoadingView.h */,
+				C516F83B1ECA94B000A418C8 /* ShowLoadingView.m */,
+				C516F83C1ECA94B000A418C8 /* ControllerBaseViewConfig.h */,
+				C516F83D1ECA94B000A418C8 /* ControllerBaseViewConfig.m */,
+				C55F55FB1F0B96DE008F0910 /* CustomTabBarViewController */,
+			);
+			name = "BaseCustomViewController - Manual layout";
 			sourceTree = "<group>";
 		};
 		C5792EDA1F4743A1000B0D1B /* Networking */ = {
@@ -4542,6 +4555,7 @@
 				102B1F2D1C60E66F00A8FD40 /* DescriptionModel.m in Sources */,
 				C50E75801F4E6D6800EB9819 /* CGContextManager.m in Sources */,
 				B5D0119F1C0BE33E0075BC2E /* StudentModel.m in Sources */,
+				C57693521F9ED1A600491005 /* CustomViewController.m in Sources */,
 				C5EFF2741F14C46700BD5AF0 /* MASViewAttribute.m in Sources */,
 				1047E2341CC5AF5400E13D1C /* LazyFadeInViewController.m in Sources */,
 				C54553641E1CD7CA00A5BA58 /* ScrollCarouselView.m in Sources */,
