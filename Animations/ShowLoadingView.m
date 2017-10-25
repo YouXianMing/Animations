@@ -20,10 +20,25 @@
     
     if (self = [super initWithFrame:frame]) {
     
-        self.count = 0;
+        [self setup];
     }
     
     return self;
+}
+
+- (instancetype)init {
+    
+    if (self = [super init]) {
+    
+        [self setup];
+    }
+    
+    return self;
+}
+
+- (void)setup {
+    
+    self.count = 0;
 }
 
 - (void)push {
