@@ -381,6 +381,7 @@
 		C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */; };
 		C5525D681E03DCAB00929C52 /* ControllerPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */; };
 		C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */; };
+		C554435C1FA2D29900BA7AEE /* AutolayoutPlaceholderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C554435B1FA2D29900BA7AEE /* AutolayoutPlaceholderImageView.m */; };
 		C55661C81F32CDFC0092ACA4 /* MathematicalComputation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661C51F32CDFC0092ACA4 /* MathematicalComputation.m */; };
 		C55661C91F32CDFC0092ACA4 /* ComputationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661C71F32CDFC0092ACA4 /* ComputationStrategy.m */; };
 		C55661FF1F3312540092ACA4 /* InfiniteLoopCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661FE1F3312540092ACA4 /* InfiniteLoopCollectionView.m */; };
@@ -1272,6 +1273,8 @@
 		C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerPushAnimator.m; sourceTree = "<group>"; };
 		C5525D691E03DEFE00929C52 /* AnimationsListViewNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationsListViewNavigationController.h; sourceTree = "<group>"; };
 		C5525D6A1E03DEFE00929C52 /* AnimationsListViewNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationsListViewNavigationController.m; sourceTree = "<group>"; };
+		C554435A1FA2D29800BA7AEE /* AutolayoutPlaceholderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutolayoutPlaceholderImageView.h; sourceTree = "<group>"; };
+		C554435B1FA2D29900BA7AEE /* AutolayoutPlaceholderImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutolayoutPlaceholderImageView.m; sourceTree = "<group>"; };
 		C55661C41F32CDFC0092ACA4 /* MathematicalComputation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathematicalComputation.h; sourceTree = "<group>"; };
 		C55661C51F32CDFC0092ACA4 /* MathematicalComputation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathematicalComputation.m; sourceTree = "<group>"; };
 		C55661C61F32CDFC0092ACA4 /* ComputationStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputationStrategy.h; sourceTree = "<group>"; };
@@ -3584,6 +3587,8 @@
 			children = (
 				C532B20E1E13A664004C7499 /* PlaceholderImageView.h */,
 				C532B20F1E13A664004C7499 /* PlaceholderImageView.m */,
+				C554435A1FA2D29800BA7AEE /* AutolayoutPlaceholderImageView.h */,
+				C554435B1FA2D29900BA7AEE /* AutolayoutPlaceholderImageView.m */,
 			);
 			name = PlaceholderImageView;
 			sourceTree = "<group>";
@@ -4480,6 +4485,7 @@
 				1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */,
 				102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */,
 				C56812341D757621006E6C49 /* IrregularGridCellDataAdapter.m in Sources */,
+				C554435C1FA2D29900BA7AEE /* AutolayoutPlaceholderImageView.m in Sources */,
 				C57C8D901F5CEE2000F62803 /* PickerCustomView.m in Sources */,
 				1011BB001CD495F200F29FB9 /* AES256EncryptMode.m in Sources */,
 				1011BAA11CD4898D00F29FB9 /* ProviderModel.m in Sources */,
