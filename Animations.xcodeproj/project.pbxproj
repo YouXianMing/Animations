@@ -429,12 +429,14 @@
 		C57C8D971F5CEED800F62803 /* CategoryInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D951F5CEED800F62803 /* CategoryInfoView.m */; };
 		C57C8D9D1F5D28D700F62803 /* BaseUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D9C1F5D28D700F62803 /* BaseUserDefaults.m */; };
 		C57C8DA11F5D291D00F62803 /* CustomPickerViewControllerUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8DA01F5D291D00F62803 /* CustomPickerViewControllerUserDefaults.m */; };
+		C57FE1EB1FA6BF86000876F9 /* LineLayoutData.json in Resources */ = {isa = PBXBuildFile; fileRef = C57FE1EA1FA6BF86000876F9 /* LineLayoutData.json */; };
+		C57FE1EE1FA6C340000876F9 /* LineLayoutCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57FE1ED1FA6C340000876F9 /* LineLayoutCollectionViewCell.m */; };
 		C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7911D2F40DF003433EC /* QRCodeViewController.m */; };
 		C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7951D2F4184003433EC /* VideoDeviceAuthorization.m */; };
 		C582E7991D2F4184003433EC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E7971D2F4184003433EC /* QRCodeView.m */; };
 		C582E8181D2FB089003433EC /* CalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C582E8171D2FB089003433EC /* CalendarEvent.m */; };
 		C5876F121F949E8700CF4278 /* LineLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5876F111F949E8700CF4278 /* LineLayoutViewController.m */; };
-		C5876F1B1F949EC400CF4278 /* LineLayoutCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5876F151F949EC300CF4278 /* LineLayoutCollectionViewCell.m */; };
+		C5876F1B1F949EC400CF4278 /* LineLayoutCollectionViewDebugCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5876F151F949EC300CF4278 /* LineLayoutCollectionViewDebugCell.m */; };
 		C5876F1C1F949EC400CF4278 /* LineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5876F181F949EC300CF4278 /* LineLayout.m */; };
 		C5876F1D1F949EC400CF4278 /* ComplexLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5876F1A1F949EC400CF4278 /* ComplexLineLayout.m */; };
 		C58978C11D38CD3A000B7D1C /* CollectionGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58978BC1D38CD3A000B7D1C /* CollectionGridView.m */; };
@@ -1369,6 +1371,9 @@
 		C57C8D9C1F5D28D700F62803 /* BaseUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUserDefaults.m; sourceTree = "<group>"; };
 		C57C8D9F1F5D291D00F62803 /* CustomPickerViewControllerUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerViewControllerUserDefaults.h; sourceTree = "<group>"; };
 		C57C8DA01F5D291D00F62803 /* CustomPickerViewControllerUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerViewControllerUserDefaults.m; sourceTree = "<group>"; };
+		C57FE1EA1FA6BF86000876F9 /* LineLayoutData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LineLayoutData.json; sourceTree = "<group>"; };
+		C57FE1EC1FA6C340000876F9 /* LineLayoutCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineLayoutCollectionViewCell.h; sourceTree = "<group>"; };
+		C57FE1ED1FA6C340000876F9 /* LineLayoutCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineLayoutCollectionViewCell.m; sourceTree = "<group>"; };
 		C582E7901D2F40DF003433EC /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		C582E7911D2F40DF003433EC /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		C582E7941D2F4184003433EC /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
@@ -1379,8 +1384,8 @@
 		C582E8171D2FB089003433EC /* CalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarEvent.m; sourceTree = "<group>"; };
 		C5876F101F949E8700CF4278 /* LineLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineLayoutViewController.h; sourceTree = "<group>"; };
 		C5876F111F949E8700CF4278 /* LineLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineLayoutViewController.m; sourceTree = "<group>"; };
-		C5876F141F949EC200CF4278 /* LineLayoutCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineLayoutCollectionViewCell.h; sourceTree = "<group>"; };
-		C5876F151F949EC300CF4278 /* LineLayoutCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineLayoutCollectionViewCell.m; sourceTree = "<group>"; };
+		C5876F141F949EC200CF4278 /* LineLayoutCollectionViewDebugCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineLayoutCollectionViewDebugCell.h; sourceTree = "<group>"; };
+		C5876F151F949EC300CF4278 /* LineLayoutCollectionViewDebugCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineLayoutCollectionViewDebugCell.m; sourceTree = "<group>"; };
 		C5876F161F949EC300CF4278 /* LineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineLayout.h; sourceTree = "<group>"; };
 		C5876F171F949EC300CF4278 /* ComplexLineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplexLineLayout.h; sourceTree = "<group>"; };
 		C5876F181F949EC300CF4278 /* LineLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineLayout.m; sourceTree = "<group>"; };
@@ -3901,8 +3906,11 @@
 				C5876F171F949EC300CF4278 /* ComplexLineLayout.h */,
 				C5876F1A1F949EC400CF4278 /* ComplexLineLayout.m */,
 				C5876F191F949EC300CF4278 /* ComplexLineLayout.png */,
-				C5876F141F949EC200CF4278 /* LineLayoutCollectionViewCell.h */,
-				C5876F151F949EC300CF4278 /* LineLayoutCollectionViewCell.m */,
+				C5876F141F949EC200CF4278 /* LineLayoutCollectionViewDebugCell.h */,
+				C5876F151F949EC300CF4278 /* LineLayoutCollectionViewDebugCell.m */,
+				C57FE1EC1FA6C340000876F9 /* LineLayoutCollectionViewCell.h */,
+				C57FE1ED1FA6C340000876F9 /* LineLayoutCollectionViewCell.m */,
+				C57FE1EA1FA6BF86000876F9 /* LineLayoutData.json */,
 			);
 			name = LineLayoutViewController;
 			sourceTree = "<group>";
@@ -4179,6 +4187,7 @@
 				C51B11BC1F52A2F400EBF6A0 /* liwushuo.json in Resources */,
 				1011BAE21CD48C8D00F29FB9 /* NodeModelViewControllerBack_next@3x.png in Resources */,
 				1011BAE11CD48C8D00F29FB9 /* NodeModelViewControllerBack_black@3x.png in Resources */,
+				C57FE1EB1FA6BF86000876F9 /* LineLayoutData.json in Resources */,
 				C52A3CB61F67841000C2F862 /* city.json in Resources */,
 				C5DAC1A91F661FE1000D2F91 /* Magic.sks in Resources */,
 				10381F5D1BF9B44A00E5E476 /* Assets.xcassets in Resources */,
@@ -4611,6 +4620,7 @@
 				C5F9E82D1F4A8C8F004B6198 /* ResponseDataManager.m in Sources */,
 				C5E7760D1F2580F900C304A1 /* TreeStructureTableViewController.m in Sources */,
 				C5525D6B1E03DEFE00929C52 /* AnimationsListViewNavigationController.m in Sources */,
+				C57FE1EE1FA6C340000876F9 /* LineLayoutCollectionViewCell.m in Sources */,
 				10D4F60D1C41532100D056EB /* PressAnimationButtonController.m in Sources */,
 				10381FE11BF9DE6E00E5E476 /* GCDSemaphore.m in Sources */,
 				C54553531E1CD69F00A5BA58 /* ScrollCarouselViewController.m in Sources */,
@@ -4619,7 +4629,7 @@
 				10A67C5A1C12D4BA00C3E505 /* CGContextObject.m in Sources */,
 				104CD3031CDAD4AE00C836E6 /* FlowStyleCell.m in Sources */,
 				106249981C2785630090AD65 /* EmitterSnowController.m in Sources */,
-				C5876F1B1F949EC400CF4278 /* LineLayoutCollectionViewCell.m in Sources */,
+				C5876F1B1F949EC400CF4278 /* LineLayoutCollectionViewDebugCell.m in Sources */,
 				101EA3EE1C489C2E00D5D487 /* DateFormatter.m in Sources */,
 				1041AE991CEC5AE4005697B8 /* BaseControl.m in Sources */,
 				102B1F2F1C60E66F00A8FD40 /* HashtagsModel.m in Sources */,

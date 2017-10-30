@@ -1,9 +1,9 @@
 //
 //  LineLayoutCollectionViewCell.h
-//  UICollectionViewLayoutExample
+//  Animations
 //
-//  Created by YouXianMing on 2017/7/13.
-//  Copyright © 2017年 TechCode. All rights reserved.
+//  Created by YouXianMing on 2017/10/30.
+//  Copyright © 2017年 YouXianMing. All rights reserved.
 //
 
 #import "BaseCustomCollectionCell.h"

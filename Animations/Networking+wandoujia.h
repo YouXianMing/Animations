@@ -23,7 +23,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) NSString           *urlString;
 @property (nonatomic, strong) NSString           *functionName;
 @property (nonatomic)         NSInteger           tag;
-@property (nonatomic)         ENetworkingMethod method;
+@property (nonatomic)         ENetworkingMethod   method;
 
 @end
 
