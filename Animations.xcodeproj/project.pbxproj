@@ -463,6 +463,8 @@
 		C59608CF1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */; };
 		C5AB56781E1B8106003B388F /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AB56771E1B8106003B388F /* AlertView.m */; };
 		C5B457821DE7D9CA002363AC /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B457811DE7D9CA002363AC /* ShapeView.m */; };
+		C5C1E6C11FA80DE10023B8F4 /* DynamicSwitchingLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C1E6C01FA80DE00023B8F4 /* DynamicSwitchingLayoutController.m */; };
+		C5C1E6C51FA80FD60023B8F4 /* DynamicSwitchingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C1E6C41FA80FD60023B8F4 /* DynamicSwitchingCell.m */; };
 		C5C5AFE01DD558F900F35EB8 /* IrregularGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFDF1DD558F900F35EB8 /* IrregularGridViewController.m */; };
 		C5C5AFE41DD55F1400F35EB8 /* IrregularPictureGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE31DD55F1400F35EB8 /* IrregularPictureGridCell.m */; };
 		C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE61DD56C7700F35EB8 /* BlueIrregularGridViewCell.m */; };
@@ -1442,6 +1444,10 @@
 		C5AB56771E1B8106003B388F /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
 		C5B457801DE7D9CA002363AC /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
 		C5B457811DE7D9CA002363AC /* ShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeView.m; sourceTree = "<group>"; };
+		C5C1E6BF1FA80DE00023B8F4 /* DynamicSwitchingLayoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicSwitchingLayoutController.h; sourceTree = "<group>"; };
+		C5C1E6C01FA80DE00023B8F4 /* DynamicSwitchingLayoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicSwitchingLayoutController.m; sourceTree = "<group>"; };
+		C5C1E6C31FA80FD60023B8F4 /* DynamicSwitchingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicSwitchingCell.h; sourceTree = "<group>"; };
+		C5C1E6C41FA80FD60023B8F4 /* DynamicSwitchingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicSwitchingCell.m; sourceTree = "<group>"; };
 		C5C5AFDE1DD558F900F35EB8 /* IrregularGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularGridViewController.h; sourceTree = "<group>"; };
 		C5C5AFDF1DD558F900F35EB8 /* IrregularGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularGridViewController.m; sourceTree = "<group>"; };
 		C5C5AFE21DD55F1400F35EB8 /* IrregularPictureGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularPictureGridCell.h; sourceTree = "<group>"; };
@@ -2352,6 +2358,7 @@
 				C52A3CB41F67827F00C2F862 /* CustomCityPickerViewController */,
 				C5DAC1A11F661FB7000D2F91 /* SKEmitterNodeController */,
 				C5876F131F949EA400CF4278 /* LineLayoutViewController */,
+				C5C1E6C21FA80DE70023B8F4 /* DynamicSwitchingLayoutController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -3982,6 +3989,17 @@
 			name = TableGridView;
 			sourceTree = "<group>";
 		};
+		C5C1E6C21FA80DE70023B8F4 /* DynamicSwitchingLayoutController */ = {
+			isa = PBXGroup;
+			children = (
+				C5C1E6BF1FA80DE00023B8F4 /* DynamicSwitchingLayoutController.h */,
+				C5C1E6C01FA80DE00023B8F4 /* DynamicSwitchingLayoutController.m */,
+				C5C1E6C31FA80FD60023B8F4 /* DynamicSwitchingCell.h */,
+				C5C1E6C41FA80FD60023B8F4 /* DynamicSwitchingCell.m */,
+			);
+			name = DynamicSwitchingLayoutController;
+			sourceTree = "<group>";
+		};
 		C5C5AFE11DD55E7B00F35EB8 /* IrregularGridViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -4376,6 +4394,7 @@
 				C57526CC1D5032690064F6CD /* DrawingStyle.m in Sources */,
 				C58B1AB91F4C12AA00B681E1 /* AFAutoPurgingImageCache.m in Sources */,
 				C52A3CC41F67852900C2F862 /* PickerAreaModel.m in Sources */,
+				C5C1E6C51FA80FD60023B8F4 /* DynamicSwitchingCell.m in Sources */,
 				104CD3091CDAD4B700C836E6 /* GridManager.m in Sources */,
 				C50E75841F4E6D6900EB9819 /* UIBezierPath+Interpolation.m in Sources */,
 				10E2D50E1CD5DE0400666EEB /* FontInfoModel.m in Sources */,
@@ -4428,6 +4447,7 @@
 				1096061B1C93B46800CCB3AD /* RequestBodyType.m in Sources */,
 				10E2D4F21CD5962000666EEB /* UIImage+GIF.m in Sources */,
 				1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */,
+				C5C1E6C11FA80DE10023B8F4 /* DynamicSwitchingLayoutController.m in Sources */,
 				1011BADC1CD48C8D00F29FB9 /* NodeModelCell.m in Sources */,
 				C50E75871F4E6DF200EB9819 /* StudyInfoCell.m in Sources */,
 				1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */,

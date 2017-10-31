@@ -76,5 +76,6 @@
 #import "CustomCityPickerViewController.h"
 #import "SKEmitterNodeController.h"
 #import "LineLayoutViewController.h"
+#import "DynamicSwitchingLayoutController.h"
 
 #endif /* ControllersHeader_h */

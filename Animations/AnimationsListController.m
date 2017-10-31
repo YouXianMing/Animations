@@ -237,7 +237,8 @@
                        [Item itemWithName:@"自定义PickerView" object:[CustomPickerViewController class]],
                        [Item itemWithName:@"城市选择器" object:[CustomCityPickerViewController class]],
                        [Item itemWithName:@"SKEmitterNode的使用" object:[SKEmitterNodeController class]],
-                       [Item itemWithName:@"LineLayout" object:[LineLayoutViewController class]],];
+                       [Item itemWithName:@"LineLayout" object:[LineLayoutViewController class]],
+                       [Item itemWithName:@"动态切换Layout" object:[DynamicSwitchingLayoutController class]],];
     
     
     
