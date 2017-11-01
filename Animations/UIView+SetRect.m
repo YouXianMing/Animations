@@ -171,12 +171,12 @@
 
 + (CGFloat)additionaliPhoneXBottomSafeHeight {
     
-    return 24.f;
+    return 34.f;
 }
 
 + (CGFloat)additionaliPhoneXTopSafeHeight {
     
-    return 20.f;
+    return 44.f;
 }
 
 @end
