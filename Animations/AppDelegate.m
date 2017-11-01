@@ -17,7 +17,7 @@
     /*
      Swift version Animations - https://github.com/YouXianMing/Swift-Animations
      
-     Lateast no warning version : Xcode 9.0 (9A235)
+     Lateast no warning version : Xcode 9.1 (9B55)
      
      QQ    705786299
      Email YouXianMing1987@126.com
@@ -25,9 +25,6 @@
      http://www.cnblogs.com/YouXianMing/
      https://github.com/YouXianMing
      https://github.com/YouXianMing/YoCelsius
-     
-     AppStore : https://itunes.apple.com/us/app/yocelsius/id967721892?l=zh&ls=1&mt=8
-     Video    : http://my.jikexueyuan.com/YouXianMing/record/
      */
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

@@ -238,12 +238,11 @@
                        [Item itemWithName:@"城市选择器" object:[CustomCityPickerViewController class]],
                        [Item itemWithName:@"SKEmitterNode的使用" object:[SKEmitterNodeController class]],
                        [Item itemWithName:@"LineLayout" object:[LineLayoutViewController class]],
-                       [Item itemWithName:@"动态切换Layout" object:[DynamicSwitchingLayoutController class]],];
-    
-    
+                       [Item itemWithName:@"动态切换Layout" object:[DynamicSwitchingLayoutController class]],
+                       // [Item itemWithName:@"信息输入" object:[InfoInputViewController class]],
+                       ];
     
     self.items = [NSMutableArray array];
-    
     for (int i = 0; i < array.count; i++) {
         
         Item *item = array[i];

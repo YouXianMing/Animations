@@ -77,5 +77,6 @@
 #import "SKEmitterNodeController.h"
 #import "LineLayoutViewController.h"
 #import "DynamicSwitchingLayoutController.h"
+#import "InfoInputViewController.h"
 
 #endif /* ControllersHeader_h */

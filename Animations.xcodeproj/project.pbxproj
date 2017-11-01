@@ -315,6 +315,11 @@
 		C501F2241F0C8BDB0051B4C6 /* CountDownButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2231F0C8BDB0051B4C6 /* CountDownButtonController.m */; };
 		C501F2271F0C8CC80051B4C6 /* RedCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2261F0C8CC80051B4C6 /* RedCountDownButton.m */; };
 		C501F2511F0CC4000051B4C6 /* RegexManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C501F2501F0CC4000051B4C6 /* RegexManager.m */; };
+		C50270ED1FA9674200833758 /* InfoInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50270EC1FA9674200833758 /* InfoInputViewController.m */; };
+		C50270F21FA96A1E00833758 /* ResponsibilityChain.m in Sources */ = {isa = PBXBuildFile; fileRef = C50270F11FA96A1E00833758 /* ResponsibilityChain.m */; };
+		C50270F51FA96BEB00833758 /* ResponsibilityMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C50270F41FA96BEB00833758 /* ResponsibilityMessage.m */; };
+		C50270F81FA96CB400833758 /* ResponsibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C50270F71FA96CB400833758 /* ResponsibilityManager.m */; };
+		C50270FB1FA96D8000833758 /* NSObject+ResponsibilityChain.m in Sources */ = {isa = PBXBuildFile; fileRef = C50270FA1FA96D8000833758 /* NSObject+ResponsibilityChain.m */; };
 		C503B3671E1B422600967A61 /* BaseMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C503B3661E1B422600967A61 /* BaseMessageView.m */; };
 		C503B36A1E1B468F00967A61 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C503B3691E1B468F00967A61 /* MessageView.m */; };
 		C50E75731F4E6CB200EB9819 /* DrawRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E75721F4E6CB200EB9819 /* DrawRectViewController.m */; };
@@ -1148,6 +1153,16 @@
 		C501F2261F0C8CC80051B4C6 /* RedCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedCountDownButton.m; sourceTree = "<group>"; };
 		C501F24F1F0CC4000051B4C6 /* RegexManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexManager.h; sourceTree = "<group>"; };
 		C501F2501F0CC4000051B4C6 /* RegexManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexManager.m; sourceTree = "<group>"; };
+		C50270EB1FA9674200833758 /* InfoInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoInputViewController.h; sourceTree = "<group>"; };
+		C50270EC1FA9674200833758 /* InfoInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoInputViewController.m; sourceTree = "<group>"; };
+		C50270F01FA96A1E00833758 /* ResponsibilityChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponsibilityChain.h; sourceTree = "<group>"; };
+		C50270F11FA96A1E00833758 /* ResponsibilityChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponsibilityChain.m; sourceTree = "<group>"; };
+		C50270F31FA96BEB00833758 /* ResponsibilityMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponsibilityMessage.h; sourceTree = "<group>"; };
+		C50270F41FA96BEB00833758 /* ResponsibilityMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponsibilityMessage.m; sourceTree = "<group>"; };
+		C50270F61FA96CB400833758 /* ResponsibilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponsibilityManager.h; sourceTree = "<group>"; };
+		C50270F71FA96CB400833758 /* ResponsibilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponsibilityManager.m; sourceTree = "<group>"; };
+		C50270F91FA96D8000833758 /* NSObject+ResponsibilityChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ResponsibilityChain.h"; sourceTree = "<group>"; };
+		C50270FA1FA96D8000833758 /* NSObject+ResponsibilityChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ResponsibilityChain.m"; sourceTree = "<group>"; };
 		C503B3651E1B422600967A61 /* BaseMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMessageView.h; sourceTree = "<group>"; };
 		C503B3661E1B422600967A61 /* BaseMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMessageView.m; sourceTree = "<group>"; };
 		C503B3681E1B468F00967A61 /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
@@ -1715,6 +1730,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C50270EF1FA96A0000833758 /* ResponsibilityChain */,
 				C5792EDA1F4743A1000B0D1B /* Networking */,
 				C50E75751F4E6D5D00EB9819 /* CGContextManager */,
 				C54CB91A1F31B67600DFFE15 /* NSArray+IndexPath */,
@@ -2359,6 +2375,7 @@
 				C5DAC1A11F661FB7000D2F91 /* SKEmitterNodeController */,
 				C5876F131F949EA400CF4278 /* LineLayoutViewController */,
 				C5C1E6C21FA80DE70023B8F4 /* DynamicSwitchingLayoutController */,
+				C50270EE1FA9674900833758 /* InfoInputViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -3382,6 +3399,30 @@
 				C501F2501F0CC4000051B4C6 /* RegexManager.m */,
 			);
 			name = RegexManager;
+			sourceTree = "<group>";
+		};
+		C50270EE1FA9674900833758 /* InfoInputViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C50270EB1FA9674200833758 /* InfoInputViewController.h */,
+				C50270EC1FA9674200833758 /* InfoInputViewController.m */,
+			);
+			name = InfoInputViewController;
+			sourceTree = "<group>";
+		};
+		C50270EF1FA96A0000833758 /* ResponsibilityChain */ = {
+			isa = PBXGroup;
+			children = (
+				C50270F61FA96CB400833758 /* ResponsibilityManager.h */,
+				C50270F71FA96CB400833758 /* ResponsibilityManager.m */,
+				C50270F01FA96A1E00833758 /* ResponsibilityChain.h */,
+				C50270F11FA96A1E00833758 /* ResponsibilityChain.m */,
+				C50270F31FA96BEB00833758 /* ResponsibilityMessage.h */,
+				C50270F41FA96BEB00833758 /* ResponsibilityMessage.m */,
+				C50270F91FA96D8000833758 /* NSObject+ResponsibilityChain.h */,
+				C50270FA1FA96D8000833758 /* NSObject+ResponsibilityChain.m */,
+			);
+			name = ResponsibilityChain;
 			sourceTree = "<group>";
 		};
 		C503B3641E1B421600967A61 /* BaseMessageView */ = {
@@ -4444,6 +4485,7 @@
 				C56B3A6D1F2830A400133AC0 /* UIView+DebugFrame.m in Sources */,
 				106BCFCB1CDC6787007C3EEE /* CustomNodeStateView.m in Sources */,
 				C501F2191F0C7DE90051B4C6 /* AttributedStringConfig.m in Sources */,
+				C50270F51FA96BEB00833758 /* ResponsibilityMessage.m in Sources */,
 				1096061B1C93B46800CCB3AD /* RequestBodyType.m in Sources */,
 				10E2D4F21CD5962000666EEB /* UIImage+GIF.m in Sources */,
 				1030887A1C0414A000C8B623 /* MoreInfoView.m in Sources */,
@@ -4454,6 +4496,7 @@
 				C52A3CBE1F67851000C2F862 /* PickerProvinceModel.m in Sources */,
 				1047E23D1CC5AF8400E13D1C /* LazyFadeInLayer.m in Sources */,
 				108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */,
+				C50270FB1FA96D8000833758 /* NSObject+ResponsibilityChain.m in Sources */,
 				C58B1ABA1F4C12AA00B681E1 /* AFImageDownloader.m in Sources */,
 				102B1F2E1C60E66F00A8FD40 /* EntitiesModel.m in Sources */,
 				102B1F2C1C60E66F00A8FD40 /* DataModel.m in Sources */,
@@ -4502,6 +4545,7 @@
 				1011BAA31CD4898D00F29FB9 /* WanDouJiaModel.m in Sources */,
 				109606201C93B46800CCB3AD /* AbsNetworkingReachability.m in Sources */,
 				C5EFF2771F14C46700BD5AF0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				C50270F81FA96CB400833758 /* ResponsibilityManager.m in Sources */,
 				10E2D4EF1CD5962000666EEB /* SDWebImageManager.m in Sources */,
 				1030886A1C03F1A000C8B623 /* easing.c in Sources */,
 				C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */,
@@ -4551,6 +4595,7 @@
 				C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */,
 				102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */,
 				C50E75921F4EA05500EB9819 /* InterpolationTypeCell.m in Sources */,
+				C50270F21FA96A1E00833758 /* ResponsibilityChain.m in Sources */,
 				C50E758D1F4E6FB900EB9819 /* StudyInfoModel.m in Sources */,
 				1057021B1CF6D9D9003B10C6 /* BaseControlViewController.m in Sources */,
 				C52A3CC11F67851D00C2F862 /* PickerCityModel.m in Sources */,
@@ -4571,6 +4616,7 @@
 				1011BADB1CD48C8D00F29FB9 /* NodeModel.m in Sources */,
 				10FDF9CC1CA50AED00871B45 /* UIView+AnimationsListViewController.m in Sources */,
 				C5159D301F2F2AC500AF92E3 /* NormalTitleTableViewController.m in Sources */,
+				C50270ED1FA9674200833758 /* InfoInputViewController.m in Sources */,
 				C58B1ABF1F4C12AA00B681E1 /* UIProgressView+AFNetworking.m in Sources */,
 				106BCFC01CDC672A007C3EEE /* InfiniteLoopViewController.m in Sources */,
 				100252C91CBC780100722169 /* ReplicatorLineAnimationView.m in Sources */,

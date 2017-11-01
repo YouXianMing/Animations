@@ -101,4 +101,3 @@
 @property (class, nonatomic, readonly) CGFloat additionaliPhoneXTopSafeHeight;
 
 @end
-
