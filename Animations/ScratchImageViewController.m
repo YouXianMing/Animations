@@ -10,6 +10,7 @@
 #import "MDScratchImageView.h"
 #import "UIView+SetRect.h"
 #import "UIImage+ImageEffects.h"
+#import "UIView+AnimationProperty.h"
 
 @interface ScratchImageViewController ()
 
@@ -24,18 +25,21 @@
     self.titleView.backgroundColor       = [UIColor whiteColor];
     self.contentView.layer.masksToBounds = YES;
     
-    UIImage *image = [UIImage imageNamed:@"1"];
+    UIImage *image            = [UIImage imageNamed:@"1"];
+    UIView  *imageContentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+    imageContentView.scale    = MAX(Height / image.size.height, Width / image.size.width);
+    imageContentView.center   = self.contentView.middlePoint;
+    [self.contentView addSubview:imageContentView];
     
     // 背景图片
-    UIImageView *blurImageView = [[UIImageView alloc] initWithFrame:(CGRect){CGPointZero, image.size}];
+    UIImageView *blurImageView = [[UIImageView alloc] initWithFrame:imageContentView.bounds];
     blurImageView.image        = image;
-    blurImageView.center       = self.contentView.middlePoint;
-    [self.contentView addSubview:blurImageView];
+    [imageContentView addSubview:blurImageView];
     
     // 被刮的图片
-    MDScratchImageView *scratchImageView = [[MDScratchImageView alloc] initWithFrame:blurImageView.frame];
+    MDScratchImageView *scratchImageView = [[MDScratchImageView alloc] initWithFrame:imageContentView.bounds];
     [scratchImageView setImage:[image blurImage] radius:20.f];
-    [self.contentView addSubview:scratchImageView];
+    [imageContentView addSubview:scratchImageView];
 }
 
 @end
