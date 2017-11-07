@@ -374,6 +374,8 @@
 		C52A3CD11F67C74500C2F862 /* PickerAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A3CD01F67C74500C2F862 /* PickerAreaView.m */; };
 		C52C64431E246AAD00624A3D /* AlertViewCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C52C64421E246AAD00624A3D /* AlertViewCollectionCell.m */; };
 		C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C532B20F1E13A664004C7499 /* PlaceholderImageView.m */; };
+		C53BE9BB1FB15DBB0002F28B /* PNG.m in Sources */ = {isa = PBXBuildFile; fileRef = C53BE9B71FB15DBA0002F28B /* PNG.m */; };
+		C53BE9BC1FB15DBB0002F28B /* PNGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C53BE9BA1FB15DBB0002F28B /* PNGManager.m */; };
 		C54553531E1CD69F00A5BA58 /* ScrollCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553521E1CD69F00A5BA58 /* ScrollCarouselViewController.m */; };
 		C545535C1E1CD76E00A5BA58 /* iCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553571E1CD76E00A5BA58 /* iCarouselView.m */; };
 		C545535D1E1CD76E00A5BA58 /* iCarouselAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553591E1CD76E00A5BA58 /* iCarouselAdapter.m */; };
@@ -1268,6 +1270,10 @@
 		C52C64421E246AAD00624A3D /* AlertViewCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewCollectionCell.m; sourceTree = "<group>"; };
 		C532B20E1E13A664004C7499 /* PlaceholderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderImageView.h; sourceTree = "<group>"; };
 		C532B20F1E13A664004C7499 /* PlaceholderImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderImageView.m; sourceTree = "<group>"; };
+		C53BE9B71FB15DBA0002F28B /* PNG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNG.m; sourceTree = "<group>"; };
+		C53BE9B81FB15DBA0002F28B /* PNG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNG.h; sourceTree = "<group>"; };
+		C53BE9B91FB15DBA0002F28B /* PNGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGManager.h; sourceTree = "<group>"; };
+		C53BE9BA1FB15DBB0002F28B /* PNGManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNGManager.m; sourceTree = "<group>"; };
 		C54553511E1CD69F00A5BA58 /* ScrollCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollCarouselViewController.h; sourceTree = "<group>"; };
 		C54553521E1CD69F00A5BA58 /* ScrollCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollCarouselViewController.m; sourceTree = "<group>"; };
 		C54553561E1CD76E00A5BA58 /* iCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarouselView.h; sourceTree = "<group>"; };
@@ -1730,6 +1736,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C53BE9B61FB15D5B0002F28B /* IconMaker */,
 				C50270EF1FA96A0000833758 /* ResponsibilityChain */,
 				C5792EDA1F4743A1000B0D1B /* Networking */,
 				C50E75751F4E6D5D00EB9819 /* CGContextManager */,
@@ -3646,6 +3653,17 @@
 			name = PlaceholderImageView;
 			sourceTree = "<group>";
 		};
+		C53BE9B61FB15D5B0002F28B /* IconMaker */ = {
+			isa = PBXGroup;
+			children = (
+				C53BE9B81FB15DBA0002F28B /* PNG.h */,
+				C53BE9B71FB15DBA0002F28B /* PNG.m */,
+				C53BE9B91FB15DBA0002F28B /* PNGManager.h */,
+				C53BE9BA1FB15DBB0002F28B /* PNGManager.m */,
+			);
+			name = IconMaker;
+			sourceTree = "<group>";
+		};
 		C54553541E1CD6B100A5BA58 /* ScrollCarouselViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -4408,6 +4426,7 @@
 				10A34F691C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.m in Sources */,
 				108A993F1C0FF3B400B693F6 /* NormalRotateAnimationType.m in Sources */,
 				C56812331D757621006E6C49 /* CustomIrregularGridViewCell.m in Sources */,
+				C53BE9BC1FB15DBB0002F28B /* PNGManager.m in Sources */,
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
 				C56851C71DE6CBE3000F18C2 /* HeaderIconCell.m in Sources */,
 				C52A3CB31F67827600C2F862 /* CustomCityPickerViewController.m in Sources */,
@@ -4558,6 +4577,7 @@
 				1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */,
 				102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */,
 				C56812341D757621006E6C49 /* IrregularGridCellDataAdapter.m in Sources */,
+				C53BE9BB1FB15DBB0002F28B /* PNG.m in Sources */,
 				C554435C1FA2D29900BA7AEE /* AutolayoutPlaceholderImageView.m in Sources */,
 				C57C8D901F5CEE2000F62803 /* PickerCustomView.m in Sources */,
 				1011BB001CD495F200F29FB9 /* AES256EncryptMode.m in Sources */,

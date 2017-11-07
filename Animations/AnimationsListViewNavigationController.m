@@ -23,7 +23,7 @@
     
     // LaunchImage
     UIImageView *iconImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    iconImageView.image        = [AppleSystemService launchImage];
+    iconImageView.image        = AppleSystemService.launchImage;
     [self.view addSubview:iconImageView];
     
     // Do animation
