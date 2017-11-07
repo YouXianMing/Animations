@@ -21,7 +21,6 @@
     pngsBlock(pngs);
     
     NSString *path = filePath(@"~/Documents/");
-    
     [pngs enumerateObjectsUsingBlock:^(PNG *png, NSUInteger idx, BOOL * _Nonnull stop) {
         
         NSMutableString *file = [NSMutableString string];
@@ -33,7 +32,12 @@
         NSString *newString  = [trimString replacingWithPattern:@" +" template:@"_"];
         
         // 拼接文件名
-        [file appendFormat:@"%@_%.0fpt", newString, png.basePt];
+        [file appendFormat:@"%@_%.1fpt", newString, png.basePt];
+        if ([file existWithRegexPattern:@"[.]0pt$"]) {
+            
+            [file replaceCharactersInRange:NSMakeRange(file.length - 4, 4) withString:@"pt"];
+        }
+        
         if (png.multiply <= 1) {
             
             [file appendString:@".png"];
@@ -49,10 +53,17 @@
                                                                                            png.basePt * png.multiply)]);
         
         // 写文件
-        [imageData writeToFile:[path stringByAppendingString:file] atomically:YES];
+        if ([imageData writeToFile:[path stringByAppendingString:file] atomically:YES]) {
+            
+            NSLog(@"[OK] %@", file);
+            
+        } else {
+            
+            NSLog(@"[ERROR] %@", file);
+        }
     }];
     
-    NSLog(@"\n生成文件所在路径:\n%@", path);
+    NSLog(@"生成文件所在路径:\n%@", path);
 }
 
 + (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize {
@@ -75,3 +86,4 @@
 }
 
 @end
+
