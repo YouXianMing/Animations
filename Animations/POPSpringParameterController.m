@@ -43,7 +43,7 @@
 
 - (void)initSecondLabel {
     
-    self.secondsLabel                = [[UILabel alloc] initWithFrame:CGRectMake(10, 10 + 64 + UIView.additionaliPhoneXTopSafeHeight, 100, 20)];
+    self.secondsLabel                = [[UILabel alloc] initWithFrame:CGRectMake(10, 10 + 64 + (iPhoneX ? UIView.additionaliPhoneXTopSafeHeight : 0), 100, 20)];
     self.secondsLabel.attributedText = [self stringWithFloat:0.f];
     [self.contentView addSubview:self.secondsLabel];
 }
@@ -70,7 +70,7 @@
 
 - (void)initButton {
     
-    CGFloat gap = Height - 60 - 40*4 - 64;
+    CGFloat gap = Height - 60 - 40 * 4 - 64;
     
     CGFloat width                    = 100.f;
     self.showView                    = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, width, width)];

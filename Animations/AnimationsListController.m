@@ -278,7 +278,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [(CustomCell *)[tableView cellForRowAtIndexPath:indexPath] selectedEvent];
+    [tableView selectedEventAtIndexPath:indexPath];
 }
 
 #pragma mark - CustomCellDelegate.

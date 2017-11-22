@@ -56,14 +56,6 @@
     }
 }
 
-- (void)selectedEvent {
-
-    if (self.delegate && [self.delegate respondsToSelector:@selector(customCell:event:)]) {
-        
-        [self.delegate customCell:self event:self.data];
-    }
-}
-
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
 
     [super setHighlighted:highlighted animated:animated];

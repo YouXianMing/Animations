@@ -38,6 +38,7 @@
 
 - (void)selectedEvent {
     
+    [self delegateEvent];
 }
 
 - (void)delegateEvent {
@@ -239,6 +240,15 @@
 - (CGFloat)cellHeightWithAdapter:(CellDataAdapter *)adapter {
     
     return adapter.cellHeight;
+}
+
+- (void)selectedEventAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CustomCell *cell = [self cellForRowAtIndexPath:indexPath];
+    if ([cell isKindOfClass:[CustomCell class]]) {
+        
+        [cell selectedEvent];
+    }
 }
 
 @end

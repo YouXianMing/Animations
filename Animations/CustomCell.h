@@ -313,4 +313,6 @@
 
 - (CGFloat)cellHeightWithAdapter:(CellDataAdapter *)adapter;
 
+- (void)selectedEventAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
