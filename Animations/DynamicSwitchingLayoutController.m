@@ -66,7 +66,8 @@ static CGFloat       itemCount = 3.f;
     
     [super setupSubViews];
     
-    UIButton *button             = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200.f, self.titleView.height)];
+    UIButton *button             = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200.f, StatusBarAndNavigationBarHeight)];
+    button.bottom                = self.titleView.height;
     button.normalTitle           = @"切换";
     button.titleLabel.font       = [UIFont HeitiSCWithFontSize:16.f];
     button.normalTitleColor      = [UIColor colorWithRed:0.329  green:0.329  blue:0.329 alpha:1];
