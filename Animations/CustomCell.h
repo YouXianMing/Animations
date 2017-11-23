@@ -81,7 +81,7 @@
 - (void)loadContent;
 
 /**
- *  Calculate the cell's from data, overwrite by subclass.
+ *  Calculate the cell's height from data, overwrite by subclass.
  *
  *  @param data Data.
  *
