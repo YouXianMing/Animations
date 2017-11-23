@@ -20,6 +20,7 @@
 #import "ControllerPopAnimator.h"
 #import "UIFont+Fonts.h"
 #import "UIView+SetRect.h"
+#import "NotificationEvent.h"
 #import "ControllersHeader.h"
 
 @interface AnimationsListController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate, CustomCellDelegate>
@@ -84,10 +85,10 @@
 #pragma mark - configNotificationCenter
 
 - (void)configNotificationCenter {
-        
+    
     self.notificationCenter = [DefaultNotificationCenter defaultNotificationCenterWithDelegate:self addNotificationNames:^(NSMutableArray<NSString *> *names) {
         
-        [names addObject:noti_showHomePageTableView];
+        [names addObject:NotificationEvent.ShowHomePageTableView];
     }];
 }
 
@@ -95,7 +96,7 @@
 
 - (void)defaultNotificationCenter:(DefaultNotificationCenter *)notification name:(NSString *)name object:(id)object {
     
-    if ([name isEqualToString:noti_showHomePageTableView]) {
+    if ([name isEqualToString:NotificationEvent.ShowHomePageTableView]) {
         
         [GCDQueue executeInMainQueue:^{
             
@@ -112,13 +113,13 @@
     
     if (iPhoneX) {
         
-        CGFloat realHeight = 64 + UIView.additionaliPhoneXTopSafeHeight;
+        CGFloat iPhoneXHeight = StatusBarAndNavigationBarHeight + UIView.additionaliPhoneXTopSafeHeight;
         
         ControllerBaseViewConfig *titleViewConfig = viewsConfig[titleViewId];
         ControllerBaseViewConfig *contentViewConfig = viewsConfig[contentViewId];
         
-        titleViewConfig.frame   = CGRectMake(0, 0, Width, realHeight);
-        contentViewConfig.frame = CGRectMake(0, realHeight, Width, Height - realHeight);
+        titleViewConfig.frame   = CGRectMake(0, 0, Width, iPhoneXHeight);
+        contentViewConfig.frame = CGRectMake(0, iPhoneXHeight, Width, Height - iPhoneXHeight);
     }
 }
 
@@ -171,75 +172,71 @@
 
 - (void)configureDataSource {
     
-    NSArray *array = @[[Item itemWithName:@"POP-按钮动画" object:[ButtonPressViewController class]],
-                       [Item itemWithName:@"POP-Stroke动画" object:[PopStrokeController class]],
-                       [Item itemWithName:@"CAShapeLayer的path动画" object:[CAShapeLayerPathController class]],
-                       [Item itemWithName:@"图片碎片化mask动画" object:[TransformFadeViewController class]],
-                       [Item itemWithName:@"CAGradientLayer动画" object:[CAGradientViewController class]],
-                       [Item itemWithName:@"POP-数值动画" object:[PopNumberController class]],
-                       [Item itemWithName:@"Easing-圆环动画" object:[CircleAnimationViewController class]],
-                       [Item itemWithName:@"UIScrollView视差效果动画" object:[ScrollImageViewController class]],
-                       [Item itemWithName:@"UIScrollView视差模糊效果" object:[ScrollBlurImageViewController class]],
-                       [Item itemWithName:@"UITableView状态切换效果" object:[TableViewTapAnimationController class]],
-                       [Item itemWithName:@"POP-Spring动画参数详解" object:[POPSpringParameterController class]],
-                       [Item itemWithName:@"UITableView展开缩放动画" object:[HeaderViewTapAnimationController class]],
-                       [Item itemWithName:@"UITableView显示倒计时" object:[CountDownTimerController class]],
-                       [Item itemWithName:@"时钟动画效果" object:[ClockViewController class]],
-                       [Item itemWithName:@"绘制波形图动画" object:[DrawWaveViewController class]],
-                       [Item itemWithName:@"UILabel缩放动画" object:[LabelScaleViewController class]],
-                       [Item itemWithName:@"Facebook辉光动画" object:[ShimmerController class]],
-                       [Item itemWithName:@"粒子动画-雪花" object:[EmitterSnowController class]],
-                       [Item itemWithName:@"刮奖效果" object:[ScratchImageViewController class]],
-                       [Item itemWithName:@"图片切换效果" object:[LiveImageViewController class]],
-                       // [Item itemWithName:@"SDWebImage加载图片" object:[SDWebImageController class]],
-                       [Item itemWithName:@"抽象的AlertView" object:[AlertViewController class]],
-                       [Item itemWithName:@"瀑布流效果" object:[WaterfallLayoutController class]],
-                       [Item itemWithName:@"UILabel混色显示" object:[MixedColorProgressViewController class]],
-                       [Item itemWithName:@"翻页效果" object:[PageFlipEffectController class]],
-                       [Item itemWithName:@"CATransform3D m34" object:[CATransform3DM34Controller class]],
-                       [Item itemWithName:@"按钮特效" object:[PressAnimationButtonController class]],
-                       [Item itemWithName:@"心电图动画效果" object:[BezierPathViewController class]],
-                       [Item itemWithName:@"音乐波形图动画" object:[MusicBarAnimationController class]],
-                       [Item itemWithName:@"彩色进度条" object:[ColorProgressViewController class]],
-                       [Item itemWithName:@"果冻效果" object:[SpringEffectController class]],
-                       [Item itemWithName:@"CASpringAnimation" object:[CASpringAnimationController class]],
-                       [Item itemWithName:@"Additive属性动画" object:[AdditiveAnimationController class]],
-                       // [Item itemWithName:@"加载网络数据" object:[TableViewLoadDataController class]],
-                       [Item itemWithName:@"MotionEffect效果" object:[MotionEffectViewController class]],
-                       [Item itemWithName:@"加载GIF图片" object:[GifPictureController class]],
-                       [Item itemWithName:@"震动效果" object:[SCViewShakerController class]],
-                       [Item itemWithName:@"ScrollView动画" object:[ScrollViewAnimationController class]],
-                       [Item itemWithName:@"Cell点击动画" object:[TapCellAnimationController class]],
-                       // [Item itemWithName:@"TextKit简单示例" object:[TextKitLoadImageController class]],
-                       [Item itemWithName:@"线性重复动画" object:[ReplicatorLineViewController class]],
-                       [Item itemWithName:@"跑马灯效果" object:[DrawMarqueeViewController class]],
-                       [Item itemWithName:@"文本渐变动画效果" object:[LazyFadeInViewController class]],
-                       [Item itemWithName:@"Cell图片视差动画" object:[OffsetCellViewController class]],
-                       [Item itemWithName:@"系统字体列表" object:[SystemFontInfoController class]],
-                       [Item itemWithName:@"旋转木马效果" object:[iCarouselViewController class]],
-                       [Item itemWithName:@"水平方向瀑布流" object:[GridFlowLayoutViewController class]],
-                       [Item itemWithName:@"无限轮播图" object:[InfiniteLoopViewController class]],
-                       [Item itemWithName:@"BaseControl按钮合集" object:[BaseControlViewController class]],
-                       [Item itemWithName:@"POP-缩放" object:[SpringScaleViewController class]],
-                       [Item itemWithName:@"点击区域的绘制" object:[TapPathDrawViewController class]],
-                       [Item itemWithName:@"QR-Code" object:[QRCodeViewController class]],
-                       [Item itemWithName:@"不规则形状的Mask" object:[MaskShapeViewController class]],
-                       [Item itemWithName:@"水波纹效果" object:[WaterWaveViewController class]],
-                       [Item itemWithName:@"不规则GridCell" object:[IrregularGridViewController class]],
-                       [Item itemWithName:@"混合cell" object:[MixCellsViewController class]],
-                       [Item itemWithName:@"线性旋转木马" object:[ScrollCarouselViewController class]],
-                       [Item itemWithName:@"Load CSS" object:[LoadCSSViewController class]],
-                       [Item itemWithName:@"倒计时按钮" object:[CountDownButtonController class]],
-                       [Item itemWithName:@"定制的CollectionView" object:[CustomCollectionViewController class]],
-                       [Item itemWithName:@"树形结构cell" object:[TreeStructureTableViewController class]],
-                       [Item itemWithName:@"DrawRect" object:[DrawRectViewController class]],
-                       [Item itemWithName:@"级联菜单" object:[TwoLevelLinkageViewController class]],
-                       [Item itemWithName:@"自定义PickerView" object:[CustomPickerViewController class]],
-                       [Item itemWithName:@"城市选择器" object:[CustomCityPickerViewController class]],
-                       [Item itemWithName:@"SKEmitterNode的使用" object:[SKEmitterNodeController class]],
-                       [Item itemWithName:@"LineLayout" object:[LineLayoutViewController class]],
-                       [Item itemWithName:@"动态切换Layout" object:[DynamicSwitchingLayoutController class]],
-                       // [Item itemWithName:@"信息输入" object:[InfoInputViewController class]],
+    NSArray *array = @[[Item itemWithObject:[ButtonPressViewController         class]  name:@"POP-按钮动画"],
+                       [Item itemWithObject:[PopStrokeController               class]  name:@"POP-Stroke动画"],
+                       [Item itemWithObject:[CAShapeLayerPathController        class]  name:@"CAShapeLayer的path动画"],
+                       [Item itemWithObject:[TransformFadeViewController       class]  name:@"图片碎片化mask动画"],
+                       [Item itemWithObject:[CAGradientViewController          class]  name:@"CAGradientLayer动画"],
+                       [Item itemWithObject:[PopNumberController               class]  name:@"POP-数值动画"],
+                       [Item itemWithObject:[CircleAnimationViewController     class]  name:@"Easing-圆环动画"],
+                       [Item itemWithObject:[ScrollImageViewController         class]  name:@"UIScrollView视差效果动画"],
+                       [Item itemWithObject:[ScrollBlurImageViewController     class]  name:@"UIScrollView视差模糊效果"],
+                       [Item itemWithObject:[TableViewTapAnimationController   class]  name:@"UITableView状态切换效果"],
+                       [Item itemWithObject:[POPSpringParameterController      class]  name:@"POP-Spring动画参数详解"],
+                       [Item itemWithObject:[HeaderViewTapAnimationController  class]  name:@"UITableView展开缩放动画"],
+                       [Item itemWithObject:[CountDownTimerController          class]  name:@"UITableView显示倒计时"],
+                       [Item itemWithObject:[ClockViewController               class]  name:@"时钟动画效果"],
+                       [Item itemWithObject:[DrawWaveViewController            class]  name:@"绘制波形图动画"],
+                       [Item itemWithObject:[LabelScaleViewController          class]  name:@"UILabel缩放动画"],
+                       [Item itemWithObject:[ShimmerController                 class]  name:@"Facebook辉光动画"],
+                       [Item itemWithObject:[EmitterSnowController             class]  name:@"粒子动画-雪花"],
+                       [Item itemWithObject:[ScratchImageViewController        class]  name:@"刮奖效果"],
+                       [Item itemWithObject:[LiveImageViewController           class]  name:@"图片切换效果"],
+                       [Item itemWithObject:[AlertViewController               class]  name:@"抽象的AlertView"],
+                       [Item itemWithObject:[WaterfallLayoutController         class]  name:@"瀑布流效果"],
+                       [Item itemWithObject:[MixedColorProgressViewController  class]  name:@"UILabel混色显示"],
+                       [Item itemWithObject:[PageFlipEffectController          class]  name:@"翻页效果"],
+                       [Item itemWithObject:[CATransform3DM34Controller        class]  name:@"CATransform3D m34"],
+                       [Item itemWithObject:[PressAnimationButtonController    class]  name:@"按钮特效"],
+                       [Item itemWithObject:[BezierPathViewController          class]  name:@"心电图动画效果"],
+                       [Item itemWithObject:[MusicBarAnimationController       class]  name:@"音乐波形图动画"],
+                       [Item itemWithObject:[ColorProgressViewController       class]  name:@"彩色进度条"],
+                       [Item itemWithObject:[SpringEffectController            class]  name:@"果冻效果"],
+                       [Item itemWithObject:[CASpringAnimationController       class]  name:@"CASpringAnimation"],
+                       [Item itemWithObject:[AdditiveAnimationController       class]  name:@"Additive属性动画"],
+                       [Item itemWithObject:[MotionEffectViewController        class]  name:@"MotionEffect效果"],
+                       [Item itemWithObject:[GifPictureController              class]  name:@"加载GIF图片"],
+                       [Item itemWithObject:[SCViewShakerController            class]  name:@"震动效果"],
+                       [Item itemWithObject:[ScrollViewAnimationController     class]  name:@"ScrollView动画"],
+                       [Item itemWithObject:[TapCellAnimationController        class]  name:@"Cell点击动画"],
+                       [Item itemWithObject:[ReplicatorLineViewController      class]  name:@"线性重复动画"],
+                       [Item itemWithObject:[DrawMarqueeViewController         class]  name:@"跑马灯效果"],
+                       [Item itemWithObject:[LazyFadeInViewController          class]  name:@"文本渐变动画效果"],
+                       [Item itemWithObject:[OffsetCellViewController          class]  name:@"Cell图片视差动画"],
+                       [Item itemWithObject:[SystemFontInfoController          class]  name:@"系统字体列表"],
+                       [Item itemWithObject:[iCarouselViewController           class]  name:@"旋转木马效果"],
+                       [Item itemWithObject:[GridFlowLayoutViewController      class]  name:@"水平方向瀑布流"],
+                       [Item itemWithObject:[InfiniteLoopViewController        class]  name:@"无限轮播图"],
+                       [Item itemWithObject:[BaseControlViewController         class]  name:@"BaseControl按钮合集"],
+                       [Item itemWithObject:[SpringScaleViewController         class]  name:@"POP-缩放"],
+                       [Item itemWithObject:[TapPathDrawViewController         class]  name:@"点击区域的绘制"],
+                       [Item itemWithObject:[QRCodeViewController              class]  name:@"QR-Code"],
+                       [Item itemWithObject:[MaskShapeViewController           class]  name:@"不规则形状的Mask"],
+                       [Item itemWithObject:[WaterWaveViewController           class]  name:@"水波纹效果"],
+                       [Item itemWithObject:[IrregularGridViewController       class]  name:@"不规则GridCell"],
+                       [Item itemWithObject:[MixCellsViewController            class]  name:@"混合cell"],
+                       [Item itemWithObject:[ScrollCarouselViewController      class]  name:@"线性旋转木马"],
+                       [Item itemWithObject:[LoadCSSViewController             class]  name:@"Load CSS"],
+                       [Item itemWithObject:[CountDownButtonController         class]  name:@"倒计时按钮"],
+                       [Item itemWithObject:[CustomCollectionViewController    class]  name:@"定制的CollectionView"],
+                       [Item itemWithObject:[TreeStructureTableViewController  class]  name:@"树形结构cell"],
+                       [Item itemWithObject:[DrawRectViewController            class]  name:@"DrawRect"],
+                       [Item itemWithObject:[TwoLevelLinkageViewController     class]  name:@"级联菜单"],
+                       [Item itemWithObject:[CustomPickerViewController        class]  name:@"自定义PickerView"],
+                       [Item itemWithObject:[CustomCityPickerViewController    class]  name:@"城市选择器"],
+                       [Item itemWithObject:[SKEmitterNodeController           class]  name:@"SKEmitterNode的使用"],
+                       [Item itemWithObject:[LineLayoutViewController          class]  name:@"LineLayout"],
+                       [Item itemWithObject:[DynamicSwitchingLayoutController  class]  name:@"动态切换Layout"],
                        ];
     
     self.items = [NSMutableArray array];

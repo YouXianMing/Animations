@@ -27,6 +27,15 @@
     return item;
 }
 
++ (instancetype)itemWithObject:(id)object name:(NSString *)name {
+    
+    Item *item  = [[[self class] alloc] init];
+    item.name   = name;
+    item.object = object;
+    
+    return item;
+}
+
 - (void)createAttributedString {
 
     NSString *fullStirng = [NSString stringWithFormat:@"%02ld. %@", (long)self.index, self.name];

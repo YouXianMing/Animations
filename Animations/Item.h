@@ -14,6 +14,7 @@
 @property (nonatomic, strong) id        object;
 
 + (instancetype)itemWithName:(NSString *)name object:(id)object;
++ (instancetype)itemWithObject:(id)object name:(NSString *)name;
 
 @property (nonatomic)                   NSInteger index;
 @property (nonatomic, strong, readonly) NSMutableAttributedString *nameString;

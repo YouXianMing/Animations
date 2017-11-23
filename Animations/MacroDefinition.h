@@ -11,7 +11,9 @@
 
 #define _md_get_weakSelf() __weak typeof(self) weakSelf = self
 
-// Notification strings
-static NSString *noti_showHomePageTableView = @"noti_showHomePageTableView";
+// [Item itemWithName:@"SDWebImage加载图片" object:[SDWebImageController class]],
+// [Item itemWithName:@"加载网络数据" object:[TableViewLoadDataController class]],
+// [Item itemWithName:@"TextKit简单示例" object:[TextKitLoadImageController class]],
+// [Item itemWithName:@"信息输入" object:[InfoInputViewController class]],
 
 #endif /* MacroDefinition_h */

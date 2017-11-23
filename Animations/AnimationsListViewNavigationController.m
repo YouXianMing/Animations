@@ -10,6 +10,7 @@
 #import "AppleSystemService.h"
 #import "UIView+AnimationProperty.h"
 #import "DefaultNotificationCenter.h"
+#import "NotificationEvent.h"
 
 @interface AnimationsListViewNavigationController ()
 
@@ -34,7 +35,7 @@
         
     } completion:^(BOOL finished) {
         
-        [DefaultNotificationCenter postEventToNotificationName:noti_showHomePageTableView object:nil];
+        [DefaultNotificationCenter postEventToNotificationName:NotificationEvent.ShowHomePageTableView object:nil];
         [iconImageView removeFromSuperview];
     }];
 }

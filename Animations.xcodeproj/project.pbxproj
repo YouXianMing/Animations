@@ -63,7 +63,6 @@
 		102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296C41C392B1F001AF5BB /* LineBackgroundView.m */; };
 		102A0FFA1C92727200BF3F1B /* NSData+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 102A0FF61C92727200BF3F1B /* NSData+Godzippa.m */; };
 		102A0FFB1C92727200BF3F1B /* NSFileManager+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 102A0FF81C92727200BF3F1B /* NSFileManager+Godzippa.m */; };
-		102A10011C9272C100BF3F1B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 102A10001C9272C100BF3F1B /* libz.tbd */; };
 		102A10451C9808FF00BF3F1B /* AbsRequestParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 102A10441C9808FF00BF3F1B /* AbsRequestParameterSerializer.m */; };
 		102B1F041C60E26B00A8FD40 /* TableViewLoadDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B1F031C60E26B00A8FD40 /* TableViewLoadDataController.m */; };
 		102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B1F081C60E3D700A8FD40 /* UIScrollView+RefreshObject.m */; };
@@ -478,6 +477,7 @@
 		C5C5AFEA1DD56D7100F35EB8 /* RedIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE91DD56D7100F35EB8 /* RedIrregularGridViewCell.m */; };
 		C5C5AFEE1DD59D4F00F35EB8 /* UILabel+SizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */; };
 		C5C606341E1F7593004E8FDD /* CircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C606331E1F7593004E8FDD /* CircleLoadingView.m */; };
+		C5D0ABBE1FC66B65006BACFB /* NotificationEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D0ABBD1FC66B65006BACFB /* NotificationEvent.m */; };
 		C5DAC1A01F661FB3000D2F91 /* SKEmitterNodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC19F1F661FB3000D2F91 /* SKEmitterNodeController.m */; };
 		C5DAC1A71F661FE1000D2F91 /* ParticleSKView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC1A31F661FE1000D2F91 /* ParticleSKView.m */; };
 		C5DAC1A81F661FE1000D2F91 /* ParticleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC1A51F661FE1000D2F91 /* ParticleScene.m */; };
@@ -626,7 +626,6 @@
 		102A0FF71C92727200BF3F1B /* NSFileManager+Godzippa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Godzippa.h"; sourceTree = "<group>"; };
 		102A0FF81C92727200BF3F1B /* NSFileManager+Godzippa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Godzippa.m"; sourceTree = "<group>"; };
 		102A0FF91C92727200BF3F1B /* Godzippa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Godzippa.h; sourceTree = "<group>"; };
-		102A10001C9272C100BF3F1B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		102A10431C9808FF00BF3F1B /* AbsRequestParameterSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsRequestParameterSerializer.h; sourceTree = "<group>"; };
 		102A10441C9808FF00BF3F1B /* AbsRequestParameterSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsRequestParameterSerializer.m; sourceTree = "<group>"; };
 		102B1F021C60E26B00A8FD40 /* TableViewLoadDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewLoadDataController.h; sourceTree = "<group>"; };
@@ -1481,6 +1480,8 @@
 		C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SizeToFit.m"; sourceTree = "<group>"; };
 		C5C606321E1F7593004E8FDD /* CircleLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLoadingView.h; sourceTree = "<group>"; };
 		C5C606331E1F7593004E8FDD /* CircleLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLoadingView.m; sourceTree = "<group>"; };
+		C5D0ABBC1FC66B65006BACFB /* NotificationEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationEvent.h; sourceTree = "<group>"; };
+		C5D0ABBD1FC66B65006BACFB /* NotificationEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationEvent.m; sourceTree = "<group>"; };
 		C5DAC19E1F661FB3000D2F91 /* SKEmitterNodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKEmitterNodeController.h; sourceTree = "<group>"; };
 		C5DAC19F1F661FB3000D2F91 /* SKEmitterNodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKEmitterNodeController.m; sourceTree = "<group>"; };
 		C5DAC1A21F661FE1000D2F91 /* ParticleSKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSKView.h; sourceTree = "<group>"; };
@@ -1562,7 +1563,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				102A10011C9272C100BF3F1B /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1955,14 +1955,6 @@
 			name = "NSData+GZip";
 			sourceTree = "<group>";
 		};
-		102A10021C9272ED00BF3F1B /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				102A10001C9272C100BF3F1B /* libz.tbd */,
-			);
-			name = Libs;
-			sourceTree = "<group>";
-		};
 		102B1F051C60E28200A8FD40 /* TableViewLoadDataController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2182,14 +2174,13 @@
 		10381F501BF9B44A00E5E476 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				102A10021C9272ED00BF3F1B /* Libs */,
-				10381F5C1BF9B44A00E5E476 /* Assets.xcassets */,
-				10381F611BF9B44A00E5E476 /* Info.plist */,
 				10381F511BF9B44A00E5E476 /* main.m */,
-				10381F741BF9B4E800E5E476 /* Animations.pch */,
-				105EFAF71C42878F00394044 /* SimpleNSLog.h */,
-				C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */,
-				10381F761BF9B4F800E5E476 /* HYQiHei-25JF.otf */,
+				C5D0ABBB1FC66A84006BACFB /* macroDefinition */,
+				C5D0ABBA1FC66A76006BACFB /* plist */,
+				C5D0ABB91FC66A6C006BACFB /* image */,
+				C5D0ABB81FC66A4E006BACFB /* log */,
+				C5D0ABB71FC66A41006BACFB /* pch */,
+				C5D0ABB61FC66A2F006BACFB /* fonts */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -3325,6 +3316,8 @@
 				10FDF9CB1CA50AED00871B45 /* UIView+AnimationsListViewController.m */,
 				C559EE731DE6D733006C7DAC /* UIColor+ForPublicUse.h */,
 				C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */,
+				C5D0ABBC1FC66B65006BACFB /* NotificationEvent.h */,
+				C5D0ABBD1FC66B65006BACFB /* NotificationEvent.m */,
 			);
 			name = "Disposable-Tools";
 			sourceTree = "<group>";
@@ -4083,6 +4076,54 @@
 			name = "UILabel+Category";
 			sourceTree = "<group>";
 		};
+		C5D0ABB61FC66A2F006BACFB /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				10381F761BF9B4F800E5E476 /* HYQiHei-25JF.otf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		C5D0ABB71FC66A41006BACFB /* pch */ = {
+			isa = PBXGroup;
+			children = (
+				10381F741BF9B4E800E5E476 /* Animations.pch */,
+			);
+			name = pch;
+			sourceTree = "<group>";
+		};
+		C5D0ABB81FC66A4E006BACFB /* log */ = {
+			isa = PBXGroup;
+			children = (
+				105EFAF71C42878F00394044 /* SimpleNSLog.h */,
+			);
+			name = log;
+			sourceTree = "<group>";
+		};
+		C5D0ABB91FC66A6C006BACFB /* image */ = {
+			isa = PBXGroup;
+			children = (
+				10381F5C1BF9B44A00E5E476 /* Assets.xcassets */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		C5D0ABBA1FC66A76006BACFB /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				10381F611BF9B44A00E5E476 /* Info.plist */,
+			);
+			name = plist;
+			sourceTree = "<group>";
+		};
+		C5D0ABBB1FC66A84006BACFB /* macroDefinition */ = {
+			isa = PBXGroup;
+			children = (
+				C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */,
+			);
+			name = macroDefinition;
+			sourceTree = "<group>";
+		};
 		C5DAC1A11F661FB7000D2F91 /* SKEmitterNodeController */ = {
 			isa = PBXGroup;
 			children = (
@@ -4768,6 +4809,7 @@
 				10381FB81BF9B55B00E5E476 /* POPCGUtils.mm in Sources */,
 				C5792EE91F4749FD000B0D1B /* WanDouJiaModelSerializer.m in Sources */,
 				1011BA8F1CD484FE00F29FB9 /* OffsetCellViewController.m in Sources */,
+				C5D0ABBE1FC66B65006BACFB /* NotificationEvent.m in Sources */,
 				1011BAA21CD4898D00F29FB9 /* VideoListModel.m in Sources */,
 				C54CB91D1F31B68900DFFE15 /* NSArray+IndexPath.m in Sources */,
 				C57C8D961F5CEED800F62803 /* ShopItemInfoView.m in Sources */,
