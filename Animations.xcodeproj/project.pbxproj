@@ -375,6 +375,8 @@
 		C532B2101E13A664004C7499 /* PlaceholderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C532B20F1E13A664004C7499 /* PlaceholderImageView.m */; };
 		C53BE9BB1FB15DBB0002F28B /* PNG.m in Sources */ = {isa = PBXBuildFile; fileRef = C53BE9B71FB15DBA0002F28B /* PNG.m */; };
 		C53BE9BC1FB15DBB0002F28B /* PNGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C53BE9BA1FB15DBB0002F28B /* PNGManager.m */; };
+		C53DB2371FCBA826002AB4EC /* InfoInputViewController+CreateViews.m in Sources */ = {isa = PBXBuildFile; fileRef = C53DB2361FCBA826002AB4EC /* InfoInputViewController+CreateViews.m */; };
+		C53DB23A1FCBAFAF002AB4EC /* TextFiledTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C53DB2391FCBAFAF002AB4EC /* TextFiledTitleView.m */; };
 		C54553531E1CD69F00A5BA58 /* ScrollCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553521E1CD69F00A5BA58 /* ScrollCarouselViewController.m */; };
 		C545535C1E1CD76E00A5BA58 /* iCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553571E1CD76E00A5BA58 /* iCarouselView.m */; };
 		C545535D1E1CD76E00A5BA58 /* iCarouselAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553591E1CD76E00A5BA58 /* iCarouselAdapter.m */; };
@@ -419,6 +421,13 @@
 		C57526CD1D5032690064F6CD /* DrawingColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C91D5032690064F6CD /* DrawingColor.m */; };
 		C57526D01D50327F0064F6CD /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526CF1D50327F0064F6CD /* WaveView.m */; };
 		C57693521F9ED1A600491005 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57693511F9ED1A600491005 /* CustomViewController.m */; };
+		C57791E81FCCFEAE00BED2B1 /* SelectItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57791E71FCCFEAE00BED2B1 /* SelectItemView.m */; };
+		C57791EB1FCD0BA100BED2B1 /* SubmitItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C57791EA1FCD0BA100BED2B1 /* SubmitItemStyle.m */; };
+		C57791F01FCD3B1100BED2B1 /* RealNameChain.m in Sources */ = {isa = PBXBuildFile; fileRef = C57791EF1FCD3B1100BED2B1 /* RealNameChain.m */; };
+		C57791F31FCD3C0700BED2B1 /* PhoneNumChain.m in Sources */ = {isa = PBXBuildFile; fileRef = C57791F21FCD3C0700BED2B1 /* PhoneNumChain.m */; };
+		C57791F61FCD3E0F00BED2B1 /* CompanyNameChain.m in Sources */ = {isa = PBXBuildFile; fileRef = C57791F51FCD3E0F00BED2B1 /* CompanyNameChain.m */; };
+		C57791F91FCD3FCC00BED2B1 /* CompanyPeopleChain.m in Sources */ = {isa = PBXBuildFile; fileRef = C57791F81FCD3FCC00BED2B1 /* CompanyPeopleChain.m */; };
+		C57791FC1FCD429900BED2B1 /* CompanyPeopleRequiredChain.m in Sources */ = {isa = PBXBuildFile; fileRef = C57791FB1FCD429900BED2B1 /* CompanyPeopleRequiredChain.m */; };
 		C5792EE31F4743B3000B0D1B /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EDC1F4743B3000B0D1B /* Networking.m */; };
 		C5792EE41F4743B3000B0D1B /* NetworkingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EDE1F4743B3000B0D1B /* NetworkingInfo.m */; };
 		C5792EE51F4743B3000B0D1B /* RequestParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EE01F4743B3000B0D1B /* RequestParameterSerializer.m */; };
@@ -1273,6 +1282,10 @@
 		C53BE9B81FB15DBA0002F28B /* PNG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNG.h; sourceTree = "<group>"; };
 		C53BE9B91FB15DBA0002F28B /* PNGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGManager.h; sourceTree = "<group>"; };
 		C53BE9BA1FB15DBB0002F28B /* PNGManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNGManager.m; sourceTree = "<group>"; };
+		C53DB2351FCBA826002AB4EC /* InfoInputViewController+CreateViews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfoInputViewController+CreateViews.h"; sourceTree = "<group>"; };
+		C53DB2361FCBA826002AB4EC /* InfoInputViewController+CreateViews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "InfoInputViewController+CreateViews.m"; sourceTree = "<group>"; };
+		C53DB2381FCBAFAF002AB4EC /* TextFiledTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledTitleView.h; sourceTree = "<group>"; };
+		C53DB2391FCBAFAF002AB4EC /* TextFiledTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFiledTitleView.m; sourceTree = "<group>"; };
 		C54553511E1CD69F00A5BA58 /* ScrollCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollCarouselViewController.h; sourceTree = "<group>"; };
 		C54553521E1CD69F00A5BA58 /* ScrollCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollCarouselViewController.m; sourceTree = "<group>"; };
 		C54553561E1CD76E00A5BA58 /* iCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarouselView.h; sourceTree = "<group>"; };
@@ -1361,6 +1374,20 @@
 		C57526CF1D50327F0064F6CD /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
 		C57693501F9ED1A600491005 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		C57693511F9ED1A600491005 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		C57791E61FCCFEAE00BED2B1 /* SelectItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectItemView.h; sourceTree = "<group>"; };
+		C57791E71FCCFEAE00BED2B1 /* SelectItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectItemView.m; sourceTree = "<group>"; };
+		C57791E91FCD0BA100BED2B1 /* SubmitItemStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmitItemStyle.h; sourceTree = "<group>"; };
+		C57791EA1FCD0BA100BED2B1 /* SubmitItemStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmitItemStyle.m; sourceTree = "<group>"; };
+		C57791EE1FCD3B1100BED2B1 /* RealNameChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealNameChain.h; sourceTree = "<group>"; };
+		C57791EF1FCD3B1100BED2B1 /* RealNameChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealNameChain.m; sourceTree = "<group>"; };
+		C57791F11FCD3C0700BED2B1 /* PhoneNumChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneNumChain.h; sourceTree = "<group>"; };
+		C57791F21FCD3C0700BED2B1 /* PhoneNumChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneNumChain.m; sourceTree = "<group>"; };
+		C57791F41FCD3E0F00BED2B1 /* CompanyNameChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyNameChain.h; sourceTree = "<group>"; };
+		C57791F51FCD3E0F00BED2B1 /* CompanyNameChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyNameChain.m; sourceTree = "<group>"; };
+		C57791F71FCD3FCC00BED2B1 /* CompanyPeopleChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyPeopleChain.h; sourceTree = "<group>"; };
+		C57791F81FCD3FCC00BED2B1 /* CompanyPeopleChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyPeopleChain.m; sourceTree = "<group>"; };
+		C57791FA1FCD429900BED2B1 /* CompanyPeopleRequiredChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyPeopleRequiredChain.h; sourceTree = "<group>"; };
+		C57791FB1FCD429900BED2B1 /* CompanyPeopleRequiredChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyPeopleRequiredChain.m; sourceTree = "<group>"; };
 		C5792EDB1F4743B3000B0D1B /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		C5792EDC1F4743B3000B0D1B /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		C5792EDD1F4743B3000B0D1B /* NetworkingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingInfo.h; sourceTree = "<group>"; };
@@ -3406,6 +3433,15 @@
 			children = (
 				C50270EB1FA9674200833758 /* InfoInputViewController.h */,
 				C50270EC1FA9674200833758 /* InfoInputViewController.m */,
+				C57791E91FCD0BA100BED2B1 /* SubmitItemStyle.h */,
+				C57791EA1FCD0BA100BED2B1 /* SubmitItemStyle.m */,
+				C53DB2351FCBA826002AB4EC /* InfoInputViewController+CreateViews.h */,
+				C53DB2361FCBA826002AB4EC /* InfoInputViewController+CreateViews.m */,
+				C53DB2381FCBAFAF002AB4EC /* TextFiledTitleView.h */,
+				C53DB2391FCBAFAF002AB4EC /* TextFiledTitleView.m */,
+				C57791E61FCCFEAE00BED2B1 /* SelectItemView.h */,
+				C57791E71FCCFEAE00BED2B1 /* SelectItemView.m */,
+				C57791ED1FCD3AC300BED2B1 /* ResponsibilityChains */,
 			);
 			name = InfoInputViewController;
 			sourceTree = "<group>";
@@ -3865,6 +3901,23 @@
 			name = "BaseCustomViewController - Manual layout";
 			sourceTree = "<group>";
 		};
+		C57791ED1FCD3AC300BED2B1 /* ResponsibilityChains */ = {
+			isa = PBXGroup;
+			children = (
+				C57791EE1FCD3B1100BED2B1 /* RealNameChain.h */,
+				C57791EF1FCD3B1100BED2B1 /* RealNameChain.m */,
+				C57791F11FCD3C0700BED2B1 /* PhoneNumChain.h */,
+				C57791F21FCD3C0700BED2B1 /* PhoneNumChain.m */,
+				C57791F41FCD3E0F00BED2B1 /* CompanyNameChain.h */,
+				C57791F51FCD3E0F00BED2B1 /* CompanyNameChain.m */,
+				C57791F71FCD3FCC00BED2B1 /* CompanyPeopleChain.h */,
+				C57791F81FCD3FCC00BED2B1 /* CompanyPeopleChain.m */,
+				C57791FA1FCD429900BED2B1 /* CompanyPeopleRequiredChain.h */,
+				C57791FB1FCD429900BED2B1 /* CompanyPeopleRequiredChain.m */,
+			);
+			name = ResponsibilityChains;
+			sourceTree = "<group>";
+		};
 		C5792EDA1F4743A1000B0D1B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -4271,7 +4324,8 @@
 				TargetAttributes = {
 					10381F4C1BF9B44A00E5E476 = {
 						CreatedOnToolsVersion = 7.1;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = HT95VAK372;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -4335,6 +4389,7 @@
 				10381FB91BF9B55B00E5E476 /* POPCustomAnimation.mm in Sources */,
 				10E2D4E81CD5962000666EEB /* MKAnnotationView+WebCache.m in Sources */,
 				B5D011941C0BE2410075BC2E /* RotateView.m in Sources */,
+				C57791F31FCD3C0700BED2B1 /* PhoneNumChain.m in Sources */,
 				102B1F041C60E26B00A8FD40 /* TableViewLoadDataController.m in Sources */,
 				C545536C1E1CD7DD00A5BA58 /* LinearCarouseItemView.m in Sources */,
 				C51B119F1F52A16900EBF6A0 /* LinkageTwoLevelModel.m in Sources */,
@@ -4352,6 +4407,7 @@
 				B5D011951C0BE2410075BC2E /* UIView+RotateAnimationProtocol.m in Sources */,
 				10381FBB1BF9B55B00E5E476 /* POPGeometry.mm in Sources */,
 				C57C8DA11F5D291D00F62803 /* CustomPickerViewControllerUserDefaults.m in Sources */,
+				C53DB2371FCBA826002AB4EC /* InfoInputViewController+CreateViews.m in Sources */,
 				10E2D4F31CD5962000666EEB /* UIImage+MultiFormat.m in Sources */,
 				108A99421C0FF4BD00B693F6 /* POPSpringRotateAnimationType.m in Sources */,
 				106BCFDA1CDC67CC007C3EEE /* NodeStateView.m in Sources */,
@@ -4403,6 +4459,7 @@
 				109ECD5A1C3D3B1900290307 /* PageFlipEffectController.m in Sources */,
 				C57C8D8C1F5CEE2000F62803 /* CustomPickerView.m in Sources */,
 				C510B4DA1F297D2F009D7DB8 /* NSObject+ItemStyle.m in Sources */,
+				C57791FC1FCD429900BED2B1 /* CompanyPeopleRequiredChain.m in Sources */,
 				10E2D5051CD5D9E000666EEB /* FontInfomation.m in Sources */,
 				10381FDF1BF9DE6E00E5E476 /* GCDGroup.m in Sources */,
 				102A10451C9808FF00BF3F1B /* AbsRequestParameterSerializer.m in Sources */,
@@ -4510,6 +4567,7 @@
 				104F0D0C1BFAFC7900C46E6A /* PathView.m in Sources */,
 				104326611C4B16310033CEC0 /* ColorProgressView.m in Sources */,
 				104FCCA81D23573D00308B73 /* TapDrawObject.m in Sources */,
+				C57791F61FCD3E0F00BED2B1 /* CompanyNameChain.m in Sources */,
 				C5C5AFE01DD558F900F35EB8 /* IrregularGridViewController.m in Sources */,
 				C57526CA1D5032690064F6CD /* CustomDrawingView.m in Sources */,
 				10381FBC1BF9B55B00E5E476 /* POPLayerExtras.mm in Sources */,
@@ -4563,6 +4621,7 @@
 				10E2D4F71CD5962000666EEB /* UIView+WebCacheOperation.m in Sources */,
 				C50E758A1F4E6E7F00EB9819 /* StudyInfoDrawView.m in Sources */,
 				104FCCA41D23573D00308B73 /* TapPathDrawViewController.m in Sources */,
+				C57791F01FCD3B1100BED2B1 /* RealNameChain.m in Sources */,
 				C5EFF2731F14C46700BD5AF0 /* MASLayoutConstraint.m in Sources */,
 				105702121CF6CE16003B10C6 /* POPScaleControl.m in Sources */,
 				1017F13C1C35715400E245F8 /* NSData+JSONData.m in Sources */,
@@ -4609,6 +4668,7 @@
 				10E2D4EF1CD5962000666EEB /* SDWebImageManager.m in Sources */,
 				1030886A1C03F1A000C8B623 /* easing.c in Sources */,
 				C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */,
+				C57791E81FCCFEAE00BED2B1 /* SelectItemView.m in Sources */,
 				104228C91C36956C0011409C /* PictureCell.m in Sources */,
 				C56F19C01D891F3600683DB5 /* CustomBuildOutsideViewCell.m in Sources */,
 				1011BA9F1CD4898D00F29FB9 /* DailyListModel.m in Sources */,
@@ -4664,6 +4724,7 @@
 				1096061F1C93B46800CCB3AD /* AbsNetworkingIndicator.m in Sources */,
 				C5876F1C1F949EC400CF4278 /* LineLayout.m in Sources */,
 				103088B71C05880B00C8B623 /* Math.m in Sources */,
+				C57791EB1FCD0BA100BED2B1 /* SubmitItemStyle.m in Sources */,
 				105F3FED1CB7B6B1007B02C7 /* ShowTextModel.m in Sources */,
 				C5792EE61F4743B3000B0D1B /* ResponseDataSerializer.m in Sources */,
 				104F0CC11BFABFE700C46E6A /* PopStrokeController.m in Sources */,
@@ -4724,9 +4785,11 @@
 				C57C8D8D1F5CEE2000F62803 /* PickerViewDataAdapter.m in Sources */,
 				102A0FFB1C92727200BF3F1B /* NSFileManager+Godzippa.m in Sources */,
 				C5F8FE7D1ECC228D00377E01 /* NormalTitleController.m in Sources */,
+				C53DB23A1FCBAFAF002AB4EC /* TextFiledTitleView.m in Sources */,
 				105D98AA1C07FC2C00FD1013 /* TapAnimationModel.m in Sources */,
 				C5E776111F2582E700C304A1 /* CityModel.m in Sources */,
 				105D98A01C07F0E500FD1013 /* TableViewTapAnimationController.m in Sources */,
+				C57791F91FCD3FCC00BED2B1 /* CompanyPeopleChain.m in Sources */,
 				C582E8181D2FB089003433EC /* CalendarEvent.m in Sources */,
 				10E2D4F61CD5962000666EEB /* UIImageView+WebCache.m in Sources */,
 				B5D0118E1C0BE1B30075BC2E /* HeaderViewTapAnimationController.m in Sources */,
@@ -4924,8 +4987,8 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT95VAK372;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -4945,8 +5008,8 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT95VAK372;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

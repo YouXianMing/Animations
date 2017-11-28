@@ -12,13 +12,10 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) id        object;
+@property (nonatomic)                   NSInteger index;
 
-+ (instancetype)itemWithName:(NSString *)name object:(id)object;
 + (instancetype)itemWithObject:(id)object name:(NSString *)name;
 
-@property (nonatomic)                   NSInteger index;
 @property (nonatomic, strong, readonly) NSMutableAttributedString *nameString;
-
-- (void)createAttributedString;
 
 @end

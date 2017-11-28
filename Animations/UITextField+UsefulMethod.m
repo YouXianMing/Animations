@@ -10,6 +10,9 @@
 #import <objc/runtime.h>
 #import "UIView+SetRect.h"
 #import "UIButton+Style.h"
+#import "UIFont+Fonts.h"
+#import "UIButton+Inits.h"
+#import "UIColor+ForPublicUse.h"
 
 @interface UITextField ()
 
@@ -22,13 +25,14 @@
 - (void)addInputAccessoryViewButtonWithTitle:(NSString *)title {
 
     UIView *inputAccessoryView         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, 40)];
-    inputAccessoryView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.75f];
+    inputAccessoryView.backgroundColor = [UIColor whiteColor];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame     = CGRectMake(0, 0, 100, 40);
-    button.right     = Width;
-    
-    [button setTitle:title forState:UIControlStateNormal];
+    UIButton *button       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    button.right           = Width;
+    button.normalTitle     = title;
+    button.titleLabel.font = [UIFont HeitiSCWithFontSize:13.f];
+    [button addTarget:self action:@selector(resignFirstResponder)];
+    [inputAccessoryView addSubview:button];
     
     [button titleLabelHorizontalAlignment:UIControlContentHorizontalAlignmentRight
                         verticalAlignment:UIControlContentVerticalAlignmentCenter
@@ -38,10 +42,10 @@
                           highlightedStateColor:[[UIColor blackColor] colorWithAlphaComponent:0.5f]
                              disabledStateColor:nil];
     
-    button.titleLabel.font = [UIFont systemFontOfSize:13.f];
-    [button addTarget:self action:@selector(resignFirstResponder)
-     forControlEvents:UIControlEventTouchUpInside];
-    [inputAccessoryView addSubview:button];
+    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, 0.5f)];
+    line.backgroundColor = [UIColor lineColor];
+    line.top             = 0.f;
+    [inputAccessoryView addSubview:line];
     
     self.inputAccessoryView = inputAccessoryView;
 }

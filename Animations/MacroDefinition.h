@@ -14,6 +14,5 @@
 // [Item itemWithName:@"SDWebImage加载图片" object:[SDWebImageController class]],
 // [Item itemWithName:@"加载网络数据" object:[TableViewLoadDataController class]],
 // [Item itemWithName:@"TextKit简单示例" object:[TextKitLoadImageController class]],
-// [Item itemWithName:@"信息输入" object:[InfoInputViewController class]],
 
 #endif /* MacroDefinition_h */

@@ -115,7 +115,7 @@
         
         CGFloat iPhoneXHeight = StatusBarAndNavigationBarHeight + UIView.additionaliPhoneXTopSafeHeight;
         
-        ControllerBaseViewConfig *titleViewConfig = viewsConfig[titleViewId];
+        ControllerBaseViewConfig *titleViewConfig   = viewsConfig[titleViewId];
         ControllerBaseViewConfig *contentViewConfig = viewsConfig[contentViewId];
         
         titleViewConfig.frame   = CGRectMake(0, 0, Width, iPhoneXHeight);
@@ -237,17 +237,15 @@
                        [Item itemWithObject:[SKEmitterNodeController           class]  name:@"SKEmitterNode的使用"],
                        [Item itemWithObject:[LineLayoutViewController          class]  name:@"LineLayout"],
                        [Item itemWithObject:[DynamicSwitchingLayoutController  class]  name:@"动态切换Layout"],
+                       [Item itemWithObject:[InfoInputViewController           class]  name:@"信息输入"],
                        ];
     
     self.items = [NSMutableArray array];
-    for (int i = 0; i < array.count; i++) {
+    [array enumerateObjectsUsingBlock:^(Item *item, NSUInteger idx, BOOL *stop) {
         
-        Item *item = array[i];
-        item.index = i + 1;
-        [item createAttributedString];
-        
+        item.index = idx + 1;
         [self.items addObject:[ListItemCell dataAdapterWithData:item]];
-    }
+    }];
 }
 
 #pragma mark - TableView Related.
