@@ -486,6 +486,9 @@
 		C5C5AFEA1DD56D7100F35EB8 /* RedIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE91DD56D7100F35EB8 /* RedIrregularGridViewCell.m */; };
 		C5C5AFEE1DD59D4F00F35EB8 /* UILabel+SizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */; };
 		C5C606341E1F7593004E8FDD /* CircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C606331E1F7593004E8FDD /* CircleLoadingView.m */; };
+		C5C6F1E01FCE4CD7004499E2 /* BaseShowPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C6F1DF1FCE4CD7004499E2 /* BaseShowPickerView.m */; };
+		C5C6F1E31FCE9571004499E2 /* OneItemPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C6F1E21FCE9571004499E2 /* OneItemPickerView.m */; };
+		C5C6F1E61FCE981C004499E2 /* OneItemPickerRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C6F1E51FCE981C004499E2 /* OneItemPickerRowView.m */; };
 		C5D0ABBE1FC66B65006BACFB /* NotificationEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D0ABBD1FC66B65006BACFB /* NotificationEvent.m */; };
 		C5DAC1A01F661FB3000D2F91 /* SKEmitterNodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC19F1F661FB3000D2F91 /* SKEmitterNodeController.m */; };
 		C5DAC1A71F661FE1000D2F91 /* ParticleSKView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC1A31F661FE1000D2F91 /* ParticleSKView.m */; };
@@ -1507,6 +1510,12 @@
 		C5C5AFED1DD59D4F00F35EB8 /* UILabel+SizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SizeToFit.m"; sourceTree = "<group>"; };
 		C5C606321E1F7593004E8FDD /* CircleLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLoadingView.h; sourceTree = "<group>"; };
 		C5C606331E1F7593004E8FDD /* CircleLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLoadingView.m; sourceTree = "<group>"; };
+		C5C6F1DE1FCE4CD7004499E2 /* BaseShowPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseShowPickerView.h; sourceTree = "<group>"; };
+		C5C6F1DF1FCE4CD7004499E2 /* BaseShowPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseShowPickerView.m; sourceTree = "<group>"; };
+		C5C6F1E11FCE9571004499E2 /* OneItemPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneItemPickerView.h; sourceTree = "<group>"; };
+		C5C6F1E21FCE9571004499E2 /* OneItemPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneItemPickerView.m; sourceTree = "<group>"; };
+		C5C6F1E41FCE981C004499E2 /* OneItemPickerRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneItemPickerRowView.h; sourceTree = "<group>"; };
+		C5C6F1E51FCE981C004499E2 /* OneItemPickerRowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneItemPickerRowView.m; sourceTree = "<group>"; };
 		C5D0ABBC1FC66B65006BACFB /* NotificationEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationEvent.h; sourceTree = "<group>"; };
 		C5D0ABBD1FC66B65006BACFB /* NotificationEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationEvent.m; sourceTree = "<group>"; };
 		C5DAC19E1F661FB3000D2F91 /* SKEmitterNodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKEmitterNodeController.h; sourceTree = "<group>"; };
@@ -2837,6 +2846,7 @@
 				C51B11941F52A14D00EBF6A0 /* TwoLevelLinkageView */,
 				C54553551E1CD76200A5BA58 /* iCarouselView */,
 				C57C8D811F5CEE0C00F62803 /* CustomPickerView */,
+				C5C6F1DD1FCE4C99004499E2 /* BaseShowPickerView */,
 				1020A3741D08F9C000056B0E /* BadgeValueView */,
 				C59608C61D3DF76E006BF6E0 /* TableGridView */,
 				1059F39E1CF4014700F63810 /* CollectionGridView */,
@@ -3433,14 +3443,8 @@
 			children = (
 				C50270EB1FA9674200833758 /* InfoInputViewController.h */,
 				C50270EC1FA9674200833758 /* InfoInputViewController.m */,
-				C57791E91FCD0BA100BED2B1 /* SubmitItemStyle.h */,
-				C57791EA1FCD0BA100BED2B1 /* SubmitItemStyle.m */,
-				C53DB2351FCBA826002AB4EC /* InfoInputViewController+CreateViews.h */,
-				C53DB2361FCBA826002AB4EC /* InfoInputViewController+CreateViews.m */,
-				C53DB2381FCBAFAF002AB4EC /* TextFiledTitleView.h */,
-				C53DB2391FCBAFAF002AB4EC /* TextFiledTitleView.m */,
-				C57791E61FCCFEAE00BED2B1 /* SelectItemView.h */,
-				C57791E71FCCFEAE00BED2B1 /* SelectItemView.m */,
+				C5C6F1E81FCEA95D004499E2 /* InfoInputViewControllerRelated */,
+				C5C6F1E71FCEA942004499E2 /* OneItemPickerView */,
 				C57791ED1FCD3AC300BED2B1 /* ResponsibilityChains */,
 			);
 			name = InfoInputViewController;
@@ -4129,6 +4133,41 @@
 			name = "UILabel+Category";
 			sourceTree = "<group>";
 		};
+		C5C6F1DD1FCE4C99004499E2 /* BaseShowPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				C5C6F1DE1FCE4CD7004499E2 /* BaseShowPickerView.h */,
+				C5C6F1DF1FCE4CD7004499E2 /* BaseShowPickerView.m */,
+			);
+			name = BaseShowPickerView;
+			sourceTree = "<group>";
+		};
+		C5C6F1E71FCEA942004499E2 /* OneItemPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				C5C6F1E11FCE9571004499E2 /* OneItemPickerView.h */,
+				C5C6F1E21FCE9571004499E2 /* OneItemPickerView.m */,
+				C5C6F1E41FCE981C004499E2 /* OneItemPickerRowView.h */,
+				C5C6F1E51FCE981C004499E2 /* OneItemPickerRowView.m */,
+			);
+			name = OneItemPickerView;
+			sourceTree = "<group>";
+		};
+		C5C6F1E81FCEA95D004499E2 /* InfoInputViewControllerRelated */ = {
+			isa = PBXGroup;
+			children = (
+				C57791E91FCD0BA100BED2B1 /* SubmitItemStyle.h */,
+				C57791EA1FCD0BA100BED2B1 /* SubmitItemStyle.m */,
+				C53DB2351FCBA826002AB4EC /* InfoInputViewController+CreateViews.h */,
+				C53DB2361FCBA826002AB4EC /* InfoInputViewController+CreateViews.m */,
+				C53DB2381FCBAFAF002AB4EC /* TextFiledTitleView.h */,
+				C53DB2391FCBAFAF002AB4EC /* TextFiledTitleView.m */,
+				C57791E61FCCFEAE00BED2B1 /* SelectItemView.h */,
+				C57791E71FCCFEAE00BED2B1 /* SelectItemView.m */,
+			);
+			name = InfoInputViewControllerRelated;
+			sourceTree = "<group>";
+		};
 		C5D0ABB61FC66A2F006BACFB /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -4324,8 +4363,7 @@
 				TargetAttributes = {
 					10381F4C1BF9B44A00E5E476 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = HT95VAK372;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -4493,6 +4531,7 @@
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
 				C52A3CD11F67C74500C2F862 /* PickerAreaView.m in Sources */,
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
+				C5C6F1E61FCE981C004499E2 /* OneItemPickerRowView.m in Sources */,
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
 				C501F21E1F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.m in Sources */,
 				C51733221D45AFB8005D57AE /* TouchEventView.m in Sources */,
@@ -4538,6 +4577,7 @@
 				10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */,
 				105FFEAA1CBE8740006213B1 /* DrawMarqueeViewController.m in Sources */,
 				C51B11A01F52A16900EBF6A0 /* CustomLevelLinkageCell.m in Sources */,
+				C5C6F1E01FCE4CD7004499E2 /* BaseShowPickerView.m in Sources */,
 				10A34F661C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m in Sources */,
 				C50F24391D32055200C3E02A /* CutOutClearView.m in Sources */,
 				10B0DDFF1CBA84530089DF1E /* AttributedStringInitConfig+Constructor.m in Sources */,
@@ -4723,6 +4763,7 @@
 				1011BADA1CD48C8D00F29FB9 /* CreateModel.m in Sources */,
 				1096061F1C93B46800CCB3AD /* AbsNetworkingIndicator.m in Sources */,
 				C5876F1C1F949EC400CF4278 /* LineLayout.m in Sources */,
+				C5C6F1E31FCE9571004499E2 /* OneItemPickerView.m in Sources */,
 				103088B71C05880B00C8B623 /* Math.m in Sources */,
 				C57791EB1FCD0BA100BED2B1 /* SubmitItemStyle.m in Sources */,
 				105F3FED1CB7B6B1007B02C7 /* ShowTextModel.m in Sources */,
@@ -4987,8 +5028,8 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HT95VAK372;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -5008,8 +5049,8 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HT95VAK372;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

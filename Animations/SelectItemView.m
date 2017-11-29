@@ -30,6 +30,9 @@
         self.titleLabel.font = [UIFont HeitiSCWithFontSize:14.f];
         [self addSubview:self.titleLabel];
         
+        self.contentLabel = [[UILabel alloc] init];
+        [self addSubview:self.contentLabel];
+        
         self.iconNext = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"next"]];
         [self addSubview:self.iconNext];
         
@@ -73,6 +76,20 @@
 - (NSString *)title {
     
     return self.titleLabel.text;
+}
+
+- (void)setContent:(NSAttributedString *)content {
+    
+    self.contentLabel.attributedText = content;
+    self.contentLabel.width          = Width - self.titleLabel.right - 45.f;
+    [self.contentLabel sizeToFit];
+    self.contentLabel.centerY        = self.middleY;
+    self.contentLabel.right          = Width - 30.f;
+}
+
+- (NSAttributedString *)content {
+    
+    return self.contentLabel.attributedText;
 }
 
 @end

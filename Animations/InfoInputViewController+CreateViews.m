@@ -9,6 +9,9 @@
 #import "InfoInputViewController+CreateViews.h"
 #import "UIView+SetRect.h"
 #import "UIColor+ForPublicUse.h"
+#import "NSAttributedString+AttributedStringConfig.h"
+#import "AttributedStringConfigHelper.h"
+#import "UIFont+Fonts.h"
 
 @implementation InfoInputViewController (CreateViews)
 
@@ -41,6 +44,24 @@
     }
     
     return view;
+}
+
+- (NSAttributedString *)boldRedWithString:(NSString *)string {
+    
+    return [NSAttributedString attributedStringWithString:string config:^(NSMutableArray<AttributedStringConfig *> *configs) {
+        
+        [configs addObject:[FontAttributeConfig            configWithFont:[UIFont boldSystemFontOfSize:15.f]]];
+        [configs addObject:[ForegroundColorAttributeConfig configWithColor:[UIColor redColor]]];
+    }];
+}
+
+- (NSAttributedString *)normalFontWithString:(NSString *)string {
+    
+    return [NSAttributedString attributedStringWithString:string config:^(NSMutableArray<AttributedStringConfig *> *configs) {
+        
+        [configs addObject:[FontAttributeConfig             configWithFont:[UIFont HeitiSCWithFontSize:15.f]]];
+        [configs addObject:[ForegroundColorAttributeConfig configWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.75f]]];
+    }];
 }
 
 @end

@@ -25,6 +25,8 @@
 #import "CompanyPeopleChain.h"
 #import "CompanyPeopleRequiredChain.h"
 #import "MessageView.h"
+#import "BaseShowPickerView.h"
+#import "OneItemPickerView.h"
 
 typedef enum : NSUInteger {
     
@@ -37,7 +39,7 @@ typedef enum : NSUInteger {
     
 } ETagValue;
 
-@interface InfoInputViewController () <UITextFieldDelegate, SelectItemViewDelegate, BaseMessageViewDelegate>
+@interface InfoInputViewController () <UITextFieldDelegate, SelectItemViewDelegate, BaseMessageViewDelegate, BaseShowPickerViewDelegate>
 
 @property (nonatomic, strong) ResponsibilityManager *responsibilityManager;
 @property (nonatomic, strong) UIScrollView          *scrollView;
@@ -176,7 +178,7 @@ typedef enum : NSUInteger {
         }
     }
     
-    UIButton *submit   = [[UIButton alloc] initWithFrame:CGRectMake(15.f, top + 85.f, Width - 30.f, 45.f)];
+    UIButton *submit   = [[UIButton alloc] initWithFrame:CGRectMake(15.f, top + 150.f, Width - 30.f, 45.f)];
     submit.itemStyle   = [SubmitItemStyle style];
     submit.normalTitle = @"提交申请";
     [submit addTarget:self action:@selector(submitEvent)];
@@ -193,6 +195,17 @@ typedef enum : NSUInteger {
                                                                   delegate:self
                                                                    viewTag:kTextField_tag];
         return;
+    }
+}
+
+- (void)scrollViewScrollInInnerArea {
+    
+    if (self.scrollView.contentOffset.y + self.contentView.height > self.scrollView.contentSize.height) {
+        
+        [UIView animateWithDuration:0.4f animations:^{
+            
+            self.scrollView.contentOffset = CGPointMake(0, self.scrollView.contentSize.height - self.contentView.height);
+        }];
     }
 }
 
@@ -216,17 +229,69 @@ typedef enum : NSUInteger {
     }
 }
 
+#pragma mark - BaseShowPickerViewDelegate
+
+- (void)baseShowPickerViewWillShow:(BaseShowPickerView *)showPickerView {
+    
+}
+
+- (void)baseShowPickerViewDidShow:(BaseShowPickerView *)showPickerView {
+    
+}
+
+- (void)baseShowPickerViewWillHide:(BaseShowPickerView *)showPickerView {
+    
+    [self scrollViewScrollInInnerArea];
+}
+
+- (void)baseShowPickerViewDidHide:(BaseShowPickerView *)showPickerView {
+    
+}
+
+- (void)baseShowPickerView:(BaseShowPickerView *)showPickerView didSelectedIndexs:(NSArray <NSNumber *> *)indexs items:(NSArray *)items {
+    
+    SelectItemView *itemView = showPickerView.object;
+    itemView.content         = items.firstObject;
+}
+
 #pragma mark - SelectItemViewDelegate
 
 - (void)selectItemViewTapEvent:(SelectItemView *)selectItemView {
     
-    NSLog(@"todo ----> %@", selectItemView);
+    [self.view endEditing:YES];
+    
+    // 创建pickerView并显示
+    BaseShowPickerView *pickerView = [OneItemPickerView new];
+    pickerView.delegate            = self;
+    pickerView.object              = selectItemView;
+    pickerView.info                = selectItemView.title;
+    pickerView.selectedItem        = selectItemView.content;
+    
+    if ([selectItemView.title isEqualToString:@"工位类型"]) {
+        
+        pickerView.showDatas = @[[self normalFontWithString:@"独立办公"],
+                                 [self normalFontWithString:@"开放办公"]];
+        
+    } else if ([selectItemView.title isEqualToString:@"是否需要独立宽带"] || [selectItemView.title isEqualToString:@"是否需要保洁服务"]) {
+        
+        pickerView.showDatas = @[[self boldRedWithString:@"是"],
+                                 [self normalFontWithString:@"否"]];
+    }
+    
+    [pickerView setup];
+    [pickerView showInKeyWindow];
+    
+    CGPoint point = [selectItemView.superview frameOriginFromView:self.scrollView];
+    [UIView animateWithDuration:0.4f animations:^{
+        
+        self.scrollView.contentOffset = CGPointMake(0, point.y - 10.f);
+    }];
 }
 
 #pragma mark - UITextFieldDelegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
- 
+    
     CGPoint point = [textField.superview.superview frameOriginFromView:self.scrollView];
     
     [UIView animateWithDuration:0.4f animations:^{
@@ -237,13 +302,7 @@ typedef enum : NSUInteger {
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     
-    if (self.scrollView.contentOffset.y + self.contentView.height > self.scrollView.contentSize.height) {
-        
-        [UIView animateWithDuration:0.4f animations:^{
-            
-            self.scrollView.contentOffset = CGPointMake(0, self.scrollView.contentSize.height - self.contentView.height);
-        }];
-    }
+    [self scrollViewScrollInInnerArea];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
