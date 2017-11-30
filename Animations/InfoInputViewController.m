@@ -24,9 +24,14 @@
 #import "CompanyNameChain.h"
 #import "CompanyPeopleChain.h"
 #import "CompanyPeopleRequiredChain.h"
+#import "SelectedItemChain.h"
 #import "MessageView.h"
-#import "BaseShowPickerView.h"
 #import "OneItemPickerView.h"
+#import "DateItemPickerView.h"
+#import "DateFormatter.h"
+#import "LoadingView.h"
+#import "AlertView.h"
+#import "GCD.h"
 
 typedef enum : NSUInteger {
     
@@ -35,7 +40,9 @@ typedef enum : NSUInteger {
     kPosition_3,
     kPosition_4,
     
-    kTextField_tag = 1000,
+    kInputValue = 1000,
+    kLoadingView,
+    kAlertView,
     
 } ETagValue;
 
@@ -52,6 +59,7 @@ typedef enum : NSUInteger {
     
     [super viewDidLoad];
     
+    // 责任链,用来管理错误信息提示
     self.responsibilityManager = [ResponsibilityManager new];
     
     self.titleView.backgroundColor      = [UIColor whiteColor];
@@ -136,23 +144,29 @@ typedef enum : NSUInteger {
         }
         
         {
-            SelectItemView *itemView = [[SelectItemView alloc] initWithFrame:CGRectMake(0, kPosition_2 * 50.f, Width, 50.f)];
-            itemView.title           = @"工位类型";
-            itemView.delegate        = self;
+            SelectItemView *itemView     = [[SelectItemView alloc] initWithFrame:CGRectMake(0, kPosition_2 * 50.f, Width, 50.f)];
+            itemView.title               = @"工位类型";
+            itemView.delegate            = self;
+            itemView.responsibilityChain = [SelectedItemChain selectedItemChainWithErrorMessage:@"请选择工位类型"];
+            [self.responsibilityManager addChain:itemView];
             [whiteBGView addSubview:itemView];
         }
         
         {
-            SelectItemView *itemView = [[SelectItemView alloc] initWithFrame:CGRectMake(0, kPosition_3 * 50.f, Width, 50.f)];
-            itemView.title           = @"是否需要独立宽带";
-            itemView.delegate        = self;
+            SelectItemView *itemView     = [[SelectItemView alloc] initWithFrame:CGRectMake(0, kPosition_3 * 50.f, Width, 50.f)];
+            itemView.title               = @"是否需要独立宽带";
+            itemView.delegate            = self;
+            itemView.responsibilityChain = [SelectedItemChain selectedItemChainWithErrorMessage:@"请选择是否需要独立宽带"];
+            [self.responsibilityManager addChain:itemView];
             [whiteBGView addSubview:itemView];
         }
         
         {
-            SelectItemView *itemView = [[SelectItemView alloc] initWithFrame:CGRectMake(0, kPosition_4 * 50.f, Width, 50.f)];
-            itemView.title           = @"是否需要保洁服务";
-            itemView.delegate        = self;
+            SelectItemView *itemView     = [[SelectItemView alloc] initWithFrame:CGRectMake(0, kPosition_4 * 50.f, Width, 50.f)];
+            itemView.title               = @"是否需要保洁服务";
+            itemView.delegate            = self;
+            itemView.responsibilityChain = [SelectedItemChain selectedItemChainWithErrorMessage:@"请选择是否需要保洁服务"];
+            [self.responsibilityManager addChain:itemView];
             [whiteBGView addSubview:itemView];
         }
     }
@@ -164,16 +178,20 @@ typedef enum : NSUInteger {
         [self.scrollView addSubview:whiteBGView];
         
         {
-            SelectItemView *itemView = [[SelectItemView alloc] initWithFrame:CGRectMake(0, kPosition_1 * 50.f, Width, 50.f)];
-            itemView.title           = @"希望入孵时间";
-            itemView.delegate        = self;
+            SelectItemView *itemView     = [[SelectItemView alloc] initWithFrame:CGRectMake(0, kPosition_1 * 50.f, Width, 50.f)];
+            itemView.title               = @"希望入孵时间";
+            itemView.delegate            = self;
+            itemView.responsibilityChain = [SelectedItemChain selectedItemChainWithErrorMessage:@"请选择您希望的入孵时间"];
+            [self.responsibilityManager addChain:itemView];
             [whiteBGView addSubview:itemView];
         }
         
         {
-            SelectItemView *itemView = [[SelectItemView alloc] initWithFrame:CGRectMake(0, kPosition_2 * 50.f, Width, 50.f)];
-            itemView.title           = @"预测孵化周期";
-            itemView.delegate        = self;
+            SelectItemView *itemView     = [[SelectItemView alloc] initWithFrame:CGRectMake(0, kPosition_2 * 50.f, Width, 50.f)];
+            itemView.title               = @"预测孵化周期";
+            itemView.delegate            = self;
+            itemView.responsibilityChain = [SelectedItemChain selectedItemChainWithErrorMessage:@"请选择您预测的孵化周期"];
+            [self.responsibilityManager addChain:itemView];
             [whiteBGView addSubview:itemView];
         }
     }
@@ -193,9 +211,16 @@ typedef enum : NSUInteger {
         
         [MessageView showAutoHiddenMessageViewInKeyWindowWithMessageObject:MakeMessageViewObject(nil, [self.responsibilityManager checkResponsibilityChain].errorMessage)
                                                                   delegate:self
-                                                                   viewTag:kTextField_tag];
+                                                                   viewTag:kInputValue];
         return;
     }
+    
+    LoadingView *loadingView = [LoadingView showManualHiddenMessageViewInKeyWindowWithMessageObject:nil delegate:self viewTag:kLoadingView];
+    [GCDQueue executeInMainQueue:^{
+        
+        [loadingView hide];
+        
+    } afterDelaySecs:3.f];
 }
 
 - (void)scrollViewScrollInInnerArea {
@@ -213,45 +238,73 @@ typedef enum : NSUInteger {
 
 - (void)baseMessageViewDidDisappear:(__kindof BaseMessageView *)messageView {
     
-    if (messageView.tag == kTextField_tag) {
+    if (messageView.tag == kInputValue) {
         
-        UITextField *field = [self.responsibilityManager checkResponsibilityChain].object;
-        CGPoint      point = [field.superview.superview frameOriginFromView:self.scrollView];
+        id object = [self.responsibilityManager checkResponsibilityChain].object;
+        if ([object isKindOfClass:[UITextField class]]) {
+            
+            UITextField *field = object;
+            CGPoint      point = [field.superview.superview frameOriginFromView:self.scrollView];
+            
+            [UIView animateWithDuration:0.35f animations:^{
+                
+                self.scrollView.contentOffset = CGPointMake(0, point.y - 10.f);
+                
+            } completion:^(BOOL finished) {
+                
+                [field becomeFirstResponder];
+            }];
+            
+        } else if ([object isKindOfClass:[SelectItemView class]]) {
+            
+            SelectItemView *itemView = object;
+            CGPoint         point    = [itemView.superview frameOriginFromView:self.scrollView];
+            
+            [UIView animateWithDuration:0.35f animations:^{
+                
+                self.scrollView.contentOffset = CGPointMake(0, point.y - 10.f);
+                
+            } completion:^(BOOL finished) {
+                
+                [self selectItemViewTapEvent:itemView];
+            }];
+        }
         
-        [UIView animateWithDuration:0.35f animations:^{
-            
-            self.scrollView.contentOffset = CGPointMake(0, point.y - 10.f);
-            
-        } completion:^(BOOL finished) {
-            
-            [field becomeFirstResponder];
-        }];
+    } else if (messageView.tag == kLoadingView) {
+        
+        [AlertView showManualHiddenMessageViewInKeyWindowWithMessageObject:MakeAlertViewMessageObject(@"恭喜您提交成功", @[AlertViewRedStyle(@"确定")])
+                                                                  delegate:self viewTag:kAlertView];
+        
+    } else if (messageView.tag == kAlertView) {
+        
+        [self popViewControllerAnimated:YES];
     }
 }
 
+- (void)baseMessageView:(__kindof BaseMessageView *)messageView event:(id)event {
+    
+    [messageView hide];
+}
+
 #pragma mark - BaseShowPickerViewDelegate
-
-- (void)baseShowPickerViewWillShow:(BaseShowPickerView *)showPickerView {
-    
-}
-
-- (void)baseShowPickerViewDidShow:(BaseShowPickerView *)showPickerView {
-    
-}
 
 - (void)baseShowPickerViewWillHide:(BaseShowPickerView *)showPickerView {
     
     [self scrollViewScrollInInnerArea];
 }
 
-- (void)baseShowPickerViewDidHide:(BaseShowPickerView *)showPickerView {
-    
-}
-
 - (void)baseShowPickerView:(BaseShowPickerView *)showPickerView didSelectedIndexs:(NSArray <NSNumber *> *)indexs items:(NSArray *)items {
     
-    SelectItemView *itemView = showPickerView.object;
-    itemView.content         = items.firstObject;
+    if ([showPickerView isKindOfClass:[OneItemPickerView class]]) {
+        
+        SelectItemView *itemView = showPickerView.object;
+        itemView.content         = items.firstObject;
+        
+    } else if ([showPickerView isKindOfClass:[DateItemPickerView class]]) {
+        
+        SelectItemView *itemView = showPickerView.object;
+        itemView.content         = [self normalFontWithString:[DateFormatter dateStringFromDate:items.firstObject outputDateStringFormatter:@"yyyy-MM-dd"]];
+    }
 }
 
 #pragma mark - SelectItemViewDelegate
@@ -260,25 +313,43 @@ typedef enum : NSUInteger {
     
     [self.view endEditing:YES];
     
-    // 创建pickerView并显示
-    BaseShowPickerView *pickerView = [OneItemPickerView new];
-    pickerView.delegate            = self;
-    pickerView.object              = selectItemView;
-    pickerView.info                = selectItemView.title;
-    pickerView.selectedItem        = selectItemView.content;
+    Class               PickerViewClass = [selectItemView.title isEqualToString:@"希望入孵时间"] ? [DateItemPickerView class] : [OneItemPickerView class];
+    BaseShowPickerView *pickerView      = [PickerViewClass showPickerViewWithDelegate:self];
+    pickerView.object                   = selectItemView;
+    pickerView.info                     = selectItemView.title;
     
     if ([selectItemView.title isEqualToString:@"工位类型"]) {
         
-        pickerView.showDatas = @[[self normalFontWithString:@"独立办公"],
-                                 [self normalFontWithString:@"开放办公"]];
+        pickerView.selectedItem = selectItemView.content;
+        pickerView.showDatas    = @[[self normalFontWithString:@"独立办公"], [self normalFontWithString:@"开放办公"]];
         
     } else if ([selectItemView.title isEqualToString:@"是否需要独立宽带"] || [selectItemView.title isEqualToString:@"是否需要保洁服务"]) {
         
-        pickerView.showDatas = @[[self boldRedWithString:@"是"],
-                                 [self normalFontWithString:@"否"]];
+        pickerView.selectedItem = selectItemView.content;
+        pickerView.showDatas    = @[[self boldRedWithString:@"是"], [self normalFontWithString:@"否"]];
+        
+    } else if ([selectItemView.title isEqualToString:@"预测孵化周期"]) {
+        
+        pickerView.selectedItem = selectItemView.content;
+        pickerView.showDatas    = @[[self normalFontWithMonthString:@"1 个月"],
+                                    [self normalFontWithMonthString:@"2 个月"],
+                                    [self normalFontWithMonthString:@"3 个月"],
+                                    [self normalFontWithMonthString:@"4 个月"],
+                                    [self normalFontWithMonthString:@"5 个月"],
+                                    [self normalFontWithMonthString:@"6 个月"],
+                                    [self normalFontWithMonthString:@"7 个月"],
+                                    [self normalFontWithMonthString:@"8 个月"],
+                                    [self normalFontWithMonthString:@"9 个月"],
+                                    [self normalFontWithMonthString:@"10 个月"],
+                                    [self normalFontWithMonthString:@"11 个月"],
+                                    [self normalFontWithMonthString:@"12 个月"]];
+        
+    } else if ([selectItemView.title isEqualToString:@"希望入孵时间"] && selectItemView.content.string.length) {
+        
+        pickerView.selectedItem = [DateFormatter dateFormatterWithInputDateString:[selectItemView.content string] inputDateStringFormatter:@"yyyy-MM-dd"];
     }
     
-    [pickerView setup];
+    [pickerView prepare];
     [pickerView showInKeyWindow];
     
     CGPoint point = [selectItemView.superview frameOriginFromView:self.scrollView];

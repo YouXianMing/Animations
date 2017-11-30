@@ -13,5 +13,6 @@
 - (UIView *)createWhiteBGViewWithTop:(CGFloat)top itemCount:(NSInteger)count;
 - (NSAttributedString *)boldRedWithString:(NSString *)string;
 - (NSAttributedString *)normalFontWithString:(NSString *)string;
+- (NSAttributedString *)normalFontWithMonthString:(NSString *)string;
 
 @end

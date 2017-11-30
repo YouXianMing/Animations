@@ -397,6 +397,8 @@
 		C557362F1E837661001CDC9A /* news in Resources */ = {isa = PBXBuildFile; fileRef = C557362E1E837661001CDC9A /* news */; };
 		C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */; };
 		C559EE781DE6DBC8006C7DAC /* ColorSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE771DE6DBC8006C7DAC /* ColorSpaceCell.m */; };
+		C55A20B61FCFA46B009AB8DD /* DateItemPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55A20B51FCFA46B009AB8DD /* DateItemPickerView.m */; };
+		C55A20B91FCFE7E3009AB8DD /* SelectedItemChain.m in Sources */ = {isa = PBXBuildFile; fileRef = C55A20B81FCFE7E3009AB8DD /* SelectedItemChain.m */; };
 		C55D7DD41D6BEEE900B1D184 /* BackgroundLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D7DD31D6BEEE900B1D184 /* BackgroundLineView.m */; };
 		C55F55F31F0B94C4008F0910 /* CountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C55F55F21F0B94C4008F0910 /* CountDownButton.m */; };
 		C55F55F61F0B95E7008F0910 /* BaseCustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C55F55F51F0B95E7008F0910 /* BaseCustomNavigationController.m */; };
@@ -1328,6 +1330,10 @@
 		C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ForPublicUse.m"; sourceTree = "<group>"; };
 		C559EE761DE6DBC8006C7DAC /* ColorSpaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpaceCell.h; sourceTree = "<group>"; };
 		C559EE771DE6DBC8006C7DAC /* ColorSpaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSpaceCell.m; sourceTree = "<group>"; };
+		C55A20B41FCFA46B009AB8DD /* DateItemPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateItemPickerView.h; sourceTree = "<group>"; };
+		C55A20B51FCFA46B009AB8DD /* DateItemPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateItemPickerView.m; sourceTree = "<group>"; };
+		C55A20B71FCFE7E3009AB8DD /* SelectedItemChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectedItemChain.h; sourceTree = "<group>"; };
+		C55A20B81FCFE7E3009AB8DD /* SelectedItemChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectedItemChain.m; sourceTree = "<group>"; };
 		C55D7DD21D6BEEE900B1D184 /* BackgroundLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLineView.h; sourceTree = "<group>"; };
 		C55D7DD31D6BEEE900B1D184 /* BackgroundLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLineView.m; sourceTree = "<group>"; };
 		C55F55F11F0B94C4008F0910 /* CountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButton.h; sourceTree = "<group>"; };
@@ -3444,8 +3450,9 @@
 				C50270EB1FA9674200833758 /* InfoInputViewController.h */,
 				C50270EC1FA9674200833758 /* InfoInputViewController.m */,
 				C5C6F1E81FCEA95D004499E2 /* InfoInputViewControllerRelated */,
-				C5C6F1E71FCEA942004499E2 /* OneItemPickerView */,
 				C57791ED1FCD3AC300BED2B1 /* ResponsibilityChains */,
+				C55A20BA1FCFF331009AB8DD /* DateItemPickerView */,
+				C5C6F1E71FCEA942004499E2 /* OneItemPickerView */,
 			);
 			name = InfoInputViewController;
 			sourceTree = "<group>";
@@ -3771,6 +3778,15 @@
 			name = LoadCSSViewController;
 			sourceTree = "<group>";
 		};
+		C55A20BA1FCFF331009AB8DD /* DateItemPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				C55A20B41FCFA46B009AB8DD /* DateItemPickerView.h */,
+				C55A20B51FCFA46B009AB8DD /* DateItemPickerView.m */,
+			);
+			name = DateItemPickerView;
+			sourceTree = "<group>";
+		};
 		C55F55F01F0B94BB008F0910 /* CountDownButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -3918,6 +3934,8 @@
 				C57791F81FCD3FCC00BED2B1 /* CompanyPeopleChain.m */,
 				C57791FA1FCD429900BED2B1 /* CompanyPeopleRequiredChain.h */,
 				C57791FB1FCD429900BED2B1 /* CompanyPeopleRequiredChain.m */,
+				C55A20B71FCFE7E3009AB8DD /* SelectedItemChain.h */,
+				C55A20B81FCFE7E3009AB8DD /* SelectedItemChain.m */,
 			);
 			name = ResponsibilityChains;
 			sourceTree = "<group>";
@@ -4529,6 +4547,7 @@
 				10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */,
 				102B1F2A1C60E66F00A8FD40 /* CountsModel.m in Sources */,
 				10381FB21BF9B55B00E5E476 /* POPAnimationEvent.mm in Sources */,
+				C55A20B91FCFE7E3009AB8DD /* SelectedItemChain.m in Sources */,
 				C52A3CD11F67C74500C2F862 /* PickerAreaView.m in Sources */,
 				10381FB71BF9B55B00E5E476 /* POPBasicAnimation.mm in Sources */,
 				C5C6F1E61FCE981C004499E2 /* OneItemPickerRowView.m in Sources */,
@@ -4651,6 +4670,7 @@
 				1011BADC1CD48C8D00F29FB9 /* NodeModelCell.m in Sources */,
 				C50E75871F4E6DF200EB9819 /* StudyInfoCell.m in Sources */,
 				1010C6DE1C0AA639004CFBCE /* POPSpringParameterController.m in Sources */,
+				C55A20B61FCFA46B009AB8DD /* DateItemPickerView.m in Sources */,
 				C52A3CBE1F67851000C2F862 /* PickerProvinceModel.m in Sources */,
 				1047E23D1CC5AF8400E13D1C /* LazyFadeInLayer.m in Sources */,
 				108A99321C0FD5A800B693F6 /* ClockViewController.m in Sources */,

@@ -237,8 +237,7 @@
                        [Item itemWithObject:[SKEmitterNodeController           class]  name:@"SKEmitterNode的使用"],
                        [Item itemWithObject:[LineLayoutViewController          class]  name:@"LineLayout"],
                        [Item itemWithObject:[DynamicSwitchingLayoutController  class]  name:@"动态切换Layout"],
-                       [Item itemWithObject:[InfoInputViewController           class]  name:@"信息输入"],
-                       ];
+                       [Item itemWithObject:[InfoInputViewController           class]  name:@"输入检测逻辑动画"]];
     
     self.items = [NSMutableArray array];
     [array enumerateObjectsUsingBlock:^(Item *item, NSUInteger idx, BOOL *stop) {

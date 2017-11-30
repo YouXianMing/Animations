@@ -18,7 +18,7 @@
 
 @implementation BaseShowPickerView
 
-- (void)setup {
+- (void)prepare {
     
     // 获取keywindow
     NSParameterAssert([UIApplication sharedApplication].keyWindow);
@@ -40,12 +40,28 @@
     [self addSubview:self.contentView];
     
     // 在contentView里面添加显示的view
-    [self addViewsInContentView];
+    [self buildViewsInContentView:self.contentView];
+    
+    // 对picker进行配置
+    [self configPicker];
 }
 
-- (void)addViewsInContentView {
+- (void)buildViewsInContentView:(UIView *)contentView {
     
+    // Overwrite by subclass.
+}
+
+- (void)configPicker {
     
+    // Overwrite by subclass.
+}
+
++ (instancetype)showPickerViewWithDelegate:(id <BaseShowPickerViewDelegate>)delegate {
+    
+    BaseShowPickerView *pickerView = [[self class] new];
+    pickerView.delegate            = delegate;
+    
+    return pickerView;
 }
 
 - (void)showInKeyWindow {

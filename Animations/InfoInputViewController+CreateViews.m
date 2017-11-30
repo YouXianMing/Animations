@@ -12,6 +12,7 @@
 #import "NSAttributedString+AttributedStringConfig.h"
 #import "AttributedStringConfigHelper.h"
 #import "UIFont+Fonts.h"
+#import "RegexManager.h"
 
 @implementation InfoInputViewController (CreateViews)
 
@@ -61,6 +62,20 @@
         
         [configs addObject:[FontAttributeConfig             configWithFont:[UIFont HeitiSCWithFontSize:15.f]]];
         [configs addObject:[ForegroundColorAttributeConfig configWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.75f]]];
+    }];
+}
+
+- (NSAttributedString *)normalFontWithMonthString:(NSString *)string {
+    
+    return [NSMutableAttributedString mutableAttributedStringWithString:string config:^(NSString *string, NSMutableArray<AttributedStringConfig *> *configs) {
+        
+        NSRange full = NSMakeRange(0, string.length);
+        NSRange part = [string matchsWithRegexPattern:@"^\\d+"].firstObject.rangeValue;
+        
+        [configs addObject:[FontAttributeConfig            configWithFont:[UIFont HeitiSCWithFontSize:15.f]  range:full]];
+        [configs addObject:[FontAttributeConfig            configWithFont:[UIFont boldSystemFontOfSize:15.f] range:part]];
+        [configs addObject:[ForegroundColorAttributeConfig configWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.75f] range:full]];
+        [configs addObject:[ForegroundColorAttributeConfig configWithColor:[[UIColor redColor]   colorWithAlphaComponent:0.75f] range:part]];
     }];
 }
 

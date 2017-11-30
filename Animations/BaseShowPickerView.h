@@ -11,6 +11,7 @@
 
 @protocol BaseShowPickerViewDelegate <NSObject>
 
+@optional
 - (void)baseShowPickerViewWillShow:(BaseShowPickerView *)showPickerView;
 - (void)baseShowPickerViewDidShow:(BaseShowPickerView *)showPickerView;
 - (void)baseShowPickerViewWillHide:(BaseShowPickerView *)showPickerView;
@@ -21,29 +22,33 @@
 
 @interface BaseShowPickerView : UIView
 
-/**
- 用来添加显示内容的contentView
- */
-@property (nonatomic, strong, readonly) UIView  *contentView;
-@property (nonatomic, class, readonly)  CGFloat  contentViewHeight;
+@property (nonatomic, class, readonly)  CGFloat  contentViewHeight; // contentView的高度,需要子类提供数据
 
-@property (nonatomic, weak)   id                               object;
-@property (nonatomic, weak)   id <BaseShowPickerViewDelegate>  delegate;
-@property (nonatomic, strong) id                               info;
-@property (nonatomic, strong) id                               selectedItem;
-@property (nonatomic, strong) NSArray                         *showDatas;
+@property (nonatomic, weak)   id                               picker;       // 由子类在buildViewsInContentViewAndManagerDatas中赋值
+@property (nonatomic, weak)   id                               object;       // weak对象
+@property (nonatomic, weak)   id <BaseShowPickerViewDelegate>  delegate;     // 代理
+@property (nonatomic, strong) id                               info;         // 信息数据
+@property (nonatomic, strong) id                               selectedItem; // 选中内容,可能是数组,可能是一个对象
+@property (nonatomic, strong) NSArray                         *showDatas;    // 显示内容的数据
+
++ (instancetype)showPickerViewWithDelegate:(id <BaseShowPickerViewDelegate>)delegate;
 
 /**
- 在设置之前,需要先设置好contentView的高度值(contentViewHeight的设定)
+ 在执行此方法之前,需要先提供contentViewHeight的数值
  */
-- (void)setup;
+- (void)prepare;
+
+/**
+ [子类重载] 在contentView中添加内容
+ */
+- (void)buildViewsInContentView:(UIView *)contentView;
+
+/**
+ [子类重载] 对picker进行配置以及数据的处理
+ */
+- (void)configPicker;
 
 - (void)showInKeyWindow;
 - (void)hideFromKeyWindow;
-
-/**
- 由子类重载后在contentView中添加内容
- */
-- (void)addViewsInContentView;
 
 @end

@@ -24,21 +24,11 @@
 
 @implementation OneItemPickerView
 
-- (void)addViewsInContentView {
-    
-    // 获取rows
-    NSMutableArray <PickerViewRow *> *rows = [NSMutableArray array];
-    [self.showDatas enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        [rows addObject:[PickerViewRow pickerViewRowWithViewClass:[OneItemPickerRowView class] data:obj]];
-    }];
-    
-    PickerViewComponent   *component = [PickerViewComponent pickerViewComponentWithRows:rows componentWidth:Width];
-    PickerViewDataAdapter *adpater   = [PickerViewDataAdapter pickerViewDataAdapterWithComponents:@[component] rowHeight:45.f];
+- (void)buildViewsInContentView:(UIView *)contentView {
     
     // 顶部白色的view
     UIView *topWhiteView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, 40.f)];
-    [self.contentView addSubview:topWhiteView];
+    [contentView addSubview:topWhiteView];
     
     // 确定按钮
     UIButton *button       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
@@ -75,9 +65,22 @@
     }
     
     // 创建pickerView
-    _pickerView                       = [[CustomPickerView alloc] initWithFrame:CGRectMake(0, 40.f, Width, 0) delegate:self pickerViewHeightType:kCustomPickerViewHeightTypeMid];
+    _pickerView = [[CustomPickerView alloc] initWithFrame:CGRectMake(0, 40.f, Width, 0) delegate:self pickerViewHeightType:kCustomPickerViewHeightTypeMid];
+    [contentView addSubview:_pickerView];
+}
+
+- (void)configPicker {
+    
+    // 获取rows
+    NSMutableArray <PickerViewRow *> *rows = [NSMutableArray array];
+    [self.showDatas enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        [rows addObject:[PickerViewRow pickerViewRowWithViewClass:[OneItemPickerRowView class] data:obj]];
+    }];
+    
+    PickerViewComponent   *component  = [PickerViewComponent pickerViewComponentWithRows:rows componentWidth:Width];
+    PickerViewDataAdapter *adpater    = [PickerViewDataAdapter pickerViewDataAdapterWithComponents:@[component] rowHeight:40.f];
     _pickerView.pickerViewDataAdapter = adpater;
-    [self.contentView addSubview:_pickerView];
     
     // 如果有初始选定元素,则直接定位到初始选定元素的地方
     if (self.selectedItem && [self.selectedItem isKindOfClass:[NSAttributedString class]]) {
@@ -98,7 +101,14 @@
 
 + (CGFloat)contentViewHeight {
     
-    return 180.f + 40.f;
+    CGFloat bottomHeight = 0;
+    
+    if (iPhoneX) {
+        
+        bottomHeight = UIView.additionaliPhoneXBottomSafeHeight;
+    }
+    
+    return 180.f + 40.f + bottomHeight;
 }
 
 - (void)buttonEvent {
