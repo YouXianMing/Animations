@@ -141,7 +141,7 @@
 - (void)networkingRequestFailed:(Networking *)networking tag:(NSInteger)tag error:(NSError *)error {
     
     [self.showLoadingView hide];
-    [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"警告", @"网络异常,请稍后再试!") contentView:self.loadingAreaView];
+    MessageView.build.autoHidden.disableContentViewInteraction.withMessage(MakeMessageViewObject(@"警告", @"网络异常,请稍后再试!")).showIn(self.windowAreaView);
 }
 
 @end

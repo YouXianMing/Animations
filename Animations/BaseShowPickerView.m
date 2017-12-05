@@ -21,8 +21,8 @@
 - (void)prepare {
     
     // 获取keywindow
-    NSParameterAssert([UIApplication sharedApplication].keyWindow);
     self.keyWindow = [UIApplication sharedApplication].keyWindow;
+    NSParameterAssert(self.keyWindow);
     
     // 创建背景的按钮
     self.frame                            = self.keyWindow.bounds;
@@ -32,10 +32,8 @@
     [self addSubview:self.backgroundButton];
     
     // 创建contentView
-    self.contentView                 = [[UIView alloc] initWithFrame:CGRectMake(0,
-                                                                                self.keyWindow.frame.size.height,
-                                                                                self.keyWindow.frame.size.width,
-                                                                                [[self class] contentViewHeight])];
+    CGRect frame                     = CGRectMake(0, self.keyWindow.frame.size.height, self.keyWindow.frame.size.width, [[self class] contentViewHeight]);
+    self.contentView                 = [[UIView alloc] initWithFrame:frame];
     self.contentView.backgroundColor = [UIColor whiteColor];
     [self addSubview:self.contentView];
     

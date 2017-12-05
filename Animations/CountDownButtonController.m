@@ -47,14 +47,15 @@
 
 - (void)countDownButtonDidTaped:(CountDownButton *)button {
     
-    self.loadingView = [LoadingView showManualHiddenMessageViewWithMessageObject:nil contentView:self.loadingAreaView];
+    self.loadingView = LoadingView.build.disableContentViewInteraction;
+    self.loadingView.showIn(self.loadingAreaView);
     
     [GCDQueue executeInMainQueue:^{
         
         [self.loadingView hide];
         if (arc4random() % 5 == 0) {
-            
-            [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"Error", @"Network error !") contentView:self.windowAreaView];
+                        
+            MessageView.build.autoHidden.disableContentViewInteraction.withMessage(MakeMessageViewObject(@"Error", @"Network error !")).showIn(self.windowAreaView);
             
         } else {
             

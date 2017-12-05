@@ -74,14 +74,14 @@
 @property (nonatomic) BOOL contentViewUserInteractionEnabled;
 
 /**
- *  Auto hiden or not, default is NO.
+ *  Set the auto hidden delay seconds, if autoHiddenDelay > 0, it will auto hidden.
  */
-@property (nonatomic) BOOL autoHiden;
+@property (nonatomic) NSTimeInterval autoHiddenDelay;
 
 /**
- *  If The autoHiden is YES, you should set the delay hiden duration, default is 2.0.
+ *  Set this value when you want to use const auto hidden delay seconds.
  */
-@property (nonatomic) NSTimeInterval delayAutoHidenDuration;
+@property (class, nonatomic, readonly) NSTimeInterval constAutoHiddenDelaySeconds;
 
 /**
  *  Show the MessageView.
@@ -93,131 +93,51 @@
  */
 - (void)hide;
 
-#pragma mark - Constructor.
+#pragma mark - Chain Programming.
 
 /**
- The BaseMessageView Constructor.
-
- @param messageObject The message object.
- @param delegate The delegate.
- @param contentView The contentView.
- @param tag The view tag.
- @param autoHiden Auto hiden or not.
- @param delayAutoHidenDuration If The autoHiden is YES, you should set the delay hiden duration, default is 2.0.
- @param contentViewUserInteractionEnabled The contentView's user interaction enable or not.
- @param showImmediately Show the BaseMessageView immediately or not.
- @return The BaseMessageView.
+ *  Get the instance.
  */
-+ (instancetype)messageViewWithMessageObject:(id)messageObject
-                                    delegate:(id <BaseMessageViewDelegate>)delegate
-                                 contentView:(UIView *)contentView
-                                     viewTag:(NSInteger)tag
-                                   autoHiden:(BOOL)autoHiden
-                      delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration
-           contentViewUserInteractionEnabled:(BOOL)contentViewUserInteractionEnabled
-                             showImmediately:(BOOL)showImmediately;
++ (instancetype)build;
 
 /**
- The BaseMessageView Constructor, auto hiden, contentViewUserInteractionEnabled is NO.
-
- @param messageObject The message object.
- @param contentView The contentView.
- @return The BaseMessageView.
+ *  Set auto hidden, the delay seconds is 'constAutoHiddenDelaySeconds'.
  */
-+ (instancetype)showAutoHiddenMessageViewWithMessageObject:(id)messageObject contentView:(UIView *)contentView;
+- (instancetype)autoHidden;
 
 /**
- The BaseMessageView Constructor, manual hiden, contentViewUserInteractionEnabled is NO.
- 
- @param messageObject The message object.
- @param contentView The contentView.
- @return The BaseMessageView.
+ *  Disable the contentView's UserInteractionEnabled.
  */
-+ (instancetype)showManualHiddenMessageViewWithMessageObject:(id)messageObject contentView:(UIView *)contentView;
+- (instancetype)disableContentViewInteraction;
 
 /**
- The BaseMessageView Constructor, auto hiden, contentViewUserInteractionEnabled is NO.
-
- @param messageObject The message object.
- @param delegate The delegate.
- @param contentView The contentView.
- @param tag The view tag.
- @return The BaseMessageView.
+ *  Chain with set delegate.
  */
-+ (instancetype)showAutoHiddenMessageViewWithMessageObject:(id)messageObject delegate:(id <BaseMessageViewDelegate>)delegate
-                                               contentView:(UIView *)contentView viewTag:(NSInteger)tag;
+- (BaseMessageView *(^)(id <BaseMessageViewDelegate> delegate))withDelegate;
 
 /**
- The BaseMessageView Constructor, manual hiden, contentViewUserInteractionEnabled is NO.
- 
- @param messageObject The message object.
- @param delegate The delegate.
- @param contentView The contentView.
- @param tag The view tag.
- @return The BaseMessageView.
+ *  Chain with set messageObject.
  */
-+ (instancetype)showManualHiddenMessageViewWithMessageObject:(id)messageObject delegate:(id <BaseMessageViewDelegate>)delegate
-                                                 contentView:(UIView *)contentView viewTag:(NSInteger)tag;
+- (BaseMessageView *(^)(id messageObject))withMessage;
 
 /**
- The BaseMessageView Constructor, manual hiden, contentViewUserInteractionEnabled is YES.
-
- @param messageObject The message object.
- @return The BaseMessageView.
+ *  Chain with set AutoHiddenDelay.
  */
-+ (instancetype)showManualHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject;
+- (BaseMessageView *(^)(NSTimeInterval seconds))withAutoHiddenDelay;
 
 /**
- The BaseMessageView Constructor, manual hiden, contentViewUserInteractionEnabled is YES.
-
- @param messageObject The message object.
- @param delegate The delegate.
- @param tag The view tag.
- @return The BaseMessageView.
+ *  Chain with set view's tag.
  */
-+ (instancetype)showManualHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject
-                                                               delegate:(id <BaseMessageViewDelegate>)delegate
-                                                                viewTag:(NSInteger)tag;
+- (BaseMessageView *(^)(NSInteger tag))withTag;
 
 /**
- The BaseMessageView Constructor, auto hiden, contentViewUserInteractionEnabled is YES.
-
- @param messageObject The message object.
- @return The BaseMessageView.
+ *  Chain with set to show in contentView.
  */
-+ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject;
+- (BaseMessageView *(^)(UIView *contentView))showIn;
 
 /**
- The BaseMessageView Constructor, auto hiden, contentViewUserInteractionEnabled is YES.
-
- @param messageObject The message object.
- @param delegate The delegate.
- @param tag The view tag.
- @return The BaseMessageView.
+ *  Chain with set to show in keyWindow.
  */
-+ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject
-                                                             delegate:(id <BaseMessageViewDelegate>)delegate
-                                                              viewTag:(NSInteger)tag;
-
-+ (instancetype)showAutoHiddenMessageViewWithMessageObject:(id)messageObject
-                                               contentView:(UIView *)contentView
-                                    delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration;
-
-+ (instancetype)showAutoHiddenMessageViewWithMessageObject:(id)messageObject
-                                                  delegate:(id <BaseMessageViewDelegate>)delegate
-                                               contentView:(UIView *)contentView
-                                                   viewTag:(NSInteger)tag
-                                    delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration;
-
-+ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject
-                                               delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration;
-
-+ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject
-                                                             delegate:(id <BaseMessageViewDelegate>)delegate
-                                                              viewTag:(NSInteger)tag
-                                               delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration;
+- (BaseMessageView *(^)(void))showInKeyWindow;
 
 @end
-
-
-

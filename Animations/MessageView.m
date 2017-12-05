@@ -33,9 +33,9 @@
         [self createBlackView];
         [self createMessageView];
         
-        if (self.autoHiden) {
+        if (self.autoHiddenDelay > 0) {
             
-            [self performSelector:@selector(hide) withObject:nil afterDelay:self.delayAutoHidenDuration];
+            [self performSelector:@selector(hide) withObject:nil afterDelay:self.autoHiddenDelay];
         }
     }
 }
@@ -160,6 +160,11 @@
             [self.delegate baseMessageViewDidDisappear:self];
         }
     }];
+}
+
++ (NSTimeInterval)constAutoHiddenDelaySeconds {
+    
+    return 2.5f;
 }
 
 @end

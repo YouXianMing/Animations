@@ -209,13 +209,14 @@ typedef enum : NSUInteger {
     
     if ([self.responsibilityManager checkResponsibilityChain].checkSuccess == NO) {
         
-        [MessageView showAutoHiddenMessageViewInKeyWindowWithMessageObject:MakeMessageViewObject(nil, [self.responsibilityManager checkResponsibilityChain].errorMessage)
-                                                                  delegate:self
-                                                                   viewTag:kInputValue];
+        id message = MakeMessageViewObject(nil, [self.responsibilityManager checkResponsibilityChain].errorMessage);
+        MessageView.build.autoHidden.withMessage(message).withDelegate(self).withTag(kInputValue).showInKeyWindow();
         return;
     }
     
-    LoadingView *loadingView = [LoadingView showManualHiddenMessageViewInKeyWindowWithMessageObject:nil delegate:self viewTag:kLoadingView];
+    LoadingView *loadingView = LoadingView.build;
+    loadingView.withTag(kLoadingView).withDelegate(self).showInKeyWindow();
+    
     [GCDQueue executeInMainQueue:^{
         
         [loadingView hide];
@@ -272,8 +273,7 @@ typedef enum : NSUInteger {
         
     } else if (messageView.tag == kLoadingView) {
         
-        [AlertView showManualHiddenMessageViewInKeyWindowWithMessageObject:MakeAlertViewMessageObject(@"恭喜您提交成功", @[AlertViewRedStyle(@"确定")])
-                                                                  delegate:self viewTag:kAlertView];
+        AlertView.build.withDelegate(self).withTag(kAlertView).withMessage(MakeAlertViewMessageObject(@"恭喜您提交成功", @[AlertViewRedStyle(@"确定")])).showInKeyWindow();
         
     } else if (messageView.tag == kAlertView) {
         

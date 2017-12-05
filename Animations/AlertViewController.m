@@ -83,11 +83,11 @@
         
         if (arc4random() % 2) {
             
-            [MessageView showAutoHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowAreaView viewTag:arc4random() % 100];
+            MessageView.build.autoHidden.disableContentViewInteraction.withMessage(messageObject).withDelegate(self).withTag(arc4random() % 100).showIn(self.windowAreaView);
             
         } else {
             
-            [MessageView showAutoHiddenMessageViewInKeyWindowWithMessageObject:messageObject delegate:self viewTag:arc4random() % 100];
+            MessageView.build.autoHidden.withMessage(messageObject).withDelegate(self).withTag(arc4random() % 100).showInKeyWindow();
         }
         
     } else if ([adapter.data isEqualToString:NSStringFromClass([AlertView class])]) {
@@ -98,34 +98,33 @@
         
         if (arc4random() % 2) {
             
-            [AlertView showManualHiddenMessageViewWithMessageObject:messageObject delegate:self contentView:self.windowAreaView viewTag:arc4random() % 100];
+            AlertView.build.disableContentViewInteraction.withMessage(messageObject).withDelegate(self).withTag(arc4random() % 100).showIn(self.windowAreaView);
             
         } else {
             
-            [AlertView showManualHiddenMessageViewInKeyWindowWithMessageObject:messageObject delegate:self viewTag:arc4random() % 100];
+            AlertView.build.withMessage(messageObject).withDelegate(self).withTag(arc4random() % 100).showInKeyWindow();
         }
         
     } else if ([adapter.data isEqualToString:NSStringFromClass([LoadingView class])]) {
         
         if (arc4random() % 2) {
-            
-            [LoadingView showAutoHiddenMessageViewWithMessageObject:nil delegate:self contentView:self.windowAreaView viewTag:arc4random() % 100 delayAutoHidenDuration:8.f];
-            
+
+            LoadingView.build.disableContentViewInteraction.withTag(arc4random() % 100).withDelegate(self).withAutoHiddenDelay(5.f).showIn(self.windowAreaView);
+
         } else {
-            
-            [LoadingView showAutoHiddenMessageViewInKeyWindowWithMessageObject:nil delegate:self viewTag:arc4random() % 100 delayAutoHidenDuration:8.f];
+
+            LoadingView.build.withTag(arc4random() % 100).withDelegate(self).withAutoHiddenDelay(5.f).showInKeyWindow();
         }
         
     } else if ([adapter.data isEqualToString:NSStringFromClass([CircleLoadingView class])]) {
         
         if (arc4random() % 2) {
             
-            [CircleLoadingView showAutoHiddenMessageViewWithMessageObject:nil delegate:self contentView:self.windowAreaView viewTag:arc4random() % 100
-                                                   delayAutoHidenDuration:8.f];
+            CircleLoadingView.build.disableContentViewInteraction.withTag(arc4random() % 100).withDelegate(self).withAutoHiddenDelay(5.f).showIn(self.windowAreaView);
             
         } else {
             
-            [CircleLoadingView showAutoHiddenMessageViewInKeyWindowWithMessageObject:nil delegate:self viewTag:arc4random() % 100 delayAutoHidenDuration:8.f];
+            CircleLoadingView.build.withTag(arc4random() % 100).withDelegate(self).withAutoHiddenDelay(5.f).showInKeyWindow();
         }
     }
 }

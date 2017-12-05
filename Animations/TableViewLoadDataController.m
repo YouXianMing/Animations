@@ -47,7 +47,8 @@
 
 - (void)startNetworking {
     
-    self.showLoadingView = [LoadingView showManualHiddenMessageViewWithMessageObject:nil contentView:self.loadingAreaView];
+    self.showLoadingView = LoadingView.build.disableContentViewInteraction;
+    self.showLoadingView.showIn(self.loadingAreaView);
     
     self.dataNetworking = [AFNetworking_3x getMethodNetworkingWithUrlString:@"https://api.app.net/stream/0/posts/stream/global"
                                                            requestParameter:nil
@@ -129,14 +130,14 @@
         
     } else {
         
-        [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"Warning", @"No data now.") contentView:self.windowAreaView];
+        MessageView.build.autoHidden.disableContentViewInteraction.withMessage(MakeMessageViewObject(@"Warning", @"No data now.")).showIn(self.windowAreaView);
     }
 }
 
 - (void)requestFailed:(AFNetworking_3x *)networking error:(NSError *)error {
     
     [self.showLoadingView hide];
-    [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"Notice", @"Network error.") contentView:self.windowAreaView];
+    MessageView.build.autoHidden.disableContentViewInteraction.withMessage(MakeMessageViewObject(@"Notice", @"Network error.")).showIn(self.windowAreaView);
 }
 
 @end

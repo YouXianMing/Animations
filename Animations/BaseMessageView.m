@@ -14,8 +14,6 @@
     
     if (self = [super initWithFrame:frame]) {
         
-        self.delayAutoHidenDuration            = 2.f;
-        self.autoHiden                         = NO;
         self.contentViewUserInteractionEnabled = YES;
     }
     
@@ -32,241 +30,95 @@
     [NSException raise:NSStringFromClass([self class]) format:@"Use hide method from subclass."];
 }
 
-+ (instancetype)messageViewWithMessageObject:(id)messageObject
-                                    delegate:(id <BaseMessageViewDelegate>)delegate
-                                 contentView:(UIView *)contentView
-                                     viewTag:(NSInteger)tag
-                                   autoHiden:(BOOL)autoHiden
-                      delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration
-           contentViewUserInteractionEnabled:(BOOL)contentViewUserInteractionEnabled
-                             showImmediately:(BOOL)showImmediately {
++ (NSTimeInterval)constAutoHiddenDelaySeconds {
     
-    BaseMessageView *alertView                  = [[[self class] alloc] init];
-    
-    alertView.messageObject                     = messageObject;
-    alertView.delegate                          = delegate;
-    alertView.contentView                       = contentView;
-    alertView.tag                               = tag;
-    alertView.autoHiden                         = autoHiden;
-    alertView.delayAutoHidenDuration            = delayAutoHidenDuration;
-    alertView.contentViewUserInteractionEnabled = contentViewUserInteractionEnabled;
-    
-    showImmediately ? [alertView show] : 0;
-    
-    return alertView;
+    return 2.f;
 }
 
-+ (instancetype)showAutoHiddenMessageViewWithMessageObject:(id)messageObject contentView:(UIView *)contentView {
+#pragma mark - Chain Programming.
+
++ (instancetype)build {
     
-    return [[self class] messageViewWithMessageObject:messageObject
-                                             delegate:nil
-                                          contentView:contentView
-                                              viewTag:0
-                                            autoHiden:YES
-                               delayAutoHidenDuration:2.f
-                    contentViewUserInteractionEnabled:NO
-                                      showImmediately:YES];
+    return [[[self class] alloc] init];
 }
 
-+ (instancetype)showAutoHiddenMessageViewWithMessageObject:(id)messageObject
-                                               contentView:(UIView *)contentView
-                                    delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration {
+- (instancetype)autoHidden {
     
-    return [[self class] messageViewWithMessageObject:messageObject
-                                             delegate:nil
-                                          contentView:contentView
-                                              viewTag:0
-                                            autoHiden:YES
-                               delayAutoHidenDuration:delayAutoHidenDuration
-                    contentViewUserInteractionEnabled:NO
-                                      showImmediately:YES];
+    self.autoHiddenDelay = [[self class] constAutoHiddenDelaySeconds];
+    return self;
 }
 
-+ (instancetype)showAutoHiddenMessageViewWithMessageObject:(id)messageObject delegate:(id <BaseMessageViewDelegate>)delegate
-                                               contentView:(UIView *)contentView viewTag:(NSInteger)tag {
+- (instancetype)disableContentViewInteraction {
     
-    return [[self class] messageViewWithMessageObject:messageObject
-                                             delegate:delegate
-                                          contentView:contentView
-                                              viewTag:tag
-                                            autoHiden:YES
-                               delayAutoHidenDuration:2.f
-                    contentViewUserInteractionEnabled:NO
-                                      showImmediately:YES];
+    self.contentViewUserInteractionEnabled = NO;
+    return self;
 }
 
-+ (instancetype)showAutoHiddenMessageViewWithMessageObject:(id)messageObject
-                                                  delegate:(id <BaseMessageViewDelegate>)delegate
-                                               contentView:(UIView *)contentView
-                                                   viewTag:(NSInteger)tag
-                                    delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration {
-
-    return [[self class] messageViewWithMessageObject:messageObject
-                                             delegate:delegate
-                                          contentView:contentView
-                                              viewTag:tag
-                                            autoHiden:YES
-                               delayAutoHidenDuration:delayAutoHidenDuration
-                    contentViewUserInteractionEnabled:NO
-                                      showImmediately:YES];
+- (BaseMessageView *(^)(id <BaseMessageViewDelegate> delegate))withDelegate {
+    
+    return ^ BaseMessageView * (id <BaseMessageViewDelegate> delegate) {
+        
+        self.delegate = delegate;
+        return self;
+    };
 }
 
-+ (instancetype)showManualHiddenMessageViewWithMessageObject:(id)messageObject contentView:(UIView *)contentView {
+- (BaseMessageView *(^)(id messageObject))withMessage {
     
-    return [[self class] messageViewWithMessageObject:messageObject
-                                             delegate:nil
-                                          contentView:contentView
-                                              viewTag:0
-                                            autoHiden:NO
-                               delayAutoHidenDuration:2.f
-                    contentViewUserInteractionEnabled:NO
-                                      showImmediately:YES];
+    return ^ BaseMessageView * (id messageObject) {
+        
+        self.messageObject = messageObject;
+        return self;
+    };
 }
 
-+ (instancetype)showManualHiddenMessageViewWithMessageObject:(id)messageObject delegate:(id <BaseMessageViewDelegate>)delegate
-                                                 contentView:(UIView *)contentView viewTag:(NSInteger)tag {
+- (BaseMessageView *(^)(NSTimeInterval seconds))withAutoHiddenDelay {
     
-    return [[self class] messageViewWithMessageObject:messageObject
-                                             delegate:delegate
-                                          contentView:contentView
-                                              viewTag:tag
-                                            autoHiden:NO
-                               delayAutoHidenDuration:2.f
-                    contentViewUserInteractionEnabled:NO
-                                      showImmediately:YES];
+    return ^ BaseMessageView * (NSTimeInterval seconds) {
+        
+        self.autoHiddenDelay = seconds;
+        return self;
+    };
 }
 
-+ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject {
+- (BaseMessageView *(^)(BOOL enable))withContentViewInteractionEnable {
     
-    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-    
-    if (keyWindow) {
+    return ^ BaseMessageView * (BOOL enable) {
         
-        return [[self class] messageViewWithMessageObject:messageObject
-                                                 delegate:nil
-                                              contentView:keyWindow
-                                                  viewTag:0
-                                                autoHiden:YES
-                                   delayAutoHidenDuration:2.f
-                        contentViewUserInteractionEnabled:YES
-                                          showImmediately:YES];
-        
-    } else {
-    
-        return nil;
-    }
+        self.contentViewUserInteractionEnabled = enable;
+        return self;
+    };
 }
 
-+ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration {
+- (BaseMessageView *(^)(NSInteger tag))withTag {
     
-    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-    
-    if (keyWindow) {
+    return ^ BaseMessageView * (NSInteger tag) {
         
-        return [[self class] messageViewWithMessageObject:messageObject
-                                                 delegate:nil
-                                              contentView:keyWindow
-                                                  viewTag:0
-                                                autoHiden:YES
-                                   delayAutoHidenDuration:delayAutoHidenDuration
-                        contentViewUserInteractionEnabled:YES
-                                          showImmediately:YES];
-        
-    } else {
-        
-        return nil;
-    }
+        self.tag = tag;
+        return self;
+    };
 }
 
-+ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject
-                                                             delegate:(id <BaseMessageViewDelegate>)delegate
-                                                              viewTag:(NSInteger)tag {
+- (BaseMessageView *(^)(UIView *contentView))showIn {
     
-    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-    
-    if (keyWindow) {
+    return ^ BaseMessageView * (UIView *contentView) {
         
-        return [[self class] messageViewWithMessageObject:messageObject
-                                                 delegate:delegate
-                                              contentView:keyWindow
-                                                  viewTag:tag
-                                                autoHiden:YES
-                                   delayAutoHidenDuration:2.f
-                        contentViewUserInteractionEnabled:YES
-                                          showImmediately:YES];
+        self.contentView = contentView;
+        [self show];
         
-    } else {
-    
-        return nil;
-    }
+        return self;
+    };
 }
 
-+ (instancetype)showAutoHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject
-                                                             delegate:(id <BaseMessageViewDelegate>)delegate
-                                                              viewTag:(NSInteger)tag
-                                               delayAutoHidenDuration:(NSTimeInterval)delayAutoHidenDuration {
+- (BaseMessageView *(^)(void))showInKeyWindow {
     
-    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-    
-    if (keyWindow) {
+    return ^ BaseMessageView * (void) {
         
-        return [[self class] messageViewWithMessageObject:messageObject
-                                                 delegate:delegate
-                                              contentView:keyWindow
-                                                  viewTag:tag
-                                                autoHiden:YES
-                                   delayAutoHidenDuration:delayAutoHidenDuration
-                        contentViewUserInteractionEnabled:YES
-                                          showImmediately:YES];
+        self.contentView = [UIApplication sharedApplication].keyWindow;
+        [self show];
         
-    } else {
-        
-        return nil;
-    }
-}
-
-+ (instancetype)showManualHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject {
-    
-    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-    
-    if (keyWindow) {
-        
-        return [[self class] messageViewWithMessageObject:messageObject
-                                                 delegate:nil
-                                              contentView:keyWindow
-                                                  viewTag:0
-                                                autoHiden:NO
-                                   delayAutoHidenDuration:2.f
-                        contentViewUserInteractionEnabled:YES
-                                          showImmediately:YES];
-        
-    } else {
-        
-        return nil;
-    }
-}
-
-+ (instancetype)showManualHiddenMessageViewInKeyWindowWithMessageObject:(id)messageObject
-                                                               delegate:(id <BaseMessageViewDelegate>)delegate
-                                                                viewTag:(NSInteger)tag {
-    
-    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-    
-    if (keyWindow) {
-        
-        return [[self class] messageViewWithMessageObject:messageObject
-                                                 delegate:delegate
-                                              contentView:keyWindow
-                                                  viewTag:tag
-                                                autoHiden:NO
-                                   delayAutoHidenDuration:2.f
-                        contentViewUserInteractionEnabled:YES
-                                          showImmediately:YES];
-        
-    } else {
-        
-        return nil;
-    }
+        return self;
+    };
 }
 
 #pragma mark - Setter.

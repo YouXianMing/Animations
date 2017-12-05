@@ -250,6 +250,8 @@
  */
 + (CellDataAdapter *)layoutTypeAdapter;
 
+#pragma mark - Load content.
+
 /**
  Set the dataAdapter and load content.
  
@@ -284,6 +286,8 @@
  */
 - (void)loadContentWithAdapter:(CellDataAdapter *)dataAdapter delegate:(id <CustomCellDelegate>)delegate tableView:(UITableView *)tableView
                      indexPath:(NSIndexPath *)indexPath;
+
+#pragma mark - Register cell with tableView.
 
 /**
  *  Register to tableView with the reuseIdentifier you specified.

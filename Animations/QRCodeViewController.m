@@ -65,7 +65,7 @@
         [self.lightButton setImage:[UIImage imageNamed:@"newbarcode_light_off"] forState:UIControlStateNormal];
         [codeView stop];
         
-        [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"二维码", codeString) contentView:self.windowAreaView];
+        MessageView.build.autoHidden.disableContentViewInteraction.withMessage(MakeMessageViewObject(@"二维码", codeString)).showIn(self.windowAreaView);
     }];
     
     [GCDQueue executeInMainQueue:^{
@@ -111,7 +111,7 @@
             
         } else {
             
-            [MessageView showAutoHiddenMessageViewWithMessageObject:MakeMessageViewObject(@"警告", @"摄像头不可用") contentView:self.windowAreaView];
+            MessageView.build.autoHidden.disableContentViewInteraction.withMessage(MakeMessageViewObject(@"警告", @"摄像头不可用")).showIn(self.windowAreaView);
         }
     }
 }
