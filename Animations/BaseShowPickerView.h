@@ -24,14 +24,19 @@
 
 @property (nonatomic, class, readonly)  CGFloat  contentViewHeight; // contentView的高度,需要子类提供数据
 
-@property (nonatomic, weak)   id                               picker;       // 由子类在buildViewsInContentViewAndManagerDatas中赋值
+@property (nonatomic, weak)   id                               picker;       // 由子类在buildViewsInContentView中赋值,在configPicker中使用
 @property (nonatomic, weak)   id                               object;       // weak对象
 @property (nonatomic, weak)   id <BaseShowPickerViewDelegate>  delegate;     // 代理
 @property (nonatomic, strong) id                               info;         // 信息数据
 @property (nonatomic, strong) id                               selectedItem; // 选中内容,可能是数组,可能是一个对象
 @property (nonatomic, strong) NSArray                         *showDatas;    // 显示内容的数据
 
-+ (instancetype)showPickerViewWithDelegate:(id <BaseShowPickerViewDelegate>)delegate;
++ (instancetype)showPickerViewWithDelegate:(id <BaseShowPickerViewDelegate>)delegate
+                                       tag:(NSInteger)tag
+                                    object:(id)object
+                                      info:(id)info
+                              selectedItem:(id)selectedItem
+                                 showDatas:(NSArray *)showDatas;
 
 /**
  在执行此方法之前,需要先提供contentViewHeight的数值
@@ -48,7 +53,25 @@
  */
 - (void)configPicker;
 
+/**
+ 在keyWindow中显示
+ */
 - (void)showInKeyWindow;
+
+/**
+ 在keyWindow中隐藏
+ */
 - (void)hideFromKeyWindow;
+
+#pragma mark - Chain Programming.
+
++ (instancetype)build;
+- (BaseShowPickerView *(^)(NSInteger tag))withTag;
+- (BaseShowPickerView *(^)(id object))withObject;
+- (BaseShowPickerView *(^)(id <BaseShowPickerViewDelegate> delegate))withDelegate;
+- (BaseShowPickerView *(^)(id info))withInfo;
+- (BaseShowPickerView *(^)(id selectedItem))withSelectedItem;
+- (BaseShowPickerView *(^)(NSArray *showDatas))withShowDatas;
+- (BaseShowPickerView *(^)(void))prepareAndShowInKeyWindow;
 
 @end

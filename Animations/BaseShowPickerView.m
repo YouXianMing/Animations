@@ -54,10 +54,23 @@
     // Overwrite by subclass.
 }
 
-+ (instancetype)showPickerViewWithDelegate:(id <BaseShowPickerViewDelegate>)delegate {
++ (instancetype)showPickerViewWithDelegate:(id <BaseShowPickerViewDelegate>)delegate
+                                       tag:(NSInteger)tag
+                                    object:(id)object
+                                      info:(id)info
+                              selectedItem:(id)selectedItem
+                                 showDatas:(NSArray *)showDatas {
     
     BaseShowPickerView *pickerView = [[self class] new];
     pickerView.delegate            = delegate;
+    pickerView.tag                 = tag;
+    pickerView.object              = object;
+    pickerView.info                = info;
+    pickerView.selectedItem        = selectedItem;
+    pickerView.showDatas           = showDatas;
+    
+    [pickerView prepare];
+    [pickerView showInKeyWindow];
     
     return pickerView;
 }
@@ -101,10 +114,7 @@
     [UIView animateWithDuration:0.35f animations:^{
         
         self.backgroundButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.f];
-        self.contentView.frame                = CGRectMake(0,
-                                                           self.keyWindow.frame.size.height,
-                                                           self.keyWindow.frame.size.width,
-                                                           [[self class] contentViewHeight]);
+        self.contentView.frame                = CGRectMake(0, self.keyWindow.frame.size.height, self.keyWindow.frame.size.width, [[self class] contentViewHeight]);
         
     } completion:^(BOOL finished) {
         
@@ -127,6 +137,89 @@
 + (CGFloat)contentViewHeight {
     
     return 0;
+}
+
+- (void)dealloc {
+    
+    NSLog(@"%@ dealloc.", NSStringFromClass([self class]));
+}
+
+#pragma mark - Chain Programming.
+
++ (instancetype)build {
+    
+    return [[self class] new];
+}
+
+- (BaseShowPickerView *(^)(NSInteger tag))withTag {
+    
+    return ^ BaseShowPickerView * (NSInteger tag) {
+        
+        self.tag = tag;
+        
+        return self;
+    };
+}
+
+- (BaseShowPickerView *(^)(id object))withObject {
+    
+    return ^ BaseShowPickerView * (id object) {
+        
+        self.object = object;
+        
+        return self;
+    };
+}
+
+- (BaseShowPickerView *(^)(id <BaseShowPickerViewDelegate> delegate))withDelegate {
+    
+    return ^ BaseShowPickerView * (id <BaseShowPickerViewDelegate> delegate) {
+        
+        self.delegate = delegate;
+        
+        return self;
+    };
+}
+
+- (BaseShowPickerView *(^)(id info))withInfo {
+    
+    return ^ BaseShowPickerView * (id info) {
+        
+        self.info = info;
+        
+        return self;
+    };
+}
+
+- (BaseShowPickerView *(^)(id selectedItem))withSelectedItem {
+    
+    return ^ BaseShowPickerView * (id selectedItem) {
+        
+        self.selectedItem = selectedItem;
+        
+        return self;
+    };
+}
+
+- (BaseShowPickerView *(^)(NSArray *showDatas))withShowDatas {
+    
+    return ^ BaseShowPickerView * (NSArray *showDatas) {
+        
+        self.showDatas = showDatas;
+        
+        return self;
+    };
+}
+
+- (BaseShowPickerView *(^)(void))prepareAndShowInKeyWindow {
+    
+    return ^ BaseShowPickerView * (void) {
+        
+        [self prepare];
+        [self showInKeyWindow];
+        
+        return self;
+    };
 }
 
 @end

@@ -313,50 +313,61 @@ typedef enum : NSUInteger {
     
     [self.view endEditing:YES];
     
-    Class               PickerViewClass = [selectItemView.title isEqualToString:@"希望入孵时间"] ? [DateItemPickerView class] : [OneItemPickerView class];
-    BaseShowPickerView *pickerView      = [PickerViewClass showPickerViewWithDelegate:self];
-    pickerView.object                   = selectItemView;
-    pickerView.info                     = selectItemView.title;
-    
-    if ([selectItemView.title isEqualToString:@"工位类型"]) {
-        
-        pickerView.selectedItem = selectItemView.content;
-        pickerView.showDatas    = @[[self normalFontWithString:@"独立办公"], [self normalFontWithString:@"开放办公"]];
-        
-    } else if ([selectItemView.title isEqualToString:@"是否需要独立宽带"] || [selectItemView.title isEqualToString:@"是否需要保洁服务"]) {
-        
-        pickerView.selectedItem = selectItemView.content;
-        pickerView.showDatas    = @[[self boldRedWithString:@"是"], [self normalFontWithString:@"否"]];
-        
-    } else if ([selectItemView.title isEqualToString:@"预测孵化周期"]) {
-        
-        pickerView.selectedItem = selectItemView.content;
-        pickerView.showDatas    = @[[self normalFontWithMonthString:@"1 个月"],
-                                    [self normalFontWithMonthString:@"2 个月"],
-                                    [self normalFontWithMonthString:@"3 个月"],
-                                    [self normalFontWithMonthString:@"4 个月"],
-                                    [self normalFontWithMonthString:@"5 个月"],
-                                    [self normalFontWithMonthString:@"6 个月"],
-                                    [self normalFontWithMonthString:@"7 个月"],
-                                    [self normalFontWithMonthString:@"8 个月"],
-                                    [self normalFontWithMonthString:@"9 个月"],
-                                    [self normalFontWithMonthString:@"10 个月"],
-                                    [self normalFontWithMonthString:@"11 个月"],
-                                    [self normalFontWithMonthString:@"12 个月"]];
-        
-    } else if ([selectItemView.title isEqualToString:@"希望入孵时间"] && selectItemView.content.string.length) {
-        
-        pickerView.selectedItem = [DateFormatter dateFormatterWithInputDateString:[selectItemView.content string] inputDateStringFormatter:@"yyyy-MM-dd"];
-    }
-    
-    [pickerView prepare];
-    [pickerView showInKeyWindow];
-    
+    // 移动到指定的位置
     CGPoint point = [selectItemView.superview frameOriginFromView:self.scrollView];
     [UIView animateWithDuration:0.4f animations:^{
         
         self.scrollView.contentOffset = CGPointMake(0, point.y - 10.f);
     }];
+    
+    // 显示pickerView
+    id selectedItem = nil;
+    id showDatas    = nil;
+    
+    if ([selectItemView.title isEqualToString:@"工位类型"]) {
+        
+        selectedItem = selectItemView.content;
+        showDatas    = @[[self normalFontWithString:@"独立办公"], [self normalFontWithString:@"开放办公"]];
+        
+    } else if ([selectItemView.title isEqualToString:@"是否需要独立宽带"] || [selectItemView.title isEqualToString:@"是否需要保洁服务"]) {
+        
+        selectedItem = selectItemView.content;
+        showDatas    = @[[self boldRedWithString:@"是"], [self normalFontWithString:@"否"]];
+        
+    } else if ([selectItemView.title isEqualToString:@"预测孵化周期"]) {
+        
+        selectedItem = selectItemView.content;
+        showDatas    = @[[self normalFontWithMonthString:@"1 个月"],
+                         [self normalFontWithMonthString:@"2 个月"],
+                         [self normalFontWithMonthString:@"3 个月"],
+                         [self normalFontWithMonthString:@"4 个月"],
+                         [self normalFontWithMonthString:@"5 个月"],
+                         [self normalFontWithMonthString:@"6 个月"],
+                         [self normalFontWithMonthString:@"7 个月"],
+                         [self normalFontWithMonthString:@"8 个月"],
+                         [self normalFontWithMonthString:@"9 个月"],
+                         [self normalFontWithMonthString:@"10 个月"],
+                         [self normalFontWithMonthString:@"11 个月"],
+                         [self normalFontWithMonthString:@"12 个月"]];
+        
+    } else if ([selectItemView.title isEqualToString:@"希望入孵时间"] && selectItemView.content.string.length) {
+        
+        selectedItem = [DateFormatter dateFormatterWithInputDateString:[selectItemView.content string] inputDateStringFormatter:@"yyyy-MM-dd"];
+    }
+    
+    Class PickerViewClass = [selectItemView.title isEqualToString:@"希望入孵时间"] ? [DateItemPickerView class] : [OneItemPickerView class];
+    
+    if (arc4random() % 2) {
+        
+        // Normal Programming.
+        [PickerViewClass showPickerViewWithDelegate:self tag:0 object:selectItemView info:selectItemView.title selectedItem:selectedItem showDatas:showDatas];
+        
+    } else {
+        
+        // Chain Programming.
+        BaseShowPickerView *pickerView = [PickerViewClass build];
+        pickerView.withDelegate(self).withObject(selectItemView).withInfo(selectItemView.title).withSelectedItem(selectedItem).withShowDatas(showDatas).prepareAndShowInKeyWindow();
+    }
 }
 
 #pragma mark - UITextFieldDelegate
