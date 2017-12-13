@@ -413,7 +413,6 @@
 		C56B3A6C1F2830A400133AC0 /* UIView+ConvertRect.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B3A691F2830A400133AC0 /* UIView+ConvertRect.m */; };
 		C56B3A6D1F2830A400133AC0 /* UIView+DebugFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B3A6B1F2830A400133AC0 /* UIView+DebugFrame.m */; };
 		C56B7AF71D470E19009AE3C8 /* UIButton+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */; };
-		C56F19C01D891F3600683DB5 /* CustomBuildOutsideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F19BF1D891F3600683DB5 /* CustomBuildOutsideViewCell.m */; };
 		C574C01A1D33A21B00E40201 /* UIAlertController+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */; };
 		C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = C574C01D1D33A22D00E40201 /* UIAlertAction+Constructor.m */; };
 		C57526BF1D5030A40064F6CD /* WaterWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526BE1D5030A40064F6CD /* WaterWaveViewController.m */; };
@@ -1363,8 +1362,6 @@
 		C56B7AF41D4709B3009AE3C8 /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		C56B7AF51D470E19009AE3C8 /* UIButton+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Event.h"; sourceTree = "<group>"; };
 		C56B7AF61D470E19009AE3C8 /* UIButton+Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Event.m"; sourceTree = "<group>"; };
-		C56F19BE1D891F3600683DB5 /* CustomBuildOutsideViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBuildOutsideViewCell.h; sourceTree = "<group>"; };
-		C56F19BF1D891F3600683DB5 /* CustomBuildOutsideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBuildOutsideViewCell.m; sourceTree = "<group>"; };
 		C574C0181D33A21B00E40201 /* UIAlertController+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Constructor.h"; sourceTree = "<group>"; };
 		C574C0191D33A21B00E40201 /* UIAlertController+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Constructor.m"; sourceTree = "<group>"; };
 		C574C01C1D33A22D00E40201 /* UIAlertAction+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertAction+Constructor.h"; sourceTree = "<group>"; };
@@ -2784,8 +2781,6 @@
 			children = (
 				102ED8741C3BFCCC00E9863E /* CustomCell.h */,
 				102ED8751C3BFCCC00E9863E /* CustomCell.m */,
-				C56F19BE1D891F3600683DB5 /* CustomBuildOutsideViewCell.h */,
-				C56F19BF1D891F3600683DB5 /* CustomBuildOutsideViewCell.m */,
 				1041AE6B1CEC4507005697B8 /* BaseCustomCollectionCell.h */,
 				1041AE6C1CEC4507005697B8 /* BaseCustomCollectionCell.m */,
 			);
@@ -4730,7 +4725,6 @@
 				C574C01E1D33A22D00E40201 /* UIAlertAction+Constructor.m in Sources */,
 				C57791E81FCCFEAE00BED2B1 /* SelectItemView.m in Sources */,
 				104228C91C36956C0011409C /* PictureCell.m in Sources */,
-				C56F19C01D891F3600683DB5 /* CustomBuildOutsideViewCell.m in Sources */,
 				1011BA9F1CD4898D00F29FB9 /* DailyListModel.m in Sources */,
 				C545535D1E1CD76E00A5BA58 /* iCarouselAdapter.m in Sources */,
 				1011BAFF1CD495F200F29FB9 /* AbsEncryptingMode.m in Sources */,
