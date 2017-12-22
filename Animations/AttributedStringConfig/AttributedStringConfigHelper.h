@@ -13,6 +13,7 @@
 #import "FontAttributeConfig.h"
 #import "ForegroundColorAttributeConfig.h"
 #import "ParagraphAttributeConfig.h"
+#import "KernAttributeConfig.h"
 #import "NSAttributedString+AttributedStringConfig.h"
 #import "NSMutableAttributedString+AttributedStringConfig.h"
 #import "NSString+AttributedStringConfig.h"

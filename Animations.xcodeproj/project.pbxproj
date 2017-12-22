@@ -435,6 +435,7 @@
 		C5792EE61F4743B3000B0D1B /* ResponseDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EE21F4743B3000B0D1B /* ResponseDataSerializer.m */; };
 		C5792EE91F4749FD000B0D1B /* WanDouJiaModelSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EE81F4749FD000B0D1B /* WanDouJiaModelSerializer.m */; };
 		C5792EEC1F474C44000B0D1B /* WanDouJiaParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5792EEB1F474C44000B0D1B /* WanDouJiaParameterSerializer.m */; };
+		C579E2A21FED010F00358620 /* KernAttributeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C579E2A01FED010E00358620 /* KernAttributeConfig.m */; };
 		C57C8D7F1F5CEDC200F62803 /* CustomPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D7E1F5CEDC200F62803 /* CustomPickerViewController.m */; };
 		C57C8D8C1F5CEE2000F62803 /* CustomPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D831F5CEE2000F62803 /* CustomPickerView.m */; };
 		C57C8D8D1F5CEE2000F62803 /* PickerViewDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C8D851F5CEE2000F62803 /* PickerViewDataAdapter.m */; };
@@ -1407,6 +1408,8 @@
 		C5792EE81F4749FD000B0D1B /* WanDouJiaModelSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanDouJiaModelSerializer.m; sourceTree = "<group>"; };
 		C5792EEA1F474C44000B0D1B /* WanDouJiaParameterSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanDouJiaParameterSerializer.h; sourceTree = "<group>"; };
 		C5792EEB1F474C44000B0D1B /* WanDouJiaParameterSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanDouJiaParameterSerializer.m; sourceTree = "<group>"; };
+		C579E2A01FED010E00358620 /* KernAttributeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KernAttributeConfig.m; sourceTree = "<group>"; };
+		C579E2A11FED010E00358620 /* KernAttributeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KernAttributeConfig.h; sourceTree = "<group>"; };
 		C57C8D7D1F5CEDC200F62803 /* CustomPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerViewController.h; sourceTree = "<group>"; };
 		C57C8D7E1F5CEDC200F62803 /* CustomPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerViewController.m; sourceTree = "<group>"; };
 		C57C8D821F5CEE2000F62803 /* CustomPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerView.h; sourceTree = "<group>"; };
@@ -3420,6 +3423,8 @@
 				C501F2101F0C7DE90051B4C6 /* ForegroundColorAttributeConfig.m */,
 				C501F2111F0C7DE90051B4C6 /* ParagraphAttributeConfig.h */,
 				C501F2121F0C7DE90051B4C6 /* ParagraphAttributeConfig.m */,
+				C579E2A11FED010E00358620 /* KernAttributeConfig.h */,
+				C579E2A01FED010E00358620 /* KernAttributeConfig.m */,
 			);
 			path = ConcreteAttributeStringConfigs;
 			sourceTree = "<group>";
@@ -4862,6 +4867,7 @@
 				109606281C93B47800CCB3AD /* AFNetworking_3x.m in Sources */,
 				104FCCAD1D235A1000308B73 /* IconEdgeInsetsLabel.m in Sources */,
 				C55F55F91F0B9686008F0910 /* CustomTabBarViewController.m in Sources */,
+				C579E2A21FED010F00358620 /* KernAttributeConfig.m in Sources */,
 				1068FCCD1CF7D87A00BE431C /* PressScaleButton.m in Sources */,
 				C51B11B81F52A2D600EBF6A0 /* CategoryModel.m in Sources */,
 				10381FB41BF9B55B00E5E476 /* POPAnimationRuntime.mm in Sources */,
