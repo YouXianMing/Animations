@@ -497,6 +497,7 @@
 		C5DAC1A71F661FE1000D2F91 /* ParticleSKView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC1A31F661FE1000D2F91 /* ParticleSKView.m */; };
 		C5DAC1A81F661FE1000D2F91 /* ParticleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC1A51F661FE1000D2F91 /* ParticleScene.m */; };
 		C5DAC1A91F661FE1000D2F91 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = C5DAC1A61F661FE1000D2F91 /* Magic.sks */; };
+		C5E4C4E31FF5F4FC00430652 /* NSString+HexUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E4C4E21FF5F4FC00430652 /* NSString+HexUnicode.m */; };
 		C5E7760D1F2580F900C304A1 /* TreeStructureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E7760C1F2580F900C304A1 /* TreeStructureTableViewController.m */; };
 		C5E776111F2582E700C304A1 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E776101F2582E700C304A1 /* CityModel.m */; };
 		C5E776141F25850900C304A1 /* CityModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E776131F25850900C304A1 /* CityModelCell.m */; };
@@ -1535,6 +1536,8 @@
 		C5DAC1A51F661FE1000D2F91 /* ParticleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleScene.m; sourceTree = "<group>"; };
 		C5DAC1A61F661FE1000D2F91 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
 		C5DAC1AA1F6621C0000D2F91 /* ControllersHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllersHeader.h; sourceTree = "<group>"; };
+		C5E4C4E11FF5F4FB00430652 /* NSString+HexUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HexUnicode.h"; sourceTree = "<group>"; };
+		C5E4C4E21FF5F4FC00430652 /* NSString+HexUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexUnicode.m"; sourceTree = "<group>"; };
 		C5E7760B1F2580F900C304A1 /* TreeStructureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeStructureTableViewController.h; sourceTree = "<group>"; };
 		C5E7760C1F2580F900C304A1 /* TreeStructureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeStructureTableViewController.m; sourceTree = "<group>"; };
 		C5E7760F1F2582E700C304A1 /* CityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModel.h; sourceTree = "<group>"; };
@@ -2497,6 +2500,8 @@
 				10A34F651C55AC9900E1A0E0 /* NSString+LabelWidthAndHeight.m */,
 				10A34F671C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.h */,
 				10A34F681C55ACE900E1A0E0 /* NSAttributedString+LabelWidthAndHeight.m */,
+				C5E4C4E11FF5F4FB00430652 /* NSString+HexUnicode.h */,
+				C5E4C4E21FF5F4FC00430652 /* NSString+HexUnicode.m */,
 				105AFB491CF18CEF003DD84A /* NSString+Range.h */,
 				105AFB4A1CF18CEF003DD84A /* NSString+Range.m */,
 			);
@@ -4457,6 +4462,7 @@
 				C51B119F1F52A16900EBF6A0 /* LinkageTwoLevelModel.m in Sources */,
 				102B84E11C3B95F0001699A9 /* FileManager.m in Sources */,
 				10E2D4E91CD5962000666EEB /* NSData+ImageContentType.m in Sources */,
+				C5E4C4E31FF5F4FC00430652 /* NSString+HexUnicode.m in Sources */,
 				C5EFF2471F14735A00BD5AF0 /* HorizontalCollectionItemView.m in Sources */,
 				C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */,
 				C5792EE31F4743B3000B0D1B /* Networking.m in Sources */,
