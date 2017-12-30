@@ -479,6 +479,7 @@
 		C59608C91D3DFADB006BF6E0 /* TableGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608C81D3DFADB006BF6E0 /* TableGridView.m */; };
 		C59608CC1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */; };
 		C59608CF1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */; };
+		C5A6C9DD1FF7389D0076C86C /* UIColor+RepresentInHex.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C9DC1FF7389D0076C86C /* UIColor+RepresentInHex.m */; };
 		C5AB56781E1B8106003B388F /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AB56771E1B8106003B388F /* AlertView.m */; };
 		C5B457821DE7D9CA002363AC /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B457811DE7D9CA002363AC /* ShapeView.m */; };
 		C5C1E6C11FA80DE10023B8F4 /* DynamicSwitchingLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C1E6C01FA80DE00023B8F4 /* DynamicSwitchingLayoutController.m */; };
@@ -1500,6 +1501,8 @@
 		C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TableGridView+ConvenientMethod.m"; sourceTree = "<group>"; };
 		C59608CD1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CollectionGridView+ConvenientMethod.h"; sourceTree = "<group>"; };
 		C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CollectionGridView+ConvenientMethod.m"; sourceTree = "<group>"; };
+		C5A6C9DB1FF7389D0076C86C /* UIColor+RepresentInHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+RepresentInHex.h"; sourceTree = "<group>"; };
+		C5A6C9DC1FF7389D0076C86C /* UIColor+RepresentInHex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RepresentInHex.m"; sourceTree = "<group>"; };
 		C5AB56761E1B8106003B388F /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
 		C5AB56771E1B8106003B388F /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
 		C5B457801DE7D9CA002363AC /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
@@ -2845,6 +2848,7 @@
 		1068FCCA1CF7D76E00BE431C /* UI-Component */ = {
 			isa = PBXGroup;
 			children = (
+				C5A6C9DA1FF7386C0076C86C /* UIcolor+Category */,
 				C5159D2A1F2F125900AF92E3 /* UIViewController+Category */,
 				C59062241DEC390F002562AE /* CAShapeLayer+Category */,
 				C5C5AFEB1DD59D1C00F35EB8 /* UILabel+Category */,
@@ -4126,6 +4130,15 @@
 			name = TableGridView;
 			sourceTree = "<group>";
 		};
+		C5A6C9DA1FF7386C0076C86C /* UIcolor+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C5A6C9DB1FF7389D0076C86C /* UIColor+RepresentInHex.h */,
+				C5A6C9DC1FF7389D0076C86C /* UIColor+RepresentInHex.m */,
+			);
+			name = "UIcolor+Category";
+			sourceTree = "<group>";
+		};
 		C5C1E6C21FA80DE70023B8F4 /* DynamicSwitchingLayoutController */ = {
 			isa = PBXGroup;
 			children = (
@@ -4597,6 +4610,7 @@
 				C53BE9BC1FB15DBB0002F28B /* PNGManager.m in Sources */,
 				10381FBF1BF9B55B00E5E476 /* POPSpringAnimation.mm in Sources */,
 				C56851C71DE6CBE3000F18C2 /* HeaderIconCell.m in Sources */,
+				C5A6C9DD1FF7389D0076C86C /* UIColor+RepresentInHex.m in Sources */,
 				C52A3CB31F67827600C2F862 /* CustomCityPickerViewController.m in Sources */,
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
