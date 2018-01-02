@@ -214,4 +214,9 @@
     }
 }
 
+- (void)dealloc {
+    
+    [self.loopView stopLoopAnimation];
+}
+
 @end
