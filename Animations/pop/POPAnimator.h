@@ -22,10 +22,22 @@
  */
 + (instancetype)sharedAnimator;
 
+#if !TARGET_OS_IPHONE
+/**
+ @abstract Allows to select display to bind. Returns nil if failed to create the display link.
+ */
+- (instancetype)initWithDisplayID:(CGDirectDisplayID)displayID;
+#endif
+
 /**
  @abstract The optional animator delegate.
  */
 @property (weak, nonatomic) id<POPAnimatorDelegate> delegate;
+
+/**
+ @abstract Retrieves the nominal refresh period of a display link. Returns zero if unavailable.
+ */
+@property (readonly, nonatomic) CFTimeInterval refreshPeriod;
 
 @end
 

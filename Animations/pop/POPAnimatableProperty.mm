@@ -166,12 +166,14 @@ NSString * const kPOPSCNNodeScaleXY = @"scnnode.scale.xy";
 typedef struct
 {
   NSString *name;
-  pop_animatable_read_block readBlock;
-  pop_animatable_write_block writeBlock;
+  POPAnimatablePropertyReadBlock readBlock;
+  POPAnimatablePropertyWriteBlock writeBlock;
   CGFloat threshold;
 } _POPStaticAnimatablePropertyState;
 typedef _POPStaticAnimatablePropertyState POPStaticAnimatablePropertyState;
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wglobal-constructors"
 static POPStaticAnimatablePropertyState _staticStates[] =
 {
   /* CALayer */
@@ -1113,6 +1115,7 @@ static POPStaticAnimatablePropertyState _staticStates[] =
 #endif
 
 };
+#pragma clang diagnostic pop
 
 static NSUInteger staticIndexWithName(NSString *aName)
 {
@@ -1144,12 +1147,12 @@ static NSUInteger staticIndexWithName(NSString *aName)
   return _state->name;
 }
 
-- (pop_animatable_read_block)readBlock
+- (POPAnimatablePropertyReadBlock)readBlock
 {
   return _state->readBlock;
 }
 
-- (pop_animatable_write_block)writeBlock
+- (POPAnimatablePropertyWriteBlock)writeBlock
 {
   return _state->writeBlock;
 }
@@ -1167,7 +1170,7 @@ static NSUInteger staticIndexWithName(NSString *aName)
  Concrete immutable property class.
  */
 @interface POPConcreteAnimatableProperty : POPAnimatableProperty
-- (instancetype)initWithName:(NSString *)name readBlock:(pop_animatable_read_block)read writeBlock:(pop_animatable_write_block)write threshold:(CGFloat)threshold;
+- (instancetype)initWithName:(NSString *)name readBlock:(POPAnimatablePropertyReadBlock)read writeBlock:(POPAnimatablePropertyWriteBlock)write threshold:(CGFloat)threshold;
 @end
 
 @implementation POPConcreteAnimatableProperty
@@ -1175,7 +1178,7 @@ static NSUInteger staticIndexWithName(NSString *aName)
 // default synthesis
 @synthesize name, readBlock, writeBlock, threshold;
 
-- (instancetype)initWithName:(NSString *)aName readBlock:(pop_animatable_read_block)aReadBlock writeBlock:(pop_animatable_write_block)aWriteBlock threshold:(CGFloat)aThreshold
+- (instancetype)initWithName:(NSString *)aName readBlock:(POPAnimatablePropertyReadBlock)aReadBlock writeBlock:(POPAnimatablePropertyWriteBlock)aWriteBlock threshold:(CGFloat)aThreshold
 {
   self = [super init];
   if (nil != self) {

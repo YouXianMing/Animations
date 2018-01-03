@@ -13,6 +13,7 @@
 #import "POPDefines.h"
 
 #import "POPAnimatableProperty.h"
+#import "POPAnimatablePropertyTypes.h"
 #import "POPAnimation.h"
 #import "POPAnimationEvent.h"
 #import "POPAnimationExtras.h"
