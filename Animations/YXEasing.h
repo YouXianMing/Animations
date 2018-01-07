@@ -15,7 +15,7 @@
 //
 // http://easings.net/zh-cn
 // http://gizma.com/easing/
-// 
+//
 // BackEase        ：在某一动画开始沿指示的路径进行动画处理前稍稍收回该动画的移动。
 // BounceEase      ：创建弹跳效果。
 // CircleEase      ：创建使用循环函数加速和/或减速的动画。
@@ -27,45 +27,41 @@
 // QuarticEase     ：创建使用公式 f(t) = t^4 加速和/或减速的动画。
 // QuinticEase     ：创建使用公式 f(t) = t^5 加速和/或减速的动画。
 // SineEase        ：创建使用正弦公式加速和/或减速的动画。
-// 
+//
 // LinearInterpolation
-// 
+//
 // QuadraticEaseIn
 // QuadraticEaseOut
 // QuadraticEaseInOut
-// 
+//
 // CubicEaseIn
 // CubicEaseOut
 // CubicEaseInOut
-// 
+//
 // QuarticEaseIn
 // QuarticEaseOut
 // QuarticEaseInOut
-// 
-// QuinticEaseIn
-// QuinticEaseOut
-// QuinticEaseInOut
-// 
+//
 // SineEaseIn
 // SineEaseOut
 // SineEaseInOut
-// 
+//
 // CircularEaseIn
 // CircularEaseOut
 // CircularEaseInOut
-// 
+//
 // ExponentialEaseIn
 // ExponentialEaseOut
 // ExponentialEaseInOut
-// 
+//
 // ElasticEaseIn
 // ElasticEaseOut
 // ElasticEaseInOut
-// 
+//
 // BackEaseIn
 // BackEaseOut
 // BackEaseInOut
-// 
+//
 // BounceEaseIn
 // BounceEaseOut
 // BounceEaseInOut
@@ -117,4 +113,20 @@
                                func:(AHEasingFunction)func
                          frameCount:(size_t)frameCount;
 
+/**
+ *  Calculate frames by frame.
+ *
+ *  @param fromFrame   Start frame.
+ *  @param toFrame     End frame.
+ *  @param func        Easing function method.
+ *  @param frameCount  Frame count one second.
+ *
+ *  @return Values Calculated.
+ */
++ (NSArray *)calculateFrameFromFrame:(CGRect)fromFrame
+                             toFrame:(CGRect)toFrame
+                                func:(AHEasingFunction)func
+                          frameCount:(size_t)frameCount;
+
 @end
+
