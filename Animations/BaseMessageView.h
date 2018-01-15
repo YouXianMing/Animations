@@ -69,6 +69,11 @@
 @property (nonatomic, weak) UIView *contentView;
 
 /**
+ The object.
+ */
+@property (nonatomic, weak) NSObject *object;
+
+/**
  The contentView's UserInteractionEnabled, default is YES, if you set it to NO, you should manage the value by yourself.
  */
 @property (nonatomic) BOOL contentViewUserInteractionEnabled;
@@ -119,6 +124,11 @@
  *  Chain with set messageObject.
  */
 - (BaseMessageView *(^)(id messageObject))withMessage;
+
+/**
+ *  Chain with set weak object.
+ */
+- (BaseMessageView *(^)(NSObject *object))withObject;
 
 /**
  *  Chain with set AutoHiddenDelay.

@@ -72,6 +72,15 @@
     };
 }
 
+- (BaseMessageView *(^)(NSObject *object))withObject {
+    
+    return ^ BaseMessageView * (NSObject *object) {
+        
+        self.object = object;
+        return self;
+    };
+}
+
 - (BaseMessageView *(^)(NSTimeInterval seconds))withAutoHiddenDelay {
     
     return ^ BaseMessageView * (NSTimeInterval seconds) {
