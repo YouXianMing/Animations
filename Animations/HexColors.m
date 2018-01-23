@@ -23,7 +23,7 @@
     {
         hexString = [NSString stringWithFormat:@"#%@", hexString];
     }
-
+    
     CGFloat alpha = 1.0;
     if (5 == hexString.length || 9 == hexString.length) {
         NSString * alphaHex = [hexString substringWithRange:NSMakeRange(1, 9 == hexString.length ? 2 : 1)];
@@ -32,7 +32,7 @@
         unsigned alpha_u = [[self class] hexValueToUnsigned:alphaHex];
         alpha = ((CGFloat) alpha_u) / 255.0;
     }
-
+    
     return [[self class] colorWithHexString:hexString alpha:alpha];
 }
 
@@ -115,5 +115,52 @@
     return value;
 }
 
+- (NSString *)representInHex {
+    
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
+    size_t         count      = CGColorGetNumberOfComponents(self.CGColor);
+    
+    if(count == 2) {
+        
+        return [NSString stringWithFormat:@"#%02lX%02lX%02lX",
+                lroundf(components[0] * 255.0),
+                lroundf(components[0] * 255.0),
+                lroundf(components[0] * 255.0)];
+        
+    } else {
+        
+        return [NSString stringWithFormat:@"#%02lX%02lX%02lX",
+                lroundf(components[0] * 255.0),
+                lroundf(components[1] * 255.0),
+                lroundf(components[2] * 255.0)];
+    }
+}
+
+- (NSArray *)representValuesInHex {
+    
+    CGFloat alpha;
+    [self getRed:nil green:nil blue:nil alpha:&alpha];
+    
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
+    size_t         count      = CGColorGetNumberOfComponents(self.CGColor);
+    
+    if(count == 2) {
+        
+        return @[@(alpha),
+                 [NSString stringWithFormat:@"#%02lX%02lX%02lX",
+                  lroundf(components[0] * 255.0),
+                  lroundf(components[0] * 255.0),
+                  lroundf(components[0] * 255.0)]];
+        
+    } else {
+        
+        return @[@(alpha),
+                 [NSString stringWithFormat:@"#%02lX%02lX%02lX",
+                  lroundf(components[0] * 255.0),
+                  lroundf(components[1] * 255.0),
+                  lroundf(components[2] * 255.0)]];
+    }
+}
 
 @end
+

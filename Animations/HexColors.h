@@ -15,11 +15,11 @@
 #import "TargetConditionals.h"
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-  #import <UIKit/UIKit.h>
-  #define HXColor UIColor
+#import <UIKit/UIKit.h>
+#define HXColor UIColor
 #else
-  #import <Cocoa/Cocoa.h>
-  #define HXColor NSColor
+#import <Cocoa/Cocoa.h>
+#define HXColor NSColor
 #endif
 
 @interface HXColor (HexColorAddition)
@@ -30,4 +30,9 @@
 + (HXColor *)colorWith8BitRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue;
 + (HXColor *)colorWith8BitRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(CGFloat)alpha;
 
+- (NSString *)representInHex; // like @"#F0F0F0"
+- (NSArray *)representValuesInHex; // like @[@(1.f), @"#F0F0F0"]
+
 @end
+
+
