@@ -42,6 +42,8 @@
                 lengths[idx] = value.floatValue;
             }];
             
+            free(lengths);
+            
             CGContextSetLineDash(context, drawingAttribute.phase, lengths, drawingAttribute.lineDashLengths.count);
             
         } else {
