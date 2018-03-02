@@ -8,7 +8,16 @@
 
 #import "LoadCSSViewController.h"
 #import "FileManager.h"
+#import "GCD.h"
+#import "SSZipArchive.h"
 #import <WebKit/WebKit.h>
+
+typedef enum : NSUInteger {
+    
+    HTML_FROM_Bundle  = 0,
+    HTML_FROM_Sandbox = 1,
+    
+} HTMLType;
 
 @interface LoadCSSViewController () <WKNavigationDelegate>
 
@@ -22,17 +31,53 @@
 
     [super viewDidLoad];
     
-    // Load html text from local
-    NSString *path = [FileManager theRealFilePath:@"-/news/news.html"];
-    NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    static HTMLType type = HTML_FROM_Bundle;
     
-    // Use WKWebView to load the html files.
-    NSURL *baseURL                    = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
-    self.wkWebView                    = [[WKWebView alloc]initWithFrame:self.contentView.bounds];
-    self.wkWebView.navigationDelegate = self;
-    self.wkWebView.alpha              = 0.f;
-    [self.wkWebView loadHTMLString:html baseURL:baseURL];
-    [self.contentView addSubview:self.wkWebView];
+    if (type == HTML_FROM_Sandbox) {
+        
+        type = HTML_FROM_Bundle;
+     
+        GCDGroup *group = [[GCDGroup alloc] init];
+        [[[GCDQueue alloc] initSerial] execute:^{
+            
+            if ([FileManager fileExistWithRealFilePath:filePath(@"~/Documents/news")] == NO) {
+                
+                [SSZipArchive unzipFileAtPath:[FileManager bundleFileWithName:@"news.zip"]
+                                toDestination:filePath(@"~/Documents/")];
+            }
+            
+        } inGroup:group];
+        
+        [[GCDQueue mainQueue] notify:^{
+            
+            // Load html text from Document.
+            NSURL *htmlUrl            = [NSURL fileURLWithPath:filePath(@"~/Documents/news/news.html")];
+            NSURL *relatedDocumentUrl = [NSURL fileURLWithPath:filePath(@"~/Documents/news")];
+            
+            // Use WKWebView to load the html files.
+            self.wkWebView                    = [[WKWebView alloc]initWithFrame:self.contentView.bounds];
+            self.wkWebView.navigationDelegate = self;
+            self.wkWebView.alpha              = 0.f;
+            [self.wkWebView loadFileURL:htmlUrl allowingReadAccessToURL:relatedDocumentUrl];
+            [self.contentView addSubview:self.wkWebView];
+            
+        } inGroup:group];
+        
+    } else if (type == HTML_FROM_Bundle) {
+        
+        type = HTML_FROM_Sandbox;
+        
+        // Load html text from Bundle.
+        NSURL *htmlUrl            = [NSURL fileURLWithPath:filePath(@"-/news/news.html")];
+        NSURL *relatedDocumentUrl = [NSURL fileURLWithPath:filePath(@"-/news")];
+        
+        // Use WKWebView to load the html files.
+        self.wkWebView                    = [[WKWebView alloc]initWithFrame:self.contentView.bounds];
+        self.wkWebView.navigationDelegate = self;
+        self.wkWebView.alpha              = 0.f;
+        [self.wkWebView loadFileURL:htmlUrl allowingReadAccessToURL:relatedDocumentUrl];
+        [self.contentView addSubview:self.wkWebView];
+    }
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {

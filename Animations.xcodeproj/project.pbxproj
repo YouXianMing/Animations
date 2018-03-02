@@ -484,6 +484,24 @@
 		C5B457821DE7D9CA002363AC /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B457811DE7D9CA002363AC /* ShapeView.m */; };
 		C5C1E6C11FA80DE10023B8F4 /* DynamicSwitchingLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C1E6C01FA80DE00023B8F4 /* DynamicSwitchingLayoutController.m */; };
 		C5C1E6C51FA80FD60023B8F4 /* DynamicSwitchingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C1E6C41FA80FD60023B8F4 /* DynamicSwitchingCell.m */; };
+		C5C34B7520491BE000AFABFE /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B4F20491BE000AFABFE /* crypt.c */; };
+		C5C34B7620491BE000AFABFE /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B5020491BE000AFABFE /* unzip.c */; };
+		C5C34B7720491BE000AFABFE /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B5120491BE000AFABFE /* zip.c */; };
+		C5C34B7820491BE000AFABFE /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B5320491BE000AFABFE /* ioapi.c */; };
+		C5C34B7920491BE000AFABFE /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B5520491BE000AFABFE /* ioapi_buf.c */; };
+		C5C34B7A20491BE000AFABFE /* ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B5920491BE000AFABFE /* ioapi_mem.c */; };
+		C5C34B7B20491BE000AFABFE /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B5A20491BE000AFABFE /* minishared.c */; };
+		C5C34B7C20491BE000AFABFE /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B6020491BE000AFABFE /* aeskey.c */; };
+		C5C34B7D20491BE000AFABFE /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B6120491BE000AFABFE /* hmac.c */; };
+		C5C34B7E20491BE000AFABFE /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B6420491BE000AFABFE /* aescrypt.c */; };
+		C5C34B7F20491BE000AFABFE /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B6520491BE000AFABFE /* fileenc.c */; };
+		C5C34B8020491BE000AFABFE /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B6720491BE000AFABFE /* sha1.c */; };
+		C5C34B8120491BE000AFABFE /* aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B6A20491BE000AFABFE /* aes_ni.c */; };
+		C5C34B8220491BE000AFABFE /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B6C20491BE000AFABFE /* prng.c */; };
+		C5C34B8320491BE000AFABFE /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B6E20491BE000AFABFE /* pwd2key.c */; };
+		C5C34B8420491BE000AFABFE /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B6F20491BE000AFABFE /* aestab.c */; };
+		C5C34B8520491BE000AFABFE /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C34B7420491BE000AFABFE /* SSZipArchive.m */; };
+		C5C34B872049207800AFABFE /* news.zip in Resources */ = {isa = PBXBuildFile; fileRef = C5C34B862049207800AFABFE /* news.zip */; };
 		C5C5AFE01DD558F900F35EB8 /* IrregularGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFDF1DD558F900F35EB8 /* IrregularGridViewController.m */; };
 		C5C5AFE41DD55F1400F35EB8 /* IrregularPictureGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE31DD55F1400F35EB8 /* IrregularPictureGridCell.m */; };
 		C5C5AFE71DD56C7700F35EB8 /* BlueIrregularGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5AFE61DD56C7700F35EB8 /* BlueIrregularGridViewCell.m */; };
@@ -1512,6 +1530,45 @@
 		C5C1E6C01FA80DE00023B8F4 /* DynamicSwitchingLayoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicSwitchingLayoutController.m; sourceTree = "<group>"; };
 		C5C1E6C31FA80FD60023B8F4 /* DynamicSwitchingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicSwitchingCell.h; sourceTree = "<group>"; };
 		C5C1E6C41FA80FD60023B8F4 /* DynamicSwitchingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicSwitchingCell.m; sourceTree = "<group>"; };
+		C5C34B4D20491BE000AFABFE /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		C5C34B4F20491BE000AFABFE /* crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypt.c; sourceTree = "<group>"; };
+		C5C34B5020491BE000AFABFE /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		C5C34B5120491BE000AFABFE /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		C5C34B5220491BE000AFABFE /* minishared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minishared.h; sourceTree = "<group>"; };
+		C5C34B5320491BE000AFABFE /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		C5C34B5420491BE000AFABFE /* ioapi_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_mem.h; sourceTree = "<group>"; };
+		C5C34B5520491BE000AFABFE /* ioapi_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_buf.c; sourceTree = "<group>"; };
+		C5C34B5620491BE000AFABFE /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		C5C34B5720491BE000AFABFE /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		C5C34B5820491BE000AFABFE /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		C5C34B5920491BE000AFABFE /* ioapi_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_mem.c; sourceTree = "<group>"; };
+		C5C34B5A20491BE000AFABFE /* minishared.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = minishared.c; sourceTree = "<group>"; };
+		C5C34B5B20491BE000AFABFE /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		C5C34B5C20491BE000AFABFE /* ioapi_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_buf.h; sourceTree = "<group>"; };
+		C5C34B5E20491BE000AFABFE /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
+		C5C34B5F20491BE000AFABFE /* aes_ni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_ni.h; sourceTree = "<group>"; };
+		C5C34B6020491BE000AFABFE /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
+		C5C34B6120491BE000AFABFE /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		C5C34B6220491BE000AFABFE /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		C5C34B6320491BE000AFABFE /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
+		C5C34B6420491BE000AFABFE /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
+		C5C34B6520491BE000AFABFE /* fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileenc.c; sourceTree = "<group>"; };
+		C5C34B6620491BE000AFABFE /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		C5C34B6720491BE000AFABFE /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		C5C34B6820491BE000AFABFE /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
+		C5C34B6920491BE000AFABFE /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		C5C34B6A20491BE000AFABFE /* aes_ni.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes_ni.c; sourceTree = "<group>"; };
+		C5C34B6B20491BE000AFABFE /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		C5C34B6C20491BE000AFABFE /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prng.c; sourceTree = "<group>"; };
+		C5C34B6D20491BE000AFABFE /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		C5C34B6E20491BE000AFABFE /* pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pwd2key.c; sourceTree = "<group>"; };
+		C5C34B6F20491BE000AFABFE /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
+		C5C34B7020491BE000AFABFE /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		C5C34B7120491BE000AFABFE /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
+		C5C34B7220491BE000AFABFE /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		C5C34B7320491BE000AFABFE /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
+		C5C34B7420491BE000AFABFE /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		C5C34B862049207800AFABFE /* news.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = news.zip; sourceTree = "<group>"; };
 		C5C5AFDE1DD558F900F35EB8 /* IrregularGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularGridViewController.h; sourceTree = "<group>"; };
 		C5C5AFDF1DD558F900F35EB8 /* IrregularGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularGridViewController.m; sourceTree = "<group>"; };
 		C5C5AFE21DD55F1400F35EB8 /* IrregularPictureGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularPictureGridCell.h; sourceTree = "<group>"; };
@@ -1788,6 +1845,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C5C34B4C20491BE000AFABFE /* SSZipArchive */,
 				C53BE9B61FB15D5B0002F28B /* IconMaker */,
 				C50270EF1FA96A0000833758 /* ResponsibilityChain */,
 				C5792EDA1F4743A1000B0D1B /* Networking */,
@@ -3789,6 +3847,7 @@
 			children = (
 				C557362B1E8375F0001CDC9A /* LoadCSSViewController.h */,
 				C557362C1E8375F0001CDC9A /* LoadCSSViewController.m */,
+				C5C34B862049207800AFABFE /* news.zip */,
 				C557362E1E837661001CDC9A /* news */,
 			);
 			name = LoadCSSViewController;
@@ -4152,6 +4211,67 @@
 			name = DynamicSwitchingLayoutController;
 			sourceTree = "<group>";
 		};
+		C5C34B4C20491BE000AFABFE /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				C5C34B4D20491BE000AFABFE /* ZipArchive.h */,
+				C5C34B4E20491BE000AFABFE /* minizip */,
+				C5C34B7220491BE000AFABFE /* SSZipArchive.h */,
+				C5C34B7320491BE000AFABFE /* SSZipCommon.h */,
+				C5C34B7420491BE000AFABFE /* SSZipArchive.m */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		C5C34B4E20491BE000AFABFE /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				C5C34B4F20491BE000AFABFE /* crypt.c */,
+				C5C34B5020491BE000AFABFE /* unzip.c */,
+				C5C34B5120491BE000AFABFE /* zip.c */,
+				C5C34B5220491BE000AFABFE /* minishared.h */,
+				C5C34B5320491BE000AFABFE /* ioapi.c */,
+				C5C34B5420491BE000AFABFE /* ioapi_mem.h */,
+				C5C34B5520491BE000AFABFE /* ioapi_buf.c */,
+				C5C34B5620491BE000AFABFE /* crypt.h */,
+				C5C34B5720491BE000AFABFE /* zip.h */,
+				C5C34B5820491BE000AFABFE /* unzip.h */,
+				C5C34B5920491BE000AFABFE /* ioapi_mem.c */,
+				C5C34B5A20491BE000AFABFE /* minishared.c */,
+				C5C34B5B20491BE000AFABFE /* ioapi.h */,
+				C5C34B5C20491BE000AFABFE /* ioapi_buf.h */,
+				C5C34B5D20491BE000AFABFE /* aes */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		C5C34B5D20491BE000AFABFE /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				C5C34B5E20491BE000AFABFE /* prng.h */,
+				C5C34B5F20491BE000AFABFE /* aes_ni.h */,
+				C5C34B6020491BE000AFABFE /* aeskey.c */,
+				C5C34B6120491BE000AFABFE /* hmac.c */,
+				C5C34B6220491BE000AFABFE /* aestab.h */,
+				C5C34B6320491BE000AFABFE /* pwd2key.h */,
+				C5C34B6420491BE000AFABFE /* aescrypt.c */,
+				C5C34B6520491BE000AFABFE /* fileenc.c */,
+				C5C34B6620491BE000AFABFE /* aesopt.h */,
+				C5C34B6720491BE000AFABFE /* sha1.c */,
+				C5C34B6820491BE000AFABFE /* brg_types.h */,
+				C5C34B6920491BE000AFABFE /* hmac.h */,
+				C5C34B6A20491BE000AFABFE /* aes_ni.c */,
+				C5C34B6B20491BE000AFABFE /* brg_endian.h */,
+				C5C34B6C20491BE000AFABFE /* prng.c */,
+				C5C34B6D20491BE000AFABFE /* aes.h */,
+				C5C34B6E20491BE000AFABFE /* pwd2key.c */,
+				C5C34B6F20491BE000AFABFE /* aestab.c */,
+				C5C34B7020491BE000AFABFE /* sha1.h */,
+				C5C34B7120491BE000AFABFE /* fileenc.h */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
 		C5C5AFE11DD55E7B00F35EB8 /* IrregularGridViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -4439,6 +4559,7 @@
 				C557362F1E837661001CDC9A /* news in Resources */,
 				1011BADF1CD48C8D00F29FB9 /* NodeModelStrings.plist in Resources */,
 				C51B11BC1F52A2F400EBF6A0 /* liwushuo.json in Resources */,
+				C5C34B872049207800AFABFE /* news.zip in Resources */,
 				1011BAE21CD48C8D00F29FB9 /* NodeModelViewControllerBack_next@3x.png in Resources */,
 				1011BAE11CD48C8D00F29FB9 /* NodeModelViewControllerBack_black@3x.png in Resources */,
 				C57FE1EB1FA6BF86000876F9 /* LineLayoutData.json in Resources */,
@@ -4456,6 +4577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C34B7D20491BE000AFABFE /* hmac.c in Sources */,
 				10C1830E1C622D1E000C10EB /* LoadUrlDataCell.m in Sources */,
 				C5792EE51F4743B3000B0D1B /* RequestParameterSerializer.m in Sources */,
 				C545535E1E1CD76E00A5BA58 /* iCarouselAbsItemView.m in Sources */,
@@ -4499,6 +4621,7 @@
 				10A67C651C12D68D00C3E505 /* DrawView.m in Sources */,
 				10E2D5011CD5D9A900666EEB /* SystemFontInfoController.m in Sources */,
 				C582E7981D2F4184003433EC /* VideoDeviceAuthorization.m in Sources */,
+				C5C34B7B20491BE000AFABFE /* minishared.c in Sources */,
 				100BFAE91C2392F5008C5523 /* ShimmerController.m in Sources */,
 				10D4F6091C41486E00D056EB /* CATransform3DM34Controller.m in Sources */,
 				10CEC5971C223A5400B0CA7D /* ScaleLabel.m in Sources */,
@@ -4550,6 +4673,7 @@
 				C51B119D1F52A16900EBF6A0 /* TwoLevelLinkageView.m in Sources */,
 				C59608CF1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m in Sources */,
 				C582E7921D2F40DF003433EC /* QRCodeViewController.m in Sources */,
+				C5C34B8120491BE000AFABFE /* aes_ni.c in Sources */,
 				102B1F341C60E66F00A8FD40 /* TableViewLoadDataRootModel.m in Sources */,
 				B5D0119E1C0BE33E0075BC2E /* ClassModel.m in Sources */,
 				C58B1AB31F4C12AA00B681E1 /* AFHTTPSessionManager.m in Sources */,
@@ -4582,6 +4706,7 @@
 				C5C606341E1F7593004E8FDD /* CircleLoadingView.m in Sources */,
 				1057021F1CF6DB2B003B10C6 /* SelectedIconButton.m in Sources */,
 				C5AB56781E1B8106003B388F /* AlertView.m in Sources */,
+				C5C34B7620491BE000AFABFE /* unzip.c in Sources */,
 				C501F21A1F0C7DE90051B4C6 /* FontAttributeConfig.m in Sources */,
 				B5D011AA1C0BE7F00075BC2E /* CustomHeaderFooterView.m in Sources */,
 				1047D0F21C465753009ADED6 /* InfiniteRotationView.m in Sources */,
@@ -4590,6 +4715,7 @@
 				1020A3731D08F9BB00056B0E /* BadgeValueView.m in Sources */,
 				C565E6761FFC7B83007965DB /* POPCGUtils.mm in Sources */,
 				10381F7A1BF9B54E00E5E476 /* ButtonPressViewController.m in Sources */,
+				C5C34B7E20491BE000AFABFE /* aescrypt.c in Sources */,
 				1020E3381C759B3400FF233E /* MotionEffectViewController.m in Sources */,
 				1011BA551CD40C2900F29FB9 /* UIView+UserInteraction.m in Sources */,
 				C5F9E7D81F4A7663004B6198 /* DuitangPicModel.m in Sources */,
@@ -4614,6 +4740,8 @@
 				1096061E1C93B46800CCB3AD /* AbsResponseDataSerializer.m in Sources */,
 				1041AE6A1CEC44DB005697B8 /* UIView+ConvenientMethod.m in Sources */,
 				1047E23E1CC5AF8400E13D1C /* LazyFadeInView.m in Sources */,
+				C5C34B7820491BE000AFABFE /* ioapi.c in Sources */,
+				C5C34B8520491BE000AFABFE /* SSZipArchive.m in Sources */,
 				10E2D5121CD63EDF00666EEB /* iCarousel.m in Sources */,
 				C56812311D757621006E6C49 /* IrregularGridCollectionView.m in Sources */,
 				10B0DDF91CBA831C0089DF1E /* MSWeakTimer.m in Sources */,
@@ -4638,6 +4766,7 @@
 				104CD3091CDAD4B700C836E6 /* GridManager.m in Sources */,
 				C50E75841F4E6D6900EB9819 /* UIBezierPath+Interpolation.m in Sources */,
 				10E2D50E1CD5DE0400666EEB /* FontInfoModel.m in Sources */,
+				C5C34B7720491BE000AFABFE /* zip.c in Sources */,
 				10381F551BF9B44A00E5E476 /* AppDelegate.m in Sources */,
 				C565E6791FFC7B83007965DB /* POPAnimatableProperty.mm in Sources */,
 				C501F21B1F0C7DE90051B4C6 /* ForegroundColorAttributeConfig.m in Sources */,
@@ -4658,6 +4787,7 @@
 				C55661FF1F3312540092ACA4 /* InfiniteLoopCollectionView.m in Sources */,
 				109D5B4F1C0EC1420039CB04 /* TimeModel.m in Sources */,
 				10B6F3CF1C953E5B007E8254 /* ScrollViewAnimationController.m in Sources */,
+				C5C34B7520491BE000AFABFE /* crypt.c in Sources */,
 				C52A3CC71F67871D00C2F862 /* PickerCityDataManager.m in Sources */,
 				C501F2511F0CC4000051B4C6 /* RegexManager.m in Sources */,
 				C5EFF2821F14CF9E00BD5AF0 /* HorizontalPicItemCell.m in Sources */,
@@ -4745,6 +4875,7 @@
 				C57526CD1D5032690064F6CD /* DrawingColor.m in Sources */,
 				109D5B521C0EC15D0039CB04 /* CountDownTimeCell.m in Sources */,
 				C501F2271F0C8CC80051B4C6 /* RedCountDownButton.m in Sources */,
+				C5C34B8420491BE000AFABFE /* aestab.c in Sources */,
 				109606191C93B46800CCB3AD /* AbsNetworking.m in Sources */,
 				B5D011991C0BE3210075BC2E /* StudentInfoCell.m in Sources */,
 				1011BAA31CD4898D00F29FB9 /* WanDouJiaModel.m in Sources */,
@@ -4838,6 +4969,7 @@
 				C5EFF27C1F14C54900BD5AF0 /* GridItemCollectionViewCell.m in Sources */,
 				109BF1231C4E639F000F21BF /* CASpringAnimationController.m in Sources */,
 				C5EFF27F1F14C5D800BD5AF0 /* GridItemModel.m in Sources */,
+				C5C34B8220491BE000AFABFE /* prng.c in Sources */,
 				C516F83E1ECA94B000A418C8 /* ShowLoadingView.m in Sources */,
 				C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */,
 				10A67C621C12D5FD00C3E505 /* DrawValues.m in Sources */,
@@ -4857,6 +4989,7 @@
 				C51B11B61F52A2D600EBF6A0 /* ItemManagerModel.m in Sources */,
 				C50E75811F4E6D6800EB9819 /* UIView+DrawRect.m in Sources */,
 				107CF3991C2FFD51002DF93C /* LiveImageView.m in Sources */,
+				C5C34B8020491BE000AFABFE /* sha1.c in Sources */,
 				102B84E01C3B95F0001699A9 /* File.m in Sources */,
 				1011BAE41CD48C8D00F29FB9 /* PropertyInfomation.m in Sources */,
 				1011BAE01CD48C8D00F29FB9 /* NodeModelViewController.m in Sources */,
@@ -4910,12 +5043,14 @@
 				1041AE991CEC5AE4005697B8 /* BaseControl.m in Sources */,
 				102B1F2F1C60E66F00A8FD40 /* HashtagsModel.m in Sources */,
 				1011BB021CD495F200F29FB9 /* CASTEncryptMode.m in Sources */,
+				C5C34B8320491BE000AFABFE /* pwd2key.c in Sources */,
 				C51793541F284DFD0061B0F8 /* NSObject+WeakList.m in Sources */,
 				102B1F321C60E66F00A8FD40 /* MetaModel.m in Sources */,
 				1059EB351CF0504D00B7A4B0 /* UITextField+UsefulMethod.m in Sources */,
 				102B1F291C60E66F00A8FD40 /* AvatarImageModel.m in Sources */,
 				C5EFF2761F14C46700BD5AF0 /* NSArray+MASAdditions.m in Sources */,
 				C565E6711FFC7B83007965DB /* POPSpringAnimation.mm in Sources */,
+				C5C34B7C20491BE000AFABFE /* aeskey.c in Sources */,
 				104326941C4B9D570033CEC0 /* SpringEffectController.m in Sources */,
 				C510B4DB1F297D2F009D7DB8 /* ItemStyle.m in Sources */,
 				10381FE01BF9DE6E00E5E476 /* GCDQueue.m in Sources */,
@@ -4926,7 +5061,9 @@
 				107D6BB91CFE756C00A1CC0A /* LoadingView.m in Sources */,
 				1048F6F31C28D5B60052F1DD /* ScratchImageViewController.m in Sources */,
 				1020E2DA1C731AA500FF233E /* CAGradientMaskView.m in Sources */,
+				C5C34B7920491BE000AFABFE /* ioapi_buf.c in Sources */,
 				10E2D4C61CD592B900666EEB /* OffsetHeaderView.m in Sources */,
+				C5C34B7F20491BE000AFABFE /* fileenc.c in Sources */,
 				1011BAF01CD4959300F29FB9 /* NSData+Base64.m in Sources */,
 				100252C51CBC778B00722169 /* ReplicatorLineViewController.m in Sources */,
 				C565E6781FFC7B83007965DB /* POPPropertyAnimation.mm in Sources */,
@@ -4938,6 +5075,7 @@
 				C5EFF2791F14C46700BD5AF0 /* ViewController+MASAdditions.m in Sources */,
 				C58B1ABD1F4C12AA00B681E1 /* UIButton+AFNetworking.m in Sources */,
 				102B1F2B1C60E66F00A8FD40 /* CoverImageModel.m in Sources */,
+				C5C34B7A20491BE000AFABFE /* ioapi_mem.c in Sources */,
 				10E2D4ED1CD5962000666EEB /* SDWebImageDownloader.m in Sources */,
 				C565E67A1FFC7B83007965DB /* POPAnimationExtras.mm in Sources */,
 				C501F2241F0C8BDB0051B4C6 /* CountDownButtonController.m in Sources */,
