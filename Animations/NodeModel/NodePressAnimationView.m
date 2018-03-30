@@ -92,9 +92,9 @@
         
         if (finished == YES) {
             
-            if (_delegate && ([_delegate respondsToSelector:@selector(nodePressAnimationViewCompleteEventWithView:)])) {
+            if (self->_delegate && ([self->_delegate respondsToSelector:@selector(nodePressAnimationViewCompleteEventWithView:)])) {
                 
-                [_delegate nodePressAnimationViewCompleteEventWithView:self];
+                [self->_delegate nodePressAnimationViewCompleteEventWithView:self];
             }
         }
     }];

@@ -96,11 +96,11 @@
         // 查看row为2的item的中心点百分比
         if (obj.indexPath.row == 2 && obj.indexPath.section == 0) {
             
-            NSLog(@"%f", (centerX - obj.center.x) / _itemWidth);
+            NSLog(@"%f", (centerX - obj.center.x) / self->_itemWidth);
         }
         
         // 每个布局的中心点与换算后的collectionView的中心点的差值除以布局元素的宽度换算成的百分比绝对值
-        CGFloat centerOffset = ABS((centerX - obj.center.x) / _itemWidth);
+        CGFloat centerOffset = ABS((centerX - obj.center.x) / self->_itemWidth);
         
         CGFloat scaleValue = 0;
         if (centerOffset <= 0.25f) {
@@ -109,7 +109,7 @@
             
         } else if (centerOffset <= 1.f) {
             
-            scaleValue = _math.k * centerOffset + _math.b;
+            scaleValue = self->_math.k * centerOffset + self->_math.b;
             
         } else {
             

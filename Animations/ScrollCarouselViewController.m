@@ -70,8 +70,8 @@
     [_scrollCarouseView reloadData];
     [UIView animateWithDuration:0.5f animations:^{
         
-        _lineCarouseView.alpha   = 1.f;
-        _scrollCarouseView.alpha = 1.f;
+        self->_lineCarouseView.alpha   = 1.f;
+        self->_scrollCarouseView.alpha = 1.f;
     }];
 }
 

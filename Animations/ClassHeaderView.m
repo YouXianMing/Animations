@@ -95,10 +95,10 @@
         
         [UIView animateWithDuration:0.5f delay:0 usingSpringWithDamping:1.f initialSpringVelocity:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
 
-            _normalClassNameLabel.alpha = 1.f;
-            _normalClassNameLabel.frame = CGRectMake(10, 0, 100, 26);
-            _highClassNameLabel.alpha   = 0.f;
-            _highClassNameLabel.frame   = CGRectMake(10, 0, 100, 26);
+            self->_normalClassNameLabel.alpha = 1.f;
+            self->_normalClassNameLabel.frame = CGRectMake(10, 0, 100, 26);
+            self->_highClassNameLabel.alpha   = 0.f;
+            self->_highClassNameLabel.frame   = CGRectMake(10, 0, 100, 26);
 
         } completion:^(BOOL finished) {
             
@@ -121,10 +121,10 @@
         
         [UIView animateWithDuration:0.5f delay:0 usingSpringWithDamping:1.f initialSpringVelocity:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
             
-            _normalClassNameLabel.alpha = 0.f;
-            _normalClassNameLabel.frame = CGRectMake(10 + 10, 0, 100, 26);
-            _highClassNameLabel.alpha   = 1.f;
-            _highClassNameLabel.frame   = CGRectMake(10 + 10, 0, 100, 26);
+            self->_normalClassNameLabel.alpha = 0.f;
+            self->_normalClassNameLabel.frame = CGRectMake(10 + 10, 0, 100, 26);
+            self->_highClassNameLabel.alpha   = 1.f;
+            self->_highClassNameLabel.frame   = CGRectMake(10 + 10, 0, 100, 26);
             
         } completion:^(BOOL finished) {
             

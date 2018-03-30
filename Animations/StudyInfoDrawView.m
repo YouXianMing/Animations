@@ -96,18 +96,18 @@
             for (int i = 0; i < self.model.times.count; i++) {
                 
                 NSMutableArray *vtLines = [NSMutableArray array];
-                [vtLines addObject:CGPointValue(_leftGap + i * vtGridGap, _topGap)];
-                [vtLines addObject:CGPointValue(_leftGap + i * vtGridGap, _topGap + _areaHeight)];
+                [vtLines addObject:CGPointValue(self->_leftGap + i * vtGridGap, self->_topGap)];
+                [vtLines addObject:CGPointValue(self->_leftGap + i * vtGridGap, self->_topGap + self->_areaHeight)];
                 
                 [allLines addObject:vtLines];
             }
             
             // 水平线条
-            for (int i = 0; i < _hrLineCount; i++) {
+            for (int i = 0; i < self->_hrLineCount; i++) {
                 
                 NSMutableArray *hrLines = [NSMutableArray array];
-                [hrLines addObject:CGPointValue(_leftGap, _topGap  + i * hrGridGap)];
-                [hrLines addObject:CGPointValue(_leftGap + _areaWidth, _topGap  + i * hrGridGap)];
+                [hrLines addObject:CGPointValue(self->_leftGap, self->_topGap  + i * hrGridGap)];
+                [hrLines addObject:CGPointValue(self->_leftGap + self->_areaWidth, self->_topGap  + i * hrGridGap)];
                 
                 [allLines addObject:hrLines];
             }
@@ -122,7 +122,7 @@
             
             if (idx != 0) {
                 
-                [self.manager drawAttributeString:model.timeString atPoint:CGPointMake(_leftGap + idx * vtGridGap, _areaHeight + _topGap)
+                [self.manager drawAttributeString:model.timeString atPoint:CGPointMake(self->_leftGap + idx * vtGridGap, self->_areaHeight + self->_topGap)
                                   centerAlignment:DrawContentCenterAlignmentBottomSide offsetX:0 offsetY:3.f];
             }
         }];
@@ -150,7 +150,7 @@
         NSMutableArray <NSValue *> *centerPoints = [NSMutableArray array];
         [self.model.times enumerateObjectsUsingBlock:^(StudyTimeModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
             
-            [centerPoints addObject:CGPointValue(_leftGap + idx * vtGridGap, _areaHeight - model.percent * _areaHeight + _topGap)];
+            [centerPoints addObject:CGPointValue(self->_leftGap + idx * vtGridGap, self->_areaHeight - model.percent * self->_areaHeight + self->_topGap)];
         }];
         
         // 绘制坐标轴中的折线

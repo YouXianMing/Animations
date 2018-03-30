@@ -82,8 +82,8 @@
     [self.manger shouldAntialias:NO];
     [self.manger strokeLinesPathWithPointValuesArraysBlock:^NSArray<NSArray<NSValue *> *> *{
         
-        return @[@[CGPointValue(_leftGap, _topGap), CGPointValue(_leftGap, _topGap + _areaHeight)],
-                 @[CGPointValue(_leftGap, _topGap + _areaHeight / 2.f), CGPointValue(_leftGap + _areaWidth, _topGap + _areaHeight / 2.f)]];
+        return @[@[CGPointValue(self->_leftGap, self->_topGap), CGPointValue(self->_leftGap, self->_topGap + self->_areaHeight)],
+                 @[CGPointValue(self->_leftGap, self->_topGap + self->_areaHeight / 2.f), CGPointValue(self->_leftGap + self->_areaWidth, self->_topGap + self->_areaHeight / 2.f)]];
         
     } closePath:NO];
     [self.manger shouldAntialias:YES];

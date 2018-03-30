@@ -81,15 +81,15 @@ typedef enum : NSUInteger {
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
                              
-                             animated ? [_iconView setTransform:CGAffineTransformMake(0.5, 0, 0, 0.5, 0, 0)] : 0;
-                             _iconView.alpha     = 0.f;
-                             _lineView.alpha     = 0.f;
-                             _lineView.frame     = CGRectMake(30, 70, 0, 2);
-                             _name.frame         = CGRectMake(30, 10, 300, 60);
+                             animated ? [self->_iconView setTransform:CGAffineTransformMake(0.5, 0, 0, 0.5, 0, 0)] : 0;
+                             self->_iconView.alpha     = 0.f;
+                             self->_lineView.alpha     = 0.f;
+                             self->_lineView.frame     = CGRectMake(30, 70, 0, 2);
+                             self->_name.frame         = CGRectMake(30, 10, 300, 60);
                              
-                             _rectView.layer.borderColor  = [UIColor grayColor].CGColor;
-                             _rectView.transform          = CGAffineTransformMake(1, 0, 0, 1, 0, 0);
-                             _rectView.layer.cornerRadius = 0;
+                             self->_rectView.layer.borderColor  = [UIColor grayColor].CGColor;
+                             self->_rectView.transform          = CGAffineTransformMake(1, 0, 0, 1, 0, 0);
+                             self->_rectView.layer.cornerRadius = 0;
                              
                          } completion:nil];
         
@@ -101,15 +101,15 @@ typedef enum : NSUInteger {
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
                              
-                             _iconView.transform = CGAffineTransformMake(1, 0, 0, 1, 0, 0);
-                             _iconView.alpha     = 1.f;
-                             _lineView.alpha     = 1.f;
-                             _lineView.frame     = CGRectMake(30, 70, 200, 2);
-                             _name.frame         = CGRectMake(30 + 50, 10, 300, 60);
+                             self->_iconView.transform = CGAffineTransformMake(1, 0, 0, 1, 0, 0);
+                             self->_iconView.alpha     = 1.f;
+                             self->_lineView.alpha     = 1.f;
+                             self->_lineView.frame     = CGRectMake(30, 70, 200, 2);
+                             self->_name.frame         = CGRectMake(30 + 50, 10, 300, 60);
                              
-                             _rectView.layer.borderColor  = [UIColor redColor].CGColor;
-                             _rectView.transform          = CGAffineTransformMake(0.8, 0, 0, 0.8, 0, 0);
-                             _rectView.layer.cornerRadius = 4.f;
+                             self->_rectView.layer.borderColor  = [UIColor redColor].CGColor;
+                             self->_rectView.transform          = CGAffineTransformMake(0.8, 0, 0, 0.8, 0, 0);
+                             self->_rectView.layer.cornerRadius = 4.f;
                              
                          } completion:nil];
     }

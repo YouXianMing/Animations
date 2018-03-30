@@ -17,7 +17,7 @@
     /*
      Swift version Animations - https://github.com/YouXianMing/Swift-Animations
      
-     Lateast no warning version : Xcode 9.2 (9C40b)
+     Lateast no warning version : Xcode 9.3 (9E145)
      
      QQ    705786299
      Email YouXianMing1987@126.com

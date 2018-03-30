@@ -78,7 +78,7 @@
             
             self.alpha = 1.f;
             
-            if (_didStartAnimation == YES) {
+            if (self->_didStartAnimation == YES) {
                 
                 [self rotateViewAnimationWithView:self];
             }

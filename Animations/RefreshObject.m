@@ -73,7 +73,7 @@
     
     [UIView animateWithDuration:0.3 animations:^{
         
-        _scrollView.contentInset = UIEdgeInsetsMake(_height, 0, 0, 0);
+        self->_scrollView.contentInset = UIEdgeInsetsMake(self->_height, 0, 0, 0);
         
     } completion:^(BOOL finished) {
         
@@ -94,11 +94,11 @@
     
     [UIView animateWithDuration:0.3f animations:^{
         
-        _scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        self->_scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         
     } completion:^(BOOL finished) {
         
-        _state = NORMAL_STATE;
+        self->_state = NORMAL_STATE;
     }];
 }
 

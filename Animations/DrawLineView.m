@@ -50,20 +50,20 @@
     
     [self.contextObject contextConfig:nil drawFillBlock:^(CGContextObject *contextObject) {
         
-        [_contextObject addRectPath:CGRectMake(0, 100.f, Width, 0.5f)];
+        [self->_contextObject addRectPath:CGRectMake(0, 100.f, Width, 0.5f)];
         
-        for (int i = 0; i < _drawValues.values.count; i++) {
+        for (int i = 0; i < self->_drawValues.values.count; i++) {
             
-            NSNumber *value = _drawValues.values[i];
+            NSNumber *value = self->_drawValues.values[i];
             CGFloat   tmp   = value.floatValue;
             
             if (tmp >= 100) {
                 
-                [_contextObject addRectPath:CGRectMake(i, 100, 1.f, tmp - 100)];
+                [self->_contextObject addRectPath:CGRectMake(i, 100, 1.f, tmp - 100)];
                 
             } else {
             
-                [_contextObject addRectPath:CGRectMake(i, tmp, 1.f, 100 - tmp)];
+                [self->_contextObject addRectPath:CGRectMake(i, tmp, 1.f, 100 - tmp)];
             }
         }
     }];

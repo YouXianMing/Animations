@@ -50,18 +50,18 @@
                 
                 if (x == 0) {
                     
-                    [drawRectObject moveToStartPoint:CGPointMake(x, _waveCrest * sin((2 * M_PI) * _waveCount / width * x + _phase) + height / 2.f)];
+                    [drawRectObject moveToStartPoint:CGPointMake(x, self->_waveCrest * sin((2 * M_PI) * self->_waveCount / width * x + self->_phase) + height / 2.f)];
                     continue;
                     
                 } else {
                     
-                    [drawRectObject addLineToPoint:CGPointMake(x, _waveCrest * sin((2 * M_PI) * _waveCount / width * x + _phase) + height / 2.f)];
+                    [drawRectObject addLineToPoint:CGPointMake(x, self->_waveCrest * sin((2 * M_PI) * self->_waveCount / width * x + self->_phase) + height / 2.f)];
                 }
             }
             
             [drawRectObject addLineToPoint:CGPointMake(width, height)];
             [drawRectObject addLineToPoint:CGPointMake(0, height)];
-            [drawRectObject addLineToPoint:CGPointMake(0, _waveCrest * sin((2 * M_PI) * _waveCount / width * 0 + _phase) + height / 2.f)];
+            [drawRectObject addLineToPoint:CGPointMake(0, self->_waveCrest * sin((2 * M_PI) * self->_waveCount / width * 0 + self->_phase) + height / 2.f)];
         }];
     }
     
@@ -73,12 +73,12 @@
                 
                 if (x == 0) {
                     
-                    [drawRectObject moveToStartPoint:CGPointMake(x, _waveCrest * sin((2 * M_PI) * _waveCount / width * x + _phase) + height / 2.f)];
+                    [drawRectObject moveToStartPoint:CGPointMake(x, self->_waveCrest * sin((2 * M_PI) * self->_waveCount / width * x + self->_phase) + height / 2.f)];
                     continue;
                     
                 } else {
                     
-                    [drawRectObject addLineToPoint:CGPointMake(x, _waveCrest * sin((2 * M_PI) * _waveCount / width * x + _phase) + height / 2.f)];
+                    [drawRectObject addLineToPoint:CGPointMake(x, self->_waveCrest * sin((2 * M_PI) * self->_waveCount / width * x + self->_phase) + height / 2.f)];
                 }
             }
         }];

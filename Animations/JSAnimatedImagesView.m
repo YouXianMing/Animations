@@ -194,15 +194,15 @@ static const CGFloat JSAnimatedImagesViewImageViewsBorderOffset = 10;
                             options:UIViewAnimationOptionBeginFromCurrentState
                          animations:^
          {
-             for (UIImageView *imageView in _imageViews)
+             for (UIImageView *imageView in self->_imageViews)
              {
                  imageView.alpha = 0.0;
              }
          }
                          completion:^(BOOL finished)
          {
-             _currentlyDisplayingImageIndex = JSAnimatedImagesViewNoImageDisplayingIndex;
-             _animating = NO;
+             self->_currentlyDisplayingImageIndex = JSAnimatedImagesViewNoImageDisplayingIndex;
+             self->_animating = NO;
          }];
     }
 }

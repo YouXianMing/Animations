@@ -47,11 +47,11 @@
     [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:7 initialSpringVelocity:4 options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          
-                         _backedLabel.alpha     = 1.f;
-                         _backedLabel.transform = CGAffineTransformMake(1, 0, 0, 1, 0, 0);
+                         self->_backedLabel.alpha     = 1.f;
+                         self->_backedLabel.transform = CGAffineTransformMake(1, 0, 0, 1, 0, 0);
                          
-                         _colorLabel.alpha      = 1.f;
-                         _colorLabel.transform  = CGAffineTransformMake(1, 0, 0, 1, 0, 0);;
+                         self->_colorLabel.alpha      = 1.f;
+                         self->_colorLabel.transform  = CGAffineTransformMake(1, 0, 0, 1, 0, 0);;
                          
                      } completion:^(BOOL finished) {
                          
@@ -59,8 +59,8 @@
                                              options:UIViewAnimationOptionCurveEaseInOut
                                           animations:^{
                                               
-                                              _colorLabel.alpha     = 0.f;
-                                              _colorLabel.transform = CGAffineTransformMake(_endScale, 0, 0, _endScale, 0, 0);
+                                              self->_colorLabel.alpha     = 0.f;
+                                              self->_colorLabel.transform = CGAffineTransformMake(self->_endScale, 0, 0, self->_endScale, 0, 0);
                                               
                                           } completion:nil];
                      }];

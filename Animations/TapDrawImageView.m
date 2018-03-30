@@ -78,8 +78,8 @@
             
             if ([pathManager.currentDrawType isEqualToString:tapDrawImageDisableState] == NO) {
                 
-                pathManager.currentDrawType = tapDrawImageViewHighlightState;
-                _currentSelectedManager     = pathManager;
+                pathManager.currentDrawType   = tapDrawImageViewHighlightState;
+                self->_currentSelectedManager = pathManager;
                 [self setNeedsDisplay];
             }
             

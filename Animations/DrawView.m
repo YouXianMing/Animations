@@ -50,17 +50,17 @@
     
     [self.contextObject contextConfig:nil drawStrokeBlock:^(CGContextObject *contextObject) {
         
-        for (int i = 0; i < _drawValues.values.count; i++) {
+        for (int i = 0; i < self->_drawValues.values.count; i++) {
             
-            NSNumber *value = _drawValues.values[i];
+            NSNumber *value = self->_drawValues.values[i];
             
             if (i == 0) {
                 
-                [_contextObject moveToStartPoint:CGPointMake(i, value.floatValue)];
+                [self->_contextObject moveToStartPoint:CGPointMake(i, value.floatValue)];
                 
             } else {
             
-                [_contextObject addLineToPoint:CGPointMake(i, value.floatValue)];
+                [self->_contextObject addLineToPoint:CGPointMake(i, value.floatValue)];
             }
         }
     }];

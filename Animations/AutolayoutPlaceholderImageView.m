@@ -89,12 +89,12 @@
                 
                 [UIView animateWithDuration:0.5f animations:^{
                     
-                    _contentImageView.alpha = 1.f;
+                    self->_contentImageView.alpha = 1.f;
                 }];
                 
             } else {
                 
-                _contentImageView.alpha = 1.f;
+                self->_contentImageView.alpha = 1.f;
             }
         }
     }];
