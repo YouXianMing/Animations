@@ -219,4 +219,14 @@
     [self.loopView stopLoopAnimation];
 }
 
+- (void)setHideNodeContentView:(BOOL)hideNodeContentView {
+    
+    self.nodeViewsContentView.hidden = hideNodeContentView;
+}
+
+- (BOOL)hideNodeContentView {
+    
+    return self.nodeViewsContentView.hidden;
+}
+
 @end

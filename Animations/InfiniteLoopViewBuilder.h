@@ -94,6 +94,11 @@ typedef enum : NSUInteger {
 @property (nonatomic) CGSize  sampleNodeViewSize;
 
 /**
+ *  Hide the node's contentView.
+ */
+@property (nonatomic) BOOL hideNodeContentView;
+
+/**
  *  The CustomNodeStateViews show position, default is kNodeViewBottom.
  */
 @property (nonatomic) ENodeViewShowPosition  position;
