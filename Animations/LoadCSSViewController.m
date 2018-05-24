@@ -40,10 +40,10 @@ typedef enum : NSUInteger {
         GCDGroup *group = [[GCDGroup alloc] init];
         [[[GCDQueue alloc] initSerial] execute:^{
             
-            if ([FileManager fileExistWithRealFilePath:filePath(@"~/Documents/news")] == NO) {
+            if ([FileManager fileExistWithAbsoluteFilePath:absoluteFilePathFrom(@"~/Documents/news")] == NO) {
                 
                 [SSZipArchive unzipFileAtPath:[FileManager bundleFileWithName:@"news.zip"]
-                                toDestination:filePath(@"~/Documents/")];
+                                toDestination:absoluteFilePathFrom(@"~/Documents/")];
             }
             
         } inGroup:group];
@@ -51,8 +51,8 @@ typedef enum : NSUInteger {
         [[GCDQueue mainQueue] notify:^{
             
             // Load html text from Document.
-            NSURL *htmlUrl            = [NSURL fileURLWithPath:filePath(@"~/Documents/news/news.html")];
-            NSURL *relatedDocumentUrl = [NSURL fileURLWithPath:filePath(@"~/Documents/news")];
+            NSURL *htmlUrl            = [NSURL fileURLWithPath:absoluteFilePathFrom(@"~/Documents/news/news.html")];
+            NSURL *relatedDocumentUrl = [NSURL fileURLWithPath:absoluteFilePathFrom(@"~/Documents/news")];
             
             // Use WKWebView to load the html files.
             self.wkWebView                    = [[WKWebView alloc]initWithFrame:self.contentView.bounds];
@@ -68,8 +68,8 @@ typedef enum : NSUInteger {
         type = HTML_FROM_Sandbox;
         
         // Load html text from Bundle.
-        NSURL *htmlUrl            = [NSURL fileURLWithPath:filePath(@"-/news/news.html")];
-        NSURL *relatedDocumentUrl = [NSURL fileURLWithPath:filePath(@"-/news")];
+        NSURL *htmlUrl            = [NSURL fileURLWithPath:absoluteFilePathFrom(@"-/news/news.html")];
+        NSURL *relatedDocumentUrl = [NSURL fileURLWithPath:absoluteFilePathFrom(@"-/news")];
         
         // Use WKWebView to load the html files.
         self.wkWebView                    = [[WKWebView alloc]initWithFrame:self.contentView.bounds];

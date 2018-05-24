@@ -20,7 +20,7 @@
     NSMutableArray <PNG *> *pngs = [NSMutableArray array];
     pngsBlock(pngs);
     
-    NSString *path = filePath(@"~/Documents/");
+    NSString *path = absoluteFilePathFrom(@"~/Documents/");
     [pngs enumerateObjectsUsingBlock:^(PNG *png, NSUInteger idx, BOOL * _Nonnull stop) {
         
         NSMutableString *file = [NSMutableString string];

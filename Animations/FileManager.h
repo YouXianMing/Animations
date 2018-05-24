@@ -14,22 +14,21 @@
 /**
  *  Get the file at the related file path.
  *
- *  @param relatedFilePath Related file path, "~" means sandbox root, "-" means bundle file root.
- *  @param maxTreeLevel    Scan level.
+ *  @param relativeFilePath Relative file path, "~" means sandbox root, "-" means bundle file root.
+ *  @param maxTreeLevel     Scan level.
  *
  *  @return File.
  */
-+ (File *)scanRelatedFilePath:(NSString *)relatedFilePath
-                 maxTreeLevel:(NSInteger)maxTreeLevel;
++ (File *)scanRelativeFilePath:(NSString *)relativeFilePath maxTreeLevel:(NSInteger)maxTreeLevel;
 
 /**
  *  Transform related file path to real file path.
  *
- *  @param relatedFilePath Related file path, "~" means sandbox root, "-" means bundle file root.
+ *  @param relativeFilePath Relative file path, "~" means sandbox root, "-" means bundle file root.
  *
  *  @return The real file path.
  */
-+ (NSString *)theRealFilePath:(NSString *)relatedFilePath;
++ (NSString *)absoluteFilePathFromRelativeFilePath:(NSString *)relativeFilePath;
 
 /**
  *  Get the bundle file path by the bundle file name.
@@ -43,35 +42,24 @@
 /**
  *  To check the file at the given file path exist or not.
  *
- *  @param theRealFilePath The real file path.
+ *  @param absoluteFilePath The real file path.
  *
  *  @return Exist or not.
  */
-+ (BOOL)fileExistWithRealFilePath:(NSString *)theRealFilePath;
++ (BOOL)fileExistWithAbsoluteFilePath:(NSString *)absoluteFilePath;
 
 @end
 
 /**
  *  Transform related file path to real file path.
  *
- *  @param relatedFilePath Related file path, "~" means sandbox root, "-" means bundle file root.
+ *  @param relativeFilePath Relative file path, "~" means sandbox root, "-" means bundle file root.
  *
  *  @return The real file path.
  */
-NS_INLINE NSString *filePath(NSString * relatedFilePath) {
+NS_INLINE NSString *absoluteFilePathFrom(NSString * relativeFilePath) {
     
-    return [FileManager theRealFilePath:relatedFilePath];
+    return [FileManager absoluteFilePathFromRelativeFilePath:relativeFilePath];
 }
 
-/**
- *  To check the file at the given file path exist or not.
- *
- *  @param theRealFilePath The real file path.
- *
- *  @return Exist or not.
- */
-NS_INLINE BOOL fileExistWithRealFilePath(NSString * theRealFilePath) {
-    
-    return [FileManager fileExistWithRealFilePath:theRealFilePath];
-}
 

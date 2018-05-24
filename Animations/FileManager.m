@@ -10,13 +10,12 @@
 
 @implementation FileManager
 
-+ (File *)scanRelatedFilePath:(NSString *)relatedFilePath
-                 maxTreeLevel:(NSInteger)maxTreeLevel {
++ (File *)scanRelativeFilePath:(NSString *)relativeFilePath maxTreeLevel:(NSInteger)maxTreeLevel {
     
     File *file = nil;
     
     // Get the real file path.
-    NSString *filePath = [FileManager theRealFilePath:relatedFilePath];
+    NSString *filePath = [FileManager absoluteFilePathFromRelativeFilePath:relativeFilePath];
     
     // Check file exist.
     BOOL isDirectory = NO;
@@ -36,10 +35,10 @@
     return file;
 }
 
-+ (BOOL)fileExistWithRealFilePath:(NSString *)theRealFilePath {
++ (BOOL)fileExistWithAbsoluteFilePath:(NSString *)absoluteFilePath {
     
     BOOL isDirectory = NO;
-    BOOL isExist     = [[NSFileManager defaultManager] fileExistsAtPath:theRealFilePath isDirectory:&isDirectory];
+    BOOL isExist     = [[NSFileManager defaultManager] fileExistsAtPath:absoluteFilePath isDirectory:&isDirectory];
     
     return isExist;
 }
@@ -110,19 +109,19 @@
     }
 }
 
-+ (NSString *)theRealFilePath:(NSString *)relatedFilePath {
++ (NSString *)absoluteFilePathFromRelativeFilePath:(NSString *)relativeFilePath {
     
     NSString *rootPath = nil;
     
-    if (relatedFilePath.length) {
+    if (relativeFilePath.length) {
         
-        if ([relatedFilePath characterAtIndex:0] == '~') {
+        if ([relativeFilePath characterAtIndex:0] == '~') {
             
-            rootPath = [relatedFilePath stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:NSHomeDirectory()];
+            rootPath = [relativeFilePath stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:NSHomeDirectory()];
             
-        } else if ([relatedFilePath characterAtIndex:0] == '-') {
+        } else if ([relativeFilePath characterAtIndex:0] == '-') {
             
-            rootPath = [relatedFilePath stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[NSBundle mainBundle] bundlePath]];
+            rootPath = [relativeFilePath stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[NSBundle mainBundle] bundlePath]];
             
         } else {
             
