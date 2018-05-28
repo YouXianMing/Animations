@@ -377,6 +377,7 @@
 		C55661FF1F3312540092ACA4 /* InfiniteLoopCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55661FE1F3312540092ACA4 /* InfiniteLoopCollectionView.m */; };
 		C557362D1E8375F0001CDC9A /* LoadCSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C557362C1E8375F0001CDC9A /* LoadCSSViewController.m */; };
 		C557362F1E837661001CDC9A /* news in Resources */ = {isa = PBXBuildFile; fileRef = C557362E1E837661001CDC9A /* news */; };
+		C557854220BBCC6000D54051 /* BaseEncodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C557854120BBCC6000D54051 /* BaseEncodeObject.m */; };
 		C559EE751DE6D733006C7DAC /* UIColor+ForPublicUse.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */; };
 		C559EE781DE6DBC8006C7DAC /* ColorSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C559EE771DE6DBC8006C7DAC /* ColorSpaceCell.m */; };
 		C55A20B61FCFA46B009AB8DD /* DateItemPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55A20B51FCFA46B009AB8DD /* DateItemPickerView.m */; };
@@ -1296,6 +1297,8 @@
 		C557362B1E8375F0001CDC9A /* LoadCSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadCSSViewController.h; sourceTree = "<group>"; };
 		C557362C1E8375F0001CDC9A /* LoadCSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadCSSViewController.m; sourceTree = "<group>"; };
 		C557362E1E837661001CDC9A /* news */ = {isa = PBXFileReference; lastKnownFileType = folder; path = news; sourceTree = "<group>"; };
+		C557854020BBCC6000D54051 /* BaseEncodeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEncodeObject.h; sourceTree = "<group>"; };
+		C557854120BBCC6000D54051 /* BaseEncodeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEncodeObject.m; sourceTree = "<group>"; };
 		C559EE731DE6D733006C7DAC /* UIColor+ForPublicUse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ForPublicUse.h"; sourceTree = "<group>"; };
 		C559EE741DE6D733006C7DAC /* UIColor+ForPublicUse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ForPublicUse.m"; sourceTree = "<group>"; };
 		C559EE761DE6DBC8006C7DAC /* ColorSpaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpaceCell.h; sourceTree = "<group>"; };
@@ -1845,6 +1848,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C557854320BBCC6800D54051 /* BaseEncodeObject */,
 				C5C34B4C20491BE000AFABFE /* SSZipArchive */,
 				C53BE9B61FB15D5B0002F28B /* IconMaker */,
 				C50270EF1FA96A0000833758 /* ResponsibilityChain */,
@@ -3853,6 +3857,15 @@
 			name = LoadCSSViewController;
 			sourceTree = "<group>";
 		};
+		C557854320BBCC6800D54051 /* BaseEncodeObject */ = {
+			isa = PBXGroup;
+			children = (
+				C557854020BBCC6000D54051 /* BaseEncodeObject.h */,
+				C557854120BBCC6000D54051 /* BaseEncodeObject.m */,
+			);
+			name = BaseEncodeObject;
+			sourceTree = "<group>";
+		};
 		C55A20BA1FCFF331009AB8DD /* DateItemPickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -4647,6 +4660,7 @@
 				C516777F1D3620D50032AC09 /* PhotosAlbumManager.m in Sources */,
 				C5EFF2541F14C39100BD5AF0 /* CustomCollectionViewController.m in Sources */,
 				102B1F0C1C60E3D700A8FD40 /* RefreshObject.m in Sources */,
+				C557854220BBCC6000D54051 /* BaseEncodeObject.m in Sources */,
 				102296C51C392B1F001AF5BB /* LineBackgroundView.m in Sources */,
 				104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */,
 				C58B1ABB1F4C12AA00B681E1 /* AFNetworkActivityIndicatorManager.m in Sources */,
