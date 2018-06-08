@@ -25,6 +25,8 @@
      http://www.cnblogs.com/YouXianMing/
      https://github.com/YouXianMing
      https://github.com/YouXianMing/YoCelsius
+     
+     独立开发作品 (感兴趣的朋友支持一下^_^) : https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1390862464&mt=8
      */
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
