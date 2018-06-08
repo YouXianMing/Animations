@@ -4,6 +4,11 @@
 
 ![oneAnimations.gif](http://images.cnitblog.com/blog2015/607542/201504/211608037347783.gif) ![twoAnimations.gif](http://images.cnitblog.com/blog2015/607542/201504/211608153124546.gif) 
 
+> 广告
+
+美记（本人独立开发作品，感兴趣的朋友支持一下吧 ^_^）
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1390862464&mt=8
+
 > The Animation Collection (Long-term Updates)
 
 
