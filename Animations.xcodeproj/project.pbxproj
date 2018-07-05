@@ -541,6 +541,10 @@
 		C5EFF27F1F14C5D800BD5AF0 /* GridItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF27E1F14C5D800BD5AF0 /* GridItemModel.m */; };
 		C5EFF2821F14CF9E00BD5AF0 /* HorizontalPicItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF2811F14CF9E00BD5AF0 /* HorizontalPicItemCell.m */; };
 		C5EFF2851F14D03400BD5AF0 /* HorizontalPicItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF2841F14D03400BD5AF0 /* HorizontalPicItemModel.m */; };
+		C5F75D2C20EE28DD0078FB74 /* Rumtime.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F75D2620EE28DC0078FB74 /* Rumtime.m */; };
+		C5F75D2D20EE28DD0078FB74 /* Runtime_IMP.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F75D2720EE28DC0078FB74 /* Runtime_IMP.m */; };
+		C5F75D2E20EE28DD0078FB74 /* Runtime_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F75D2920EE28DD0078FB74 /* Runtime_Method.m */; };
+		C5F75D3120EE29E30078FB74 /* UIViewController+RuntimeReplace.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F75D3020EE29E30078FB74 /* UIViewController+RuntimeReplace.m */; };
 		C5F8FE7A1ECC1E3B00377E01 /* AnimationsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8FE791ECC1E3B00377E01 /* AnimationsListController.m */; };
 		C5F8FE7D1ECC228D00377E01 /* NormalTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8FE7C1ECC228D00377E01 /* NormalTitleController.m */; };
 		C5F8FE801ECC260A00377E01 /* FullTitleVisualEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8FE7F1ECC260A00377E01 /* FullTitleVisualEffectController.m */; };
@@ -1653,6 +1657,14 @@
 		C5EFF2811F14CF9E00BD5AF0 /* HorizontalPicItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalPicItemCell.m; sourceTree = "<group>"; };
 		C5EFF2831F14D03400BD5AF0 /* HorizontalPicItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalPicItemModel.h; sourceTree = "<group>"; };
 		C5EFF2841F14D03400BD5AF0 /* HorizontalPicItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalPicItemModel.m; sourceTree = "<group>"; };
+		C5F75D2620EE28DC0078FB74 /* Rumtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rumtime.m; sourceTree = "<group>"; };
+		C5F75D2720EE28DC0078FB74 /* Runtime_IMP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Runtime_IMP.m; sourceTree = "<group>"; };
+		C5F75D2820EE28DC0078FB74 /* Runtime_IMP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Runtime_IMP.h; sourceTree = "<group>"; };
+		C5F75D2920EE28DD0078FB74 /* Runtime_Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Runtime_Method.m; sourceTree = "<group>"; };
+		C5F75D2A20EE28DD0078FB74 /* Runtime_Method.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Runtime_Method.h; sourceTree = "<group>"; };
+		C5F75D2B20EE28DD0078FB74 /* Rumtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rumtime.h; sourceTree = "<group>"; };
+		C5F75D2F20EE29E30078FB74 /* UIViewController+RuntimeReplace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RuntimeReplace.h"; sourceTree = "<group>"; };
+		C5F75D3020EE29E30078FB74 /* UIViewController+RuntimeReplace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RuntimeReplace.m"; sourceTree = "<group>"; };
 		C5F8FE781ECC1E3B00377E01 /* AnimationsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationsListController.h; sourceTree = "<group>"; };
 		C5F8FE791ECC1E3B00377E01 /* AnimationsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationsListController.m; sourceTree = "<group>"; };
 		C5F8FE7B1ECC228D00377E01 /* NormalTitleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalTitleController.h; sourceTree = "<group>"; };
@@ -1848,6 +1860,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C5F75D2520EE28BD0078FB74 /* Runtime */,
 				C557854320BBCC6800D54051 /* BaseEncodeObject */,
 				C5C34B4C20491BE000AFABFE /* SSZipArchive */,
 				C53BE9B61FB15D5B0002F28B /* IconMaker */,
@@ -4508,6 +4521,21 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		C5F75D2520EE28BD0078FB74 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				C5F75D2B20EE28DD0078FB74 /* Rumtime.h */,
+				C5F75D2620EE28DC0078FB74 /* Rumtime.m */,
+				C5F75D2820EE28DC0078FB74 /* Runtime_IMP.h */,
+				C5F75D2720EE28DC0078FB74 /* Runtime_IMP.m */,
+				C5F75D2A20EE28DD0078FB74 /* Runtime_Method.h */,
+				C5F75D2920EE28DD0078FB74 /* Runtime_Method.m */,
+				C5F75D2F20EE29E30078FB74 /* UIViewController+RuntimeReplace.h */,
+				C5F75D3020EE29E30078FB74 /* UIViewController+RuntimeReplace.m */,
+			);
+			name = Runtime;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -4643,6 +4671,7 @@
 				104228C31C3694B10011409C /* SDWebImageController.m in Sources */,
 				109ECD5E1C3D3F1500290307 /* CALayer+SetRect.m in Sources */,
 				C582E7991D2F4184003433EC /* QRCodeView.m in Sources */,
+				C5F75D2C20EE28DD0078FB74 /* Rumtime.m in Sources */,
 				C5EFF2511F14C11000BD5AF0 /* GridCollectionItemView.m in Sources */,
 				106BCFD11CDC678F007C3EEE /* InfiniteLoopView.m in Sources */,
 				103088B31C05679A00C8B623 /* ScrollBlurImageViewController.m in Sources */,
@@ -4650,6 +4679,7 @@
 				1011BAF21CD4959300F29FB9 /* NSString+Base64.m in Sources */,
 				104FCCA71D23573D00308B73 /* TapDrawPathManager.m in Sources */,
 				100D4B1A1D27A3A300EDE29B /* AppleSystemService.m in Sources */,
+				C5F75D2D20EE28DD0078FB74 /* Runtime_IMP.m in Sources */,
 				C5792EE41F4743B3000B0D1B /* NetworkingInfo.m in Sources */,
 				C59608CC1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m in Sources */,
 				C56B3A6C1F2830A400133AC0 /* UIView+ConvertRect.m in Sources */,
@@ -4775,6 +4805,7 @@
 				10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */,
 				C57526CC1D5032690064F6CD /* DrawingStyle.m in Sources */,
 				C58B1AB91F4C12AA00B681E1 /* AFAutoPurgingImageCache.m in Sources */,
+				C5F75D2E20EE28DD0078FB74 /* Runtime_Method.m in Sources */,
 				C52A3CC41F67852900C2F862 /* PickerAreaModel.m in Sources */,
 				C5C1E6C51FA80FD60023B8F4 /* DynamicSwitchingCell.m in Sources */,
 				104CD3091CDAD4B700C836E6 /* GridManager.m in Sources */,
@@ -5098,6 +5129,7 @@
 				C55F55F61F0B95E7008F0910 /* BaseCustomNavigationController.m in Sources */,
 				10381FE21BF9DE6E00E5E476 /* GCDTimer.m in Sources */,
 				109D5B4C1C0EC0700039CB04 /* CountDownTimerController.m in Sources */,
+				C5F75D3120EE29E30078FB74 /* UIViewController+RuntimeReplace.m in Sources */,
 				102ED87A1C3C005800E9863E /* MixedColorProgressViewController.m in Sources */,
 				C51677971D363E6F0032AC09 /* Base64.m in Sources */,
 				105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */,

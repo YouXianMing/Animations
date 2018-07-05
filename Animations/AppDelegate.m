@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UIViewController+RuntimeReplace.h"
 #import "AnimationsListController.h"
 #import "AnimationsListViewNavigationController.h"
 
@@ -29,6 +30,12 @@
      独立开发作品 (感兴趣的朋友支持一下^_^) : https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1390862464&mt=8
      */
     
+#ifdef DEBUG
+    
+    [UIViewController debug_runtime_replace];
+    
+#endif
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     AnimationsListController               *viewController       = [AnimationsListController new];
@@ -37,7 +44,7 @@
     self.window.rootViewController = navigationController;
     self.window.backgroundColor    = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-        
+    
     return YES;
 }
 

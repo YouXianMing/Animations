@@ -7,30 +7,6 @@
 //
 
 #import "BaseCustomViewController.h"
-#import <asl.h>
-
-typedef enum : NSUInteger {
-    
-    kEnterControllerType = 1000,
-    kLeaveControllerType,
-    kDeallocType,
-    
-} EDebugTag;
-
-#define _Flag_NSLog(fmt,...) {                                        \
-do                                                                  \
-{                                                                   \
-NSString *str = [NSString stringWithFormat:fmt, ##__VA_ARGS__];   \
-printf("%s\n",[str UTF8String]);                                  \
-}                                                                   \
-while (0);                                                          \
-}
-
-#ifdef DEBUG
-#define ControllerLog(fmt, ...) _Flag_NSLog((@"" fmt), ##__VA_ARGS__)
-#else
-#define ControllerLog(...)
-#endif
 
 @interface BaseCustomViewController () <UIGestureRecognizerDelegate>
 
