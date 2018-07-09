@@ -18,7 +18,7 @@
     /*
      Swift version Animations - https://github.com/YouXianMing/Swift-Animations
      
-     Lateast no warning version : Xcode 9.3 (9E145)
+     Lateast no warning version : Xcode 9.4.1 (9F2000)
      
      QQ    705786299
      Email YouXianMing1987@126.com
@@ -27,7 +27,7 @@
      https://github.com/YouXianMing
      https://github.com/YouXianMing/YoCelsius
      
-     独立开发作品 (感兴趣的朋友支持一下^_^) : https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1390862464&mt=8
+     独立开发作品 (感兴趣的朋友支持一下^_^) : https://itunes.apple.com/cn/app/美记/id1390862464
      */
     
 #ifdef DEBUG
