@@ -7,7 +7,7 @@
 > 广告
 
 美记（本人独立开发作品，感兴趣的朋友支持一下吧 ^_^）
-https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1390862464&mt=8
+https://itunes.apple.com/cn/app/%E7%BE%8E%E8%AE%B0/id1390862464
 
 > The Animation Collection (Long-term Updates)
 
