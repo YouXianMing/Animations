@@ -99,8 +99,9 @@ static GCDQueue *backgroundPriorityGlobalQueue;
 - (instancetype)initSerialWithLabel:(NSString *)label {
 
     self = [super init];
-    if (self)
-    {
+    
+    if (self) {
+        
         self.dispatchQueue = dispatch_queue_create([label UTF8String], DISPATCH_QUEUE_SERIAL);
     }
     
@@ -120,11 +121,14 @@ static GCDQueue *backgroundPriorityGlobalQueue;
 }
 
 - (instancetype)initConcurrentWithLabel:(NSString *)label {
+    
     self = [super init];
-    if (self)
-    {
+    
+    if (self) {
+        
         self.dispatchQueue = dispatch_queue_create([label UTF8String], DISPATCH_QUEUE_CONCURRENT);
     }
+    
     return self;
 }
 
