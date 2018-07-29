@@ -14,7 +14,7 @@
 /**
  *  Cell header or footer's reused identifier.
  */
-@property (nonatomic, strong) NSString *reuseIdentifier;
+@property (nonatomic, copy) NSString *reuseIdentifier;
 
 /**
  *  Data, can be nil.

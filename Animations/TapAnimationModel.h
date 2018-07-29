@@ -10,7 +10,7 @@
 
 @interface TapAnimationModel : NSObject
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, copy)   NSString *name;
 @property (nonatomic)         BOOL      selected;
 
 + (instancetype)modelWithName:(NSString *)name selected:(BOOL)selected;

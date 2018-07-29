@@ -12,11 +12,11 @@
 
 @interface ImageModel : NSObject <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol>
 
-@property (nonatomic, strong) NSString *imageUrl;
+@property (nonatomic, copy) NSString *imageUrl;
 
 + (instancetype)imageModelWithImageUrl:(NSString *)url;
 
-@property (nonatomic, strong) NSString *infiniteLoopCellReuseIdentifier;
-@property (nonatomic)         Class     infiniteLoopCellClass;
+@property (nonatomic, copy) NSString *infiniteLoopCellReuseIdentifier;
+@property (nonatomic)       Class     infiniteLoopCellClass;
 
 @end

@@ -13,7 +13,7 @@
 /**
  *  Title
  */
-@property (nonatomic, strong) NSString  *title;
+@property (nonatomic, copy)    NSString  *title;
 
 /**
  *  The inputValue value is in range [0, 1].

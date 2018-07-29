@@ -12,8 +12,8 @@
 
 @interface MessageViewObject : NSObject
 
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *content;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *content;
 
 + (instancetype)messageViewObjectWithTitle:(NSString *)title content:(NSString *)content;
 

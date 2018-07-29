@@ -13,7 +13,7 @@
 
 @interface StudyTimeModel : NSObject
 
-@property (nonatomic, strong) NSString *time;
+@property (nonatomic, copy)   NSString *time;
 @property (nonatomic)         CGFloat   percent;
 
 @property (nonatomic, strong) NSMutableAttributedString  *percentString;
@@ -45,7 +45,7 @@ NS_INLINE StudyTimeModel *studyTimeModel(NSString *time, CGFloat percent) {
 
 @interface StudyInfoModel : NSObject
 
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, copy)   NSString *title;
 @property (nonatomic, strong) NSMutableArray <StudyTimeModel *> *times;
 
 @end

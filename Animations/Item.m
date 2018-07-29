@@ -12,7 +12,7 @@
 
 @interface Item ()
 
-@property (nonatomic, strong) NSMutableAttributedString *nameString;
+@property (nonatomic, copy) NSMutableAttributedString *nameString;
 
 @end
 

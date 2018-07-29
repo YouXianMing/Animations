@@ -13,7 +13,7 @@
 /**
  *  文本标签
  */
-@property (nonatomic, strong)   NSString  *text;
+@property (nonatomic, copy)     NSString  *text;
 
 /**
  *  一些值的设置

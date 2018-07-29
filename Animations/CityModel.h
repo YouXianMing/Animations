@@ -10,7 +10,7 @@
 
 @interface CityModel : NSObject
 
-@property (nonatomic, strong) NSString                      *text;
+@property (nonatomic, copy)   NSString                      *text;
 @property (nonatomic)         NSInteger                      level;
 @property (nonatomic, strong) NSMutableArray <CityModel *>  *submodels;
 

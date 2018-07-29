@@ -19,7 +19,7 @@ typedef enum : NSUInteger {
 
 @interface AlertViewButtonStyle : NSObject
 
-@property (nonatomic, strong) NSString              *title;
+@property (nonatomic, copy)   NSString              *title;
 @property (nonatomic)         EAlertViewButtonStyle  style;
 
 @end

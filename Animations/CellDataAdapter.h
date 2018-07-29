@@ -14,7 +14,7 @@
 /**
  *  Cell's reused identifier.
  */
-@property (nonatomic, strong) NSString     *cellReuseIdentifier;
+@property (nonatomic, copy) NSString       *cellReuseIdentifier;
 
 /**
  *  Data, can be nil.

@@ -11,7 +11,7 @@
 
 @interface ShowTextModel : NSObject
 
-@property (nonatomic, strong)   NSString   *inputString;
+@property (nonatomic, copy)     NSString   *inputString;
 @property (nonatomic)           CGFloat     expendStringHeight;
 @property (nonatomic)           CGFloat     normalStringHeight;
 

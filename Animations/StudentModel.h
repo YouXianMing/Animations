@@ -12,7 +12,7 @@
 
 @interface StudentModel : NSObject
 
-@property (nonatomic, strong) NSString       *name;
+@property (nonatomic, copy)   NSString       *name;
 @property (nonatomic, strong) NSNumber       *age;
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key;

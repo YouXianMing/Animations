@@ -13,7 +13,7 @@
 @interface TapDrawPathManager : NSObject
 
 @property (nonatomic, strong) UIBezierPath  *path;
-@property (nonatomic, strong) NSString      *currentDrawType;
+@property (nonatomic, copy)   NSString      *currentDrawType;
 
 @property (nonatomic, strong) NSMutableDictionary  <NSString *, TapDrawObject *> *colorsType;
 

@@ -10,12 +10,12 @@
 
 @interface Item : NSObject
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, copy)   NSString *name;
 @property (nonatomic, strong) id        object;
 @property (nonatomic)                   NSInteger index;
 
 + (instancetype)itemWithObject:(id)object name:(NSString *)name;
 
-@property (nonatomic, strong, readonly) NSMutableAttributedString *nameString;
+@property (nonatomic, copy, readonly) NSMutableAttributedString *nameString;
 
 @end

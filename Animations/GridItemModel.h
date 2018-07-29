@@ -10,8 +10,8 @@
 
 @interface GridItemModel : NSObject
 
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *icon;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *icon;
 
 + (instancetype)gridItemModelWithTitle:(NSString *)title icon:(NSString *)icon;
 

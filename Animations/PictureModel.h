@@ -13,7 +13,7 @@
 /**
  *  图片地址字符串
  */
-@property (nonatomic, strong) NSString *pictureUrlString;
+@property (nonatomic, copy)   NSString *pictureUrlString;
 
 /**
  *  图片地址

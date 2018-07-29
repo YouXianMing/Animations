@@ -12,8 +12,8 @@
 
 @interface InfiniteLoopModel : NSObject <InfiniteLoopViewProtocol, InfiniteLoopCellClassProtocol>
 
-@property (nonatomic, strong) NSString *imageUrl;
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, copy) NSString *imageUrl;
+@property (nonatomic, copy) NSString *title;
 
 + (instancetype)infiniteLoopModelWithImageUrl:(NSString *)url
                                         title:(NSString *)title;

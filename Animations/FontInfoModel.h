@@ -10,7 +10,7 @@
 
 @interface FontInfoModel : NSObject
 
-@property (nonatomic, strong) NSString *fontFamilyName;
+@property (nonatomic, copy)   NSString *fontFamilyName;
 @property (nonatomic, strong) NSArray  *fontNames;
 
 @end

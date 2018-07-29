@@ -68,18 +68,19 @@
                                                 fromViewController:(UIViewController *)fromVC
                                                   toViewController:(UIViewController *)toVC {
     
+    id result = nil;
+    
     if (operation == UINavigationControllerOperationPush) {
         
-        return [ControllerPushAnimator new];
+        result = [ControllerPushAnimator new];
         
     } else if (operation == UINavigationControllerOperationPop) {
         
-        return [ControllerPopAnimator new];
+        result = [ControllerPopAnimator new];
         
-    } else {
-        
-        return nil;
     }
+        
+    return result;
 }
 
 #pragma mark - configNotificationCenter
@@ -152,7 +153,7 @@
     // Start glow.
     animationHeadLineLabel.glowRadius            = @(2.f);
     animationHeadLineLabel.glowOpacity           = @(1.f);
-    animationHeadLineLabel.glowColor             = [[UIColor colorWithRed:0.203  green:0.598  blue:0.859 alpha:1] colorWithAlphaComponent:0.95f];
+    animationHeadLineLabel.glowColor             = [[UIColor colorWithRed:0.203 green:0.598 blue:0.859 alpha:1] colorWithAlphaComponent:0.95f];
     
     animationHeadLineLabel.glowDuration          = @(1.f);
     animationHeadLineLabel.hideDuration          = @(3.f);
