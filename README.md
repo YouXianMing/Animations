@@ -2,12 +2,7 @@
 
 > Project [YoCelsius](https://github.com/YouXianMing/YoCelsius)  in [AppStore](https://itunes.apple.com/us/app/yocelsius/id967721892?l=zh&ls=1&mt=8)
 
-![oneAnimations.gif](http://images.cnitblog.com/blog2015/607542/201504/211608037347783.gif) ![twoAnimations.gif](http://images.cnitblog.com/blog2015/607542/201504/211608153124546.gif) 
-
-> 广告
-
-美记（本人独立开发作品，感兴趣的朋友支持一下吧 ^_^）
-https://itunes.apple.com/cn/app/%E7%BE%8E%E8%AE%B0/id1390862464
+[oneAnimations.gif](http://images.cnitblog.com/blog2015/607542/201504/211608037347783.gif)[twoAnimations.gif](http://images.cnitblog.com/blog2015/607542/201504/211608153124546.gif) 
 
 > The Animation Collection (Long-term Updates)
 
