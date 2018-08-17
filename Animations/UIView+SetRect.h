@@ -11,12 +11,22 @@
 /**
  *  UIScreen width.
  */
-#define  Width   [UIScreen mainScreen].bounds.size.width
+#define  Width      UIScreen.mainScreen.bounds.size.width
+
+/**
+ *  UIScreen width's 1/2.
+ */
+#define  HalfWidth  (UIScreen.mainScreen.bounds.size.width / 2.f)
 
 /**
  *  UIScreen height.
  */
-#define  Height  [UIScreen mainScreen].bounds.size.height
+#define  Height     UIScreen.mainScreen.bounds.size.height
+
+/**
+ *  UIScreen height's 1/2.
+ */
+#define HalfHeight  (UIScreen.mainScreen.bounds.size.height / 2.f)
 
 /**
  *  Status bar height.
@@ -37,31 +47,6 @@
  *  Status bar & navigation bar height.
  */
 #define  StatusBarAndNavigationBarHeight   (20.f + 44.f)
-
-/**
- *  iPhone4 or iPhone4s
- */
-#define  iPhone4_4s     (Width == 320.f && Height == 480.f ? YES : NO)
-
-/**
- *  iPhone5 or iPhone5s or iPhoneSE
- */
-#define  iPhone5_5s     (Width == 320.f && Height == 568.f ? YES : NO)
-
-/**
- *  iPhone6 or iPhone6s or iPhone 7 or iPhone 8
- */
-#define  iPhone6_6s     (Width == 375.f && Height == 667.f ? YES : NO)
-
-/**
- *  iPhone6Plus or iPhone6sPlus or iPhone7sPlus or iPhone8sPlus
- */
-#define  iPhone6_6sPlus (Width == 414.f && Height == 736.f ? YES : NO)
-
-/**
- *  iPhoneX
- */
-#define  iPhoneX        (Width == 375.f && Height == 812.f ? YES : NO)
 
 @interface UIView (SetRect)
 
@@ -92,12 +77,5 @@
 @property (nonatomic, readonly) CGFloat middleX;
 @property (nonatomic, readonly) CGFloat middleY;
 @property (nonatomic, readonly) CGPoint middlePoint;
-
-/*-----------
- * iPhone X *
- -----------*/
-
-@property (class, nonatomic, readonly) CGFloat additionaliPhoneXBottomSafeHeight;
-@property (class, nonatomic, readonly) CGFloat additionaliPhoneXTopSafeHeight;
 
 @end

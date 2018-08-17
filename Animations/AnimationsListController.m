@@ -22,6 +22,7 @@
 #import "UIView+SetRect.h"
 #import "NotificationEvent.h"
 #import "ControllersHeader.h"
+#import "DeviceInfo.h"
 
 @interface AnimationsListController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, DefaultNotificationCenterDelegate, CustomCellDelegate>
 
@@ -38,7 +39,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+        
     [self rootViewControllerSetup];
     
     [self configNotificationCenter];
@@ -112,9 +113,9 @@
 
 - (void)makeViewsConfig:(NSMutableDictionary<NSString *,ControllerBaseViewConfig *> *)viewsConfig {
     
-    if (iPhoneX) {
+    if (DeviceInfo.isFringeScreen == YES) {
         
-        CGFloat iPhoneXHeight = StatusBarAndNavigationBarHeight + UIView.additionaliPhoneXTopSafeHeight;
+        CGFloat iPhoneXHeight = StatusBarAndNavigationBarHeight + DeviceInfo.fringeScreenTopSafeHeight;
         
         ControllerBaseViewConfig *titleViewConfig   = viewsConfig[titleViewId];
         ControllerBaseViewConfig *contentViewConfig = viewsConfig[contentViewId];
@@ -128,7 +129,7 @@
 
 - (void)configureTitleView {
     
-    BackgroundLineView *lineView = [BackgroundLineView backgroundLineViewWithFrame:CGRectMake(0, 0, Width, 64 + (iPhoneX ? UIView.additionaliPhoneXTopSafeHeight : 0))
+    BackgroundLineView *lineView = [BackgroundLineView backgroundLineViewWithFrame:CGRectMake(0, 0, Width, 64 + (DeviceInfo.isFringeScreen == YES ? DeviceInfo.fringeScreenTopSafeHeight : 0))
                                                                          lineWidth:4 lineGap:4
                                                                          lineColor:[[UIColor blackColor] colorWithAlphaComponent:0.015]
                                                                             rotate:M_PI_4];
@@ -139,7 +140,7 @@
     UILabel *animationHeadLineLabel = [UIView animationsListViewControllerHeadLabel];
     
     // Title view.
-    UIView *titleView             = [[UIView alloc] initWithFrame:CGRectMake(0, iPhoneX ? UIView.additionaliPhoneXTopSafeHeight : 0, Width, 64)];
+    UIView *titleView             = [[UIView alloc] initWithFrame:CGRectMake(0, DeviceInfo.isFringeScreen == YES ? DeviceInfo.fringeScreenTopSafeHeight : 0, Width, 64)];
     headlinelabel.center          = titleView.middlePoint;
     animationHeadLineLabel.center = titleView.middlePoint;
     [titleView addSubview:headlinelabel];

@@ -11,6 +11,7 @@
 #import "RangeValueView.h"
 #import "UIView+SetRect.h"
 #import "UIFont+Fonts.h"
+#import "DeviceInfo.h"
 #import "POP.h"
 
 @interface POPSpringParameterController ()
@@ -43,7 +44,7 @@
 
 - (void)initSecondLabel {
     
-    self.secondsLabel                = [[UILabel alloc] initWithFrame:CGRectMake(10, 10 + 64 + (iPhoneX ? UIView.additionaliPhoneXTopSafeHeight : 0), 100, 20)];
+    self.secondsLabel                = [[UILabel alloc] initWithFrame:CGRectMake(10, 10 + 64 + (DeviceInfo.isFringeScreen == YES ? DeviceInfo.fringeScreenTopSafeHeight : 0), 100, 20)];
     self.secondsLabel.attributedText = [self stringWithFloat:0.f];
     [self.contentView addSubview:self.secondsLabel];
 }

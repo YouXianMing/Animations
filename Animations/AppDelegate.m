@@ -35,7 +35,7 @@
     [UIViewController debug_runtime_replace];
     
 #endif
-    
+        
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     AnimationsListController               *viewController       = [AnimationsListController new];

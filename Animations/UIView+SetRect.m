@@ -169,15 +169,5 @@
     return CGPointMake(CGRectGetWidth(self.bounds) / 2.f, CGRectGetHeight(self.bounds) / 2.f);
 }
 
-+ (CGFloat)additionaliPhoneXBottomSafeHeight {
-    
-    return 34.f;
-}
-
-+ (CGFloat)additionaliPhoneXTopSafeHeight {
-    
-    return 44.f;
-}
-
 @end
 

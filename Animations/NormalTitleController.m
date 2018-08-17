@@ -8,6 +8,7 @@
 
 #import "NormalTitleController.h"
 #import "UIView+SetRect.h"
+#import "DeviceInfo.h"
 #import "UIFont+Fonts.h"
 
 @interface NormalTitleController ()
@@ -18,9 +19,9 @@
 
 - (void)makeViewsConfig:(NSMutableDictionary<NSString *,ControllerBaseViewConfig *> *)viewsConfig {
     
-    if (iPhoneX) {
+    if (DeviceInfo.isFringeScreen == YES) {
         
-        CGFloat realHeight = 64 + UIView.additionaliPhoneXTopSafeHeight;
+        CGFloat realHeight = 64 + DeviceInfo.fringeScreenTopSafeHeight;
         
         ControllerBaseViewConfig *titleViewConfig = viewsConfig[titleViewId];
         ControllerBaseViewConfig *contentViewConfig = viewsConfig[contentViewId];

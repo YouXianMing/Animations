@@ -31,6 +31,11 @@
 @property (nonatomic, weak) id <CustomViewControllerDelegate> eventDelegate;
 
 /**
+ *  The BaseCustomViewController's event callback block.
+ */
+@property (nonatomic, copy) void (^controllerEventCallback)(__kindof CustomViewController *controller, id event);
+
+/**
  *  You can only use this method when the current controller is an UINavigationController's rootViewController.
  */
 - (void)useInteractivePopGestureRecognizer;

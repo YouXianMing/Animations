@@ -10,6 +10,7 @@
 #import "UIView+SetRect.h"
 #import "ScrollComputingValue.h"
 #import "ScrollTitleView.h"
+#import "DeviceInfo.h"
 
 typedef enum : NSUInteger {
     
@@ -44,7 +45,7 @@ typedef enum : NSUInteger {
     self.scrollView.delegate                       = self;
     [self.contentView addSubview:self.scrollView];
     ;
-    self.titlesContentView                        = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, TabbarHeight + (iPhoneX ? UIView.additionaliPhoneXBottomSafeHeight : 0))];
+    self.titlesContentView                        = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, TabbarHeight + (DeviceInfo.isFringeScreen == YES ? DeviceInfo.fringeScreenBottomSafeHeight : 0))];
     self.titlesContentView.backgroundColor        = [[UIColor blackColor] colorWithAlphaComponent:0.65f];
     self.titlesContentView.bottom                 = self.contentView.height;
     [self.contentView addSubview:self.titlesContentView];

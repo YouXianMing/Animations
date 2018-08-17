@@ -11,6 +11,7 @@
 #import "UIButton+Inits.h"
 #import "UIButton+Style.h"
 #import "UIView+SetRect.h"
+#import "DeviceInfo.h"
 #import "UIColor+ForPublicUse.h"
 
 @implementation DateItemPickerView
@@ -86,9 +87,9 @@
     
     CGFloat bottomHeight = 0;
     
-    if (iPhoneX) {
+    if (DeviceInfo.isFringeScreen == YES) {
         
-        bottomHeight = UIView.additionaliPhoneXBottomSafeHeight;
+        bottomHeight = DeviceInfo.fringeScreenBottomSafeHeight;
     }
     
     return 180.f + 40.f + bottomHeight;

@@ -14,6 +14,7 @@
 #import "UIButton+Style.h"
 #import "UIButton+Inits.h"
 #import "UIFont+Fonts.h"
+#import "DeviceInfo.h"
 
 @interface OneItemPickerView () <CustomPickerViewDelegate> {
     
@@ -103,9 +104,9 @@
     
     CGFloat bottomHeight = 0;
     
-    if (iPhoneX) {
+    if (DeviceInfo.isFringeScreen == YES) {
         
-        bottomHeight = UIView.additionaliPhoneXBottomSafeHeight;
+        bottomHeight = DeviceInfo.fringeScreenBottomSafeHeight;
     }
     
     return 180.f + 40.f + bottomHeight;

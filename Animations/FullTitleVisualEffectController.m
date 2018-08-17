@@ -8,6 +8,7 @@
 
 #import "FullTitleVisualEffectController.h"
 #import "UIView+SetRect.h"
+#import "DeviceInfo.h"
 #import "UIFont+Fonts.h"
 
 @interface FullTitleVisualEffectController ()
@@ -23,10 +24,10 @@
     
     viewsConfig[contentViewId].frame = CGRectMake(0, 0, Width, Height);
     
-    if (iPhoneX) {
+    if (DeviceInfo.isFringeScreen == YES) {
         
         ControllerBaseViewConfig *titleViewConfig = viewsConfig[titleViewId];
-        titleViewConfig.frame = CGRectMake(0, 0, Width, 64 + UIView.additionaliPhoneXTopSafeHeight);
+        titleViewConfig.frame = CGRectMake(0, 0, Width, 64 + DeviceInfo.fringeScreenTopSafeHeight);
     }
 }
 

@@ -523,6 +523,7 @@
 		C5E7760D1F2580F900C304A1 /* TreeStructureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E7760C1F2580F900C304A1 /* TreeStructureTableViewController.m */; };
 		C5E776111F2582E700C304A1 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E776101F2582E700C304A1 /* CityModel.m */; };
 		C5E776141F25850900C304A1 /* CityModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E776131F25850900C304A1 /* CityModelCell.m */; };
+		C5EE202A21269F990020EB7B /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EE202921269F990020EB7B /* DeviceInfo.m */; };
 		C5EE65B51E1B3A1100DDF591 /* IndexRange.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EE65B41E1B3A1100DDF591 /* IndexRange.m */; };
 		C5EFF2421F14734B00BD5AF0 /* CustomCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF2411F14734B00BD5AF0 /* CustomCollectionView.m */; };
 		C5EFF2471F14735A00BD5AF0 /* HorizontalCollectionItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF2441F14735A00BD5AF0 /* HorizontalCollectionItemView.m */; };
@@ -1617,6 +1618,8 @@
 		C5E776101F2582E700C304A1 /* CityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityModel.m; sourceTree = "<group>"; };
 		C5E776121F25850900C304A1 /* CityModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModelCell.h; sourceTree = "<group>"; };
 		C5E776131F25850900C304A1 /* CityModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityModelCell.m; sourceTree = "<group>"; };
+		C5EE202821269F990020EB7B /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
+		C5EE202921269F990020EB7B /* DeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
 		C5EE65B31E1B3A1100DDF591 /* IndexRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexRange.h; sourceTree = "<group>"; };
 		C5EE65B41E1B3A1100DDF591 /* IndexRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexRange.m; sourceTree = "<group>"; };
 		C5EFF2401F14734B00BD5AF0 /* CustomCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionView.h; sourceTree = "<group>"; };
@@ -1865,6 +1868,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C5EE202B2126A0B70020EB7B /* DeviceInfo */,
 				C5A014A52126974D00A8063F /* IrregularElementsCreator */,
 				C5F75D2520EE28BD0078FB74 /* Runtime */,
 				C557854320BBCC6800D54051 /* BaseEncodeObject */,
@@ -4448,6 +4452,15 @@
 			name = TreeStructureTableViewController;
 			sourceTree = "<group>";
 		};
+		C5EE202B2126A0B70020EB7B /* DeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C5EE202821269F990020EB7B /* DeviceInfo.h */,
+				C5EE202921269F990020EB7B /* DeviceInfo.m */,
+			);
+			name = DeviceInfo;
+			sourceTree = "<group>";
+		};
 		C5EE65B21E1B39FC00DDF591 /* IndexRange */ = {
 			isa = PBXGroup;
 			children = (
@@ -4583,8 +4596,9 @@
 				TargetAttributes = {
 					10381F4C1BF9B44A00E5E476 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4G7QU8K257;
 						LastSwiftMigration = 0920;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -4897,6 +4911,7 @@
 				10E2D4F71CD5962000666EEB /* UIView+WebCacheOperation.m in Sources */,
 				C565E66E1FFC7B83007965DB /* POPAnimation.mm in Sources */,
 				C50E758A1F4E6E7F00EB9819 /* StudyInfoDrawView.m in Sources */,
+				C5EE202A21269F990020EB7B /* DeviceInfo.m in Sources */,
 				104FCCA41D23573D00308B73 /* TapPathDrawViewController.m in Sources */,
 				C57791F01FCD3B1100BED2B1 /* RealNameChain.m in Sources */,
 				C5EFF2731F14C46700BD5AF0 /* MASLayoutConstraint.m in Sources */,
@@ -5284,8 +5299,8 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4G7QU8K257;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -5309,8 +5324,8 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4G7QU8K257;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Animations.pch";
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

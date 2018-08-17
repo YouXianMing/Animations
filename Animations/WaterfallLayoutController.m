@@ -16,6 +16,7 @@
 #import "FileManager.h"
 #import "DuitangPicModel.h"
 #import "UIView+SetRect.h"
+#import "DeviceInfo.h"
 
 static NSString *cellIdentifier   = @"WaterfallCell";
 static NSString *headerIdentifier = @"WaterfallHeader";
@@ -63,9 +64,9 @@ static NSString *footerIdentifier = @"WaterfallFooter";
         
         _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         
-        if (iPhoneX) {
+        if (DeviceInfo.isFringeScreen == YES) {
             
-            _collectionView.contentInset = UIEdgeInsetsMake(UIView.additionaliPhoneXTopSafeHeight, 0, UIView.additionaliPhoneXBottomSafeHeight, 0);
+            _collectionView.contentInset = UIEdgeInsetsMake(DeviceInfo.fringeScreenTopSafeHeight, 0, DeviceInfo.fringeScreenBottomSafeHeight, 0);
         }
     }
     
