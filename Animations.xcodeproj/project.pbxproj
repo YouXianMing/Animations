@@ -480,6 +480,8 @@
 		C59608C91D3DFADB006BF6E0 /* TableGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608C81D3DFADB006BF6E0 /* TableGridView.m */; };
 		C59608CC1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */; };
 		C59608CF1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */; };
+		C5A014A92126974E00A8063F /* IrregularElementsCreator.gif in Resources */ = {isa = PBXBuildFile; fileRef = C5A014A72126974D00A8063F /* IrregularElementsCreator.gif */; };
+		C5A014AA2126974E00A8063F /* IrregularElementsCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A014A82126974D00A8063F /* IrregularElementsCreator.m */; };
 		C5A6C9DD1FF7389D0076C86C /* UIColor+RepresentInHex.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C9DC1FF7389D0076C86C /* UIColor+RepresentInHex.m */; };
 		C5AB56781E1B8106003B388F /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AB56771E1B8106003B388F /* AlertView.m */; };
 		C5B457821DE7D9CA002363AC /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B457811DE7D9CA002363AC /* ShapeView.m */; };
@@ -1527,6 +1529,9 @@
 		C59608CB1D3DFAE6006BF6E0 /* TableGridView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TableGridView+ConvenientMethod.m"; sourceTree = "<group>"; };
 		C59608CD1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CollectionGridView+ConvenientMethod.h"; sourceTree = "<group>"; };
 		C59608CE1D3DFBDB006BF6E0 /* CollectionGridView+ConvenientMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CollectionGridView+ConvenientMethod.m"; sourceTree = "<group>"; };
+		C5A014A62126974D00A8063F /* IrregularElementsCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularElementsCreator.h; sourceTree = "<group>"; };
+		C5A014A72126974D00A8063F /* IrregularElementsCreator.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = IrregularElementsCreator.gif; sourceTree = "<group>"; };
+		C5A014A82126974D00A8063F /* IrregularElementsCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularElementsCreator.m; sourceTree = "<group>"; };
 		C5A6C9DB1FF7389D0076C86C /* UIColor+RepresentInHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+RepresentInHex.h"; sourceTree = "<group>"; };
 		C5A6C9DC1FF7389D0076C86C /* UIColor+RepresentInHex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RepresentInHex.m"; sourceTree = "<group>"; };
 		C5AB56761E1B8106003B388F /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
@@ -1860,6 +1865,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C5A014A52126974D00A8063F /* IrregularElementsCreator */,
 				C5F75D2520EE28BD0078FB74 /* Runtime */,
 				C557854320BBCC6800D54051 /* BaseEncodeObject */,
 				C5C34B4C20491BE000AFABFE /* SSZipArchive */,
@@ -4217,6 +4223,16 @@
 			name = TableGridView;
 			sourceTree = "<group>";
 		};
+		C5A014A52126974D00A8063F /* IrregularElementsCreator */ = {
+			isa = PBXGroup;
+			children = (
+				C5A014A72126974D00A8063F /* IrregularElementsCreator.gif */,
+				C5A014A62126974D00A8063F /* IrregularElementsCreator.h */,
+				C5A014A82126974D00A8063F /* IrregularElementsCreator.m */,
+			);
+			path = IrregularElementsCreator;
+			sourceTree = "<group>";
+		};
 		C5A6C9DA1FF7386C0076C86C /* UIcolor+Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -4597,6 +4613,7 @@
 			files = (
 				C5F9E7D51F4A7502004B6198 /* duitang.json in Resources */,
 				10381F771BF9B4F800E5E476 /* HYQiHei-25JF.otf in Resources */,
+				C5A014A92126974E00A8063F /* IrregularElementsCreator.gif in Resources */,
 				C557362F1E837661001CDC9A /* news in Resources */,
 				1011BADF1CD48C8D00F29FB9 /* NodeModelStrings.plist in Resources */,
 				C51B11BC1F52A2F400EBF6A0 /* liwushuo.json in Resources */,
@@ -4937,6 +4954,7 @@
 				1011BAFF1CD495F200F29FB9 /* AbsEncryptingMode.m in Sources */,
 				C50E75951F4EA09200EB9819 /* InterpolationTypeDrawView.m in Sources */,
 				1020E2D71C7319D000FF233E /* CAGradientViewController.m in Sources */,
+				C5A014AA2126974E00A8063F /* IrregularElementsCreator.m in Sources */,
 				102B1F0B1C60E3D700A8FD40 /* UIScrollView+RefreshObject.m in Sources */,
 				C56812341D757621006E6C49 /* IrregularGridCellDataAdapter.m in Sources */,
 				C53BE9BB1FB15DBB0002F28B /* PNG.m in Sources */,
