@@ -43,13 +43,10 @@
             @(NSLayoutAttributeCenterX)  : @"centerX",
             @(NSLayoutAttributeCenterY)  : @"centerY",
             @(NSLayoutAttributeBaseline) : @"baseline",
-            
-#if (__IPHONE_OS_VERSION_MIN_REQUIRED >= 80000) || (__TV_OS_VERSION_MIN_REQUIRED >= 9000) || (__MAC_OS_X_VERSION_MIN_REQUIRED >= 101100)
             @(NSLayoutAttributeFirstBaseline) : @"firstBaseline",
             @(NSLayoutAttributeLastBaseline) : @"lastBaseline",
-#endif
-            
-#if (__IPHONE_OS_VERSION_MIN_REQUIRED >= 80000) || (__TV_OS_VERSION_MIN_REQUIRED >= 9000)
+
+#if TARGET_OS_IPHONE || TARGET_OS_TV
             @(NSLayoutAttributeLeftMargin)           : @"leftMargin",
             @(NSLayoutAttributeRightMargin)          : @"rightMargin",
             @(NSLayoutAttributeTopMargin)            : @"topMargin",
