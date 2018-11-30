@@ -133,6 +133,9 @@
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone10,1", @"iPhone10,4"]])             retVal = @"iPhone 8";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone10,2", @"iPhone10,5"]])             retVal = @"iPhone 8 Plus";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone10,3", @"iPhone10,6"]])             retVal = @"iPhone X";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone11,8"]])                            retVal = @"iPhone XR";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone11,2"]])                            retVal = @"iPhone XS";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone11,4", @"iPhone11,6"]])             retVal = @"iPhone XS Max";
         
         // iPod
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPod1,1"]])             retVal = @"iPod touch";

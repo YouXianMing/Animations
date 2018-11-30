@@ -18,7 +18,7 @@
     /*
      Swift version Animations - https://github.com/YouXianMing/Swift-Animations
      
-     Lateast no warning version : Version 10.0 (10A255)
+     Lateast no warning version : Version 10.1 (10B61)
      
      QQ    705786299
      Email YouXianMing1987@126.com
@@ -26,8 +26,6 @@
      http://www.cnblogs.com/YouXianMing/
      https://github.com/YouXianMing
      https://github.com/YouXianMing/YoCelsius
-     
-     独立开发作品 (感兴趣的朋友支持一下^_^) : https://itunes.apple.com/cn/app/美记/id1390862464
      */
     
 #ifdef DEBUG
