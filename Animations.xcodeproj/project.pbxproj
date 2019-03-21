@@ -520,6 +520,7 @@
 		C5DAC1A71F661FE1000D2F91 /* ParticleSKView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC1A31F661FE1000D2F91 /* ParticleSKView.m */; };
 		C5DAC1A81F661FE1000D2F91 /* ParticleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DAC1A51F661FE1000D2F91 /* ParticleScene.m */; };
 		C5DAC1A91F661FE1000D2F91 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = C5DAC1A61F661FE1000D2F91 /* Magic.sks */; };
+		C5DF023B224332930061CF1E /* RoundingCornerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DF023A224332930061CF1E /* RoundingCornerView.m */; };
 		C5E4C4E31FF5F4FC00430652 /* NSString+HexUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E4C4E21FF5F4FC00430652 /* NSString+HexUnicode.m */; };
 		C5E7760D1F2580F900C304A1 /* TreeStructureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E7760C1F2580F900C304A1 /* TreeStructureTableViewController.m */; };
 		C5E776111F2582E700C304A1 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E776101F2582E700C304A1 /* CityModel.m */; };
@@ -1613,6 +1614,8 @@
 		C5DAC1A51F661FE1000D2F91 /* ParticleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleScene.m; sourceTree = "<group>"; };
 		C5DAC1A61F661FE1000D2F91 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
 		C5DAC1AA1F6621C0000D2F91 /* ControllersHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllersHeader.h; sourceTree = "<group>"; };
+		C5DF0239224332930061CF1E /* RoundingCornerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundingCornerView.h; sourceTree = "<group>"; };
+		C5DF023A224332930061CF1E /* RoundingCornerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundingCornerView.m; sourceTree = "<group>"; };
 		C5E4C4E11FF5F4FB00430652 /* NSString+HexUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HexUnicode.h"; sourceTree = "<group>"; };
 		C5E4C4E21FF5F4FC00430652 /* NSString+HexUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexUnicode.m"; sourceTree = "<group>"; };
 		C5E7760B1F2580F900C304A1 /* TreeStructureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeStructureTableViewController.h; sourceTree = "<group>"; };
@@ -2953,6 +2956,7 @@
 				106CF09A1C3765490006419B /* UIFont+Categories */,
 				106CF08F1C3763E60006419B /* UIButton+Categories */,
 				C51B11941F52A14D00EBF6A0 /* TwoLevelLinkageView */,
+				C5DF02382243327A0061CF1E /* RoundingCornerView */,
 				C54553551E1CD76200A5BA58 /* iCarouselView */,
 				C57C8D811F5CEE0C00F62803 /* CustomPickerView */,
 				C5C6F1DD1FCE4C99004499E2 /* BaseShowPickerView */,
@@ -4452,6 +4456,15 @@
 			name = SKEmitterNodeController;
 			sourceTree = "<group>";
 		};
+		C5DF02382243327A0061CF1E /* RoundingCornerView */ = {
+			isa = PBXGroup;
+			children = (
+				C5DF0239224332930061CF1E /* RoundingCornerView.h */,
+				C5DF023A224332930061CF1E /* RoundingCornerView.m */,
+			);
+			name = RoundingCornerView;
+			sourceTree = "<group>";
+		};
 		C5E7760E1F25811200C304A1 /* TreeStructureTableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -5081,6 +5094,7 @@
 				C5F5B51D2153706300F0BC91 /* MASConstraintMaker.m in Sources */,
 				C50E75811F4E6D6800EB9819 /* UIView+DrawRect.m in Sources */,
 				107CF3991C2FFD51002DF93C /* LiveImageView.m in Sources */,
+				C5DF023B224332930061CF1E /* RoundingCornerView.m in Sources */,
 				C5C34B8020491BE000AFABFE /* sha1.c in Sources */,
 				102B84E01C3B95F0001699A9 /* File.m in Sources */,
 				1011BAE41CD48C8D00F29FB9 /* PropertyInfomation.m in Sources */,
