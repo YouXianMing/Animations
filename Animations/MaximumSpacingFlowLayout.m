@@ -7,31 +7,75 @@
 //
 
 #import "MaximumSpacingFlowLayout.h"
+#import "CellAttributesManager.h"
 
 @implementation MaximumSpacingFlowLayout
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     
-    NSArray *original = [super layoutAttributesForElementsInRect:rect];
-    NSArray *answer   = [[NSArray alloc] initWithArray:original copyItems:YES];
+    NSArray *layoutAttributes = [super layoutAttributesForElementsInRect:rect];
     
-    for(int i = 1; i < [answer count]; ++i) {
+    // 将同一行的cell进行分组
+    CellAttributesManager *manager = [CellAttributesManager new];
+    [layoutAttributes enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes *attributes, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        UICollectionViewLayoutAttributes *currentLayoutAttributes = answer[i];
-        UICollectionViewLayoutAttributes *prevLayoutAttributes    = answer[i - 1];
-        
-        NSInteger maximumSpacing = self.minimumInteritemSpacing;
-        NSInteger origin         = CGRectGetMaxX(prevLayoutAttributes.frame);
-        
-        if (origin + maximumSpacing + currentLayoutAttributes.frame.size.width < self.collectionViewContentSize.width) {
+        if (idx == 0) {
             
-            CGRect frame   = currentLayoutAttributes.frame;
-            frame.origin.x = origin + maximumSpacing;
-            currentLayoutAttributes.frame = frame;
+            [manager buildAnAttributesArray];
+            [manager addAttributes:attributes];
+            
+        } else {
+            
+            if (manager.attributesArray.lastObject.lastObject.frame.origin.y == attributes.frame.origin.y) {
+                
+                [manager addAttributes:attributes];
+                
+            } else {
+                
+                [manager buildAnAttributesArray];
+                [manager addAttributes:attributes];
+            }
         }
-    }
+    }];
     
-    return answer;
+    // 对每一行的cell进行位置的调整
+    [manager.attributesArray enumerateObjectsUsingBlock:^(NSMutableArray<UICollectionViewLayoutAttributes *> * _Nonnull array, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        __block CGFloat offsetX = 0.f;
+        
+        if (self.collectionView.semanticContentAttribute == UISemanticContentAttributeForceRightToLeft) {
+            
+            [array enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                
+                if (idx == 0) {
+                    
+                    offsetX = obj.frame.origin.x - self.minimumInteritemSpacing;
+                    
+                } else {
+                    
+                    obj.frame = CGRectMake(offsetX - obj.frame.size.width, obj.frame.origin.y, obj.frame.size.width, obj.frame.size.height);
+                    offsetX   = obj.frame.origin.x - self.minimumInteritemSpacing;
+                }
+            }];
+            
+        } else {
+            
+            [array enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                
+                if (idx == 0) {
+                    
+                    offsetX = obj.frame.origin.x + obj.frame.size.width + self.minimumInteritemSpacing;
+                    
+                } else {
+                    
+                    obj.frame = CGRectMake(offsetX, obj.frame.origin.y, obj.frame.size.width, obj.frame.size.height);
+                    offsetX   = obj.frame.origin.x + obj.frame.size.width + self.minimumInteritemSpacing;
+                }
+            }];
+        }
+    }];
+    
+    return layoutAttributes;
 }
 
 @end

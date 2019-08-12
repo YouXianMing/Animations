@@ -423,6 +423,7 @@
 		C57526CD1D5032690064F6CD /* DrawingColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526C91D5032690064F6CD /* DrawingColor.m */; };
 		C57526D01D50327F0064F6CD /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57526CF1D50327F0064F6CD /* WaveView.m */; };
 		C57693521F9ED1A600491005 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57693511F9ED1A600491005 /* CustomViewController.m */; };
+		C57781902301546600C0DBCE /* CellAttributesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C577818F2301546600C0DBCE /* CellAttributesManager.m */; };
 		C57791E81FCCFEAE00BED2B1 /* SelectItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57791E71FCCFEAE00BED2B1 /* SelectItemView.m */; };
 		C57791EB1FCD0BA100BED2B1 /* SubmitItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C57791EA1FCD0BA100BED2B1 /* SubmitItemStyle.m */; };
 		C57791F01FCD3B1100BED2B1 /* RealNameChain.m in Sources */ = {isa = PBXBuildFile; fileRef = C57791EF1FCD3B1100BED2B1 /* RealNameChain.m */; };
@@ -1415,6 +1416,8 @@
 		C57526CF1D50327F0064F6CD /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
 		C57693501F9ED1A600491005 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		C57693511F9ED1A600491005 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		C577818E2301546600C0DBCE /* CellAttributesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellAttributesManager.h; sourceTree = "<group>"; };
+		C577818F2301546600C0DBCE /* CellAttributesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellAttributesManager.m; sourceTree = "<group>"; };
 		C57791E61FCCFEAE00BED2B1 /* SelectItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectItemView.h; sourceTree = "<group>"; };
 		C57791E71FCCFEAE00BED2B1 /* SelectItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectItemView.m; sourceTree = "<group>"; };
 		C57791E91FCD0BA100BED2B1 /* SubmitItemStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmitItemStyle.h; sourceTree = "<group>"; };
@@ -3950,6 +3953,8 @@
 				C568122A1D757621006E6C49 /* IrregularGridCollectionView.m */,
 				C568122B1D757621006E6C49 /* MaximumSpacingFlowLayout.h */,
 				C568122C1D757621006E6C49 /* MaximumSpacingFlowLayout.m */,
+				C577818E2301546600C0DBCE /* CellAttributesManager.h */,
+				C577818F2301546600C0DBCE /* CellAttributesManager.m */,
 				C568122D1D757621006E6C49 /* CustomIrregularGridViewCell.h */,
 				C568122E1D757621006E6C49 /* CustomIrregularGridViewCell.m */,
 				C568122F1D757621006E6C49 /* IrregularGridCellDataAdapter.h */,
@@ -4632,6 +4637,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -5206,6 +5212,7 @@
 				C5792EE91F4749FD000B0D1B /* WanDouJiaModelSerializer.m in Sources */,
 				1011BA8F1CD484FE00F29FB9 /* OffsetCellViewController.m in Sources */,
 				C5D0ABBE1FC66B65006BACFB /* NotificationEvent.m in Sources */,
+				C57781902301546600C0DBCE /* CellAttributesManager.m in Sources */,
 				1011BAA21CD4898D00F29FB9 /* VideoListModel.m in Sources */,
 				C54CB91D1F31B68900DFFE15 /* NSArray+IndexPath.m in Sources */,
 				C565E6751FFC7B83007965DB /* POPAnimationEvent.mm in Sources */,
