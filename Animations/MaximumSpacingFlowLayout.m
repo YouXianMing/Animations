@@ -15,65 +15,68 @@
     
     NSArray *layoutAttributes = [super layoutAttributesForElementsInRect:rect];
     
-    // 将同一行的cell进行分组
-    CellAttributesManager *manager = [CellAttributesManager new];
-    [layoutAttributes enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes *attributes, NSUInteger idx, BOOL * _Nonnull stop) {
+    if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
         
-        if (idx == 0) {
+        // 将同一行的cell进行分组
+        CellAttributesManager *manager = [CellAttributesManager new];
+        [layoutAttributes enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes *attributes, NSUInteger idx, BOOL * _Nonnull stop) {
             
-            [manager buildAnAttributesArray];
-            [manager addAttributes:attributes];
-            
-        } else {
-            
-            if (manager.attributesArray.lastObject.lastObject.frame.origin.y == attributes.frame.origin.y) {
+            if (idx == 0) {
                 
+                [manager buildAnAttributesArray];
                 [manager addAttributes:attributes];
                 
             } else {
                 
-                [manager buildAnAttributesArray];
-                [manager addAttributes:attributes];
+                if (manager.attributesArray.lastObject.lastObject.frame.origin.y == attributes.frame.origin.y) {
+                    
+                    [manager addAttributes:attributes];
+                    
+                } else {
+                    
+                    [manager buildAnAttributesArray];
+                    [manager addAttributes:attributes];
+                }
             }
-        }
-    }];
-    
-    // 对每一行的cell进行位置的调整
-    [manager.attributesArray enumerateObjectsUsingBlock:^(NSMutableArray<UICollectionViewLayoutAttributes *> * _Nonnull array, NSUInteger idx, BOOL * _Nonnull stop) {
+        }];
         
-        __block CGFloat offsetX = 0.f;
-        
-        if (self.collectionView.semanticContentAttribute == UISemanticContentAttributeForceRightToLeft) {
+        // 对每一行的cell进行位置的调整
+        [manager.attributesArray enumerateObjectsUsingBlock:^(NSMutableArray<UICollectionViewLayoutAttributes *> * _Nonnull array, NSUInteger idx, BOOL * _Nonnull stop) {
             
-            [array enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            __block CGFloat offsetX = 0.f;
+            
+            if (self.collectionView.semanticContentAttribute == UISemanticContentAttributeForceRightToLeft) {
                 
-                if (idx == 0) {
+                [array enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                     
-                    offsetX = obj.frame.origin.x - self.minimumInteritemSpacing;
-                    
-                } else {
-                    
-                    obj.frame = CGRectMake(offsetX - obj.frame.size.width, obj.frame.origin.y, obj.frame.size.width, obj.frame.size.height);
-                    offsetX   = obj.frame.origin.x - self.minimumInteritemSpacing;
-                }
-            }];
-            
-        } else {
-            
-            [array enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    if (idx == 0) {
+                        
+                        offsetX = obj.frame.origin.x - self.minimumInteritemSpacing;
+                        
+                    } else {
+                        
+                        obj.frame = CGRectMake(offsetX - obj.frame.size.width, obj.frame.origin.y, obj.frame.size.width, obj.frame.size.height);
+                        offsetX   = obj.frame.origin.x - self.minimumInteritemSpacing;
+                    }
+                }];
                 
-                if (idx == 0) {
+            } else {
+                
+                [array enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                     
-                    offsetX = obj.frame.origin.x + obj.frame.size.width + self.minimumInteritemSpacing;
-                    
-                } else {
-                    
-                    obj.frame = CGRectMake(offsetX, obj.frame.origin.y, obj.frame.size.width, obj.frame.size.height);
-                    offsetX   = obj.frame.origin.x + obj.frame.size.width + self.minimumInteritemSpacing;
-                }
-            }];
-        }
-    }];
+                    if (idx == 0) {
+                        
+                        offsetX = obj.frame.origin.x + obj.frame.size.width + self.minimumInteritemSpacing;
+                        
+                    } else {
+                        
+                        obj.frame = CGRectMake(offsetX, obj.frame.origin.y, obj.frame.size.width, obj.frame.size.height);
+                        offsetX   = obj.frame.origin.x + obj.frame.size.width + self.minimumInteritemSpacing;
+                    }
+                }];
+            }
+        }];
+    }
     
     return layoutAttributes;
 }
