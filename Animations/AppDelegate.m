@@ -18,7 +18,10 @@
     /*
      Swift version Animations - https://github.com/YouXianMing/Swift-Animations
      
-     Lateast no warning version : Version 10.1 (10B61)
+     Lateast no warning version : Version 10.3 (10G8)
+     
+     Email: YouXianMing1987@iCloud.com
+     
      */
     
 #ifdef DEBUG
