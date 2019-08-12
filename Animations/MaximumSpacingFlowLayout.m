@@ -28,7 +28,7 @@
                 
             } else {
                 
-                if (manager.attributesArray.lastObject.lastObject.frame.origin.y == attributes.frame.origin.y) {
+                if (manager.attributesArray.lastObject.lastObject.center.y == attributes.center.y) {
                     
                     [manager addAttributes:attributes];
                     
