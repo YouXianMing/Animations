@@ -60,9 +60,13 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
     
-        if (DeviceInfo.deviceType == Device_375x812) {
+        if (@available(iOS 11.0, *)) {
             
-            isFringeScreen = YES;
+            isFringeScreen = [UIApplication sharedApplication].keyWindow.safeAreaInsets.bottom > 0;
+            
+        } else {
+            
+            isFringeScreen = NO;
         }
     });
     
@@ -137,6 +141,11 @@
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone11,2"]])                            retVal = @"iPhone XS";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone11,4", @"iPhone11,6"]])             retVal = @"iPhone XS Max";
         
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone12,1"]])                            retVal = @"iPhone 11";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone12,3"]])                            retVal = @"iPhone 11 Pro";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone12,5"]])                            retVal = @"iPhone 11 Pro Max";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPhone12,8"]])                            retVal = @"iPhone SE 2";
+        
         // iPod
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPod1,1"]])             retVal = @"iPod touch";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPod2,1"]])             retVal = @"iPod touch (2nd generation)";
@@ -144,38 +153,49 @@
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPod4,1"]])             retVal = @"iPod touch (4th generation)";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPod5,1"]])             retVal = @"iPod touch (5th generation)";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPod7,1"]])             retVal = @"iPod touch (6th generation)";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPod9,1"]])             retVal = @"iPod touch (7th generation)";
         
         // iPad
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad1,1"]])                                     retVal = @"iPad";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad2,1", @"iPad2,2", @"iPad2,3", @"iPad2,4"]]) retVal = @"iPad 2";
-        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad3,1", @"iPad3,2", @"iPad3,3"]])             retVal = @"iPad (3rd generation)";
-        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad3,4", @"iPad3,5", @"iPad3,6"]])             retVal = @"iPad (4th generation)";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad3,1", @"iPad3,2", @"iPad3,3"]])             retVal = @"iPad 3";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad3,4", @"iPad3,5", @"iPad3,6"]])             retVal = @"iPad 4";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad6,11", @"iPad6,12"]])                       retVal = @"iPad 5";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad7,5", @"iPad7,6"]])                         retVal = @"iPad 6";
+        
+        // iPad  Air
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad4,1", @"iPad4,2", @"iPad4,3"]])             retVal = @"iPad Air";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad5,3", @"iPad5,4"]])                         retVal = @"iPad Air 2";
-        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad6,7", @"iPad6,8"]])                         retVal = @"iPad Pro (12.9-inch)";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad11,3", @"iPad11,4"]])                       retVal = @"iPad Air 3";
+        
+        //iPad Pro
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad6,3", @"iPad6,4"]])                         retVal = @"iPad Pro (9.7-inch)";
-        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad6,11", @"iPad6,12"]])                       retVal = @"iPad (5th generation)";
-        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad7,1", @"iPad7,2"]])                         retVal = @"iPad Pro (12.9-inch, 2nd generation)";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad7,3", @"iPad7,4"]])                         retVal = @"iPad Pro (10.5-inch)";
-        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad7,5", @"iPad7,6"]])                         retVal = @"iPad (6th generation)";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad8,1", @"iPad8,2", @"iPad8,3", @"iPad8,4"]]) retVal = @"iPad Pro (11-inch)";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad6,7", @"iPad6,8"]])                         retVal = @"iPad Pro (12.9-inch)";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad7,1", @"iPad7,2"]])                         retVal = @"iPad Pro (12.9-inch, 2)";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad8,5", @"iPad8,6", @"iPad8,7", @"iPad8,8"]]) retVal = @"iPad Pro (12.9-inch, 3)";
         
         // iPad mini
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad2,5", @"iPad2,6", @"iPad2,7"]]) retVal = @"iPad mini";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad4,4", @"iPad4,5", @"iPad4,6"]]) retVal = @"iPad mini 2";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad4,7", @"iPad4,8", @"iPad4,9"]]) retVal = @"iPad mini 3";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad5,1", @"iPad5,2"]])             retVal = @"iPad mini 4";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"iPad11,1", @"iPad11,2"]])           retVal = @"iPad mini 5";
         
         // HomePod
         else if ([DeviceInfo devStr:devStr equalTo:@[@"AudioAccessory1,1", @"AudioAccessory1,2"]]) retVal = @"HomePod";
         
         // AirPods
-        else if ([DeviceInfo devStr:devStr equalTo:@[@"AirPods1,1"]]) retVal = @"AirPods";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"AirPods1,1"]]) retVal = @"AirPods (1st generation)";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"AirPods2,1"]]) retVal = @"AirPods (2nd generation)";
         
         // Apple Watch
         else if ([DeviceInfo devStr:devStr equalTo:@[@"Watch1,1", @"Watch1,2"]])                           retVal = @"Apple Watch (1st generation)";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"Watch2,6", @"Watch2,7"]])                           retVal = @"Apple Watch Series 1";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"Watch2,3", @"Watch2,4"]])                           retVal = @"Apple Watch Series 2";
         else if ([DeviceInfo devStr:devStr equalTo:@[@"Watch3,1", @"Watch3,2", @"Watch3,3", @"Watch3,4"]]) retVal = @"Apple Watch Series 3";
+        else if ([DeviceInfo devStr:devStr equalTo:@[@"Watch4,1", @"Watch4,2", @"Watch4,3", @"Watch4,4"]]) retVal = @"Apple Watch Series 4";
         
         // Apple TV
         else if ([DeviceInfo devStr:devStr equalTo:@[@"AppleTV2,1"]])                retVal = @"Apple TV (2nd generation)";

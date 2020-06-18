@@ -10,12 +10,6 @@
 
 @interface UIButton (Init)
 
-#pragma mark - TitleLabel Alignment
-
-- (void)titleLabelHorizontalAlignment:(UIControlContentHorizontalAlignment)horizontalAlignment
-                    verticalAlignment:(UIControlContentVerticalAlignment)verticalAlignment
-                    contentEdgeInsets:(UIEdgeInsets)contentEdgeInsets;
-
 #pragma mark - Title Color
 
 - (void)setNormalTitleColor:(UIColor *)color;

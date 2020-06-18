@@ -193,9 +193,22 @@
         
         if (animated) {
             
-            _dataAdapter.cellHeight = height;
-            [_tableView beginUpdates];
-            [_tableView endUpdates];
+            if (@available(iOS 11.0, *)) {
+                
+                [_tableView performBatchUpdates:^{
+                    
+                    _dataAdapter.cellHeight = height;
+                    
+                } completion:^(BOOL finished) {
+                    
+                }];
+                
+            } else {
+                
+                _dataAdapter.cellHeight = height;
+                [_tableView beginUpdates];
+                [_tableView endUpdates];
+            }
             
         } else {
             

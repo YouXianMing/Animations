@@ -14,6 +14,7 @@
 #import "Math.h"
 #import "UIView+SetRect.h"
 #import "UIButton+Inits.h"
+#import "UIButton+Style.h"
 #import "UIFont+Fonts.h"
 
 static const CGFloat gap       = 5.f;

@@ -18,7 +18,7 @@
     /*
      Swift version Animations - https://github.com/YouXianMing/Swift-Animations
      
-     Lateast no warning version : Version 10.3 (10G8)
+     Lateast no warning version : Xcode 11.4.1 (11E503a)
      
      Email: YouXianMing1987@iCloud.com
      

@@ -348,6 +348,8 @@
 		C54553651E1CD7CA00A5BA58 /* ScrollCarouselItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553631E1CD7CA00A5BA58 /* ScrollCarouselItemView.m */; };
 		C545536B1E1CD7DD00A5BA58 /* LinearCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54553681E1CD7DD00A5BA58 /* LinearCarouselView.m */; };
 		C545536C1E1CD7DD00A5BA58 /* LinearCarouseItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C545536A1E1CD7DD00A5BA58 /* LinearCarouseItemView.m */; };
+		C546993F249B3655007E22B3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C546993E249B3655007E22B3 /* Launch Screen.storyboard */; };
+		C5469941249B3947007E22B3 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C5469940249B3947007E22B3 /* LaunchImage.png */; };
 		C54CB91D1F31B68900DFFE15 /* NSArray+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C54CB91C1F31B68900DFFE15 /* NSArray+IndexPath.m */; };
 		C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */; };
 		C5525D681E03DCAB00929C52 /* ControllerPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */; };
@@ -532,7 +534,6 @@
 		C5966F81249A43FD0001E89B /* SDAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C5966F3D249A43FC0001E89B /* SDAssociatedObject.m */; };
 		C5A014A92126974E00A8063F /* IrregularElementsCreator.gif in Resources */ = {isa = PBXBuildFile; fileRef = C5A014A72126974D00A8063F /* IrregularElementsCreator.gif */; };
 		C5A014AA2126974E00A8063F /* IrregularElementsCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A014A82126974D00A8063F /* IrregularElementsCreator.m */; };
-		C5A6C9DD1FF7389D0076C86C /* UIColor+RepresentInHex.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C9DC1FF7389D0076C86C /* UIColor+RepresentInHex.m */; };
 		C5AB56781E1B8106003B388F /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AB56771E1B8106003B388F /* AlertView.m */; };
 		C5B457821DE7D9CA002363AC /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B457811DE7D9CA002363AC /* ShapeView.m */; };
 		C5BB563F21B0F1FB000FAD2D /* DeepLinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BB563D21B0F1FB000FAD2D /* DeepLinkModel.m */; };
@@ -1298,6 +1299,8 @@
 		C54553681E1CD7DD00A5BA58 /* LinearCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearCarouselView.m; sourceTree = "<group>"; };
 		C54553691E1CD7DD00A5BA58 /* LinearCarouseItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearCarouseItemView.h; sourceTree = "<group>"; };
 		C545536A1E1CD7DD00A5BA58 /* LinearCarouseItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearCarouseItemView.m; sourceTree = "<group>"; };
+		C546993E249B3655007E22B3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C5469940249B3947007E22B3 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		C54CB91B1F31B68900DFFE15 /* NSArray+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+IndexPath.h"; sourceTree = "<group>"; };
 		C54CB91C1F31B68900DFFE15 /* NSArray+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+IndexPath.m"; sourceTree = "<group>"; };
 		C5525D631E03DBD300929C52 /* ControllerPopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerPopAnimator.h; sourceTree = "<group>"; };
@@ -1746,8 +1749,6 @@
 		C5A014A62126974D00A8063F /* IrregularElementsCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularElementsCreator.h; sourceTree = "<group>"; };
 		C5A014A72126974D00A8063F /* IrregularElementsCreator.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = IrregularElementsCreator.gif; sourceTree = "<group>"; };
 		C5A014A82126974D00A8063F /* IrregularElementsCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularElementsCreator.m; sourceTree = "<group>"; };
-		C5A6C9DB1FF7389D0076C86C /* UIColor+RepresentInHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+RepresentInHex.h"; sourceTree = "<group>"; };
-		C5A6C9DC1FF7389D0076C86C /* UIColor+RepresentInHex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RepresentInHex.m"; sourceTree = "<group>"; };
 		C5AB56761E1B8106003B388F /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
 		C5AB56771E1B8106003B388F /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
 		C5B457801DE7D9CA002363AC /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
@@ -2477,6 +2478,7 @@
 			children = (
 				10381F531BF9B44A00E5E476 /* AppDelegate.h */,
 				10381F541BF9B44A00E5E476 /* AppDelegate.m */,
+				C546993E249B3655007E22B3 /* Launch Screen.storyboard */,
 				10381F731BF9B47400E5E476 /* RootController */,
 				10381FC81BF9CC3800E5E476 /* AbstractBaseClass */,
 				10381FC71BF9CC2200E5E476 /* Controllers */,
@@ -3099,7 +3101,6 @@
 		1068FCCA1CF7D76E00BE431C /* UI-Component */ = {
 			isa = PBXGroup;
 			children = (
-				C5A6C9DA1FF7386C0076C86C /* UIcolor+Category */,
 				C5159D2A1F2F125900AF92E3 /* UIViewController+Category */,
 				C59062241DEC390F002562AE /* CAShapeLayer+Category */,
 				C5C5AFEB1DD59D1C00F35EB8 /* UILabel+Category */,
@@ -4641,15 +4642,6 @@
 			path = IrregularElementsCreator;
 			sourceTree = "<group>";
 		};
-		C5A6C9DA1FF7386C0076C86C /* UIcolor+Category */ = {
-			isa = PBXGroup;
-			children = (
-				C5A6C9DB1FF7389D0076C86C /* UIColor+RepresentInHex.h */,
-				C5A6C9DC1FF7389D0076C86C /* UIColor+RepresentInHex.m */,
-			);
-			name = "UIcolor+Category";
-			sourceTree = "<group>";
-		};
 		C5BB563C21B0F1E0000FAD2D /* DeepLinkModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -4818,6 +4810,7 @@
 			isa = PBXGroup;
 			children = (
 				10381F5C1BF9B44A00E5E476 /* Assets.xcassets */,
+				C5469940249B3947007E22B3 /* LaunchImage.png */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -5047,9 +5040,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5469941249B3947007E22B3 /* LaunchImage.png in Resources */,
 				C5F9E7D51F4A7502004B6198 /* duitang.json in Resources */,
 				10381F771BF9B4F800E5E476 /* HYQiHei-25JF.otf in Resources */,
 				C5A014A92126974E00A8063F /* IrregularElementsCreator.gif in Resources */,
+				C546993F249B3655007E22B3 /* Launch Screen.storyboard in Resources */,
 				C557362F1E837661001CDC9A /* news in Resources */,
 				1011BADF1CD48C8D00F29FB9 /* NodeModelStrings.plist in Resources */,
 				C51B11BC1F52A2F400EBF6A0 /* liwushuo.json in Resources */,
@@ -5246,7 +5241,6 @@
 				C5966F5E249A43FD0001E89B /* SDAnimatedImageRep.m in Sources */,
 				C56851C71DE6CBE3000F18C2 /* HeaderIconCell.m in Sources */,
 				C5966F52249A43FC0001E89B /* SDImageCodersManager.m in Sources */,
-				C5A6C9DD1FF7389D0076C86C /* UIColor+RepresentInHex.m in Sources */,
 				C52A3CB31F67827600C2F862 /* CustomCityPickerViewController.m in Sources */,
 				1030886B1C03F1A000C8B623 /* YXEasing.m in Sources */,
 				104F0D151BFB275900C46E6A /* TransformFadeViewController.m in Sources */,
@@ -5711,7 +5705,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -5759,7 +5753,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -5770,7 +5764,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -5795,7 +5788,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";

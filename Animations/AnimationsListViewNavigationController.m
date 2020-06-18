@@ -24,13 +24,14 @@
     
     // LaunchImage
     UIImageView *iconImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    iconImageView.image        = AppleSystemService.launchImage;
+    iconImageView.image        = [UIImage imageNamed:@"LaunchImage.png"];
+    iconImageView.contentMode  = UIViewContentModeScaleAspectFill;
     [self.view addSubview:iconImageView];
     
     // Do animation
-    [UIView animateKeyframesWithDuration:1.f delay:2.f options:0 animations:^{
+    [UIView animateKeyframesWithDuration:0.75f delay:1.f options:0 animations:^{
         
-        iconImageView.scale = 1.2f;
+        iconImageView.scale = 1.3f;
         iconImageView.alpha = 0.f;
         
     } completion:^(BOOL finished) {

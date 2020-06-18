@@ -78,7 +78,6 @@
     } else if (operation == UINavigationControllerOperationPop) {
         
         result = [ControllerPopAnimator new];
-        
     }
         
     return result;
