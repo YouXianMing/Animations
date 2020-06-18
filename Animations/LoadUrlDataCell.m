@@ -8,7 +8,6 @@
 
 #import "LoadUrlDataCell.h"
 #import "UIImageView+WebCache.h"
-#import "PictureModel.h"
 #import "UIView+AnimationProperty.h"
 #import "DataModel.h"
 #import "UIView+SetRect.h"

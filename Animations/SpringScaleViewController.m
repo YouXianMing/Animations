@@ -55,7 +55,7 @@
     scaleAnimation.delegate           = self;
     
     scaleAnimation.duration           = 0.15f;
-    scaleAnimation.toValue            = [NSValue valueWithCGPoint:CGPointMake(1.25, 1.25)];\
+    scaleAnimation.toValue            = [NSValue valueWithCGPoint:CGPointMake(1.25, 1.25)];
     
     [self.scaleView pop_addAnimation:scaleAnimation forKey:nil];
 }

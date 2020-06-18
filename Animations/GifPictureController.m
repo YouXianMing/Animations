@@ -10,6 +10,8 @@
 #import "FLAnimatedImage.h"
 #import "FLAnimatedImageView.h"
 #import "UIImageView+WebCache.h"
+#import "SDImageCache.h"
+#import "SDWebImageDownloader.h"
 #import "UIView+SetRect.h"
 #import "GCD.h"
 
@@ -42,27 +44,21 @@
     } else {
         
         NSURL *url = [NSURL URLWithString:imagePath];
-        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url
-                                                              options:0
-                                                             progress:nil
-                                                            completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
-                                                                
-                                                                [[[SDWebImageManager sharedManager] imageCache] storeImage:image
-                                                                                                      recalculateFromImage:NO
-                                                                                                                 imageData:data
-                                                                                                                    forKey:url.absoluteString
-                                                                                                                    toDisk:YES];
-                                                                
-                                                                [[GCDQueue mainQueue] execute:^{
-                                                                    
-                                                                    [wself animatedImageView:gifImageView data:data];
-                                                                }];
-                                                            }];
+        [SDWebImageDownloader.sharedDownloader downloadImageWithURL:url options:SDWebImageDownloaderAvoidDecodeImage | SDWebImageDownloaderScaleDownLargeImages | SDWebImageDownloaderHighPriority
+                                                           progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+            
+            NSLog(@"%ld / %ld", (long)receivedSize, (long)expectedSize);
+            
+        } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+            
+            [SDImageCache.sharedImageCache storeImageDataToDisk:data forKey:imagePath];
+            [wself animatedImageView:gifImageView data:data];
+        }];
     }
 }
 
 - (void)animatedImageView:(FLAnimatedImageView *)imageView data:(NSData *)data {
-
+    
     FLAnimatedImage *gifImage = [FLAnimatedImage animatedImageWithGIFData:data];
     imageView.frame           = CGRectMake(0, 0, gifImage.size.width, gifImage.size.height);
     imageView.center          = self.contentView.middlePoint;
@@ -77,8 +73,7 @@
 
 - (NSData *)imageDataFromDiskCacheWithKey:(NSString *)key {
     
-    NSString *path = [[[SDWebImageManager sharedManager] imageCache] defaultCachePathForKey:key];
-    return [NSData dataWithContentsOfFile:path];
+    return [SDImageCache.sharedImageCache diskImageDataForKey:key];;
 }
 
 @end

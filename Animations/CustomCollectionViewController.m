@@ -43,16 +43,16 @@
                                                                                                          contentEdge:UIEdgeInsetsZero
                                                                                                  horizontalCellCount:3
                                                                                                        registerCells:^(CustomCollectionView *customCollectionView) {
-                                                                                                           
-                                                                                                           [customCollectionView registerClass:[GridItemCollectionViewCell class]];
-                                                                                                       }
+        
+        [customCollectionView registerClass:[GridItemCollectionViewCell class]];
+    }
                                                                                                          addAdapters:^(NSMutableArray<CellDataAdapter *> *adapters) {
-                                                                                                             
-                                                                                                             [models enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                                                                                                                
-                                                                                                                 [adapters addObject:[GridItemCollectionViewCell dataAdapterWithData:obj]];
-                                                                                                             }];
-                                                                                                         }];
+        
+        [models enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            
+            [adapters addObject:[GridItemCollectionViewCell dataAdapterWithData:obj]];
+        }];
+    }];
     [self.contentView addSubview:gridItemView];
     gridItemView.left = 0.f;
     gridItemView.top  = 0.f;
@@ -67,17 +67,17 @@
                                                                                                                contentEdge:UIEdgeInsetsMake(3, 3, 3, 3)
                                                                                                                   delegate:self
                                                                                                              registerCells:^(HorizontalCollectionItemView *collectionView) {
-                                                                                                                 
-                                                                                                                 [HorizontalPicItemCell registerToHorizontalCollectionItemView:collectionView];
-                                                                                                             }
+        
+        [HorizontalPicItemCell registerToHorizontalCollectionItemView:collectionView];
+    }
                                                                                                                addAdapters:^(NSMutableArray<CellDataAdapter *> *adapters) {
-                                                                                                                   
-                                                                                                                   [imageModels enumerateObjectsUsingBlock:^(HorizontalPicItemModel *obj, NSUInteger idx, BOOL *stop) {
-                                                                                                                   
-                                                                                                                       [adapters addObject:[HorizontalPicItemCell dataAdapterWithData:obj
-                                                                                                                                                                            cellWidth:obj.iconImage.size.width / 2.f]];
-                                                                                                                   }];
-                                                                                                               }];
+        
+        [imageModels enumerateObjectsUsingBlock:^(HorizontalPicItemModel *obj, NSUInteger idx, BOOL *stop) {
+            
+            [adapters addObject:[HorizontalPicItemCell dataAdapterWithData:obj
+                                                                 cellWidth:obj.iconImage.size.width / 2.f]];
+        }];
+    }];
     [self.contentView addSubview:horizontalItemView];
 }
 
