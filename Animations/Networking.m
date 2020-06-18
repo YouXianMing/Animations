@@ -110,8 +110,9 @@
                                       
                                       if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(networkingRequestSucess:tag:data:)]) {
                                           
-                                          [weakSelf.delegate networkingRequestSucess:self tag:self.tag data:weakSelf.serializerResponseData];
+                                          [weakSelf.delegate networkingRequestSucess:weakSelf tag:weakSelf.tag data:weakSelf.serializerResponseData];
                                       }
+            
                                       
                                   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                                       
@@ -124,7 +125,7 @@
                                       
                                       if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(networkingRequestFailed:tag:error:)]) {
                                           
-                                          [weakSelf.delegate networkingRequestFailed:self tag:self.tag error:error];
+                                          [weakSelf.delegate networkingRequestFailed:weakSelf tag:weakSelf.tag error:error];
                                       }
                                   }];
         
@@ -149,7 +150,7 @@
                                        
                                        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(networkingRequestSucess:tag:data:)]) {
                                            
-                                           [weakSelf.delegate networkingRequestSucess:self tag:self.tag data:weakSelf.serializerResponseData];
+                                           [weakSelf.delegate networkingRequestSucess:weakSelf tag:weakSelf.tag data:weakSelf.serializerResponseData];
                                        }
                                        
                                    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -163,7 +164,7 @@
                                        
                                        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(networkingRequestFailed:tag:error:)]) {
                                            
-                                           [weakSelf.delegate networkingRequestFailed:self tag:self.tag error:error];
+                                           [weakSelf.delegate networkingRequestFailed:weakSelf tag:weakSelf.tag error:error];
                                        }
                                    }];
         
@@ -203,7 +204,7 @@
                                        
                                        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(networkingRequestFailed:tag:error:)]) {
                                            
-                                           [weakSelf.delegate networkingRequestFailed:self tag:self.tag error:error];
+                                           [weakSelf.delegate networkingRequestFailed:weakSelf tag:weakSelf.tag error:error];
                                        }
                                    }];
     }

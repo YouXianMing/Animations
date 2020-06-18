@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) PlaceholderImageView *imageView;
 @property (nonatomic, strong) UILabel              *label;
+@property (nonatomic, strong) UIView               *line;
 
 @end
 
@@ -35,9 +36,13 @@
     [self addSubview:self.imageView];
     
     self.label           = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 0, 0)];
-    self.label.font      = [UIFont fontWithName:@"GillSans-Italic" size:12.f];
+    self.label.font      = [UIFont fontWithName:@"PingFangSC-Regular" size:14];
     self.label.textColor = [UIColor redColor];
     [self addSubview:self.label];
+    
+    self.line                 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 2, 2.f)];
+    self.line.backgroundColor = UIColor.whiteColor;
+    [self addSubview:self.line];
 }
 
 - (void)loadContent {
@@ -57,10 +62,19 @@
 - (void)willDisplay {
 
     self.label.alpha = 0.f;
+    
+    self.line.width  = 0.f;
+    self.line.top    = self.label.bottom + 2.f;
+    self.line.left   = 10.f;
+    self.line.alpha  = 0.f;
+    
     [UIView animateWithDuration:1.f delay:0.5f options:0 animations:^{
         
         self.label.x     = 10;
         self.label.alpha = 1;
+        
+        self.line.alpha  = 1.f;
+        self.line.width  = self.label.width;
         
     } completion:nil];
 }
@@ -70,6 +84,11 @@
     [self.label.layer removeAllAnimations];
     self.label.x = 0;
     self.label.y = 10;
+    
+    self.line.width  = 0.f;
+    self.line.top    = self.label.bottom + 2.f;
+    self.line.left   = 10.f;
+    self.line.alpha  = 0.f;
 }
 
 @end

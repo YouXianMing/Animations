@@ -26,13 +26,14 @@
     [super viewDidLoad];
     
     {
-        NSArray *strings = @[@"http://img.wdjimg.com/image/video/d999011124c9ed55c2dd74e0ccee36ea_0_0.jpeg",
-                             @"http://img.wdjimg.com/image/video/2ddcad6dcc38c5ca88614b7c5543199a_0_0.jpeg",
-                             @"http://img.wdjimg.com/image/video/6d6ccfd79ee1deac2585150f40915c09_0_0.jpeg",
-                             @"http://img.wdjimg.com/image/video/2111a863ea34825012b0c5c9dec71843_0_0.jpeg",
-                             @"http://img.wdjimg.com/image/video/b4085a983cedd8a8b1e83ba2bd8ecdd8_0_0.jpeg",
-                             @"http://img.wdjimg.com/image/video/2d59165e816151350a2b683b656a270a_0_0.jpeg",
-                             @"http://img.wdjimg.com/image/video/dc2009ee59998039f795fbc7ac2f831f_0_0.jpeg"];
+        NSArray *strings = @[@"https://hbimg.huabanimg.com/95c1a74073e3fd69c9e7af637632fde7027b4d6a86124-g1qYW4_fw658",
+                             @"https://hbimg.huabanimg.com/41e430a58e083b5df8b29828194d4c8cf6b8080e17e35-gRW2z5_fw658",
+                             @"https://hbimg.huabanimg.com/463cda475956270d6d605ebacd865a80169a57967579f-0pe50Y_fw658",
+                             @"https://hbimg.huabanimg.com/fae81cd6c474e36586a2b9327eecaf9bca46fa068c812-sdLSnP_fw658",
+                             @"https://hbimg.huabanimg.com/648bc2e1a6350a1d48b331168000697696cdf4b136928-dgFED1_fw658",
+                             @"https://hbimg.huabanimg.com/7de62a3fa6b4c98a9128ff73071e596cf7de898226d30-uDl8i5_fw658",
+                             @"https://hbimg.huabanimg.com/85359db24a13794021bc6c3f609ce640f8a248f7b868c-PhP0iD_fw658",
+                             @"https://hbimg.huabanimg.com/dae0e0a17d430af8f129113d12488f73f64043481ced1-FL88bJ_fw658",];
         
         NSMutableArray *models = [NSMutableArray array];
         for (int i = 0; i < strings.count; i++) {
@@ -48,6 +49,7 @@
         InfiniteLoopViewBuilder *loopView = [[InfiniteLoopViewBuilder alloc] initWithFrame:CGRectMake(0, 0, Width, self.contentView.height / 2.f)];
         loopView.nodeViewTemplate         = [CircleNodeStateView new];
         loopView.delegate                 = self;
+        loopView.scrollTimeInterval       = 3.f;
         loopView.sampleNodeViewSize       = CGSizeMake(8, 6);
         loopView.position                 = kNodeViewBottomRight;
         loopView.edgeInsets               = UIEdgeInsetsMake(0, 0, 7, 5);
@@ -62,15 +64,15 @@
     }
     
     {
-        NSArray *strings = @[@"http://img.wdjimg.com/image/video/b8ff75ba333183e0fa92efc4a52ffda0_0_0.jpeg",
-                             @"http://img.wdjimg.com/image/video/d160e33391a555127be999d1d6273a17_0_0.jpeg",
-                             @"http://img.wdjimg.com/image/video/b8ff75ba333183e0fa92efc4a52ffda0_0_0.jpeg",
-                             @"http://img.wdjimg.com/image/video/735e73eb85a47b5f2a661aa02ad1fed2_0_0.jpeg"];
+        NSArray *strings = @[@"https://hbimg.huabanimg.com/95c1a74073e3fd69c9e7af637632fde7027b4d6a86124-g1qYW4_fw658",
+                             @"https://hbimg.huabanimg.com/41e430a58e083b5df8b29828194d4c8cf6b8080e17e35-gRW2z5_fw658",
+                             @"https://hbimg.huabanimg.com/463cda475956270d6d605ebacd865a80169a57967579f-0pe50Y_fw658",
+                             @"https://hbimg.huabanimg.com/fae81cd6c474e36586a2b9327eecaf9bca46fa068c812-sdLSnP_fw658",];
         
-        NSArray *titles  = @[@"We call a custom helper",
-                             @"The animation collection",
-                             @"iOS design pattern",
-                             @"A weather app"];
+        NSArray *titles  = @[@"Black hole",
+                             @"我们的征途是星辰大海",
+                             @"Battle!",
+                             @"Join the army"];
         
         NSMutableArray *models = [NSMutableArray array];
         for (int i = 0; i < strings.count; i++) {

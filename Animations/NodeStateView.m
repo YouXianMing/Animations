@@ -22,9 +22,10 @@
     
     if (self = [super initWithFrame:frame]) {
         
-        self.colorView                     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 16)];
+        self.colorView                     = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 2, 16)];
         self.colorView.center              = self.middlePoint;
         self.colorView.layer.masksToBounds = YES;
+        self.colorView.layer.cornerRadius  = 1.f;
         [self addSubview:self.colorView];
     }
     

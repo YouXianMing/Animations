@@ -7,22 +7,15 @@
 //
 
 #import "OffsetCellViewController.h"
-#import "Networking+wandoujia.h"
-#import "WanDouJiaModel.h"
-#import "WanDouJiaModelSerializer.h"
-#import "WanDouJiaParameterSerializer.h"
+#import "OffsetCellSectionDataModel.h"
 #import "OffsetImageCell.h"
-#import "MessageView.h"
 #import "OffsetHeaderView.h"
-#import "LoadingView.h"
 #import "GCD.h"
 
-@interface OffsetCellViewController () <UITableViewDelegate, UITableViewDataSource, NetworkingDelegate>
+@interface OffsetCellViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) Networking        *networking;
-@property (nonatomic, strong) UITableView       *tableView;
-@property (nonatomic, strong) WanDouJiaModel    *rootModel;
-@property (nonatomic, strong) LoadingView       *showLoadingView;
+@property (nonatomic, strong) UITableView    *tableView;
+@property (nonatomic, strong) NSMutableArray <OffsetCellSectionDataModel *> *sectonModels;
 
 @end
 
@@ -32,13 +25,44 @@
     
     [super viewDidLoad];
     
+    NSArray *datas = @[@{@"dateString" : @"2020-06-18",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [1]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/95c1a74073e3fd69c9e7af637632fde7027b4d6a86124-g1qYW4_fw658",}]},
+                       @{@"dateString" : @"2020-06-19",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [2]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/41e430a58e083b5df8b29828194d4c8cf6b8080e17e35-gRW2z5_fw658",}]},
+                       @{@"dateString" : @"2020-06-20",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [3]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/463cda475956270d6d605ebacd865a80169a57967579f-0pe50Y_fw658",}]},
+                       @{@"dateString" : @"2020-06-21",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [4]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/fae81cd6c474e36586a2b9327eecaf9bca46fa068c812-sdLSnP_fw658",}]},
+                       @{@"dateString" : @"2020-06-22",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [5]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/648bc2e1a6350a1d48b331168000697696cdf4b136928-dgFED1_fw658",}]},
+                       @{@"dateString" : @"2020-06-23",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [6]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/7de62a3fa6b4c98a9128ff73071e596cf7de898226d30-uDl8i5_fw658",}]},
+                       @{@"dateString" : @"2020-06-24",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [7]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/85359db24a13794021bc6c3f609ce640f8a248f7b868c-PhP0iD_fw658",}]},
+                       @{@"dateString" : @"2020-06-25",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [8]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/dae0e0a17d430af8f129113d12488f73f64043481ced1-FL88bJ_fw658",}]}];
+    
+    self.sectonModels = [NSMutableArray array];
+    [datas enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        OffsetCellSectionDataModel *model = [[OffsetCellSectionDataModel alloc] initWithDictionary:obj];
+        [self.sectonModels addObject:model];
+    }];
+    
     self.tableView                     = [[UITableView alloc] initWithFrame:self.contentView.bounds];
     self.tableView.delegate            = self;
     self.tableView.dataSource          = self;
     self.tableView.rowHeight           = 250;
     self.tableView.sectionHeaderHeight = 25.f;
     self.tableView.separatorStyle      = UITableViewCellSeparatorStyleNone;
-    self.tableView.alpha               = 0.f;
     
     // Adjust iOS 11.0
     if (@available(iOS 11.0, *)) {
@@ -49,27 +73,18 @@
     [self.tableView registerClass:[OffsetImageCell class]  forCellReuseIdentifier:@"OffsetImageCell"];
     [self.tableView registerClass:[OffsetHeaderView class] forHeaderFooterViewReuseIdentifier:@"OffsetHeaderView"];
     [self.contentView addSubview:self.tableView];
-    
-    self.showLoadingView             = [[LoadingView alloc] init];
-    self.showLoadingView.contentView = self.loadingAreaView;
-    [self.showLoadingView show];
-    
-    self.networking = [Networking networkingWithNetworkConfig:feed() requestParameter:@{@"num" : @"5", @"vc" : @"67"} delegate:self];
-    [self.networking startRequest];
 }
 
 #pragma mark - UITableView's delegate.
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    DailyListModel *dailyModel = self.rootModel.dailyList[section];
-    
-    return dailyModel.videoList.count;
+    return self.sectonModels[section].list.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return self.rootModel.dailyList.count;
+    return self.sectonModels.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -82,10 +97,7 @@
     
     [cell cellOffset];
     
-    DailyListModel *dailyModel = self.rootModel.dailyList[indexPath.section];
-    VideoListModel *model      = dailyModel.videoList[indexPath.row];
-    
-    cell.data      = model;
+    cell.data      = self.sectonModels[indexPath.section].list[indexPath.row];
     cell.indexPath = indexPath;
     [cell loadContent];
 }
@@ -97,10 +109,8 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    DailyListModel *dailyModel = self.rootModel.dailyList[section];
-    
     CustomHeaderFooterView *titleView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"OffsetHeaderView"];
-    titleView.data                    = dailyModel;
+    titleView.data                    = self.sectonModels[section];
     titleView.section                 = section;
     [titleView loadContent];
     
@@ -117,31 +127,6 @@
         
         [obj cellOffset];
     }];
-}
-
-#pragma mark - Networking's delegate.
-
-- (void)networkingRequestSucess:(Networking *)networking tag:(NSInteger)tag data:(WanDouJiaModel *)model {
-    
-    [GCDQueue executeInMainQueue:^{
-        
-        [self.showLoadingView hide];
-        
-    } afterDelaySecs:0.5f];
-    
-    self.rootModel = model;
-    [self.tableView reloadData];
-    
-    [UIView animateWithDuration:0.5f animations:^{
-        
-        self.tableView.alpha = 1.f;
-    }];
-}
-
-- (void)networkingRequestFailed:(Networking *)networking tag:(NSInteger)tag error:(NSError *)error {
-    
-    [self.showLoadingView hide];
-    MessageView.build.autoHidden.disableContentViewInteraction.withMessage(MakeMessageViewObject(@"警告", @"网络异常,请稍后再试!")).showIn(self.windowAreaView);
 }
 
 @end

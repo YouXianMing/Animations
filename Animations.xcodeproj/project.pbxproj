@@ -350,6 +350,8 @@
 		C545536C1E1CD7DD00A5BA58 /* LinearCarouseItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C545536A1E1CD7DD00A5BA58 /* LinearCarouseItemView.m */; };
 		C546993F249B3655007E22B3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C546993E249B3655007E22B3 /* Launch Screen.storyboard */; };
 		C5469941249B3947007E22B3 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C5469940249B3947007E22B3 /* LaunchImage.png */; };
+		C5469944249B4818007E22B3 /* OffsetCellSectionDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5469943249B4818007E22B3 /* OffsetCellSectionDataModel.m */; };
+		C5469947249B4834007E22B3 /* OffsetCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5469946249B4834007E22B3 /* OffsetCellModel.m */; };
 		C54CB91D1F31B68900DFFE15 /* NSArray+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C54CB91C1F31B68900DFFE15 /* NSArray+IndexPath.m */; };
 		C5525D651E03DBD300929C52 /* ControllerPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D641E03DBD300929C52 /* ControllerPopAnimator.m */; };
 		C5525D681E03DCAB00929C52 /* ControllerPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5525D671E03DCAB00929C52 /* ControllerPushAnimator.m */; };
@@ -1301,6 +1303,10 @@
 		C545536A1E1CD7DD00A5BA58 /* LinearCarouseItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearCarouseItemView.m; sourceTree = "<group>"; };
 		C546993E249B3655007E22B3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C5469940249B3947007E22B3 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		C5469942249B4818007E22B3 /* OffsetCellSectionDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffsetCellSectionDataModel.h; sourceTree = "<group>"; };
+		C5469943249B4818007E22B3 /* OffsetCellSectionDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffsetCellSectionDataModel.m; sourceTree = "<group>"; };
+		C5469945249B4834007E22B3 /* OffsetCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffsetCellModel.h; sourceTree = "<group>"; };
+		C5469946249B4834007E22B3 /* OffsetCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffsetCellModel.m; sourceTree = "<group>"; };
 		C54CB91B1F31B68900DFFE15 /* NSArray+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+IndexPath.h"; sourceTree = "<group>"; };
 		C54CB91C1F31B68900DFFE15 /* NSArray+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+IndexPath.m"; sourceTree = "<group>"; };
 		C5525D631E03DBD300929C52 /* ControllerPopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerPopAnimator.h; sourceTree = "<group>"; };
@@ -1978,24 +1984,8 @@
 		1011BA911CD4898100F29FB9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1011BAA41CD48A1C00F29FB9 /* WanDouJiaDataSerializer.h */,
-				1011BAA51CD48A1C00F29FB9 /* WanDouJiaDataSerializer.m */,
-				C5792EE71F4749FD000B0D1B /* WanDouJiaModelSerializer.h */,
-				C5792EE81F4749FD000B0D1B /* WanDouJiaModelSerializer.m */,
-				C5792EEA1F474C44000B0D1B /* WanDouJiaParameterSerializer.h */,
-				C5792EEB1F474C44000B0D1B /* WanDouJiaParameterSerializer.m */,
-				1011BA921CD4898D00F29FB9 /* ConsumptionModel.h */,
-				1011BA931CD4898D00F29FB9 /* ConsumptionModel.m */,
-				1011BA941CD4898D00F29FB9 /* DailyListModel.h */,
-				1011BA951CD4898D00F29FB9 /* DailyListModel.m */,
-				1011BA961CD4898D00F29FB9 /* PlayInfoModel.h */,
-				1011BA971CD4898D00F29FB9 /* PlayInfoModel.m */,
-				1011BA981CD4898D00F29FB9 /* ProviderModel.h */,
-				1011BA991CD4898D00F29FB9 /* ProviderModel.m */,
-				1011BA9A1CD4898D00F29FB9 /* VideoListModel.h */,
-				1011BA9B1CD4898D00F29FB9 /* VideoListModel.m */,
-				1011BA9C1CD4898D00F29FB9 /* WanDouJiaModel.h */,
-				1011BA9D1CD4898D00F29FB9 /* WanDouJiaModel.m */,
+				C5469948249B5410007E22B3 /* OffsetCellSectionDataModel */,
+				C5469949249B541E007E22B3 /* WanDouJia */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -2094,7 +2084,6 @@
 				C5C34B4C20491BE000AFABFE /* SSZipArchive */,
 				C53BE9B61FB15D5B0002F28B /* IconMaker */,
 				C50270EF1FA96A0000833758 /* ResponsibilityChain */,
-				C5792EDA1F4743A1000B0D1B /* Networking */,
 				C50E75751F4E6D5D00EB9819 /* CGContextManager */,
 				C54CB91A1F31B67600DFFE15 /* NSArray+IndexPath */,
 				105189091D0A65D500F606FB /* NSObject+Category */,
@@ -2386,6 +2375,7 @@
 		102B85841C3CF28A001699A9 /* AFNetworking-3.x */ = {
 			isa = PBXGroup;
 			children = (
+				C5792EDA1F4743A1000B0D1B /* Networking */,
 				109606211C93B46C00CCB3AD /* AFNetworking_3x */,
 				109606071C93B44E00CCB3AD /* AbsNetworking */,
 				109606081C93B45300CCB3AD /* AFNetworking-3.x */,
@@ -4017,6 +4007,42 @@
 			name = LinearCarouselView;
 			sourceTree = "<group>";
 		};
+		C5469948249B5410007E22B3 /* OffsetCellSectionDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5469942249B4818007E22B3 /* OffsetCellSectionDataModel.h */,
+				C5469943249B4818007E22B3 /* OffsetCellSectionDataModel.m */,
+				C5469945249B4834007E22B3 /* OffsetCellModel.h */,
+				C5469946249B4834007E22B3 /* OffsetCellModel.m */,
+			);
+			name = OffsetCellSectionDataModel;
+			sourceTree = "<group>";
+		};
+		C5469949249B541E007E22B3 /* WanDouJia */ = {
+			isa = PBXGroup;
+			children = (
+				1011BAA41CD48A1C00F29FB9 /* WanDouJiaDataSerializer.h */,
+				1011BAA51CD48A1C00F29FB9 /* WanDouJiaDataSerializer.m */,
+				C5792EE71F4749FD000B0D1B /* WanDouJiaModelSerializer.h */,
+				C5792EE81F4749FD000B0D1B /* WanDouJiaModelSerializer.m */,
+				C5792EEA1F474C44000B0D1B /* WanDouJiaParameterSerializer.h */,
+				C5792EEB1F474C44000B0D1B /* WanDouJiaParameterSerializer.m */,
+				1011BA921CD4898D00F29FB9 /* ConsumptionModel.h */,
+				1011BA931CD4898D00F29FB9 /* ConsumptionModel.m */,
+				1011BA941CD4898D00F29FB9 /* DailyListModel.h */,
+				1011BA951CD4898D00F29FB9 /* DailyListModel.m */,
+				1011BA961CD4898D00F29FB9 /* PlayInfoModel.h */,
+				1011BA971CD4898D00F29FB9 /* PlayInfoModel.m */,
+				1011BA981CD4898D00F29FB9 /* ProviderModel.h */,
+				1011BA991CD4898D00F29FB9 /* ProviderModel.m */,
+				1011BA9A1CD4898D00F29FB9 /* VideoListModel.h */,
+				1011BA9B1CD4898D00F29FB9 /* VideoListModel.m */,
+				1011BA9C1CD4898D00F29FB9 /* WanDouJiaModel.h */,
+				1011BA9D1CD4898D00F29FB9 /* WanDouJiaModel.m */,
+			);
+			name = WanDouJia;
+			sourceTree = "<group>";
+		};
 		C54CB91A1F31B67600DFFE15 /* NSArray+IndexPath */ = {
 			isa = PBXGroup;
 			children = (
@@ -5070,6 +5096,7 @@
 				10C1830E1C622D1E000C10EB /* LoadUrlDataCell.m in Sources */,
 				C5792EE51F4743B3000B0D1B /* RequestParameterSerializer.m in Sources */,
 				C545535E1E1CD76E00A5BA58 /* iCarouselAbsItemView.m in Sources */,
+				C5469947249B4834007E22B3 /* OffsetCellModel.m in Sources */,
 				1011BAF51CD495A800F29FB9 /* FastCoder.m in Sources */,
 				C5EE65B51E1B3A1100DDF591 /* IndexRange.m in Sources */,
 				C52A3CCB1F67C73200C2F862 /* PickerProvinceView.m in Sources */,
@@ -5363,6 +5390,7 @@
 				105702121CF6CE16003B10C6 /* POPScaleControl.m in Sources */,
 				1017F13C1C35715400E245F8 /* NSData+JSONData.m in Sources */,
 				108A993C1C0FE34800B693F6 /* EasingRotateAnimationType.m in Sources */,
+				C5469944249B4818007E22B3 /* OffsetCellSectionDataModel.m in Sources */,
 				104F0D1C1BFC113A00C46E6A /* PopNumberController.m in Sources */,
 				C5966F71249A43FD0001E89B /* SDWebImageOptionsProcessor.m in Sources */,
 				102B84D31C3B925B001699A9 /* MD5.m in Sources */,

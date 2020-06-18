@@ -8,7 +8,7 @@
 
 #import "OffsetImageCell.h"
 #import "UIView+SetRect.h"
-#import "WanDouJiaModel.h"
+#import "OffsetCellModel.h"
 #import "UIImageView+WebCache.h"
 #import "LineBackgroundView.h"
 #import "UIFont+Fonts.h"
@@ -68,7 +68,7 @@
 
 - (void)loadContent {
     
-    VideoListModel         *model = self.data;
+    OffsetCellModel        *model = self.data;
     __weak OffsetImageCell *wself = self;
     
     self.infoLabel.text = model.title;

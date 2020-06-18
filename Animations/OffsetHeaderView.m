@@ -10,7 +10,7 @@
 #import "UIView+SetRect.h"
 #import "UIView+GlowView.h"
 #import "UIFont+Fonts.h"
-#import "DailyListModel.h"
+#import "OffsetCellSectionDataModel.h"
 
 @interface OffsetHeaderView ()
 
@@ -41,8 +41,8 @@
 
 - (void)loadContent {
 
-    DailyListModel *model   = self.data;
-    self.theTitleLabel.text = model.dateString;
+    OffsetCellSectionDataModel *model = self.data;
+    self.theTitleLabel.text           = model.dateString;
 }
 
 @end
