@@ -12,8 +12,8 @@
 
 @interface IrregularGridCollectionView () <UICollectionViewDelegate, UICollectionViewDataSource, CustomIrregularGridViewCellDelegate>
 
-@property (nonatomic, strong) UICollectionView            *collectionView;
-@property (nonatomic, strong) UICollectionViewFlowLayout  *flowLayout;
+@property (nonatomic, strong) UICollectionView              *collectionView;
+@property (nonatomic, strong) UICollectionViewAlignedLayout *flowLayout;
 
 @end
 
@@ -38,7 +38,8 @@
         self.scrollDirection   = UICollectionViewScrollDirectionVertical;
         
         // Init UICollectionViewFlowLayout.
-        self.flowLayout = [[MaximumSpacingFlowLayout alloc] init];
+        self.flowLayout             = [[UICollectionViewAlignedLayout alloc] init];
+        self.flowLayout.alignedType = UICollectionViewAlignedType_LTR;
         
         // Init UICollectionView.
         self.collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:self.flowLayout];

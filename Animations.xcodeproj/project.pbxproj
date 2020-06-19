@@ -536,6 +536,7 @@
 		C5966F81249A43FD0001E89B /* SDAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C5966F3D249A43FC0001E89B /* SDAssociatedObject.m */; };
 		C5A014A92126974E00A8063F /* IrregularElementsCreator.gif in Resources */ = {isa = PBXBuildFile; fileRef = C5A014A72126974D00A8063F /* IrregularElementsCreator.gif */; };
 		C5A014AA2126974E00A8063F /* IrregularElementsCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A014A82126974D00A8063F /* IrregularElementsCreator.m */; };
+		C5A7A452249C5A530069D463 /* UICollectionViewAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A7A451249C5A520069D463 /* UICollectionViewAlignedLayout.m */; };
 		C5AB56781E1B8106003B388F /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AB56771E1B8106003B388F /* AlertView.m */; };
 		C5B457821DE7D9CA002363AC /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B457811DE7D9CA002363AC /* ShapeView.m */; };
 		C5BB563F21B0F1FB000FAD2D /* DeepLinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BB563D21B0F1FB000FAD2D /* DeepLinkModel.m */; };
@@ -1755,6 +1756,8 @@
 		C5A014A62126974D00A8063F /* IrregularElementsCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularElementsCreator.h; sourceTree = "<group>"; };
 		C5A014A72126974D00A8063F /* IrregularElementsCreator.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = IrregularElementsCreator.gif; sourceTree = "<group>"; };
 		C5A014A82126974D00A8063F /* IrregularElementsCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularElementsCreator.m; sourceTree = "<group>"; };
+		C5A7A450249C5A520069D463 /* UICollectionViewAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewAlignedLayout.h; sourceTree = "<group>"; };
+		C5A7A451249C5A520069D463 /* UICollectionViewAlignedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewAlignedLayout.m; sourceTree = "<group>"; };
 		C5AB56761E1B8106003B388F /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
 		C5AB56771E1B8106003B388F /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
 		C5B457801DE7D9CA002363AC /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
@@ -4134,6 +4137,8 @@
 				C568122A1D757621006E6C49 /* IrregularGridCollectionView.m */,
 				C568122B1D757621006E6C49 /* MaximumSpacingFlowLayout.h */,
 				C568122C1D757621006E6C49 /* MaximumSpacingFlowLayout.m */,
+				C5A7A450249C5A520069D463 /* UICollectionViewAlignedLayout.h */,
+				C5A7A451249C5A520069D463 /* UICollectionViewAlignedLayout.m */,
 				C577818E2301546600C0DBCE /* CellAttributesManager.h */,
 				C577818F2301546600C0DBCE /* CellAttributesManager.m */,
 				C568122D1D757621006E6C49 /* CustomIrregularGridViewCell.h */,
@@ -5218,6 +5223,7 @@
 				C51B11921F52A0DD00EBF6A0 /* TwoLevelLinkageViewController.m in Sources */,
 				103088771C04133500C8B623 /* ScrollImageViewController.m in Sources */,
 				C5DAC1A71F661FE1000D2F91 /* ParticleSKView.m in Sources */,
+				C5A7A452249C5A530069D463 /* UICollectionViewAlignedLayout.m in Sources */,
 				104326671C4B505E0033CEC0 /* ProgressColor+Colors.m in Sources */,
 				10AB70DA1C4925F7008C9C88 /* MusicBarAnimationController.m in Sources */,
 				102B1F2A1C60E66F00A8FD40 /* CountsModel.m in Sources */,

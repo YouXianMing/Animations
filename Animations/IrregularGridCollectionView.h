@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "IrregularGridCellDataAdapter.h"
-#import "MaximumSpacingFlowLayout.h"
+#import "UICollectionViewAlignedLayout.h"
 #import "CustomIrregularGridViewCell.h"
 @class IrregularGridViewCellClassType;
 @class IrregularGridCollectionView;
