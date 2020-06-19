@@ -17,7 +17,7 @@
 
 + (DeviceType)deviceType {
     
-    static DeviceType type;
+    static DeviceType      type;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
@@ -80,7 +80,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        if (DeviceInfo.deviceType == Device_375x812) {
+        if (DeviceInfo.isFringeScreen) {
             
             height = 44.f;
         }
@@ -96,7 +96,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        if (DeviceInfo.deviceType == Device_375x812) {
+        if (DeviceInfo.isFringeScreen) {
             
             height = 34.f;
         }

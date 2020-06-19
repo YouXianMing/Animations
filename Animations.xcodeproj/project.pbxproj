@@ -537,6 +537,12 @@
 		C5A014A92126974E00A8063F /* IrregularElementsCreator.gif in Resources */ = {isa = PBXBuildFile; fileRef = C5A014A72126974D00A8063F /* IrregularElementsCreator.gif */; };
 		C5A014AA2126974E00A8063F /* IrregularElementsCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A014A82126974D00A8063F /* IrregularElementsCreator.m */; };
 		C5A7A452249C5A530069D463 /* UICollectionViewAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A7A451249C5A520069D463 /* UICollectionViewAlignedLayout.m */; };
+		C5A7A467249CBE530069D463 /* BaseFBShimmeringViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A7A462249CBE520069D463 /* BaseFBShimmeringViewConfig.m */; };
+		C5A7A468249CBE530069D463 /* UIView+ShimmeringViewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A7A464249CBE520069D463 /* UIView+ShimmeringViewCategory.m */; };
+		C5A7A469249CBE530069D463 /* FBShimmeringView+ShimmeringViewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A7A466249CBE530069D463 /* FBShimmeringView+ShimmeringViewCategory.m */; };
+		C5A7A46C249CBED40069D463 /* SkeletonScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A7A46B249CBED40069D463 /* SkeletonScreenController.m */; };
+		C5A7A470249CC0E30069D463 /* ShimmeringView_1_Config.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A7A46F249CC0E30069D463 /* ShimmeringView_1_Config.m */; };
+		C5A7A476249CC72E0069D463 /* ShimmeringView_2_Config.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A7A475249CC72E0069D463 /* ShimmeringView_2_Config.m */; };
 		C5AB56781E1B8106003B388F /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AB56771E1B8106003B388F /* AlertView.m */; };
 		C5B457821DE7D9CA002363AC /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B457811DE7D9CA002363AC /* ShapeView.m */; };
 		C5BB563F21B0F1FB000FAD2D /* DeepLinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BB563D21B0F1FB000FAD2D /* DeepLinkModel.m */; };
@@ -1758,6 +1764,19 @@
 		C5A014A82126974D00A8063F /* IrregularElementsCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularElementsCreator.m; sourceTree = "<group>"; };
 		C5A7A450249C5A520069D463 /* UICollectionViewAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewAlignedLayout.h; sourceTree = "<group>"; };
 		C5A7A451249C5A520069D463 /* UICollectionViewAlignedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewAlignedLayout.m; sourceTree = "<group>"; };
+		C5A7A460249CBE510069D463 /* FBShimmeringViewCategoryHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringViewCategoryHeaders.h; sourceTree = "<group>"; };
+		C5A7A461249CBE520069D463 /* UIView+ShimmeringViewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShimmeringViewCategory.h"; sourceTree = "<group>"; };
+		C5A7A462249CBE520069D463 /* BaseFBShimmeringViewConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseFBShimmeringViewConfig.m; sourceTree = "<group>"; };
+		C5A7A463249CBE520069D463 /* FBShimmeringView+ShimmeringViewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmeringView+ShimmeringViewCategory.h"; sourceTree = "<group>"; };
+		C5A7A464249CBE520069D463 /* UIView+ShimmeringViewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShimmeringViewCategory.m"; sourceTree = "<group>"; };
+		C5A7A465249CBE520069D463 /* BaseFBShimmeringViewConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseFBShimmeringViewConfig.h; sourceTree = "<group>"; };
+		C5A7A466249CBE530069D463 /* FBShimmeringView+ShimmeringViewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBShimmeringView+ShimmeringViewCategory.m"; sourceTree = "<group>"; };
+		C5A7A46A249CBED40069D463 /* SkeletonScreenController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkeletonScreenController.h; sourceTree = "<group>"; };
+		C5A7A46B249CBED40069D463 /* SkeletonScreenController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkeletonScreenController.m; sourceTree = "<group>"; };
+		C5A7A46E249CC0E30069D463 /* ShimmeringView_1_Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShimmeringView_1_Config.h; sourceTree = "<group>"; };
+		C5A7A46F249CC0E30069D463 /* ShimmeringView_1_Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShimmeringView_1_Config.m; sourceTree = "<group>"; };
+		C5A7A474249CC72E0069D463 /* ShimmeringView_2_Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShimmeringView_2_Config.h; sourceTree = "<group>"; };
+		C5A7A475249CC72E0069D463 /* ShimmeringView_2_Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShimmeringView_2_Config.m; sourceTree = "<group>"; };
 		C5AB56761E1B8106003B388F /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
 		C5AB56771E1B8106003B388F /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
 		C5B457801DE7D9CA002363AC /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
@@ -2079,6 +2098,7 @@
 		1012C33F1BF9FB3700A1B4E4 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C5A7A45F249CBE380069D463 /* FBShimmeringViewCategory */,
 				C5BB563C21B0F1E0000FAD2D /* DeepLinkModel */,
 				C5EE202B2126A0B70020EB7B /* DeviceInfo */,
 				C5A014A52126974D00A8063F /* IrregularElementsCreator */,
@@ -2686,6 +2706,7 @@
 				C5876F131F949EA400CF4278 /* LineLayoutViewController */,
 				C5C1E6C21FA80DE70023B8F4 /* DynamicSwitchingLayoutController */,
 				C50270EE1FA9674900833758 /* InfoInputViewController */,
+				C5A7A46D249CBEE20069D463 /* SkeletonScreenController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -4673,6 +4694,33 @@
 			path = IrregularElementsCreator;
 			sourceTree = "<group>";
 		};
+		C5A7A45F249CBE380069D463 /* FBShimmeringViewCategory */ = {
+			isa = PBXGroup;
+			children = (
+				C5A7A460249CBE510069D463 /* FBShimmeringViewCategoryHeaders.h */,
+				C5A7A465249CBE520069D463 /* BaseFBShimmeringViewConfig.h */,
+				C5A7A462249CBE520069D463 /* BaseFBShimmeringViewConfig.m */,
+				C5A7A463249CBE520069D463 /* FBShimmeringView+ShimmeringViewCategory.h */,
+				C5A7A466249CBE530069D463 /* FBShimmeringView+ShimmeringViewCategory.m */,
+				C5A7A461249CBE520069D463 /* UIView+ShimmeringViewCategory.h */,
+				C5A7A464249CBE520069D463 /* UIView+ShimmeringViewCategory.m */,
+			);
+			name = FBShimmeringViewCategory;
+			sourceTree = "<group>";
+		};
+		C5A7A46D249CBEE20069D463 /* SkeletonScreenController */ = {
+			isa = PBXGroup;
+			children = (
+				C5A7A46A249CBED40069D463 /* SkeletonScreenController.h */,
+				C5A7A46B249CBED40069D463 /* SkeletonScreenController.m */,
+				C5A7A46E249CC0E30069D463 /* ShimmeringView_1_Config.h */,
+				C5A7A46F249CC0E30069D463 /* ShimmeringView_1_Config.m */,
+				C5A7A474249CC72E0069D463 /* ShimmeringView_2_Config.h */,
+				C5A7A475249CC72E0069D463 /* ShimmeringView_2_Config.m */,
+			);
+			name = SkeletonScreenController;
+			sourceTree = "<group>";
+		};
 		C5BB563C21B0F1E0000FAD2D /* DeepLinkModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -5234,6 +5282,7 @@
 				10381FCE1BF9D16D00E5E476 /* CAShapeLayerConfigure.m in Sources */,
 				C501F21E1F0C7DE90051B4C6 /* NSMutableAttributedString+AttributedStringConfig.m in Sources */,
 				C5966F78249A43FD0001E89B /* SDImageCachesManagerOperation.m in Sources */,
+				C5A7A46C249CBED40069D463 /* SkeletonScreenController.m in Sources */,
 				C5966F4E249A43FC0001E89B /* SDWebImageCacheSerializer.m in Sources */,
 				C51733221D45AFB8005D57AE /* TouchEventView.m in Sources */,
 				10E2D5151CD63F0900666EEB /* iCarouselViewController.m in Sources */,
@@ -5241,6 +5290,7 @@
 				C5C606341E1F7593004E8FDD /* CircleLoadingView.m in Sources */,
 				1057021F1CF6DB2B003B10C6 /* SelectedIconButton.m in Sources */,
 				C5AB56781E1B8106003B388F /* AlertView.m in Sources */,
+				C5A7A469249CBE530069D463 /* FBShimmeringView+ShimmeringViewCategory.m in Sources */,
 				C5C34B7620491BE000AFABFE /* unzip.c in Sources */,
 				C501F21A1F0C7DE90051B4C6 /* FontAttributeConfig.m in Sources */,
 				C5966F5B249A43FC0001E89B /* NSButton+WebCache.m in Sources */,
@@ -5261,6 +5311,7 @@
 				C52C64431E246AAD00624A3D /* AlertViewCollectionCell.m in Sources */,
 				106CF0A31C376E190006419B /* HexColors.m in Sources */,
 				C56851CA1DE6D3E7000F18C2 /* ContentIconCell.m in Sources */,
+				C5A7A470249CC0E30069D463 /* ShimmeringView_1_Config.m in Sources */,
 				102296B61C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				10E2D5081CD5DC4500666EEB /* FontListCell.m in Sources */,
 				102B1F351C60E66F00A8FD40 /* UserModel.m in Sources */,
@@ -5304,6 +5355,7 @@
 				109606291C93B47800CCB3AD /* NetworkingIndicator.m in Sources */,
 				10589D251C2393C200F20BC0 /* FBShimmeringLayer.m in Sources */,
 				C57526CC1D5032690064F6CD /* DrawingStyle.m in Sources */,
+				C5A7A476249CC72E0069D463 /* ShimmeringView_2_Config.m in Sources */,
 				C58B1AB91F4C12AA00B681E1 /* AFAutoPurgingImageCache.m in Sources */,
 				C5966F4C249A43FC0001E89B /* SDWebImageDownloader.m in Sources */,
 				C5F75D2E20EE28DD0078FB74 /* Runtime_Method.m in Sources */,
@@ -5408,6 +5460,7 @@
 				C51B11AA1F52A2BB00EBF6A0 /* LeftSideCell.m in Sources */,
 				1010C6DB1C0A9DA0004CFBCE /* RangeValueView.m in Sources */,
 				C56812321D757621006E6C49 /* MaximumSpacingFlowLayout.m in Sources */,
+				C5A7A467249CBE530069D463 /* BaseFBShimmeringViewConfig.m in Sources */,
 				C57C8D971F5CEED800F62803 /* CategoryInfoView.m in Sources */,
 				1017F13A1C35715400E245F8 /* NSDictionary+JSONData.m in Sources */,
 				100148C91C43D53D006D9153 /* BezierPathViewController.m in Sources */,
@@ -5667,6 +5720,7 @@
 				C51677971D363E6F0032AC09 /* Base64.m in Sources */,
 				C5966F42249A43FC0001E89B /* SDWebImageOperation.m in Sources */,
 				C5966F5A249A43FC0001E89B /* SDImageCoderHelper.m in Sources */,
+				C5A7A468249CBE530069D463 /* UIView+ShimmeringViewCategory.m in Sources */,
 				105D98A71C07F52D00FD1013 /* TableViewTapAnimationCell.m in Sources */,
 				C545536B1E1CD7DD00A5BA58 /* LinearCarouselView.m in Sources */,
 				1030886E1C03F1B200C8B623 /* CircleView.m in Sources */,

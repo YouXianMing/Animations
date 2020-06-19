@@ -77,5 +77,6 @@
 #import "LineLayoutViewController.h"
 #import "DynamicSwitchingLayoutController.h"
 #import "InfoInputViewController.h"
+#import "SkeletonScreenController.h"
 
 #endif /* ControllersHeader_h */
