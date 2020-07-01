@@ -11,9 +11,15 @@
  *  Enumerated structure to define direction in which items can be rendered.
  */
 typedef NS_ENUM (NSUInteger, CHTCollectionViewWaterfallLayoutItemRenderDirection) {
-  CHTCollectionViewWaterfallLayoutItemRenderDirectionShortestFirst,
-  CHTCollectionViewWaterfallLayoutItemRenderDirectionLeftToRight,
-  CHTCollectionViewWaterfallLayoutItemRenderDirectionRightToLeft
+    
+    // 默认值,不一定按照顺序排列(按照合适的位置进行排版,不会出现一边特别高的情形)
+    CHTCollectionViewWaterfallLayoutItemRenderDirectionShortestFirst,
+    
+    // 强制从左往右按照顺序排列
+    CHTCollectionViewWaterfallLayoutItemRenderDirectionLeftToRight,
+    
+    // 强制从右往左按照顺序排列
+    CHTCollectionViewWaterfallLayoutItemRenderDirectionRightToLeft
 };
 
 /**
@@ -314,6 +320,11 @@ extern NSString *const CHTCollectionElementKindSectionFooter;
  *    Default: 0.f
  */
 @property (nonatomic, assign) CGFloat minimumContentHeight;
+
+/**
+ * @brief control when user scroll the collecitonView , sectionHeader stay at top the screen
+ */
+@property (nonatomic, assign) BOOL enableStickyHeader;
 
 /**
  *  @brief The calculated width of an item in the specified section.

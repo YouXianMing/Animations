@@ -56,7 +56,6 @@
 		1020E2E41C7422B600FF233E /* UIView+AnimationPracticalMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E2E31C7422B600FF233E /* UIView+AnimationPracticalMethod.m */; };
 		1020E3381C759B3400FF233E /* MotionEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E3371C759B3400FF233E /* MotionEffectViewController.m */; };
 		1020E33B1C759C2F00FF233E /* UIView+MotionEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020E33A1C759C2F00FF233E /* UIView+MotionEffect.m */; };
-		102296B61C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296B51C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m */; };
 		102296BB1C38D3D6001AF5BB /* WaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296BA1C38D3D6001AF5BB /* WaterfallCell.m */; };
 		102296BE1C38D420001AF5BB /* WaterfallHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296BD1C38D420001AF5BB /* WaterfallHeaderView.m */; };
 		102296C11C38D65F001AF5BB /* WaterfallFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102296C01C38D65F001AF5BB /* WaterfallFooterView.m */; };
@@ -618,6 +617,7 @@
 		C5F9E7D81F4A7663004B6198 /* DuitangPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F9E7D71F4A7663004B6198 /* DuitangPicModel.m */; };
 		C5F9E82D1F4A8C8F004B6198 /* ResponseDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F9E82C1F4A8C8F004B6198 /* ResponseDataManager.m */; };
 		C5F9E8301F4A8F74004B6198 /* Networking+wandoujia.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F9E82F1F4A8F74004B6198 /* Networking+wandoujia.m */; };
+		C5FECE9B24AC3B8E00F4D6F2 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FECE9A24AC3B8E00F4D6F2 /* CHTCollectionViewWaterfallLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -716,8 +716,6 @@
 		1020E3371C759B3400FF233E /* MotionEffectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionEffectViewController.m; sourceTree = "<group>"; };
 		1020E3391C759C2F00FF233E /* UIView+MotionEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MotionEffect.h"; sourceTree = "<group>"; };
 		1020E33A1C759C2F00FF233E /* UIView+MotionEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MotionEffect.m"; sourceTree = "<group>"; };
-		102296B41C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
-		102296B51C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		102296B91C38D3D6001AF5BB /* WaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallCell.h; sourceTree = "<group>"; };
 		102296BA1C38D3D6001AF5BB /* WaterfallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallCell.m; sourceTree = "<group>"; };
 		102296BC1C38D420001AF5BB /* WaterfallHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallHeaderView.h; sourceTree = "<group>"; };
@@ -1934,6 +1932,8 @@
 		C5F9E82C1F4A8C8F004B6198 /* ResponseDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseDataManager.m; sourceTree = "<group>"; };
 		C5F9E82E1F4A8F74004B6198 /* Networking+wandoujia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Networking+wandoujia.h"; sourceTree = "<group>"; };
 		C5F9E82F1F4A8F74004B6198 /* Networking+wandoujia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Networking+wandoujia.m"; sourceTree = "<group>"; };
+		C5FECE9924AC3B8E00F4D6F2 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		C5FECE9A24AC3B8E00F4D6F2 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2219,8 +2219,8 @@
 		102296B31C38D343001AF5BB /* CHTCollectionViewWaterfallLayout */ = {
 			isa = PBXGroup;
 			children = (
-				102296B41C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.h */,
-				102296B51C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m */,
+				C5FECE9924AC3B8E00F4D6F2 /* CHTCollectionViewWaterfallLayout.h */,
+				C5FECE9A24AC3B8E00F4D6F2 /* CHTCollectionViewWaterfallLayout.m */,
 			);
 			name = CHTCollectionViewWaterfallLayout;
 			sourceTree = "<group>";
@@ -5224,6 +5224,7 @@
 				104228CD1C369E7C0011409C /* UIView+AnimationProperty.m in Sources */,
 				C58B1ABB1F4C12AA00B681E1 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				C5966F69249A43FD0001E89B /* NSData+ImageContentType.m in Sources */,
+				C5FECE9B24AC3B8E00F4D6F2 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				C55661C81F32CDFC0092ACA4 /* MathematicalComputation.m in Sources */,
 				C5F8FE7A1ECC1E3B00377E01 /* AnimationsListController.m in Sources */,
 				C5C5AFEE1DD59D4F00F35EB8 /* UILabel+SizeToFit.m in Sources */,
@@ -5312,7 +5313,6 @@
 				106CF0A31C376E190006419B /* HexColors.m in Sources */,
 				C56851CA1DE6D3E7000F18C2 /* ContentIconCell.m in Sources */,
 				C5A7A470249CC0E30069D463 /* ShimmeringView_1_Config.m in Sources */,
-				102296B61C38D34A001AF5BB /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				10E2D5081CD5DC4500666EEB /* FontListCell.m in Sources */,
 				102B1F351C60E66F00A8FD40 /* UserModel.m in Sources */,
 				C5876F121F949E8700CF4278 /* LineLayoutViewController.m in Sources */,
