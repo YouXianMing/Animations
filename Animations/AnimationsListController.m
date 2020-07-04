@@ -174,6 +174,7 @@
 - (void)configureDataSource {
     
     NSArray *array = @[[Item itemWithObject:[ButtonPressViewController         class]  name:@"POP-按钮动画"],
+                       [Item itemWithObject:[SkeletonScreenController          class]  name:@"骨架屏"],
                        [Item itemWithObject:[PopStrokeController               class]  name:@"POP-Stroke动画"],
                        [Item itemWithObject:[CAShapeLayerPathController        class]  name:@"CAShapeLayer的path动画"],
                        [Item itemWithObject:[TransformFadeViewController       class]  name:@"图片碎片化mask动画"],
@@ -238,8 +239,7 @@
                        [Item itemWithObject:[SKEmitterNodeController           class]  name:@"SKEmitterNode的使用"],
                        [Item itemWithObject:[LineLayoutViewController          class]  name:@"LineLayout"],
                        [Item itemWithObject:[DynamicSwitchingLayoutController  class]  name:@"动态切换Layout"],
-                       [Item itemWithObject:[InfoInputViewController           class]  name:@"输入检测逻辑动画"],
-                       [Item itemWithObject:[SkeletonScreenController          class]  name:@"骨架屏"],];
+                       [Item itemWithObject:[InfoInputViewController           class]  name:@"输入检测逻辑动画"]];
     
     self.items = [NSMutableArray array];
     [array enumerateObjectsUsingBlock:^(Item *item, NSUInteger idx, BOOL *stop) {

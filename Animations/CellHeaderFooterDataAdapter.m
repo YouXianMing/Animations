@@ -10,10 +10,7 @@
 
 @implementation CellHeaderFooterDataAdapter
 
-+ (instancetype)cellHeaderFooterDataAdapterWithReuseIdentifier:(NSString *)reuseIdentifier
-                                                          data:(id)data
-                                                        height:(CGFloat)height
-                                                          type:(NSInteger)type {
++ (instancetype)cellHeaderFooterDataAdapterWithReuseIdentifier:(NSString *)reuseIdentifier data:(id)data height:(CGFloat)height type:(NSInteger)type {
     
     CellHeaderFooterDataAdapter *adapter = [[self class] new];
     adapter.reuseIdentifier              = reuseIdentifier;

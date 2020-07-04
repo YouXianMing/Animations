@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CustomCollectionReusableView.h"
 
-@interface WaterfallHeaderView : UICollectionReusableView
+@interface WaterfallHeaderView : CustomCollectionReusableView
 
 @end

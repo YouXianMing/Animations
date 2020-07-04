@@ -40,12 +40,48 @@
 
 - (void)selectedEvent {
     
+    if (self.delegate && [self.delegate respondsToSelector:@selector(customCollectionCell:event:)]) {
+        
+        [self.delegate customCollectionCell:self event:self.dataAdapter.data];
+    }
+}
+
++ (CGSize)itemSize {
+    
+    return CGSizeZero;
+}
+
++ (CGSize)itemSizeWithData:(id)data {
+    
+    return CGSizeZero;
 }
 
 + (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data type:(NSInteger)type {
     
     NSString *tmpReuseIdentifier = reuseIdentifier.length <= 0 ? NSStringFromClass([self class]) : reuseIdentifier;
     return [CellDataAdapter collectionCellDataAdapterWithCellReuseIdentifier:tmpReuseIdentifier data:data cellType:type];
+}
+
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data itemSize:(CGSize)itemSize {
+    
+    NSString *tmpReuseIdentifier = reuseIdentifier.length <= 0 ? NSStringFromClass([self class]) : reuseIdentifier;
+    return [CellDataAdapter collectionCellDataAdapterWithCellReuseIdentifier:tmpReuseIdentifier data:data itemSize:itemSize cellType:0];
+}
+
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data itemSize:(CGSize)itemSize cellType:(NSInteger)cellType {
+    
+    NSString *tmpReuseIdentifier = reuseIdentifier.length <= 0 ? NSStringFromClass([self class]) : reuseIdentifier;
+    return [CellDataAdapter collectionCellDataAdapterWithCellReuseIdentifier:tmpReuseIdentifier data:data itemSize:itemSize cellType:cellType];
+}
+
++ (CellDataAdapter *)dataAdapterWithData:(id)data itemSize:(CGSize)itemSize {
+    
+    return [CellDataAdapter collectionCellDataAdapterWithCellReuseIdentifier:NSStringFromClass(self.class) data:data itemSize:itemSize cellType:0];
+}
+
++ (CellDataAdapter *)dataAdapterWithData:(id)data itemSize:(CGSize)itemSize type:(NSInteger)type {
+    
+    return [CellDataAdapter collectionCellDataAdapterWithCellReuseIdentifier:NSStringFromClass(self.class) data:data itemSize:itemSize cellType:type];
 }
 
 + (CellDataAdapter *)dataAdapterWithData:(id)data type:(NSInteger)type {

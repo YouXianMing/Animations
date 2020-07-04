@@ -6,12 +6,8 @@
 //  Copyright © 2016年 YouXianMing. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseCustomCollectionCell.h"
 
-@interface WaterfallCell : UICollectionViewCell
-
-@property (nonatomic, strong) id data;
-
-- (void)loadContent;
+@interface WaterfallCell : BaseCustomCollectionCell
 
 @end

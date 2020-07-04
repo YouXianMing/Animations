@@ -83,6 +83,19 @@
  */
 - (void)contentOffset:(CGPoint)offset;
 
+/**
+ *  Item size.
+ */
+@property (class, nonatomic, readonly) CGSize itemSize;
+
+/**
+ Get the size.
+ 
+ @param data The data.
+ @return Item's size.
+ */
++ (CGSize)itemSizeWithData:(id)data;
+
 #pragma mark - Useful method.
 
 /**
@@ -102,6 +115,50 @@
  *  @return Cell's dataAdapter.
  */
 + (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data type:(NSInteger)type;
+
+/**
+ *  Create the cell's dataAdapter.
+ *
+ *  @param reuseIdentifier Cell reuseIdentifier, can be nil.
+ *  @param data            Cell's data, can be nil.
+ *  @param itemSize        Cell's size.
+ *
+ *  @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data itemSize:(CGSize)itemSize;
+
+/**
+ *  Create the cell's dataAdapter.
+ *
+ *  @param reuseIdentifier Cell reuseIdentifier, can be nil.
+ *  @param data            Cell's data, can be nil.
+ *  @param itemSize        Cell's size.
+ *  @param cellType        Cell's type.
+ *
+ *  @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)dataAdapterWithCellReuseIdentifier:(NSString *)reuseIdentifier data:(id)data itemSize:(CGSize)itemSize cellType:(NSInteger)cellType;
+
+/**
+ *  Create the cell's dataAdapter.
+ *
+ *  @param data            Cell's data, can be nil.
+ *  @param itemSize        Cell's size.
+ *
+ *  @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)dataAdapterWithData:(id)data itemSize:(CGSize)itemSize;
+
+/**
+ *  Create the cell's dataAdapter.
+ *
+ *  @param data            Cell's data, can be nil.
+ *  @param itemSize        Cell's size.
+ *  @param type            Cell's type.
+ *
+ *  @return Cell's dataAdapter.
+ */
++ (CellDataAdapter *)dataAdapterWithData:(id)data itemSize:(CGSize)itemSize type:(NSInteger)type;
 
 /**
  *  Create the cell's dataAdapter, the reuseIdentifier is the cell's class string.

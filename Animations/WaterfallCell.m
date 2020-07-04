@@ -14,32 +14,34 @@
 
 @interface WaterfallCell ()
 
+@property (nonatomic, strong) UIImageView *placeHolderImageView;
 @property (nonatomic, strong) UIImageView *showImageView;
 
 @end
 
 @implementation WaterfallCell
 
-- (id)initWithFrame:(CGRect)frame {
+- (void)buildSubview {
     
-    if (self = [super initWithFrame:frame]) {
-        
-        CGRect imageViewFrame = CGRectMake(0.f, 0.f,
-                                           CGRectGetMaxX(self.contentView.bounds),
-                                           CGRectGetMaxY(self.contentView.bounds));
-        
-        _showImageView                  = [UIImageView new];
-        _showImageView.contentMode      = UIViewContentModeScaleAspectFill;
-        _showImageView.frame            = imageViewFrame;
-        _showImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        _showImageView.clipsToBounds    = YES;
-        
-        [self addSubview:_showImageView];
-        self.layer.borderWidth = 0.5f;
-        self.layer.borderColor = [UIColor blackColor].CGColor;
-    }
+    CGRect imageViewFrame = CGRectMake(0.f, 0.f, self.width, self.height);
+
+    self.placeHolderImageView                  = [UIImageView new];
+    self.placeHolderImageView.contentMode      = UIViewContentModeScaleAspectFill;
+    self.placeHolderImageView.frame            = imageViewFrame;
+    self.placeHolderImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.placeHolderImageView.clipsToBounds    = YES;
+    self.placeHolderImageView.image            = [[UIImage imageNamed:@"placeHolder"] resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeTile];
+    [self.contentView addSubview:self.placeHolderImageView];
     
-    return self;
+    self.showImageView                  = [UIImageView new];
+    self.showImageView.contentMode      = UIViewContentModeScaleAspectFill;
+    self.showImageView.frame            = imageViewFrame;
+    self.showImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.showImageView.clipsToBounds    = YES;
+
+    [self addSubview:self.showImageView];
+    self.layer.borderWidth = 0.5f;
+    self.layer.borderColor = [[UIColor blackColor] colorWithAlphaComponent:0.5f].CGColor;
 }
 
 - (void)loadContent {

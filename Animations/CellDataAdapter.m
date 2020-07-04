@@ -10,8 +10,7 @@
 
 @implementation CellDataAdapter
 
-+ (CellDataAdapter *)cellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
-                                                 cellHeight:(CGFloat)cellHeight cellType:(NSInteger)cellType {
++ (CellDataAdapter *)cellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data cellHeight:(CGFloat)cellHeight cellType:(NSInteger)cellType {
     
     CellDataAdapter *adapter    = [[self class] new];
     adapter.cellReuseIdentifier = cellReuseIdentifiers;
@@ -22,9 +21,7 @@
     return adapter;
 }
 
-+ (CellDataAdapter *)cellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
-                                                 cellHeight:(CGFloat)cellHeight cellWidth:(CGFloat)cellWidth
-                                                   cellType:(NSInteger)cellType {
++ (CellDataAdapter *)cellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data cellHeight:(CGFloat)cellHeight cellWidth:(CGFloat)cellWidth cellType:(NSInteger)cellType {
     
     CellDataAdapter *adapter    = [[self class] new];
     adapter.cellReuseIdentifier = cellReuseIdentifiers;
@@ -41,6 +38,17 @@
     CellDataAdapter *adapter    = [[self class] new];
     adapter.cellReuseIdentifier = cellReuseIdentifiers;
     adapter.data                = data;
+    adapter.cellType            = cellType;
+    
+    return adapter;
+}
+
++ (CellDataAdapter *)collectionCellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data itemSize:(CGSize)itemSize cellType:(NSInteger)cellType {
+    
+    CellDataAdapter *adapter    = [[self class] new];
+    adapter.cellReuseIdentifier = cellReuseIdentifiers;
+    adapter.data                = data;
+    adapter.itemSize            = itemSize;
     adapter.cellType            = cellType;
     
     return adapter;
