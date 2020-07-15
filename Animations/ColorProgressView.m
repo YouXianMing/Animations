@@ -12,6 +12,7 @@
 
     CGFloat  _width;
     CGFloat  _height;
+    BOOL     _animationDidStart;
 }
 
 @property (nonatomic, strong) UIView           *baseView;
@@ -51,6 +52,8 @@
     self.gradientLayer.startPoint = _color.startPoint;
     self.gradientLayer.endPoint   = _color.endPoint;
     
+    _animationDidStart = YES;
+    
     [self doAnimation];
 }
 
@@ -76,9 +79,19 @@
     [self.gradientLayer addAnimation:animation forKey:@"animateGradient"];
 }
 
+- (void)stopAnimation {
+    
+    _animationDidStart = NO;
+    
+    [self.gradientLayer removeAllAnimations];
+}
+
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     
-    [self doAnimation];
+    if (_animationDidStart) {
+        
+        [self doAnimation];
+    }
 }
 
 @synthesize progress = _progress;

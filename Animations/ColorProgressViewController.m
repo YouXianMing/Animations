@@ -92,4 +92,10 @@
     [self popViewControllerAnimated:YES];
 }
 
+- (void)dealloc {
+    
+    [self.normalColorProgressView stopAnimation];
+    [self.redColorProgressView    stopAnimation];
+}
+
 @end

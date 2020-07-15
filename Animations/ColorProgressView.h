@@ -26,4 +26,9 @@
  */
 - (void)startAnimation;
 
+/**
+ *  Stop animation.
+ */
+- (void)stopAnimation;
+
 @end
